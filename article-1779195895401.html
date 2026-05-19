@@ -1,0 +1,788 @@
+<html><head><meta name="robots" content="noindex"><title>Welcome to The Free Press</title></head><body><html lang="en" dir="ltr" style="scrollbar-width: thin;scrollbar-color: rgb(219,219,219)rgb(255,255,255);"><head><meta charset="utf-8"><title></title><style>
+@media (max-width: 1024px) {
+  .typography .pullquote-align-left,
+  .typography.editor .pullquote-align-left,
+  .typography .pullquote-align-right,
+  .typography.editor .pullquote-align-right,
+  .typography .pullquote-align-wide,
+  .typography.editor .pullquote-align-wide,
+  .typography .pullquote-align-center,
+  .typography.editor .pullquote-align-center {
+    float: none;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .typography .markup table.image-wrapper img,
+  .typography.editor .markup table.image-wrapper img,
+  .typography .markup table.kindle-wrapper img,
+  .typography.editor .markup table.kindle-wrapper img {
+    max-width: 550px;
+  }
+}
+@media (min-width: 1024px) {
+  .typography:not(:has(#toc)) .captioned-image-container figure:has(> a.image2-offset-left),
+  .typography.editor:not(:has(#toc)) .captioned-image-container figure:has(> a.image2-offset-left) {
+    margin-left: var(--image-offset-margin);
+  }
+  .typography:not(:has(#toc)) .captioned-image-container figure:has(> a.image2-offset-right),
+  .typography.editor:not(:has(#toc)) .captioned-image-container figure:has(> a.image2-offset-right) {
+    margin-right: var(--image-offset-margin);
+  }
+}
+@media (min-width: 1300px) {
+  .typography .captioned-image-container figure:has(> a.image2-offset-left),
+  .typography.editor .captioned-image-container figure:has(> a.image2-offset-left) {
+    margin-left: var(--image-offset-margin);
+  }
+  .typography .captioned-image-container figure:has(> a.image2-offset-right),
+  .typography.editor .captioned-image-container figure:has(> a.image2-offset-right) {
+    margin-right: var(--image-offset-margin);
+  }
+}
+@media (max-width: 1024px) {
+  .typography,
+  .typography.editor {
+    /* Disable offset on mobile/tablet */
+  }
+  .typography .captioned-image-container figure:has(> a.image2-align-left),
+  .typography.editor .captioned-image-container figure:has(> a.image2-align-left),
+  .typography .captioned-image-container figure:has(> a.image2-align-right),
+  .typography.editor .captioned-image-container figure:has(> a.image2-align-right) {
+    float: none;
+    margin: 1em auto;
+    max-width: 100%;
+    width: auto;
+    padding: 0;
+  }
+  .typography .captioned-image-container figure:has(> a.image2-align-left.thefp),
+  .typography.editor .captioned-image-container figure:has(> a.image2-align-left.thefp),
+  .typography .captioned-image-container figure:has(> a.image2-align-right.thefp),
+  .typography.editor .captioned-image-container figure:has(> a.image2-align-right.thefp) {
+    margin: 1em auto;
+  }
+  .typography .captioned-image-container figure:has(> a.image2-offset-left),
+  .typography.editor .captioned-image-container figure:has(> a.image2-offset-left),
+  .typography .captioned-image-container figure:has(> a.image2-offset-right),
+  .typography.editor .captioned-image-container figure:has(> a.image2-offset-right) {
+    margin: 1em auto;
+  }
+  .typography .captioned-image-container figure:has(> a.image2-align-left) .image2-inset,
+  .typography.editor .captioned-image-container figure:has(> a.image2-align-left) .image2-inset,
+  .typography .captioned-image-container figure:has(> a.image2-align-right) .image2-inset,
+  .typography.editor .captioned-image-container figure:has(> a.image2-align-right) .image2-inset {
+    display: block;
+    justify-content: initial;
+  }
+}
+@media (max-width: 768px) {
+  .typography .markup div.sponsorship-campaign-embed,
+  .typography.editor .markup div.sponsorship-campaign-embed {
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+  .typography .markup div.sponsorship-campaign-embed:first-child,
+  .typography.editor .markup div.sponsorship-campaign-embed:first-child {
+    margin-top: 0px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .typography .markup div.youtube-overlay,
+  .typography.editor .markup div.youtube-overlay,
+  .typography .markup div.vimeo-overlay,
+  .typography.editor .markup div.vimeo-overlay {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 370px) {
+  .typography .markup div.tiktok-wrap,
+  .typography.editor .markup div.tiktok-wrap {
+    width: calc(95vw - 32px);
+    height: calc((95vw - 32px - 2px) / 0.485714);
+  }
+}
+@media screen and (max-width: 650px) {
+  .typography .markup div.embedded-publication-wrap .embedded-publication.show-subscribe,
+  .typography.editor .markup div.embedded-publication-wrap .embedded-publication.show-subscribe {
+    padding: 24px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .typography .markup div.subscription-widget-wrap .subscription-widget.show-subscribe,
+  .typography.editor .markup div.subscription-widget-wrap .subscription-widget.show-subscribe,
+  .typography .markup div.subscription-widget-wrap-editor .subscription-widget.show-subscribe,
+  .typography.editor .markup div.subscription-widget-wrap-editor .subscription-widget.show-subscribe,
+  .typography .markup div.captioned-button-wrap .subscription-widget.show-subscribe,
+  .typography.editor .markup div.captioned-button-wrap .subscription-widget.show-subscribe {
+    padding: 0px 24px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .typography .markup div.subscription-widget-wrap .subscription-widget.show-subscribe .subscription-widget-subscribe .button,
+  .typography.editor .markup div.subscription-widget-wrap .subscription-widget.show-subscribe .subscription-widget-subscribe .button,
+  .typography .markup div.subscription-widget-wrap-editor .subscription-widget.show-subscribe .subscription-widget-subscribe .button,
+  .typography.editor .markup div.subscription-widget-wrap-editor .subscription-widget.show-subscribe .subscription-widget-subscribe .button,
+  .typography .markup div.captioned-button-wrap .subscription-widget.show-subscribe .subscription-widget-subscribe .button,
+  .typography.editor .markup div.captioned-button-wrap .subscription-widget.show-subscribe .subscription-widget-subscribe .button {
+    padding: 10px 12px;
+    min-width: 110px;
+  }
+}
+@media (max-width: 650px) {
+  .typography .markup .twitter-embed,
+  .typography.editor .markup .twitter-embed,
+  .typography .markup .tweet,
+  .typography.editor .markup .tweet {
+    padding: 12px;
+  }
+}
+@media (max-width: 650px) {
+  .typography .markup .twitter-embed .tweet-text,
+  .typography.editor .markup .twitter-embed .tweet-text,
+  .typography .markup .tweet .tweet-text,
+  .typography.editor .markup .tweet .tweet-text {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+@media (max-width: 650px) {
+  .typography .markup .twitter-embed .tweet-photos-container.two,
+  .typography.editor .markup .twitter-embed .tweet-photos-container.two,
+  .typography .markup .tweet .tweet-photos-container.two,
+  .typography.editor .markup .tweet .tweet-photos-container.two,
+  .typography .markup .twitter-embed .tweet-photos-container.three,
+  .typography.editor .markup .twitter-embed .tweet-photos-container.three,
+  .typography .markup .tweet .tweet-photos-container.three,
+  .typography.editor .markup .tweet .tweet-photos-container.three,
+  .typography .markup .twitter-embed .tweet-photos-container.four,
+  .typography.editor .markup .twitter-embed .tweet-photos-container.four,
+  .typography .markup .tweet .tweet-photos-container.four,
+  .typography.editor .markup .tweet .tweet-photos-container.four {
+    height: 200px;
+  }
+}
+@media (max-width: 650px) {
+  .typography .markup .twitter-embed a.expanded-link .expanded-link-img,
+  .typography.editor .markup .twitter-embed a.expanded-link .expanded-link-img,
+  .typography .markup .tweet a.expanded-link .expanded-link-img,
+  .typography.editor .markup .tweet a.expanded-link .expanded-link-img {
+    max-height: 180px;
+  }
+}
+@media (max-width: 650px) {
+  .typography .markup .twitter-embed a.expanded-link .expanded-link-description,
+  .typography.editor .markup .twitter-embed a.expanded-link .expanded-link-description,
+  .typography .markup .tweet a.expanded-link .expanded-link-description,
+  .typography.editor .markup .tweet a.expanded-link .expanded-link-description {
+    display: none;
+  }
+}
+@media screen and (max-width: 650px) {
+  .typography .markup .apple-podcast-container,
+  .typography.editor .markup .apple-podcast-container {
+    width: unset;
+  }
+}
+@media (max-width: 420px) {
+  .typography .markup .install-substack-app-embed img.install-substack-app-embed-img,
+  .typography.editor .markup .install-substack-app-embed img.install-substack-app-embed-img {
+    margin: 0 auto 16px auto;
+  }
+}
+@media (max-width: 420px) {
+  .typography .markup .install-substack-app-embed .install-substack-app-embed-text,
+  .typography.editor .markup .install-substack-app-embed .install-substack-app-embed-text {
+    margin: 0 0 12px 0;
+    max-width: 100%;
+    width: auto;
+    text-align: center;
+  }
+}
+@media (max-width: 420px) {
+  .typography .markup .install-substack-app-embed .install-substack-app-embed-link,
+  .typography.editor .markup .install-substack-app-embed .install-substack-app-embed-link {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 481px) {
+  .share-button-container {
+    height: 38px;
+  }
+}
+@media screen and (min-width: 481px) {
+  .share-button-container a.comment {
+    height: 38px;
+    line-height: 38px;
+    padding-right: 10px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .share-button-container .separator {
+    display: block;
+    margin: 0;
+    height: 8px;
+    border-left: none;
+  }
+}
+@media screen and (max-width: 480px) {
+  .share-button-container a.share.first img {
+    padding-left: 0;
+  }
+}
+@media screen and (min-width: 481px) {
+  .share-button-container a.mobile {
+    display: none !important;
+  }
+}
+@media screen and (min-width: 541px) {
+  .settings-add-pub-modal-wrapper .container .add-recommending-pub-modal-container {
+    padding: 36px;
+    height: 680px;
+  }
+}
+@media screen and (min-width: 541px) {
+  .settings-add-pub-modal-wrapper .container .add-recommending-pub-modal-container .footer {
+    position: absolute;
+    bottom: 36px;
+    margin: 0px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .header-anchor-parent {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .post {
+    padding: 16px 0 0 0;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post .post-header .post-label {
+    margin-top: 8px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post .post-header .meta-author-wrap.alternative-meta .meta-right-column .post-meta {
+    margin-top: 6px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post .footer-facepile-container {
+    height: 64px;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post .post-footer.use-separators {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post .post-footer.next-prev {
+    height: 64px;
+    justify-content: space-between;
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post-contributor-footer .post-contributor-bio-table {
+    display: block;
+  }
+  .post-contributor-footer .post-contributor-bio-table-row {
+    display: flex;
+    flex-direction: row;
+  }
+  .post-contributor-footer .post-contributor-bio-userhead-cell,
+  .post-contributor-footer .post-contributor-bio-body-cell {
+    display: block;
+  }
+  .post-contributor-footer .post-contributor-bio-body-cell {
+    flex-grow: 1;
+  }
+  .post-contributor-footer .post-contributor-bio-body-table {
+    display: block;
+  }
+  .post-contributor-footer .post-contributor-bio-body-table-row {
+    display: block;
+  }
+  .post-contributor-footer .post-contributor-bio-copy-cell,
+  .post-contributor-footer .post-contributor-bio-controls-cell {
+    display: block;
+  }
+  .post-contributor-footer .post-contributor-bio-copy-cell {
+    margin: 0 0 16px 0;
+  }
+  .post-contributor-footer .post-contributor-bio-controls-cell {
+    width: auto;
+  }
+  .post-contributor-footer .post-contributor-bio-controls {
+    margin: auto;
+  }
+  .post-contributor-footer .post-contributor-bio-controls .button.primary {
+    width: 100%;
+  }
+  .post-contributor-footer .post-contributor-bio-text {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .post-silhouette {
+    padding: 32px 0;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post-silhouette .post-silhouette-title {
+    margin-top: 10.44225025px;
+    height: 120px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post-silhouette .post-silhouette-meta {
+    width: 75%;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post-silhouette .post-silhouette-meta.with-byline-image {
+    margin: 20px 0;
+  }
+}
+@media screen and (max-width: 650px) {
+  .use-theme-bg .post-meta.alternative-meta .post-meta-item,
+  .post-meta.alternative-meta .post-meta-item {
+    padding-right: 16px;
+  }
+}
+@media screen and (max-width: 370px) {
+  .use-theme-bg .post-meta.alternative-meta .post-meta-item,
+  .post-meta.alternative-meta .post-meta-item {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .use-theme-bg .post-meta.alternative-meta .post-meta-item.guest-author-publication,
+  .post-meta.alternative-meta .post-meta-item.guest-author-publication {
+    display: none;
+  }
+}
+@media screen and (max-width: 370px) {
+  .post-meta .post-meta-item .post-meta-button {
+    height: 36px !important;
+    /* important to override in-line height style on emails */
+  }
+  .post-meta .post-meta-item .post-meta-button .meta-button-label {
+    display: none;
+  }
+  .post-meta .post-meta-item .post-meta-button > svg {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 370px) {
+  .post-meta .post-meta-item {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post .floating-subscribe-button {
+    bottom: 20px;
+    right: 20px;
+  }
+}
+@media (max-width: 1024px) {
+  body .pullquote-align-left,
+  body .pullquote-align-right,
+  body .pullquote-align-wide,
+  body .pullquote-align-center {
+    float: none;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  body .markup table.image-wrapper img,
+  body .markup table.kindle-wrapper img {
+    max-width: 550px;
+  }
+}
+@media (min-width: 1024px) {
+  body:not(:has(#toc)) .captioned-image-container figure:has(> a.image2-offset-left) {
+    margin-left: var(--image-offset-margin);
+  }
+  body:not(:has(#toc)) .captioned-image-container figure:has(> a.image2-offset-right) {
+    margin-right: var(--image-offset-margin);
+  }
+}
+@media (min-width: 1300px) {
+  body .captioned-image-container figure:has(> a.image2-offset-left) {
+    margin-left: var(--image-offset-margin);
+  }
+  body .captioned-image-container figure:has(> a.image2-offset-right) {
+    margin-right: var(--image-offset-margin);
+  }
+}
+@media (max-width: 1024px) {
+  body {
+    /* Disable offset on mobile/tablet */
+  }
+  body .captioned-image-container figure:has(> a.image2-align-left),
+  body .captioned-image-container figure:has(> a.image2-align-right) {
+    float: none;
+    margin: 1em auto;
+    max-width: 100%;
+    width: auto;
+    padding: 0;
+  }
+  body .captioned-image-container figure:has(> a.image2-align-left.thefp),
+  body .captioned-image-container figure:has(> a.image2-align-right.thefp) {
+    margin: 1em auto;
+  }
+  body .captioned-image-container figure:has(> a.image2-offset-left),
+  body .captioned-image-container figure:has(> a.image2-offset-right) {
+    margin: 1em auto;
+  }
+  body .captioned-image-container figure:has(> a.image2-align-left) .image2-inset,
+  body .captioned-image-container figure:has(> a.image2-align-right) .image2-inset {
+    display: block;
+    justify-content: initial;
+  }
+}
+@media (max-width: 768px) {
+  body .markup div.sponsorship-campaign-embed {
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+  body .markup div.sponsorship-campaign-embed:first-child {
+    margin-top: 0px;
+  }
+}
+@media screen and (max-width: 650px) {
+  body .markup div.youtube-overlay,
+  body .markup div.vimeo-overlay {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 370px) {
+  body .markup div.tiktok-wrap {
+    width: calc(95vw - 32px);
+    height: calc((95vw - 32px - 2px) / 0.485714);
+  }
+}
+@media screen and (max-width: 650px) {
+  body .markup div.embedded-publication-wrap .embedded-publication.show-subscribe {
+    padding: 24px;
+  }
+}
+@media screen and (max-width: 650px) {
+  body .markup div.subscription-widget-wrap .subscription-widget.show-subscribe,
+  body .markup div.subscription-widget-wrap-editor .subscription-widget.show-subscribe,
+  body .markup div.captioned-button-wrap .subscription-widget.show-subscribe {
+    padding: 0px 24px;
+  }
+}
+@media screen and (max-width: 650px) {
+  body .markup div.subscription-widget-wrap .subscription-widget.show-subscribe .subscription-widget-subscribe .button,
+  body .markup div.subscription-widget-wrap-editor .subscription-widget.show-subscribe .subscription-widget-subscribe .button,
+  body .markup div.captioned-button-wrap .subscription-widget.show-subscribe .subscription-widget-subscribe .button {
+    padding: 10px 12px;
+    min-width: 110px;
+  }
+}
+@media (max-width: 650px) {
+  body .markup .twitter-embed,
+  body .markup .tweet {
+    padding: 12px;
+  }
+}
+@media (max-width: 650px) {
+  body .markup .twitter-embed .tweet-text,
+  body .markup .tweet .tweet-text {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+@media (max-width: 650px) {
+  body .markup .twitter-embed .tweet-photos-container.two,
+  body .markup .tweet .tweet-photos-container.two,
+  body .markup .twitter-embed .tweet-photos-container.three,
+  body .markup .tweet .tweet-photos-container.three,
+  body .markup .twitter-embed .tweet-photos-container.four,
+  body .markup .tweet .tweet-photos-container.four {
+    height: 200px;
+  }
+}
+@media (max-width: 650px) {
+  body .markup .twitter-embed a.expanded-link .expanded-link-img,
+  body .markup .tweet a.expanded-link .expanded-link-img {
+    max-height: 180px;
+  }
+}
+@media (max-width: 650px) {
+  body .markup .twitter-embed a.expanded-link .expanded-link-description,
+  body .markup .tweet a.expanded-link .expanded-link-description {
+    display: none;
+  }
+}
+@media screen and (max-width: 650px) {
+  body .markup .apple-podcast-container {
+    width: unset;
+  }
+}
+@media (max-width: 420px) {
+  body .markup .install-substack-app-embed img.install-substack-app-embed-img {
+    margin: 0 auto 16px auto;
+  }
+}
+@media (max-width: 420px) {
+  body .markup .install-substack-app-embed .install-substack-app-embed-text {
+    margin: 0 0 12px 0;
+    max-width: 100%;
+    width: auto;
+    text-align: center;
+  }
+}
+@media (max-width: 420px) {
+  body .markup .install-substack-app-embed .install-substack-app-embed-link {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 500px) {
+  body .header a.logo {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+  }
+}
+@media screen and (max-width: 420px) {
+  body .subscription-receipt table:first-of-type .subscription-amount .subscription-discount {
+    width: 72px !important;
+  }
+}
+@media screen and (min-width: 481px) {
+  body .share-button-container {
+    height: auto;
+  }
+}
+@media screen and (max-width: 480px) {
+  body .share-button-container .separator {
+    display: block !important;
+    margin: 0 !important;
+    height: 8px !important;
+    border-left: none !important;
+  }
+}
+@media screen and (max-width: 650px) {
+  .digest .item .post-meta-item.audience {
+    display: none;
+  }
+}
+@media screen and (min-width: 500px) {
+  .digest-publication .logo img {
+    width: 42px;
+    height: 42px;
+    border-radius: 8px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .comments-page .container .comment-list .collapsed-reply {
+    margin-left: calc(10 + 32px - 24px);
+  }
+}
+@media screen and (max-width: 650px) {
+  .comment > .comment-list {
+    padding-left: 24px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .finish-magic-login-modal .modal-content .container {
+    padding: 24px 0;
+  }
+}
+@media (max-width: 650px) {
+  .reader2-text-b3 {
+    line-height: 24px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .reader2-text-h4 {
+    line-height: 24px;
+  }
+}
+@media screen and (min-width: 541px) {
+  .user-profile-modal {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .subscribe-widget form.form .sideBySideWrap button.rightButton {
+    padding: 10px 12px;
+  }
+}
+@media screen and (min-width: 541px) {
+  .pub-icon:hover .logo-hover,
+  .feed-item-icon:hover .logo-hover {
+    display: block;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post-ufi.single-full-width-button .post-ufi-button-wrapper {
+    width: 100%;
+    padding: 16px;
+  }
+  .post-ufi.single-full-width-button .post-ufi-button-wrapper:empty {
+    display: none;
+  }
+  .post-ufi.single-full-width-button .post-ufi-button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  .file-embed-wrapper {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .file-embed-wrapper-editor {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .file-embed-wrapper-editor:active {
+    padding: 0;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .file-embed-button.wide,
+  .file-embed-error-button.wide {
+    display: none;
+  }
+}
+@media only screen and (min-width: 630px) {
+  .file-embed-button.narrow,
+  .file-embed-error-button.narrow {
+    display: none;
+  }
+}
+@media screen and (min-width: 541px) {
+  .audio-player-wrapper .audio-player {
+    min-width: 500px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .audio-player-wrapper .audio-player .audio-player-progress {
+    border-left-width: 16px;
+    border-right-width: 16px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .audio-player-wrapper .audio-player .audio-player-progress .audio-player-progress-bar .audio-player-progress-bar-popup {
+    top: -54px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .audio-player-wrapper-fancy .audio-player .audio-player-progress {
+    border-left-width: 16px;
+    border-right-width: 16px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .audio-player-wrapper-fancy .audio-player .audio-player-progress .audio-player-progress-bar .audio-player-progress-bar-popup {
+    top: -54px;
+  }
+}
+@media (min-width: 250px) {
+  .audio-player-wrapper-fancy .audio-player {
+    padding: 32px;
+  }
+  .audio-player-wrapper-fancy .audio-player .btn-group {
+    display: flex;
+  }
+  .audio-player-wrapper-fancy .audio-player .btn-group .button:last-of-type {
+    display: block;
+  }
+}
+@media (min-width: 300px) {
+  .audio-player-wrapper-fancy .audio-player .btn-group {
+    display: block;
+  }
+  .audio-player-wrapper-fancy .audio-player .btn-group .button:first-of-type {
+    display: block;
+  }
+}
+@media (min-width: 350px) {
+  .audio-player-wrapper-fancy .audio-player .audio-player-substack-logo {
+    display: block;
+  }
+  .audio-player-wrapper-fancy .audio-player .audio-player-title {
+    margin-top: 16px;
+  }
+  .audio-player-wrapper-fancy .audio-player .audio-player-hero-image-container {
+    padding-top: 15%;
+    width: 15%;
+    display: block;
+  }
+  .audio-player-wrapper-fancy .audio-player .btn-group .button:first-of-type {
+    display: block;
+  }
+  .audio-player-wrapper-fancy .audio-player .audio-player-substack-logo {
+    display: block;
+  }
+}
+@media (min-width: 350px) {
+  .audio-player-wrapper-fancy .audio-player .audio-player-hero-image-container {
+    padding-top: 25%;
+    width: 25%;
+    display: block;
+  }
+  .audio-player-wrapper-fancy .audio-player .btn-group {
+    display: flex;
+  }
+  .audio-player-wrapper-fancy .audio-player .btn-group .button:first-of-type {
+    display: block;
+  }
+}
+@media (min-width: 400px) {
+  .audio-player-wrapper-fancy .audio-player .audio-player-hero-image-container {
+    padding-top: 40%;
+    width: 40%;
+  }
+}
+@media (max-width: 400px) {
+  .audio-player-wrapper-fancy .audio-player .btn-group {
+    margin-top: 12px;
+  }
+  .audio-player-wrapper-fancy .audio-player .btn-group .button {
+    font-size: 13px;
+    padding: 6px 12px;
+    height: auto;
+    margin-top: 10px;
+  }
+}
+@media (min-width: 600px) {
+  .audio-player-wrapper-fancy .audio-player .audio-player-hero-image-container {
+    padding-top: 55%;
+    width: 55%;
+  }
+}
+@media (max-width: 650px) {
+  .poll-editor-modal {
+    min-width: calc(100% - 20px);
+  }
+}
+@media (max-width: 750px) {
+  .poll-embed .poll-anchor-target .poll-anchor-copy-button {
+    left: 8px;
+    top: 45px;
+  }
+}</style></head><body class="email-body" style="font-kerning: auto;--image-offset-margin: -120px;"><img src="https://eotrx.substackcdn.com/o/1b00f83d94dd636e/p.gif?token=eyJtIjoiPDIwMjYwNTE5MTIxODU0LjMuNjNkN2NjY2M2Y2Y0NjMxYS5iNnk4NDlpZ0BtZy1kMS5zdWJzdGFjay5jb20-IiwidSI6MTA1MTg2NDcsInIiOiJiZW5vaXRjQGdtYWlsLmNvbSIsImQiOiJtZy1kMS5zdWJzdGFjay5jb20iLCJwIjpudWxsLCJ0IjpudWxsLCJhIjpudWxsLCJzIjoyNjAzNDcsImMiOiJkcmlwLWNhbXBhaWduLWVtYWlsIiwiZiI6dHJ1ZSwicG9zaXRpb24iOiJ0b3AiLCJpYXQiOjE3NzkxOTMxMzQsImV4cCI6MTc4MTc4NTEzNCwiaXNzIjoicHViLTAiLCJzdWIiOiJlbyJ9.wYJ-D_gnM4CcDXPhzOnbcjTX00hGZxQkQHTtziD3AwQ" alt="" width="1" height="1" border="0" style="height:1px !important;width:1px !important;border-width:0 !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:0 !important;margin-left:0 !important;padding-top:0 !important;padding-bottom:0 !important;padding-right:0 !important;padding-left:0 !important;"/><div class="preview" style="display:none;font-size:1px;color:#333333;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;">Welcome to The Free Press</div><div class="preview" style="display:none;font-size:1px;color:#333333;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;">&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;</div><table class="email-body-container" role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td></td><td class="content" width="550"></td><td></td></tr><tr><td></td><td class="content email-body emailBody-UIBO_e" width="550" align="left" style="background-color: #fff!important;"><div style="font-size: 16px;line-height: 26px;max-width: 550px;width: 100%;margin: 0 auto;overflow-wrap: break-word;"><div class="topBar-bch8Uv systemHeader-mpAod3" style="border-top: 5px solid #161613;width: 100%;margin-bottom: 32px;font-size: 16px;line-height: 26px;"><table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="center"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="vertical-align:middle;"><table width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="text-align:center;"></td><td class="content" align="left" width="254" style="text-align:center;"><a target="_blank" href="https://email.mg-d1.substack.com/c/eJxskM2upSAMgJ9GdsfwJ8qCxWzuaxgo1dNcQQM4xrefHCeTzOKuv_brl4JvuO7ldrHQ8QKfDk9rfmHytLHolA18AsPQiXG0wiqhNHvgvGLG4hvG2bf_6GAle7sIfEAtOJrFg5J2sGYQYYwCTLQaFSMnuTR8EFZIMQ26V71RcQQAMLBoo4Tvg7knbWntNE_rK4q-nqE2D9897IlRnZeCT4tr5US2uXdrR-3Ur05-dfLruq6-vXE5nvG8N1oIfKM9z-0-0CVfvrFRXtlxhhn2lM5M7Z4x-7Bh_Cs9zrD926LopOFKj6y4gHmnBp3m66fgOVHPEPfkKbvgC11ItbL242PPiuWjE3wQk9Ej--3knwAAAP__OoCC0A" style="width:auto;height:auto;"><img style="border: none;vertical-align: middle;width: auto;height: auto;max-width: 100%" alt="" width="254px" src="https://substackcdn.com/image/fetch/$s_!kpQG!,w_508,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Fimg%2Fthefp%2Ffree_press_email_logo.png"></a></td><td style="vertical-align: top;text-align: center"></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></div><div class="title-qCjAfr" style="font-size: 36px;line-height: 40px;color: #161613;letter-spacing: -.36px;margin-bottom: 18px;font-family: Georgia,Times New Roman,Times,serif;font-style: normal;font-weight: 700;text-decoration: none;">Welcome to The Free Press</div><div class="post typography the-fp-post-email-wrapper" dir="auto" style="--image-offset-margin: -120px;padding: 32px 0 0 0;font-size: 16px;line-height: 26px;"><div class="body markup" dir="auto" style="text-align: initial;font-size: 16px;line-height: 26px;width: 100%;word-break: break-word;margin-bottom: 16px;"><div class="captioned-image-container-static" style="font-size: 16px;line-height: 26px;margin: 32px auto;margin-top: 0;"><figure style="width: 100%;margin: 0 auto;"><table class="image-wrapper" width="100%" border="0" cellspacing="0" cellpadding="0" data-component-name="Image2ToDOMStatic" style="mso-padding-alt: 1em 0 1.6em;"><tbody><tr><td style="text-align: center;"></td><td class="content" align="left" width="550" style="text-align: center;"><a class="image-link" target="_blank" href="https://email.mg-d1.substack.com/c/eJxskc2u3CAMhZ8GdhPxF5IsWFS6mteIwDgZdANE_DSat68y1ZW66NbH5_OxDbbhnsvb-BLOB9h42rCnB0YbDuqNXBybQVM0fJoWvkguFf2I644Ji23oV9v-UcdF0JeZuJ1wFpIzYBss2o6T9lYJpjWgZjMNRjCh2cgXLvg8qkEOWvoJAEDDprTkdnD6Pasl7ESxuD88H2p3tVn4HiBHGuq6FfxkMa10pId5tXZWIn8R8STieV3X0F64nXc7Ec_bDSU4JPLZW1xr7gWQyK8Pgwh9F38uQOTXTb_wgByR05Rb2ALYFnJa2_tEE235xhbSTs_uVsgx9hTae8Vk3YH-b6azu-PHFbwRmkk10WIcphwaEMX2e_hnodqdz9GGZJwt4cJQK23__UuvWG4cZyOftZrobyP-BAAA__9-uJkv" style="position: relative;flex-direction: column;align-items: center;padding: 0;width: auto;height: auto;border: none;text-decoration: none;display: block;margin: 0;margin-top: 0;margin-bottom: 0;"><img data-attrs="{&quot;src&quot;:&quot;https://substack-post-media.s3.amazonaws.com/public/images/88e12d8e-735e-44ac-a5bd-c402f74e7e98_1280x854.gif&quot;,&quot;srcNoWatermark&quot;:null,&quot;fullscreen&quot;:null,&quot;imageSize&quot;:null,&quot;height&quot;:854,&quot;width&quot;:1280,&quot;resizeWidth&quot;:null,&quot;bytes&quot;:8389743,&quot;alt&quot;:null,&quot;title&quot;:null,&quot;type&quot;:&quot;image/gif&quot;,&quot;href&quot;:&quot;https://www.thefp.com/subscribe?utm_source=email&amp;utm_campaign=freewelcome1&quot;,&quot;belowTheFold&quot;:false,&quot;topImage&quot;:true,&quot;internalRedirect&quot;:&quot;https://www.thefp.com/i/undefined?img=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F88e12d8e-735e-44ac-a5bd-c402f74e7e98_1280x854.gif&quot;,&quot;isProcessing&quot;:false,&quot;align&quot;:null,&quot;offset&quot;:false}" alt="" width="550" height="366.953125" src="https://substackcdn.com/image/fetch/$s_!AZEu!,w_550,c_limit,f_auto,q_auto:good,fl_lossy/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F88e12d8e-735e-44ac-a5bd-c402f74e7e98_1280x854.gif" style="border: none !important;vertical-align: middle;display: block;-ms-interpolation-mode: bicubic;height: auto;margin-bottom: 0;width: auto !important;max-width: 100% !important;margin: 0 auto;"></a></td><td style="text-align: center;"></td></tr></tbody></table></figure></div><p style="margin: 0 0 20px 0;color: #161613;font-family: Georgia, serif;font-weight: 400;line-height: 26px;font-size: 16px;"><em>The Free Press</em><span> is built on the ideals that once defined American journalism: honesty, doggedness, and fierce independence. In many ways, our work is traditional&#8212;but in today&#8217;s climate, curiosity, and independence have become radical. That&#8217;s ok by us. We focus on our journalism.</span></p><p style="margin: 0 0 20px 0;color: #161613;font-family: Georgia, serif;font-weight: 400;line-height: 26px;font-size: 16px;"><span>Every day you&#8217;ll find scoops and investigations, fiery debates, and fresh commentary in your inbox, on our </span><a href="https://email.mg-d1.substack.com/c/eJxskT2unTAQRleDO5D_wYWLNGwD2eO53NEDY9km0d19xIsipUh99B2d0UDouF_141OlMkI4S6A9j3gGOljyykW-gGXoxTw74ZRQmn3DbceMNXRMW-j_UOMke3vl0uwU8JcWxnFljHbSLoKDthi1tIy85NJyI5yQYjF6UpNVaQYAsPDSVokwRftZtKN90PzcxySmdsfWA3xNcJ2M2vaq-N3ie72RHf7de2mD-jHIdZBruRKE1tsUSjnw2QxyvdsgV3iHnPEY5NrfOD6WsVRsD6Jk7cyNMVIZlq9OL4LQ6cpb_xT0Z6hf2CnvrNxxg-s870z9s2EO8cD0J6Tc8fi7ouSl5UrPrPqI-aIOg-b7U_19Rbtjus5A2cdQ6RdSa6z_9xl3w_roBDdisXpmP738HQAA__98m5Im" style="color: #161613;text-decoration: underline;">podcasts</a><span>, </span><a href="https://email.mg-d1.substack.com/c/eJxskMvOpCAQRp9Gdm24ibJgMZt-DcOltCstYADb-PYTezLJv_jX36mTk_K2wZrLZULB_eFt3C2u6QHR4kaCEdrRySsCho2jZlowIcl3nFdIUGyDMNv2Yx00Jy9juVdKhDGAnihYJR3zowpKMM3CBJSg4ZQrOjDNOJsG2Yv-5r33XvlFKsFs79Q1SY1rJ2lcH4H19XC1Wf_ufY4E67wU-LaYVg4gm3m1ttdO_On4s-PP8zz79oJlv_GOPz8YIFeScsMFvW2Y09yuHUy05Q0N00r2w80-x3gkbNcMyboNwj_7frjt_xUGwxUVciTFOEgZm-8kXe-Ub1o9XMjRYjLOFjwBayXt1w8fFcqtY3Rgk5Ij-Rj-NwAA___PlIX6" style="color: #161613;text-decoration: underline;">video series</a><span>, and always at </span><a href="https://email.mg-d1.substack.com/c/eJxskEuOpDAMQE9DdoXyI5BFFrOpa6B8DGUVCSg4M-L2o6LVUi96_ez3LEdPsO71cqni8Yg-Hx7X8oDscWPJKRv4FA0DJ8bRCquE0uyG8woFqidIs6cfdLCSvZwewAa-wBSDstouclj4JA1Mo_GWB8vQSS4NH4QVUkyD7lVvVBpjjNHERRslfB_MNWmLa6d5Xh9J9GcLJ_n47uOeGZ7zUuG-xVFtwDb3Ijo69aeTz04-6QXLcU-WnXDB6An3MtN1gMu-voGwrOxoYY57zq0gXTMUHzZIX76jhe17C5OThis9suoClB0pdpqvn_idOFtIe_ZYXPAV_wGeJ6Nff9pOqB-d4IOYjB7ZXyf_BwAA__91WoCz" style="color: #161613;text-decoration: underline;">TheFP.com</a><span>.</span></p><p style="margin: 0 0 20px 0;color: #161613;font-family: Georgia, serif;font-weight: 400;line-height: 26px;font-size: 16px;"><span>Paid subscribers get access to exclusive columns like </span><em><strong>TGIF</strong></em><span> from Nellie Bowles, early access to live events, and the chance to join conversations in our livestreams and comments section.</span></p><p style="margin: 0 0 20px 0;color: #161613;font-family: Georgia, serif;font-weight: 400;line-height: 26px;font-size: 16px;"><span>If you want to see why paid subscribers to </span><em>The Free Press </em><span>love their subscription,</span><strong> try it today for free, the first 7 days are on us.</strong></p><p class="button-wrapper" data-attrs="{&quot;url&quot;:&quot;https://www.thefp.com/subscribe?utm_source=email&amp;utm_campaign=freewelcome1&amp;utm_medium=email&quot;,&quot;text&quot;:&quot;Start Your Free Trial&quot;,&quot;action&quot;:null,&quot;class&quot;:null}" data-component-name="ButtonCreateButton" style="margin: 0 0 20px 0;color: #161613;font-family: Georgia, serif;font-weight: 400;line-height: 26px;font-size: 16px;text-align: center;cursor: pointer;border-radius: 4px;"><a class="button primary" href="https://email.mg-d1.substack.com/c/eJxskUuu4yAQRVcDs1j8jO0Bg5aesg2LT9kpvQAWn7ay-5bTHakHb8rlHN2q8rbBnsvLhILHzdt4WNzTDaLFJw1GLo7NXlMwfJoWvkguFX2H6w4Jim0QVtv-S8dF0IcZpdJ2mv02ApOOy23kbOPjssx8UtPsKBrBhGYjX7jg86gGOWgZJu-9135TWnI7OP2a1YI7USzut8CH2l1t1n8PPkeKdd0KvLuYVjrQp3m0dlQifxFxJ-J-nufQHrAd13ci7hftCzog8t5bXGvuxQORX28HEfp6_GyAyK_LfsLT5wj8XxohYI8fhKbccENvG-a0ttcBJtryDQ3TTo_uVp9j7Anba4Vk3RPC36JHd88PhcEIzaSaaDEOUsbmiWL7pX9PWbsLOVpMxtmCJ2CttP14rF6hXDrORj5rNdHfRvwJAAD__7u9oEU" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;box-sizing: border-box;cursor: pointer;border: none;border-radius: 8px;font-size: 14px;line-height: 20px;font-weight: 600;text-align: center;margin: 0;opacity: 1;outline: none;white-space: nowrap;color: #ffffff !important;text-decoration: none !important;background-color: #f9303d;padding: 12px 20px;height: auto;"><span style="color: #ffffff;text-decoration: none;">Start Your Free Trial</span></a></p><p style="margin: 0 0 20px 0;color: #161613;font-family: Georgia, serif;font-weight: 400;line-height: 26px;font-size: 16px;">What started as a blog from a kitchen table in 2021 is now a newsroom of editors, reporters, and producers across the country. Your support will help us expand our investigations, podcasts, and debates, and build a lasting home for fearless journalism. We know this is just the beginning. We&#8217;re thrilled you&#8217;re here for it.</p><p style="margin: 0 0 20px 0;color: #161613;font-family: Georgia, serif;font-weight: 400;line-height: 26px;font-size: 16px;"><span>Yours,</span><br><span>The Free Press</span></p><p class="button-wrapper" data-attrs="{&quot;url&quot;:&quot;https://www.thefp.com/subscribe?utm_source=email&amp;utm_campaign=freewelcome1&amp;utm_medium=email&quot;,&quot;text&quot;:&quot;Start Your Free Trial&quot;,&quot;action&quot;:null,&quot;class&quot;:&quot;button-wrapper&quot;}" data-component-name="ButtonCreateButton" style="margin: 0 0 20px 0;color: #161613;font-family: Georgia, serif;font-weight: 400;line-height: 26px;font-size: 16px;text-align: center;cursor: pointer;border-radius: 4px;"><a class="button primary button-wrapper" href="https://email.mg-d1.substack.com/c/eJxskUuu4yAQRVcDs1j8jO0Bg5aesg2LT9kpvQAWn7ay-5bTHakHb8rlHN2q8rbBnsvLhILHzdt4WNzTDaLFJw1GLo7NXlMwfJoWvkguFX2H6w4Jim0QVtv-S8dF0IcZpdJ2mv02ApOOy23kbOPjssx8UtPsKBrBhGYjX7jg86gGOWgZJu-9135TWnI7OP2a1YI7USzut8CH2l1t1n8PPkeKdd0KvLuYVjrQp3m0dlQifxFxJ-J-nufQHrAd13ci7hftCzog8t5bXGvuxQORX28HEfp6_GyAyK_LfsLT5wj8XxohYI8fhKbccENvG-a0ttcBJtryDQ3TTo_uVp9j7Anba4Vk3RPC36JHd88PhcEIzaSaaDEOUsbmiWL7pX9PWbsLOVpMxtmCJ2CttP14rF6hXDrORj5rNdHfRvwJAAD__7u9oEU" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;box-sizing: border-box;border: none;font-size: 14px;line-height: 20px;font-weight: 600;margin: 0;opacity: 1;outline: none;white-space: nowrap;color: #ffffff !important;text-decoration: none !important;text-align: center;cursor: pointer;border-radius: 4px;background-color: #f9303d;padding: 12px 20px;height: auto;"><span style="color: #ffffff;text-decoration: none;">Start Your Free Trial</span></a></p><div class="captioned-image-container-static" style="font-size: 16px;line-height: 26px;margin: 32px auto;"><figure style="width: 100%;margin: 0 auto;"><table class="image-wrapper" width="100%" border="0" cellspacing="0" cellpadding="0" data-component-name="Image2ToDOMStatic" style="mso-padding-alt: 1em 0 1.6em;"><tbody><tr><td style="text-align: center;"></td><td class="content" align="left" width="1320" style="text-align: center;"><a class="image-link" target="_blank" href="https://email.mg-d1.substack.com/c/eJxskc_OmzAQxJ8G30D-C_jgQ6WK10DLeiGrLzYIm6bp01dJVKmH7zbS-DdjjxEqbfv5DPHko0VIB_CWW0rAdxGD8YscsRcU1DB45Y0yVrzNeaNMJ1SKM9T_XOe1uAVjPDorF4eahhHRo3bRe9mTssMwDoKDlrqXTnml1ehsZ7rexAERscfV9kZBt_TP0XreGivT1kbVlWspFfCrwz0JLvN60vsuoZ4XiXu41XqUxvxo9NTo6fF4dPVG6_E63uiJGz1dOdLKmWJjJk5bY35-GO1elHtxTk__etpjL7VNFBm6YjpI8GfP8CifQKen41rujG_JCTYqb4k0gNG9a8lb19q4QAsrjq00IHFd_SjXYVZGy99GdkfeRN4rr4xQec9zfR4UEpxfVDlv4riWGfeUrsz1OVOG5U7x8-BP-4fiGHQvjR3EGRbKO1dsrNxe67zXKtcS9wScwwInP4hLEfXbT78Kna84JZ0aezuIX0H_DQAA__-pB7KY" style="position: relative;flex-direction: column;align-items: center;padding: 0;width: auto;height: auto;border: none;text-decoration: none;display: block;margin: 0;"><img class="wide-image" data-attrs="{&quot;src&quot;:&quot;https://substack-post-media.s3.amazonaws.com/public/images/ce7a3265-e945-4dba-afc8-03a0cff980f7_1320x30.png&quot;,&quot;srcNoWatermark&quot;:null,&quot;fullscreen&quot;:null,&quot;imageSize&quot;:null,&quot;height&quot;:30,&quot;width&quot;:1320,&quot;resizeWidth&quot;:null,&quot;bytes&quot;:1358,&quot;alt&quot;:null,&quot;title&quot;:null,&quot;type&quot;:&quot;image/png&quot;,&quot;href&quot;:null,&quot;belowTheFold&quot;:true,&quot;topImage&quot;:false,&quot;internalRedirect&quot;:&quot;https://www.thefp.com/i/undefined?img=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fce7a3265-e945-4dba-afc8-03a0cff980f7_1320x30.png&quot;,&quot;isProcessing&quot;:false,&quot;align&quot;:null,&quot;offset&quot;:false}" alt="" width="550" height="12.5" src="https://substackcdn.com/image/fetch/$s_!EKUx!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fce7a3265-e945-4dba-afc8-03a0cff980f7_1320x30.png" style="border: none !important;vertical-align: middle;display: block;-ms-interpolation-mode: bicubic;height: auto;margin-bottom: 0;width: auto !important;max-width: 100% !important;margin: 0 auto;"></a></td><td style="text-align: center;"></td></tr></tbody></table></figure></div><h4 class="header-anchor-post" style="position: relative;font-family: 'SF Pro Display',-apple-system-headline,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight: bold;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: antialiased;-webkit-appearance: optimizelegibility;-moz-appearance: optimizelegibility;appearance: optimizelegibility;margin: 1em 0 0.625em 0;color: #161613;line-height: 1.16em;font-size: calc(1.125em * 1);"><span>Don&#8217;t know where to start? Check out some of our favorite </span><em>Free Press</em><span> articles:</span></h4><div class="digestPostEmbed-flwiST custom-css-email-digest-post-embed" data-component-name="DigestPostEmbedStatic" style="margin-bottom: 20px;padding: 0;position: relative;font-size: 16px;line-height: 26px;"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0" style="width:100%;"><tbody><tr><td style="vertical-align:top;" width="90"><a href="https://email.mg-d1.substack.com/c/eJxskD0OnDAQhU-DOxD-BQoXafYaaGwGGO3aJmYI2ttHu1GkFKm_mfc-vQiMW6lvv1Q62gjpANpyiwnoJRavp9CP0Qn0chgmOWmpjfjCecOMFRiXGfgfaicldo8rjhNYbaOZpDRBWjsGjKMdjVydCYK86pXrrZykkqM1ne6cXoYYY3RxNU5L6IJ7j2airTF92tpFducVTob47GJJgs55rfh18VwvFC-_Mx9no3806tGox33fHe-4Hp_zRj2ORj32crc_gaG2oVzbzi0krBRB5MK0UgSmkmd-H-gT1Ccy5U0cV5hjSenKxO8ZM4QXLn86jyu8_n7R4pXrtRlE9QFzIY6N6beP4Ff4vMJSElD2ASrdSOcp-L-7XyfWT5zsrRydGcQvr34HAAD__0mcjaA" style="text-decoration: none;"><img alt="How Qatar Bought America" src="https://substackcdn.com/image/fetch/$s_!D5SI!,w_180,h_180,c_fill,f_auto,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F32748b6f-5f99-44e3-8711-6abb99854ad0_1666x938.png" style="border: none;vertical-align: middle;display: block;-ms-interpolation-mode: bicubic;margin: 0 auto;width: auto;height: auto;max-width: 100%" width="90"></a></td><td style="min-width:16px;" width="16"></td><td style="vertical-align:top;"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><a class="link-AiRTNr" href="https://email.mg-d1.substack.com/c/eJxskD0OnDAQhU-DOxD-BQoXafYaaGwGGO3aJmYI2ttHu1GkFKm_mfc-vQiMW6lvv1Q62gjpANpyiwnoJRavp9CP0Qn0chgmOWmpjfjCecOMFRiXGfgfaicldo8rjhNYbaOZpDRBWjsGjKMdjVydCYK86pXrrZykkqM1ne6cXoYYY3RxNU5L6IJ7j2airTF92tpFducVTob47GJJgs55rfh18VwvFC-_Mx9no3806tGox33fHe-4Hp_zRj2ORj32crc_gaG2oVzbzi0krBRB5MK0UgSmkmd-H-gT1Ccy5U0cV5hjSenKxO8ZM4QXLn86jyu8_n7R4pXrtRlE9QFzIY6N6beP4Ff4vMJSElD2ASrdSOcp-L-7XyfWT5zsrRydGcQvr34HAAD__0mcjaA" style="text-decoration: none;color: #161613;"><div class="title-RKep04" style="line-height: 1.1;color: #161613;font-family: Arial,sans-serif;font-weight: 700;font-size: 18px">How Qatar Bought America</div></a></td></tr><tr height="16"><td></td></tr><tr><td><div class="meta-XhipYq" style="font-size: 14px;line-height: 1;color: #7d858b;letter-spacing: .1em;text-transform: uppercase;font-family: Arial,sans-serif;font-weight: 700;"><a class="inheritColor-eP1Bab" href="https://email.mg-d1.substack.com/c/eJxskL2unDAQhZ8GdyD_YUPhIs2-BhqPB-5owUbGJNq3j-5Gkba49TdzzqeD0Ggr9RVS5bNHOE7gLfd0AO8iBTNHOaETFJT3s5qNMla84bJRpgqN0gLtg46zFl_BJbkCRuWBcJ5WFdF571dl4qgiGic4aKmdHNWstJpGO5jBmeQRER2u1hkFQ3Svyc68dVYeW5_UcN3xaoDPAcsh-FrWSm-X0OpNYg9frZ1XZ351-tHpx-d1px9nLSvv1OmHkn40xtupXyvkzNTHveBT5NJ4ZYTGJS_tdVI4oD6pcd7EeccFy3HcmdtroQxxp_Sv97zj_v-LU9BOGutFDZFy4Yadldu35Fv6umMqB3AOESr_Ib4u0X7c_r6ofscpOarJWS9-B_03AAD__2s5jls" style="color: inherit;text-decoration: none;">Frannie Block</a> and <a class="inheritColor-eP1Bab" href="https://email.mg-d1.substack.com/c/eJxskL2O3SAQhZ_GdLZgwNgUFGnua1j8jL2TNWABTuS3j_ZGkbZI_c2c8-kE1_Eo9bGx0jUGly5HRx4xOTpZtNJ4vgbN0IplMcJIIRV7w-3AjNV1jJvr3-hsgH3Y2UTQ4LXmZuEKZNjB7MDVbGbJJWpGFjhoPgsjQKyzmuSkZVxCCEGHXWkp3OT1sypDx6B4OsYopnb71l34nEJJjNq2V3y72F5vZKf96P1qg_wxwGuA1_frAV5XLTudOMBLKGFgmVc-_nTP2MpZUsksl047Bdep5K0_F9rk6id2yge7br-FktKdqT8bZudPjH9br9uf_74oWtBcqoVV6zEX6mFQ_PhSfCu328eSHGXrXaXfSK2x_t_l74b1K07wWaxaLeyXhT8BAAD__z6YjA8" style="color: inherit;text-decoration: none;">Jay Solomon</a></div></td></tr><tr height="16"><td></td></tr><tr><td><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="vertical-align:middle;"><div class="button-fZfkQf" style="color: #f2312c;text-transform: uppercase;letter-spacing: .1em;font-family: Arial,sans-serif;font-weight: 700;font-size: 16px;line-height: 26px;"><a class="buttonSm-PaaWgJ" href="https://email.mg-d1.substack.com/c/eJxskD0OnDAQhU-DOxD-BQoXafYaaGwGGO3aJmYI2ttHu1GkFKm_mfc-vQiMW6lvv1Q62gjpANpyiwnoJRavp9CP0Qn0chgmOWmpjfjCecOMFRiXGfgfaicldo8rjhNYbaOZpDRBWjsGjKMdjVydCYK86pXrrZykkqM1ne6cXoYYY3RxNU5L6IJ7j2airTF92tpFducVTob47GJJgs55rfh18VwvFC-_Mx9no3806tGox33fHe-4Hp_zRj2ORj32crc_gaG2oVzbzi0krBRB5MK0UgSmkmd-H-gT1Ccy5U0cV5hjSenKxO8ZM4QXLn86jyu8_n7R4pXrtRlE9QFzIY6N6beP4Ff4vMJSElD2ASrdSOcp-L-7XyfWT5zsrRydGcQvr34HAAD__0mcjaA" style="font-size: 14px;color: #f2312c;text-decoration: none;">Read full story</a></div></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></div><div class="digestPostEmbed-flwiST custom-css-email-digest-post-embed" data-component-name="DigestPostEmbedStatic" style="margin-bottom: 20px;padding: 0;position: relative;font-size: 16px;line-height: 26px;"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0" style="width:100%;"><tbody><tr><td style="vertical-align:top;" width="90"><a href="https://email.mg-d1.substack.com/c/eJxskTkO2zAQRU8jdhTExZRYsEjjawhcRvLA5gJqFME5fWAHAVKkfjP_P-BHT7DX_napY-PR5-ZxLxyyxxdLTtkwLdEwcGKerbBKKM2-cN2hQPcEafX0D71ZyR7OaKm19LO2m56WzcCmvN9siMZKHQIwdHKSZroJK6RYbnpUo1FpjjFGEzdtlPBjMO9FW9wHPeWdJzEeZzjIx-cYa2Z4rFuHr4ujfgJ7uQdROwb1Y5D3Qd6v6xrpAVv7nA_y3gZ5R55qIV4AEq-_IDeMPJzEkV--EEdipRJuGD1hLSu9G7js-xMIy87aGdZYcz4L0nuF4sML0p_ydobX3y9MTppJ6Zl1F6BUpDjoaf-Yfs2PM6SaPRYXfMcL8DgY_XeA84D-iRPTTSxGz-ynk78DAAD__3jTkOk" style="text-decoration: none;"><img alt="I Don&#8217;t Need Ozempic. But I Want It. " src="https://substackcdn.com/image/fetch/$s_!3zQL!,w_180,h_180,c_fill,f_auto,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F378bbeb0-e1a3-42ab-b171-047ee8cc093a_684x1024.jpeg" style="border: none;vertical-align: middle;display: block;-ms-interpolation-mode: bicubic;margin: 0 auto;width: auto;height: auto;max-width: 100%" width="90"></a></td><td style="min-width:16px;" width="16"></td><td style="vertical-align:top;"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><a class="link-AiRTNr" href="https://email.mg-d1.substack.com/c/eJxskTkO2zAQRU8jdhTExZRYsEjjawhcRvLA5gJqFME5fWAHAVKkfjP_P-BHT7DX_napY-PR5-ZxLxyyxxdLTtkwLdEwcGKerbBKKM2-cN2hQPcEafX0D71ZyR7OaKm19LO2m56WzcCmvN9siMZKHQIwdHKSZroJK6RYbnpUo1FpjjFGEzdtlPBjMO9FW9wHPeWdJzEeZzjIx-cYa2Z4rFuHr4ujfgJ7uQdROwb1Y5D3Qd6v6xrpAVv7nA_y3gZ5R55qIV4AEq-_IDeMPJzEkV--EEdipRJuGD1hLSu9G7js-xMIy87aGdZYcz4L0nuF4sML0p_ydobX3y9MTppJ6Zl1F6BUpDjoaf-Yfs2PM6SaPRYXfMcL8DgY_XeA84D-iRPTTSxGz-ynk78DAAD__3jTkOk" style="text-decoration: none;color: #161613;"><div class="title-RKep04" style="line-height: 1.1;color: #161613;font-family: Arial,sans-serif;font-weight: 700;font-size: 18px">I Don&#8217;t Need Ozempic. But I Want It. </div></a></td></tr><tr height="16"><td></td></tr><tr><td><div class="meta-XhipYq" style="font-size: 14px;line-height: 1;color: #7d858b;letter-spacing: .1em;text-transform: uppercase;font-family: Arial,sans-serif;font-weight: 700;"><a class="inheritColor-eP1Bab" href="https://email.mg-d1.substack.com/c/eJxskEuO5CAMQE8TdokwEBIWLGZT14iAuNJWB4j4zChz-lFXa6Ra9PrZfk8OruGRy233QtcYXLwcHWnE6Ohku5XG8zVohhaWxYCRIBV7we3AhMU13DfX3uhsBPuwoDEo5EpxpRYtjAwz9wDgheB6dcDICi40n8GAgHVWk5y03JcQQtDhqbQEN3l9r8rQMSgej3GHqXZfmwufU8iRUd2eBV8ttpWO7LQfrV11kL8G8RjE4316EI-r5CedOIgHSKkMaDPW_vce_yDVylJu9KTgGuW0tftCG135xEbpYFf3W8gx9kTt3jA5f-L-7by6P_9v0W6F5lItrFiPKVMLg-LHV-AruHa_5-goWe8KfWvbj3_vFcvXOeAzrFot7LcV_wIAAP__arCLqA" style="color: inherit;text-decoration: none;">Suzy Weiss</a></div></td></tr><tr height="16"><td></td></tr><tr><td><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="vertical-align:middle;"><div class="button-fZfkQf" style="color: #f2312c;text-transform: uppercase;letter-spacing: .1em;font-family: Arial,sans-serif;font-weight: 700;font-size: 16px;line-height: 26px;"><a class="buttonSm-PaaWgJ" href="https://email.mg-d1.substack.com/c/eJxskTkO2zAQRU8jdhTExZRYsEjjawhcRvLA5gJqFME5fWAHAVKkfjP_P-BHT7DX_napY-PR5-ZxLxyyxxdLTtkwLdEwcGKerbBKKM2-cN2hQPcEafX0D71ZyR7OaKm19LO2m56WzcCmvN9siMZKHQIwdHKSZroJK6RYbnpUo1FpjjFGEzdtlPBjMO9FW9wHPeWdJzEeZzjIx-cYa2Z4rFuHr4ujfgJ7uQdROwb1Y5D3Qd6v6xrpAVv7nA_y3gZ5R55qIV4AEq-_IDeMPJzEkV--EEdipRJuGD1hLSu9G7js-xMIy87aGdZYcz4L0nuF4sML0p_ydobX3y9MTppJ6Zl1F6BUpDjoaf-Yfs2PM6SaPRYXfMcL8DgY_XeA84D-iRPTTSxGz-ynk78DAAD__3jTkOk" style="font-size: 14px;color: #f2312c;text-decoration: none;">Read full story</a></div></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></div><div class="digestPostEmbed-flwiST custom-css-email-digest-post-embed" data-component-name="DigestPostEmbedStatic" style="margin-bottom: 20px;padding: 0;position: relative;font-size: 16px;line-height: 26px;"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0" style="width:100%;"><tbody><tr><td style="vertical-align:top;" width="90"><a href="https://email.mg-d1.substack.com/c/eJxs0b3OpDoMgOGrIV0Q-SFAkeI0cxvICQasjwSUmIPm7lczq5W22Pq1rUdyBMbtLG-_FLpkhHQBbVliAjrE4s0UujE6gV4Nw6Qmo4wV3zhvmLEA4zID_1X7SYvd27HTAIvu-2E0MPVuHLowGB3RTm6KqyCvO-26Xk1Kq7G3rWmdWYYYY3Rxtc4oaIN7j3airbFd2uSi2nqHyhB_2ngmQXVeC34tnsuN4vA781Ub81-jX41-Pc_T8o7r9Rlv9Otq9AtIPnQcMu6QN5TPDiyJJVXJpwwo9ztBFvlkWikC05lnfl_oE5QfZMqbuO4wxzOlOxO_Z8wQDlx-A647HH-2aPHadcYOoviA-SSOje22j_arr3dYzgSUfYBCD1Ktgv_5hLti-ZxTXa9GZwfxv9e_AgAA__-yypF4" style="text-decoration: none;"><img alt="AI Will Change What It Is to Be Human. Are We Ready?" src="https://substackcdn.com/image/fetch/$s_!ixvR!,w_180,h_180,c_fill,f_auto,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa11fb891-404c-4f73-92a1-942343afa98f_1024x683.png" style="border: none;vertical-align: middle;display: block;-ms-interpolation-mode: bicubic;margin: 0 auto;width: auto;height: auto;max-width: 100%" width="90"></a></td><td style="min-width:16px;" width="16"></td><td style="vertical-align:top;"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><a class="link-AiRTNr" href="https://email.mg-d1.substack.com/c/eJxs0b3OpDoMgOGrIV0Q-SFAkeI0cxvICQasjwSUmIPm7lczq5W22Pq1rUdyBMbtLG-_FLpkhHQBbVliAjrE4s0UujE6gV4Nw6Qmo4wV3zhvmLEA4zID_1X7SYvd27HTAIvu-2E0MPVuHLowGB3RTm6KqyCvO-26Xk1Kq7G3rWmdWYYYY3Rxtc4oaIN7j3airbFd2uSi2nqHyhB_2ngmQXVeC34tnsuN4vA781Ub81-jX41-Pc_T8o7r9Rlv9Otq9AtIPnQcMu6QN5TPDiyJJVXJpwwo9ztBFvlkWikC05lnfl_oE5QfZMqbuO4wxzOlOxO_Z8wQDlx-A647HH-2aPHadcYOoviA-SSOje22j_arr3dYzgSUfYBCD1Ktgv_5hLti-ZxTXa9GZwfxv9e_AgAA__-yypF4" style="text-decoration: none;color: #161613;"><div class="title-RKep04" style="line-height: 1.1;color: #161613;font-family: Arial,sans-serif;font-weight: 700;font-size: 18px">AI Will Change What It Is to Be Human. Are We Ready?</div></a></td></tr><tr height="16"><td></td></tr><tr><td><div class="meta-XhipYq" style="font-size: 14px;line-height: 1;color: #7d858b;letter-spacing: .1em;text-transform: uppercase;font-family: Arial,sans-serif;font-weight: 700;"><a class="inheritColor-eP1Bab" href="https://email.mg-d1.substack.com/c/eJxskM2OpSAQhZ9Gdhr-hOuCxWx8DVNAaVdawABOx7ef9J1M0otZf1XnfDkBOh6lPi5WusYA6QI68ogJ6GTRqcXzVzAMnbB2EYsSSrM33A7MWKFj3KD_oPMi2YfDne8CgHsANAr4LL0X1oIREnmUwMhJLg2fxSKkeM16UpNR0YYQggm7NkrA5M3z0gsdg-bpGKOY2u1bh_A5hZIYtW2v-HZxvd7ITvfR-9UG9WuQ6yDXn9eDXK9adjpxkKu2Roz9ObGOoXxhZrl02ilAp5K3_lzoEtRP7JQPdt1-CyWlO1N_NszgT4x_C6_bn_--KDppuNKWVecxF-ph0Pz4tnvbttvHkoCy81DpC6k11v87-t2wfscJPouX0Zb9dvJPAAAA__82oYy9" style="color: inherit;text-decoration: none;">Tyler Cowen</a> and <a class="inheritColor-eP1Bab" href="https://email.mg-d1.substack.com/c/eJxskD2OpDAQhU-DM5D_MO3AwSZ9DVS2y0xpwCBTzIjbr6ZXK3Uw8Vf13qeXgHHZ2x1yo6NPsB1AS-1xA1pFDsZH-UhOYFDT5JU3yljxgvOCFRsw5hn4jY5ei49gp1FCMcnkVEqOkx-dzU75YmNxKEFQ0FI7OSqvtHqMdjCDM3lKKSWXinVGwRDd_bCels7KbemzGs4rngzpc0j7JuicS8OXS-B2oVjDB_NxduZPp5-dfr5fd_p5tL3Qip1-Gmuc1crbHr6IYe0jrN_Eou5MhRIw7XXm-8CwQftEprqI44pz2rftqsT3jBXiivlf73HF9f8X5aCdNHYSLUSsO3HqrFx-JF_S5xXzvgHVEKHRN9J5Cv51--vE9hOn5Kgezk7iK-i_AQAA__9-Ao56" style="color: inherit;text-decoration: none;"> Avital Balwit </a></div></td></tr><tr height="16"><td></td></tr><tr><td><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="vertical-align:middle;"><div class="button-fZfkQf" style="color: #f2312c;text-transform: uppercase;letter-spacing: .1em;font-family: Arial,sans-serif;font-weight: 700;font-size: 16px;line-height: 26px;"><a class="buttonSm-PaaWgJ" href="https://email.mg-d1.substack.com/c/eJxs0b3OpDoMgOGrIV0Q-SFAkeI0cxvICQasjwSUmIPm7lczq5W22Pq1rUdyBMbtLG-_FLpkhHQBbVliAjrE4s0UujE6gV4Nw6Qmo4wV3zhvmLEA4zID_1X7SYvd27HTAIvu-2E0MPVuHLowGB3RTm6KqyCvO-26Xk1Kq7G3rWmdWYYYY3Rxtc4oaIN7j3airbFd2uSi2nqHyhB_2ngmQXVeC34tnsuN4vA781Ub81-jX41-Pc_T8o7r9Rlv9Otq9AtIPnQcMu6QN5TPDiyJJVXJpwwo9ztBFvlkWikC05lnfl_oE5QfZMqbuO4wxzOlOxO_Z8wQDlx-A647HH-2aPHadcYOoviA-SSOje22j_arr3dYzgSUfYBCD1Ktgv_5hLti-ZxTXa9GZwfxv9e_AgAA__-yypF4" style="font-size: 14px;color: #f2312c;text-decoration: none;">Read full story</a></div></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></div><div class="digestPostEmbed-flwiST custom-css-email-digest-post-embed" data-component-name="DigestPostEmbedStatic" style="padding: 0;position: relative;font-size: 16px;line-height: 26px;margin-bottom: 0;"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0" style="width:100%;"><tbody><tr><td style="vertical-align:top;" width="90"><a href="https://email.mg-d1.substack.com/c/eJxs0T3upDAMBfDTkA5EQghQpNhmroFMYhhryIcSs2huv5pZrbTFv7Sebf2k54DxSOVtfaHcOggZ6IgtBqBTeDssWz87I9DKaVrkMshBi2-4HhixAKNfgf9Lx0WJp9V6kSNoLaXptcFx95N0YGCfTa-dWwRZ1SvTj3KRSs6j7obODH5yzjnjdm0GCd1m3rNe6Gh0H47Wy65eW2Vwr86lIKiue8GvxXK5UJz2yZxrM_xq1KNRj_u-O37inj_rjXrkRj1iLi164lTaZ7rbz3imyi0ELOSgtlyuyiImpp0cMKW48jujDVBeyBQPka9tdSmEKxK_V4ywnej_CvK1nf-uyFtl-kFPotgNYyJ2je6PD_fLr9fmUwCKdoNCN1Ktgn9s4apYPu9kP8rZ6En8tupPAAAA__8OlJLj" style="text-decoration: none;"><img alt="I&#8217;ve Been at NPR for 25 Years. Here&#8217;s How We Lost America&#8217;s Trust." src="https://substackcdn.com/image/fetch/$s_!C-u5!,w_180,h_180,c_fill,f_auto,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F9289507d-61ea-4462-a3ed-59dfeb02d7fe_1800x1200.jpeg" style="border: none;vertical-align: middle;display: block;-ms-interpolation-mode: bicubic;margin: 0 auto;width: auto;height: auto;max-width: 100%" width="90"></a></td><td style="min-width:16px;" width="16"></td><td style="vertical-align:top;"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><a class="link-AiRTNr" href="https://email.mg-d1.substack.com/c/eJxs0T3upDAMBfDTkA5EQghQpNhmroFMYhhryIcSs2huv5pZrbTFv7Sebf2k54DxSOVtfaHcOggZ6IgtBqBTeDssWz87I9DKaVrkMshBi2-4HhixAKNfgf9Lx0WJp9V6kSNoLaXptcFx95N0YGCfTa-dWwRZ1SvTj3KRSs6j7obODH5yzjnjdm0GCd1m3rNe6Gh0H47Wy65eW2Vwr86lIKiue8GvxXK5UJz2yZxrM_xq1KNRj_u-O37inj_rjXrkRj1iLi164lTaZ7rbz3imyi0ELOSgtlyuyiImpp0cMKW48jujDVBeyBQPka9tdSmEKxK_V4ywnej_CvK1nf-uyFtl-kFPotgNYyJ2je6PD_fLr9fmUwCKdoNCN1Ktgn9s4apYPu9kP8rZ6En8tupPAAAA__8OlJLj" style="text-decoration: none;color: #161613;"><div class="title-RKep04" style="line-height: 1.1;color: #161613;font-family: Arial,sans-serif;font-weight: 700;font-size: 18px">I&#8217;ve Been at NPR for 25 Years. Here&#8217;s How We Lost America&#8217;s Trust.</div></a></td></tr><tr height="16"><td></td></tr><tr><td><div class="meta-XhipYq" style="font-size: 14px;line-height: 1;color: #7d858b;letter-spacing: .1em;text-transform: uppercase;font-family: Arial,sans-serif;font-weight: 700;"><a class="inheritColor-eP1Bab" href="https://email.mg-d1.substack.com/c/eJxskDuO5SAQRVdjMluA-ZiAYJK3DYtP2V1qAxafGXn3o36jkTro-FTde3SD63CW-thY8Z6DS7fDM8-QHF4k2tV4ugVFwDKtDTMrWwV5w_2EDNV1iLvr36g0nHxYrqWKQVAjuQw-KsmMEkLQQ1PJKAWCllOuqGSGcbZJsayLWqMOIQQVDqFW5havnk0YPCdB0zlHtrThW3fhcwklEWz7UeHtYnsdQC770fvdpvXXxF8Tf32_nvjrruXACyb-4pxtjFGq51Fx9lAvzFBJLh0PDK5jyXt_brDJ1U_omE9yD7-HktLI2J8dsvMXxH-19_DX_y-Mliu6Ck2q9ZAL9jAJen45vp3b8LEkh9l6V_EPYGuk_zj9aFC_4hiVbFNCk9-W_w0AAP__7OWMfQ" style="color: inherit;text-decoration: none;">Uri Berliner</a></div></td></tr><tr height="16"><td></td></tr><tr><td><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="vertical-align:middle;"><div class="button-fZfkQf" style="color: #f2312c;text-transform: uppercase;letter-spacing: .1em;font-family: Arial,sans-serif;font-weight: 700;font-size: 16px;line-height: 26px;"><a class="buttonSm-PaaWgJ" href="https://email.mg-d1.substack.com/c/eJxs0T3upDAMBfDTkA5EQghQpNhmroFMYhhryIcSs2huv5pZrbTFv7Sebf2k54DxSOVtfaHcOggZ6IgtBqBTeDssWz87I9DKaVrkMshBi2-4HhixAKNfgf9Lx0WJp9V6kSNoLaXptcFx95N0YGCfTa-dWwRZ1SvTj3KRSs6j7obODH5yzjnjdm0GCd1m3rNe6Gh0H47Wy65eW2Vwr86lIKiue8GvxXK5UJz2yZxrM_xq1KNRj_u-O37inj_rjXrkRj1iLi164lTaZ7rbz3imyi0ELOSgtlyuyiImpp0cMKW48jujDVBeyBQPka9tdSmEKxK_V4ywnej_CvK1nf-uyFtl-kFPotgNYyJ2je6PD_fLr9fmUwCKdoNCN1Ktgn9s4apYPu9kP8rZ6En8tupPAAAA__8OlJLj" style="font-size: 14px;color: #f2312c;text-decoration: none;">Read full story</a></div></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></div></div></div><div class="container-EBEkIP systemFooter-hWFf2m" style="margin-top: 32px;font-size: 12px;line-height: 22px;box-sizing: border-box;-webkit-font-smoothing: antialiased;color: #fff;letter-spacing: .48px;text-align: center;background-color: #161613;padding: 24px;font-family: Arial,Helvetica,sans-serif;font-weight: 400;"><a href="https://email.mg-d1.substack.com/c/eJxskD3u4yAQR09julh8GZuCYptcw4Jh7IwSMAK8kW-_SlYrbfGv38zT0w98x_2ol4uVyg18Kp72fMPk6cWiUzbwBQxDJ-bZCquE0uwL1x0zVt8xrr7_Rycr2cMZbdCi3hSPatk24HYGgVHCskyTCYaRk1waPgkrpFgmParRqDgDABjYtFHCj8Fci7a0D5qn_RbF2M7QuofnCEdi1Nat4rfF9Xoie7lH76UN6tcg74O8v9_vsT9wK5_zQd59KSwfnTYC3-nIa78KuuTrEzvlnZUzrHCkdGbq14rZhxfGv-pyhte_L4pOGq70zKoLmA_qMGi-fzq-Xe0M8Uiesgu-0hupNdZ_nPdsWD86wSexGD2z307-CQAA__8ysoTD"><img src="https://substackcdn.com/image/fetch/$s_!JyGR!,w_508,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Fimg%2Fthefp%2Fapp-button-fp%402x.png" alt="Download on the App Store" style="max-width: 550px;border: none;vertical-align: middle;width: auto;height: 32px;margin-bottom: 10px"></a><br>&#169; 2026 The Free Press<br>548 Market Street PMB 72296, San Francisco, CA 94104<br><a class="link-mSkxWK" href="https://email.mg-d1.substack.com/c/eJxsksuSqkgYhJ8GdhpUFZawYGGL9MAIhtNqqxujbuCv3AYKEJ9-QifOiV6c9ZdZWZH5C6ZVVjWjJxuoJ4IVNYOsnKiCQW5Kj7jccgQ1lYfmcxe5BBHbfMNLpkrVMK3khekfdOZi8-rZjlDKTh3ErNnckhazWUppSmwsOU6JZYKHLUytGXIRRs7MnpIpJXIuhBBUpDYliE05HR3bhcywrSKbSDRtO95qJu5TURUmtJe0Ue-_eLrplJl7V63r1iALAwcGDoZhmOqrSuuX3MABq8HAQY8MHLxdBg7KSkMKgmmoSgMHXflKEA1wZZBAV3dVGsRXY4QEPoxHnN_DW_WI_f1j45-sZBxAfroD-45hA5E-HaPmfPyn5oWA9TIa5HfUsu_kKj_znudufV6GNL6dhvi5JetlVJ-OW9jcViR53h-bXfyIn9s2LA62eOl22SP2xbjZrZ7JcgB2TJ7hrQLx1wHWuxDHfmwlY9iGZYJOENKwmPXyMy9-5wFC_MXK5CaKHM5fkTvt_X4_Pw9buvebVfiR9P9-5R-LvxeLyXOgiywWq7USh83eqe_mz2YueqyVV7DmrjSUmVl3_CKqouhK0ONFlYznSv6_Qd3x_JcLpIepRey52XhclRVoYdhW9qr-PWDbcVkVDEqPswYGBW1r6j_eYdeq5vUcsmbIofbc7D38XwAAAP__OfrrEw" style="color: #fff;">Unsubscribe</a></div></div></td><td></td></tr></tbody></table><img src="https://eotrx.substackcdn.com/o/6a55cf6feb454c8b/p.gif?token=eyJtIjoiPDIwMjYwNTE5MTIxODU0LjMuNjNkN2NjY2M2Y2Y0NjMxYS5iNnk4NDlpZ0BtZy1kMS5zdWJzdGFjay5jb20-IiwidSI6MTA1MTg2NDcsInIiOiJiZW5vaXRjQGdtYWlsLmNvbSIsImQiOiJtZy1kMS5zdWJzdGFjay5jb20iLCJwIjpudWxsLCJ0IjpudWxsLCJhIjpudWxsLCJzIjoyNjAzNDcsImMiOiJkcmlwLWNhbXBhaWduLWVtYWlsIiwiZiI6dHJ1ZSwicG9zaXRpb24iOiJib3R0b20iLCJpYXQiOjE3NzkxOTMxMzQsImV4cCI6MTc4MTc4NTEzNCwiaXNzIjoicHViLTAiLCJzdWIiOiJlbyJ9.knSLEDcQ-c1Oz3SGco7GP7dBltqRpnSCFwFVjoQxrGE" alt="" width="1" height="1" border="0" style="height:1px !important;width:1px !important;border-width:0 !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:0 !important;margin-left:0 !important;padding-top:0 !important;padding-bottom:0 !important;padding-right:0 !important;padding-left:0 !important;"/><img width="1" height="1" alt="" src="https://email.mg-d1.substack.com/o/eJxskE1uwyAQRk8TdrGMwdgsOIs1DGN3lAAWP618-yqpKnXR9dObN_oQGh25XC4UPu8I8QQ-0p0i8FMEp6wfVzSCnFwWK62SSos33A5KVKBR2KD9obOdxIdDmHcPWgdjdwQr9QRIpJZ13a1dCQS7aZzMOEsrJ7nOelCDUWFBRDS4a6MkDN5cq7Z83PQYj3uQQ-2-NsDHgDkKrtte6P2La6WTSLnxzgiNc9radZKLUB7UOB3i7H7DHGNP3K6NEvgnhR_t7P75a3FwkxmVXkRxnlLmhjc9Hq_Gu1m7DzkCJ-eh8BdxraL9O12vVF7n5DjL1ehFfLrpOwAA____vnm2"></body></html>
+</body></html>
