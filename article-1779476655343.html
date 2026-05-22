@@ -1,0 +1,787 @@
+<html><head><meta name="robots" content="noindex"><title>The Mothership Connection</title></head><body><html lang="en" dir="ltr" style="scrollbar-width: thin;scrollbar-color: rgb(219,219,219)rgb(255,255,255);"><head><meta charset="utf-8"><title>The Mothership Connection</title><style>
+@media (max-width: 1024px) {
+  .typography .pullquote-align-left,
+  .typography.editor .pullquote-align-left,
+  .typography .pullquote-align-right,
+  .typography.editor .pullquote-align-right,
+  .typography .pullquote-align-wide,
+  .typography.editor .pullquote-align-wide,
+  .typography .pullquote-align-center,
+  .typography.editor .pullquote-align-center {
+    float: none;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .typography .markup table.image-wrapper img,
+  .typography.editor .markup table.image-wrapper img,
+  .typography .markup table.kindle-wrapper img,
+  .typography.editor .markup table.kindle-wrapper img {
+    max-width: 550px;
+  }
+}
+@media (min-width: 1024px) {
+  .typography:not(:has(#toc)) .captioned-image-container figure:has(> a.image2-offset-left),
+  .typography.editor:not(:has(#toc)) .captioned-image-container figure:has(> a.image2-offset-left) {
+    margin-left: var(--image-offset-margin);
+  }
+  .typography:not(:has(#toc)) .captioned-image-container figure:has(> a.image2-offset-right),
+  .typography.editor:not(:has(#toc)) .captioned-image-container figure:has(> a.image2-offset-right) {
+    margin-right: var(--image-offset-margin);
+  }
+}
+@media (min-width: 1300px) {
+  .typography .captioned-image-container figure:has(> a.image2-offset-left),
+  .typography.editor .captioned-image-container figure:has(> a.image2-offset-left) {
+    margin-left: var(--image-offset-margin);
+  }
+  .typography .captioned-image-container figure:has(> a.image2-offset-right),
+  .typography.editor .captioned-image-container figure:has(> a.image2-offset-right) {
+    margin-right: var(--image-offset-margin);
+  }
+}
+@media (max-width: 1024px) {
+  .typography,
+  .typography.editor {
+    /* Disable offset on mobile/tablet */
+  }
+  .typography .captioned-image-container figure:has(> a.image2-align-left),
+  .typography.editor .captioned-image-container figure:has(> a.image2-align-left),
+  .typography .captioned-image-container figure:has(> a.image2-align-right),
+  .typography.editor .captioned-image-container figure:has(> a.image2-align-right) {
+    float: none;
+    margin: 1em auto;
+    max-width: 100%;
+    width: auto;
+    padding: 0;
+  }
+  .typography .captioned-image-container figure:has(> a.image2-align-left.thefp),
+  .typography.editor .captioned-image-container figure:has(> a.image2-align-left.thefp),
+  .typography .captioned-image-container figure:has(> a.image2-align-right.thefp),
+  .typography.editor .captioned-image-container figure:has(> a.image2-align-right.thefp) {
+    margin: 1em auto;
+  }
+  .typography .captioned-image-container figure:has(> a.image2-offset-left),
+  .typography.editor .captioned-image-container figure:has(> a.image2-offset-left),
+  .typography .captioned-image-container figure:has(> a.image2-offset-right),
+  .typography.editor .captioned-image-container figure:has(> a.image2-offset-right) {
+    margin: 1em auto;
+  }
+  .typography .captioned-image-container figure:has(> a.image2-align-left) .image2-inset,
+  .typography.editor .captioned-image-container figure:has(> a.image2-align-left) .image2-inset,
+  .typography .captioned-image-container figure:has(> a.image2-align-right) .image2-inset,
+  .typography.editor .captioned-image-container figure:has(> a.image2-align-right) .image2-inset {
+    display: block;
+    justify-content: initial;
+  }
+}
+@media (max-width: 768px) {
+  .typography .markup div.sponsorship-campaign-embed,
+  .typography.editor .markup div.sponsorship-campaign-embed {
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+  .typography .markup div.sponsorship-campaign-embed:first-child,
+  .typography.editor .markup div.sponsorship-campaign-embed:first-child {
+    margin-top: 0px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .typography .markup div.youtube-overlay,
+  .typography.editor .markup div.youtube-overlay,
+  .typography .markup div.vimeo-overlay,
+  .typography.editor .markup div.vimeo-overlay {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 370px) {
+  .typography .markup div.tiktok-wrap,
+  .typography.editor .markup div.tiktok-wrap {
+    width: calc(95vw - 32px);
+    height: calc((95vw - 32px - 2px) / 0.485714);
+  }
+}
+@media screen and (max-width: 650px) {
+  .typography .markup div.embedded-publication-wrap .embedded-publication.show-subscribe,
+  .typography.editor .markup div.embedded-publication-wrap .embedded-publication.show-subscribe {
+    padding: 24px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .typography .markup div.subscription-widget-wrap .subscription-widget.show-subscribe,
+  .typography.editor .markup div.subscription-widget-wrap .subscription-widget.show-subscribe,
+  .typography .markup div.subscription-widget-wrap-editor .subscription-widget.show-subscribe,
+  .typography.editor .markup div.subscription-widget-wrap-editor .subscription-widget.show-subscribe,
+  .typography .markup div.captioned-button-wrap .subscription-widget.show-subscribe,
+  .typography.editor .markup div.captioned-button-wrap .subscription-widget.show-subscribe {
+    padding: 0px 24px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .typography .markup div.subscription-widget-wrap .subscription-widget.show-subscribe .subscription-widget-subscribe .button,
+  .typography.editor .markup div.subscription-widget-wrap .subscription-widget.show-subscribe .subscription-widget-subscribe .button,
+  .typography .markup div.subscription-widget-wrap-editor .subscription-widget.show-subscribe .subscription-widget-subscribe .button,
+  .typography.editor .markup div.subscription-widget-wrap-editor .subscription-widget.show-subscribe .subscription-widget-subscribe .button,
+  .typography .markup div.captioned-button-wrap .subscription-widget.show-subscribe .subscription-widget-subscribe .button,
+  .typography.editor .markup div.captioned-button-wrap .subscription-widget.show-subscribe .subscription-widget-subscribe .button {
+    padding: 10px 12px;
+    min-width: 110px;
+  }
+}
+@media (max-width: 650px) {
+  .typography .markup .twitter-embed,
+  .typography.editor .markup .twitter-embed,
+  .typography .markup .tweet,
+  .typography.editor .markup .tweet {
+    padding: 12px;
+  }
+}
+@media (max-width: 650px) {
+  .typography .markup .twitter-embed .tweet-text,
+  .typography.editor .markup .twitter-embed .tweet-text,
+  .typography .markup .tweet .tweet-text,
+  .typography.editor .markup .tweet .tweet-text {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+@media (max-width: 650px) {
+  .typography .markup .twitter-embed .tweet-photos-container.two,
+  .typography.editor .markup .twitter-embed .tweet-photos-container.two,
+  .typography .markup .tweet .tweet-photos-container.two,
+  .typography.editor .markup .tweet .tweet-photos-container.two,
+  .typography .markup .twitter-embed .tweet-photos-container.three,
+  .typography.editor .markup .twitter-embed .tweet-photos-container.three,
+  .typography .markup .tweet .tweet-photos-container.three,
+  .typography.editor .markup .tweet .tweet-photos-container.three,
+  .typography .markup .twitter-embed .tweet-photos-container.four,
+  .typography.editor .markup .twitter-embed .tweet-photos-container.four,
+  .typography .markup .tweet .tweet-photos-container.four,
+  .typography.editor .markup .tweet .tweet-photos-container.four {
+    height: 200px;
+  }
+}
+@media (max-width: 650px) {
+  .typography .markup .twitter-embed a.expanded-link .expanded-link-img,
+  .typography.editor .markup .twitter-embed a.expanded-link .expanded-link-img,
+  .typography .markup .tweet a.expanded-link .expanded-link-img,
+  .typography.editor .markup .tweet a.expanded-link .expanded-link-img {
+    max-height: 180px;
+  }
+}
+@media (max-width: 650px) {
+  .typography .markup .twitter-embed a.expanded-link .expanded-link-description,
+  .typography.editor .markup .twitter-embed a.expanded-link .expanded-link-description,
+  .typography .markup .tweet a.expanded-link .expanded-link-description,
+  .typography.editor .markup .tweet a.expanded-link .expanded-link-description {
+    display: none;
+  }
+}
+@media screen and (max-width: 650px) {
+  .typography .markup .apple-podcast-container,
+  .typography.editor .markup .apple-podcast-container {
+    width: unset;
+  }
+}
+@media (max-width: 420px) {
+  .typography .markup .install-substack-app-embed img.install-substack-app-embed-img,
+  .typography.editor .markup .install-substack-app-embed img.install-substack-app-embed-img {
+    margin: 0 auto 16px auto;
+  }
+}
+@media (max-width: 420px) {
+  .typography .markup .install-substack-app-embed .install-substack-app-embed-text,
+  .typography.editor .markup .install-substack-app-embed .install-substack-app-embed-text {
+    margin: 0 0 12px 0;
+    max-width: 100%;
+    width: auto;
+    text-align: center;
+  }
+}
+@media (max-width: 420px) {
+  .typography .markup .install-substack-app-embed .install-substack-app-embed-link,
+  .typography.editor .markup .install-substack-app-embed .install-substack-app-embed-link {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 481px) {
+  .share-button-container {
+    height: 38px;
+  }
+}
+@media screen and (min-width: 481px) {
+  .share-button-container a.comment {
+    height: 38px;
+    line-height: 38px;
+    padding-right: 10px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .share-button-container .separator {
+    display: block;
+    margin: 0;
+    height: 8px;
+    border-left: none;
+  }
+}
+@media screen and (max-width: 480px) {
+  .share-button-container a.share.first img {
+    padding-left: 0;
+  }
+}
+@media screen and (min-width: 481px) {
+  .share-button-container a.mobile {
+    display: none !important;
+  }
+}
+@media screen and (min-width: 541px) {
+  .settings-add-pub-modal-wrapper .container .add-recommending-pub-modal-container {
+    padding: 36px;
+    height: 680px;
+  }
+}
+@media screen and (min-width: 541px) {
+  .settings-add-pub-modal-wrapper .container .add-recommending-pub-modal-container .footer {
+    position: absolute;
+    bottom: 36px;
+    margin: 0px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .header-anchor-parent {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .post {
+    padding: 16px 0 0 0;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post .post-header .post-label {
+    margin-top: 8px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post .post-header .meta-author-wrap.alternative-meta .meta-right-column .post-meta {
+    margin-top: 6px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post .footer-facepile-container {
+    height: 64px;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post .post-footer.use-separators {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post .post-footer.next-prev {
+    height: 64px;
+    justify-content: space-between;
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post-contributor-footer .post-contributor-bio-table {
+    display: block;
+  }
+  .post-contributor-footer .post-contributor-bio-table-row {
+    display: flex;
+    flex-direction: row;
+  }
+  .post-contributor-footer .post-contributor-bio-userhead-cell,
+  .post-contributor-footer .post-contributor-bio-body-cell {
+    display: block;
+  }
+  .post-contributor-footer .post-contributor-bio-body-cell {
+    flex-grow: 1;
+  }
+  .post-contributor-footer .post-contributor-bio-body-table {
+    display: block;
+  }
+  .post-contributor-footer .post-contributor-bio-body-table-row {
+    display: block;
+  }
+  .post-contributor-footer .post-contributor-bio-copy-cell,
+  .post-contributor-footer .post-contributor-bio-controls-cell {
+    display: block;
+  }
+  .post-contributor-footer .post-contributor-bio-copy-cell {
+    margin: 0 0 16px 0;
+  }
+  .post-contributor-footer .post-contributor-bio-controls-cell {
+    width: auto;
+  }
+  .post-contributor-footer .post-contributor-bio-controls {
+    margin: auto;
+  }
+  .post-contributor-footer .post-contributor-bio-controls .button.primary {
+    width: 100%;
+  }
+  .post-contributor-footer .post-contributor-bio-text {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .post-silhouette {
+    padding: 32px 0;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post-silhouette .post-silhouette-title {
+    margin-top: 10.44225025px;
+    height: 120px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post-silhouette .post-silhouette-meta {
+    width: 75%;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post-silhouette .post-silhouette-meta.with-byline-image {
+    margin: 20px 0;
+  }
+}
+@media screen and (max-width: 650px) {
+  .use-theme-bg .post-meta.alternative-meta .post-meta-item,
+  .post-meta.alternative-meta .post-meta-item {
+    padding-right: 16px;
+  }
+}
+@media screen and (max-width: 370px) {
+  .use-theme-bg .post-meta.alternative-meta .post-meta-item,
+  .post-meta.alternative-meta .post-meta-item {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .use-theme-bg .post-meta.alternative-meta .post-meta-item.guest-author-publication,
+  .post-meta.alternative-meta .post-meta-item.guest-author-publication {
+    display: none;
+  }
+}
+@media screen and (max-width: 370px) {
+  .post-meta .post-meta-item .post-meta-button {
+    height: 36px !important;
+    /* important to override in-line height style on emails */
+  }
+  .post-meta .post-meta-item .post-meta-button .meta-button-label {
+    display: none;
+  }
+  .post-meta .post-meta-item .post-meta-button > svg {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 370px) {
+  .post-meta .post-meta-item {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post .floating-subscribe-button {
+    bottom: 20px;
+    right: 20px;
+  }
+}
+@media (max-width: 1024px) {
+  body .pullquote-align-left,
+  body .pullquote-align-right,
+  body .pullquote-align-wide,
+  body .pullquote-align-center {
+    float: none;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  body .markup table.image-wrapper img,
+  body .markup table.kindle-wrapper img {
+    max-width: 550px;
+  }
+}
+@media (min-width: 1024px) {
+  body:not(:has(#toc)) .captioned-image-container figure:has(> a.image2-offset-left) {
+    margin-left: var(--image-offset-margin);
+  }
+  body:not(:has(#toc)) .captioned-image-container figure:has(> a.image2-offset-right) {
+    margin-right: var(--image-offset-margin);
+  }
+}
+@media (min-width: 1300px) {
+  body .captioned-image-container figure:has(> a.image2-offset-left) {
+    margin-left: var(--image-offset-margin);
+  }
+  body .captioned-image-container figure:has(> a.image2-offset-right) {
+    margin-right: var(--image-offset-margin);
+  }
+}
+@media (max-width: 1024px) {
+  body {
+    /* Disable offset on mobile/tablet */
+  }
+  body .captioned-image-container figure:has(> a.image2-align-left),
+  body .captioned-image-container figure:has(> a.image2-align-right) {
+    float: none;
+    margin: 1em auto;
+    max-width: 100%;
+    width: auto;
+    padding: 0;
+  }
+  body .captioned-image-container figure:has(> a.image2-align-left.thefp),
+  body .captioned-image-container figure:has(> a.image2-align-right.thefp) {
+    margin: 1em auto;
+  }
+  body .captioned-image-container figure:has(> a.image2-offset-left),
+  body .captioned-image-container figure:has(> a.image2-offset-right) {
+    margin: 1em auto;
+  }
+  body .captioned-image-container figure:has(> a.image2-align-left) .image2-inset,
+  body .captioned-image-container figure:has(> a.image2-align-right) .image2-inset {
+    display: block;
+    justify-content: initial;
+  }
+}
+@media (max-width: 768px) {
+  body .markup div.sponsorship-campaign-embed {
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+  body .markup div.sponsorship-campaign-embed:first-child {
+    margin-top: 0px;
+  }
+}
+@media screen and (max-width: 650px) {
+  body .markup div.youtube-overlay,
+  body .markup div.vimeo-overlay {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 370px) {
+  body .markup div.tiktok-wrap {
+    width: calc(95vw - 32px);
+    height: calc((95vw - 32px - 2px) / 0.485714);
+  }
+}
+@media screen and (max-width: 650px) {
+  body .markup div.embedded-publication-wrap .embedded-publication.show-subscribe {
+    padding: 24px;
+  }
+}
+@media screen and (max-width: 650px) {
+  body .markup div.subscription-widget-wrap .subscription-widget.show-subscribe,
+  body .markup div.subscription-widget-wrap-editor .subscription-widget.show-subscribe,
+  body .markup div.captioned-button-wrap .subscription-widget.show-subscribe {
+    padding: 0px 24px;
+  }
+}
+@media screen and (max-width: 650px) {
+  body .markup div.subscription-widget-wrap .subscription-widget.show-subscribe .subscription-widget-subscribe .button,
+  body .markup div.subscription-widget-wrap-editor .subscription-widget.show-subscribe .subscription-widget-subscribe .button,
+  body .markup div.captioned-button-wrap .subscription-widget.show-subscribe .subscription-widget-subscribe .button {
+    padding: 10px 12px;
+    min-width: 110px;
+  }
+}
+@media (max-width: 650px) {
+  body .markup .twitter-embed,
+  body .markup .tweet {
+    padding: 12px;
+  }
+}
+@media (max-width: 650px) {
+  body .markup .twitter-embed .tweet-text,
+  body .markup .tweet .tweet-text {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+@media (max-width: 650px) {
+  body .markup .twitter-embed .tweet-photos-container.two,
+  body .markup .tweet .tweet-photos-container.two,
+  body .markup .twitter-embed .tweet-photos-container.three,
+  body .markup .tweet .tweet-photos-container.three,
+  body .markup .twitter-embed .tweet-photos-container.four,
+  body .markup .tweet .tweet-photos-container.four {
+    height: 200px;
+  }
+}
+@media (max-width: 650px) {
+  body .markup .twitter-embed a.expanded-link .expanded-link-img,
+  body .markup .tweet a.expanded-link .expanded-link-img {
+    max-height: 180px;
+  }
+}
+@media (max-width: 650px) {
+  body .markup .twitter-embed a.expanded-link .expanded-link-description,
+  body .markup .tweet a.expanded-link .expanded-link-description {
+    display: none;
+  }
+}
+@media screen and (max-width: 650px) {
+  body .markup .apple-podcast-container {
+    width: unset;
+  }
+}
+@media (max-width: 420px) {
+  body .markup .install-substack-app-embed img.install-substack-app-embed-img {
+    margin: 0 auto 16px auto;
+  }
+}
+@media (max-width: 420px) {
+  body .markup .install-substack-app-embed .install-substack-app-embed-text {
+    margin: 0 0 12px 0;
+    max-width: 100%;
+    width: auto;
+    text-align: center;
+  }
+}
+@media (max-width: 420px) {
+  body .markup .install-substack-app-embed .install-substack-app-embed-link {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 500px) {
+  body .header a.logo {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+  }
+}
+@media screen and (max-width: 420px) {
+  body .subscription-receipt table:first-of-type .subscription-amount .subscription-discount {
+    width: 72px !important;
+  }
+}
+@media screen and (min-width: 481px) {
+  body .share-button-container {
+    height: auto;
+  }
+}
+@media screen and (max-width: 480px) {
+  body .share-button-container .separator {
+    display: block !important;
+    margin: 0 !important;
+    height: 8px !important;
+    border-left: none !important;
+  }
+}
+@media screen and (max-width: 650px) {
+  .digest .item .post-meta-item.audience {
+    display: none;
+  }
+}
+@media screen and (min-width: 500px) {
+  .digest-publication .logo img {
+    width: 42px;
+    height: 42px;
+    border-radius: 8px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .comments-page .container .comment-list .collapsed-reply {
+    margin-left: calc(10 + 32px - 24px);
+  }
+}
+@media screen and (max-width: 650px) {
+  .comment > .comment-list {
+    padding-left: 24px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .finish-magic-login-modal .modal-content .container {
+    padding: 24px 0;
+  }
+}
+@media (max-width: 650px) {
+  .reader2-text-b3 {
+    line-height: 24px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .reader2-text-h4 {
+    line-height: 24px;
+  }
+}
+@media screen and (min-width: 541px) {
+  .user-profile-modal {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .subscribe-widget form.form .sideBySideWrap button.rightButton {
+    padding: 10px 12px;
+  }
+}
+@media screen and (min-width: 541px) {
+  .pub-icon:hover .logo-hover,
+  .feed-item-icon:hover .logo-hover {
+    display: block;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post-ufi.single-full-width-button .post-ufi-button-wrapper {
+    width: 100%;
+    padding: 16px;
+  }
+  .post-ufi.single-full-width-button .post-ufi-button-wrapper:empty {
+    display: none;
+  }
+  .post-ufi.single-full-width-button .post-ufi-button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  .file-embed-wrapper {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .file-embed-wrapper-editor {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .file-embed-wrapper-editor:active {
+    padding: 0;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .file-embed-button.wide,
+  .file-embed-error-button.wide {
+    display: none;
+  }
+}
+@media only screen and (min-width: 630px) {
+  .file-embed-button.narrow,
+  .file-embed-error-button.narrow {
+    display: none;
+  }
+}
+@media screen and (min-width: 541px) {
+  .audio-player-wrapper .audio-player {
+    min-width: 500px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .audio-player-wrapper .audio-player .audio-player-progress {
+    border-left-width: 16px;
+    border-right-width: 16px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .audio-player-wrapper .audio-player .audio-player-progress .audio-player-progress-bar .audio-player-progress-bar-popup {
+    top: -54px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .audio-player-wrapper-fancy .audio-player .audio-player-progress {
+    border-left-width: 16px;
+    border-right-width: 16px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .audio-player-wrapper-fancy .audio-player .audio-player-progress .audio-player-progress-bar .audio-player-progress-bar-popup {
+    top: -54px;
+  }
+}
+@media (min-width: 250px) {
+  .audio-player-wrapper-fancy .audio-player {
+    padding: 32px;
+  }
+  .audio-player-wrapper-fancy .audio-player .btn-group {
+    display: flex;
+  }
+  .audio-player-wrapper-fancy .audio-player .btn-group .button:last-of-type {
+    display: block;
+  }
+}
+@media (min-width: 300px) {
+  .audio-player-wrapper-fancy .audio-player .btn-group {
+    display: block;
+  }
+  .audio-player-wrapper-fancy .audio-player .btn-group .button:first-of-type {
+    display: block;
+  }
+}
+@media (min-width: 350px) {
+  .audio-player-wrapper-fancy .audio-player .audio-player-substack-logo {
+    display: block;
+  }
+  .audio-player-wrapper-fancy .audio-player .audio-player-title {
+    margin-top: 16px;
+  }
+  .audio-player-wrapper-fancy .audio-player .audio-player-hero-image-container {
+    padding-top: 15%;
+    width: 15%;
+    display: block;
+  }
+  .audio-player-wrapper-fancy .audio-player .btn-group .button:first-of-type {
+    display: block;
+  }
+  .audio-player-wrapper-fancy .audio-player .audio-player-substack-logo {
+    display: block;
+  }
+}
+@media (min-width: 350px) {
+  .audio-player-wrapper-fancy .audio-player .audio-player-hero-image-container {
+    padding-top: 25%;
+    width: 25%;
+    display: block;
+  }
+  .audio-player-wrapper-fancy .audio-player .btn-group {
+    display: flex;
+  }
+  .audio-player-wrapper-fancy .audio-player .btn-group .button:first-of-type {
+    display: block;
+  }
+}
+@media (min-width: 400px) {
+  .audio-player-wrapper-fancy .audio-player .audio-player-hero-image-container {
+    padding-top: 40%;
+    width: 40%;
+  }
+}
+@media (max-width: 400px) {
+  .audio-player-wrapper-fancy .audio-player .btn-group {
+    margin-top: 12px;
+  }
+  .audio-player-wrapper-fancy .audio-player .btn-group .button {
+    font-size: 13px;
+    padding: 6px 12px;
+    height: auto;
+    margin-top: 10px;
+  }
+}
+@media (min-width: 600px) {
+  .audio-player-wrapper-fancy .audio-player .audio-player-hero-image-container {
+    padding-top: 55%;
+    width: 55%;
+  }
+}
+@media (max-width: 650px) {
+  .poll-editor-modal {
+    min-width: calc(100% - 20px);
+  }
+}
+@media (max-width: 750px) {
+  .poll-embed .poll-anchor-target .poll-anchor-copy-button {
+    left: 8px;
+    top: 45px;
+  }
+}</style></head><body class="email-body" style="font-kerning: auto;--image-offset-margin: -120px;"><img src="https://eotrx.substackcdn.com/o/9798944fb501156a/p.gif?token=eyJtIjoiPDIwMjYwNTIyMTgzNDU3LjMuOTkxNmNjYjE2NmU0ZGIwY0BtZzIuc3Vic3RhY2suY29tPiIsInUiOjEwNTE4NjQ3LCJyIjoiYmVub2l0Y0BnbWFpbC5jb20iLCJkIjoibWcyLnN1YnN0YWNrLmNvbSIsInAiOjE5MjkyMDc0NiwidCI6Im5ld3NsZXR0ZXIiLCJhIjoiZXZlcnlvbmUiLCJzIjo4OTE2MzgsImMiOiJwb3N0IiwiZiI6dHJ1ZSwicG9zaXRpb24iOiJ0b3AiLCJpYXQiOjE3Nzk0NzQ5NjcsImV4cCI6MTc4MjA2Njk2NywiaXNzIjoicHViLTAiLCJzdWIiOiJlbyJ9._t9etCBPO_md-H-4Us10lwP4TDiRfsT6vwa9T7SJ4L0" alt="" width="1" height="1" border="0" style="height:1px !important;width:1px !important;border-width:0 !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:0 !important;margin-left:0 !important;padding-top:0 !important;padding-bottom:0 !important;padding-right:0 !important;padding-left:0 !important;"/><div class="preview" style="display:none;font-size:1px;color:#333333;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;">Music and the third space</div><div class="preview" style="display:none;font-size:1px;color:#333333;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;">&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;</div><table class="email-body-container" role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td></td><td class="content" width="550"></td><td></td></tr><tr><td></td><td class="content" width="550" align="left"><div style="font-size: 16px;line-height: 26px;max-width: 550px;width: 100%;margin: 0 auto;overflow-wrap: break-word;"><table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="right" style="height:20px;"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="vertical-align:middle;"><span class="pencraft pc-reset reset-IxiVJZ tw-font-body tw-text-ssm tw-text-substack-secondary" style="font-family: SF Pro Text, -apple-system, system-ui, BlinkMacSystemFont, Inter, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;font-size: 13px;color: unset;list-style: none;text-decoration: unset;margin: 0;"><div class="pencraft pc-reset align-right-VJbKw5 size-12-mmZ61m reset-IxiVJZ" style="list-style: none;color: unset;text-align: right;font-size: 12px;line-height: 16px;text-decoration: unset;margin: 0;"><span class="pencraft pc-reset reset-IxiVJZ" translated="" style="list-style: none;color: unset;text-decoration: unset;margin: 0;">Forwarded this email? <a class="pencraft pc-reset decoration-underline-ClTkYc reset-IxiVJZ" href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly93d3cuYnVnZXllZGFuZHNoYW1lbGVzcy5jb20vc3Vic2NyaWJlP3V0bV9zb3VyY2U9ZW1haWwmdXRtX2NhbXBhaWduPWVtYWlsLXN1YnNjcmliZSZyPTY5ZzhuJm5leHQ9aHR0cHMlM0ElMkYlMkZ3d3cuYnVnZXllZGFuZHNoYW1lbGVzcy5jb20lMkZwJTJGbXVzaWMtYWktY29tbWVuY2VtZW50LXNwZWVjaGVzLXBzeW9wIiwicCI6MTkyOTIwNzQ2LCJzIjo4OTE2MzgsImYiOnRydWUsInUiOjEwNTE4NjQ3LCJpYXQiOjE3Nzk0NzQ5NjcsImV4cCI6MjA5NTA1MDk2NywiaXNzIjoicHViLTAiLCJzdWIiOiJsaW5rLXJlZGlyZWN0In0.9L8pdG1dBJvNktgbjwBFC42J1C7XXIUtXYnknyLsTZo?" style="list-style: none;color: unset;text-decoration: unset;margin: 0;-webkit-text-decoration-line: underline;text-decoration-line: underline;">Subscribe here</a> for more</span></div></span></td></tr></tbody></table></td></tr></tbody></table><div class="post typography" dir="auto" style="--image-offset-margin: -120px;padding: 32px 0 0 0;font-size: 16px;line-height: 26px;"><div class="post-header" role="region" aria-label="Post header" style="font-size: 16px;line-height: 26px;"><h1 class="post-title published title-X77sOw" dir="auto" style="direction: auto;text-align: start;unicode-bidi: isolate;color: rgb(54,55,55);font-family: 'Roboto Mono',monospace;font-weight: 700;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: antialiased;-webkit-appearance: optimizelegibility;-moz-appearance: optimizelegibility;appearance: optimizelegibility;margin: 0;line-height: 36px;font-size: 32px;"><a href="https://substack.com/app-link/post?publication_id=891638&post_id=192920746&utm_source=post-email-title&utm_campaign=email-post-title&isFreemail=true&r=69g8n&token=eyJ1c2VyX2lkIjoxMDUxODY0NywicG9zdF9pZCI6MTkyOTIwNzQ2LCJpYXQiOjE3Nzk0NzQ5NjcsImV4cCI6MTc4MjA2Njk2NywiaXNzIjoicHViLTg5MTYzOCIsInN1YiI6InBvc3QtcmVhY3Rpb24ifQ.R_JlQCYpyN-OKc8MT287Srv8kV7rKeXTAMaPtnY1Y8g" style="color: rgb(54,55,55);text-decoration: none;">The Mothership Connection</a></h1><h3 class="subtitle subtitle-HEEcLo" dir="auto" style="direction: auto;text-align: start;unicode-bidi: isolate;font-family: 'SF Pro Display',-apple-system-headline,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight: normal;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: antialiased;-webkit-appearance: optimizelegibility;-moz-appearance: optimizelegibility;appearance: optimizelegibility;margin: 4px 0 0;color: #777777;line-height: 24px;font-size: 18px;margin-top: 12px;">Music and the third space</h3><table class="post-meta" role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="margin: 1em 0;height: 20px;align-items: center;"><tbody><tr><td><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="vertical-align:middle;"><div class="pencraft pc-reset color-primary-zABazT line-height-20-t4M0El font-meta-MWBumP size-11-NuY2Zx weight-medium-fw81nC transform-uppercase-yKDgcq reset-IxiVJZ meta-EgzBVA custom-css-email-post-author" style="list-style: none;font-size: 11px;line-height: 20px;text-decoration: unset;color: rgb(54,55,55);margin: 0;font-family: 'SF Compact',-apple-system,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight: 500;text-transform: uppercase;letter-spacing: .2px;"><a class="pencraft pc-reset color-primary-zABazT line-height-20-t4M0El font-meta-MWBumP size-11-NuY2Zx weight-medium-fw81nC transform-uppercase-yKDgcq reset-IxiVJZ meta-EgzBVA" style="list-style: none;color: rgb(54,55,55);margin: 0;font-size: 11px;line-height: 20px;font-family: 'SF Compact',-apple-system,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight: 500;text-transform: uppercase;letter-spacing: .2px;text-decoration: none" href="https://substack.com/@justinling">Justin Ling</a></div></td></tr></tbody></table></td></tr><tr><td><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="vertical-align:middle;"><div class="pencraft pc-reset color-secondary-ls1g8s line-height-20-t4M0El font-meta-MWBumP size-11-NuY2Zx weight-medium-fw81nC transform-uppercase-yKDgcq reset-IxiVJZ meta-EgzBVA" style="list-style: none;font-size: 11px;line-height: 20px;text-decoration: unset;color: rgb(119,119,119);margin: 0;font-family: 'SF Compact',-apple-system,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight: 500;text-transform: uppercase;letter-spacing: .2px;"><time datetime="2026-05-22T18:34:57.080Z">May 22</time></div></td></tr></tbody></table></td></tr></tbody></table></td><td align="right"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="vertical-align:middle;"><a href="https://substack.com/@justinling"><img class="custom-css-email-avatar avatar-QIQ5yR" src="https://substackcdn.com/image/fetch/$s_!s_f_!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fdc7a3d65-e9ee-4ce3-9c0d-3f00545d81d7_3646x3646.jpeg" style="box-sizing: border-box;max-width: 550px;border: none;vertical-align: middle;width: 40px;height: 40px;min-width: 40px;min-height: 40px;object-fit: cover;margin: 0px;display: inline;border-radius: 50%" width="40" height="40"></a></td></tr></tbody></table></td></tr></tbody></table><table class="email-ufi-2-top" role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="border-top: 1px solid rgb(0,0,0,.1);border-bottom: 1px solid rgb(0,0,0,.1);min-width: 100%;"><tbody><tr height="16"><td height="16" style="font-size:0px;line-height:0;">&nbsp;</td></tr><tr><td><table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="vertical-align:middle;"><table role="presentation" width="38" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="center"><a class="email-icon-button" href="https://substack.com/app-link/post?publication_id=891638&post_id=192920746&utm_source=substack&isFreemail=true&submitLike=true&token=eyJ1c2VyX2lkIjoxMDUxODY0NywicG9zdF9pZCI6MTkyOTIwNzQ2LCJyZWFjdGlvbiI6IuKdpCIsImlhdCI6MTc3OTQ3NDk2NywiZXhwIjoxNzgyMDY2OTY3LCJpc3MiOiJwdWItODkxNjM4Iiwic3ViIjoicmVhY3Rpb24ifQ.o07l5DMIpK6iJ-iZ5EQPjV9NtcnzyfxkT6K0jaZx9F8&utm_medium=email&utm_campaign=email-reaction&r=69g8n" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;font-weight: 500;border: 1px solid rgb(0,0,0,.1);border-radius: 9999px;text-transform: uppercase;font-size: 12px;line-height: 1;padding: 9px 0;text-decoration: none;color: rgb(119,119,119);min-width: 38px;box-sizing: border-box;width: 38px"><img class="icon" src="https://substackcdn.com/image/fetch/$s_!PeVs!,w_36,c_scale,f_png,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Ficon%2FLucideHeart%3Fv%3D4%26height%3D36%26fill%3Dnone%26stroke%3D%2523808080%26strokeWidth%3D2" width="18" height="18" style="border: none;vertical-align: middle;max-width: 18px" alt=""></a></td></tr></tbody></table></td><td width="8" style="min-width:8px;"></td><td style="vertical-align:middle;"><table role="presentation" width="38" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="center"><a class="email-icon-button" href="https://substack.com/app-link/post?publication_id=891638&post_id=192920746&utm_source=substack&utm_medium=email&isFreemail=true&comments=true&token=eyJ1c2VyX2lkIjoxMDUxODY0NywicG9zdF9pZCI6MTkyOTIwNzQ2LCJpYXQiOjE3Nzk0NzQ5NjcsImV4cCI6MTc4MjA2Njk2NywiaXNzIjoicHViLTg5MTYzOCIsInN1YiI6InBvc3QtcmVhY3Rpb24ifQ.R_JlQCYpyN-OKc8MT287Srv8kV7rKeXTAMaPtnY1Y8g&r=69g8n&utm_campaign=email-half-magic-comments&action=post-comment&utm_source=substack&utm_medium=email" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;font-weight: 500;border: 1px solid rgb(0,0,0,.1);border-radius: 9999px;text-transform: uppercase;font-size: 12px;line-height: 1;padding: 9px 0;text-decoration: none;color: rgb(119,119,119);min-width: 38px;box-sizing: border-box;width: 38px"><img class="icon" src="https://substackcdn.com/image/fetch/$s_!x1tS!,w_36,c_scale,f_png,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Ficon%2FLucideComments%3Fv%3D4%26height%3D36%26fill%3Dnone%26stroke%3D%2523808080%26strokeWidth%3D2" width="18" height="18" style="border: none;vertical-align: middle;max-width: 18px" alt=""></a></td></tr></tbody></table></td><td width="8" style="min-width:8px;"></td><td style="vertical-align:middle;"><table role="presentation" width="38" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="center"><a class="email-icon-button" href="https://substack.com/app-link/post?publication_id=891638&post_id=192920746&utm_source=substack&utm_medium=email&utm_content=share&utm_campaign=email-share&action=share&triggerShare=true&isFreemail=true&r=69g8n&token=eyJ1c2VyX2lkIjoxMDUxODY0NywicG9zdF9pZCI6MTkyOTIwNzQ2LCJpYXQiOjE3Nzk0NzQ5NjcsImV4cCI6MTc4MjA2Njk2NywiaXNzIjoicHViLTg5MTYzOCIsInN1YiI6InBvc3QtcmVhY3Rpb24ifQ.R_JlQCYpyN-OKc8MT287Srv8kV7rKeXTAMaPtnY1Y8g" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;font-weight: 500;border: 1px solid rgb(0,0,0,.1);border-radius: 9999px;text-transform: uppercase;font-size: 12px;line-height: 1;padding: 9px 0;text-decoration: none;color: rgb(119,119,119);min-width: 38px;box-sizing: border-box;width: 38px"><img class="icon" src="https://substackcdn.com/image/fetch/$s_!_L14!,w_36,c_scale,f_png,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Ficon%2FLucideShare2%3Fv%3D4%26height%3D36%26fill%3Dnone%26stroke%3D%2523808080%26strokeWidth%3D2" width="18" height="18" style="border: none;vertical-align: middle;max-width: 18px" alt=""></a></td></tr></tbody></table></td><td width="8" style="min-width:8px;"></td><td style="vertical-align:middle;"><table role="presentation" width="38" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="center"><a class="email-icon-button" href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly9vcGVuLnN1YnN0YWNrLmNvbS9wdWIvanVzdGlubGluZy9wL211c2ljLWFpLWNvbW1lbmNlbWVudC1zcGVlY2hlcy1wc3lvcD91dG1fc291cmNlPXN1YnN0YWNrJnV0bV9tZWRpdW09ZW1haWwmdXRtX2NhbXBhaWduPWVtYWlsLXJlc3RhY2stY29tbWVudCZhY3Rpb249cmVzdGFjay1jb21tZW50JnI9NjlnOG4mdG9rZW49ZXlKMWMyVnlYMmxrSWpveE1EVXhPRFkwTnl3aWNHOXpkRjlwWkNJNk1Ua3lPVEl3TnpRMkxDSnBZWFFpT2pFM056azBOelE1Tmpjc0ltVjRjQ0k2TVRjNE1qQTJOamsyTnl3aWFYTnpJam9pY0hWaUxUZzVNVFl6T0NJc0luTjFZaUk2SW5CdmMzUXRjbVZoWTNScGIyNGlmUS5SX0psUUNZcHlOLU9LYzhNVDI4N1NydjhrVjdyS2VYVEFNYVB0blkxWThnIiwicCI6MTkyOTIwNzQ2LCJzIjo4OTE2MzgsImYiOnRydWUsInUiOjEwNTE4NjQ3LCJpYXQiOjE3Nzk0NzQ5NjcsImV4cCI6MjA5NTA1MDk2NywiaXNzIjoicHViLTAiLCJzdWIiOiJsaW5rLXJlZGlyZWN0In0.rEElgs5ZS_PA3enu_bkTP5LgxNQgg3mvgGtths1Pwlk?&utm_source=substack&utm_medium=email" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;font-weight: 500;border: 1px solid rgb(0,0,0,.1);border-radius: 9999px;text-transform: uppercase;font-size: 12px;line-height: 1;padding: 9px 0;text-decoration: none;color: rgb(119,119,119);min-width: 38px;box-sizing: border-box;width: 38px"><img class="icon" src="https://substackcdn.com/image/fetch/$s_!ubXF!,w_36,c_scale,f_png,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Ficon%2Fnotes__NoteRestackIcon%3Fv%3D4%26height%3D36%26fill%3Dnone%26stroke%3D%2523808080%26strokeWidth%3D2%26strokeLinecap%3Dround%26strokeLinejoin%3Dround" width="18" height="18" alt="" style="max-width: 550px;border: none !important;vertical-align: middle;"></a></td></tr></tbody></table></td></tr></tbody></table></td><td align="right"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="vertical-align:middle;"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="center"><a class="email-button-outline" href="https://open.substack.com/pub/justinling/p/music-ai-commencement-speeches-psyop?utm_source=email&redirect=app-store&utm_campaign=email-read-in-app" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;font-weight: 500;border: 1px solid rgb(0,0,0,.1);border-radius: 9999px;text-transform: uppercase;font-size: 12px;line-height: 12px;padding: 9px 14px;text-decoration: none;color: rgb(119,119,119);"><div class="email-button-spacer" style="font-size: 16px;line-height: 26px;display: inline-block;vertical-align: middle;max-width: 0;min-height: 18px;"></div><span class="email-button-text" style="vertical-align: middle;margin-right: 4px">READ IN APP</span><img class="icon text-icon" src="https://substackcdn.com/image/fetch/$s_!ET-_!,w_36,c_scale,f_png,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Ficon%2FLucideArrowUpRight%3Fv%3D4%26height%3D36%26fill%3Dnone%26stroke%3D%2523808080%26strokeWidth%3D2" width="18" height="18" style="min-width: 18px;min-height: 18px;border: none;vertical-align: middle;margin-right: 0;margin-left: 0;max-width: 18px" alt=""></a></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></td></tr><tr height="16"><td height="16" style="font-size:0px;line-height:0;">&nbsp;</td></tr></tbody></table></div></div><div class="post typography" dir="auto" style="--image-offset-margin: -120px;padding: 32px 0 0 0;font-size: 16px;line-height: 26px;"><div class="body markup" dir="auto" style="text-align: initial;font-size: 16px;line-height: 26px;width: 100%;word-break: break-word;margin-bottom: 16px;font-family: 'SF Pro Display', -apple-system, system-ui, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';font-weight: 400;"><div class="captioned-image-container-static" style="font-size: 16px;line-height: 26px;margin: 32px auto;margin-top: 0;"><figure style="width: 100%;margin: 0 auto;"><table class="image-wrapper" width="100%" border="0" cellspacing="0" cellpadding="0" data-component-name="Image2ToDOMStatic" style="mso-padding-alt: 1em 0 1.6em;"><tbody><tr><td style="text-align: center;"></td><td class="content" align="left" width="1200" style="text-align: center;"><a class="image-link" target="_blank" href="https://substack.com/redirect/79ee603f-87e3-43b8-865d-09ab5a899dbe?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="position: relative;flex-direction: column;align-items: center;padding: 0;width: auto;height: auto;border: none;text-decoration: none;display: block;margin: 0;margin-top: 0;margin-bottom: 0;"><img class="wide-image" data-attrs="{&quot;src&quot;:&quot;https://substack-post-media.s3.amazonaws.com/public/images/eb29e722-457a-4c75-8274-d197f9f5e3f8_2000x1365.png&quot;,&quot;srcNoWatermark&quot;:null,&quot;fullscreen&quot;:false,&quot;imageSize&quot;:&quot;large&quot;,&quot;height&quot;:994,&quot;width&quot;:1456,&quot;resizeWidth&quot;:1200,&quot;bytes&quot;:1659130,&quot;alt&quot;:null,&quot;title&quot;:null,&quot;type&quot;:&quot;image/png&quot;,&quot;href&quot;:null,&quot;belowTheFold&quot;:false,&quot;topImage&quot;:true,&quot;internalRedirect&quot;:&quot;https://www.bugeyedandshameless.com/i/192920746?img=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Feb29e722-457a-4c75-8274-d197f9f5e3f8_2000x1365.png&quot;,&quot;isProcessing&quot;:false,&quot;align&quot;:&quot;center&quot;,&quot;offset&quot;:false}" alt="" width="550" height="375.4807692307692" src="https://substackcdn.com/image/fetch/$s_!dTPE!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Feb29e722-457a-4c75-8274-d197f9f5e3f8_2000x1365.png" style="border: none !important;vertical-align: middle;display: block;-ms-interpolation-mode: bicubic;height: auto;margin-bottom: 0;width: auto !important;max-width: 100% !important;margin: 0 auto;"></a></td><td style="text-align: center;"></td></tr></tbody></table><figcaption class="image-caption" style="box-sizing: content-box;color: rgb(119,119,119);font-size: 14px;line-height: 20px;font-weight: 400;letter-spacing: -.15px;margin-top: 8px;width: 70%;padding-left: 15%;padding-right: 15%;text-align: center;"><span>via the </span><a href="https://substack.com/redirect/abf9445d-db13-4188-b6b5-60387c0ed618?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="text-decoration: underline;">National Museum of African American History &amp; Culture</a><span>. (Worth visiting in-person.)</span></figcaption></figure></div><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">&#8220;Besides the music and the spectacle, a rock and roll concert involves a fairly distinct pattern of exchanged and exhibited signs.&#8221;</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>So begins Dan Hays&#8217; </span><em><span>The Rock and Roll Concert: A Semiotic Analysis.</span><span class="footnote-anchor-email" data-component-name="FootnoteAnchorToDOMStatic" style="font-size: 20px;">&#185;</span></em></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">Semiotics, the study of signs and symbols, is a strange blend of architecture, design, culture, linguistics, fashion, and sociology. And it&#8217;s a useful way of looking at things as though you are an alien arriving on earth for the first time.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">&#8220;The performance itself, which includes a multitude of signals and implicated meanings, is the focus of the situation,&#8221; Hays, then in the psychology department of the University of Alabama, continues. But the audience, too, gets in on the &#8220;exhibition of signs (whether or not fully processed on a given occasion).&#8221;</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">To properly understand both performer and audience, Hays recruited an army of &#8220;informants,&#8221; dispatched to attend rock concerts &#8220;where it was possible to consider various questions involving semiotic concepts and informally to gain experience with some of the external and subjective realities associated with rock and roll and its performance.&#8221;</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>Hays presented this paper at the Fifth Annual Meetings of the Semiotic Society of America, held in 1980. Study had been paid to the circus and ballet, Hays notes in his introduction, but not rock. So why </span><em>shouldn&#8217;t</em><span> we subject the bizarre rituals and in-group behavior of the rock n&#8217; roll concert to rigorous academic study? </span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">So Hays collected all these data and tried to delineate trends, from aboard his spaceship hovering above earth. When and why did audiences clap? How did performers address their fans? When did hands go up? Why did they come down? What did all their hand signals mean?</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">A country rock show may involve signalling with a hat, a metal show may involve raised fists, a vigorous bobbing of the head, or demonic motifs. While non-lyrical communication is limited, artists may use &#8220;pyrotechnics, laser displays, movies, special props&#8221; to communicate a visual message. The &#8220;signal complex&#8221; is vast: Could holding up a lighter be related &#8220;to the lighting of fires to urge the lights to come on again, so to speak, during an eclipse&#8221;? The mind puzzles. </p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">It may seem downright rote now, but the advent of the rock concert changed the Western world. Jazz clubs, Elvis, Beatlemania: They were all inflection points for an emerging culture of in-person musical happenings. By 1980, however, this had flourished into a freaky constellation of cultures, subcultures, and subsubcultures.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">&#8220;In many towns in Middle America where special events are few,&#8221; Hays writes, &#8220;and where middle-class young people have constrained lives which may in some cases be low on both external stimulation and opportunity and individual initiative and creativity, having a rock concert in town, with its stimulation and mythology, provides a sharp contrast indeed with the ordinary situation.&#8221;</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>These concerts connected audiences &#8212; through music and ritual &#8212; with the rest of the world, particularly as the rest of the world appeared to be losing their minds. Paul Simon collaborated with </span><a href="https://substack.com/redirect/020e076f-15f4-4cb9-b2e2-7b7d3c0e0796?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">Ladysmith Black Mambazo</a><span> just as the fight against Apartheid reached an apex. </span><a href="https://substack.com/redirect/64b7b210-3963-4c0b-99f5-db0b16babeb6?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">The Scorpions</a><span>, of West Germany, created a soundtrack for the fall of the Berlin Wall with </span><em>Winds of Change.</em><span> </span><a href="https://substack.com/redirect/a40af3f9-4639-437b-ad87-e6ebb64ca40b?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">Veruca Salt</a><span>&#8217;s </span><em>Seether</em><span> arrived in the emergent Los Angeles grunge scene as an angry yell against societal misogyny. At the Hotel Hilton in Addis Ababa, young people focused on the futuristic synths of </span><a href="https://substack.com/redirect/38b3faf6-2dbb-4520-808d-7901426787e7?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">Hailu Mergia</a><span> as the military shot civilians in the street outside.</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">Inside the Werner von Braun Civic Center in Huntsville, Alabama, Hays&#8217; informants were observing how these spaces seemed to be so damn powerful. And, in a crowd of spectators buzzing, humming, and chanting, they watched as their entertainment for the evening descended from on high &#8220;in an elaborate flying saucer prop.&#8221;</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>This week, on a very special </span><strong>Bug-eyed and Shameless</strong><span>: An ode to rock music. In particular, the essential role that in-person music plays in society.</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">And how, when we need it more than ever, the tech oligarchs are trying to take it away.</p><div style="font-size: 16px;line-height: 26px;"><hr style="margin: 32px 0;padding: 0;height: 1px;background: rgb(0,0,0,.1);border: none;"></div><div class="subscription-widget-wrap" style="font-size: 16px;line-height: 26px;"><div class="subscription-widget show-subscribe" style="font-size: 16px;direction: ltr !important;font-weight: 400;text-decoration: none;font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';color: #363737;line-height: 1.5;max-width: 560px;margin: 24px auto;align-items: flex-start;display: block;text-align: center;padding: 0px 32px;"><div class="preamble" style="margin-top: 16px;font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-size: 18px;max-width: 384px;width: fit-content;line-height: 22px;display: flex;align-items: center;text-align: center;font-weight: 400;margin-left: auto;margin-right: auto;"><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">Keep on subscribing to <strong>Bug-eyed and Shameless</strong>, and doot doola doot doo&#8230;</p></div><div class="subscribe-widget is-signed-up" data-component-name="SubscribeWidget" style="margin: 0 0 1em;direction: ltr;font-size: 16px;line-height: 26px;"><div class="pencraft pc-reset button-wrapper" style="text-decoration: unset;list-style: none;font-size: 16px;line-height: 26px;text-align: center;cursor: pointer;border-radius: 4px;"><a class="button subscribe-btn primary" href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly93d3cuYnVnZXllZGFuZHNoYW1lbGVzcy5jb20vc3Vic2NyaWJlP3V0bV9zb3VyY2U9cG9zdCZ1dG1fY2FtcGFpZ249ZW1haWwtY2hlY2tvdXQmbmV4dD1odHRwcyUzQSUyRiUyRnd3dy5idWdleWVkYW5kc2hhbWVsZXNzLmNvbSUyRnAlMkZtdXNpYy1haS1jb21tZW5jZW1lbnQtc3BlZWNoZXMtcHN5b3Amcj02OWc4biZ0b2tlbj1leUoxYzJWeVgybGtJam94TURVeE9EWTBOeXdpYVdGMElqb3hOemM1TkRjME9UWTNMQ0psZUhBaU9qRTNPREl3TmpZNU5qY3NJbWx6Y3lJNkluQjFZaTA0T1RFMk16Z2lMQ0p6ZFdJaU9pSmphR1ZqYTI5MWRDSjkucVVWVllNQkxfVmw4R2pUSFVnNTBjcjhiM0Q4a3hHd0hObi1VX20tZmg5ayIsInAiOjE5MjkyMDc0NiwicyI6ODkxNjM4LCJmIjp0cnVlLCJ1IjoxMDUxODY0NywiaWF0IjoxNzc5NDc0OTY3LCJleHAiOjIwOTUwNTA5NjcsImlzcyI6InB1Yi0wIiwic3ViIjoibGluay1yZWRpcmVjdCJ9.z4m0uGt7R4qDynL3TpVKw9gEJC9Sg5z3x6EOw3ocubM?&utm_medium=email&utm_source=subscribe-widget-preamble&utm_content=192920746" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;box-sizing: border-box;cursor: pointer;border: none;border-radius: 8px;font-size: 14px;line-height: 20px;font-weight: 600;text-align: center;opacity: 1;outline: none;white-space: nowrap;text-decoration: none !important;margin: 0 auto;background-color: #000000;color: #ffffff !important;padding: 12px 20px;height: auto;"><span style="color: #ffffff;text-decoration: none;">Upgrade to paid</span></a></div></div></div></div><div style="font-size: 16px;line-height: 26px;"><hr style="margin: 32px 0;padding: 0;height: 1px;background: rgb(0,0,0,.1);border: none;"></div><a class="youtube-wrap" href="https://substack.com/redirect/d8c627f4-7a8c-4f95-98c9-231f420624c3?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" target="_blank" data-component-name="Youtube2ToDOMStatic" style="display: block;margin: 32px 0;"><img src="https://substackcdn.com/image/youtube/w_728,c_limit/l_youtube_play_qyqt8q,w_120/yoFWiKn_eK0" style="border: none !important;vertical-align: middle;-ms-interpolation-mode: bicubic;max-width: 100%;height: auto;margin: 0 auto;display: block;width: 100%;"></a><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">George Clinton got his start in hair. And the barbershop was a kind of community centre. What eggheads might call a &#8220;third space.&#8221; When he went all-in on music, his passion, he decided to make it a third space unto itself.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>He began as a songwriter for Motown before fronting his own band, The Parliaments, who had a hit with </span><em>(I Wanna) Testify. </em><span>When he tried to drag the band into the freaky 70s, his label resisted: So he founded Funkadelic instead. (Later, he got the name back, hence the Parliament-Funkadelic nomenclature.)</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">Clinton&#8217;s influences were a crazy cross-section of culture: Funk, obviously, but also rock, mambo, soul, jazz, gospel, Motown, with a heavy dose of hippy, beat, and psychedelic counter-cultures layered on top. It was P-Funk.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>Despite being one of the most wild and out-there bands, particularly one comprised of mostly-Black musicians rising to prominence in Nixon&#8217;s America, Parliament-Funkadelic was never quite explicitly political. &#8220;For me, political engagement in general seemed like a trap,&#8221; he wrote in his memoirs.</span><span class="footnote-anchor-email" data-component-name="FootnoteAnchorToDOMStatic" style="font-size: 20px;">&#178;</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">That didn&#8217;t mean Clinton and his bandmates didn&#8217;t engage in politics. They did: They were steeped in hippy culture, they came from over-policed and under-served parts of the country, they aligned with Black Power thinkers, and so on. But rather than write explicit protest music or make themselves into activists, they created space to be weird and think differently. And so they went to space.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><em>Mothership Connection</em><span> is, to my mind, one of the greatest albums ever written. Not even the band agrees what it&#8217;s about: Some imagined it as an album about a spaceship landing in the ghetto, the aliens who had built the pyramids returning to impart more technology on humans. Others imagined it in reverse: A Black man finally making it to space. &#8220;To me it was pimps in outer space, the spaceship as a kind of high-tech Cadillac,&#8221; Clinton writes. &#8220;Space was a place but it was also a concept, a metaphor for being way out there.&#8221;</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>Whatever the exact story, it was all about the mechanics. Going to space requires teamwork and collaboration. It requires putting aside your notions of how things ought to work, gravity in particular. It requires good communication, just at a time when commercial radio was helping to popularize a wider and wider array of music and ideas. Tellingly, the album begins with the instruction: &#8220;Do not attempt to adjust your radio, there is nothing wrong.&#8221; (&#8220;</span><em>Mothership Connection</em><span> was also a radio album,&#8221; Clinton notes.) </span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>With </span><em>Mothership Connection</em><span>, Clinton and the band promised to blow some minds. Not just with their out-there musicianship, songwriting, and worldbuilding: But with the shows themselves. In the coming years, as this space-age idea expanded through his follow-up albums &#8212; introducing futuristic clones and mad scientists, issuing stark warnings about the rise of consumerism &#8212; it spawned a cultural movement, a collaboration between fan and artist, a community.</span></p><blockquote style="border-left: 4px solid #000000;margin: 20px 0;padding: 0;"><p style="margin: 0 0 20px 0;color: rgb(54,55,55);margin-left: 20px;line-height: 26px;font-size: 16px;"><strong>Clinton: </strong><span>When the Mothership landed, five hundred lightbulbs exploded on either side of me. That was rock and roll but not just rock and roll. It was theater but not just theater. It was a kind of transformative moment, a secular religion, a level of experience I had never before imagined, and that few bands &#8212; the Who, Led Zeppelin, the Rolling Stones &#8212; ever reached. Crowds were starting to become hysterical. They were also helping us to understand how we were being understood: There was a level of membership and participation that was almost like a Rocky Horror Picture Show thing. </span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);margin-left: 20px;line-height: 26px;font-size: 16px;">At a show in Richmond [&#8230;] they turned off the lights in the arena before the show and the crowd looked like a field of stars. Everyone was holding a flashlight, which was something we&#8217;d never ever considered. The next show, in St. Louis, people were standing on the streets on the main road that led to the arena, selling light sabers for people to wave around in the dark.[&#8230;]</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);margin-left: 20px;line-height: 26px;font-size: 16px;">In Washington, D.C., a cab driver who picked us up asked if we were Parliament. We were. &#8220;I&#8217;m pissed at you guys,&#8221; he said. &#8220;I had a flat tire last night and I couldn&#8217;t find a flashlight in the whole goddamn city.&#8221;</p></blockquote><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">If radio was reaching out into communities, connecting them together to exchange ideas and jams, Clinton was reaching out and pulling this diverse set into venues across the country, and the world. And it wasn&#8217;t just mindless head-banging and fist-pumping (not that there&#8217;s anything wrong with that) this was something altogether more subversive.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>&#8220;While most Americans stand at attention at the playing of </span><em>The Star Spangled Banner</em><span>,&#8221; wrote </span><em>Jet</em><span> in 1978, &#8220;Clinton has inspired a &#8216;grooveallegiance&#8217; that has his concert fans waving the two-fingered P-Funk sign and screaming &#8216;get up and jam!&#8217;&#8221;</span><span class="footnote-anchor-email" data-component-name="FootnoteAnchorToDOMStatic" style="font-size: 20px;">&#179;</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">Speaking to the magazine, Clinton insisted he&#8217;s more hippy than punk. &#8220;I&#8217;m not anti-establishment in a sense that I want to tear down the structure,&#8221; Clinton said. &#8220;But I want to provide the people with an alternative to the structure.&#8221; </p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>Parliament-Funkadelic had just come off headlining some of the biggest shows of their existence: An outdoor show on Chicago&#8217;s Soldier Field packed in 70,000 attendees. That November, they released </span><em>Motor Booty Affair</em><span>, their fifth-consecutive gold album. Their tours had long been big, opulent, out there, and expensive.</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>That worried Clinton. &#8220;We were getting away from the people,&#8221; Clinton explained to </span><em>Jet.</em></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">So they did the opposite. They did an &#8220;anti-tour&#8221; &#8212; stripped-down, eschewing big venues for &#8220;small, musty, 3,000 to 4,000 seat halls.&#8221; It lost the band heaps of money. (And yet they still donated 25 cents from every ticket sale to the United Negro College Fund.)</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>They were set to go back to the extravaganza soon (</span><em>Motor Booty Affair</em><span> was an underwater album which required all sorts of nautical props) but Clinton, long one of the most clever people in music, recognized that a key piece to their success was the space created at their shows. And to explore new corners of that space, he needed to do more shows in smaller venues, in cities oft-ignored, and with people he hadn&#8217;t yet met.</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>&#8220;The shared love of the music among fans was so powerful that for the hour before the band even took the stage,&#8221; one concert-goer wrote in 1993, &#8220;the crowd spontaneously joined together in a series of a cappella chants &#8212; something I&#8217;ve never seen at any concert.&#8221;</span><span class="footnote-anchor-email" data-component-name="FootnoteAnchorToDOMStatic" style="font-size: 20px;">&#8308;</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">Indeed, the structure of the band itself was a kind of microcosm of that community. It included horns borrowed from James Brown&#8217;s band, hard rock aficionados, Motown veterans, young hippies, gospel singers, and a raft of others. They spanned across multiple labels and a variety of side projects. Members would flit in-and-out of the band, and there was always new talent coming in.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>Once, when touring through Cleveland, someone told Clinton that there was &#8220;a seventeen-year-old in town who could play </span><em>Maggot Brain</em><span> like he had written it.&#8221; A few days later, Clinton contacted his family and asked if the teen could join the band on the road. He did, later joining the band. That guitarist, Michael Hampton, is now in the Rock and Roll Hall of Fame.</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">This way of operating was chaotic, messy, and it ultimately collapsed under its own weight. </p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>Parliament-Funkadelic fell apart as a cohesive entity in the early 1980s, though the P-Funk Allstars continue on. Clinton&#8217;s influence on music is impossible to enumerate, but it&#8217;s impossible to ignore his influence on the emergence of rap and hip-hop. His impact on culture is perhaps even greater: </span><em>Mothership Connection</em><span> gave rise to Afrofuturism, a new rubric to think about how Black people exist in the universe &#8212; not just how they relate to white people.</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">More than other forms of futurism, Afrofuturism was embedded with an innate skepticism. Whereas futurism all too often became a function of imagining utopia, Afrofuturism often dealt in questions of equity, scarcity, escapism, and dystopia. Whereas futurism often ignored the disquieting parts of science fiction in favour of tech-worship, Afrofuturism embraced it.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">As author Samuel R. Delany noted in 1993: &#8220;To look at any of these black cultural youth movements as an easy and happy development blossoming uncritically from the overwhelmingly white world of high-tech production that, yes, makes that culture possible, is, I suspect, thoroughly to misread the fiercely oppositional nature of this art: Scratch and sampling begin, in particular, as a specific miss-use and conscientious desecration of the artifacts of technology and the entertainment media.&#8221;</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>Sure enough, Dr. Dre would lean heavily on samples from </span><em>Mothership Connection</em><span> for his breakthrough album </span><em>The Chronic, </em><span>while his pal Snoop Dogg would sample Clinton&#8217;s solo track Atomic Dog in his breakthrough single. (Clinton, unlike other prominent white musicians of the time, celebrated the sampling instead of suing them for it.) Those were seminal moments in a whole other era of music that made people get off their ass and jam.</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>Clinton still tours today. Last summer, he played </span><a href="https://substack.com/redirect/461f26d9-c1f3-4d51-bf1a-dcdb90b71009?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">Noochie&#8217;s Front Porch</a><span>: A D.C. spot where artists literally play to the neighbourhood.</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">Clinton and his collaborators called it a block party, a cook-out, a family reunion. Or, as Clinton put it, &#8220;ain&#8217;t nothin&#8217; but a party, baby.&#8221;</p><div style="font-size: 16px;line-height: 26px;"><hr style="margin: 32px 0;padding: 0;height: 1px;background: rgb(0,0,0,.1);border: none;"></div><a class="youtube-wrap" href="https://substack.com/redirect/d8b8c847-988a-40eb-83ad-10b1b5396c56?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" target="_blank" data-component-name="Youtube2ToDOMStatic" style="display: block;margin: 32px 0;"><img src="https://substackcdn.com/image/youtube/w_728,c_limit/l_youtube_play_qyqt8q,w_120/6gPVZqfTT6Y" style="border: none !important;vertical-align: middle;-ms-interpolation-mode: bicubic;max-width: 100%;height: auto;margin: 0 auto;display: block;width: 100%;"></a><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">Earlier this year, an email in my inbox arrived to let me know of a change of venue.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">The last time I had seen Geordie Greep, last February, it was a miserable snowstorm. The venue, a modest-sized room in Montreal&#8217;s Mile End, was mostly-but-not-entirely full. It was a fun gig.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">This show, happening just 12 months later, had been booked at a considerably larger venue. But now, it was being moved to the city&#8217;s historic Club Soda in its bustling Quartier des Spectacles.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">I arrived early enough. It wasn&#8217;t early enough. The room was packed, borderline over-sold. I squirmed my way into an empty stool on the mezzanine overlooking the crowd: Young, hip, universally ignoring their phones and talking to each other.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>I generally despise voyeuristic observations about the younger generations. I don&#8217;t really care if they&#8217;re drinking, screwing, getting married, buying avocado toast, or </span><a href="https://substack.com/redirect/c6c1419e-4985-4dc9-85fe-19b2c70daf65?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">killing the conflict diamond industry.</a><span> My one exception is that I am absolutely obsessed with their relationship to technology.</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>A few months ago I crammed into a packed city bus and could barely contain myself when I looked over and saw a young woman &#8212; early 20s, maybe &#8212; sporting bright yellow wireless headphones. Rather than bluetooth, though, they had a large antenna: They were a vintage pair of </span><a href="https://substack.com/redirect/17e1fde2-a141-48fb-88ef-6e272ec7dbde?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">Sony FM/AM Walkman SRF-HM55 Headphones</a><span>. She was listening to the </span><em>radio.</em></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">Peering over this sea of youngsters, I didn&#8217;t see any Walkmen &#8212; but I did see plenty of vintage film cameras and a few flipphones. But, mostly, people eschewing technology to hang out with their friends.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">Then Greep took the stage. Over the course of three hours on a Wednesday night, the wild melee of mostly-GenZ fans were transfixed into a state of frenzied dancing, vigorous moshing, all-around vibing, and even some well-intentioned but poorly-executed crowd surfing. The energy was pretty incredible.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">You would be forgiven for not knowing who Greep is. I happen to think he's one of the most exciting things to happen to music in recent years &#8212; Steely Dan, if you replace the mythos of coke-addled strivers for boozer sex worker-loving incels. It&#8217;s rock, samba, jazz, pop, prog, and lots of stuff in between. (If you&#8217;ve an aversion to guitar noodling, schmaltz, character-driven songwriting, or just rock experimentation in general, this might not be for you.)</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">I try to go to a lot of shows. I have observed, as I think many have, the general malaise of the modern audience, particularly post-COVID &#8212; that includes Greep&#8217;s 2025 show. I was gobsmacked at the truly unhinged, carefree energy that came out to the show this April. </p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>Part of this, we know, is economic. Inflation hits culture hard, but it has arrived this time in the midst of a corporate consolidation of music. As the Department of Justice (along with a coalition of states) argued in 2024: &#8220;One monopolist serves as the gatekeeper for the delivery of nearly all live music in America today: Live Nation.&#8221;</span><span class="footnote-anchor-email" data-component-name="FootnoteAnchorToDOMStatic" style="font-size: 20px;">&#8309;</span><span> (That includes Ticketmaster, its subsidiary.)</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">Part of it is societal and technological. Streaming and on-demand video has made live performance instantly accessible, without the cost, need to travel, competition for tickets, lines for the bathroom, and so on. Through the pandemic, in particular, Tiny Desk Concerts became a good-enough stand-in for real-life entertainment.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">And we know that social interactions have fared badly in the era of social media. Young people seem to have fewer friends and fewer occasions to see them.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>But nobody </span><em>wants</em><span> this reality. There is a clear demand for reasonably-priced concerts, not managed by monopolistic promoters, put on by independent/DIY/smaller acts. Young people are fed up, it seems, by the constant pressures of ubiquitous technology.</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">Therein lies the trouble. Technology has become the means through which we access culture, but it also seems to be the impediment to actually enjoying it &#8212; at least, with others.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">The problems plague artists, too. How does an upstart musician even go about reaching an accessible fandom these days? Could George Clinton even dream of building the mothership, in this day and age?</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>Indie rock darlings Geese came out of (relative) nowhere to playing SNL and capturing the imagination of the music tastemakers. Naturally, that drew allegations of them being industry plants &#8212; they were, as WIRED put it, a &#8220;</span><a href="https://substack.com/redirect/1834ebfc-19e7-42d1-ba3e-dd782ab34683?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">psyop.</a><span>&#8221;</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>The allegation is mostly unfair. The fandom around Geese is genuine, and lead singer Cameron Winter is an honest-to-goodness genius. But WIRED did get at something interesting: Geese had hired a digital marketing firm to set up a network of social profiles to boost Geese into the recommendation algorithm, particularly on TikTok. This, in turn, created buzz about their new album and brought in hordes of new fans &#8212; fans who, in turn, turned out to catch Geese </span><a href="https://substack.com/redirect/c04bfe56-49a9-44db-bb35-08524db6a3c5?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">on the streets of Brooklyn</a><span>, for example. The marketing firm behind the effort is aptly named Chaotic Good.</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>This is slimy, but it is a far cry from </span><a href="https://substack.com/redirect/d01c3ca9-13ea-4129-bc71-1d7cef4c864d?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">Payola</a><span>: Paying a radio station to play certain tracks over others. What&#8217;s more depressing is that it&#8217;s necessary.</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>There is nothing inherently worse about consuming music virtually. Actually, the internet has made music </span><em>so much better. </em><span>We can now listen to nearly every song ever recorded at virtually whatever quality we choose and then engage with the incomprehensibly large amount of commentary written about it. And the recommendation algorithms, fickle as they may be, can do what the radio did: Broadcast out new scenes, genres, and talents into ears that might never have heard them otherwise.</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">But it is unassailable that the mechanics of the internet whirr and spin to produce profit and shareholder value, not cultural awareness. Creating a network of sockpuppet accounts to get an indie upstart&#8217;s music into TikTok videos isn&#8217;t a clever effort to do an end-run around the stodgy music industry nor is it misusing or desecrating technology to create something novel. Participating in the algorithmification of music more forcefully than your contemporaries is just further solidifying the role that Big Tech plays in controlling the music industry. It is uploading more of our cultural conversation to social media. It is putting more artificial distance between audience and performer. </p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">Others have taken a far more organic way to breaking through: Community.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">On a residential street in Brixton, right next to the entrance of a housing estate, is the Windmill pub. The South London venue has become the incubator for what is cheekily known as &#8220;post-Brexit New Wave.&#8221; It has become a hub for the most exciting and experimental new acts in rock: Black Country, New Road; Squid; Fat White Family; the Last Dinner Party; and Black Midi &#8212; Greep&#8217;s former band, who played the pub when the members were only just legal to drink.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">The scene had started before the pandemic, and COVID-19 nearly destroyed it. Government bailouts kept the Windmill alive, just barely. When they did reopen, their tiny 150 person capacity was reduced to 36. Even as the public health restrictions faded away, the economics continued battering the pub.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>This, as the independent venue became the epicenter of a very strange and successful turn in rock. Black Country, New Road&#8217;s </span><em>Ants From Up Here</em><span> made just about every best-of list in 2022; The Last Dinner Party and Black Midi both received nominations for the prestigious Mercury Prize; whilst Greep and his former bandmates have now broken out into all manner of interesting and successful solo acts.</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>Much as Clinton saw himself as a planter box inside which all kinds of talent could grow, the Windmill gave birth to its namesake </span><em>scene</em><span>, helping propel small, unsigned bands into global notoriety. The success of one would help the other, and vice versa. To be labelled a part of the Windmill scene was to get a stamp of approval, included in a human-created recommendation algorithm.</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>That, in turn, has brought out hordes of young people, eschewing the massive extravagance &#8212; of, say, Charli XCX&#8217;s </span><em>Brat</em><span> tour &#8212; in favour of smaller, intimate, more familiar crowds. Tellingly, Black Country, New Road&#8217;s follow-up to their smash sophomore record was </span><em>Live at Bush Hall</em><span>, an album of entirely new material, performed with a full audience as though it were prom night. It resonated hard, I imagine, for a generation of youth who had their own proms cancelled or made virtual by the pandemic.</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">So much of the joy and energy around this scene feels like a recognition that, nearly everywhere, these kinds of scenes and communities are being made obsolete or run into the ground. And it comes at the exact moment when fascist politicians are exploiting the collapse of shared meaning to drive their brand of reactionary politics. So-called populists, and the oligarchs who support them, want to smash community gatherings, pushing more and more people online &#8212; to be monetized and made cynical.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>&#8220;We&#8217;ll keep at it,&#8221; Tim Perry, the Windmill&#8217;s booker, </span><a href="https://substack.com/redirect/7b6b79e3-57e3-418a-bd4f-c14b032e2b32?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">told </a><em><a href="https://substack.com/redirect/7b6b79e3-57e3-418a-bd4f-c14b032e2b32?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">Big Issue</a></em><span>. &#8220;Unless some billionaire comes in and buys it.&#8221; </span></p><a class="youtube-wrap" href="https://substack.com/redirect/a656325d-1f00-450e-a4eb-255584292868?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" target="_blank" data-component-name="Youtube2ToDOMStatic" style="display: block;margin: 32px 0;"><img src="https://substackcdn.com/image/youtube/w_728,c_limit/l_youtube_play_qyqt8q,w_120/VbHV8oObR54" style="border: none !important;vertical-align: middle;-ms-interpolation-mode: bicubic;max-width: 100%;height: auto;margin: 0 auto;display: block;width: 100%;"></a><div style="font-size: 16px;line-height: 26px;"><hr style="margin: 32px 0;padding: 0;height: 1px;background: rgb(0,0,0,.1);border: none;"></div><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">Dan Hays did not stay in the field of semiotics. (I&#8217;m not sure anyone did.)</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">He took his study of language and symbols into a nascent field which fared a bit better: Artificial Intelligence.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>&#8220;A curious phenomenon of work in AI is the </span><em>disappearance of intelligence</em><span> when a process is examined closely, or comes to be understood,&#8221; Hays wrote in 1988. Clearly borrowing from his work in understanding how humans signal to each other, he observed: &#8220;The critical issue is not whether a program is intelligent because it does some reasoning or not, or is smarter or less smart in an absolute situational sense, but the </span><em>modifiability of the program to meet new situations</em><span> together with the </span><em>situational adequately of response.</em><span>&#8220;</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">That is to say, we judge the &#8220;smartness&#8221; of a machine not based on the code it runs, but in how we perceive its &#8220;external connectedness to a world of events and meanings.&#8221;</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>Hays&#8217; work was unquestionably cool: He was studying how to optimize the language of NASA&#8217;s computer systems in order to help engineers and astronauts conduct better experiments in space, particularly in a way that could be interoperable with other countries. But he was also stumbling onto something that would transfix those producing artificially intelligent systems for the layperson &#8212; from Joseph Weizenbaum&#8217;s ELIZA to Sam Altman&#8217;s ChatGPT. (</span><a href="https://substack.com/redirect/4edc48ce-bf4d-4df7-b597-8570e8336f95?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">Dispatch #141</a><span>) Humans are more receptive to computers which mimic their humanity.</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">Earlier this week, Goldman Sachs CEO David Solomon delivered the commencement speech for the Wharton School of Business. And Solomon talked a lot about the power of music.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>&#8220;I was the guy who made mixtapes for parties,&#8221; Solomon said, recounting his frat days. He arduously transferred songs, one-by-one, from LP to cassette, &#8220;finding exactly the right order to bring down the house.&#8221; For the annual Christmas Party, &#8220;it was Bruce Springsteen&#8217;s </span><em>Santa Claus is Coming to Town</em><span>, straight into </span><em>Start Me Up</em><span> by the Rolling Stones, always finishing with </span><em>Echo Beach</em><span> by Martha and the Muffins.&#8221; (A bizarre order, if you ask me.)</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">Despite advice from his colleagues, Solomon has continued DJing. And it makes him happy in a way that only human creativity can.</p><blockquote style="border-left: 4px solid #000000;margin: 20px 0;padding: 0;"><p style="margin: 0 0 20px 0;color: rgb(54,55,55);margin-left: 20px;line-height: 26px;font-size: 16px;"><strong>David Solomon: </strong><span>There&#8217;s something you do, each and every one of you, that gives you excitement and joy. Don&#8217;t let it fall by the wayside. You have a long journey in front of you, full of setbacks and tough days. It will be a lot easier to pick yourself up, dust yourself off if you stay connected to what it is that lights you up. </span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);margin-left: 20px;line-height: 26px;font-size: 16px;">This is an exciting moment. You&#8217;re entering the workforce and a time when technology is once again reshaping our everyday lives. After all, we live in an age of self-driving cars, reusable rockets, and an app called Suno, which some of you might be familiar with. It&#8217;s an AI app that helps you produce music instantaneously. As I was preparing for this, I gave it a prompt. And here&#8217;s what I said: </p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);margin-left: 20px;line-height: 26px;font-size: 16px;">Hey Suno, I&#8217;m at Wharton&#8217;s graduation and I&#8217;d like you to make an anthem for the MBA class of 2026. Let&#8217;s create an upbeat house song approximately 120 beats-a-minute that talks about why Wharton&#8217;s grad should be optimistic about what&#8217;s in front of them in the years ahead, and how today is the best day in the history of the world to be in their shoes &#8212; and tomorrow will be better. Here&#8217;s what Suno came up with. </p></blockquote><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><a href="https://substack.com/redirect/47d8267e-906f-4440-8d25-e3e18f0c0700?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">What follows is an atrocity.</a><span> The camera pans to students&#8217; faces: Some are bouncing to the tinny beats, others are grimacing, others look perplexed. Anyone listening to the lyrics had no reason to feel inspired. (&#8220;You brought the fire/I brought the drive/Now look at us/We&#8217;re fully alive.&#8221;) But, more fundamentally, it was an affront to his own advice. How does entering a prompt into an AI chatbot, eliciting a screeching facsimile-of-a-facsimile of a pop song, help one &#8220;stay connected to what it is that lights you up"?</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">There is an absurd disconnect in Solomon&#8217;s point, one he is apparently too thick to notice. The language of music &#8212; its ability to make you get off your ass and jam, let&#8217;s say &#8212; is not purely a function of beats-per-minute. It is not innate to the sound of 808s or a sweet saxophone solo. </p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">Rather, it is the connection between meaning and interpretation. And there&#8217;s lots of paradoxes there, as Dan Hays noted nearly a half-century ago: There is a distance between performer and spectator, there is a put-on spectacle, the community of a live concert itself is an artificial and commercial construct. Yet a great rock show can engender a strange intimacy: Between artist and fan, within the audience, and in society itself.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">&#8220;Perhaps it is the presence of many polarities in rock music, and specifically in the rock concert, that gives it larger structure, and provides the tensions out of which the main meanings are generated,&#8221; Hays wrote in 1980.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">AI music, by its very nature, has no real tension. No creative work went into its creations. It has no mothership, painstakingly constructed and at great expense; it conveys no social commentary nor personal struggle; it is not made through a process of collaboration or conflict; nor is it even produced by laboriously copying from one format to another until the perfect mix is found. It can only sound vaguely, offensively, like those things.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">Indeed, its trick is to make you think it is human. That&#8217;s why it name-dropped a residence on Wharton campus, as Solomon&#8217;s song did. But it is technologically incapable of creating community.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">And yet there is this pathological, cloying, fundamentally anti-human insistence that it can and will. </p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>All we can do, I guess, is make like the students of many of these commencement speeches and </span><a href="https://substack.com/redirect/7c7a3ce1-9201-4371-9242-8634992cfa9a?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">boo.</a></p><div style="font-size: 16px;line-height: 26px;"><hr style="margin: 32px 0;padding: 0;height: 1px;background: rgb(0,0,0,.1);border: none;"></div><div class="captioned-button-wrap" data-attrs="{&quot;url&quot;:&quot;https://substack.com/app-link/post?publication_id=891638&post_id=192920746&utm_source=substack&utm_medium=email&utm_content=share&utm_campaign=email-share&action=share&triggerShare=true&isFreemail=true&r=69g8n&token=eyJ1c2VyX2lkIjoxMDUxODY0NywicG9zdF9pZCI6MTkyOTIwNzQ2LCJpYXQiOjE3Nzk0NzQ5NjcsImV4cCI6MTc4MjA2Njk2NywiaXNzIjoicHViLTg5MTYzOCIsInN1YiI6InBvc3QtcmVhY3Rpb24ifQ.R_JlQCYpyN-OKc8MT287Srv8kV7rKeXTAMaPtnY1Y8g&quot;,&quot;text&quot;:&quot;Share&quot;}" data-component-name="CaptionedButtonToDOM" style="font-size: 16px;line-height: 26px;"><div class="preamble" style="margin-top: 16px;font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-size: 18px;max-width: 384px;width: fit-content;line-height: 22px;display: flex;align-items: center;text-align: center;font-weight: 400;margin-left: auto;margin-right: auto;"><p class="cta-caption" style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">Please use all of your fake social media accounts to promote this dispatch into the algorithm</p></div><p class="button-wrapper" data-attrs="{&quot;url&quot;:&quot;https://substack.com/app-link/post?publication_id=891638&post_id=192920746&utm_source=substack&utm_medium=email&utm_content=share&utm_campaign=email-share&action=share&triggerShare=true&isFreemail=true&r=69g8n&token=eyJ1c2VyX2lkIjoxMDUxODY0NywicG9zdF9pZCI6MTkyOTIwNzQ2LCJpYXQiOjE3Nzk0NzQ5NjcsImV4cCI6MTc4MjA2Njk2NywiaXNzIjoicHViLTg5MTYzOCIsInN1YiI6InBvc3QtcmVhY3Rpb24ifQ.R_JlQCYpyN-OKc8MT287Srv8kV7rKeXTAMaPtnY1Y8g&quot;,&quot;text&quot;:&quot;Share&quot;}" data-component-name="ButtonCreateButton" style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;text-align: center;cursor: pointer;border-radius: 4px;"><a class="button primary" href="https://substack.com/app-link/post?publication_id=891638&post_id=192920746&utm_source=substack&utm_medium=email&utm_content=share&utm_campaign=email-share&action=share&triggerShare=true&isFreemail=true&r=69g8n&token=eyJ1c2VyX2lkIjoxMDUxODY0NywicG9zdF9pZCI6MTkyOTIwNzQ2LCJpYXQiOjE3Nzk0NzQ5NjcsImV4cCI6MTc4MjA2Njk2NywiaXNzIjoicHViLTg5MTYzOCIsInN1YiI6InBvc3QtcmVhY3Rpb24ifQ.R_JlQCYpyN-OKc8MT287Srv8kV7rKeXTAMaPtnY1Y8g" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;box-sizing: border-box;cursor: pointer;border: none;border-radius: 8px;font-size: 14px;line-height: 20px;font-weight: 600;text-align: center;margin: 0;opacity: 1;outline: none;white-space: nowrap;color: #ffffff !important;text-decoration: none !important;background-color: #000000;padding: 12px 20px;height: auto;"><span style="color: #ffffff;text-decoration: none;">Share</span></a></p></div><div style="font-size: 16px;line-height: 26px;"><hr style="margin: 32px 0;padding: 0;height: 1px;background: rgb(0,0,0,.1);border: none;"></div><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">That&#8217;s it for this week!</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>Over at the </span><em>Star</em><span>, I&#8217;ve got a </span><a href="https://substack.com/redirect/5b738789-7c2b-4f99-a2c4-a96f204fc8a0?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">check-in on the state of play in Ukraine</a><span>; a piece on the </span><a href="https://substack.com/redirect/47ce2c73-900d-4023-b05f-acaa311d8055?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">useful unifying power of hockey</a><span> (go Habs); and a look at a </span><a href="https://substack.com/redirect/ffecbb32-f51e-493e-bbbb-d7c4956813d9?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">fascinating lawsuit filed by Jordan B. Peterson&#8217;s former accountant against his former employer.</a><span> (All gift links.)</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>Look out for the </span><a href="https://substack.com/redirect/8e578d93-691f-48f2-97de-6ffadf91a9ec?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">Friday edition of Commotion with Elamin Abdelmahmoud</a><span>, where we break down the finale of The Late Show with Stephen Colbert &#8212; and what it says about the twilight of American democracy.</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">Until next time!</p><a class="youtube-wrap" href="https://substack.com/redirect/f701adf3-3d01-46b3-be9d-4ae81225cf61?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" target="_blank" data-component-name="Youtube2ToDOMStatic" style="display: block;margin: 32px 0;"><img src="https://substackcdn.com/image/youtube/w_728,c_limit/l_youtube_play_qyqt8q,w_120/lpqDTQOFvf0" style="border: none !important;vertical-align: middle;-ms-interpolation-mode: bicubic;max-width: 100%;height: auto;margin: 0 auto;display: block;width: 100%;"></a><div class="footnote" data-component-name="FootnoteToDOMStatic" style="line-height: 26px;display: flex;border-top: solid 1px rgb(0,0,0,.1);padding-top: 1.5em;font-size: 90%;flex-direction: row;align-items: baseline;"><span class="footnote-number" style="display: block;margin-right: 6px;min-width: 24px;">1</span><div class="footnote-content" style="font-size: 16px;line-height: 26px;display: block;"><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;min-width: 10px;"><em><a href="https://substack.com/redirect/6d0a2859-9aa6-4c34-8b73-8be847132108?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">The Rock and Roll Concert: A Semiotic Analysis</a><span>, </span></em><span>Dan Hays (Semiotics 1980)</span></p></div></div><div class="footnote" data-component-name="FootnoteToDOMStatic" style="line-height: 26px;display: flex;font-size: 90%;flex-direction: row;align-items: baseline;border-top: none;padding-top: 0;"><span class="footnote-number" style="display: block;margin-right: 6px;min-width: 24px;">2</span><div class="footnote-content" style="font-size: 16px;line-height: 26px;display: block;"><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;min-width: 10px;"><em>Brothers Be, Yo Like George, Ain&#8217;t That Funkin&#8217; Kinda Hard On You?</em><span>, George Clinton with Ben Greenman. (2014)</span></p></div></div><div class="footnote" data-component-name="FootnoteToDOMStatic" style="line-height: 26px;display: flex;font-size: 90%;flex-direction: row;align-items: baseline;border-top: none;padding-top: 0;"><span class="footnote-number" style="display: block;margin-right: 6px;min-width: 24px;">3</span><div class="footnote-content" style="font-size: 16px;line-height: 26px;display: block;"><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;min-width: 10px;"><span>&#8220;</span><a href="https://substack.com/redirect/bd831c8f-6b2e-4272-bd4e-49e1639d3996?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">Man Who Makes Millions Pushing P-Funk</a><span>,&#8221; </span><em>Jet</em><span>, 7 December, 1978</span></p></div></div><div class="footnote" data-component-name="FootnoteToDOMStatic" style="line-height: 26px;display: flex;font-size: 90%;flex-direction: row;align-items: baseline;border-top: none;padding-top: 0;"><span class="footnote-number" style="display: block;margin-right: 6px;min-width: 24px;">4</span><div class="footnote-content" style="font-size: 16px;line-height: 26px;display: block;"><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;min-width: 10px;"><em>Making It Funky: The Signifyin(g) Politics of George Clinton&#8217;s Parliafunkadelicment Thang, Ted Friedman</em><span>. (Duke University, 1993)</span></p></div></div><div class="footnote" data-component-name="FootnoteToDOMStatic" style="line-height: 26px;display: flex;font-size: 90%;flex-direction: row;align-items: baseline;margin-bottom: 0;border-top: none;padding-top: 0;"><span class="footnote-number" style="display: block;margin-right: 6px;min-width: 24px;">5</span><div class="footnote-content" style="font-size: 16px;line-height: 26px;display: block;"><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;min-width: 10px;">United States of America v. Live Nation Entertainment, Inc. (1:24-cv-03973) </p></div></div></div></div><div class="container-border" style="margin: 32px 0 0;width: 100%;box-sizing: border-box;border-top: 1px solid #d3d9d1;font-size: 16px;line-height: 26px;"></div><div class="typography" style="--image-offset-margin: -120px;font-size: 16px;line-height: 26px;"><div class="postscript" style="margin: 32px 0;font-size: 16px;line-height: 26px;"><div class="body markup" dir="auto" style="text-align: initial;font-size: 16px;line-height: 26px;width: 100%;word-break: break-word;margin-bottom: 16px;"><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;margin-top: 0;"><em>You&#8217;re a free subscriber to </em><a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly93d3cuYnVnZXllZGFuZHNoYW1lbGVzcy5jb20_dXRtX2NhbXBhaWduPWVtYWlsLWhvbWUmcj02OWc4biIsInAiOjE5MjkyMDc0NiwicyI6ODkxNjM4LCJmIjp0cnVlLCJ1IjoxMDUxODY0NywiaWF0IjoxNzc5NDc0OTY3LCJleHAiOjIwOTUwNTA5NjcsImlzcyI6InB1Yi0wIiwic3ViIjoibGluay1yZWRpcmVjdCJ9.3QGU1Rl0G6B2Iecc8axSDgeVcTAGHCJPpbRb5wYcdCk?" style="color: rgb(54,55,55);text-decoration: underline;">Bug-eyed and Shameless</a><em><span>. For the whole enchilada,&nbsp;</span><a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly93d3cuYnVnZXllZGFuZHNoYW1lbGVzcy5jb20vc3Vic2NyaWJlP3V0bV9zb3VyY2U9cG9zdCZ1dG1fY2FtcGFpZ249ZW1haWwtY2hlY2tvdXQmbmV4dD1odHRwcyUzQSUyRiUyRnd3dy5idWdleWVkYW5kc2hhbWVsZXNzLmNvbSUyRnAlMkZtdXNpYy1haS1jb21tZW5jZW1lbnQtc3BlZWNoZXMtcHN5b3Amcj02OWc4biZ0b2tlbj1leUoxYzJWeVgybGtJam94TURVeE9EWTBOeXdpYVdGMElqb3hOemM1TkRjME9UWTNMQ0psZUhBaU9qRTNPREl3TmpZNU5qY3NJbWx6Y3lJNkluQjFZaTA0T1RFMk16Z2lMQ0p6ZFdJaU9pSmphR1ZqYTI5MWRDSjkucVVWVllNQkxfVmw4R2pUSFVnNTBjcjhiM0Q4a3hHd0hObi1VX20tZmg5ayIsInAiOjE5MjkyMDc0NiwicyI6ODkxNjM4LCJmIjp0cnVlLCJ1IjoxMDUxODY0NywiaWF0IjoxNzc5NDc0OTY3LCJleHAiOjIwOTUwNTA5NjcsImlzcyI6InB1Yi0wIiwic3ViIjoibGluay1yZWRpcmVjdCJ9.z4m0uGt7R4qDynL3TpVKw9gEJC9Sg5z3x6EOw3ocubM?" style="color: rgb(54,55,55);text-decoration: underline;">become a paying subscriber</a><span>.</span></em></p><div class="subscribe-widget is-signed-up" data-component-name="SubscribeWidget" style="margin: 0 0 1em;direction: ltr;font-size: 16px;line-height: 26px;margin-bottom: 0;"><div class="pencraft pc-reset button-wrapper" style="text-decoration: unset;list-style: none;font-size: 16px;line-height: 26px;text-align: center;cursor: pointer;border-radius: 4px;"><a class="button subscribe-btn primary" href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly93d3cuYnVnZXllZGFuZHNoYW1lbGVzcy5jb20vc3Vic2NyaWJlP3V0bV9zb3VyY2U9cG9zdCZ1dG1fY2FtcGFpZ249ZW1haWwtY2hlY2tvdXQmbmV4dD1odHRwcyUzQSUyRiUyRnd3dy5idWdleWVkYW5kc2hhbWVsZXNzLmNvbSUyRnAlMkZtdXNpYy1haS1jb21tZW5jZW1lbnQtc3BlZWNoZXMtcHN5b3Amcj02OWc4biZ0b2tlbj1leUoxYzJWeVgybGtJam94TURVeE9EWTBOeXdpYVdGMElqb3hOemM1TkRjME9UWTNMQ0psZUhBaU9qRTNPREl3TmpZNU5qY3NJbWx6Y3lJNkluQjFZaTA0T1RFMk16Z2lMQ0p6ZFdJaU9pSmphR1ZqYTI5MWRDSjkucVVWVllNQkxfVmw4R2pUSFVnNTBjcjhiM0Q4a3hHd0hObi1VX20tZmg5ayIsInAiOjE5MjkyMDc0NiwicyI6ODkxNjM4LCJmIjp0cnVlLCJ1IjoxMDUxODY0NywiaWF0IjoxNzc5NDc0OTY3LCJleHAiOjIwOTUwNTA5NjcsImlzcyI6InB1Yi0wIiwic3ViIjoibGluay1yZWRpcmVjdCJ9.z4m0uGt7R4qDynL3TpVKw9gEJC9Sg5z3x6EOw3ocubM?&utm_medium=email&utm_source=subscribe-widget&utm_content=192920746" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;box-sizing: border-box;cursor: pointer;border: none;border-radius: 8px;font-size: 14px;line-height: 20px;font-weight: 600;text-align: center;opacity: 1;outline: none;white-space: nowrap;text-decoration: none !important;background-color: #000000;color: #ffffff !important;margin: 0 auto;padding: 12px 20px;height: auto;"><span style="color: #ffffff;text-decoration: none;">Upgrade to paid</span></a></div></div></div></div></div><table class="email-ufi-2-bottom" role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="border-top: 1px solid rgb(0,0,0,.1);border-bottom: 1px solid rgb(0,0,0,.1);min-width: 100%;"><tbody><tr height="16"><td height="16" style="font-size:0px;line-height:0;">&nbsp;</td></tr><tr><td><table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0" style="margin:0 auto;"><tbody><tr><td style="vertical-align:middle;"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="center"><a class="email-button-outline" href="https://substack.com/app-link/post?publication_id=891638&post_id=192920746&utm_source=substack&isFreemail=true&submitLike=true&token=eyJ1c2VyX2lkIjoxMDUxODY0NywicG9zdF9pZCI6MTkyOTIwNzQ2LCJyZWFjdGlvbiI6IuKdpCIsImlhdCI6MTc3OTQ3NDk2NywiZXhwIjoxNzgyMDY2OTY3LCJpc3MiOiJwdWItODkxNjM4Iiwic3ViIjoicmVhY3Rpb24ifQ.o07l5DMIpK6iJ-iZ5EQPjV9NtcnzyfxkT6K0jaZx9F8&utm_medium=email&utm_campaign=email-reaction&r=69g8n" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;font-weight: 500;border: 1px solid rgb(0,0,0,.1);border-radius: 9999px;text-transform: uppercase;font-size: 12px;line-height: 12px;padding: 9px 14px;text-decoration: none;color: rgb(119,119,119);"><img class="icon" src="https://substackcdn.com/image/fetch/$s_!PeVs!,w_36,c_scale,f_png,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Ficon%2FLucideHeart%3Fv%3D4%26height%3D36%26fill%3Dnone%26stroke%3D%2523808080%26strokeWidth%3D2" width="18" height="18" style="margin-right: 8px;min-width: 18px;min-height: 18px;border: none;vertical-align: middle;max-width: 18px" alt=""><span class="email-button-text" style="vertical-align: middle;">Like</span></a></td></tr></tbody></table></td><td width="8" style="min-width:8px;"></td><td style="vertical-align:middle;"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="center"><a class="email-button-outline" href="https://substack.com/app-link/post?publication_id=891638&post_id=192920746&utm_source=substack&utm_medium=email&isFreemail=true&comments=true&token=eyJ1c2VyX2lkIjoxMDUxODY0NywicG9zdF9pZCI6MTkyOTIwNzQ2LCJpYXQiOjE3Nzk0NzQ5NjcsImV4cCI6MTc4MjA2Njk2NywiaXNzIjoicHViLTg5MTYzOCIsInN1YiI6InBvc3QtcmVhY3Rpb24ifQ.R_JlQCYpyN-OKc8MT287Srv8kV7rKeXTAMaPtnY1Y8g&r=69g8n&utm_campaign=email-half-magic-comments&action=post-comment&utm_source=substack&utm_medium=email" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;font-weight: 500;border: 1px solid rgb(0,0,0,.1);border-radius: 9999px;text-transform: uppercase;font-size: 12px;line-height: 12px;padding: 9px 14px;text-decoration: none;color: rgb(119,119,119);"><img class="icon" src="https://substackcdn.com/image/fetch/$s_!x1tS!,w_36,c_scale,f_png,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Ficon%2FLucideComments%3Fv%3D4%26height%3D36%26fill%3Dnone%26stroke%3D%2523808080%26strokeWidth%3D2" width="18" height="18" style="margin-right: 8px;min-width: 18px;min-height: 18px;border: none;vertical-align: middle;max-width: 18px" alt=""><span class="email-button-text" style="vertical-align: middle;">Comment</span></a></td></tr></tbody></table></td><td width="8" style="min-width:8px;"></td><td style="vertical-align:middle;"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="center"><a class="email-button-outline" href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly9vcGVuLnN1YnN0YWNrLmNvbS9wdWIvanVzdGlubGluZy9wL211c2ljLWFpLWNvbW1lbmNlbWVudC1zcGVlY2hlcy1wc3lvcD91dG1fc291cmNlPXN1YnN0YWNrJnV0bV9tZWRpdW09ZW1haWwmdXRtX2NhbXBhaWduPWVtYWlsLXJlc3RhY2stY29tbWVudCZhY3Rpb249cmVzdGFjay1jb21tZW50JnI9NjlnOG4mdG9rZW49ZXlKMWMyVnlYMmxrSWpveE1EVXhPRFkwTnl3aWNHOXpkRjlwWkNJNk1Ua3lPVEl3TnpRMkxDSnBZWFFpT2pFM056azBOelE1Tmpjc0ltVjRjQ0k2TVRjNE1qQTJOamsyTnl3aWFYTnpJam9pY0hWaUxUZzVNVFl6T0NJc0luTjFZaUk2SW5CdmMzUXRjbVZoWTNScGIyNGlmUS5SX0psUUNZcHlOLU9LYzhNVDI4N1NydjhrVjdyS2VYVEFNYVB0blkxWThnIiwicCI6MTkyOTIwNzQ2LCJzIjo4OTE2MzgsImYiOnRydWUsInUiOjEwNTE4NjQ3LCJpYXQiOjE3Nzk0NzQ5NjcsImV4cCI6MjA5NTA1MDk2NywiaXNzIjoicHViLTAiLCJzdWIiOiJsaW5rLXJlZGlyZWN0In0.rEElgs5ZS_PA3enu_bkTP5LgxNQgg3mvgGtths1Pwlk?&utm_source=substack&utm_medium=email" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;font-weight: 500;border: 1px solid rgb(0,0,0,.1);border-radius: 9999px;text-transform: uppercase;font-size: 12px;line-height: 12px;padding: 9px 14px;text-decoration: none;color: rgb(119,119,119);"><img class="icon" src="https://substackcdn.com/image/fetch/$s_!ubXF!,w_36,c_scale,f_png,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Ficon%2Fnotes__NoteRestackIcon%3Fv%3D4%26height%3D36%26fill%3Dnone%26stroke%3D%2523808080%26strokeWidth%3D2%26strokeLinecap%3Dround%26strokeLinejoin%3Dround" width="18" height="18" alt="" style="margin-right: 8px;min-width: 18px;min-height: 18px;max-width: 550px;border: none !important;vertical-align: middle;"><span class="email-button-text" style="vertical-align: middle;">Restack</span></a></td></tr></tbody></table></td></tr></tbody></table></td><td align="right"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr></tr></tbody></table></td></tr></tbody></table></td></tr><tr height="16"><td height="16" style="font-size:0px;line-height:0;">&nbsp;</td></tr></tbody></table><div class="footer footer-ZM59BM" style="color: rgb(119,119,119);text-align: center;font-size: 16px;line-height: 26px;padding: 24px0;"><div style="font-size: 16px;line-height: 26px;padding-bottom: 24px"><p class="pencraft pc-reset color-secondary-ls1g8s size-12-mmZ61m reset-IxiVJZ small meta-B2bqa5" style="list-style: none;font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';padding-bottom: 0;font-size: 12px;line-height: 16px;margin: 0;color: rgb(119,119,119);text-decoration: unset;">&#169; 2026 <span>Justin Ling</span><br>Montr&#233;al, Canada <br><a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly93d3cuYnVnZXllZGFuZHNoYW1lbGVzcy5jb20vYWN0aW9uL2Rpc2FibGVfZW1haWw_dG9rZW49ZXlKMWMyVnlYMmxrSWpveE1EVXhPRFkwTnl3aWNHOXpkRjlwWkNJNk1Ua3lPVEl3TnpRMkxDSnBZWFFpT2pFM056azBOelE1Tmpjc0ltVjRjQ0k2TVRneE1UQXhNRGsyTnl3aWFYTnpJam9pY0hWaUxUZzVNVFl6T0NJc0luTjFZaUk2SW1ScGMyRmliR1ZmWlcxaGFXd2lmUS5zZ0MyQnlFUlprWDlZeW5JOWpvWG9XZGdnV3RPZGdmeGdacDdkZ29JN0dRIiwicCI6MTkyOTIwNzQ2LCJzIjo4OTE2MzgsImYiOnRydWUsInUiOjEwNTE4NjQ3LCJpYXQiOjE3Nzk0NzQ5NjcsImV4cCI6MjA5NTA1MDk2NywiaXNzIjoicHViLTAiLCJzdWIiOiJsaW5rLXJlZGlyZWN0In0.OsL9-b8FuShur1MkLwYymYbWx6WiP5pIEwTwE8XtrR0?" style="text-decoration: underline;color: rgb(119,119,119);"><span style="color: rgb(119,119,119);text-decoration: underline;">Unsubscribe</span></a></p></div><p class="footerSection-EHR0jG small powered-by-substack" style="padding: 0 24px;font-size: 12px;line-height: 20px;margin: 0;color: rgb(119,119,119);font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';padding-bottom: 0;margin-top: 0;"><a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly9zdWJzdGFjay5jb20vc2lnbnVwP3V0bV9zb3VyY2U9c3Vic3RhY2smdXRtX21lZGl1bT1lbWFpbCZ1dG1fY29udGVudD1mb290ZXImdXRtX2NhbXBhaWduPWF1dG9maWxsZWQtZm9vdGVyJmZyZWVTaWdudXBFbWFpbD1iZW5vaXRjQGdtYWlsLmNvbSZyPTY5ZzhuIiwicCI6MTkyOTIwNzQ2LCJzIjo4OTE2MzgsImYiOnRydWUsInUiOjEwNTE4NjQ3LCJpYXQiOjE3Nzk0NzQ5NjcsImV4cCI6MjA5NTA1MDk2NywiaXNzIjoicHViLTAiLCJzdWIiOiJsaW5rLXJlZGlyZWN0In0.0qkN8Mh2iVTgJhHqCPGDxYIM8NDjGEFlKl89vgN3s84?" style="color: rgb(119,119,119);text-decoration: none;display: inline-block;margin: 0 4px;"><img src="https://substackcdn.com/image/fetch/$s_!LkrL!,w_270,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Fimg%2Femail%2Fpublish-button%402x.png" srcset="https://substackcdn.com/image/fetch/$s_!wgfj!,w_135,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Fimg%2Femail%2Fpublish-button.png, https://substackcdn.com/image/fetch/$s_!LkrL!,w_270,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Fimg%2Femail%2Fpublish-button%402x.png 2x, https://substackcdn.com/image/fetch/$s_!KjtY!,w_405,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Fimg%2Femail%2Fpublish-button%403x.png 3x" width="135" alt="Start writing" height="40" style="max-width: 550px;border: none !important;vertical-align: middle;"></a></p></div></div></td><td></td></tr></tbody></table><img src="https://eotrx.substackcdn.com/o/04f29bac523c0f42/p.gif?token=eyJtIjoiPDIwMjYwNTIyMTgzNDU3LjMuOTkxNmNjYjE2NmU0ZGIwY0BtZzIuc3Vic3RhY2suY29tPiIsInUiOjEwNTE4NjQ3LCJyIjoiYmVub2l0Y0BnbWFpbC5jb20iLCJkIjoibWcyLnN1YnN0YWNrLmNvbSIsInAiOjE5MjkyMDc0NiwidCI6Im5ld3NsZXR0ZXIiLCJhIjoiZXZlcnlvbmUiLCJzIjo4OTE2MzgsImMiOiJwb3N0IiwiZiI6dHJ1ZSwicG9zaXRpb24iOiJib3R0b20iLCJpYXQiOjE3Nzk0NzQ5NjcsImV4cCI6MTc4MjA2Njk2NywiaXNzIjoicHViLTAiLCJzdWIiOiJlbyJ9.BVwXnWL5MDaJF2MAthIrh8WxVvU1lbVp0MsFwrbecXM" alt="" width="1" height="1" border="0" style="height:1px !important;width:1px !important;border-width:0 !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:0 !important;margin-left:0 !important;padding-top:0 !important;padding-bottom:0 !important;padding-right:0 !important;padding-left:0 !important;"/><img width="1" height="1" alt="" src="https://email.mg2.substack.com/o/eJxE0FuK7CAQxvHVHB-DGq8PriV4qeQ4E7XRsofsfkh3w7x-BX9-VPQIR-uXe7SBJDmRmJGGgGNaW6GFVYZA8fncDqjQPULaPP5dtTCc_Hewe7tbKqXmu5JRUrDSUGmMgFWyXZHsOOWKSs6ZWYXUy7pYy1SMgSkFIgUa_wlaDr6MGQb6-L3EVkge297hBXDYJ5CbufmZMtQIDp7Qr1Y_c06OWW451UK9F7we4Cr8jBMQoZPHDFtspcya8dqg-nBC-oRnOHP0mFu9Q8YytRrSXYDaMt6441a8VGOG1IrP1X3NgbmeuR4E3y-cA_pLQiUzSmjydPw3AAD__7Rddds"></body></html></body></html>
