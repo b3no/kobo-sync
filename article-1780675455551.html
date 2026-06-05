@@ -1,0 +1,787 @@
+<html><head><meta name="robots" content="noindex"><title>Scrapping the SAT. Plus. . .</title></head><body><html lang="en" dir="ltr" style="scrollbar-width: thin;scrollbar-color: rgb(219,219,219)rgb(255,255,255);"><head><meta charset="utf-8"><title>Scrapping the SAT. Plus. . .</title><style>
+@media (max-width: 1024px) {
+  .typography .pullquote-align-left,
+  .typography.editor .pullquote-align-left,
+  .typography .pullquote-align-right,
+  .typography.editor .pullquote-align-right,
+  .typography .pullquote-align-wide,
+  .typography.editor .pullquote-align-wide,
+  .typography .pullquote-align-center,
+  .typography.editor .pullquote-align-center {
+    float: none;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .typography .markup table.image-wrapper img,
+  .typography.editor .markup table.image-wrapper img,
+  .typography .markup table.kindle-wrapper img,
+  .typography.editor .markup table.kindle-wrapper img {
+    max-width: 550px;
+  }
+}
+@media (min-width: 1024px) {
+  .typography:not(:has(#toc)) .captioned-image-container figure:has(> a.image2-offset-left),
+  .typography.editor:not(:has(#toc)) .captioned-image-container figure:has(> a.image2-offset-left) {
+    margin-left: var(--image-offset-margin);
+  }
+  .typography:not(:has(#toc)) .captioned-image-container figure:has(> a.image2-offset-right),
+  .typography.editor:not(:has(#toc)) .captioned-image-container figure:has(> a.image2-offset-right) {
+    margin-right: var(--image-offset-margin);
+  }
+}
+@media (min-width: 1300px) {
+  .typography .captioned-image-container figure:has(> a.image2-offset-left),
+  .typography.editor .captioned-image-container figure:has(> a.image2-offset-left) {
+    margin-left: var(--image-offset-margin);
+  }
+  .typography .captioned-image-container figure:has(> a.image2-offset-right),
+  .typography.editor .captioned-image-container figure:has(> a.image2-offset-right) {
+    margin-right: var(--image-offset-margin);
+  }
+}
+@media (max-width: 1024px) {
+  .typography,
+  .typography.editor {
+    /* Disable offset on mobile/tablet */
+  }
+  .typography .captioned-image-container figure:has(> a.image2-align-left),
+  .typography.editor .captioned-image-container figure:has(> a.image2-align-left),
+  .typography .captioned-image-container figure:has(> a.image2-align-right),
+  .typography.editor .captioned-image-container figure:has(> a.image2-align-right) {
+    float: none;
+    margin: 1em auto;
+    max-width: 100%;
+    width: auto;
+    padding: 0;
+  }
+  .typography .captioned-image-container figure:has(> a.image2-align-left.thefp),
+  .typography.editor .captioned-image-container figure:has(> a.image2-align-left.thefp),
+  .typography .captioned-image-container figure:has(> a.image2-align-right.thefp),
+  .typography.editor .captioned-image-container figure:has(> a.image2-align-right.thefp) {
+    margin: 1em auto;
+  }
+  .typography .captioned-image-container figure:has(> a.image2-offset-left),
+  .typography.editor .captioned-image-container figure:has(> a.image2-offset-left),
+  .typography .captioned-image-container figure:has(> a.image2-offset-right),
+  .typography.editor .captioned-image-container figure:has(> a.image2-offset-right) {
+    margin: 1em auto;
+  }
+  .typography .captioned-image-container figure:has(> a.image2-align-left) .image2-inset,
+  .typography.editor .captioned-image-container figure:has(> a.image2-align-left) .image2-inset,
+  .typography .captioned-image-container figure:has(> a.image2-align-right) .image2-inset,
+  .typography.editor .captioned-image-container figure:has(> a.image2-align-right) .image2-inset {
+    display: block;
+    justify-content: initial;
+  }
+}
+@media (max-width: 768px) {
+  .typography .markup div.sponsorship-campaign-embed,
+  .typography.editor .markup div.sponsorship-campaign-embed {
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+  .typography .markup div.sponsorship-campaign-embed:first-child,
+  .typography.editor .markup div.sponsorship-campaign-embed:first-child {
+    margin-top: 0px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .typography .markup div.youtube-overlay,
+  .typography.editor .markup div.youtube-overlay,
+  .typography .markup div.vimeo-overlay,
+  .typography.editor .markup div.vimeo-overlay {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 370px) {
+  .typography .markup div.tiktok-wrap,
+  .typography.editor .markup div.tiktok-wrap {
+    width: calc(95vw - 32px);
+    height: calc((95vw - 32px - 2px) / 0.485714);
+  }
+}
+@media screen and (max-width: 650px) {
+  .typography .markup div.embedded-publication-wrap .embedded-publication.show-subscribe,
+  .typography.editor .markup div.embedded-publication-wrap .embedded-publication.show-subscribe {
+    padding: 24px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .typography .markup div.subscription-widget-wrap .subscription-widget.show-subscribe,
+  .typography.editor .markup div.subscription-widget-wrap .subscription-widget.show-subscribe,
+  .typography .markup div.subscription-widget-wrap-editor .subscription-widget.show-subscribe,
+  .typography.editor .markup div.subscription-widget-wrap-editor .subscription-widget.show-subscribe,
+  .typography .markup div.captioned-button-wrap .subscription-widget.show-subscribe,
+  .typography.editor .markup div.captioned-button-wrap .subscription-widget.show-subscribe {
+    padding: 0px 24px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .typography .markup div.subscription-widget-wrap .subscription-widget.show-subscribe .subscription-widget-subscribe .button,
+  .typography.editor .markup div.subscription-widget-wrap .subscription-widget.show-subscribe .subscription-widget-subscribe .button,
+  .typography .markup div.subscription-widget-wrap-editor .subscription-widget.show-subscribe .subscription-widget-subscribe .button,
+  .typography.editor .markup div.subscription-widget-wrap-editor .subscription-widget.show-subscribe .subscription-widget-subscribe .button,
+  .typography .markup div.captioned-button-wrap .subscription-widget.show-subscribe .subscription-widget-subscribe .button,
+  .typography.editor .markup div.captioned-button-wrap .subscription-widget.show-subscribe .subscription-widget-subscribe .button {
+    padding: 10px 12px;
+    min-width: 110px;
+  }
+}
+@media (max-width: 650px) {
+  .typography .markup .twitter-embed,
+  .typography.editor .markup .twitter-embed,
+  .typography .markup .tweet,
+  .typography.editor .markup .tweet {
+    padding: 12px;
+  }
+}
+@media (max-width: 650px) {
+  .typography .markup .twitter-embed .tweet-text,
+  .typography.editor .markup .twitter-embed .tweet-text,
+  .typography .markup .tweet .tweet-text,
+  .typography.editor .markup .tweet .tweet-text {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+@media (max-width: 650px) {
+  .typography .markup .twitter-embed .tweet-photos-container.two,
+  .typography.editor .markup .twitter-embed .tweet-photos-container.two,
+  .typography .markup .tweet .tweet-photos-container.two,
+  .typography.editor .markup .tweet .tweet-photos-container.two,
+  .typography .markup .twitter-embed .tweet-photos-container.three,
+  .typography.editor .markup .twitter-embed .tweet-photos-container.three,
+  .typography .markup .tweet .tweet-photos-container.three,
+  .typography.editor .markup .tweet .tweet-photos-container.three,
+  .typography .markup .twitter-embed .tweet-photos-container.four,
+  .typography.editor .markup .twitter-embed .tweet-photos-container.four,
+  .typography .markup .tweet .tweet-photos-container.four,
+  .typography.editor .markup .tweet .tweet-photos-container.four {
+    height: 200px;
+  }
+}
+@media (max-width: 650px) {
+  .typography .markup .twitter-embed a.expanded-link .expanded-link-img,
+  .typography.editor .markup .twitter-embed a.expanded-link .expanded-link-img,
+  .typography .markup .tweet a.expanded-link .expanded-link-img,
+  .typography.editor .markup .tweet a.expanded-link .expanded-link-img {
+    max-height: 180px;
+  }
+}
+@media (max-width: 650px) {
+  .typography .markup .twitter-embed a.expanded-link .expanded-link-description,
+  .typography.editor .markup .twitter-embed a.expanded-link .expanded-link-description,
+  .typography .markup .tweet a.expanded-link .expanded-link-description,
+  .typography.editor .markup .tweet a.expanded-link .expanded-link-description {
+    display: none;
+  }
+}
+@media screen and (max-width: 650px) {
+  .typography .markup .apple-podcast-container,
+  .typography.editor .markup .apple-podcast-container {
+    width: unset;
+  }
+}
+@media (max-width: 420px) {
+  .typography .markup .install-substack-app-embed img.install-substack-app-embed-img,
+  .typography.editor .markup .install-substack-app-embed img.install-substack-app-embed-img {
+    margin: 0 auto 16px auto;
+  }
+}
+@media (max-width: 420px) {
+  .typography .markup .install-substack-app-embed .install-substack-app-embed-text,
+  .typography.editor .markup .install-substack-app-embed .install-substack-app-embed-text {
+    margin: 0 0 12px 0;
+    max-width: 100%;
+    width: auto;
+    text-align: center;
+  }
+}
+@media (max-width: 420px) {
+  .typography .markup .install-substack-app-embed .install-substack-app-embed-link,
+  .typography.editor .markup .install-substack-app-embed .install-substack-app-embed-link {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 481px) {
+  .share-button-container {
+    height: 38px;
+  }
+}
+@media screen and (min-width: 481px) {
+  .share-button-container a.comment {
+    height: 38px;
+    line-height: 38px;
+    padding-right: 10px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .share-button-container .separator {
+    display: block;
+    margin: 0;
+    height: 8px;
+    border-left: none;
+  }
+}
+@media screen and (max-width: 480px) {
+  .share-button-container a.share.first img {
+    padding-left: 0;
+  }
+}
+@media screen and (min-width: 481px) {
+  .share-button-container a.mobile {
+    display: none !important;
+  }
+}
+@media screen and (min-width: 541px) {
+  .settings-add-pub-modal-wrapper .container .add-recommending-pub-modal-container {
+    padding: 36px;
+    height: 680px;
+  }
+}
+@media screen and (min-width: 541px) {
+  .settings-add-pub-modal-wrapper .container .add-recommending-pub-modal-container .footer {
+    position: absolute;
+    bottom: 36px;
+    margin: 0px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .header-anchor-parent {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .post {
+    padding: 16px 0 0 0;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post .post-header .post-label {
+    margin-top: 8px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post .post-header .meta-author-wrap.alternative-meta .meta-right-column .post-meta {
+    margin-top: 6px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post .footer-facepile-container {
+    height: 64px;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post .post-footer.use-separators {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post .post-footer.next-prev {
+    height: 64px;
+    justify-content: space-between;
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post-contributor-footer .post-contributor-bio-table {
+    display: block;
+  }
+  .post-contributor-footer .post-contributor-bio-table-row {
+    display: flex;
+    flex-direction: row;
+  }
+  .post-contributor-footer .post-contributor-bio-userhead-cell,
+  .post-contributor-footer .post-contributor-bio-body-cell {
+    display: block;
+  }
+  .post-contributor-footer .post-contributor-bio-body-cell {
+    flex-grow: 1;
+  }
+  .post-contributor-footer .post-contributor-bio-body-table {
+    display: block;
+  }
+  .post-contributor-footer .post-contributor-bio-body-table-row {
+    display: block;
+  }
+  .post-contributor-footer .post-contributor-bio-copy-cell,
+  .post-contributor-footer .post-contributor-bio-controls-cell {
+    display: block;
+  }
+  .post-contributor-footer .post-contributor-bio-copy-cell {
+    margin: 0 0 16px 0;
+  }
+  .post-contributor-footer .post-contributor-bio-controls-cell {
+    width: auto;
+  }
+  .post-contributor-footer .post-contributor-bio-controls {
+    margin: auto;
+  }
+  .post-contributor-footer .post-contributor-bio-controls .button.primary {
+    width: 100%;
+  }
+  .post-contributor-footer .post-contributor-bio-text {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .post-silhouette {
+    padding: 32px 0;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post-silhouette .post-silhouette-title {
+    margin-top: 10.44225025px;
+    height: 120px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post-silhouette .post-silhouette-meta {
+    width: 75%;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post-silhouette .post-silhouette-meta.with-byline-image {
+    margin: 20px 0;
+  }
+}
+@media screen and (max-width: 650px) {
+  .use-theme-bg .post-meta.alternative-meta .post-meta-item,
+  .post-meta.alternative-meta .post-meta-item {
+    padding-right: 16px;
+  }
+}
+@media screen and (max-width: 370px) {
+  .use-theme-bg .post-meta.alternative-meta .post-meta-item,
+  .post-meta.alternative-meta .post-meta-item {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .use-theme-bg .post-meta.alternative-meta .post-meta-item.guest-author-publication,
+  .post-meta.alternative-meta .post-meta-item.guest-author-publication {
+    display: none;
+  }
+}
+@media screen and (max-width: 370px) {
+  .post-meta .post-meta-item .post-meta-button {
+    height: 36px !important;
+    /* important to override in-line height style on emails */
+  }
+  .post-meta .post-meta-item .post-meta-button .meta-button-label {
+    display: none;
+  }
+  .post-meta .post-meta-item .post-meta-button > svg {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 370px) {
+  .post-meta .post-meta-item {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post .floating-subscribe-button {
+    bottom: 20px;
+    right: 20px;
+  }
+}
+@media (max-width: 1024px) {
+  body .pullquote-align-left,
+  body .pullquote-align-right,
+  body .pullquote-align-wide,
+  body .pullquote-align-center {
+    float: none;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  body .markup table.image-wrapper img,
+  body .markup table.kindle-wrapper img {
+    max-width: 550px;
+  }
+}
+@media (min-width: 1024px) {
+  body:not(:has(#toc)) .captioned-image-container figure:has(> a.image2-offset-left) {
+    margin-left: var(--image-offset-margin);
+  }
+  body:not(:has(#toc)) .captioned-image-container figure:has(> a.image2-offset-right) {
+    margin-right: var(--image-offset-margin);
+  }
+}
+@media (min-width: 1300px) {
+  body .captioned-image-container figure:has(> a.image2-offset-left) {
+    margin-left: var(--image-offset-margin);
+  }
+  body .captioned-image-container figure:has(> a.image2-offset-right) {
+    margin-right: var(--image-offset-margin);
+  }
+}
+@media (max-width: 1024px) {
+  body {
+    /* Disable offset on mobile/tablet */
+  }
+  body .captioned-image-container figure:has(> a.image2-align-left),
+  body .captioned-image-container figure:has(> a.image2-align-right) {
+    float: none;
+    margin: 1em auto;
+    max-width: 100%;
+    width: auto;
+    padding: 0;
+  }
+  body .captioned-image-container figure:has(> a.image2-align-left.thefp),
+  body .captioned-image-container figure:has(> a.image2-align-right.thefp) {
+    margin: 1em auto;
+  }
+  body .captioned-image-container figure:has(> a.image2-offset-left),
+  body .captioned-image-container figure:has(> a.image2-offset-right) {
+    margin: 1em auto;
+  }
+  body .captioned-image-container figure:has(> a.image2-align-left) .image2-inset,
+  body .captioned-image-container figure:has(> a.image2-align-right) .image2-inset {
+    display: block;
+    justify-content: initial;
+  }
+}
+@media (max-width: 768px) {
+  body .markup div.sponsorship-campaign-embed {
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+  body .markup div.sponsorship-campaign-embed:first-child {
+    margin-top: 0px;
+  }
+}
+@media screen and (max-width: 650px) {
+  body .markup div.youtube-overlay,
+  body .markup div.vimeo-overlay {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 370px) {
+  body .markup div.tiktok-wrap {
+    width: calc(95vw - 32px);
+    height: calc((95vw - 32px - 2px) / 0.485714);
+  }
+}
+@media screen and (max-width: 650px) {
+  body .markup div.embedded-publication-wrap .embedded-publication.show-subscribe {
+    padding: 24px;
+  }
+}
+@media screen and (max-width: 650px) {
+  body .markup div.subscription-widget-wrap .subscription-widget.show-subscribe,
+  body .markup div.subscription-widget-wrap-editor .subscription-widget.show-subscribe,
+  body .markup div.captioned-button-wrap .subscription-widget.show-subscribe {
+    padding: 0px 24px;
+  }
+}
+@media screen and (max-width: 650px) {
+  body .markup div.subscription-widget-wrap .subscription-widget.show-subscribe .subscription-widget-subscribe .button,
+  body .markup div.subscription-widget-wrap-editor .subscription-widget.show-subscribe .subscription-widget-subscribe .button,
+  body .markup div.captioned-button-wrap .subscription-widget.show-subscribe .subscription-widget-subscribe .button {
+    padding: 10px 12px;
+    min-width: 110px;
+  }
+}
+@media (max-width: 650px) {
+  body .markup .twitter-embed,
+  body .markup .tweet {
+    padding: 12px;
+  }
+}
+@media (max-width: 650px) {
+  body .markup .twitter-embed .tweet-text,
+  body .markup .tweet .tweet-text {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+@media (max-width: 650px) {
+  body .markup .twitter-embed .tweet-photos-container.two,
+  body .markup .tweet .tweet-photos-container.two,
+  body .markup .twitter-embed .tweet-photos-container.three,
+  body .markup .tweet .tweet-photos-container.three,
+  body .markup .twitter-embed .tweet-photos-container.four,
+  body .markup .tweet .tweet-photos-container.four {
+    height: 200px;
+  }
+}
+@media (max-width: 650px) {
+  body .markup .twitter-embed a.expanded-link .expanded-link-img,
+  body .markup .tweet a.expanded-link .expanded-link-img {
+    max-height: 180px;
+  }
+}
+@media (max-width: 650px) {
+  body .markup .twitter-embed a.expanded-link .expanded-link-description,
+  body .markup .tweet a.expanded-link .expanded-link-description {
+    display: none;
+  }
+}
+@media screen and (max-width: 650px) {
+  body .markup .apple-podcast-container {
+    width: unset;
+  }
+}
+@media (max-width: 420px) {
+  body .markup .install-substack-app-embed img.install-substack-app-embed-img {
+    margin: 0 auto 16px auto;
+  }
+}
+@media (max-width: 420px) {
+  body .markup .install-substack-app-embed .install-substack-app-embed-text {
+    margin: 0 0 12px 0;
+    max-width: 100%;
+    width: auto;
+    text-align: center;
+  }
+}
+@media (max-width: 420px) {
+  body .markup .install-substack-app-embed .install-substack-app-embed-link {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 500px) {
+  body .header a.logo {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+  }
+}
+@media screen and (max-width: 420px) {
+  body .subscription-receipt table:first-of-type .subscription-amount .subscription-discount {
+    width: 72px !important;
+  }
+}
+@media screen and (min-width: 481px) {
+  body .share-button-container {
+    height: auto;
+  }
+}
+@media screen and (max-width: 480px) {
+  body .share-button-container .separator {
+    display: block !important;
+    margin: 0 !important;
+    height: 8px !important;
+    border-left: none !important;
+  }
+}
+@media screen and (max-width: 650px) {
+  .digest .item .post-meta-item.audience {
+    display: none;
+  }
+}
+@media screen and (min-width: 500px) {
+  .digest-publication .logo img {
+    width: 42px;
+    height: 42px;
+    border-radius: 8px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .comments-page .container .comment-list .collapsed-reply {
+    margin-left: calc(10 + 32px - 24px);
+  }
+}
+@media screen and (max-width: 650px) {
+  .comment > .comment-list {
+    padding-left: 24px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .finish-magic-login-modal .modal-content .container {
+    padding: 24px 0;
+  }
+}
+@media (max-width: 650px) {
+  .reader2-text-b3 {
+    line-height: 24px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .reader2-text-h4 {
+    line-height: 24px;
+  }
+}
+@media screen and (min-width: 541px) {
+  .user-profile-modal {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .subscribe-widget form.form .sideBySideWrap button.rightButton {
+    padding: 10px 12px;
+  }
+}
+@media screen and (min-width: 541px) {
+  .pub-icon:hover .logo-hover,
+  .feed-item-icon:hover .logo-hover {
+    display: block;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post-ufi.single-full-width-button .post-ufi-button-wrapper {
+    width: 100%;
+    padding: 16px;
+  }
+  .post-ufi.single-full-width-button .post-ufi-button-wrapper:empty {
+    display: none;
+  }
+  .post-ufi.single-full-width-button .post-ufi-button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  .file-embed-wrapper {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .file-embed-wrapper-editor {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .file-embed-wrapper-editor:active {
+    padding: 0;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .file-embed-button.wide,
+  .file-embed-error-button.wide {
+    display: none;
+  }
+}
+@media only screen and (min-width: 630px) {
+  .file-embed-button.narrow,
+  .file-embed-error-button.narrow {
+    display: none;
+  }
+}
+@media screen and (min-width: 541px) {
+  .audio-player-wrapper .audio-player {
+    min-width: 500px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .audio-player-wrapper .audio-player .audio-player-progress {
+    border-left-width: 16px;
+    border-right-width: 16px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .audio-player-wrapper .audio-player .audio-player-progress .audio-player-progress-bar .audio-player-progress-bar-popup {
+    top: -54px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .audio-player-wrapper-fancy .audio-player .audio-player-progress {
+    border-left-width: 16px;
+    border-right-width: 16px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .audio-player-wrapper-fancy .audio-player .audio-player-progress .audio-player-progress-bar .audio-player-progress-bar-popup {
+    top: -54px;
+  }
+}
+@media (min-width: 250px) {
+  .audio-player-wrapper-fancy .audio-player {
+    padding: 32px;
+  }
+  .audio-player-wrapper-fancy .audio-player .btn-group {
+    display: flex;
+  }
+  .audio-player-wrapper-fancy .audio-player .btn-group .button:last-of-type {
+    display: block;
+  }
+}
+@media (min-width: 300px) {
+  .audio-player-wrapper-fancy .audio-player .btn-group {
+    display: block;
+  }
+  .audio-player-wrapper-fancy .audio-player .btn-group .button:first-of-type {
+    display: block;
+  }
+}
+@media (min-width: 350px) {
+  .audio-player-wrapper-fancy .audio-player .audio-player-substack-logo {
+    display: block;
+  }
+  .audio-player-wrapper-fancy .audio-player .audio-player-title {
+    margin-top: 16px;
+  }
+  .audio-player-wrapper-fancy .audio-player .audio-player-hero-image-container {
+    padding-top: 15%;
+    width: 15%;
+    display: block;
+  }
+  .audio-player-wrapper-fancy .audio-player .btn-group .button:first-of-type {
+    display: block;
+  }
+  .audio-player-wrapper-fancy .audio-player .audio-player-substack-logo {
+    display: block;
+  }
+}
+@media (min-width: 350px) {
+  .audio-player-wrapper-fancy .audio-player .audio-player-hero-image-container {
+    padding-top: 25%;
+    width: 25%;
+    display: block;
+  }
+  .audio-player-wrapper-fancy .audio-player .btn-group {
+    display: flex;
+  }
+  .audio-player-wrapper-fancy .audio-player .btn-group .button:first-of-type {
+    display: block;
+  }
+}
+@media (min-width: 400px) {
+  .audio-player-wrapper-fancy .audio-player .audio-player-hero-image-container {
+    padding-top: 40%;
+    width: 40%;
+  }
+}
+@media (max-width: 400px) {
+  .audio-player-wrapper-fancy .audio-player .btn-group {
+    margin-top: 12px;
+  }
+  .audio-player-wrapper-fancy .audio-player .btn-group .button {
+    font-size: 13px;
+    padding: 6px 12px;
+    height: auto;
+    margin-top: 10px;
+  }
+}
+@media (min-width: 600px) {
+  .audio-player-wrapper-fancy .audio-player .audio-player-hero-image-container {
+    padding-top: 55%;
+    width: 55%;
+  }
+}
+@media (max-width: 650px) {
+  .poll-editor-modal {
+    min-width: calc(100% - 20px);
+  }
+}
+@media (max-width: 750px) {
+  .poll-embed .poll-anchor-target .poll-anchor-copy-button {
+    left: 8px;
+    top: 45px;
+  }
+}</style></head><body class="email-body emailBody-UIBO_e" style="font-kerning: auto;--image-offset-margin: -120px;background-color: #fff!important;"><img src="https://eotrx.substackcdn.com/o/828ec2667ae7d28e/p.gif?token=eyJtIjoiPDIwMjYwNjA1MTQ1NjUxLjMuOTczZjNlMDU3NzhjOGEwZEBtZzIuc3Vic3RhY2suY29tPiIsInUiOjEwNTE4NjQ3LCJyIjoiYmVub2l0Y0BnbWFpbC5jb20iLCJkIjoibWcyLnN1YnN0YWNrLmNvbSIsInAiOjIwMDc2NTU4MSwidCI6Im5ld3NsZXR0ZXIiLCJhIjoiZXZlcnlvbmUiLCJzIjoyNjAzNDcsImMiOiJwb3N0IiwiZiI6dHJ1ZSwicG9zaXRpb24iOiJ0b3AiLCJpYXQiOjE3ODA2NzI4NDEsImV4cCI6MTc4MzI2NDg0MSwiaXNzIjoicHViLTAiLCJzdWIiOiJlbyJ9.WX-A4c-ZSLo79Qh4Q0d3bbgSNfsIExzP9yX8h_wiwTo" alt="" width="1" height="1" border="0" style="height:1px !important;width:1px !important;border-width:0 !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:0 !important;margin-left:0 !important;padding-top:0 !important;padding-bottom:0 !important;padding-right:0 !important;padding-left:0 !important;"/><div class="preview" style="display:none;font-size:1px;color:#333333;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;">When GLP-1s go wrong. Pastor Ezra Jin&#8217;s case takes a dark turn. Why John Steinbeck lives with us still. And more. </div><div class="preview" style="display:none;font-size:1px;color:#333333;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;">&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;</div><table class="email-body-container" role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td></td><td class="content" width="550"></td><td></td></tr><tr><td></td><td class="content email-body emailBody-UIBO_e" width="550" align="left" style="background-color: #fff!important;"><div style="font-size: 16px;line-height: 26px;max-width: 550px;width: 100%;margin: 0 auto;overflow-wrap: break-word;"><table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="text-align:center;padding-top:24px;padding-bottom:24px;vertical-align:middle;line-height:normal;"><span class="date-GASvv9" style="color: #363737;font-family: Courier,monospace;font-size: 14px;">Forwarded this email? </span><a class="subscribeLink-LFOh4u" href="https://substack.com/redirect/6f1d59ef-2e8f-48c4-b8cd-4c47f7817cbc?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="font-family: Courier,monospace;font-size: 14px;text-decoration: underline;color: #f2312c!important;">Subscribe for more</a></td></tr></tbody></table><div class="topBar-bch8Uv" style="border-top: 5px solid #161613;width: 100%;margin-bottom: 8px;font-size: 16px;line-height: 26px;"><table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="center"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="vertical-align:middle;"><table width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="text-align:center;"></td><td class="content" align="left" width="254" style="text-align:center;"><a target="_blank" href="https://substack.com/redirect/d823dcba-45a6-40dc-8c72-8e1c3a3d6630?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="width:auto;height:auto;"><img style="border: none;vertical-align: middle;width: auto;height: auto;max-width: 100%" alt="" width="254px" src="https://substackcdn.com/image/fetch/$s_!kpQG!,w_508,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Fimg%2Fthefp%2Ffree_press_email_logo.png"></a></td><td style="vertical-align: top;text-align: center"></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0" style="width:100%;"><tbody><tr><td><table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-top:24px;"><tbody><tr><td style="text-align:left;vertical-align:middle;padding-right:5px;border-right:solid 1px #BEBDB8;"><a class="sectionName-6rKltG" href="https://substack.com/redirect/f892c62e-1615-4e73-a887-6cf28644f00b?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="letter-spacing: -.2px;color: #363737;font-family: Arial,Helvetica,sans-serif;font-size: 20px;font-weight: 700;text-decoration: none;">The Front Page</a></td><td style="text-align:left;width:100px;padding-left:16px;vertical-align:top;line-height:normal;"><span class="date-GASvv9" style="color: #363737;font-family: Courier,monospace;font-size: 14px;">Friday, 06.05.2026</span></td><td style="text-align: center;width: 90px;border-left: solid 1px #BEBDB8;vertical-align: top;line-height: normal"><a class="viewLink-XgJG_c" href="https://substack.com/redirect/d3ffce8c-97e6-403c-aa68-4cd35ae04952?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: #363737;font-family: Courier,monospace;font-size: 14px;text-decoration: underline;">View in App</a></td></tr></tbody></table></td></tr><tr height="12"><td></td></tr><tr><td><div style="font-size: 16px;line-height: 26px;border-bottom: solid 1px #161613"></div></td></tr></tbody></table><table style="width:100%;border-bottom:solid 1px #bebdb8;"><tbody><tr><td></td><td style="width:210px;"><table><tbody><tr><td style="vertical-align:middle;"><img src="https://substackcdn.com/image/fetch/$s_!0uTx!,w_48,c_scale,f_png,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Ficon%2Fthefp__FPPlayIcon%3Fv%3D4%26height%3D48%26strokeWidth%3D3.6" width="24" height="24" style="border: none;vertical-align: middle;max-width: 24px" alt=""></td><td style="vertical-align:middle;padding-left:4px;"> <a class="voiceover-snY88W" href="https://substack.com/app-link/post?publication_id=260347&post_id=200765581&utm_source=podcast-email&play_audio=true&r=69g8n&utm_campaign=email-play-on-substack&token=eyJ1c2VyX2lkIjoxMDUxODY0NywicG9zdF9pZCI6MjAwNzY1NTgxLCJpYXQiOjE3ODA2NzI4NDEsImV4cCI6MTc4MzI2NDg0MSwiaXNzIjoicHViLTI2MDM0NyIsInN1YiI6InBvc3QtcmVhY3Rpb24ifQ.-BnaKcm-EIm-WEasL85PCMvkKKmPTOHyUnJ0rSuQneY" style="text-decoration: none;"><span style="letter-spacing: .7px;color: #363737;text-transform: uppercase;font-family: Arial,Helvetica,sans-serif;font-size: 14px;font-weight: 700;text-decoration: none;">Upgrade to Listen</span></a></td></tr></tbody></table></td><td style="vertical-align: top!important;"></td></tr></tbody></table></div><a href="https://substack.com/redirect/d35d455b-5075-4cd3-8158-cac96ec57822?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY"><img src="https://substackcdn.com/image/fetch/$s_!9DLJ!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Fimg%2Fthefp%2Fwhole-story-banner-3.png" style="border: none;vertical-align: middle;max-width: 100%;width: 550px" alt="Get the whole story. Start your 7 day free trial"></a><div class="post typography" dir="auto" style="--image-offset-margin: -120px;padding: 32px 0 0 0;font-size: 16px;line-height: 26px;"><div class="container-IKbzIm" style="-webkit-font-smoothing: antialiased;font-size: 16px;line-height: 26px;"><a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly93d3cudGhlZnAuY29tL3Avc2NyYXBwaW5nLXRoZS1zYXQtcGx1cz91dG1fY2FtcGFpZ249ZW1haWwtcG9zdCZyPTY5ZzhuJnRva2VuPWV5SjFjMlZ5WDJsa0lqb3hNRFV4T0RZME55d2ljRzl6ZEY5cFpDSTZNakF3TnpZMU5UZ3hMQ0pwWVhRaU9qRTNPREEyTnpJNE5ERXNJbVY0Y0NJNk1UYzRNekkyTkRnME1Td2lhWE56SWpvaWNIVmlMVEkyTURNME55SXNJbk4xWWlJNkluQnZjM1F0Y21WaFkzUnBiMjRpZlEuLUJuYUtjbS1FSW0tV0Vhc0w4NVBDTXZrS0ttUFRPSHlVbkowclN1UW5lWSIsInAiOjIwMDc2NTU4MSwicyI6MjYwMzQ3LCJmIjp0cnVlLCJ1IjoxMDUxODY0NywiaWF0IjoxNzgwNjcyODQxLCJleHAiOjIwOTYyNDg4NDEsImlzcyI6InB1Yi0wIiwic3ViIjoibGluay1yZWRpcmVjdCJ9._5VzhwehSl2iNuPEw8AW_V2TPoQF4-6--QXsT9IeNDc?" style="text-decoration:none;"><div class="title-qCjAfr" style="font-size: 36px;line-height: 40px;color: #161613;letter-spacing: -.36px;margin-bottom: 18px;font-family: Georgia,Times New Roman,Times,serif;font-style: normal;font-weight: 700;text-decoration: none;">Scrapping the SAT. Plus. . .</div></a><div class="subtitle-zCh3Nd" style="font-size: 20px;line-height: 27px;color: #161613;margin-bottom: 18px;font-family: Arial;font-style: normal;font-weight: 700;">When GLP-1s go wrong. Pastor Ezra Jin&#8217;s case takes a dark turn. Why John Steinbeck lives with us still. And more. </div><table width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="text-align:center;"></td><td class="content" align="left" width="1280" style="text-align:center;"><img width="550" style="border: none;vertical-align: middle;width: auto;height: auto;max-width: 100%" alt="" src="https://substackcdn.com/image/fetch/$s_!hmAb!,w_2200,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc0439854-7fd9-4c36-a02d-eea76496c88d_1024x688.jpeg"></td><td style="text-align:center;"></td></tr></tbody></table><div class="caption-t6DugJ" style="font-size: 10px;line-height: 17px;color: #161613;text-align: right;letter-spacing: 1px;text-transform: uppercase;margin-bottom: 18px;font-family: Arial,Helvetica,sans-serif;font-style: normal;font-weight: 400;">Jeremy Tate, founder of the Classic Learning Test, is seen at his company&#8217;s offices in Annapolis. (Mollye Miller for <em>The Free Press</em>)</div><table style="width:100%;margin-bottom:0;margin-top:24px;"><tbody><tr><td class="byline-pQwOZs" valign="middle" style="color: #f2312c;font-family: Georgia,Times New Roman,Times,serif;font-size: 24px;font-style: normal;font-weight: 700;line-height: 25px;">By <a href="https://substack.com/redirect/51f5bb3f-1096-4a7e-82ad-e8c134e16d07?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="text-decoration: none;color: #f2312c!important;">The Free Press</a></td></tr></tbody></table></div></div><div class="postBody-CO9gki" style="font-size: 16px;line-height: 26px;"><div class="post typography the-fp-post-email-wrapper" dir="auto" style="--image-offset-margin: -120px;padding: 32px 0 0 0;font-size: 16px;line-height: 26px;padding-top: 24px!important;"><div class="body markup" dir="auto" style="text-align: initial;font-size: 16px;line-height: 26px;width: 100%;word-break: break-word;margin-bottom: 16px;color: #161613;font-family: Georgia,Times New Roman,Times,serif;font-weight: 400;"><p style="margin: 0 0 20px 0;line-height: 26px;font-size: 16px;margin-top: 0;color: #161613;font-family: Georgia,Times New Roman,Times,serif;font-weight: 400;"><em><span>It&#8217;s Friday, June 5. This is </span><strong>The Front Page</strong><span>, your daily window into the world of </span><strong>The Free Press</strong><span>&#8212;and our take on the world at large. Today: John Steinbeck, great American. The Justice Department closes in on the human traffickers who exploited the border crisis. Ezra Jin&#8217;s family worries China is retaliating against the pastor Donald Trump said he would try to free.</span></em></p><p style="margin: 0 0 20px 0;line-height: 26px;font-size: 16px;color: #161613;font-family: Georgia,Times New Roman,Times,serif;font-weight: 400;"><em>But first: The SAT is back, but do we want it?</em></p><p style="margin: 0 0 20px 0;line-height: 26px;font-size: 16px;color: #161613;font-family: Georgia,Times New Roman,Times,serif;font-weight: 400;">Over the last decade, our college entrance exams have been steadily dumbed down.</p><p style="margin: 0 0 20px 0;line-height: 26px;font-size: 16px;color: #161613;font-family: Georgia,Times New Roman,Times,serif;font-weight: 400;">The longest reading passage on the SAT is only 150 words&#8212;and the shortest is 25, just a single sentence&#8212;because the College Board claims that the ability to read anything longer is &#8220;not an essential prerequisite for college.&#8221;</p><p style="margin: 0 0 20px 0;line-height: 26px;font-size: 16px;color: #161613;font-family: Georgia,Times New Roman,Times,serif;font-weight: 400;">But in 2020, a lot of colleges ditched the test because of Covid, deepening a trend that began not because the SAT was too easy&#8212;but because it was supposedly too hard for certain students: the ones who didn&#8217;t benefit from tip-top exam prep.</p><p style="margin: 0 0 20px 0;line-height: 26px;font-size: 16px;color: #161613;font-family: Georgia,Times New Roman,Times,serif;font-weight: 400;">The University of California was one of those places. As of this week, more than 1,400 faculty members have signed an open letter demanding the return of the SAT for STEM majors&#8212;after finding that 30 percent of incoming freshmen don&#8217;t have middle school&#8211;level math skills. In the last 18 months, plenty of other top universities have brought back the SAT, too.</p><p style="margin: 0 0 20px 0;line-height: 26px;font-size: 16px;color: #161613;font-family: Georgia,Times New Roman,Times,serif;font-weight: 400;">But what&#8217;s the point of reinstating a test that&#8217;s not tough? And could there be an alternative?</p><p style="margin: 0 0 20px 0;line-height: 26px;font-size: 16px;color: #161613;font-family: Georgia,Times New Roman,Times,serif;font-weight: 400;"><span>These are the questions at the heart of </span><strong>Maya Sulkin</strong><span>&#8217;s latest piece, which focuses on a man who is trying to make college entrance exams rigorous again.</span></p><p style="margin: 0 0 20px 0;line-height: 26px;font-size: 16px;color: #161613;font-family: Georgia,Times New Roman,Times,serif;font-weight: 400;">Jeremy Tate, who spent a decade teaching in public schools, is the inventor of the Classic Learning Test (CLT), which expects students to analyze long chunks of the Western canon and doesn&#8217;t let them use calculators. It&#8217;s been criticized for being too conservative and for being championed by the Trump administration&#8212;but Tate says this isn&#8217;t about politics.</p><p style="margin: 0 0 20px 0;line-height: 26px;font-size: 16px;color: #161613;font-family: Georgia,Times New Roman,Times,serif;font-weight: 400;">It&#8217;s about making sure students are ready for serious academic work.</p><p style="margin: 0 0 20px 0;line-height: 26px;font-size: 16px;color: #161613;font-family: Georgia,Times New Roman,Times,serif;font-weight: 400;"><em><strong>&#8212;Rick Brooks</strong></em></p><div class="digestPostEmbed-flwiST custom-css-email-digest-post-embed" data-component-name="DigestPostEmbedStatic" style="margin-bottom: 20px;padding: 0;position: relative;font-size: 16px;line-height: 26px;"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><div class="heading-UGv4c2" style="font-size: 14px;line-height: 1;color: #f2312c;letter-spacing: .1em;text-transform: uppercase;font-family: Arial,sans-serif;font-weight: 700;">Read</div></td></tr><tr height="4"><td></td></tr><tr><td><a class="link-jbVsqJ" href="https://substack.com/redirect/a0b1fe78-f49a-4f1c-8b3f-a081ac7d65a1?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="text-decoration: underline;color: #161613;font-family: Georgia,serif;font-weight: 700;line-height: 1.6;">The SAT Is Back. But Is There a Better Alternative?</a></td></tr><tr height="4"><td></td></tr><tr><td></td></tr></tbody></table></div><div class="captioned-image-container-static" style="font-size: 16px;line-height: 26px;margin: 32px auto;"><figure style="width: 100%;margin: 0 auto;"><table class="image-wrapper" width="100%" border="0" cellspacing="0" cellpadding="0" data-component-name="Image2ToDOMStatic" style="mso-padding-alt: 1em 0 1.6em;"><tbody><tr><td style="text-align: center;"></td><td class="content" align="left" width="1320" style="text-align: center;"><a class="image-link" target="_blank" href="https://substack.com/redirect/2b1f45ce-e837-40e0-82bf-16a32fb0b6c9?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="position: relative;flex-direction: column;align-items: center;padding: 0;width: auto;height: auto;border: none;text-decoration: none;display: block;margin: 0;"><img class="wide-image" data-attrs="{&quot;src&quot;:&quot;https://substack-post-media.s3.amazonaws.com/public/images/f9110b29-e59f-4c66-b3be-9e1478df39a0_1320x30.png&quot;,&quot;srcNoWatermark&quot;:null,&quot;fullscreen&quot;:null,&quot;imageSize&quot;:null,&quot;height&quot;:30,&quot;width&quot;:1320,&quot;resizeWidth&quot;:null,&quot;bytes&quot;:2844,&quot;alt&quot;:null,&quot;title&quot;:null,&quot;type&quot;:&quot;image/png&quot;,&quot;href&quot;:null,&quot;belowTheFold&quot;:true,&quot;topImage&quot;:false,&quot;internalRedirect&quot;:&quot;https://www.thefp.com/i/200765581?img=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff9110b29-e59f-4c66-b3be-9e1478df39a0_1320x30.png&quot;,&quot;isProcessing&quot;:false,&quot;align&quot;:null,&quot;offset&quot;:false}" alt="" width="550" height="12.5" src="https://substackcdn.com/image/fetch/$s_!unzu!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff9110b29-e59f-4c66-b3be-9e1478df39a0_1320x30.png" style="border: none !important;vertical-align: middle;display: block;-ms-interpolation-mode: bicubic;height: auto;margin-bottom: 0;width: auto !important;max-width: 100% !important;margin: 0 auto;"></a></td><td style="text-align: center;"></td></tr></tbody></table></figure></div><div class="digestPostEmbed-flwiST custom-css-email-digest-post-embed" data-component-name="DigestPostEmbedStatic" style="margin-bottom: 20px;padding: 0;position: relative;font-size: 16px;line-height: 26px;"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0" style="width:100%;"><tbody><tr><td><a class="link-AiRTNr" href="https://substack.com/redirect/74948fa5-fdc8-4ed9-8bb7-8c6f6d714ac6?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="text-decoration: none;color: #161613;"><div class="title-RKep04" style="line-height: 1.1;color: #161613;font-family: Arial,sans-serif;font-weight: 700;font-size: 24px">As Ezra Jin&#8217;s Case Gains Attention, His Family Worries China&#8217;s Retaliating</div></a></td></tr><tr height="16"><td></td></tr><tr><td><div class="meta-XhipYq" style="font-size: 14px;line-height: 1;color: #7d858b;letter-spacing: .1em;text-transform: uppercase;font-family: Arial,sans-serif;font-weight: 700;"><a class="inheritColor-eP1Bab" href="https://substack.com/profile/107533748-frannie-block" style="color: inherit;text-decoration: none;">Frannie Block</a></div></td></tr><tr height="16"><td></td></tr><tr><td><a href="https://substack.com/redirect/74948fa5-fdc8-4ed9-8bb7-8c6f6d714ac6?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="text-decoration: none;"><img alt="As Ezra Jin&#8217;s Case Gains Attention, His Family Worries China&#8217;s Retaliating" src="https://substackcdn.com/image/fetch/$s_!Ithv!,w_1100,c_fill,f_auto,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff3a562e8-ec6f-4249-9780-ed740afb0363_1024x683.jpeg" style="border: none;vertical-align: middle;display: block;-ms-interpolation-mode: bicubic;margin: 0 auto;width: auto;height: auto;max-width: 100%" width="550"></a></td></tr><tr height="16"><td></td></tr><tr><td><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><div style="font-size: 16px;line-height: 26px;">Three weeks ago, President Trump returned from his Beijing summit after making a request to Chinese leader Xi Jinping: Release Christian pastor Ezra Jin. On the flight home, the president said he was optimistic about Jin&#8217;s case. But since then, things have only gotten worse for the pastor, who has been imprisoned in China for eight months for practicing his faith. As Frannie Block reports today, he has been cut off from his lawyer and now has no connection to the outside world. Frannie has reported on Jin&#8217;s story throughout his ordeal. Read her latest on the dark turn it has taken this week.</div></td></tr><tr height="16"><td></td></tr><tr><td><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="vertical-align:middle;"><div class="button-fZfkQf" style="color: #f2312c;text-transform: uppercase;letter-spacing: .1em;font-family: Arial,sans-serif;font-weight: 700;font-size: 16px;line-height: 26px;"><a class="buttonMd-Lg5kyv" href="https://substack.com/redirect/74948fa5-fdc8-4ed9-8bb7-8c6f6d714ac6?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="font-size: 16px;color: #f2312c;text-decoration: none;">Read full story</a></div></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></div><div class="digestPostEmbed-flwiST custom-css-email-digest-post-embed" data-component-name="DigestPostEmbedStatic" style="margin-bottom: 20px;padding: 0;position: relative;font-size: 16px;line-height: 26px;"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0" style="width:100%;"><tbody><tr><td><a class="link-AiRTNr" href="https://substack.com/redirect/b4951160-fc52-4785-84e7-3fe15777dfeb?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="text-decoration: none;color: #161613;"><div class="title-RKep04" style="line-height: 1.1;color: #161613;font-family: Arial,sans-serif;font-weight: 700;font-size: 24px">My GLP-1 Nightmare </div></a></td></tr><tr height="16"><td></td></tr><tr><td><div class="meta-XhipYq" style="font-size: 14px;line-height: 1;color: #7d858b;letter-spacing: .1em;text-transform: uppercase;font-family: Arial,sans-serif;font-weight: 700;"><a class="inheritColor-eP1Bab" href="https://substack.com/profile/516846270-mayim-bialik" style="color: inherit;text-decoration: none;">Mayim Bialik</a></div></td></tr><tr height="16"><td></td></tr><tr><td><a href="https://substack.com/redirect/b4951160-fc52-4785-84e7-3fe15777dfeb?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="text-decoration: none;"><img alt="My GLP-1 Nightmare " src="https://substackcdn.com/image/fetch/$s_!jwHQ!,w_1100,c_fill,f_auto,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F1c482d4a-8e65-4eef-b930-aab791507db7_1024x683.jpeg" style="border: none;vertical-align: middle;display: block;-ms-interpolation-mode: bicubic;margin: 0 auto;width: auto;height: auto;max-width: 100%" width="550"></a></td></tr><tr height="16"><td></td></tr><tr><td><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><div style="font-size: 16px;line-height: 26px;">The common story about GLP-1s is that they&#8217;re a miracle drug. And it&#8217;s true: They are life-changing treatments for obesity that will save countless lives. But there&#8217;s another part of this tale: the people for whom GLP-1s can be a disaster. Actress and neuroscientist Mayim Bialik is one of them. She tells the story of how one shot of the drug was enough to wreck her body entirely.</div></td></tr><tr height="16"><td></td></tr><tr><td><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="vertical-align:middle;"><div class="button-fZfkQf" style="color: #f2312c;text-transform: uppercase;letter-spacing: .1em;font-family: Arial,sans-serif;font-weight: 700;font-size: 16px;line-height: 26px;"><a class="buttonMd-Lg5kyv" href="https://substack.com/redirect/b4951160-fc52-4785-84e7-3fe15777dfeb?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="font-size: 16px;color: #f2312c;text-decoration: none;">Read full story</a></div></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></div><div class="digestPostEmbed-flwiST custom-css-email-digest-post-embed" data-component-name="DigestPostEmbedStatic" style="margin-bottom: 20px;padding: 0;position: relative;font-size: 16px;line-height: 26px;"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0" style="width:100%;"><tbody><tr><td><a class="link-AiRTNr" href="https://substack.com/redirect/cea175fc-42c7-45f3-b85e-34d27db0b773?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="text-decoration: none;color: #161613;"><div class="title-RKep04" style="line-height: 1.1;color: #161613;font-family: Arial,sans-serif;font-weight: 700;font-size: 24px">EXCLUSIVE: Justice Department Closes In on Illegal Alien for Smuggling Unaccompanied Minors</div></a></td></tr><tr height="16"><td></td></tr><tr><td><div class="meta-XhipYq" style="font-size: 14px;line-height: 1;color: #7d858b;letter-spacing: .1em;text-transform: uppercase;font-family: Arial,sans-serif;font-weight: 700;"><a class="inheritColor-eP1Bab" href="https://substack.com/profile/91380507-audrey-fahlberg" style="color: inherit;text-decoration: none;">Audrey Fahlberg</a></div></td></tr><tr height="16"><td></td></tr><tr><td><a href="https://substack.com/redirect/cea175fc-42c7-45f3-b85e-34d27db0b773?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="text-decoration: none;"><img alt="EXCLUSIVE: Justice Department Closes In on Illegal Alien for Smuggling Unaccompanied Minors" src="https://substackcdn.com/image/fetch/$s_!tFr5!,w_1100,c_fill,f_auto,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F027fb0ca-f5f7-4122-949f-9905218ebdc1_1024x683.jpeg" style="border: none;vertical-align: middle;display: block;-ms-interpolation-mode: bicubic;margin: 0 auto;width: auto;height: auto;max-width: 100%" width="550"></a></td></tr><tr height="16"><td></td></tr><tr><td><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><div style="font-size: 16px;line-height: 26px;">In recent years, &#8220;The Free Press&#8221; has reported on how the Biden administration left migrant children at risk&#8212;and what is now being done to help unaccompanied minors preyed on by traffickers. Today, Audrey Fahlberg has a new scoop: The Justice Department is preparing criminal charges against an illegal alien from Guatemala for allegedly using fake identities to gain custody of unaccompanied migrant children. Read her report on the crisis in child trafficking and the Justice Department&#8217;s new plan to crack down on the most vicious offenders.<br></div></td></tr><tr height="16"><td></td></tr><tr><td><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="vertical-align:middle;"><div class="button-fZfkQf" style="color: #f2312c;text-transform: uppercase;letter-spacing: .1em;font-family: Arial,sans-serif;font-weight: 700;font-size: 16px;line-height: 26px;"><a class="buttonMd-Lg5kyv" href="https://substack.com/redirect/cea175fc-42c7-45f3-b85e-34d27db0b773?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="font-size: 16px;color: #f2312c;text-decoration: none;">Read full story</a></div></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></div><div class="captioned-image-container-static" style="font-size: 16px;line-height: 26px;margin: 32px auto;"><figure style="width: 100%;margin: 0 auto;"><table class="image-wrapper" width="100%" border="0" cellspacing="0" cellpadding="0" data-component-name="Image2ToDOMStatic" style="mso-padding-alt: 1em 0 1.6em;"><tbody><tr><td style="text-align: center;"></td><td class="content" align="left" width="1320" style="text-align: center;"><a class="image-link" target="_blank" href="https://substack.com/redirect/313b6fb7-4ca2-4e47-9d87-5f8c2d4b4d49?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="position: relative;flex-direction: column;align-items: center;padding: 0;width: auto;height: auto;border: none;text-decoration: none;display: block;margin: 0;"><img class="wide-image" data-attrs="{&quot;src&quot;:&quot;https://substack-post-media.s3.amazonaws.com/public/images/699fb86d-5655-4224-bbb1-6d425951a6bf_1320x30.png&quot;,&quot;srcNoWatermark&quot;:null,&quot;fullscreen&quot;:null,&quot;imageSize&quot;:null,&quot;height&quot;:30,&quot;width&quot;:1320,&quot;resizeWidth&quot;:null,&quot;bytes&quot;:2844,&quot;alt&quot;:null,&quot;title&quot;:null,&quot;type&quot;:&quot;image/png&quot;,&quot;href&quot;:null,&quot;belowTheFold&quot;:true,&quot;topImage&quot;:false,&quot;internalRedirect&quot;:&quot;https://www.thefp.com/i/200765581?img=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F699fb86d-5655-4224-bbb1-6d425951a6bf_1320x30.png&quot;,&quot;isProcessing&quot;:false,&quot;align&quot;:null,&quot;offset&quot;:false}" alt="" width="550" height="12.5" src="https://substackcdn.com/image/fetch/$s_!wHdW!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F699fb86d-5655-4224-bbb1-6d425951a6bf_1320x30.png" style="border: none !important;vertical-align: middle;display: block;-ms-interpolation-mode: bicubic;height: auto;margin-bottom: 0;width: auto !important;max-width: 100% !important;margin: 0 auto;"></a></td><td style="text-align: center;"></td></tr></tbody></table></figure></div><p style="margin: 0 0 20px 0;line-height: 26px;font-size: 16px;color: #161613;font-family: Georgia,Times New Roman,Times,serif;font-weight: 400;"><span>In the latest installment of our Great Americans series, </span><strong>Major Garrett</strong><span> writes about John Steinbeck. From </span><em><a href="https://substack.com/redirect/1ff2c75e-a780-4217-a738-acd8b121408e?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="text-decoration: underline;color: #005591;">Of Mice and Men</a></em><span> to </span><em><a href="https://substack.com/redirect/ee658497-553f-4a29-be0c-005b2514ff94?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="text-decoration: underline;color: #005591;">East of Eden</a></em><span> and beyond, his novels echo in our memory &#8220;like a favorite family hymn, a true American hymn,&#8221; writes Major.</span></p><div class="digestPostEmbed-flwiST custom-css-email-digest-post-embed" data-component-name="DigestPostEmbedStatic" style="margin-bottom: 20px;padding: 0;position: relative;font-size: 16px;line-height: 26px;"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><div class="heading-UGv4c2" style="font-size: 14px;line-height: 1;color: #f2312c;letter-spacing: .1em;text-transform: uppercase;font-family: Arial,sans-serif;font-weight: 700;">Read</div></td></tr><tr height="4"><td></td></tr><tr><td><a class="link-jbVsqJ" href="https://substack.com/redirect/bd236ef0-e198-40ba-aa7f-009c1b86c153?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="text-decoration: underline;color: #161613;font-family: Georgia,serif;font-weight: 700;line-height: 1.6;">Great Americans: John Steinbeck Lives with Us Still</a></td></tr><tr height="4"><td></td></tr><tr><td></td></tr></tbody></table></div><div class="captioned-image-container-static" style="font-size: 16px;line-height: 26px;margin: 32px auto;"><figure style="width: 100%;margin: 0 auto;"><table class="image-wrapper" width="100%" border="0" cellspacing="0" cellpadding="0" data-component-name="Image2ToDOMStatic" style="mso-padding-alt: 1em 0 1.6em;"><tbody><tr><td style="text-align: center;"></td><td class="content" align="left" width="1320" style="text-align: center;"><a class="image-link" target="_blank" href="https://substack.com/redirect/99d54bd4-cacc-4ee4-b5e2-93b26965b8cc?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="position: relative;flex-direction: column;align-items: center;padding: 0;width: auto;height: auto;border: none;text-decoration: none;display: block;margin: 0;"><img class="wide-image" data-attrs="{&quot;src&quot;:&quot;https://substack-post-media.s3.amazonaws.com/public/images/82f1904c-1f88-4208-b1d9-7e02d178dedf_1320x30.png&quot;,&quot;srcNoWatermark&quot;:null,&quot;fullscreen&quot;:null,&quot;imageSize&quot;:null,&quot;height&quot;:30,&quot;width&quot;:1320,&quot;resizeWidth&quot;:null,&quot;bytes&quot;:null,&quot;alt&quot;:null,&quot;title&quot;:null,&quot;type&quot;:null,&quot;href&quot;:null,&quot;belowTheFold&quot;:true,&quot;topImage&quot;:false,&quot;internalRedirect&quot;:null,&quot;isProcessing&quot;:false,&quot;align&quot;:null,&quot;offset&quot;:false}" alt="" width="550" height="12.5" src="https://substackcdn.com/image/fetch/$s_!yHE4!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F82f1904c-1f88-4208-b1d9-7e02d178dedf_1320x30.png" style="border: none !important;vertical-align: middle;display: block;-ms-interpolation-mode: bicubic;height: auto;margin-bottom: 0;width: auto !important;max-width: 100% !important;margin: 0 auto;"></a></td><td style="text-align: center;"></td></tr></tbody></table></figure></div><div class="captioned-image-container-static" style="font-size: 16px;line-height: 26px;margin: 32px auto;"><figure style="width: 100%;margin: 0 auto;"><table class="image-wrapper" width="100%" border="0" cellspacing="0" cellpadding="0" data-component-name="Image2ToDOMStatic" style="mso-padding-alt: 1em 0 1.6em;"><tbody><tr><td style="text-align: center;"></td><td class="content" align="left" width="1456" style="text-align: center;"><a class="image-link" target="_blank" href="https://substack.com/redirect/eddf9fd4-19c1-41e5-a426-0c8c135035fb?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="position: relative;flex-direction: column;align-items: center;padding: 0;width: auto;height: auto;border: none;text-decoration: none;display: block;margin: 0;"><img class="wide-image" data-attrs="{&quot;src&quot;:&quot;https://substack-post-media.s3.amazonaws.com/public/images/650b1eb1-195e-4614-b685-78f6eee5fd04_1656x503.png&quot;,&quot;srcNoWatermark&quot;:null,&quot;fullscreen&quot;:null,&quot;imageSize&quot;:null,&quot;height&quot;:442,&quot;width&quot;:1456,&quot;resizeWidth&quot;:null,&quot;bytes&quot;:76717,&quot;alt&quot;:&quot;&quot;,&quot;title&quot;:null,&quot;type&quot;:&quot;image/png&quot;,&quot;href&quot;:&quot;https://www.thefp.com/subscribe?utm_source=emai&amp;utm_campaign=front_page_banner&quot;,&quot;belowTheFold&quot;:true,&quot;topImage&quot;:true,&quot;internalRedirect&quot;:null,&quot;isProcessing&quot;:false,&quot;align&quot;:null,&quot;offset&quot;:false}" alt="" title="" width="550" height="166.96428571428572" src="https://substackcdn.com/image/fetch/$s_!OjiR!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F650b1eb1-195e-4614-b685-78f6eee5fd04_1656x503.png" style="border: none !important;vertical-align: middle;display: block;-ms-interpolation-mode: bicubic;height: auto;margin-bottom: 0;width: auto !important;max-width: 100% !important;margin: 0 auto;"></a></td><td style="text-align: center;"></td></tr></tbody></table></figure></div><h5 style="font-family: Georgia, 'Times New Roman', Baskerville, serif !important;font-weight: bold !important;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: antialiased;-webkit-appearance: optimizelegibility;-moz-appearance: optimizelegibility;appearance: optimizelegibility;margin: 1em 0 0.625em 0 !important;color: #F2312C !important;line-height: 1.16em !important;font-size: 24px !important;text-transform: uppercase !important;"><strong>EDITORS&#8217; PICKS</strong></h5><p style="margin: 0 0 20px 0;line-height: 26px;font-size: 16px;color: #161613;font-family: Georgia,Times New Roman,Times,serif;font-weight: 400;"><span>From presidential assassination attempts to lethal assaults on places of worship to an arson attack on a governor&#8217;s mansion, it&#8217;s clear we are living through an age of political violence. But how does a seemingly normal teenager get so radicalized that he plots a terrorist attack? That&#8217;s the question </span><strong>Maya Sulkin </strong><span>spent months investigating for her new piece. It&#8217;s about a 14-year-old boy who was isolated, perpetually online, and autistic. He was targeted by jihadist extremists on a chat-room app. Her piece tells the story of a profound danger facing some of the most vulnerable Americans and the dilemmas parents face after they discover their child has been radicalized.</span></p><div class="digestPostEmbed-flwiST custom-css-email-digest-post-embed" data-component-name="DigestPostEmbedStatic" style="margin-bottom: 20px;padding: 0;position: relative;font-size: 16px;line-height: 26px;"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><div class="heading-UGv4c2" style="font-size: 14px;line-height: 1;color: #f2312c;letter-spacing: .1em;text-transform: uppercase;font-family: Arial,sans-serif;font-weight: 700;">Read</div></td></tr><tr height="4"><td></td></tr><tr><td><a class="link-jbVsqJ" href="https://substack.com/redirect/fadfb5aa-4c63-482a-b9ca-e9b1e54b9d5e?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="text-decoration: underline;color: #161613;font-family: Georgia,serif;font-weight: 700;line-height: 1.6;">The Making of a Teenage Terror Suspect</a></td></tr><tr height="4"><td></td></tr><tr><td></td></tr></tbody></table></div><p style="margin: 0 0 20px 0;line-height: 26px;font-size: 16px;color: #161613;font-family: Georgia,Times New Roman,Times,serif;font-weight: 400;"><span>Last year, </span><strong>Frannie Block</strong><span> and </span><strong>Jay Solomon</strong><span> investigated the scale of Qatari efforts to influence American public life. </span><a href="https://substack.com/redirect/770f1225-0ddc-4759-a106-03e7d2fc637b?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="text-decoration: underline;color: #005591;">They found</a><span> nearly $100 billion of Qatari investments across key sectors, from education to defense&#8212;and exposed how Qatar sought to curry favor with the American public and politicians in both parties. Now, a fresh report suggests the spending is even bigger than anyone thought. Read Frannie&#8217;s story on the more than $400 billion in Qatari spending in the U.S. since 2010 and how it has changed the country.</span></p><div class="digestPostEmbed-flwiST custom-css-email-digest-post-embed" data-component-name="DigestPostEmbedStatic" style="margin-bottom: 20px;padding: 0;position: relative;font-size: 16px;line-height: 26px;"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><div class="heading-UGv4c2" style="font-size: 14px;line-height: 1;color: #f2312c;letter-spacing: .1em;text-transform: uppercase;font-family: Arial,sans-serif;font-weight: 700;">Read</div></td></tr><tr height="4"><td></td></tr><tr><td><a class="link-jbVsqJ" href="https://substack.com/redirect/35d92f90-1e59-4be6-a14d-0145c8eb7c4e?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="text-decoration: underline;color: #161613;font-family: Georgia,serif;font-weight: 700;line-height: 1.6;">Qatar&#8217;s Influence-Buying in America Is Even Worse Than We Thought</a></td></tr><tr height="4"><td></td></tr><tr><td></td></tr></tbody></table></div><p style="margin: 0 0 20px 0;line-height: 26px;font-size: 16px;color: #161613;font-family: Georgia,Times New Roman,Times,serif;font-weight: 400;"><span>Is artificial intelligence a blessing or a curse? It may be the defining question of the 21st century. The technology promises extraordinary benefits, from medical breakthroughs to unprecedented economic growth. But it also poses profound risks to how we live&#8212;and perhaps even to the future of humanity. As </span><strong>Niall Ferguson </strong><span>wrote this week, AI is turning out to be perhaps the most dangerous arms race in human history. And we have arrived at what may be its most dangerous point. To make matters worse, &#8220;the leadership of the competitors in this race is, to say the least, of mixed quality.&#8221; Read Niall to make sense of this important, precarious moment:</span></p><div class="digestPostEmbed-flwiST custom-css-email-digest-post-embed" data-component-name="DigestPostEmbedStatic" style="margin-bottom: 20px;padding: 0;position: relative;font-size: 16px;line-height: 26px;"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><div class="heading-UGv4c2" style="font-size: 14px;line-height: 1;color: #f2312c;letter-spacing: .1em;text-transform: uppercase;font-family: Arial,sans-serif;font-weight: 700;">Read</div></td></tr><tr height="4"><td></td></tr><tr><td><a class="link-jbVsqJ" href="https://substack.com/redirect/8a9154b1-a953-4113-81d8-8228b72c5d38?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="text-decoration: underline;color: #161613;font-family: Georgia,serif;font-weight: 700;line-height: 1.6;">Niall Ferguson: AI Is the Most Dangerous Arms Race in History</a></td></tr><tr height="4"><td></td></tr><tr><td></td></tr></tbody></table></div><p style="margin: 0 0 20px 0;line-height: 26px;font-size: 16px;color: #161613;font-family: Georgia,Times New Roman,Times,serif;font-weight: 400;"><span>And for more on the AI arms race, don&#8217;t miss the latest episode of </span><em>School of War</em><span>. </span><strong>Aaron MacLean</strong><span> sits down with former intelligence officer </span><strong>Anthony Vinci</strong><span>, who explains how AI has upended our assumptions about espionage and intelligence and unpacks the future of spy craft in the 21st century.</span></p><div class="digestPostEmbed-flwiST custom-css-email-digest-post-embed" data-component-name="DigestPostEmbedStatic" style="margin-bottom: 20px;padding: 0;position: relative;font-size: 16px;line-height: 26px;"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><div class="heading-UGv4c2" style="font-size: 14px;line-height: 1;color: #f2312c;letter-spacing: .1em;text-transform: uppercase;font-family: Arial,sans-serif;font-weight: 700;">Watch</div></td></tr><tr height="4"><td></td></tr><tr><td><a class="link-jbVsqJ" href="https://substack.com/redirect/7ee13070-9b16-4ca3-b998-5481075523b2?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="text-decoration: underline;color: #161613;font-family: Georgia,serif;font-weight: 700;line-height: 1.6;">The AI Arms Race: Can Our Intel Community Keep Up? With Anthony Vinci</a></td></tr><tr height="4"><td></td></tr><tr><td><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="vertical-align:middle;"><div class="button-fZfkQf" style="color: #f2312c;text-transform: uppercase;letter-spacing: .1em;font-family: Arial,sans-serif;font-weight: 700;font-size: 16px;line-height: 26px;"><a class="buttonSm-PaaWgJ" href="https://substack.com/redirect/7ee13070-9b16-4ca3-b998-5481075523b2?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="font-size: 14px;color: #f2312c;text-decoration: none;">Listen on</a></div></td><td width="8" style="min-width:8px;"></td><td style="vertical-align:middle;"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="vertical-align:middle;"><a class="iconLink-hKp_3x" href="https://substack.com/redirect/32b1e82c-f9ec-45d1-8b26-8124187180bb?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" rel="noreferrer noopener" target="_blank" style="line-height: 0;display: inline-block;text-decoration: none;"><img alt="Spotify" height="20" src="https://substackcdn.com/image/fetch/$s_!bhji!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Fimg%2Fthefp%2Fspotify-red.png" width="20" style="border: none !important;vertical-align: middle;display: block;-ms-interpolation-mode: bicubic;max-width: 100%;height: auto;margin: 0 auto;"></a></td><td width="12" style="min-width:12px;"></td><td style="vertical-align:middle;"><a class="iconLink-hKp_3x" href="https://substack.com/redirect/70e2b0c4-85b0-4cb7-ab94-820fe3399f73?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" rel="noreferrer noopener" target="_blank" style="line-height: 0;display: inline-block;text-decoration: none;"><img alt="Apple Podcasts" height="20" src="https://substackcdn.com/image/fetch/$s_!2UyE!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Fimg%2Fthefp%2Fapple-red.png" width="20" style="border: none !important;vertical-align: middle;display: block;-ms-interpolation-mode: bicubic;max-width: 100%;height: auto;margin: 0 auto;"></a></td><td width="12" style="min-width:12px;"></td><td style="vertical-align:middle;"><a class="iconLink-hKp_3x" href="https://substack.com/redirect/be114d5a-fe5e-4695-86b5-55556781d2e4?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" rel="noreferrer noopener" target="_blank" style="line-height: 0;display: inline-block;text-decoration: none;"><img alt="RSS" height="20" src="https://substackcdn.com/image/fetch/$s_!ri9I!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Fimg%2Fthefp%2Frss-red.png" width="20" style="border: none !important;vertical-align: middle;display: block;-ms-interpolation-mode: bicubic;max-width: 100%;height: auto;margin: 0 auto;"></a></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></div><p style="margin: 0 0 20px 0;line-height: 26px;font-size: 16px;color: #161613;font-family: Georgia,Times New Roman,Times,serif;font-weight: 400;"><span>How will the next generation prepare for this brave new AI-infused world? The answer, for some parents, is by spending their Saturdays vibe coding with their kids. </span><strong>Evan Gardner </strong><span>spoke to the people who think it&#8217;s a parenting prerogative to raise well-trained AI natives. Read his feature on the parents who have seen the future and want their kids to master it.</span></p><div class="digestPostEmbed-flwiST custom-css-email-digest-post-embed" data-component-name="DigestPostEmbedStatic" style="margin-bottom: 20px;padding: 0;position: relative;font-size: 16px;line-height: 26px;"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><div class="heading-UGv4c2" style="font-size: 14px;line-height: 1;color: #f2312c;letter-spacing: .1em;text-transform: uppercase;font-family: Arial,sans-serif;font-weight: 700;">Read</div></td></tr><tr height="4"><td></td></tr><tr><td><a class="link-jbVsqJ" href="https://substack.com/redirect/7b0a486d-c17b-4bb4-a66b-a910f59b2e50?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="text-decoration: underline;color: #161613;font-family: Georgia,serif;font-weight: 700;line-height: 1.6;">How to Raise &#8216;AI-Native&#8217; Kids</a></td></tr><tr height="4"><td></td></tr><tr><td></td></tr></tbody></table></div><p style="margin: 0 0 20px 0;line-height: 26px;font-size: 16px;color: #161613;font-family: Georgia,Times New Roman,Times,serif;font-weight: 400;"><span>Maine Senate candidate Graham Platner&#8217;s week keeps getting worse. The latest allegations against the scandal-ridden Democrat come courtesy of </span><em><a href="https://substack.com/redirect/ed970e05-13b3-481e-8578-5951c0d0b1b2?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="text-decoration: underline;color: #005591;">The New York Times</a></em><span>, who spoke to several of his ex-girlfriends, some of whom found his behavior &#8220;intimidating and disturbing.&#8221; The story has triggered a familiar-sounding conversation about who to believe and how to judge contested claims about a public figure&#8217;s personal life. But Platner himself is not exactly shy about making accusations of his own&#8212;including against people no longer here to defend themselves. In a recently unearthed podcast interview, Platner accused Chris Kyle, the Navy SEAL sniper made famous by the movie </span><em>American Sniper</em><span>, of targeting civilians in Iraq. It&#8217;s a serious claim, and one for which there is not a shred of evidence, says </span><strong>Leif Babin</strong><span>, Chris Kyle&#8217;s former platoon commander. Read his defense of his late friend:</span></p><div class="digestPostEmbed-flwiST custom-css-email-digest-post-embed" data-component-name="DigestPostEmbedStatic" style="margin-bottom: 20px;padding: 0;position: relative;font-size: 16px;line-height: 26px;"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><div class="heading-UGv4c2" style="font-size: 14px;line-height: 1;color: #f2312c;letter-spacing: .1em;text-transform: uppercase;font-family: Arial,sans-serif;font-weight: 700;">Read</div></td></tr><tr height="4"><td></td></tr><tr><td><a class="link-jbVsqJ" href="https://substack.com/redirect/a79a440e-b0f2-403a-9eee-75624fcea698?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="text-decoration: underline;color: #161613;font-family: Georgia,serif;font-weight: 700;line-height: 1.6;">How Do I Know Graham Platner Is Lying About the Iraq War? I Was There.</a></td></tr><tr height="4"><td></td></tr><tr><td></td></tr></tbody></table></div><p style="margin: 0 0 20px 0;line-height: 26px;font-size: 16px;color: #161613;font-family: Georgia,Times New Roman,Times,serif;font-weight: 400;"><span>Finally, if you&#8217;re looking for something to watch this weekend, </span><strong>Spencer Klavan </strong><span>wrote about the low-budget psychological thriller outdoing a </span><em>Star Wars</em><span> spin-off at the box office. </span><em>Backrooms</em><span> and its 20-year-old director are changing the scope of what the aging movie industry allows. Read his piece about why Hollywood may yet have hope, thanks to a generation of YouTubers.</span></p><div class="digestPostEmbed-flwiST custom-css-email-digest-post-embed" data-component-name="DigestPostEmbedStatic" style="margin-bottom: 20px;padding: 0;position: relative;font-size: 16px;line-height: 26px;"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><div class="heading-UGv4c2" style="font-size: 14px;line-height: 1;color: #f2312c;letter-spacing: .1em;text-transform: uppercase;font-family: Arial,sans-serif;font-weight: 700;">Read</div></td></tr><tr height="4"><td></td></tr><tr><td><a class="link-jbVsqJ" href="https://substack.com/redirect/72bbd978-b0af-4ee6-a89e-124742415134?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="text-decoration: underline;color: #161613;font-family: Georgia,serif;font-weight: 700;line-height: 1.6;">The Kids Who Grew Up Online Are Coming for Hollywood</a></td></tr><tr height="4"><td></td></tr><tr><td></td></tr></tbody></table></div><div class="captioned-image-container-static" style="font-size: 16px;line-height: 26px;margin: 32px auto;"><figure style="width: 100%;margin: 0 auto;"><table class="image-wrapper" width="100%" border="0" cellspacing="0" cellpadding="0" data-component-name="Image2ToDOMStatic" style="mso-padding-alt: 1em 0 1.6em;"><tbody><tr><td style="text-align: center;"></td><td class="content" align="left" width="1320" style="text-align: center;"><a class="image-link" target="_blank" href="https://substack.com/redirect/43a5e5c5-d09c-4bf6-9b5e-0d942eedec69?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="position: relative;flex-direction: column;align-items: center;padding: 0;width: auto;height: auto;border: none;text-decoration: none;display: block;margin: 0;"><img class="wide-image" data-attrs="{&quot;src&quot;:&quot;https://substack-post-media.s3.amazonaws.com/public/images/0c9bef45-0668-4d7a-851b-91b0baea072a_1320x30.png&quot;,&quot;srcNoWatermark&quot;:null,&quot;fullscreen&quot;:null,&quot;imageSize&quot;:null,&quot;height&quot;:30,&quot;width&quot;:1320,&quot;resizeWidth&quot;:null,&quot;bytes&quot;:2844,&quot;alt&quot;:null,&quot;title&quot;:null,&quot;type&quot;:&quot;image/png&quot;,&quot;href&quot;:null,&quot;belowTheFold&quot;:true,&quot;topImage&quot;:false,&quot;internalRedirect&quot;:&quot;https://www.thefp.com/i/200765581?img=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0c9bef45-0668-4d7a-851b-91b0baea072a_1320x30.png&quot;,&quot;isProcessing&quot;:false,&quot;align&quot;:null,&quot;offset&quot;:false}" alt="" width="550" height="12.5" src="https://substackcdn.com/image/fetch/$s_!6hGl!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0c9bef45-0668-4d7a-851b-91b0baea072a_1320x30.png" style="border: none !important;vertical-align: middle;display: block;-ms-interpolation-mode: bicubic;height: auto;margin-bottom: 0;width: auto !important;max-width: 100% !important;margin: 0 auto;"></a></td><td style="text-align: center;"></td></tr></tbody></table></figure></div><h6 style="font-family: 'SF Pro Display',-apple-system-headline,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight: bold;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: antialiased;-webkit-appearance: optimizelegibility;-moz-appearance: optimizelegibility;appearance: optimizelegibility;margin: 1em 0 0.625em 0;color: #161613;line-height: 1.16em;margin-bottom: 0;"><em>The Free Press earns a commission from any purchases made through all book links in this article.</em></h6></div></div></div><div class="container-LgmCa5" style="box-sizing: border-box;text-align: center;-webkit-font-smoothing: antialiased;width: 100%;margin-top: 40px;margin-bottom: 40px;font-size: 16px;line-height: 26px;"><div class="inner-P8HA0O" style="display: inline-block;font-size: 16px;line-height: 26px;"><table class="table-qfZUU8" role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0" style="text-align: center;"><tbody><tr><td style="vertical-align:middle;"><a class="link-FQ7r4t" href="https://substack.com/app-link/post?publication_id=260347&post_id=200765581&utm_source=substack&utm_medium=email&isFreemail=true&comments=true&token=eyJ1c2VyX2lkIjoxMDUxODY0NywicG9zdF9pZCI6MjAwNzY1NTgxLCJpYXQiOjE3ODA2NzI4NDEsImV4cCI6MTc4MzI2NDg0MSwiaXNzIjoicHViLTI2MDM0NyIsInN1YiI6InBvc3QtcmVhY3Rpb24ifQ.-BnaKcm-EIm-WEasL85PCMvkKKmPTOHyUnJ0rSuQneY&r=69g8n&utm_campaign=email-half-magic-comments&action=post-comment" style="text-decoration: none;"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="vertical-align:middle;"><img src="https://substackcdn.com/image/fetch/$s_!Y9UH!,w_48,c_scale,f_png,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Ficon%2Fthefp__FPCommentIcon%3Fv%3D4%26height%3D48%26strokeWidth%3D3.6" width="24" height="24" style="border: none;vertical-align: middle;max-width: 24px" alt=""></td><td width="8" style="min-width:8px;"></td><td style="vertical-align:middle;"><span class="button-BKJc5X" style="color: #161613;letter-spacing: .8px;font-family: Arial,Helvetica,sans-serif;font-size: 16px;font-weight: 700;line-height: 35px;">COMMENT</span></td></tr></tbody></table></a></td><td width="24" style="min-width:24px;"></td><td style="vertical-align:middle;"><a class="link-FQ7r4t" href="https://substack.com/app-link/post?publication_id=260347&post_id=200765581&utm_source=substack&isFreemail=true&submitLike=true&token=eyJ1c2VyX2lkIjoxMDUxODY0NywicG9zdF9pZCI6MjAwNzY1NTgxLCJyZWFjdGlvbiI6IuKdpCIsImlhdCI6MTc4MDY3Mjg0MSwiZXhwIjoxNzgzMjY0ODQxLCJpc3MiOiJwdWItMjYwMzQ3Iiwic3ViIjoicmVhY3Rpb24ifQ.rzVpCU-ty1dA8DgsqZ3dIXxO8J9zcwvUUdg4u2yFajo&utm_medium=email&utm_campaign=email-reaction&r=69g8n" style="text-decoration: none;"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="vertical-align:middle;"><img src="https://substackcdn.com/image/fetch/$s_!f0n6!,w_48,c_scale,f_png,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Ficon%2Fthefp__FPLikeIcon%3Fv%3D4%26height%3D48%26strokeWidth%3D3.6" width="24" height="24" style="border: none;vertical-align: middle;max-width: 24px" alt=""></td><td width="8" style="min-width:8px;"></td><td style="vertical-align:middle;"><span class="button-BKJc5X" style="color: #161613;letter-spacing: .8px;font-family: Arial,Helvetica,sans-serif;font-size: 16px;font-weight: 700;line-height: 35px;">LIKE</span></td></tr></tbody></table></a></td><td width="24" style="min-width:24px;"></td><td style="vertical-align:middle;"><a class="link-FQ7r4t" href="https://substack.com/app-link/post?publication_id=260347&post_id=200765581&utm_source=substack&utm_medium=email&utm_content=share&utm_campaign=email-share&action=share&triggerShare=true&isFreemail=true&r=69g8n&token=eyJ1c2VyX2lkIjoxMDUxODY0NywicG9zdF9pZCI6MjAwNzY1NTgxLCJpYXQiOjE3ODA2NzI4NDEsImV4cCI6MTc4MzI2NDg0MSwiaXNzIjoicHViLTI2MDM0NyIsInN1YiI6InBvc3QtcmVhY3Rpb24ifQ.-BnaKcm-EIm-WEasL85PCMvkKKmPTOHyUnJ0rSuQneY" style="text-decoration: none;"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="vertical-align:middle;"><img src="https://substackcdn.com/image/fetch/$s_!1qo6!,w_48,c_scale,f_png,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Ficon%2Fthefp__FPShareIcon%3Fv%3D4%26height%3D48%26strokeWidth%3D3.6" width="24" height="24" style="border: none;vertical-align: middle;max-width: 24px" alt=""></td><td width="8" style="min-width:8px;"></td><td style="vertical-align:middle;"><span class="button-BKJc5X" style="color: #161613;letter-spacing: .8px;font-family: Arial,Helvetica,sans-serif;font-size: 16px;font-weight: 700;line-height: 35px;">SHARE</span></td></tr></tbody></table></a></td></tr></tbody></table><a class="link-FQ7r4t pdfLink-O43fQP" href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly93d3cudGhlZnAuY29tL3Avc2NyYXBwaW5nLXRoZS1zYXQtcGx1cz91dG1fY2FtcGFpZ249ZW1haWwtcG9zdCZ0cmlnZ2VyUERGPXRydWUmdG9rZW49ZXlKMWMyVnlYMmxrSWpveE1EVXhPRFkwTnl3aWNHOXpkRjlwWkNJNk1qQXdOelkxTlRneExDSnBZWFFpT2pFM09EQTJOekk0TkRFc0ltVjRjQ0k2TVRjNE16STJORGcwTVN3aWFYTnpJam9pY0hWaUxUSTJNRE0wTnlJc0luTjFZaUk2SW5CdmMzUXRjbVZoWTNScGIyNGlmUS4tQm5hS2NtLUVJbS1XRWFzTDg1UENNdmtLS21QVE9IeVVuSjByU3VRbmVZIiwicCI6MjAwNzY1NTgxLCJzIjoyNjAzNDcsImYiOnRydWUsInUiOjEwNTE4NjQ3LCJpYXQiOjE3ODA2NzI4NDEsImV4cCI6MjA5NjI0ODg0MSwiaXNzIjoicHViLTAiLCJzdWIiOiJsaW5rLXJlZGlyZWN0In0.nJa0lb3wkGY8Nvs9-Xir7ZjR0hGxS7aIbHg5zDHDBLk?" style="padding-top: 8px;display: inline-block;text-decoration: none;"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="vertical-align:middle;"><img src="https://substackcdn.com/image/fetch/$s_!pc9m!,w_48,c_scale,f_png,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Ficon%2Fthefp__FPPdfIcon%3Fv%3D4%26height%3D48%26strokeWidth%3D3.6" width="24" height="24" style="border: none;vertical-align: middle;max-width: 24px" alt=""></td><td width="8" style="min-width:8px;"></td><td style="vertical-align:middle;"><span class="button-BKJc5X" style="color: #161613;letter-spacing: .8px;font-family: Arial,Helvetica,sans-serif;font-size: 16px;font-weight: 700;line-height: 35px;">DOWNLOAD AS A PDF</span></td></tr></tbody></table></a></div></div><div class="container-F5VZqk" style="box-sizing: border-box;text-align: center;-webkit-font-smoothing: antialiased;background-color: #005591;width: 100%;padding: 56px 24px;font-size: 16px;line-height: 26px;"><div class="header-dGmKjX" style="line-height: 26px;font-size: 32px;color: #fff;letter-spacing: -.32px;margin-bottom: 24px;font-family: Arial,Helvetica,sans-serif;font-weight: 700;">Become a paid subscriber</div><div class="body-XvWPC1" style="font-size: 18px;line-height: 30px;color: #fff;letter-spacing: -.18px;margin-bottom: 32px;font-family: Georgia,Times New Roman,Times,serif;"><span>Get access to our comments section, special columns like TGIF and Things Worth Remembering, tickets in advance to our live events, and more.</span></div><a class="button-AusVKb" href="https://substack.com/redirect/98b68227-7bb6-4da6-8be3-2118688e87a4?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: #161613;letter-spacing: .8px;text-align: center;background-color: #f6f4ef;padding: 18px;font-family: Arial,Helvetica,sans-serif;font-size: 16px;font-weight: 700;line-height: 35px;text-decoration: none;display: inline-block;">UPGRADE TODAY</a></div><div class="container-EBEkIP" style="font-size: 12px;line-height: 22px;box-sizing: border-box;-webkit-font-smoothing: antialiased;color: #fff;letter-spacing: .48px;text-align: center;background-color: #161613;padding: 24px;font-family: Arial,Helvetica,sans-serif;font-weight: 400;"><a href="https://substack.com/redirect/6cec35e0-372e-415e-b58b-a47239f63bd0?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY"><img src="https://substackcdn.com/image/fetch/$s_!JyGR!,w_508,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Fimg%2Fthefp%2Fapp-button-fp%402x.png" alt="Download on the App Store" style="max-width: 550px;border: none;vertical-align: middle;width: auto;height: 32px;margin-bottom: 10px"></a><br>&#169; 2026 The Free Press<br>548 Market Street PMB 72296, San Francisco, CA 94104<br><a class="link-mSkxWK" href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly93d3cudGhlZnAuY29tL2FjdGlvbi9kaXNhYmxlX2VtYWlsL2Rpc2FibGU_dG9rZW49ZXlKMWMyVnlYMmxrSWpveE1EVXhPRFkwTnl3aWNHOXpkRjlwWkNJNk1qQXdOelkxTlRneExDSnpaV04wYVc5dVgybGtJam94TmpjeU56Y3NJbWxoZENJNk1UYzRNRFkzTWpnME1Td2laWGh3SWpveE9ERXlNakE0T0RReExDSnBjM01pT2lKd2RXSXRNall3TXpRM0lpd2ljM1ZpSWpvaVpHbHpZV0pzWlY5bGJXRnBiQ0o5LnNxVVFuWlZpVUNCUTZnVjlGZXdIQkNLVEt2OUZ3NVBSWVE3N1NjNDZzREEmc2VjdGlvbl9pZD0xNjcyNzciLCJwIjoyMDA3NjU1ODEsInMiOjI2MDM0NywiZiI6dHJ1ZSwidSI6MTA1MTg2NDcsImlhdCI6MTc4MDY3Mjg0MSwiZXhwIjoyMDk2MjQ4ODQxLCJpc3MiOiJwdWItMCIsInN1YiI6ImxpbmstcmVkaXJlY3QifQ.U7JAsujCaTYk4DDOIQl5xWqUrIlhQxaSzJ4w5rX0yw8?" style="color: #fff;">Unsubscribe</a></div></div></td><td></td></tr></tbody></table><img src="https://eotrx.substackcdn.com/o/013214c8e7316f1e/p.gif?token=eyJtIjoiPDIwMjYwNjA1MTQ1NjUxLjMuOTczZjNlMDU3NzhjOGEwZEBtZzIuc3Vic3RhY2suY29tPiIsInUiOjEwNTE4NjQ3LCJyIjoiYmVub2l0Y0BnbWFpbC5jb20iLCJkIjoibWcyLnN1YnN0YWNrLmNvbSIsInAiOjIwMDc2NTU4MSwidCI6Im5ld3NsZXR0ZXIiLCJhIjoiZXZlcnlvbmUiLCJzIjoyNjAzNDcsImMiOiJwb3N0IiwiZiI6dHJ1ZSwicG9zaXRpb24iOiJib3R0b20iLCJpYXQiOjE3ODA2NzI4NDEsImV4cCI6MTc4MzI2NDg0MSwiaXNzIjoicHViLTAiLCJzdWIiOiJlbyJ9.ZXou_YRJDjYLuYlOIYtkmGSFk2-uk4Krh3wiHEsYzvU" alt="" width="1" height="1" border="0" style="height:1px !important;width:1px !important;border-width:0 !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:0 !important;margin-left:0 !important;padding-top:0 !important;padding-bottom:0 !important;padding-right:0 !important;padding-left:0 !important;"/><img width="1" height="1" alt="" src="https://email.mg2.substack.com/o/eJxE0EmOwyAQBdDThKVFYaYsOIvFUHGjNhBBkci3b2WQevtL9fX0oyfcWz_dvQ1iyckEVlmGDozl2ggrLcPi87HtWLF7wrR5-r8CWGA_7grSmpRkTNFCUJi4Mn5dbxC1CMJolp3gQnPNFUilFSzrcjXrbUWujLHRep4ukpddLGOGQT7-LrEVlsd26_gGOOoT2Yu5-Zky1ogOH9jPVr9xTk5wbrRSFj4JnXd0FZ_jQCLs7D7DFlsps2Y6N6w-HJi-xTMcOXrKrb6LNF-lYd0FrC1TvEi-vxRv1ZghteJzdcH3_MQ8BqPPgnNgf_0DV2C1NOzhxF8AAAD__zM3dUY"></body></html></body></html>
