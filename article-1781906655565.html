@@ -1,0 +1,787 @@
+<html><head><meta name="robots" content="noindex"><title>Understanding the Luddites in the age of AI</title></head><body><html lang="en" dir="ltr" style="scrollbar-width: thin;scrollbar-color: rgb(219,219,219)rgb(255,255,255);"><head><meta charset="utf-8"><title>Understanding the Luddites in the age of AI</title><style>
+@media (max-width: 1024px) {
+  .typography .pullquote-align-left,
+  .typography.editor .pullquote-align-left,
+  .typography .pullquote-align-right,
+  .typography.editor .pullquote-align-right,
+  .typography .pullquote-align-wide,
+  .typography.editor .pullquote-align-wide,
+  .typography .pullquote-align-center,
+  .typography.editor .pullquote-align-center {
+    float: none;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .typography .markup table.image-wrapper img,
+  .typography.editor .markup table.image-wrapper img,
+  .typography .markup table.kindle-wrapper img,
+  .typography.editor .markup table.kindle-wrapper img {
+    max-width: 550px;
+  }
+}
+@media (min-width: 1024px) {
+  .typography:not(:has(#toc)) .captioned-image-container figure:has(> a.image2-offset-left),
+  .typography.editor:not(:has(#toc)) .captioned-image-container figure:has(> a.image2-offset-left) {
+    margin-left: var(--image-offset-margin);
+  }
+  .typography:not(:has(#toc)) .captioned-image-container figure:has(> a.image2-offset-right),
+  .typography.editor:not(:has(#toc)) .captioned-image-container figure:has(> a.image2-offset-right) {
+    margin-right: var(--image-offset-margin);
+  }
+}
+@media (min-width: 1300px) {
+  .typography .captioned-image-container figure:has(> a.image2-offset-left),
+  .typography.editor .captioned-image-container figure:has(> a.image2-offset-left) {
+    margin-left: var(--image-offset-margin);
+  }
+  .typography .captioned-image-container figure:has(> a.image2-offset-right),
+  .typography.editor .captioned-image-container figure:has(> a.image2-offset-right) {
+    margin-right: var(--image-offset-margin);
+  }
+}
+@media (max-width: 1024px) {
+  .typography,
+  .typography.editor {
+    /* Disable offset on mobile/tablet */
+  }
+  .typography .captioned-image-container figure:has(> a.image2-align-left),
+  .typography.editor .captioned-image-container figure:has(> a.image2-align-left),
+  .typography .captioned-image-container figure:has(> a.image2-align-right),
+  .typography.editor .captioned-image-container figure:has(> a.image2-align-right) {
+    float: none;
+    margin: 1em auto;
+    max-width: 100%;
+    width: auto;
+    padding: 0;
+  }
+  .typography .captioned-image-container figure:has(> a.image2-align-left.thefp),
+  .typography.editor .captioned-image-container figure:has(> a.image2-align-left.thefp),
+  .typography .captioned-image-container figure:has(> a.image2-align-right.thefp),
+  .typography.editor .captioned-image-container figure:has(> a.image2-align-right.thefp) {
+    margin: 1em auto;
+  }
+  .typography .captioned-image-container figure:has(> a.image2-offset-left),
+  .typography.editor .captioned-image-container figure:has(> a.image2-offset-left),
+  .typography .captioned-image-container figure:has(> a.image2-offset-right),
+  .typography.editor .captioned-image-container figure:has(> a.image2-offset-right) {
+    margin: 1em auto;
+  }
+  .typography .captioned-image-container figure:has(> a.image2-align-left) .image2-inset,
+  .typography.editor .captioned-image-container figure:has(> a.image2-align-left) .image2-inset,
+  .typography .captioned-image-container figure:has(> a.image2-align-right) .image2-inset,
+  .typography.editor .captioned-image-container figure:has(> a.image2-align-right) .image2-inset {
+    display: block;
+    justify-content: initial;
+  }
+}
+@media (max-width: 768px) {
+  .typography .markup div.sponsorship-campaign-embed,
+  .typography.editor .markup div.sponsorship-campaign-embed {
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+  .typography .markup div.sponsorship-campaign-embed:first-child,
+  .typography.editor .markup div.sponsorship-campaign-embed:first-child {
+    margin-top: 0px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .typography .markup div.youtube-overlay,
+  .typography.editor .markup div.youtube-overlay,
+  .typography .markup div.vimeo-overlay,
+  .typography.editor .markup div.vimeo-overlay {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 370px) {
+  .typography .markup div.tiktok-wrap,
+  .typography.editor .markup div.tiktok-wrap {
+    width: calc(95vw - 32px);
+    height: calc((95vw - 32px - 2px) / 0.485714);
+  }
+}
+@media screen and (max-width: 650px) {
+  .typography .markup div.embedded-publication-wrap .embedded-publication.show-subscribe,
+  .typography.editor .markup div.embedded-publication-wrap .embedded-publication.show-subscribe {
+    padding: 24px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .typography .markup div.subscription-widget-wrap .subscription-widget.show-subscribe,
+  .typography.editor .markup div.subscription-widget-wrap .subscription-widget.show-subscribe,
+  .typography .markup div.subscription-widget-wrap-editor .subscription-widget.show-subscribe,
+  .typography.editor .markup div.subscription-widget-wrap-editor .subscription-widget.show-subscribe,
+  .typography .markup div.captioned-button-wrap .subscription-widget.show-subscribe,
+  .typography.editor .markup div.captioned-button-wrap .subscription-widget.show-subscribe {
+    padding: 0px 24px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .typography .markup div.subscription-widget-wrap .subscription-widget.show-subscribe .subscription-widget-subscribe .button,
+  .typography.editor .markup div.subscription-widget-wrap .subscription-widget.show-subscribe .subscription-widget-subscribe .button,
+  .typography .markup div.subscription-widget-wrap-editor .subscription-widget.show-subscribe .subscription-widget-subscribe .button,
+  .typography.editor .markup div.subscription-widget-wrap-editor .subscription-widget.show-subscribe .subscription-widget-subscribe .button,
+  .typography .markup div.captioned-button-wrap .subscription-widget.show-subscribe .subscription-widget-subscribe .button,
+  .typography.editor .markup div.captioned-button-wrap .subscription-widget.show-subscribe .subscription-widget-subscribe .button {
+    padding: 10px 12px;
+    min-width: 110px;
+  }
+}
+@media (max-width: 650px) {
+  .typography .markup .twitter-embed,
+  .typography.editor .markup .twitter-embed,
+  .typography .markup .tweet,
+  .typography.editor .markup .tweet {
+    padding: 12px;
+  }
+}
+@media (max-width: 650px) {
+  .typography .markup .twitter-embed .tweet-text,
+  .typography.editor .markup .twitter-embed .tweet-text,
+  .typography .markup .tweet .tweet-text,
+  .typography.editor .markup .tweet .tweet-text {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+@media (max-width: 650px) {
+  .typography .markup .twitter-embed .tweet-photos-container.two,
+  .typography.editor .markup .twitter-embed .tweet-photos-container.two,
+  .typography .markup .tweet .tweet-photos-container.two,
+  .typography.editor .markup .tweet .tweet-photos-container.two,
+  .typography .markup .twitter-embed .tweet-photos-container.three,
+  .typography.editor .markup .twitter-embed .tweet-photos-container.three,
+  .typography .markup .tweet .tweet-photos-container.three,
+  .typography.editor .markup .tweet .tweet-photos-container.three,
+  .typography .markup .twitter-embed .tweet-photos-container.four,
+  .typography.editor .markup .twitter-embed .tweet-photos-container.four,
+  .typography .markup .tweet .tweet-photos-container.four,
+  .typography.editor .markup .tweet .tweet-photos-container.four {
+    height: 200px;
+  }
+}
+@media (max-width: 650px) {
+  .typography .markup .twitter-embed a.expanded-link .expanded-link-img,
+  .typography.editor .markup .twitter-embed a.expanded-link .expanded-link-img,
+  .typography .markup .tweet a.expanded-link .expanded-link-img,
+  .typography.editor .markup .tweet a.expanded-link .expanded-link-img {
+    max-height: 180px;
+  }
+}
+@media (max-width: 650px) {
+  .typography .markup .twitter-embed a.expanded-link .expanded-link-description,
+  .typography.editor .markup .twitter-embed a.expanded-link .expanded-link-description,
+  .typography .markup .tweet a.expanded-link .expanded-link-description,
+  .typography.editor .markup .tweet a.expanded-link .expanded-link-description {
+    display: none;
+  }
+}
+@media screen and (max-width: 650px) {
+  .typography .markup .apple-podcast-container,
+  .typography.editor .markup .apple-podcast-container {
+    width: unset;
+  }
+}
+@media (max-width: 420px) {
+  .typography .markup .install-substack-app-embed img.install-substack-app-embed-img,
+  .typography.editor .markup .install-substack-app-embed img.install-substack-app-embed-img {
+    margin: 0 auto 16px auto;
+  }
+}
+@media (max-width: 420px) {
+  .typography .markup .install-substack-app-embed .install-substack-app-embed-text,
+  .typography.editor .markup .install-substack-app-embed .install-substack-app-embed-text {
+    margin: 0 0 12px 0;
+    max-width: 100%;
+    width: auto;
+    text-align: center;
+  }
+}
+@media (max-width: 420px) {
+  .typography .markup .install-substack-app-embed .install-substack-app-embed-link,
+  .typography.editor .markup .install-substack-app-embed .install-substack-app-embed-link {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 481px) {
+  .share-button-container {
+    height: 38px;
+  }
+}
+@media screen and (min-width: 481px) {
+  .share-button-container a.comment {
+    height: 38px;
+    line-height: 38px;
+    padding-right: 10px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .share-button-container .separator {
+    display: block;
+    margin: 0;
+    height: 8px;
+    border-left: none;
+  }
+}
+@media screen and (max-width: 480px) {
+  .share-button-container a.share.first img {
+    padding-left: 0;
+  }
+}
+@media screen and (min-width: 481px) {
+  .share-button-container a.mobile {
+    display: none !important;
+  }
+}
+@media screen and (min-width: 541px) {
+  .settings-add-pub-modal-wrapper .container .add-recommending-pub-modal-container {
+    padding: 36px;
+    height: 680px;
+  }
+}
+@media screen and (min-width: 541px) {
+  .settings-add-pub-modal-wrapper .container .add-recommending-pub-modal-container .footer {
+    position: absolute;
+    bottom: 36px;
+    margin: 0px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .header-anchor-parent {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .post {
+    padding: 16px 0 0 0;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post .post-header .post-label {
+    margin-top: 8px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post .post-header .meta-author-wrap.alternative-meta .meta-right-column .post-meta {
+    margin-top: 6px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post .footer-facepile-container {
+    height: 64px;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post .post-footer.use-separators {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post .post-footer.next-prev {
+    height: 64px;
+    justify-content: space-between;
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post-contributor-footer .post-contributor-bio-table {
+    display: block;
+  }
+  .post-contributor-footer .post-contributor-bio-table-row {
+    display: flex;
+    flex-direction: row;
+  }
+  .post-contributor-footer .post-contributor-bio-userhead-cell,
+  .post-contributor-footer .post-contributor-bio-body-cell {
+    display: block;
+  }
+  .post-contributor-footer .post-contributor-bio-body-cell {
+    flex-grow: 1;
+  }
+  .post-contributor-footer .post-contributor-bio-body-table {
+    display: block;
+  }
+  .post-contributor-footer .post-contributor-bio-body-table-row {
+    display: block;
+  }
+  .post-contributor-footer .post-contributor-bio-copy-cell,
+  .post-contributor-footer .post-contributor-bio-controls-cell {
+    display: block;
+  }
+  .post-contributor-footer .post-contributor-bio-copy-cell {
+    margin: 0 0 16px 0;
+  }
+  .post-contributor-footer .post-contributor-bio-controls-cell {
+    width: auto;
+  }
+  .post-contributor-footer .post-contributor-bio-controls {
+    margin: auto;
+  }
+  .post-contributor-footer .post-contributor-bio-controls .button.primary {
+    width: 100%;
+  }
+  .post-contributor-footer .post-contributor-bio-text {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .post-silhouette {
+    padding: 32px 0;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post-silhouette .post-silhouette-title {
+    margin-top: 10.44225025px;
+    height: 120px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post-silhouette .post-silhouette-meta {
+    width: 75%;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post-silhouette .post-silhouette-meta.with-byline-image {
+    margin: 20px 0;
+  }
+}
+@media screen and (max-width: 650px) {
+  .use-theme-bg .post-meta.alternative-meta .post-meta-item,
+  .post-meta.alternative-meta .post-meta-item {
+    padding-right: 16px;
+  }
+}
+@media screen and (max-width: 370px) {
+  .use-theme-bg .post-meta.alternative-meta .post-meta-item,
+  .post-meta.alternative-meta .post-meta-item {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .use-theme-bg .post-meta.alternative-meta .post-meta-item.guest-author-publication,
+  .post-meta.alternative-meta .post-meta-item.guest-author-publication {
+    display: none;
+  }
+}
+@media screen and (max-width: 370px) {
+  .post-meta .post-meta-item .post-meta-button {
+    height: 36px !important;
+    /* important to override in-line height style on emails */
+  }
+  .post-meta .post-meta-item .post-meta-button .meta-button-label {
+    display: none;
+  }
+  .post-meta .post-meta-item .post-meta-button > svg {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 370px) {
+  .post-meta .post-meta-item {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post .floating-subscribe-button {
+    bottom: 20px;
+    right: 20px;
+  }
+}
+@media (max-width: 1024px) {
+  body .pullquote-align-left,
+  body .pullquote-align-right,
+  body .pullquote-align-wide,
+  body .pullquote-align-center {
+    float: none;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  body .markup table.image-wrapper img,
+  body .markup table.kindle-wrapper img {
+    max-width: 550px;
+  }
+}
+@media (min-width: 1024px) {
+  body:not(:has(#toc)) .captioned-image-container figure:has(> a.image2-offset-left) {
+    margin-left: var(--image-offset-margin);
+  }
+  body:not(:has(#toc)) .captioned-image-container figure:has(> a.image2-offset-right) {
+    margin-right: var(--image-offset-margin);
+  }
+}
+@media (min-width: 1300px) {
+  body .captioned-image-container figure:has(> a.image2-offset-left) {
+    margin-left: var(--image-offset-margin);
+  }
+  body .captioned-image-container figure:has(> a.image2-offset-right) {
+    margin-right: var(--image-offset-margin);
+  }
+}
+@media (max-width: 1024px) {
+  body {
+    /* Disable offset on mobile/tablet */
+  }
+  body .captioned-image-container figure:has(> a.image2-align-left),
+  body .captioned-image-container figure:has(> a.image2-align-right) {
+    float: none;
+    margin: 1em auto;
+    max-width: 100%;
+    width: auto;
+    padding: 0;
+  }
+  body .captioned-image-container figure:has(> a.image2-align-left.thefp),
+  body .captioned-image-container figure:has(> a.image2-align-right.thefp) {
+    margin: 1em auto;
+  }
+  body .captioned-image-container figure:has(> a.image2-offset-left),
+  body .captioned-image-container figure:has(> a.image2-offset-right) {
+    margin: 1em auto;
+  }
+  body .captioned-image-container figure:has(> a.image2-align-left) .image2-inset,
+  body .captioned-image-container figure:has(> a.image2-align-right) .image2-inset {
+    display: block;
+    justify-content: initial;
+  }
+}
+@media (max-width: 768px) {
+  body .markup div.sponsorship-campaign-embed {
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+  body .markup div.sponsorship-campaign-embed:first-child {
+    margin-top: 0px;
+  }
+}
+@media screen and (max-width: 650px) {
+  body .markup div.youtube-overlay,
+  body .markup div.vimeo-overlay {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 370px) {
+  body .markup div.tiktok-wrap {
+    width: calc(95vw - 32px);
+    height: calc((95vw - 32px - 2px) / 0.485714);
+  }
+}
+@media screen and (max-width: 650px) {
+  body .markup div.embedded-publication-wrap .embedded-publication.show-subscribe {
+    padding: 24px;
+  }
+}
+@media screen and (max-width: 650px) {
+  body .markup div.subscription-widget-wrap .subscription-widget.show-subscribe,
+  body .markup div.subscription-widget-wrap-editor .subscription-widget.show-subscribe,
+  body .markup div.captioned-button-wrap .subscription-widget.show-subscribe {
+    padding: 0px 24px;
+  }
+}
+@media screen and (max-width: 650px) {
+  body .markup div.subscription-widget-wrap .subscription-widget.show-subscribe .subscription-widget-subscribe .button,
+  body .markup div.subscription-widget-wrap-editor .subscription-widget.show-subscribe .subscription-widget-subscribe .button,
+  body .markup div.captioned-button-wrap .subscription-widget.show-subscribe .subscription-widget-subscribe .button {
+    padding: 10px 12px;
+    min-width: 110px;
+  }
+}
+@media (max-width: 650px) {
+  body .markup .twitter-embed,
+  body .markup .tweet {
+    padding: 12px;
+  }
+}
+@media (max-width: 650px) {
+  body .markup .twitter-embed .tweet-text,
+  body .markup .tweet .tweet-text {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+@media (max-width: 650px) {
+  body .markup .twitter-embed .tweet-photos-container.two,
+  body .markup .tweet .tweet-photos-container.two,
+  body .markup .twitter-embed .tweet-photos-container.three,
+  body .markup .tweet .tweet-photos-container.three,
+  body .markup .twitter-embed .tweet-photos-container.four,
+  body .markup .tweet .tweet-photos-container.four {
+    height: 200px;
+  }
+}
+@media (max-width: 650px) {
+  body .markup .twitter-embed a.expanded-link .expanded-link-img,
+  body .markup .tweet a.expanded-link .expanded-link-img {
+    max-height: 180px;
+  }
+}
+@media (max-width: 650px) {
+  body .markup .twitter-embed a.expanded-link .expanded-link-description,
+  body .markup .tweet a.expanded-link .expanded-link-description {
+    display: none;
+  }
+}
+@media screen and (max-width: 650px) {
+  body .markup .apple-podcast-container {
+    width: unset;
+  }
+}
+@media (max-width: 420px) {
+  body .markup .install-substack-app-embed img.install-substack-app-embed-img {
+    margin: 0 auto 16px auto;
+  }
+}
+@media (max-width: 420px) {
+  body .markup .install-substack-app-embed .install-substack-app-embed-text {
+    margin: 0 0 12px 0;
+    max-width: 100%;
+    width: auto;
+    text-align: center;
+  }
+}
+@media (max-width: 420px) {
+  body .markup .install-substack-app-embed .install-substack-app-embed-link {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 500px) {
+  body .header a.logo {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+  }
+}
+@media screen and (max-width: 420px) {
+  body .subscription-receipt table:first-of-type .subscription-amount .subscription-discount {
+    width: 72px !important;
+  }
+}
+@media screen and (min-width: 481px) {
+  body .share-button-container {
+    height: auto;
+  }
+}
+@media screen and (max-width: 480px) {
+  body .share-button-container .separator {
+    display: block !important;
+    margin: 0 !important;
+    height: 8px !important;
+    border-left: none !important;
+  }
+}
+@media screen and (max-width: 650px) {
+  .digest .item .post-meta-item.audience {
+    display: none;
+  }
+}
+@media screen and (min-width: 500px) {
+  .digest-publication .logo img {
+    width: 42px;
+    height: 42px;
+    border-radius: 8px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .comments-page .container .comment-list .collapsed-reply {
+    margin-left: calc(10 + 32px - 24px);
+  }
+}
+@media screen and (max-width: 650px) {
+  .comment > .comment-list {
+    padding-left: 24px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .finish-magic-login-modal .modal-content .container {
+    padding: 24px 0;
+  }
+}
+@media (max-width: 650px) {
+  .reader2-text-b3 {
+    line-height: 24px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .reader2-text-h4 {
+    line-height: 24px;
+  }
+}
+@media screen and (min-width: 541px) {
+  .user-profile-modal {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .subscribe-widget form.form .sideBySideWrap button.rightButton {
+    padding: 10px 12px;
+  }
+}
+@media screen and (min-width: 541px) {
+  .pub-icon:hover .logo-hover,
+  .feed-item-icon:hover .logo-hover {
+    display: block;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post-ufi.single-full-width-button .post-ufi-button-wrapper {
+    width: 100%;
+    padding: 16px;
+  }
+  .post-ufi.single-full-width-button .post-ufi-button-wrapper:empty {
+    display: none;
+  }
+  .post-ufi.single-full-width-button .post-ufi-button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  .file-embed-wrapper {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .file-embed-wrapper-editor {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .file-embed-wrapper-editor:active {
+    padding: 0;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .file-embed-button.wide,
+  .file-embed-error-button.wide {
+    display: none;
+  }
+}
+@media only screen and (min-width: 630px) {
+  .file-embed-button.narrow,
+  .file-embed-error-button.narrow {
+    display: none;
+  }
+}
+@media screen and (min-width: 541px) {
+  .audio-player-wrapper .audio-player {
+    min-width: 500px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .audio-player-wrapper .audio-player .audio-player-progress {
+    border-left-width: 16px;
+    border-right-width: 16px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .audio-player-wrapper .audio-player .audio-player-progress .audio-player-progress-bar .audio-player-progress-bar-popup {
+    top: -54px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .audio-player-wrapper-fancy .audio-player .audio-player-progress {
+    border-left-width: 16px;
+    border-right-width: 16px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .audio-player-wrapper-fancy .audio-player .audio-player-progress .audio-player-progress-bar .audio-player-progress-bar-popup {
+    top: -54px;
+  }
+}
+@media (min-width: 250px) {
+  .audio-player-wrapper-fancy .audio-player {
+    padding: 32px;
+  }
+  .audio-player-wrapper-fancy .audio-player .btn-group {
+    display: flex;
+  }
+  .audio-player-wrapper-fancy .audio-player .btn-group .button:last-of-type {
+    display: block;
+  }
+}
+@media (min-width: 300px) {
+  .audio-player-wrapper-fancy .audio-player .btn-group {
+    display: block;
+  }
+  .audio-player-wrapper-fancy .audio-player .btn-group .button:first-of-type {
+    display: block;
+  }
+}
+@media (min-width: 350px) {
+  .audio-player-wrapper-fancy .audio-player .audio-player-substack-logo {
+    display: block;
+  }
+  .audio-player-wrapper-fancy .audio-player .audio-player-title {
+    margin-top: 16px;
+  }
+  .audio-player-wrapper-fancy .audio-player .audio-player-hero-image-container {
+    padding-top: 15%;
+    width: 15%;
+    display: block;
+  }
+  .audio-player-wrapper-fancy .audio-player .btn-group .button:first-of-type {
+    display: block;
+  }
+  .audio-player-wrapper-fancy .audio-player .audio-player-substack-logo {
+    display: block;
+  }
+}
+@media (min-width: 350px) {
+  .audio-player-wrapper-fancy .audio-player .audio-player-hero-image-container {
+    padding-top: 25%;
+    width: 25%;
+    display: block;
+  }
+  .audio-player-wrapper-fancy .audio-player .btn-group {
+    display: flex;
+  }
+  .audio-player-wrapper-fancy .audio-player .btn-group .button:first-of-type {
+    display: block;
+  }
+}
+@media (min-width: 400px) {
+  .audio-player-wrapper-fancy .audio-player .audio-player-hero-image-container {
+    padding-top: 40%;
+    width: 40%;
+  }
+}
+@media (max-width: 400px) {
+  .audio-player-wrapper-fancy .audio-player .btn-group {
+    margin-top: 12px;
+  }
+  .audio-player-wrapper-fancy .audio-player .btn-group .button {
+    font-size: 13px;
+    padding: 6px 12px;
+    height: auto;
+    margin-top: 10px;
+  }
+}
+@media (min-width: 600px) {
+  .audio-player-wrapper-fancy .audio-player .audio-player-hero-image-container {
+    padding-top: 55%;
+    width: 55%;
+  }
+}
+@media (max-width: 650px) {
+  .poll-editor-modal {
+    min-width: calc(100% - 20px);
+  }
+}
+@media (max-width: 750px) {
+  .poll-embed .poll-anchor-target .poll-anchor-copy-button {
+    left: 8px;
+    top: 45px;
+  }
+}</style></head><body class="email-body" style="font-kerning: auto;--image-offset-margin: -120px;"><img src="https://eotrx.substackcdn.com/o/e456c343eff46359/p.gif?token=eyJtIjoiPDIwMjYwNjE5MjE1OTExLjMuNWM2OTNkYmJkMmJmZDlmMEBtZy1kMC5zdWJzdGFjay5jb20-IiwidSI6MTA1MTg2NDcsInIiOiJiZW5vaXRjQGdtYWlsLmNvbSIsImQiOiJtZy1kMC5zdWJzdGFjay5jb20iLCJwIjoyMDIxNTc2OTgsInQiOiJuZXdzbGV0dGVyIiwiYSI6ImV2ZXJ5b25lIiwicyI6MTc0NDM5NSwiYyI6InBvc3QiLCJmIjp0cnVlLCJwb3NpdGlvbiI6InRvcCIsImlhdCI6MTc4MTkwNjM2NiwiZXhwIjoxNzg0NDk4MzY2LCJpc3MiOiJwdWItMCIsInN1YiI6ImVvIn0.Ak5dLFHEVew3HD7wkqM0iolxFe6cNquAp7xzZSJ9XFM" alt="" width="1" height="1" border="0" style="height:1px !important;width:1px !important;border-width:0 !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:0 !important;margin-left:0 !important;padding-top:0 !important;padding-bottom:0 !important;padding-right:0 !important;padding-left:0 !important;"/><div class="preview" style="display:none;font-size:1px;color:#333333;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;">The Luddites are back in fashion, but too many people still get them all wrong. This is what they really stood for, fought against, and why they matter now more than ever.</div><div class="preview" style="display:none;font-size:1px;color:#333333;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;">&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;</div><table class="email-body-container" role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td></td><td class="content" width="550"></td><td></td></tr><tr><td></td><td class="content" width="550" align="left"><div style="font-size: 16px;line-height: 26px;max-width: 550px;width: 100%;margin: 0 auto;overflow-wrap: break-word;"><table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="right" style="height:20px;"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="vertical-align:middle;"><span class="pencraft pc-reset reset-IxiVJZ tw-font-body tw-text-ssm tw-text-substack-secondary" style="font-family: SF Pro Text, -apple-system, system-ui, BlinkMacSystemFont, Inter, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;font-size: 13px;color: unset;list-style: none;text-decoration: unset;margin: 0;"><div class="pencraft pc-reset align-right-VJbKw5 size-12-mmZ61m reset-IxiVJZ" style="list-style: none;color: unset;text-align: right;font-size: 12px;line-height: 16px;text-decoration: unset;margin: 0;"><span class="pencraft pc-reset reset-IxiVJZ" translated="" style="list-style: none;color: unset;text-decoration: unset;margin: 0;">Forwarded this email? <a class="pencraft pc-reset decoration-underline-ClTkYc reset-IxiVJZ" href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly9ibG9vZGludGhlbWFjaGluZS5zdWJzdGFjay5jb20vc3Vic2NyaWJlP3V0bV9zb3VyY2U9ZW1haWwmdXRtX2NhbXBhaWduPWVtYWlsLXN1YnNjcmliZSZyPTY5ZzhuJm5leHQ9aHR0cHMlM0ElMkYlMkZibG9vZGludGhlbWFjaGluZS5zdWJzdGFjay5jb20lMkZwJTJGdW5kZXJzdGFuZGluZy10aGUtbHVkZGl0ZXMtaW4tdGhlIiwicCI6MjAyMTU3Njk4LCJzIjoxNzQ0Mzk1LCJmIjp0cnVlLCJ1IjoxMDUxODY0NywiaWF0IjoxNzgxOTA2MzY2LCJleHAiOjIwOTc0ODIzNjYsImlzcyI6InB1Yi0wIiwic3ViIjoibGluay1yZWRpcmVjdCJ9.VkAvgZkhdstq8BR63YnXnDQ--M8r_aJNxSqJgNZMKWk?" style="list-style: none;color: unset;text-decoration: unset;margin: 0;-webkit-text-decoration-line: underline;text-decoration-line: underline;">Subscribe here</a> for more</span></div></span></td></tr></tbody></table></td></tr></tbody></table><table class="header graphic-header" role="presentation" style="border-spacing: 0;padding: 16px 0 32px;"><tbody><tr><td align="center" style="text-align: center;padding: 0;"><a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly9ibG9vZGludGhlbWFjaGluZS5zdWJzdGFjay5jb20vcC91bmRlcnN0YW5kaW5nLXRoZS1sdWRkaXRlcy1pbi10aGU_dXRtX2NhbXBhaWduPWVtYWlsLWhhbGYtcG9zdCZyPTY5ZzhuJnRva2VuPWV5SjFjMlZ5WDJsa0lqb3hNRFV4T0RZME55d2ljRzl6ZEY5cFpDSTZNakF5TVRVM05qazRMQ0pwWVhRaU9qRTNPREU1TURZek5qWXNJbVY0Y0NJNk1UYzRORFE1T0RNMk5pd2lhWE56SWpvaWNIVmlMVEUzTkRRek9UVWlMQ0p6ZFdJaU9pSndiM04wTFhKbFlXTjBhVzl1SW4wLjJDMmVhcDV2ZGtMRkQxWG5oblg1cFJJaUl4cGwyV19wa1l1LTJkdGkzUlUiLCJwIjoyMDIxNTc2OTgsInMiOjE3NDQzOTUsImYiOnRydWUsInUiOjEwNTE4NjQ3LCJpYXQiOjE3ODE5MDYzNjYsImV4cCI6MjA5NzQ4MjM2NiwiaXNzIjoicHViLTAiLCJzdWIiOiJsaW5rLXJlZGlyZWN0In0.hd9FyEhLaDFOfZjV2i2p87UvU5K-DMnccleFuaW9ruk?"><img class="header-image" role="presentation" width="550" height="105" src="https://substackcdn.com/image/fetch/$s_!i9rb!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F70083eea-6d21-4949-9747-7e6e17199e2a_1344x256.png" style="border: none !important;vertical-align: middle;max-width: 550px;display: block;margin: 0 auto;height: auto;width: 100%;"></a></td></tr></tbody></table><div class="post typography" dir="auto" style="--image-offset-margin: -120px;padding: 32px 0 0 0;font-size: 16px;line-height: 26px;"><div class="post-header" role="region" aria-label="Post header" style="font-size: 16px;line-height: 26px;"><h1 class="post-title published title-X77sOw" dir="auto" style="direction: auto;text-align: start;unicode-bidi: isolate;color: rgb(54,55,55);font-family: 'Roboto Mono',monospace;font-weight: 700;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: antialiased;-webkit-appearance: optimizelegibility;-moz-appearance: optimizelegibility;appearance: optimizelegibility;margin: 0;line-height: 36px;font-size: 32px;"><a href="https://substack.com/app-link/post?publication_id=1744395&post_id=202157698&utm_source=post-email-title&utm_campaign=email-post-title&isFreemail=true&r=69g8n&token=eyJ1c2VyX2lkIjoxMDUxODY0NywicG9zdF9pZCI6MjAyMTU3Njk4LCJpYXQiOjE3ODE5MDYzNjYsImV4cCI6MTc4NDQ5ODM2NiwiaXNzIjoicHViLTE3NDQzOTUiLCJzdWIiOiJwb3N0LXJlYWN0aW9uIn0.2C2eap5vdkLFD1XnhnX5pRIiIxpl2W_pkYu-2dti3RU" style="color: rgb(54,55,55);text-decoration: none;">Understanding the Luddites in the age of AI</a></h1><h3 class="subtitle subtitle-HEEcLo" dir="auto" style="direction: auto;text-align: start;unicode-bidi: isolate;font-family: 'SF Pro Display',-apple-system-headline,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight: normal;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: antialiased;-webkit-appearance: optimizelegibility;-moz-appearance: optimizelegibility;appearance: optimizelegibility;margin: 4px 0 0;color: #777777;line-height: 24px;font-size: 18px;margin-top: 12px;">The Luddites are back in fashion, but too many people still get them all wrong. This is what they really stood for, fought against, and why they matter now more than ever. </h3><table class="post-meta" role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="margin: 1em 0;height: 20px;align-items: center;"><tbody><tr><td><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="vertical-align:middle;"><div class="pencraft pc-reset color-primary-zABazT line-height-20-t4M0El font-meta-MWBumP size-11-NuY2Zx weight-medium-fw81nC transform-uppercase-yKDgcq reset-IxiVJZ meta-EgzBVA custom-css-email-post-author" style="list-style: none;font-size: 11px;line-height: 20px;text-decoration: unset;color: rgb(54,55,55);margin: 0;font-family: 'SF Compact',-apple-system,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight: 500;text-transform: uppercase;letter-spacing: .2px;"><a class="pencraft pc-reset color-primary-zABazT line-height-20-t4M0El font-meta-MWBumP size-11-NuY2Zx weight-medium-fw81nC transform-uppercase-yKDgcq reset-IxiVJZ meta-EgzBVA" style="list-style: none;color: rgb(54,55,55);margin: 0;font-size: 11px;line-height: 20px;font-family: 'SF Compact',-apple-system,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight: 500;text-transform: uppercase;letter-spacing: .2px;text-decoration: none" href="https://substack.com/@bloodinthemachine">Brian Merchant</a></div></td></tr></tbody></table></td></tr><tr><td><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="vertical-align:middle;"><div class="pencraft pc-reset color-secondary-ls1g8s line-height-20-t4M0El font-meta-MWBumP size-11-NuY2Zx weight-medium-fw81nC transform-uppercase-yKDgcq reset-IxiVJZ meta-EgzBVA" style="list-style: none;font-size: 11px;line-height: 20px;text-decoration: unset;color: rgb(119,119,119);margin: 0;font-family: 'SF Compact',-apple-system,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight: 500;text-transform: uppercase;letter-spacing: .2px;"><time datetime="2026-06-19T21:59:11.027Z">Jun 19</time></div></td></tr></tbody></table></td></tr></tbody></table></td><td align="right"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="vertical-align:middle;"><a href="https://substack.com/@bloodinthemachine"><img class="custom-css-email-avatar avatar-QIQ5yR" src="https://substackcdn.com/image/fetch/$s_!MfSW!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fcf40536c-5ef0-4d0a-b3a3-93c359d0742a_200x200.jpeg" style="box-sizing: border-box;max-width: 550px;border: none;vertical-align: middle;width: 40px;height: 40px;min-width: 40px;min-height: 40px;object-fit: cover;margin: 0px;display: inline;border-radius: 50%" width="40" height="40"></a></td></tr></tbody></table></td></tr></tbody></table><table class="email-ufi-2-top" role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="border-top: 1px solid rgb(0,0,0,.1);border-bottom: 1px solid rgb(0,0,0,.1);min-width: 100%;"><tbody><tr height="16"><td height="16" style="font-size:0px;line-height:0;">&nbsp;</td></tr><tr><td><table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="vertical-align:middle;"><table role="presentation" width="38" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="center"><a class="email-icon-button" href="https://substack.com/app-link/post?publication_id=1744395&post_id=202157698&utm_source=substack&isFreemail=true&submitLike=true&token=eyJ1c2VyX2lkIjoxMDUxODY0NywicG9zdF9pZCI6MjAyMTU3Njk4LCJyZWFjdGlvbiI6IuKdpCIsImlhdCI6MTc4MTkwNjM2NiwiZXhwIjoxNzg0NDk4MzY2LCJpc3MiOiJwdWItMTc0NDM5NSIsInN1YiI6InJlYWN0aW9uIn0.EvQz6fWZLc3q9GepPpuRjgdpG5WUdwTymZZ3u_8bCuQ&utm_medium=email&utm_campaign=email-reaction&r=69g8n" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;font-weight: 500;border: 1px solid rgb(0,0,0,.1);border-radius: 9999px;text-transform: uppercase;font-size: 12px;line-height: 1;padding: 9px 0;text-decoration: none;color: rgb(119,119,119);min-width: 38px;box-sizing: border-box;width: 38px"><img class="icon" src="https://substackcdn.com/image/fetch/$s_!PeVs!,w_36,c_scale,f_png,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Ficon%2FLucideHeart%3Fv%3D4%26height%3D36%26fill%3Dnone%26stroke%3D%2523808080%26strokeWidth%3D2" width="18" height="18" style="border: none;vertical-align: middle;max-width: 18px" alt=""></a></td></tr></tbody></table></td><td width="8" style="min-width:8px;"></td><td style="vertical-align:middle;"><table role="presentation" width="38" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="center"><a class="email-icon-button" href="https://substack.com/app-link/post?publication_id=1744395&post_id=202157698&utm_source=substack&utm_medium=email&isFreemail=true&comments=true&token=eyJ1c2VyX2lkIjoxMDUxODY0NywicG9zdF9pZCI6MjAyMTU3Njk4LCJpYXQiOjE3ODE5MDYzNjYsImV4cCI6MTc4NDQ5ODM2NiwiaXNzIjoicHViLTE3NDQzOTUiLCJzdWIiOiJwb3N0LXJlYWN0aW9uIn0.2C2eap5vdkLFD1XnhnX5pRIiIxpl2W_pkYu-2dti3RU&r=69g8n&utm_campaign=email-half-magic-comments&action=post-comment&utm_source=substack&utm_medium=email" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;font-weight: 500;border: 1px solid rgb(0,0,0,.1);border-radius: 9999px;text-transform: uppercase;font-size: 12px;line-height: 1;padding: 9px 0;text-decoration: none;color: rgb(119,119,119);min-width: 38px;box-sizing: border-box;width: 38px"><img class="icon" src="https://substackcdn.com/image/fetch/$s_!x1tS!,w_36,c_scale,f_png,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Ficon%2FLucideComments%3Fv%3D4%26height%3D36%26fill%3Dnone%26stroke%3D%2523808080%26strokeWidth%3D2" width="18" height="18" style="border: none;vertical-align: middle;max-width: 18px" alt=""></a></td></tr></tbody></table></td><td width="8" style="min-width:8px;"></td><td style="vertical-align:middle;"><table role="presentation" width="38" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="center"><a class="email-icon-button" href="https://substack.com/app-link/post?publication_id=1744395&post_id=202157698&utm_source=substack&utm_medium=email&utm_content=share&utm_campaign=email-share&action=share&triggerShare=true&isFreemail=true&r=69g8n&token=eyJ1c2VyX2lkIjoxMDUxODY0NywicG9zdF9pZCI6MjAyMTU3Njk4LCJpYXQiOjE3ODE5MDYzNjYsImV4cCI6MTc4NDQ5ODM2NiwiaXNzIjoicHViLTE3NDQzOTUiLCJzdWIiOiJwb3N0LXJlYWN0aW9uIn0.2C2eap5vdkLFD1XnhnX5pRIiIxpl2W_pkYu-2dti3RU" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;font-weight: 500;border: 1px solid rgb(0,0,0,.1);border-radius: 9999px;text-transform: uppercase;font-size: 12px;line-height: 1;padding: 9px 0;text-decoration: none;color: rgb(119,119,119);min-width: 38px;box-sizing: border-box;width: 38px"><img class="icon" src="https://substackcdn.com/image/fetch/$s_!_L14!,w_36,c_scale,f_png,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Ficon%2FLucideShare2%3Fv%3D4%26height%3D36%26fill%3Dnone%26stroke%3D%2523808080%26strokeWidth%3D2" width="18" height="18" style="border: none;vertical-align: middle;max-width: 18px" alt=""></a></td></tr></tbody></table></td><td width="8" style="min-width:8px;"></td><td style="vertical-align:middle;"><table role="presentation" width="38" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="center"><a class="email-icon-button" href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly9vcGVuLnN1YnN0YWNrLmNvbS9wdWIvYmxvb2RpbnRoZW1hY2hpbmUvcC91bmRlcnN0YW5kaW5nLXRoZS1sdWRkaXRlcy1pbi10aGU_dXRtX3NvdXJjZT1zdWJzdGFjayZ1dG1fbWVkaXVtPWVtYWlsJnV0bV9jYW1wYWlnbj1lbWFpbC1yZXN0YWNrLWNvbW1lbnQmYWN0aW9uPXJlc3RhY2stY29tbWVudCZyPTY5ZzhuJnRva2VuPWV5SjFjMlZ5WDJsa0lqb3hNRFV4T0RZME55d2ljRzl6ZEY5cFpDSTZNakF5TVRVM05qazRMQ0pwWVhRaU9qRTNPREU1TURZek5qWXNJbVY0Y0NJNk1UYzRORFE1T0RNMk5pd2lhWE56SWpvaWNIVmlMVEUzTkRRek9UVWlMQ0p6ZFdJaU9pSndiM04wTFhKbFlXTjBhVzl1SW4wLjJDMmVhcDV2ZGtMRkQxWG5oblg1cFJJaUl4cGwyV19wa1l1LTJkdGkzUlUiLCJwIjoyMDIxNTc2OTgsInMiOjE3NDQzOTUsImYiOnRydWUsInUiOjEwNTE4NjQ3LCJpYXQiOjE3ODE5MDYzNjYsImV4cCI6MjA5NzQ4MjM2NiwiaXNzIjoicHViLTAiLCJzdWIiOiJsaW5rLXJlZGlyZWN0In0.-wFWZRTOGnQGYNrynVZ_N_rOMHYvbZekKovCMCmsf7g?&utm_source=substack&utm_medium=email" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;font-weight: 500;border: 1px solid rgb(0,0,0,.1);border-radius: 9999px;text-transform: uppercase;font-size: 12px;line-height: 1;padding: 9px 0;text-decoration: none;color: rgb(119,119,119);min-width: 38px;box-sizing: border-box;width: 38px"><img class="icon" src="https://substackcdn.com/image/fetch/$s_!ubXF!,w_36,c_scale,f_png,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Ficon%2Fnotes__NoteRestackIcon%3Fv%3D4%26height%3D36%26fill%3Dnone%26stroke%3D%2523808080%26strokeWidth%3D2%26strokeLinecap%3Dround%26strokeLinejoin%3Dround" width="18" height="18" alt="" style="max-width: 550px;border: none !important;vertical-align: middle;"></a></td></tr></tbody></table></td></tr></tbody></table></td><td align="right"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="vertical-align:middle;"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="center"><a class="email-button-outline" href="https://open.substack.com/pub/bloodinthemachine/p/understanding-the-luddites-in-the?utm_source=email&redirect=app-store&utm_campaign=email-read-in-app" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;font-weight: 500;border: 1px solid rgb(0,0,0,.1);border-radius: 9999px;text-transform: uppercase;font-size: 12px;line-height: 12px;padding: 9px 14px;text-decoration: none;color: rgb(119,119,119);"><div class="email-button-spacer" style="font-size: 16px;line-height: 26px;display: inline-block;vertical-align: middle;max-width: 0;min-height: 18px;"></div><span class="email-button-text" style="vertical-align: middle;margin-right: 4px">READ IN APP</span><img class="icon text-icon" src="https://substackcdn.com/image/fetch/$s_!ET-_!,w_36,c_scale,f_png,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Ficon%2FLucideArrowUpRight%3Fv%3D4%26height%3D36%26fill%3Dnone%26stroke%3D%2523808080%26strokeWidth%3D2" width="18" height="18" style="min-width: 18px;min-height: 18px;border: none;vertical-align: middle;margin-right: 0;margin-left: 0;max-width: 18px" alt=""></a></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></td></tr><tr height="16"><td height="16" style="font-size:0px;line-height:0;">&nbsp;</td></tr></tbody></table></div></div><div class="post typography" dir="auto" style="--image-offset-margin: -120px;padding: 32px 0 0 0;font-size: 16px;line-height: 26px;"><div class="body markup" dir="auto" style="text-align: initial;font-size: 16px;line-height: 26px;width: 100%;word-break: break-word;margin-bottom: 16px;font-family: 'SF Pro Display', -apple-system, system-ui, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';font-weight: 400;"><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;margin-top: 0;"><span>The Luddites are back. Again. As </span><a href="https://substack.com/redirect/570b980b-4e67-43e6-81ca-06367e2e0ee9?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">the wave of resistance</a><span> to big tech, data centers, and AI </span><a href="https://substack.com/redirect/50cfcde5-8a3c-432d-8675-5160868d7efe?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">grows</a><span>, a reappraisal of the Luddites is underway. This happens periodically. At the beginning of the AI boom in 2023, as people looked to historical analogues for what might happen to jobs, the Luddites became a recurring point of reference (I spent a lot of time discussing </span><a href="https://substack.com/redirect/6bfd49fa-8994-4d4f-b3af-e2322cf19748?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">Blood in the Machine</a><span> that year). There were neo-Luddite moments in the 90s, 60s, and so on, too.</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>Still, it&#8217;s really ramped up lately: </span><em>US Catholic</em><span> magazine ran an article called </span><a href="https://substack.com/redirect/2e06b402-bce8-4f19-87db-84f8e7182722?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">&#8220;A Luddite lesson in labor justice for our technocratic age.&#8221;</a><span> </span><em>The Nation</em><span> had a feature titled &#8220;</span><a href="https://substack.com/redirect/5a8647b1-baf6-4c17-a87a-56fac7c86f7f?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">As AI Breathes Down Our Necks, It&#8217;s Time for a Luddite Renaissance.&#8221;</a><span> And </span><em>Psychology Today</em><span> ran a story headlined </span><a href="https://substack.com/redirect/5ee3c490-0d15-4c7e-ae4b-44e837ebae1a?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">&#8220;Pushing Back Against Technology: The Rise of Neo-Luddism.</a><span> The subheading: &#8220;Will a less tech-obsessed routine become the next big healthy lifestyle choice?&#8221; </span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>This week, NPR&#8217;s aired </span><a href="https://substack.com/redirect/8b6e8049-8827-4344-8a8c-a15a25e05e1f?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">its &#8220;Word of the Week&#8221; segment,</a><span> and three guesses what it was. They interviewed me for the spot, along with the historian Kevin Binfield and labor law scholar Miriam Cherry, and it&#8217;s a fun, informative piece.</span><span class="footnote-anchor-email" data-component-name="FootnoteAnchorToDOMStatic" style="font-size: 20px;">&#185;</span><span> It was prompted in part by the Gen Z backlash to big tech, a subject covered by Hasan Minhaj in a show aired to his 2 million subscribers this week, and that </span><em>also</em><span> delves into the true history of the Luddites. (To my surprise, he clipped a section from a podcast episode I did with 404 Media&#8212;title: </span><a href="https://substack.com/redirect/7f3a63b1-f61c-46d2-887e-06d42af607f0?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">&#8220;The New Luddites&#8221;</a><span>&#8212;so I showed up there too.) Both those shows were prompted, in turn, by the forthcoming Summer of Ludd, a series of events, protests, and performances organized by a band of self-proclaimed Luddites in New York City.</span><span class="footnote-anchor-email" data-component-name="FootnoteAnchorToDOMStatic" style="font-size: 20px;">&#178;</span></p><a class="youtube-wrap" href="https://substack.com/redirect/fd8b19d4-e4c6-4352-a2a9-579d39f3757a?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" target="_blank" data-component-name="Youtube2ToDOMStatic" style="display: block;margin: 32px 0;"><img src="https://substackcdn.com/image/youtube/w_728,c_limit/l_youtube_play_qyqt8q,w_120/rxpV97A5I90" style="border: none !important;vertical-align: middle;-ms-interpolation-mode: bicubic;max-width: 100%;height: auto;margin: 0 auto;display: block;width: 100%;"></a><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>Now, as it happens, </span><em>also </em><span>this week, I gave a talk at the Seoul AI Policy Conference, called </span><a href="https://substack.com/redirect/a5165275-2b83-4d24-9a09-6ab0b72801fc?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">Rethinking the Luddites in the Age of AI</a><span>. I give this talk every so often, keeping it updated with an eye to the latest goings-on and resistances. (Its title is shamelessly ripped off of </span><a href="https://substack.com/redirect/a5165275-2b83-4d24-9a09-6ab0b72801fc?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">Kyle Chayka&#8217;s review of BITM</a><span>, thanks Kyle.) Given that Luddites are apparently of widespread interest at the moment, I thought I&#8217;d share this latest version, lightly edited into text form. It serves as a crash course in the history of the </span><em>real</em><span> Luddites, what they really fought for, and why they matter more than ever as companies with immense wealth and power seek to use AI to reshape our working and social lives. </span></p><div style="font-size: 16px;line-height: 26px;"><hr style="margin: 32px 0;padding: 0;height: 1px;background: rgb(0,0,0,.1);border: none;"></div><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">As always, all of this work is made possible by my subscribers, a small fraction of whom chip in a few bucks a month so I can keep the lights on here. If you find value in my writing, reporting, and analysis here, please consider becoming a paid supporter so I can continue doing all of the above. I&#8217;m 100% independent, and reliant on subscribers to keep this newsletter going. There&#8217;s been a string of cancellations lately; many, sadly, cite AI-related job loss, so I could use the boost. Many thanks, and hammers up.</p><div class="subscribe-widget is-signed-up" data-component-name="SubscribeWidget" style="margin: 0 0 1em;direction: ltr;font-size: 16px;line-height: 26px;"><div class="pencraft pc-reset button-wrapper" style="text-decoration: unset;list-style: none;font-size: 16px;line-height: 26px;text-align: center;cursor: pointer;border-radius: 4px;"><a class="button subscribe-btn primary" href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly9ibG9vZGludGhlbWFjaGluZS5zdWJzdGFjay5jb20vc3Vic2NyaWJlP3V0bV9zb3VyY2U9cG9zdCZ1dG1fY2FtcGFpZ249ZW1haWwtY2hlY2tvdXQmbmV4dD1odHRwcyUzQSUyRiUyRmJsb29kaW50aGVtYWNoaW5lLnN1YnN0YWNrLmNvbSUyRnAlMkZ1bmRlcnN0YW5kaW5nLXRoZS1sdWRkaXRlcy1pbi10aGUmcj02OWc4biZ0b2tlbj1leUoxYzJWeVgybGtJam94TURVeE9EWTBOeXdpYVdGMElqb3hOemd4T1RBMk16WTJMQ0psZUhBaU9qRTNPRFEwT1Rnek5qWXNJbWx6Y3lJNkluQjFZaTB4TnpRME16azFJaXdpYzNWaUlqb2lZMmhsWTJ0dmRYUWlmUS5vVWdUbWNXUVNFaklYX21lMzNDbENsNWdoYXJXSUVMUmhGSmN6OHd2VjJnIiwicCI6MjAyMTU3Njk4LCJzIjoxNzQ0Mzk1LCJmIjp0cnVlLCJ1IjoxMDUxODY0NywiaWF0IjoxNzgxOTA2MzY2LCJleHAiOjIwOTc0ODIzNjYsImlzcyI6InB1Yi0wIiwic3ViIjoibGluay1yZWRpcmVjdCJ9.NLcmb_nwsYb-Flh0QJLOkF_PGhMjGcieHnr7gjpIg6w?&utm_medium=email&utm_source=subscribe-widget&utm_content=202157698" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;box-sizing: border-box;cursor: pointer;border: none;border-radius: 8px;font-size: 14px;line-height: 20px;font-weight: 600;text-align: center;opacity: 1;outline: none;white-space: nowrap;text-decoration: none !important;margin: 0 auto;background-color: #000000;color: #ffffff !important;padding: 12px 20px;height: auto;"><span style="color: #ffffff;text-decoration: none;">Upgrade to paid</span></a></div></div><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">Now, onto the Luddites:</p><div style="font-size: 16px;line-height: 26px;"><hr style="margin: 32px 0;padding: 0;height: 1px;background: rgb(0,0,0,.1);border: none;"></div><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>When the US senator Bernie Sanders proposed a moratorium on the construction of new AI data centers this year, the Washington Post </span><a href="https://substack.com/redirect/e8759aeb-2526-4b9f-b847-1130e7d95633?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">compared him</a><span> to a Luddite. &#8220;A national ban on new AI data centers would make the Luddites look good,&#8221; the paper&#8217;s editorial board wrote. </span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>The conservative pundit Ben Shapiro </span><a href="https://substack.com/redirect/02bcc517-efeb-4489-8eff-f1b8bace25fb?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">called</a><span> Sanders&#8217; critiques of AI &#8220;Luddite, anti-tech nonsense.&#8221; A think tank analyst labeled </span><a href="https://substack.com/redirect/8175f6d8-7899-4a3b-b64e-05e1a21c37ab?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">him</a><span> a &#8220;neo-Luddite&#8221; who was &#8220;de facto calling for America&#8217;s surrender.&#8221;</span></p><div class="captioned-image-container-static" style="font-size: 16px;line-height: 26px;margin: 32px auto;"><figure style="width: 100%;margin: 0 auto;"><table class="image-wrapper" width="100%" border="0" cellspacing="0" cellpadding="0" data-component-name="Image2ToDOMStatic" style="mso-padding-alt: 1em 0 1.6em;"><tbody><tr><td style="text-align: center;"></td><td class="content" align="left" width="811" style="text-align: center;"><a class="image-link" target="_blank" href="https://substack.com/redirect/1b898978-cd22-4d4c-b88a-e7fa4a7a1dec?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="position: relative;flex-direction: column;align-items: center;padding: 0;width: auto;height: auto;border: none;text-decoration: none;display: block;margin: 0;"><img class="wide-image" data-attrs="{&quot;src&quot;:&quot;https://substack-post-media.s3.amazonaws.com/public/images/c14b9807-080d-4e99-966e-c02c68821d91_811x462.png&quot;,&quot;srcNoWatermark&quot;:null,&quot;fullscreen&quot;:null,&quot;imageSize&quot;:null,&quot;height&quot;:462,&quot;width&quot;:811,&quot;resizeWidth&quot;:null,&quot;bytes&quot;:355035,&quot;alt&quot;:null,&quot;title&quot;:null,&quot;type&quot;:&quot;image/png&quot;,&quot;href&quot;:null,&quot;belowTheFold&quot;:true,&quot;topImage&quot;:false,&quot;internalRedirect&quot;:&quot;https://bloodinthemachine.substack.com/i/202157698?img=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc14b9807-080d-4e99-966e-c02c68821d91_811x462.png&quot;,&quot;isProcessing&quot;:false,&quot;align&quot;:null,&quot;offset&quot;:false}" alt="" width="550" height="313.3168927250308" src="https://substackcdn.com/image/fetch/$s_!Jzuu!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc14b9807-080d-4e99-966e-c02c68821d91_811x462.png" style="border: none !important;vertical-align: middle;display: block;-ms-interpolation-mode: bicubic;height: auto;margin-bottom: 0;width: auto !important;max-width: 100% !important;margin: 0 auto;"></a></td><td style="text-align: center;"></td></tr></tbody></table></figure></div><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">&#8220;Luddite.&#8221; The word&#8217;s been circulating a lot lately, as investment in AI has reached historic heights, chatbots and enterprise AI have pervaded daily life, and more and more people have been speaking up about the drawbacks and dangers of the technology and the firms behind it. </p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">&#8220;Luddite.&#8221; You may have heard the word used to describe AI critics, aggrieved workers, data center protestors, or those like Sanders, who advocate reining in AI companies, regulating their products, or putting checks on their power.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">Its meaning, in these cases, is clear: It&#8217;s an insult. A Luddite is supposed to be anti-technology, naive, backwards, anti-progress. </p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">And, surprise, the AI products enforce the idea. Here&#8217;s how ChatGPT defines it, when prompted: &#8220;A Luddite is a person who is opposed to, distrustful of, or reluctant to use new technology.&#8221;</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">Here&#8217;s Google: &#8220;A Luddite is a term for someone who is opposed to or resistant to new technologies, especially automation and computerization.&#8221;</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>Now, these AI-generated responses </span><em>do</em><span> reflect how the Luddites are commonly understood today. After all, large language models draw their responses from the inputs they&#8217;ve been trained on, and a lot of writing over the last two centuries has sought to define a &#8216;Luddite&#8217; the way the chatbots do now.</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>But the pundits and the chatbots all get it wrong: The real Luddites&#8212;the machine breakers who rose up at the dawn of the first Industrial Revolution to smash the looms and wide frames that factory owners were using to automate their labor&#8212;were not opposed to technology. They were opposed to the way technology was being used against them. That is, the Luddites objected to the industrialists who used machinery to depress wages, evade labor laws, and degrade the quality of products in order to profit </span><em>at their expense</em><span>. </span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">It was, and remains, an eminently reasonable objection. The real Luddites were not know-nothing technophobes, despite their current reputation, and they certainly did not hate technology. In fact, many were technicians themselves, and understood better than most exactly how a technology would be used to exploit them. It was the rational and just thing to do, to object to the use of industrialist machinery to reshape their working lives and their communities. </p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">Not only that, but their objections were informed, popular, and, for a time, effective. The Luddites organized a tactical rebellion that terrified elites and won the favor of the working class. People cheered them in the streets; hymns were sung about them in pubs. Lord Byron wrote poems about them. For a few years, they were more beloved than Robin Hood. </p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">If we are to truly understand the impacts of mass automation technologies like AI, and why there&#8217;s a vociferous and fast-growing backlash to it, then it&#8217;s crucial that we rethink our dismissal of the Luddites. We must understand their actual history; why they turned to machine breaking and what they really fought for. </p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">After all, we now sit on the precipice of a moment where backlash to a mass automation technology threatens to boil over again. </p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>So who were the </span><em>real</em><span> Luddites? To understand them properly, we need a little background first. </span></p><div class="captioned-image-container-static" style="font-size: 16px;line-height: 26px;margin: 32px auto;"><figure style="width: 100%;margin: 0 auto;"><table class="image-wrapper" width="100%" border="0" cellspacing="0" cellpadding="0" data-component-name="Image2ToDOMStatic" style="mso-padding-alt: 1em 0 1.6em;"><tbody><tr><td style="text-align: center;"></td><td class="content" align="left" width="590" style="text-align: center;"><a class="image-link" target="_blank" href="https://substack.com/redirect/912c7bed-a2aa-4004-9b63-639bae3bcaaf?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="position: relative;flex-direction: column;align-items: center;padding: 0;width: auto;height: auto;border: none;text-decoration: none;display: block;margin: 0;"><img class="wide-image" data-attrs="{&quot;src&quot;:&quot;https://substack-post-media.s3.amazonaws.com/public/images/2091bb52-d9d0-40f4-95e6-e63ccad0d2be_590x421.avif&quot;,&quot;srcNoWatermark&quot;:null,&quot;fullscreen&quot;:null,&quot;imageSize&quot;:null,&quot;height&quot;:421,&quot;width&quot;:590,&quot;resizeWidth&quot;:null,&quot;bytes&quot;:64484,&quot;alt&quot;:null,&quot;title&quot;:null,&quot;type&quot;:&quot;image/avif&quot;,&quot;href&quot;:null,&quot;belowTheFold&quot;:true,&quot;topImage&quot;:false,&quot;internalRedirect&quot;:&quot;https://bloodinthemachine.substack.com/i/202157698?img=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F2091bb52-d9d0-40f4-95e6-e63ccad0d2be_590x421.avif&quot;,&quot;isProcessing&quot;:false,&quot;align&quot;:null,&quot;offset&quot;:false}" alt="" width="550" height="392.45762711864404" src="https://substackcdn.com/image/fetch/$s_!sJCD!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F2091bb52-d9d0-40f4-95e6-e63ccad0d2be_590x421.avif" style="border: none !important;vertical-align: middle;display: block;-ms-interpolation-mode: bicubic;height: auto;margin-bottom: 0;width: auto !important;max-width: 100% !important;margin: 0 auto;"></a></td><td style="text-align: center;"></td></tr></tbody></table><figcaption class="image-caption" style="box-sizing: content-box;color: rgb(119,119,119);font-size: 14px;line-height: 20px;font-weight: 400;letter-spacing: -.15px;margin-top: 8px;width: 70%;padding-left: 15%;padding-right: 15%;text-align: center;">The power loom, circa 1895.</figcaption></figure></div><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><strong>In the 1700s and early 1800s, </strong><span>clothworkers constituted the largest industrial workforce in England apart from agriculture. Hundreds of thousands of people were employed, from Nottingham to Leeds to Manchester, as knitters, weavers, croppers, and spinners.</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">These clothworkers largely worked under what&#8217;s known as the domestic system; the artisans worked at home or in small shops, alongside their families or peers. Most were what we would describe today as working or middle class. They were not particularly wealthy or prosperous, and times could be lean if demand for cloth goods shifted, but many owned cottages, worked 30-hour workweeks, and had the autonomy to organize their workdays as they saw fit. They were free to sing songs at the loom as they worked with their families, or to take breaks to walk in the garden. Others labored in local shops with friends and colleagues they&#8217;d known all their lives. These were the days of the original &#8220;cottage industry,&#8221; and, in fact, it&#8217;s where the term hails from. </p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>As the Industrial Revolution dawned, the early entrepreneurs</span><span class="footnote-anchor-email" data-component-name="FootnoteAnchorToDOMStatic" style="font-size: 20px;">&#179;</span><span> began using automated machinery to speed up the labor process, and to organize production into the first factories. These machines, like the spinning jenny, the wide frame, the gig mill, and later the power loom, enabled factory owners to pursue mass production. The machines did not improve the quality of the product, and rather, often dramatically diminished it. But the more automated machinery could be overseen by untrained workers, so they reduced labor costs, even though this practice was often illegal: There were standards and laws that governed the cloth trade, that regulated things like thread count and product quality, as well as how long a worker had to serve as an apprentice before they could join the trade. Industrialists largely ignored these laws, in an early iteration of the &#8216;Move Fast and Break Things&#8217; ethos popularized by Facebook in our time.</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">By employing a host of cheaper, untrained laborers, which often included children indentured from orphanages and poor families, and focusing on volume, not quality, the industrialist could drive down prices, corner markets and run skilled workers out of business.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">As the 18th century wound down and the 19th began, the wages for clothworkers and artisans were plummeting. Early factory owners were concentrating wealth and power, enabling them to institute punishing working conditions and policies like paying workers in truck, or in goods produced by the factory, rather than money. </p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">Clothworkers, their wages in free fall, organized a campaign to push Parliament to address their concerns: They asked for protections like a minimum wage, a ban on paying workers in truck, and for factory owners to simply follow the laws that were already on the books. Some also submitted novel proposals, like taxing the extra length of cloth produced by automated machinery, and using the proceeds to fund welfare and training programs for workers&#8212;proposals that look a lot like &#8216;robot taxes&#8217; suggested today. Tens of thousands of clothworkers signed petitions calling for basic worker protections.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">You may already have guessed what happened next: They were roundly ignored. </p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">It&#8217;s important to underline this point. For nearly ten straight years, for much of the first decade of the 1800s, cloth workers tried to protest and petition peaceably, to do tings &#8220;the right way&#8221;, even though their options for recourse were severely limited. Unionizing, or &#8216;combining&#8217;, was illegal in England at the time, so they couldn&#8217;t collectively bargain. There was no true democracy, no elected officials to hold accountable for allowing exploitation to continue unabated. </p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">Eventually Parliament sided with the factory owners and threw out the remaining regulations governing the trade altogether. With thousands of workers impoverished to the point that they could not feed their families, and their backs against the wall, the Luddites rose up. </p><div class="captioned-image-container-static" style="font-size: 16px;line-height: 26px;margin: 32px auto;"><figure style="width: 100%;margin: 0 auto;"><table class="image-wrapper" width="100%" border="0" cellspacing="0" cellpadding="0" data-component-name="Image2ToDOMStatic" style="mso-padding-alt: 1em 0 1.6em;"><tbody><tr><td style="text-align: center;"></td><td class="content" align="left" width="818" style="text-align: center;"><a class="image-link" target="_blank" href="https://substack.com/redirect/7e0b6c67-f032-42b7-807e-074c8805226a?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="position: relative;flex-direction: column;align-items: center;padding: 0;width: auto;height: auto;border: none;text-decoration: none;display: block;margin: 0;"><img class="wide-image" data-attrs="{&quot;src&quot;:&quot;https://substack-post-media.s3.amazonaws.com/public/images/6fb31c69-199b-4e62-a5b5-e2284aee9337_818x460.png&quot;,&quot;srcNoWatermark&quot;:null,&quot;fullscreen&quot;:null,&quot;imageSize&quot;:null,&quot;height&quot;:460,&quot;width&quot;:818,&quot;resizeWidth&quot;:null,&quot;bytes&quot;:434521,&quot;alt&quot;:null,&quot;title&quot;:null,&quot;type&quot;:&quot;image/png&quot;,&quot;href&quot;:null,&quot;belowTheFold&quot;:true,&quot;topImage&quot;:false,&quot;internalRedirect&quot;:&quot;https://bloodinthemachine.substack.com/i/202157698?img=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F3cbe88c4-ab4c-4d80-a73c-599a9e3e7245_827x464.png&quot;,&quot;isProcessing&quot;:false,&quot;align&quot;:null,&quot;offset&quot;:false}" alt="" width="550" height="309.2909535452323" src="https://substackcdn.com/image/fetch/$s_!ZPFj!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6fb31c69-199b-4e62-a5b5-e2284aee9337_818x460.png" style="border: none !important;vertical-align: middle;display: block;-ms-interpolation-mode: bicubic;height: auto;margin-bottom: 0;width: auto !important;max-width: 100% !important;margin: 0 auto;"></a></td><td style="text-align: center;"></td></tr></tbody></table><figcaption class="image-caption" style="box-sizing: content-box;color: rgb(119,119,119);font-size: 14px;line-height: 20px;font-weight: 400;letter-spacing: -.15px;margin-top: 8px;width: 70%;padding-left: 15%;padding-right: 15%;text-align: center;">&#8220;The leader of the Luddites.&#8221;</figcaption></figure></div><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><strong>In Nottingham, in 1811,</strong><span> and drawing from a local tradition of dissent and, almost certainly, from the legend of Robin Hood, clothworkers who could bear no more launched a campaign targeting the worst offenders, those industrialists who paid the lowest wages and abused workers the most. They organized under the banner of Ned Ludd, an almost certainly fictitious avatar said to be an apprentice cloth worker. The legend went that Ned&#8217;s master had him whipped for being unproductive, so he smashed the master&#8217;s frames and fled into Sherwood forest. </span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">The Luddites wrote letters to factory bosses warning them to take down the &#8216;obnoxious&#8217; machines that had stolen the bread from their brothers&#8217; mouths. If they didn&#8217;t, Ned Ludd&#8217;s army showed up: a handful, dozens or even hundreds of men, organized in military formation, answering by assigned numbers, not names. They would sneak in through the windows or hold up the overseer at gunpoint, and methodically smash just those machines that were deskilling their work; just the ones being used to tear up the social contract. They left the machines that were not being used to, say, automate their jobs or facilitate child labor, alone. But they would exit with a warning; bring them back, and we&#8217;ll return to do the whole place. </p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">They were remarkably successful, for a time. After the initial outbreak of Luddism, factory bosses initially raised wages and negotiated deals with the workers, eager to protect their operations. They became heroes to many fellow workers, for fighting back against factorization and exploitation, for standing up to the powerful. When authorities demanded names of the Luddites perpetrating the machine-breaking, whole towns would stay silent; even when huge bounties were offered, no one came forward. </p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">Ultimately, Luddism didn&#8217;t fizzle out because it was unpopular; it was crushed by the state. The Prince Regent&#8217;s government deployed thousands of troops to the industrial districts alight with Luddite activity. It was the biggest domestic occupation in British history. Parliament passed laws that made it a capital crime to break a machine, or to take secret oaths, essentially making being a Luddite a crime punishable by death. (Lord Byron made his first speech to the house of Lords in a thunderous defense of the Luddites, but was ignored by his peers, if not the public.)</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">As a result, scores of Luddites were hung by the state, and many others were killed in riots and raids as the factory owners grew emboldened to take up arms against them. Luddism died out by the end of the 1810s, but not before it helped to inspire Mary Shelley&#8217;s Frankenstein, a new generation of labor organizing, and paved the way for a raft of serious reforms like the overturning of the anti-union laws. </p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">And yet, the Luddites today are still remembered as a punchline. As the cultural critic Theodore Rozak put it, &#8220;if the Luddites didn&#8217;t exist, their critics would have to invent them.&#8221; And to an extent, elites have done exactly this. By continually insisting that any criticism, objection, or resistance to commercial technologies are backwards looking, by linking objections to worker exploitation, antitrust violations, and surveillance to the Luddites, who dramatically lost their battle, they have turned a powerful working class movement with specific grievances about technological exploitation&#8212;and ideas about how to address it&#8212;into a caricature. </p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>That caricature is the reason that Bernie Sanders&#8217; ideas for regulating AI development, or pausing the breakneck data center expansion (an incredibly popular political proposition, by the way) gets him slapped with the term, derisively. Sanders himself felt compelled, as many do, to respond to the accusations in the defensive. He wrote, in </span><a href="https://substack.com/redirect/b84bfce5-8c69-465d-9cfe-b5ae1fd5e583?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">an op-ed for Fox News</a><span>, &#8220;Can AI and robotics help us in many ways? I am not a Luddite &#8212; I believe they can.&#8221; He argued that &#8220;we must make sure these new technologies benefit all of us, not just a handful of billionaires.&#8221; </span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>But that&#8217;s </span><em>exactly </em><span>what the Luddites would have wanted. Sanders </span><em>is </em><span>a luddite, after all. Because the Luddites do not deserve derision; they deserve our empathy, even our admiration. They refused to &#8220;lay down and die&#8221; as the elites of the day might have hoped they would, and as the historian Frank Peel put it&#8212;and fought for workers&#8217; rights despite everything.</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">What the Luddites fought for, after all, was ultimately pretty straightforward:</p><ul style="margin-top: 0;padding: 0;"><li style="margin: 8px 0 0 32px;mso-special-format: bullet;"><p style="color: rgb(54,55,55);line-height: 26px;margin-bottom: 0;box-sizing: border-box;padding-left: 4px;font-size: 16px;margin: 0;">Fair wages</p></li><li style="margin: 8px 0 0 32px;mso-special-format: bullet;"><p style="color: rgb(54,55,55);line-height: 26px;margin-bottom: 0;box-sizing: border-box;padding-left: 4px;font-size: 16px;margin: 0;">Checks on fraud and abuse</p></li><li style="margin: 8px 0 0 32px;mso-special-format: bullet;"><p style="color: rgb(54,55,55);line-height: 26px;margin-bottom: 0;box-sizing: border-box;padding-left: 4px;font-size: 16px;margin: 0;">A working life in which they maintained dignity and personal autonomy</p></li><li style="margin: 8px 0 0 32px;mso-special-format: bullet;"><p style="color: rgb(54,55,55);line-height: 26px;margin-bottom: 0;box-sizing: border-box;padding-left: 4px;font-size: 16px;margin: 0;">A seat at the table in deciding how technology would be used in their workplaces and communities</p></li><li style="margin: 8px 0 0 32px;mso-special-format: bullet;"><p style="color: rgb(54,55,55);line-height: 26px;margin-bottom: 0;box-sizing: border-box;padding-left: 4px;font-size: 16px;margin: 0;">To put down, not all machinery, but, as they put it in one of their most famous letter, &#8220;the machinery hurtful to commonality&#8221;</p></li></ul><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">The Luddites were not against progress or anti-technology. They were against exploitation; they were anti-poverty. </p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">Only when wages were pushed so low that workers could not feed their families, when the indignity of soulless factory work looked inevitable, when fraud and exploitation ran rampant, and they had exhausted every avenue to have their voices heard did the Luddites take up their hammer. </p><div class="captioned-image-container-static" style="font-size: 16px;line-height: 26px;margin: 32px auto;"><figure style="width: 100%;margin: 0 auto;"><table class="image-wrapper" width="100%" border="0" cellspacing="0" cellpadding="0" data-component-name="Image2ToDOMStatic" style="mso-padding-alt: 1em 0 1.6em;"><tbody><tr><td style="text-align: center;"></td><td class="content" align="left" width="819" style="text-align: center;"><a class="image-link" target="_blank" href="https://substack.com/redirect/500387c9-0a2b-4a0c-9c64-42317d9b0b12?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="position: relative;flex-direction: column;align-items: center;padding: 0;width: auto;height: auto;border: none;text-decoration: none;display: block;margin: 0;"><img class="wide-image" data-attrs="{&quot;src&quot;:&quot;https://substack-post-media.s3.amazonaws.com/public/images/eab422af-f54c-49a3-b9b5-8313e567ef3d_819x461.png&quot;,&quot;srcNoWatermark&quot;:null,&quot;fullscreen&quot;:null,&quot;imageSize&quot;:null,&quot;height&quot;:461,&quot;width&quot;:819,&quot;resizeWidth&quot;:null,&quot;bytes&quot;:323733,&quot;alt&quot;:null,&quot;title&quot;:null,&quot;type&quot;:&quot;image/png&quot;,&quot;href&quot;:null,&quot;belowTheFold&quot;:true,&quot;topImage&quot;:false,&quot;internalRedirect&quot;:&quot;https://bloodinthemachine.substack.com/i/202157698?img=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Feab422af-f54c-49a3-b9b5-8313e567ef3d_819x461.png&quot;,&quot;isProcessing&quot;:false,&quot;align&quot;:null,&quot;offset&quot;:false}" alt="" width="550" height="309.5848595848596" src="https://substackcdn.com/image/fetch/$s_!2smH!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Feab422af-f54c-49a3-b9b5-8313e567ef3d_819x461.png" style="border: none !important;vertical-align: middle;display: block;-ms-interpolation-mode: bicubic;height: auto;margin-bottom: 0;width: auto !important;max-width: 100% !important;margin: 0 auto;"></a></td><td style="text-align: center;"></td></tr></tbody></table></figure></div><div class="subscribe-widget is-signed-up" data-component-name="SubscribeWidget" style="margin: 0 0 1em;direction: ltr;font-size: 16px;line-height: 26px;"><div class="pencraft pc-reset button-wrapper" style="text-decoration: unset;list-style: none;font-size: 16px;line-height: 26px;text-align: center;cursor: pointer;border-radius: 4px;"><a class="button subscribe-btn primary" href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly9ibG9vZGludGhlbWFjaGluZS5zdWJzdGFjay5jb20vc3Vic2NyaWJlP3V0bV9zb3VyY2U9cG9zdCZ1dG1fY2FtcGFpZ249ZW1haWwtY2hlY2tvdXQmbmV4dD1odHRwcyUzQSUyRiUyRmJsb29kaW50aGVtYWNoaW5lLnN1YnN0YWNrLmNvbSUyRnAlMkZ1bmRlcnN0YW5kaW5nLXRoZS1sdWRkaXRlcy1pbi10aGUmcj02OWc4biZ0b2tlbj1leUoxYzJWeVgybGtJam94TURVeE9EWTBOeXdpYVdGMElqb3hOemd4T1RBMk16WTJMQ0psZUhBaU9qRTNPRFEwT1Rnek5qWXNJbWx6Y3lJNkluQjFZaTB4TnpRME16azFJaXdpYzNWaUlqb2lZMmhsWTJ0dmRYUWlmUS5vVWdUbWNXUVNFaklYX21lMzNDbENsNWdoYXJXSUVMUmhGSmN6OHd2VjJnIiwicCI6MjAyMTU3Njk4LCJzIjoxNzQ0Mzk1LCJmIjp0cnVlLCJ1IjoxMDUxODY0NywiaWF0IjoxNzgxOTA2MzY2LCJleHAiOjIwOTc0ODIzNjYsImlzcyI6InB1Yi0wIiwic3ViIjoibGluay1yZWRpcmVjdCJ9.NLcmb_nwsYb-Flh0QJLOkF_PGhMjGcieHnr7gjpIg6w?&utm_medium=email&utm_source=subscribe-widget&utm_content=202157698" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;box-sizing: border-box;cursor: pointer;border: none;border-radius: 8px;font-size: 14px;line-height: 20px;font-weight: 600;text-align: center;opacity: 1;outline: none;white-space: nowrap;text-decoration: none !important;margin: 0 auto;background-color: #000000;color: #ffffff !important;padding: 12px 20px;height: auto;"><span style="color: #ffffff;text-decoration: none;">Upgrade to paid</span></a></div></div><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><strong>We have arrived at another such moment</strong><span>, where concern, discontent, even anger over a new mass automation technology is on the rise. There is talk of a new Industrial Revolution, on a scale of the first or beyond. Tech giants and venture capitalists have poured hundreds of billions of dollars into AI firms, again concentrating wealth and power in a few controlling hands. The CEOs of those companies, meanwhile, are promising to replace millions of jobs with their software. </span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">Now, countless college graduates, software engineers, artists, writers, and translators describe a world of vanishing career opportunities. Fortune 500 companies are enacting mass layoffs&#8212;and blaming them on AI&#8212;every few months. Protests against the tech giants&#8217; data centers have erupted across the United States and beyond. Artists and authors are pursuing class action lawsuits against the AI companies for pirating, copying, and using their work to train their models without consent or compensation. </p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>These are not isolated incidents. A recent NBC poll found that 46% of respondents in the US had a negative view of AI, compared to 26% with a positive one. AI had a stunning net favorability rating among young people, those aged 18-34, of </span><strong>minus 44. </strong><span>Those young people can be seen in multiple viral videos, booing any commencement speakers at their college graduations who dare cheer on AI as the future.  </span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">Are all of these people Luddites? The artists filing class action lawsuits, students booing AI on college campuses, the farmers protesting data centers in the American south? Luddites, all? </p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">Well, yes. </p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">That is, if we mean the historically accurate definition of Luddite, not the caricature their critics have made them. However different their background, age, or politics, each of these groups have decided they are unwilling to let a handful of powerful companies determine the shape of their future&#8212;their working lives, the fabric of their community, their way of life&#8212;without a challenge.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">Like the original Luddites, they&#8217;re demanding a seat at the table as a new technology is integrated into society, and aiming to stop the bosses from using that technology to exploit them. There&#8217;s even a growing contingent of artists, workers, and thinkers who proudly embrace the Luddite label, adding the term to social media bios and sporting it on T-shirts. A group of students and activists have organized a weeks-long event series in New York called the Summer of Ludd. </p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>Also like the original Luddites, the opposition is usually not a blanket rejection of the technology itself. It&#8217;s</span><em> </em><span>focused on the </span><em>politics</em><span> of that technology: How it&#8217;s made, who it benefits, and who it harms. </span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">The anger over AI arises not from the mere existence of large language models, but over the fact that they were trained on works without creators consent. That billionaire executives are promising to use them to automate jobs en masse. That they are harmful or addictive to kids and the vulnerable. That in many parts of the world, the technology is almost completely unregulated. There&#8217;s anger that AI companies, like the factory owners two hundred years ago, aspire to be impervious to democracy. </p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">A big question of the AI age, to me, is whether it&#8217;s possible to subject the ultra-powerful interests currently guiding AI deployment&#8212;Elon Musk, the CEO of one major AI company, just became the world&#8217;s first trillionaire, for one&#8212;to a truly democratic process. A process that empowers and protects working people. And if so, how?  </p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">In the United States, the AI companies are lobbying to kill state level AI laws, accelerate the data center buildout, and elude regulation. They are pouring hundreds of millions of dollars into an effort to subvert democracy itself, as it pertains to their products. Can you hear the echoes yet? I can: There have already been multiple instances of violence; a man threw a molotov cocktail at OpenAI CEO Sam Altman&#8217;s house. Two others fired a shot outside it. In Indianapolis, a city council member who voted to approve a data center over the opposition of his community woke up to find his front door shot up, and a message that read &#8216;NO DATA CENTERS&#8217; on his porch. </p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">Two hundred years ago, factory owners and their supporters in Parliament wholly ignored the repeated entreaties from workers and citizens to give them a voice, to protect them from deskilling, displacement, and poverty, and instead tore up remaining labor laws and abetted the full-bore acceleration of mass automation on the industrialists&#8217; terms. The result was a violent crisis that brought Britain to the brink, followed by decades marked by some of the darkest days for industrial workers we&#8217;ve known. </p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">Now, there is no indication that a crisis of that magnitude is imminent. We don&#8217;t yet know what the long term impact of AI will be, whether it will be an excuse to lay off thousands of workers to trim balance sheets in the short term, used to supplant millions more permanently, or somewhere in between. We do know that it will be used to surveil workers, speed-up work, and be used as leverage against them. That&#8217;s already happening, right now. And we at least theoretically possess the tools to prevent sustained violent blowback&#8212;democracy, labor laws, and collective bargaining, to start, though the weakening of each is cause for alarm. So is the entrenchment of income inequality, the rise of a tech oligarchy, and the erosion of human rights. </p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>But we must be attentive to history; the real thing, not the sloganized version remodeled to benefit power. Returning to the Luddites reminds us that above all, workers and users must have a seat at the table. We need a real say, real empowerment, real </span><em>agency</em><span> over any technology that is made to reshape our workplaces, communities, and lives. And yes, we all deserve the right to break any machinery that proves hurtful to commonality. </span></p><div class="subscribe-widget is-signed-up" data-component-name="SubscribeWidget" style="margin: 0 0 1em;direction: ltr;font-size: 16px;line-height: 26px;"><div class="pencraft pc-reset button-wrapper" style="text-decoration: unset;list-style: none;font-size: 16px;line-height: 26px;text-align: center;cursor: pointer;border-radius: 4px;"><a class="button subscribe-btn primary" href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly9ibG9vZGludGhlbWFjaGluZS5zdWJzdGFjay5jb20vc3Vic2NyaWJlP3V0bV9zb3VyY2U9cG9zdCZ1dG1fY2FtcGFpZ249ZW1haWwtY2hlY2tvdXQmbmV4dD1odHRwcyUzQSUyRiUyRmJsb29kaW50aGVtYWNoaW5lLnN1YnN0YWNrLmNvbSUyRnAlMkZ1bmRlcnN0YW5kaW5nLXRoZS1sdWRkaXRlcy1pbi10aGUmcj02OWc4biZ0b2tlbj1leUoxYzJWeVgybGtJam94TURVeE9EWTBOeXdpYVdGMElqb3hOemd4T1RBMk16WTJMQ0psZUhBaU9qRTNPRFEwT1Rnek5qWXNJbWx6Y3lJNkluQjFZaTB4TnpRME16azFJaXdpYzNWaUlqb2lZMmhsWTJ0dmRYUWlmUS5vVWdUbWNXUVNFaklYX21lMzNDbENsNWdoYXJXSUVMUmhGSmN6OHd2VjJnIiwicCI6MjAyMTU3Njk4LCJzIjoxNzQ0Mzk1LCJmIjp0cnVlLCJ1IjoxMDUxODY0NywiaWF0IjoxNzgxOTA2MzY2LCJleHAiOjIwOTc0ODIzNjYsImlzcyI6InB1Yi0wIiwic3ViIjoibGluay1yZWRpcmVjdCJ9.NLcmb_nwsYb-Flh0QJLOkF_PGhMjGcieHnr7gjpIg6w?&utm_medium=email&utm_source=subscribe-widget&utm_content=202157698" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;box-sizing: border-box;cursor: pointer;border: none;border-radius: 8px;font-size: 14px;line-height: 20px;font-weight: 600;text-align: center;opacity: 1;outline: none;white-space: nowrap;text-decoration: none !important;margin: 0 auto;background-color: #000000;color: #ffffff !important;padding: 12px 20px;height: auto;"><span style="color: #ffffff;text-decoration: none;">Upgrade to paid</span></a></div></div><div style="font-size: 16px;line-height: 26px;"><hr style="margin: 32px 0;padding: 0;height: 1px;background: rgb(0,0,0,.1);border: none;"></div><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">NEXT WEEK, If all goes according to plan, we&#8217;ll soft launch the slightly more official and definitely more regular version BLOOD IN THE MACHINE: THE PODCAST. Friend of the Blood Koren Shadmi has whipped up some killer cover art, and I&#8217;m pretty enthused. More very soon. </p><div class="captioned-image-container-static" style="font-size: 16px;line-height: 26px;margin: 32px auto;"><figure style="width: 100%;margin: 0 auto;"><table class="image-wrapper" width="100%" border="0" cellspacing="0" cellpadding="0" data-component-name="Image2ToDOMStatic" style="mso-padding-alt: 1em 0 1.6em;"><tbody><tr><td style="text-align: center;"></td><td class="content" align="left" width="945" style="text-align: center;"><a class="image-link" target="_blank" href="https://substack.com/redirect/f2feee0f-e5fe-42de-a3a5-592f1ef13207?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="position: relative;flex-direction: column;align-items: center;padding: 0;width: auto;height: auto;border: none;text-decoration: none;display: block;margin: 0;"><img class="wide-image" data-attrs="{&quot;src&quot;:&quot;https://substack-post-media.s3.amazonaws.com/public/images/effa7e10-c3c1-4cbc-a408-cb44d0cd2796_945x945.jpeg&quot;,&quot;srcNoWatermark&quot;:null,&quot;fullscreen&quot;:null,&quot;imageSize&quot;:null,&quot;height&quot;:945,&quot;width&quot;:945,&quot;resizeWidth&quot;:null,&quot;bytes&quot;:267893,&quot;alt&quot;:null,&quot;title&quot;:null,&quot;type&quot;:&quot;image/jpeg&quot;,&quot;href&quot;:null,&quot;belowTheFold&quot;:true,&quot;topImage&quot;:false,&quot;internalRedirect&quot;:&quot;https://bloodinthemachine.substack.com/i/202157698?img=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Feffa7e10-c3c1-4cbc-a408-cb44d0cd2796_945x945.jpeg&quot;,&quot;isProcessing&quot;:false,&quot;align&quot;:null,&quot;offset&quot;:false}" alt="" width="550" height="550" src="https://substackcdn.com/image/fetch/$s_!00Z7!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Feffa7e10-c3c1-4cbc-a408-cb44d0cd2796_945x945.jpeg" style="border: none !important;vertical-align: middle;display: block;-ms-interpolation-mode: bicubic;height: auto;margin-bottom: 0;width: auto !important;max-width: 100% !important;margin: 0 auto;"></a></td><td style="text-align: center;"></td></tr></tbody></table></figure></div><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>Some friends at the California Labor Federation passed along this call from the California Governor </span><a href="https://substack.com/redirect/3a806a13-df54-4218-ba7f-c516c02d9e00?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">for testimonies</a><span> as to how AI has impacted your working life. The accounts will allegedly be used to help shape policy, so in the interest of ensuring workers are represented among the inevitable deluge of pro-AI stories solicited by the firms, consider </span><a href="https://substack.com/redirect/7f4887c6-021e-44d3-b473-9caef545671d?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">participating</a><span> and evening the scales. </span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">Finally, a couple must reads here, too: </p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>-Fred Turner, author of From </span><a href="https://substack.com/redirect/d49b8f62-972b-4dd4-a88f-c8a529af7f72?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">Counterculture to Cyberculture</a><span>, the seminal study of Silicon Valley, has </span><a href="https://substack.com/redirect/56acaaa9-88fa-46d2-8212-bbbb8518d889?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">a new piece in the Baffler</a><span> arguing that the California Ideology&#8212;the blend of hippie/back-to-the-land countercultural tendencies and libertarian, pro-market politics that came to define the modern tech sector&#8212;has been edged out in favor of the Texan Ideology; a nativist, extractivist tendency comprised of Christian nativism and a will to dominate. It&#8217;s short and good!</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>-Dell Cameron has </span><a href="https://substack.com/redirect/a0248786-4683-4df5-9675-972609c5fd82?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">some great reporting in WIRED</a><span> about Peter Thiel&#8217;s weird Dialog project, a &#8220;secret society&#8221; of rich and famous people who join for an off the record annual meeting, whose names have now been made public. These include an apparently flummoxed Josh Brolin and, for some reason, Ezra Klein. Abundance knows no bounds, I guess. </span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">OK OK OK. That&#8217;s it for today. Many thanks as always for reading, and I&#8217;ll see you out there in the Summer of Ludd. </p><div class="footnote" data-component-name="FootnoteToDOMStatic" style="line-height: 26px;display: flex;border-top: solid 1px rgb(0,0,0,.1);padding-top: 1.5em;font-size: 90%;flex-direction: row;align-items: baseline;"><span class="footnote-number" style="display: block;margin-right: 6px;min-width: 24px;">1</span><div class="footnote-content" style="font-size: 16px;line-height: 26px;display: block;"><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;min-width: 10px;"><span>I cannot recommend Binfield and Cherry&#8217;s work enough; Binfield edited </span><em><a href="https://substack.com/redirect/1cc52866-2287-44bf-92f5-0af6045614e7?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">Writings of the Luddites</a><span>, </span></em><span>a wonderful collection of Luddite writings, illuminated with historical context and commentary; Cherry wrote </span><a href="https://substack.com/redirect/35f5d51b-382b-4875-9df9-bf00ed748544?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">this amazing speculative alternate history in which the Luddites won their fight against the industrialists</a><span>, which leads to more equitable arrangements of work, technology, and power. </span></p></div></div><div class="footnote" data-component-name="FootnoteToDOMStatic" style="line-height: 26px;display: flex;font-size: 90%;flex-direction: row;align-items: baseline;border-top: none;padding-top: 0;"><span class="footnote-number" style="display: block;margin-right: 6px;min-width: 24px;">2</span><div class="footnote-content" style="font-size: 16px;line-height: 26px;display: block;"><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;min-width: 10px;"><span>For more information on the Summer of Ludd, see </span><a href="https://substack.com/redirect/f7830fba-4a58-4656-acca-a74f733a73a6?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">this newsletter edition</a><span>; scroll down, it&#8217;s about halfway through.</span></p></div></div><div class="footnote" data-component-name="FootnoteToDOMStatic" style="line-height: 26px;display: flex;font-size: 90%;flex-direction: row;align-items: baseline;margin-bottom: 0;border-top: none;padding-top: 0;"><span class="footnote-number" style="display: block;margin-right: 6px;min-width: 24px;">3</span><div class="footnote-content" style="font-size: 16px;line-height: 26px;display: block;"><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;min-width: 10px;">The term had only just begun to enter into use, and, having been coined by Jean Baptiste-Say in 1803, was not yet widespread.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;min-width: 10px;"></p></div></div></div></div><div class="container-border" style="margin: 32px 0 0;width: 100%;box-sizing: border-box;border-top: 1px solid #e6e6e6;font-size: 16px;line-height: 26px;"></div><div class="post-cta typography markup" style="--image-offset-margin: -120px;font-family: 'SF Pro Display', -apple-system, system-ui, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';font-weight: 400;text-align: initial;word-break: break-word;margin-bottom: 32px;margin: 32px 0;font-size: 16px;line-height: 26px;"><p style="color: rgb(54,55,55);margin: 0 auto 20px;text-align: center;width: 90%;line-height: 26px;font-size: 16px;margin-top: 0;"><span class="pencraft pc-reset reset-IxiVJZ" translated="" style="list-style: none;color: unset;text-decoration: unset;margin: 0;">You're currently a free subscriber to <a href="https://substack.com/redirect/9bcbdc64-7ae4-4150-b324-8e7d45d1892c?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">Blood in the Machine</a>. For the full experience, <a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly9ibG9vZGludGhlbWFjaGluZS5zdWJzdGFjay5jb20vc3Vic2NyaWJlP3V0bV9zb3VyY2U9cG9zdCZ1dG1fY2FtcGFpZ249ZW1haWwtY2hlY2tvdXQmbmV4dD1odHRwcyUzQSUyRiUyRmJsb29kaW50aGVtYWNoaW5lLnN1YnN0YWNrLmNvbSUyRnAlMkZ1bmRlcnN0YW5kaW5nLXRoZS1sdWRkaXRlcy1pbi10aGUmcj02OWc4biZ0b2tlbj1leUoxYzJWeVgybGtJam94TURVeE9EWTBOeXdpYVdGMElqb3hOemd4T1RBMk16WTJMQ0psZUhBaU9qRTNPRFEwT1Rnek5qWXNJbWx6Y3lJNkluQjFZaTB4TnpRME16azFJaXdpYzNWaUlqb2lZMmhsWTJ0dmRYUWlmUS5vVWdUbWNXUVNFaklYX21lMzNDbENsNWdoYXJXSUVMUmhGSmN6OHd2VjJnIiwicCI6MjAyMTU3Njk4LCJzIjoxNzQ0Mzk1LCJmIjp0cnVlLCJ1IjoxMDUxODY0NywiaWF0IjoxNzgxOTA2MzY2LCJleHAiOjIwOTc0ODIzNjYsImlzcyI6InB1Yi0wIiwic3ViIjoibGluay1yZWRpcmVjdCJ9.NLcmb_nwsYb-Flh0QJLOkF_PGhMjGcieHnr7gjpIg6w?&utm_source=substack&utm_medium=email&utm_content=postcta" style="color: rgb(54,55,55);text-decoration: underline;">upgrade your subscription.</a></span></p><p class="cta-box" style="color: rgb(54,55,55);margin: 0 auto 20px;width: 90%;line-height: 26px;font-size: 16px;margin-bottom: 0;text-align: center;margin-left: auto;margin-right: auto;"><a class="button primary" role="button" href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly9ibG9vZGludGhlbWFjaGluZS5zdWJzdGFjay5jb20vc3Vic2NyaWJlP3V0bV9zb3VyY2U9cG9zdCZ1dG1fY2FtcGFpZ249ZW1haWwtY2hlY2tvdXQmbmV4dD1odHRwcyUzQSUyRiUyRmJsb29kaW50aGVtYWNoaW5lLnN1YnN0YWNrLmNvbSUyRnAlMkZ1bmRlcnN0YW5kaW5nLXRoZS1sdWRkaXRlcy1pbi10aGUmcj02OWc4biZ0b2tlbj1leUoxYzJWeVgybGtJam94TURVeE9EWTBOeXdpYVdGMElqb3hOemd4T1RBMk16WTJMQ0psZUhBaU9qRTNPRFEwT1Rnek5qWXNJbWx6Y3lJNkluQjFZaTB4TnpRME16azFJaXdpYzNWaUlqb2lZMmhsWTJ0dmRYUWlmUS5vVWdUbWNXUVNFaklYX21lMzNDbENsNWdoYXJXSUVMUmhGSmN6OHd2VjJnIiwicCI6MjAyMTU3Njk4LCJzIjoxNzQ0Mzk1LCJmIjp0cnVlLCJ1IjoxMDUxODY0NywiaWF0IjoxNzgxOTA2MzY2LCJleHAiOjIwOTc0ODIzNjYsImlzcyI6InB1Yi0wIiwic3ViIjoibGluay1yZWRpcmVjdCJ9.NLcmb_nwsYb-Flh0QJLOkF_PGhMjGcieHnr7gjpIg6w?&utm_source=substack&utm_medium=email&utm_content=postcta" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;box-sizing: border-box;cursor: pointer;border: none;height: 40px;border-radius: 8px;font-size: 14px;line-height: 20px;font-weight: 600;text-align: center;padding: 10px 20px;margin: 0;opacity: 1;outline: none;white-space: nowrap;color: #ffffff !important;text-decoration: none !important;background-color: #000000;">Upgrade to paid</a></p></div><table class="email-ufi-2-bottom" role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="border-top: 1px solid rgb(0,0,0,.1);border-bottom: 1px solid rgb(0,0,0,.1);min-width: 100%;"><tbody><tr height="16"><td height="16" style="font-size:0px;line-height:0;">&nbsp;</td></tr><tr><td><table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0" style="margin:0 auto;"><tbody><tr><td style="vertical-align:middle;"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="center"><a class="email-button-outline" href="https://substack.com/app-link/post?publication_id=1744395&post_id=202157698&utm_source=substack&isFreemail=true&submitLike=true&token=eyJ1c2VyX2lkIjoxMDUxODY0NywicG9zdF9pZCI6MjAyMTU3Njk4LCJyZWFjdGlvbiI6IuKdpCIsImlhdCI6MTc4MTkwNjM2NiwiZXhwIjoxNzg0NDk4MzY2LCJpc3MiOiJwdWItMTc0NDM5NSIsInN1YiI6InJlYWN0aW9uIn0.EvQz6fWZLc3q9GepPpuRjgdpG5WUdwTymZZ3u_8bCuQ&utm_medium=email&utm_campaign=email-reaction&r=69g8n" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;font-weight: 500;border: 1px solid rgb(0,0,0,.1);border-radius: 9999px;text-transform: uppercase;font-size: 12px;line-height: 12px;padding: 9px 14px;text-decoration: none;color: rgb(119,119,119);"><img class="icon" src="https://substackcdn.com/image/fetch/$s_!PeVs!,w_36,c_scale,f_png,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Ficon%2FLucideHeart%3Fv%3D4%26height%3D36%26fill%3Dnone%26stroke%3D%2523808080%26strokeWidth%3D2" width="18" height="18" style="margin-right: 8px;min-width: 18px;min-height: 18px;border: none;vertical-align: middle;max-width: 18px" alt=""><span class="email-button-text" style="vertical-align: middle;">Like</span></a></td></tr></tbody></table></td><td width="8" style="min-width:8px;"></td><td style="vertical-align:middle;"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="center"><a class="email-button-outline" href="https://substack.com/app-link/post?publication_id=1744395&post_id=202157698&utm_source=substack&utm_medium=email&isFreemail=true&comments=true&token=eyJ1c2VyX2lkIjoxMDUxODY0NywicG9zdF9pZCI6MjAyMTU3Njk4LCJpYXQiOjE3ODE5MDYzNjYsImV4cCI6MTc4NDQ5ODM2NiwiaXNzIjoicHViLTE3NDQzOTUiLCJzdWIiOiJwb3N0LXJlYWN0aW9uIn0.2C2eap5vdkLFD1XnhnX5pRIiIxpl2W_pkYu-2dti3RU&r=69g8n&utm_campaign=email-half-magic-comments&action=post-comment&utm_source=substack&utm_medium=email" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;font-weight: 500;border: 1px solid rgb(0,0,0,.1);border-radius: 9999px;text-transform: uppercase;font-size: 12px;line-height: 12px;padding: 9px 14px;text-decoration: none;color: rgb(119,119,119);"><img class="icon" src="https://substackcdn.com/image/fetch/$s_!x1tS!,w_36,c_scale,f_png,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Ficon%2FLucideComments%3Fv%3D4%26height%3D36%26fill%3Dnone%26stroke%3D%2523808080%26strokeWidth%3D2" width="18" height="18" style="margin-right: 8px;min-width: 18px;min-height: 18px;border: none;vertical-align: middle;max-width: 18px" alt=""><span class="email-button-text" style="vertical-align: middle;">Comment</span></a></td></tr></tbody></table></td><td width="8" style="min-width:8px;"></td><td style="vertical-align:middle;"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="center"><a class="email-button-outline" href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly9vcGVuLnN1YnN0YWNrLmNvbS9wdWIvYmxvb2RpbnRoZW1hY2hpbmUvcC91bmRlcnN0YW5kaW5nLXRoZS1sdWRkaXRlcy1pbi10aGU_dXRtX3NvdXJjZT1zdWJzdGFjayZ1dG1fbWVkaXVtPWVtYWlsJnV0bV9jYW1wYWlnbj1lbWFpbC1yZXN0YWNrLWNvbW1lbnQmYWN0aW9uPXJlc3RhY2stY29tbWVudCZyPTY5ZzhuJnRva2VuPWV5SjFjMlZ5WDJsa0lqb3hNRFV4T0RZME55d2ljRzl6ZEY5cFpDSTZNakF5TVRVM05qazRMQ0pwWVhRaU9qRTNPREU1TURZek5qWXNJbVY0Y0NJNk1UYzRORFE1T0RNMk5pd2lhWE56SWpvaWNIVmlMVEUzTkRRek9UVWlMQ0p6ZFdJaU9pSndiM04wTFhKbFlXTjBhVzl1SW4wLjJDMmVhcDV2ZGtMRkQxWG5oblg1cFJJaUl4cGwyV19wa1l1LTJkdGkzUlUiLCJwIjoyMDIxNTc2OTgsInMiOjE3NDQzOTUsImYiOnRydWUsInUiOjEwNTE4NjQ3LCJpYXQiOjE3ODE5MDYzNjYsImV4cCI6MjA5NzQ4MjM2NiwiaXNzIjoicHViLTAiLCJzdWIiOiJsaW5rLXJlZGlyZWN0In0.-wFWZRTOGnQGYNrynVZ_N_rOMHYvbZekKovCMCmsf7g?&utm_source=substack&utm_medium=email" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;font-weight: 500;border: 1px solid rgb(0,0,0,.1);border-radius: 9999px;text-transform: uppercase;font-size: 12px;line-height: 12px;padding: 9px 14px;text-decoration: none;color: rgb(119,119,119);"><img class="icon" src="https://substackcdn.com/image/fetch/$s_!ubXF!,w_36,c_scale,f_png,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Ficon%2Fnotes__NoteRestackIcon%3Fv%3D4%26height%3D36%26fill%3Dnone%26stroke%3D%2523808080%26strokeWidth%3D2%26strokeLinecap%3Dround%26strokeLinejoin%3Dround" width="18" height="18" alt="" style="margin-right: 8px;min-width: 18px;min-height: 18px;max-width: 550px;border: none !important;vertical-align: middle;"><span class="email-button-text" style="vertical-align: middle;">Restack</span></a></td></tr></tbody></table></td></tr></tbody></table></td><td align="right"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr></tr></tbody></table></td></tr></tbody></table></td></tr><tr height="16"><td height="16" style="font-size:0px;line-height:0;">&nbsp;</td></tr></tbody></table><div class="footer footer-ZM59BM" style="color: rgb(119,119,119);text-align: center;font-size: 16px;line-height: 26px;padding: 24px0;"><div style="font-size: 16px;line-height: 26px;padding-bottom: 24px"><p class="pencraft pc-reset color-secondary-ls1g8s size-12-mmZ61m reset-IxiVJZ small meta-B2bqa5" style="list-style: none;font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';padding-bottom: 0;font-size: 12px;line-height: 16px;margin: 0;color: rgb(119,119,119);text-decoration: unset;">&#169; 2026 <span>Brian Merchant</span><br>548 Market Street PMB 72296, San Francisco, CA 94104 <br><a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly9ibG9vZGludGhlbWFjaGluZS5zdWJzdGFjay5jb20vYWN0aW9uL2Rpc2FibGVfZW1haWw_dG9rZW49ZXlKMWMyVnlYMmxrSWpveE1EVXhPRFkwTnl3aWNHOXpkRjlwWkNJNk1qQXlNVFUzTmprNExDSnBZWFFpT2pFM09ERTVNRFl6TmpZc0ltVjRjQ0k2TVRneE16UTBNak0yTml3aWFYTnpJam9pY0hWaUxURTNORFF6T1RVaUxDSnpkV0lpT2lKa2FYTmhZbXhsWDJWdFlXbHNJbjAubG8zRk4yMDh2TlVBRWRQTWFuUWJMQnNYZTQ2NFFlMXJyRVpxYmVCbUlERSIsInAiOjIwMjE1NzY5OCwicyI6MTc0NDM5NSwiZiI6dHJ1ZSwidSI6MTA1MTg2NDcsImlhdCI6MTc4MTkwNjM2NiwiZXhwIjoyMDk3NDgyMzY2LCJpc3MiOiJwdWItMCIsInN1YiI6ImxpbmstcmVkaXJlY3QifQ.km5etvY1baoQW9gcM10hdInL3akvGOUniMQqGXrjhc4?" style="text-decoration: underline;color: rgb(119,119,119);"><span style="color: rgb(119,119,119);text-decoration: underline;">Unsubscribe</span></a></p></div><p class="footerSection-EHR0jG small powered-by-substack" style="padding: 0 24px;font-size: 12px;line-height: 20px;margin: 0;color: rgb(119,119,119);font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';padding-bottom: 0;margin-top: 0;"><a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly9zdWJzdGFjay5jb20vc2lnbnVwP3V0bV9zb3VyY2U9c3Vic3RhY2smdXRtX21lZGl1bT1lbWFpbCZ1dG1fY29udGVudD1mb290ZXImdXRtX2NhbXBhaWduPWF1dG9maWxsZWQtZm9vdGVyJmZyZWVTaWdudXBFbWFpbD1iZW5vaXRjQGdtYWlsLmNvbSZyPTY5ZzhuIiwicCI6MjAyMTU3Njk4LCJzIjoxNzQ0Mzk1LCJmIjp0cnVlLCJ1IjoxMDUxODY0NywiaWF0IjoxNzgxOTA2MzY2LCJleHAiOjIwOTc0ODIzNjYsImlzcyI6InB1Yi0wIiwic3ViIjoibGluay1yZWRpcmVjdCJ9.rjEC8OaGYQvu484YqzJ2uo8vfBOBYLiuHruCR6L22oc?" style="color: rgb(119,119,119);text-decoration: none;display: inline-block;margin: 0 4px;"><img src="https://substackcdn.com/image/fetch/$s_!LkrL!,w_270,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Fimg%2Femail%2Fpublish-button%402x.png" srcset="https://substackcdn.com/image/fetch/$s_!wgfj!,w_135,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Fimg%2Femail%2Fpublish-button.png, https://substackcdn.com/image/fetch/$s_!LkrL!,w_270,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Fimg%2Femail%2Fpublish-button%402x.png 2x, https://substackcdn.com/image/fetch/$s_!KjtY!,w_405,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Fimg%2Femail%2Fpublish-button%403x.png 3x" width="135" alt="Start writing" height="40" style="max-width: 550px;border: none !important;vertical-align: middle;"></a></p></div></div></td><td></td></tr></tbody></table><img src="https://eotrx.substackcdn.com/o/618c97909676397c/p.gif?token=eyJtIjoiPDIwMjYwNjE5MjE1OTExLjMuNWM2OTNkYmJkMmJmZDlmMEBtZy1kMC5zdWJzdGFjay5jb20-IiwidSI6MTA1MTg2NDcsInIiOiJiZW5vaXRjQGdtYWlsLmNvbSIsImQiOiJtZy1kMC5zdWJzdGFjay5jb20iLCJwIjoyMDIxNTc2OTgsInQiOiJuZXdzbGV0dGVyIiwiYSI6ImV2ZXJ5b25lIiwicyI6MTc0NDM5NSwiYyI6InBvc3QiLCJmIjp0cnVlLCJwb3NpdGlvbiI6ImJvdHRvbSIsImlhdCI6MTc4MTkwNjM2NiwiZXhwIjoxNzg0NDk4MzY2LCJpc3MiOiJwdWItMCIsInN1YiI6ImVvIn0.FwwDSU3ds_2W4x60AUeu3yznThkUyd6aiPYfa7XfnIE" alt="" width="1" height="1" border="0" style="height:1px !important;width:1px !important;border-width:0 !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:0 !important;margin-left:0 !important;padding-top:0 !important;padding-bottom:0 !important;padding-right:0 !important;padding-left:0 !important;"/><img width="1" height="1" alt="" src="https://email.mg-d0.substack.com/o/eJxEkNHOoyAQRp_m527NIIpywbOYAUZLVqCBoRvffmPb5L89k5w5-TwyHaVe9lkai2C1wn0OgqxcVmlAK70IShjP7aBMFZnChvx71XqR4mFBwqR20ABrwBm12ScwSqEGOS67RBHtCKMGLc0oZyPloIbZa6OCc2F0ezA7_EyQjj8BhtZdY_R_B1-SiG3bK70TLNdO4g7dsIdI2ZOlF9Wr5C-O4X4j50Wb9UP4epLN9K-dxExVPLvbfEmp58jXRhndSeEr7u6MHjmWfIvkMk3KzKJaR7lE9j8THHfGO6t1F0rCmK07Swkx84MS-kfMJPgzZm9U3yKY5aqnRbzs-D8AAP__dpR5iA"></body></html></body></html>
