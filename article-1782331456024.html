@@ -1,0 +1,787 @@
+<html><head><meta name="robots" content="noindex"><title>Make AI Boring Again</title></head><body><html lang="en" dir="ltr" style="scrollbar-width: thin;scrollbar-color: rgb(219,219,219)rgb(255,255,255);"><head><meta charset="utf-8"><title>Make AI Boring Again</title><style>
+@media (max-width: 1024px) {
+  .typography .pullquote-align-left,
+  .typography.editor .pullquote-align-left,
+  .typography .pullquote-align-right,
+  .typography.editor .pullquote-align-right,
+  .typography .pullquote-align-wide,
+  .typography.editor .pullquote-align-wide,
+  .typography .pullquote-align-center,
+  .typography.editor .pullquote-align-center {
+    float: none;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .typography .markup table.image-wrapper img,
+  .typography.editor .markup table.image-wrapper img,
+  .typography .markup table.kindle-wrapper img,
+  .typography.editor .markup table.kindle-wrapper img {
+    max-width: 550px;
+  }
+}
+@media (min-width: 1024px) {
+  .typography:not(:has(#toc)) .captioned-image-container figure:has(> a.image2-offset-left),
+  .typography.editor:not(:has(#toc)) .captioned-image-container figure:has(> a.image2-offset-left) {
+    margin-left: var(--image-offset-margin);
+  }
+  .typography:not(:has(#toc)) .captioned-image-container figure:has(> a.image2-offset-right),
+  .typography.editor:not(:has(#toc)) .captioned-image-container figure:has(> a.image2-offset-right) {
+    margin-right: var(--image-offset-margin);
+  }
+}
+@media (min-width: 1300px) {
+  .typography .captioned-image-container figure:has(> a.image2-offset-left),
+  .typography.editor .captioned-image-container figure:has(> a.image2-offset-left) {
+    margin-left: var(--image-offset-margin);
+  }
+  .typography .captioned-image-container figure:has(> a.image2-offset-right),
+  .typography.editor .captioned-image-container figure:has(> a.image2-offset-right) {
+    margin-right: var(--image-offset-margin);
+  }
+}
+@media (max-width: 1024px) {
+  .typography,
+  .typography.editor {
+    /* Disable offset on mobile/tablet */
+  }
+  .typography .captioned-image-container figure:has(> a.image2-align-left),
+  .typography.editor .captioned-image-container figure:has(> a.image2-align-left),
+  .typography .captioned-image-container figure:has(> a.image2-align-right),
+  .typography.editor .captioned-image-container figure:has(> a.image2-align-right) {
+    float: none;
+    margin: 1em auto;
+    max-width: 100%;
+    width: auto;
+    padding: 0;
+  }
+  .typography .captioned-image-container figure:has(> a.image2-align-left.thefp),
+  .typography.editor .captioned-image-container figure:has(> a.image2-align-left.thefp),
+  .typography .captioned-image-container figure:has(> a.image2-align-right.thefp),
+  .typography.editor .captioned-image-container figure:has(> a.image2-align-right.thefp) {
+    margin: 1em auto;
+  }
+  .typography .captioned-image-container figure:has(> a.image2-offset-left),
+  .typography.editor .captioned-image-container figure:has(> a.image2-offset-left),
+  .typography .captioned-image-container figure:has(> a.image2-offset-right),
+  .typography.editor .captioned-image-container figure:has(> a.image2-offset-right) {
+    margin: 1em auto;
+  }
+  .typography .captioned-image-container figure:has(> a.image2-align-left) .image2-inset,
+  .typography.editor .captioned-image-container figure:has(> a.image2-align-left) .image2-inset,
+  .typography .captioned-image-container figure:has(> a.image2-align-right) .image2-inset,
+  .typography.editor .captioned-image-container figure:has(> a.image2-align-right) .image2-inset {
+    display: block;
+    justify-content: initial;
+  }
+}
+@media (max-width: 768px) {
+  .typography .markup div.sponsorship-campaign-embed,
+  .typography.editor .markup div.sponsorship-campaign-embed {
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+  .typography .markup div.sponsorship-campaign-embed:first-child,
+  .typography.editor .markup div.sponsorship-campaign-embed:first-child {
+    margin-top: 0px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .typography .markup div.youtube-overlay,
+  .typography.editor .markup div.youtube-overlay,
+  .typography .markup div.vimeo-overlay,
+  .typography.editor .markup div.vimeo-overlay {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 370px) {
+  .typography .markup div.tiktok-wrap,
+  .typography.editor .markup div.tiktok-wrap {
+    width: calc(95vw - 32px);
+    height: calc((95vw - 32px - 2px) / 0.485714);
+  }
+}
+@media screen and (max-width: 650px) {
+  .typography .markup div.embedded-publication-wrap .embedded-publication.show-subscribe,
+  .typography.editor .markup div.embedded-publication-wrap .embedded-publication.show-subscribe {
+    padding: 24px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .typography .markup div.subscription-widget-wrap .subscription-widget.show-subscribe,
+  .typography.editor .markup div.subscription-widget-wrap .subscription-widget.show-subscribe,
+  .typography .markup div.subscription-widget-wrap-editor .subscription-widget.show-subscribe,
+  .typography.editor .markup div.subscription-widget-wrap-editor .subscription-widget.show-subscribe,
+  .typography .markup div.captioned-button-wrap .subscription-widget.show-subscribe,
+  .typography.editor .markup div.captioned-button-wrap .subscription-widget.show-subscribe {
+    padding: 0px 24px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .typography .markup div.subscription-widget-wrap .subscription-widget.show-subscribe .subscription-widget-subscribe .button,
+  .typography.editor .markup div.subscription-widget-wrap .subscription-widget.show-subscribe .subscription-widget-subscribe .button,
+  .typography .markup div.subscription-widget-wrap-editor .subscription-widget.show-subscribe .subscription-widget-subscribe .button,
+  .typography.editor .markup div.subscription-widget-wrap-editor .subscription-widget.show-subscribe .subscription-widget-subscribe .button,
+  .typography .markup div.captioned-button-wrap .subscription-widget.show-subscribe .subscription-widget-subscribe .button,
+  .typography.editor .markup div.captioned-button-wrap .subscription-widget.show-subscribe .subscription-widget-subscribe .button {
+    padding: 10px 12px;
+    min-width: 110px;
+  }
+}
+@media (max-width: 650px) {
+  .typography .markup .twitter-embed,
+  .typography.editor .markup .twitter-embed,
+  .typography .markup .tweet,
+  .typography.editor .markup .tweet {
+    padding: 12px;
+  }
+}
+@media (max-width: 650px) {
+  .typography .markup .twitter-embed .tweet-text,
+  .typography.editor .markup .twitter-embed .tweet-text,
+  .typography .markup .tweet .tweet-text,
+  .typography.editor .markup .tweet .tweet-text {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+@media (max-width: 650px) {
+  .typography .markup .twitter-embed .tweet-photos-container.two,
+  .typography.editor .markup .twitter-embed .tweet-photos-container.two,
+  .typography .markup .tweet .tweet-photos-container.two,
+  .typography.editor .markup .tweet .tweet-photos-container.two,
+  .typography .markup .twitter-embed .tweet-photos-container.three,
+  .typography.editor .markup .twitter-embed .tweet-photos-container.three,
+  .typography .markup .tweet .tweet-photos-container.three,
+  .typography.editor .markup .tweet .tweet-photos-container.three,
+  .typography .markup .twitter-embed .tweet-photos-container.four,
+  .typography.editor .markup .twitter-embed .tweet-photos-container.four,
+  .typography .markup .tweet .tweet-photos-container.four,
+  .typography.editor .markup .tweet .tweet-photos-container.four {
+    height: 200px;
+  }
+}
+@media (max-width: 650px) {
+  .typography .markup .twitter-embed a.expanded-link .expanded-link-img,
+  .typography.editor .markup .twitter-embed a.expanded-link .expanded-link-img,
+  .typography .markup .tweet a.expanded-link .expanded-link-img,
+  .typography.editor .markup .tweet a.expanded-link .expanded-link-img {
+    max-height: 180px;
+  }
+}
+@media (max-width: 650px) {
+  .typography .markup .twitter-embed a.expanded-link .expanded-link-description,
+  .typography.editor .markup .twitter-embed a.expanded-link .expanded-link-description,
+  .typography .markup .tweet a.expanded-link .expanded-link-description,
+  .typography.editor .markup .tweet a.expanded-link .expanded-link-description {
+    display: none;
+  }
+}
+@media screen and (max-width: 650px) {
+  .typography .markup .apple-podcast-container,
+  .typography.editor .markup .apple-podcast-container {
+    width: unset;
+  }
+}
+@media (max-width: 420px) {
+  .typography .markup .install-substack-app-embed img.install-substack-app-embed-img,
+  .typography.editor .markup .install-substack-app-embed img.install-substack-app-embed-img {
+    margin: 0 auto 16px auto;
+  }
+}
+@media (max-width: 420px) {
+  .typography .markup .install-substack-app-embed .install-substack-app-embed-text,
+  .typography.editor .markup .install-substack-app-embed .install-substack-app-embed-text {
+    margin: 0 0 12px 0;
+    max-width: 100%;
+    width: auto;
+    text-align: center;
+  }
+}
+@media (max-width: 420px) {
+  .typography .markup .install-substack-app-embed .install-substack-app-embed-link,
+  .typography.editor .markup .install-substack-app-embed .install-substack-app-embed-link {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 481px) {
+  .share-button-container {
+    height: 38px;
+  }
+}
+@media screen and (min-width: 481px) {
+  .share-button-container a.comment {
+    height: 38px;
+    line-height: 38px;
+    padding-right: 10px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .share-button-container .separator {
+    display: block;
+    margin: 0;
+    height: 8px;
+    border-left: none;
+  }
+}
+@media screen and (max-width: 480px) {
+  .share-button-container a.share.first img {
+    padding-left: 0;
+  }
+}
+@media screen and (min-width: 481px) {
+  .share-button-container a.mobile {
+    display: none !important;
+  }
+}
+@media screen and (min-width: 541px) {
+  .settings-add-pub-modal-wrapper .container .add-recommending-pub-modal-container {
+    padding: 36px;
+    height: 680px;
+  }
+}
+@media screen and (min-width: 541px) {
+  .settings-add-pub-modal-wrapper .container .add-recommending-pub-modal-container .footer {
+    position: absolute;
+    bottom: 36px;
+    margin: 0px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .header-anchor-parent {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .post {
+    padding: 16px 0 0 0;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post .post-header .post-label {
+    margin-top: 8px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post .post-header .meta-author-wrap.alternative-meta .meta-right-column .post-meta {
+    margin-top: 6px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post .footer-facepile-container {
+    height: 64px;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post .post-footer.use-separators {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post .post-footer.next-prev {
+    height: 64px;
+    justify-content: space-between;
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post-contributor-footer .post-contributor-bio-table {
+    display: block;
+  }
+  .post-contributor-footer .post-contributor-bio-table-row {
+    display: flex;
+    flex-direction: row;
+  }
+  .post-contributor-footer .post-contributor-bio-userhead-cell,
+  .post-contributor-footer .post-contributor-bio-body-cell {
+    display: block;
+  }
+  .post-contributor-footer .post-contributor-bio-body-cell {
+    flex-grow: 1;
+  }
+  .post-contributor-footer .post-contributor-bio-body-table {
+    display: block;
+  }
+  .post-contributor-footer .post-contributor-bio-body-table-row {
+    display: block;
+  }
+  .post-contributor-footer .post-contributor-bio-copy-cell,
+  .post-contributor-footer .post-contributor-bio-controls-cell {
+    display: block;
+  }
+  .post-contributor-footer .post-contributor-bio-copy-cell {
+    margin: 0 0 16px 0;
+  }
+  .post-contributor-footer .post-contributor-bio-controls-cell {
+    width: auto;
+  }
+  .post-contributor-footer .post-contributor-bio-controls {
+    margin: auto;
+  }
+  .post-contributor-footer .post-contributor-bio-controls .button.primary {
+    width: 100%;
+  }
+  .post-contributor-footer .post-contributor-bio-text {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .post-silhouette {
+    padding: 32px 0;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post-silhouette .post-silhouette-title {
+    margin-top: 10.44225025px;
+    height: 120px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post-silhouette .post-silhouette-meta {
+    width: 75%;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post-silhouette .post-silhouette-meta.with-byline-image {
+    margin: 20px 0;
+  }
+}
+@media screen and (max-width: 650px) {
+  .use-theme-bg .post-meta.alternative-meta .post-meta-item,
+  .post-meta.alternative-meta .post-meta-item {
+    padding-right: 16px;
+  }
+}
+@media screen and (max-width: 370px) {
+  .use-theme-bg .post-meta.alternative-meta .post-meta-item,
+  .post-meta.alternative-meta .post-meta-item {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .use-theme-bg .post-meta.alternative-meta .post-meta-item.guest-author-publication,
+  .post-meta.alternative-meta .post-meta-item.guest-author-publication {
+    display: none;
+  }
+}
+@media screen and (max-width: 370px) {
+  .post-meta .post-meta-item .post-meta-button {
+    height: 36px !important;
+    /* important to override in-line height style on emails */
+  }
+  .post-meta .post-meta-item .post-meta-button .meta-button-label {
+    display: none;
+  }
+  .post-meta .post-meta-item .post-meta-button > svg {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 370px) {
+  .post-meta .post-meta-item {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post .floating-subscribe-button {
+    bottom: 20px;
+    right: 20px;
+  }
+}
+@media (max-width: 1024px) {
+  body .pullquote-align-left,
+  body .pullquote-align-right,
+  body .pullquote-align-wide,
+  body .pullquote-align-center {
+    float: none;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  body .markup table.image-wrapper img,
+  body .markup table.kindle-wrapper img {
+    max-width: 550px;
+  }
+}
+@media (min-width: 1024px) {
+  body:not(:has(#toc)) .captioned-image-container figure:has(> a.image2-offset-left) {
+    margin-left: var(--image-offset-margin);
+  }
+  body:not(:has(#toc)) .captioned-image-container figure:has(> a.image2-offset-right) {
+    margin-right: var(--image-offset-margin);
+  }
+}
+@media (min-width: 1300px) {
+  body .captioned-image-container figure:has(> a.image2-offset-left) {
+    margin-left: var(--image-offset-margin);
+  }
+  body .captioned-image-container figure:has(> a.image2-offset-right) {
+    margin-right: var(--image-offset-margin);
+  }
+}
+@media (max-width: 1024px) {
+  body {
+    /* Disable offset on mobile/tablet */
+  }
+  body .captioned-image-container figure:has(> a.image2-align-left),
+  body .captioned-image-container figure:has(> a.image2-align-right) {
+    float: none;
+    margin: 1em auto;
+    max-width: 100%;
+    width: auto;
+    padding: 0;
+  }
+  body .captioned-image-container figure:has(> a.image2-align-left.thefp),
+  body .captioned-image-container figure:has(> a.image2-align-right.thefp) {
+    margin: 1em auto;
+  }
+  body .captioned-image-container figure:has(> a.image2-offset-left),
+  body .captioned-image-container figure:has(> a.image2-offset-right) {
+    margin: 1em auto;
+  }
+  body .captioned-image-container figure:has(> a.image2-align-left) .image2-inset,
+  body .captioned-image-container figure:has(> a.image2-align-right) .image2-inset {
+    display: block;
+    justify-content: initial;
+  }
+}
+@media (max-width: 768px) {
+  body .markup div.sponsorship-campaign-embed {
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+  body .markup div.sponsorship-campaign-embed:first-child {
+    margin-top: 0px;
+  }
+}
+@media screen and (max-width: 650px) {
+  body .markup div.youtube-overlay,
+  body .markup div.vimeo-overlay {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 370px) {
+  body .markup div.tiktok-wrap {
+    width: calc(95vw - 32px);
+    height: calc((95vw - 32px - 2px) / 0.485714);
+  }
+}
+@media screen and (max-width: 650px) {
+  body .markup div.embedded-publication-wrap .embedded-publication.show-subscribe {
+    padding: 24px;
+  }
+}
+@media screen and (max-width: 650px) {
+  body .markup div.subscription-widget-wrap .subscription-widget.show-subscribe,
+  body .markup div.subscription-widget-wrap-editor .subscription-widget.show-subscribe,
+  body .markup div.captioned-button-wrap .subscription-widget.show-subscribe {
+    padding: 0px 24px;
+  }
+}
+@media screen and (max-width: 650px) {
+  body .markup div.subscription-widget-wrap .subscription-widget.show-subscribe .subscription-widget-subscribe .button,
+  body .markup div.subscription-widget-wrap-editor .subscription-widget.show-subscribe .subscription-widget-subscribe .button,
+  body .markup div.captioned-button-wrap .subscription-widget.show-subscribe .subscription-widget-subscribe .button {
+    padding: 10px 12px;
+    min-width: 110px;
+  }
+}
+@media (max-width: 650px) {
+  body .markup .twitter-embed,
+  body .markup .tweet {
+    padding: 12px;
+  }
+}
+@media (max-width: 650px) {
+  body .markup .twitter-embed .tweet-text,
+  body .markup .tweet .tweet-text {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+@media (max-width: 650px) {
+  body .markup .twitter-embed .tweet-photos-container.two,
+  body .markup .tweet .tweet-photos-container.two,
+  body .markup .twitter-embed .tweet-photos-container.three,
+  body .markup .tweet .tweet-photos-container.three,
+  body .markup .twitter-embed .tweet-photos-container.four,
+  body .markup .tweet .tweet-photos-container.four {
+    height: 200px;
+  }
+}
+@media (max-width: 650px) {
+  body .markup .twitter-embed a.expanded-link .expanded-link-img,
+  body .markup .tweet a.expanded-link .expanded-link-img {
+    max-height: 180px;
+  }
+}
+@media (max-width: 650px) {
+  body .markup .twitter-embed a.expanded-link .expanded-link-description,
+  body .markup .tweet a.expanded-link .expanded-link-description {
+    display: none;
+  }
+}
+@media screen and (max-width: 650px) {
+  body .markup .apple-podcast-container {
+    width: unset;
+  }
+}
+@media (max-width: 420px) {
+  body .markup .install-substack-app-embed img.install-substack-app-embed-img {
+    margin: 0 auto 16px auto;
+  }
+}
+@media (max-width: 420px) {
+  body .markup .install-substack-app-embed .install-substack-app-embed-text {
+    margin: 0 0 12px 0;
+    max-width: 100%;
+    width: auto;
+    text-align: center;
+  }
+}
+@media (max-width: 420px) {
+  body .markup .install-substack-app-embed .install-substack-app-embed-link {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 500px) {
+  body .header a.logo {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+  }
+}
+@media screen and (max-width: 420px) {
+  body .subscription-receipt table:first-of-type .subscription-amount .subscription-discount {
+    width: 72px !important;
+  }
+}
+@media screen and (min-width: 481px) {
+  body .share-button-container {
+    height: auto;
+  }
+}
+@media screen and (max-width: 480px) {
+  body .share-button-container .separator {
+    display: block !important;
+    margin: 0 !important;
+    height: 8px !important;
+    border-left: none !important;
+  }
+}
+@media screen and (max-width: 650px) {
+  .digest .item .post-meta-item.audience {
+    display: none;
+  }
+}
+@media screen and (min-width: 500px) {
+  .digest-publication .logo img {
+    width: 42px;
+    height: 42px;
+    border-radius: 8px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .comments-page .container .comment-list .collapsed-reply {
+    margin-left: calc(10 + 32px - 24px);
+  }
+}
+@media screen and (max-width: 650px) {
+  .comment > .comment-list {
+    padding-left: 24px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .finish-magic-login-modal .modal-content .container {
+    padding: 24px 0;
+  }
+}
+@media (max-width: 650px) {
+  .reader2-text-b3 {
+    line-height: 24px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .reader2-text-h4 {
+    line-height: 24px;
+  }
+}
+@media screen and (min-width: 541px) {
+  .user-profile-modal {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .subscribe-widget form.form .sideBySideWrap button.rightButton {
+    padding: 10px 12px;
+  }
+}
+@media screen and (min-width: 541px) {
+  .pub-icon:hover .logo-hover,
+  .feed-item-icon:hover .logo-hover {
+    display: block;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post-ufi.single-full-width-button .post-ufi-button-wrapper {
+    width: 100%;
+    padding: 16px;
+  }
+  .post-ufi.single-full-width-button .post-ufi-button-wrapper:empty {
+    display: none;
+  }
+  .post-ufi.single-full-width-button .post-ufi-button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  .file-embed-wrapper {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .file-embed-wrapper-editor {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .file-embed-wrapper-editor:active {
+    padding: 0;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .file-embed-button.wide,
+  .file-embed-error-button.wide {
+    display: none;
+  }
+}
+@media only screen and (min-width: 630px) {
+  .file-embed-button.narrow,
+  .file-embed-error-button.narrow {
+    display: none;
+  }
+}
+@media screen and (min-width: 541px) {
+  .audio-player-wrapper .audio-player {
+    min-width: 500px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .audio-player-wrapper .audio-player .audio-player-progress {
+    border-left-width: 16px;
+    border-right-width: 16px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .audio-player-wrapper .audio-player .audio-player-progress .audio-player-progress-bar .audio-player-progress-bar-popup {
+    top: -54px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .audio-player-wrapper-fancy .audio-player .audio-player-progress {
+    border-left-width: 16px;
+    border-right-width: 16px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .audio-player-wrapper-fancy .audio-player .audio-player-progress .audio-player-progress-bar .audio-player-progress-bar-popup {
+    top: -54px;
+  }
+}
+@media (min-width: 250px) {
+  .audio-player-wrapper-fancy .audio-player {
+    padding: 32px;
+  }
+  .audio-player-wrapper-fancy .audio-player .btn-group {
+    display: flex;
+  }
+  .audio-player-wrapper-fancy .audio-player .btn-group .button:last-of-type {
+    display: block;
+  }
+}
+@media (min-width: 300px) {
+  .audio-player-wrapper-fancy .audio-player .btn-group {
+    display: block;
+  }
+  .audio-player-wrapper-fancy .audio-player .btn-group .button:first-of-type {
+    display: block;
+  }
+}
+@media (min-width: 350px) {
+  .audio-player-wrapper-fancy .audio-player .audio-player-substack-logo {
+    display: block;
+  }
+  .audio-player-wrapper-fancy .audio-player .audio-player-title {
+    margin-top: 16px;
+  }
+  .audio-player-wrapper-fancy .audio-player .audio-player-hero-image-container {
+    padding-top: 15%;
+    width: 15%;
+    display: block;
+  }
+  .audio-player-wrapper-fancy .audio-player .btn-group .button:first-of-type {
+    display: block;
+  }
+  .audio-player-wrapper-fancy .audio-player .audio-player-substack-logo {
+    display: block;
+  }
+}
+@media (min-width: 350px) {
+  .audio-player-wrapper-fancy .audio-player .audio-player-hero-image-container {
+    padding-top: 25%;
+    width: 25%;
+    display: block;
+  }
+  .audio-player-wrapper-fancy .audio-player .btn-group {
+    display: flex;
+  }
+  .audio-player-wrapper-fancy .audio-player .btn-group .button:first-of-type {
+    display: block;
+  }
+}
+@media (min-width: 400px) {
+  .audio-player-wrapper-fancy .audio-player .audio-player-hero-image-container {
+    padding-top: 40%;
+    width: 40%;
+  }
+}
+@media (max-width: 400px) {
+  .audio-player-wrapper-fancy .audio-player .btn-group {
+    margin-top: 12px;
+  }
+  .audio-player-wrapper-fancy .audio-player .btn-group .button {
+    font-size: 13px;
+    padding: 6px 12px;
+    height: auto;
+    margin-top: 10px;
+  }
+}
+@media (min-width: 600px) {
+  .audio-player-wrapper-fancy .audio-player .audio-player-hero-image-container {
+    padding-top: 55%;
+    width: 55%;
+  }
+}
+@media (max-width: 650px) {
+  .poll-editor-modal {
+    min-width: calc(100% - 20px);
+  }
+}
+@media (max-width: 750px) {
+  .poll-embed .poll-anchor-target .poll-anchor-copy-button {
+    left: 8px;
+    top: 45px;
+  }
+}</style></head><body class="email-body" style="font-kerning: auto;--image-offset-margin: -120px;"><img src="https://eotrx.substackcdn.com/o/02f567af12a9f1e6/p.gif?token=eyJtIjoiPDIwMjYwNjI0MTk1MjM5LjMuYjA2MmYzMzIyZTkyNTVmYUBtZy1kMS5zdWJzdGFjay5jb20-IiwidSI6MTA1MTg2NDcsInIiOiJiZW5vaXRjQGdtYWlsLmNvbSIsImQiOiJtZy1kMS5zdWJzdGFjay5jb20iLCJwIjoyMDIwNTIzOTIsInQiOiJuZXdzbGV0dGVyIiwiYSI6ImV2ZXJ5b25lIiwicyI6MjkzNTcyNCwiYyI6InBvc3QiLCJmIjp0cnVlLCJwb3NpdGlvbiI6InRvcCIsImlhdCI6MTc4MjMzMDc2OSwiZXhwIjoxNzg0OTIyNzY5LCJpc3MiOiJwdWItMCIsInN1YiI6ImVvIn0.ufHzufHmyvaDRbE9aXfZemEw6k0tYh2PuvzwkxTWj6E" alt="" width="1" height="1" border="0" style="height:1px !important;width:1px !important;border-width:0 !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:0 !important;margin-left:0 !important;padding-top:0 !important;padding-bottom:0 !important;padding-right:0 !important;padding-left:0 !important;"/><div class="preview" style="display:none;font-size:1px;color:#333333;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;">On the ethics of engagement, the problem with purity politics, and a world worth fighting for</div><div class="preview" style="display:none;font-size:1px;color:#333333;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;">&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;</div><table class="email-body-container" role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td></td><td class="content" width="550"></td><td></td></tr><tr><td></td><td class="content" width="550" align="left"><div style="font-size: 16px;line-height: 26px;max-width: 550px;width: 100%;margin: 0 auto;overflow-wrap: break-word;"><table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="right" style="height:20px;"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="vertical-align:middle;"><span class="pencraft pc-reset reset-IxiVJZ tw-font-body tw-text-ssm tw-text-substack-secondary" style="font-family: SF Pro Text, -apple-system, system-ui, BlinkMacSystemFont, Inter, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;font-size: 13px;color: unset;list-style: none;text-decoration: unset;margin: 0;"><div class="pencraft pc-reset align-right-VJbKw5 size-12-mmZ61m reset-IxiVJZ" style="list-style: none;color: unset;text-align: right;font-size: 12px;line-height: 16px;text-decoration: unset;margin: 0;"><span class="pencraft pc-reset reset-IxiVJZ" translated="" style="list-style: none;color: unset;text-decoration: unset;margin: 0;">Forwarded this email? <a class="pencraft pc-reset decoration-underline-ClTkYc reset-IxiVJZ" href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly9jaGFyaXR5ZG90d3RmLnN1YnN0YWNrLmNvbS9zdWJzY3JpYmU_dXRtX3NvdXJjZT1lbWFpbCZ1dG1fY2FtcGFpZ249ZW1haWwtc3Vic2NyaWJlJnI9NjlnOG4mbmV4dD1odHRwcyUzQSUyRiUyRmNoYXJpdHlkb3R3dGYuc3Vic3RhY2suY29tJTJGcCUyRm1ha2UtYWktYm9yaW5nLWFnYWluIiwicCI6MjAyMDUyMzkyLCJzIjoyOTM1NzI0LCJmIjp0cnVlLCJ1IjoxMDUxODY0NywiaWF0IjoxNzgyMzMwNzY5LCJleHAiOjIwOTc5MDY3NjksImlzcyI6InB1Yi0wIiwic3ViIjoibGluay1yZWRpcmVjdCJ9.oQFbkajHh4IosDO8UVMrygN4QD8bfCduPyxcvhWLgsE?" style="list-style: none;color: unset;text-decoration: unset;margin: 0;-webkit-text-decoration-line: underline;text-decoration-line: underline;">Subscribe here</a> for more</span></div></span></td></tr></tbody></table></td></tr></tbody></table><div class="post typography" dir="auto" style="--image-offset-margin: -120px;padding: 32px 0 0 0;font-size: 16px;line-height: 26px;"><div class="post-header" role="region" aria-label="Post header" style="font-size: 16px;line-height: 26px;"><h1 class="post-title published title-X77sOw" dir="auto" style="direction: auto;text-align: start;unicode-bidi: isolate;color: rgb(54,55,55);font-family: 'SF Pro Display',-apple-system-headline,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight: bold;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: antialiased;-webkit-appearance: optimizelegibility;-moz-appearance: optimizelegibility;appearance: optimizelegibility;margin: 0;line-height: 36px;font-size: 32px;"><a href="https://substack.com/app-link/post?publication_id=2935724&post_id=202052392&utm_source=post-email-title&utm_campaign=email-post-title&isFreemail=true&r=69g8n&token=eyJ1c2VyX2lkIjoxMDUxODY0NywicG9zdF9pZCI6MjAyMDUyMzkyLCJpYXQiOjE3ODIzMzA3NjksImV4cCI6MTc4NDkyMjc2OSwiaXNzIjoicHViLTI5MzU3MjQiLCJzdWIiOiJwb3N0LXJlYWN0aW9uIn0.4sdns7NqxzV0V15WifgDMO7_QzIHJ-m9lksWXKdi58A" style="color: rgb(54,55,55);text-decoration: none;">Make AI Boring Again</a></h1><h3 class="subtitle subtitle-HEEcLo" dir="auto" style="direction: auto;text-align: start;unicode-bidi: isolate;font-family: 'SF Pro Display',-apple-system-headline,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight: normal;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: antialiased;-webkit-appearance: optimizelegibility;-moz-appearance: optimizelegibility;appearance: optimizelegibility;margin: 4px 0 0;color: #777777;line-height: 24px;font-size: 18px;margin-top: 12px;">On the ethics of engagement, the problem with purity politics, and a world worth fighting for</h3><table class="post-meta" role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="margin: 1em 0;height: 20px;align-items: center;"><tbody><tr><td><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="vertical-align:middle;"><div class="pencraft pc-reset color-primary-zABazT line-height-20-t4M0El font-meta-MWBumP size-11-NuY2Zx weight-medium-fw81nC transform-uppercase-yKDgcq reset-IxiVJZ meta-EgzBVA custom-css-email-post-author" style="list-style: none;font-size: 11px;line-height: 20px;text-decoration: unset;color: rgb(54,55,55);margin: 0;font-family: 'SF Compact',-apple-system,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight: 500;text-transform: uppercase;letter-spacing: .2px;"><a class="pencraft pc-reset color-primary-zABazT line-height-20-t4M0El font-meta-MWBumP size-11-NuY2Zx weight-medium-fw81nC transform-uppercase-yKDgcq reset-IxiVJZ meta-EgzBVA" style="list-style: none;color: rgb(54,55,55);margin: 0;font-size: 11px;line-height: 20px;font-family: 'SF Compact',-apple-system,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight: 500;text-transform: uppercase;letter-spacing: .2px;text-decoration: none" href="https://substack.com/@charitydotwtf">Charity Majors</a></div></td></tr></tbody></table></td></tr><tr><td><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="vertical-align:middle;"><div class="pencraft pc-reset color-secondary-ls1g8s line-height-20-t4M0El font-meta-MWBumP size-11-NuY2Zx weight-medium-fw81nC transform-uppercase-yKDgcq reset-IxiVJZ meta-EgzBVA" style="list-style: none;font-size: 11px;line-height: 20px;text-decoration: unset;color: rgb(119,119,119);margin: 0;font-family: 'SF Compact',-apple-system,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight: 500;text-transform: uppercase;letter-spacing: .2px;"><time datetime="2026-06-24T19:52:39.820Z">Jun 24</time></div></td></tr></tbody></table></td></tr></tbody></table></td><td align="right"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="vertical-align:middle;"><a href="https://substack.com/@charitydotwtf"><img class="custom-css-email-avatar avatar-QIQ5yR" src="https://substackcdn.com/image/fetch/$s_!EAp-!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff7a54851-0549-41da-b041-3cfc959ec0ba_3088x2316.jpeg" style="box-sizing: border-box;max-width: 550px;border: none;vertical-align: middle;width: 40px;height: 40px;min-width: 40px;min-height: 40px;object-fit: cover;margin: 0px;display: inline;border-radius: 50%" width="40" height="40"></a></td></tr></tbody></table></td></tr></tbody></table><table class="email-ufi-2-top" role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="border-top: 1px solid rgb(0,0,0,.1);border-bottom: 1px solid rgb(0,0,0,.1);min-width: 100%;"><tbody><tr height="16"><td height="16" style="font-size:0px;line-height:0;">&nbsp;</td></tr><tr><td><table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="vertical-align:middle;"><table role="presentation" width="38" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="center"><a class="email-icon-button" href="https://substack.com/app-link/post?publication_id=2935724&post_id=202052392&utm_source=substack&isFreemail=true&submitLike=true&token=eyJ1c2VyX2lkIjoxMDUxODY0NywicG9zdF9pZCI6MjAyMDUyMzkyLCJyZWFjdGlvbiI6IuKdpCIsImlhdCI6MTc4MjMzMDc2OSwiZXhwIjoxNzg0OTIyNzY5LCJpc3MiOiJwdWItMjkzNTcyNCIsInN1YiI6InJlYWN0aW9uIn0.pNlJdY9ixejMV47DMhEaknFt8YaGtUJ00U_pI_ssOog&utm_medium=email&utm_campaign=email-reaction&r=69g8n" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;font-weight: 500;border: 1px solid rgb(0,0,0,.1);border-radius: 9999px;text-transform: uppercase;font-size: 12px;line-height: 1;padding: 9px 0;text-decoration: none;color: rgb(119,119,119);min-width: 38px;box-sizing: border-box;width: 38px"><img class="icon" src="https://substackcdn.com/image/fetch/$s_!PeVs!,w_36,c_scale,f_png,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Ficon%2FLucideHeart%3Fv%3D4%26height%3D36%26fill%3Dnone%26stroke%3D%2523808080%26strokeWidth%3D2" width="18" height="18" style="border: none;vertical-align: middle;max-width: 18px" alt=""></a></td></tr></tbody></table></td><td width="8" style="min-width:8px;"></td><td style="vertical-align:middle;"><table role="presentation" width="38" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="center"><a class="email-icon-button" href="https://substack.com/app-link/post?publication_id=2935724&post_id=202052392&utm_source=substack&utm_medium=email&isFreemail=true&comments=true&token=eyJ1c2VyX2lkIjoxMDUxODY0NywicG9zdF9pZCI6MjAyMDUyMzkyLCJpYXQiOjE3ODIzMzA3NjksImV4cCI6MTc4NDkyMjc2OSwiaXNzIjoicHViLTI5MzU3MjQiLCJzdWIiOiJwb3N0LXJlYWN0aW9uIn0.4sdns7NqxzV0V15WifgDMO7_QzIHJ-m9lksWXKdi58A&r=69g8n&utm_campaign=email-half-magic-comments&action=post-comment&utm_source=substack&utm_medium=email" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;font-weight: 500;border: 1px solid rgb(0,0,0,.1);border-radius: 9999px;text-transform: uppercase;font-size: 12px;line-height: 1;padding: 9px 0;text-decoration: none;color: rgb(119,119,119);min-width: 38px;box-sizing: border-box;width: 38px"><img class="icon" src="https://substackcdn.com/image/fetch/$s_!x1tS!,w_36,c_scale,f_png,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Ficon%2FLucideComments%3Fv%3D4%26height%3D36%26fill%3Dnone%26stroke%3D%2523808080%26strokeWidth%3D2" width="18" height="18" style="border: none;vertical-align: middle;max-width: 18px" alt=""></a></td></tr></tbody></table></td><td width="8" style="min-width:8px;"></td><td style="vertical-align:middle;"><table role="presentation" width="38" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="center"><a class="email-icon-button" href="https://substack.com/app-link/post?publication_id=2935724&post_id=202052392&utm_source=substack&utm_medium=email&utm_content=share&utm_campaign=email-share&action=share&triggerShare=true&isFreemail=true&r=69g8n&token=eyJ1c2VyX2lkIjoxMDUxODY0NywicG9zdF9pZCI6MjAyMDUyMzkyLCJpYXQiOjE3ODIzMzA3NjksImV4cCI6MTc4NDkyMjc2OSwiaXNzIjoicHViLTI5MzU3MjQiLCJzdWIiOiJwb3N0LXJlYWN0aW9uIn0.4sdns7NqxzV0V15WifgDMO7_QzIHJ-m9lksWXKdi58A" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;font-weight: 500;border: 1px solid rgb(0,0,0,.1);border-radius: 9999px;text-transform: uppercase;font-size: 12px;line-height: 1;padding: 9px 0;text-decoration: none;color: rgb(119,119,119);min-width: 38px;box-sizing: border-box;width: 38px"><img class="icon" src="https://substackcdn.com/image/fetch/$s_!_L14!,w_36,c_scale,f_png,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Ficon%2FLucideShare2%3Fv%3D4%26height%3D36%26fill%3Dnone%26stroke%3D%2523808080%26strokeWidth%3D2" width="18" height="18" style="border: none;vertical-align: middle;max-width: 18px" alt=""></a></td></tr></tbody></table></td><td width="8" style="min-width:8px;"></td><td style="vertical-align:middle;"><table role="presentation" width="38" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="center"><a class="email-icon-button" href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly9vcGVuLnN1YnN0YWNrLmNvbS9wdWIvY2hhcml0eWRvdHd0Zi9wL21ha2UtYWktYm9yaW5nLWFnYWluP3V0bV9zb3VyY2U9c3Vic3RhY2smdXRtX21lZGl1bT1lbWFpbCZ1dG1fY2FtcGFpZ249ZW1haWwtcmVzdGFjay1jb21tZW50JmFjdGlvbj1yZXN0YWNrLWNvbW1lbnQmcj02OWc4biZ0b2tlbj1leUoxYzJWeVgybGtJam94TURVeE9EWTBOeXdpY0c5emRGOXBaQ0k2TWpBeU1EVXlNemt5TENKcFlYUWlPakUzT0RJek16QTNOamtzSW1WNGNDSTZNVGM0TkRreU1qYzJPU3dpYVhOeklqb2ljSFZpTFRJNU16VTNNalFpTENKemRXSWlPaUp3YjNOMExYSmxZV04wYVc5dUluMC40c2RuczdOcXh6VjBWMTVXaWZnRE1PN19ReklISi1tOWxrc1dYS2RpNThBIiwicCI6MjAyMDUyMzkyLCJzIjoyOTM1NzI0LCJmIjp0cnVlLCJ1IjoxMDUxODY0NywiaWF0IjoxNzgyMzMwNzY5LCJleHAiOjIwOTc5MDY3NjksImlzcyI6InB1Yi0wIiwic3ViIjoibGluay1yZWRpcmVjdCJ9.ILqUlh1tfSmEq9C5LoqwFHjxzjN5qIfCxg5IC4OwK3o?&utm_source=substack&utm_medium=email" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;font-weight: 500;border: 1px solid rgb(0,0,0,.1);border-radius: 9999px;text-transform: uppercase;font-size: 12px;line-height: 1;padding: 9px 0;text-decoration: none;color: rgb(119,119,119);min-width: 38px;box-sizing: border-box;width: 38px"><img class="icon" src="https://substackcdn.com/image/fetch/$s_!ubXF!,w_36,c_scale,f_png,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Ficon%2Fnotes__NoteRestackIcon%3Fv%3D4%26height%3D36%26fill%3Dnone%26stroke%3D%2523808080%26strokeWidth%3D2%26strokeLinecap%3Dround%26strokeLinejoin%3Dround" width="18" height="18" alt="" style="max-width: 550px;border: none !important;vertical-align: middle;"></a></td></tr></tbody></table></td></tr></tbody></table></td><td align="right"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="vertical-align:middle;"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="center"><a class="email-button-outline" href="https://open.substack.com/pub/charitydotwtf/p/make-ai-boring-again?utm_source=email&redirect=app-store&utm_campaign=email-read-in-app" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;font-weight: 500;border: 1px solid rgb(0,0,0,.1);border-radius: 9999px;text-transform: uppercase;font-size: 12px;line-height: 12px;padding: 9px 14px;text-decoration: none;color: rgb(119,119,119);"><div class="email-button-spacer" style="font-size: 16px;line-height: 26px;display: inline-block;vertical-align: middle;max-width: 0;min-height: 18px;"></div><span class="email-button-text" style="vertical-align: middle;margin-right: 4px">READ IN APP</span><img class="icon text-icon" src="https://substackcdn.com/image/fetch/$s_!ET-_!,w_36,c_scale,f_png,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Ficon%2FLucideArrowUpRight%3Fv%3D4%26height%3D36%26fill%3Dnone%26stroke%3D%2523808080%26strokeWidth%3D2" width="18" height="18" style="min-width: 18px;min-height: 18px;border: none;vertical-align: middle;margin-right: 0;margin-left: 0;max-width: 18px" alt=""></a></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></td></tr><tr height="16"><td height="16" style="font-size:0px;line-height:0;">&nbsp;</td></tr></tbody></table></div></div><div class="post typography" dir="auto" style="--image-offset-margin: -120px;padding: 32px 0 0 0;font-size: 16px;line-height: 26px;"><div class="body markup" dir="auto" style="text-align: initial;font-size: 16px;line-height: 26px;width: 100%;word-break: break-word;margin-bottom: 16px;"><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;margin-top: 0;">I am a contrarian who likes to argue and complain a lot. Because of this, I have never been inclined to block people who argue with me or complain about my work, or even lash out at me with some hostility. I could say a lot of noble sounding things about how I value debate and open discourse, and those things would be true, but I also just feel like I should tolerate other people as much as they have to tolerate me. </p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>I recently wrote a piece about </span><a href="https://substack.com/redirect/fbbf1370-519d-4b4c-bf31-3673c3c2e953?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">AI enthusiasts vs AI skeptics</a><span> &#8212; a very mild piece, I might add, almost repulsively brimming over with both-sides-are-good-people&#8217;s and can&#8217;t-we-all-just-get-along&#8217;s. Yet I have blocked more people in the past three weeks than the past ten years.</span><span class="footnote-anchor-email" data-component-name="FootnoteAnchorToDOMStatic" style="font-size: 20px;">&#185;</span><span> There is a fear in the water right now that is bringing the crazy out in all of us.</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>The stakes are not low. The world is burning, after all. CEOs go on job-murdering sprees and the Industrial Revolution may be coming for knowledge workers. </span><a href="https://substack.com/redirect/4d23602f-3105-479c-bb2f-43114e4b2f2c?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">Even the Pope is alarmed</a><span>.</span></p><h2 class="header-anchor-post" style="position: relative;font-family: 'SF Pro Display',-apple-system-headline,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight: bold;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: antialiased;-webkit-appearance: optimizelegibility;-moz-appearance: optimizelegibility;appearance: optimizelegibility;margin: 1em 0 0.625em 0;color: rgb(54,55,55);line-height: 1.16em;font-size: calc(1.625em * 1);">AI is not special</h2><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>It bothers me when I see people holding AI up like it&#8217;s something special &#8212; uniquely evil, incomparably harmful, irreparably tainted. It is none of those things. </span><strong>AI is just technology.</strong></p><div class="captioned-image-container-static" style="font-size: 16px;line-height: 26px;margin: 32px auto;"><figure style="width: 100%;margin: 0 auto;"><table class="image-wrapper" width="100%" border="0" cellspacing="0" cellpadding="0" data-component-name="Image2ToDOMStatic" style="mso-padding-alt: 1em 0 1.6em;"><tbody><tr><td style="text-align: center;"></td><td class="content" align="left" width="535" style="text-align: center;"><a class="image-link" target="_blank" href="https://substack.com/redirect/b84b5434-1c7a-4f06-ac2c-83313809094b?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="position: relative;flex-direction: column;align-items: center;padding: 0;width: auto;height: auto;border: none;text-decoration: none;display: block;margin: 0;"><img data-attrs="{&quot;src&quot;:&quot;https://substack-post-media.s3.amazonaws.com/public/images/6c7f553b-23da-4aca-baee-80abe60d9fad_859x289.png&quot;,&quot;srcNoWatermark&quot;:null,&quot;fullscreen&quot;:null,&quot;imageSize&quot;:null,&quot;height&quot;:289,&quot;width&quot;:859,&quot;resizeWidth&quot;:535,&quot;bytes&quot;:437602,&quot;alt&quot;:null,&quot;title&quot;:null,&quot;type&quot;:&quot;image/png&quot;,&quot;href&quot;:null,&quot;belowTheFold&quot;:false,&quot;topImage&quot;:true,&quot;internalRedirect&quot;:&quot;https://charitydotwtf.substack.com/i/202052392?img=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6c7f553b-23da-4aca-baee-80abe60d9fad_859x289.png&quot;,&quot;isProcessing&quot;:false,&quot;align&quot;:null,&quot;offset&quot;:false}" alt="" width="535" height="179.9941792782305" src="https://substackcdn.com/image/fetch/$s_!UVCm!,w_535,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6c7f553b-23da-4aca-baee-80abe60d9fad_859x289.png" style="border: none !important;vertical-align: middle;display: block;-ms-interpolation-mode: bicubic;height: auto;margin-bottom: 0;width: auto !important;max-width: 100% !important;margin: 0 auto;"></a></td><td style="text-align: center;"></td></tr></tbody></table></figure></div><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>Some technologies are more damaging than others &#8212; knives are less damaging than guns, Facebook for colleges was less damaging than Facebook for Myanmar &#8212; but we </span><em>always</em><span> discover risks before we know how to govern them.</span><span class="footnote-anchor-email" data-component-name="FootnoteAnchorToDOMStatic" style="font-size: 20px;">&#178;</span><span> There is always a gap while we try to catch up.</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">That gap is not proof that AI is evil. It is proof that we have work to do.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>The fact that we have not solved the problems yet is not an argument to disconnect. It is an argument to engage, </span><em>especially</em><span> if you work in technology and already have an arsenal of relevant skills.</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>You do not learn to govern a tool by refusing to touch it. You learn by using it and understanding well enough to critique it, shape it, contribute to it, and set boundaries around it. </span><a href="https://substack.com/redirect/50154a36-531a-4868-88cf-6ecb18b7c369?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">You learn how to make it borin</a><span>g.</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>&#8220;</span><a href="https://substack.com/redirect/f866b07d-8fda-4392-be08-d91293a7f797?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">Learn AI so you can complain about AI better</a><span>.&#8221; I said it and I meant it. I still do.</span></p><h2 class="header-anchor-post" style="position: relative;font-family: 'SF Pro Display',-apple-system-headline,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight: bold;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: antialiased;-webkit-appearance: optimizelegibility;-moz-appearance: optimizelegibility;appearance: optimizelegibility;margin: 1em 0 0.625em 0;color: rgb(54,55,55);line-height: 1.16em;font-size: calc(1.625em * 1);">There are a number of harms associated with AI</h2><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>I took to Bluesky and started a thread to </span><a href="https://substack.com/redirect/e80780ab-37a5-4daf-accf-a63f9448feae?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">catalogue the harms</a><span> associated with AI. There seems to be two buckets: harms done in the creation of AI (e.g. training without permission or compensation, labor exploitation in data labeling) and harms enabled by the use of AI (e.g. revenge porn, the ouroboros of truthiness and the problem of attribution, energy and water usage).</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">I am not trying to minimize or deny these harms. Indeed, I think part of being a responsible user of AI means educating ourselves and acting to counter these harms. </p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">Where I diverge from many is that I don&#8217;t think awareness of these harms leads inexorably to the conclusion, &#8220;thus I should not use it or engage with AI.&#8221;</p><div class="captioned-image-container-static" style="font-size: 16px;line-height: 26px;margin: 32px auto;"><figure style="width: 100%;margin: 0 auto;"><table class="image-wrapper" width="100%" border="0" cellspacing="0" cellpadding="0" data-component-name="Image2ToDOMStatic" style="mso-padding-alt: 1em 0 1.6em;"><tbody><tr><td style="text-align: center;"></td><td class="content" align="left" width="530" style="text-align: center;"><a class="image-link" target="_blank" href="https://substack.com/redirect/42b46851-6659-47c8-a24d-c9fa873fcc23?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="position: relative;flex-direction: column;align-items: center;padding: 0;width: auto;height: auto;border: none;text-decoration: none;display: block;margin: 0;"><img data-attrs="{&quot;src&quot;:&quot;https://substack-post-media.s3.amazonaws.com/public/images/ce7c8f97-5fac-44e3-8dc5-910a667d0528_876x301.png&quot;,&quot;srcNoWatermark&quot;:null,&quot;fullscreen&quot;:null,&quot;imageSize&quot;:null,&quot;height&quot;:301,&quot;width&quot;:876,&quot;resizeWidth&quot;:530,&quot;bytes&quot;:456644,&quot;alt&quot;:&quot;&quot;,&quot;title&quot;:null,&quot;type&quot;:&quot;image/png&quot;,&quot;href&quot;:null,&quot;belowTheFold&quot;:true,&quot;topImage&quot;:false,&quot;internalRedirect&quot;:&quot;https://charitydotwtf.substack.com/i/202052392?img=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fce7c8f97-5fac-44e3-8dc5-910a667d0528_876x301.png&quot;,&quot;isProcessing&quot;:false,&quot;align&quot;:null,&quot;offset&quot;:false}" alt="" title="" width="530" height="182.1118721461187" src="https://substackcdn.com/image/fetch/$s_!KTdr!,w_530,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fce7c8f97-5fac-44e3-8dc5-910a667d0528_876x301.png" style="border: none !important;vertical-align: middle;display: block;-ms-interpolation-mode: bicubic;height: auto;margin-bottom: 0;width: auto !important;max-width: 100% !important;margin: 0 auto;"></a></td><td style="text-align: center;"></td></tr></tbody></table></figure></div><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>I think the moral valence points in the other direction, especially for those of us in tech. I think we have a moral responsibility to engage, become experts, become people worth listening to. I think the next generation of technology is being hammered out right now, and I want to help shape it. I think unilateral disarmament in the face of powerful new tools is neither wise or an effective strategy.</span><span class="footnote-anchor-email" data-component-name="FootnoteAnchorToDOMStatic" style="font-size: 20px;">&#179;</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">But let&#8217;s talk about those buckets of harm first.</p><h2 class="header-anchor-post" style="position: relative;font-family: 'SF Pro Display',-apple-system-headline,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight: bold;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: antialiased;-webkit-appearance: optimizelegibility;-moz-appearance: optimizelegibility;appearance: optimizelegibility;margin: 1em 0 0.625em 0;color: rgb(54,55,55);line-height: 1.16em;font-size: calc(1.625em * 1);">Harms tied to how AI was built</h2><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>The argument I hear the most goes something like this. &#8220;AI was trained on stolen data,</span><span class="footnote-anchor-email" data-component-name="FootnoteAnchorToDOMStatic" style="font-size: 20px;">&#8308;</span><span> therefore anyone who uses it is complicit. If you care about artists, you should not use these tools, and should try to avoid any art generated using AI.&#8221; Or this article, &#8220;</span><a href="https://substack.com/redirect/228aa3f8-457a-487b-8e52-5d0347e53b8d?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">On the acceptance of GenAI</a><span>,&#8221; which I&#8217;ve been sent many times.</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>No, you should avoid AI-generated art because most of it is </span><em>terrible</em><span>. Honestly, if there is one segment I am not worried about at all, it is whether or not art will thrive. Aesthetics will have their own revenge, and it will be vicious. It is already happening</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>It&#8217;s worth pointing out that </span><strong>ethics, morality and the law are different things</strong><span>. We don&#8217;t know yet if the way OpenAI trained their models is legal or not. The law doesn&#8217;t cover it, and case law to date has been muddled, contradictory, and narrowly decided based on the facts. It&#8217;s Schroedinger&#8217;s Law &#8212; we&#8217;ll find out if it was legal or not once the Supreme Court weighs in. </span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>But even if it turns out to have been legal, was it </span><em>right</em><span>? Not in my book.</span></p><div class="captioned-image-container-static" style="font-size: 16px;line-height: 26px;margin: 32px auto;"><figure style="width: 100%;margin: 0 auto;"><table class="image-wrapper" width="100%" border="0" cellspacing="0" cellpadding="0" data-component-name="Image2ToDOMStatic" style="mso-padding-alt: 1em 0 1.6em;"><tbody><tr><td style="text-align: center;"></td><td class="content" align="left" width="528" style="text-align: center;"><a class="image-link" target="_blank" href="https://substack.com/redirect/cf1a52b4-86b5-4fca-8212-a315ab69887c?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="position: relative;flex-direction: column;align-items: center;padding: 0;width: auto;height: auto;border: none;text-decoration: none;display: block;margin: 0;"><img data-attrs="{&quot;src&quot;:&quot;https://substack-post-media.s3.amazonaws.com/public/images/00b96418-34f8-4df0-991b-4d2d367b62f5_862x293.png&quot;,&quot;srcNoWatermark&quot;:null,&quot;fullscreen&quot;:null,&quot;imageSize&quot;:null,&quot;height&quot;:293,&quot;width&quot;:862,&quot;resizeWidth&quot;:528,&quot;bytes&quot;:434140,&quot;alt&quot;:null,&quot;title&quot;:null,&quot;type&quot;:&quot;image/png&quot;,&quot;href&quot;:null,&quot;belowTheFold&quot;:true,&quot;topImage&quot;:false,&quot;internalRedirect&quot;:&quot;https://charitydotwtf.substack.com/i/202052392?img=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F00b96418-34f8-4df0-991b-4d2d367b62f5_862x293.png&quot;,&quot;isProcessing&quot;:false,&quot;align&quot;:null,&quot;offset&quot;:false}" alt="" width="528" height="179.4709976798144" src="https://substackcdn.com/image/fetch/$s_!cKVO!,w_528,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F00b96418-34f8-4df0-991b-4d2d367b62f5_862x293.png" style="border: none !important;vertical-align: middle;display: block;-ms-interpolation-mode: bicubic;height: auto;margin-bottom: 0;width: auto !important;max-width: 100% !important;margin: 0 auto;"></a></td><td style="text-align: center;"></td></tr></tbody></table></figure></div><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">Training data is not the only harm done: there is also exploited labor, energy costs, clean water, quality of life issues for communities, tax issues (did you know datacenters pay no taxes, and are offered billions in tax BREAKS by local govts?), concentration of power amongst certain elites, the apparent sociopathy of key actors, and more. </p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>If you want to support artists, </span><em>support artists</em><span>.</span><span class="footnote-anchor-email" data-component-name="FootnoteAnchorToDOMStatic" style="font-size: 20px;">&#8309;</span><span> But there is no such thing as original sin. Technology is a tool. What matters is what we do with it.</span></p><h2 class="header-anchor-post" style="position: relative;font-family: 'SF Pro Display',-apple-system-headline,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight: bold;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: antialiased;-webkit-appearance: optimizelegibility;-moz-appearance: optimizelegibility;appearance: optimizelegibility;margin: 1em 0 0.625em 0;color: rgb(54,55,55);line-height: 1.16em;font-size: calc(1.625em * 1);">Harms tied to living with and using AI now</h2><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">The list of harms people are currently experiencing as a consequence of AI is long, and the list of harms we see looming on the horizon is even longer. From everyday irritants &#8212; getting five pages of slop instead of three crisp bullet points, hiring pipelines clogged with fake applicants, AI customer support designed to be unhelpful and wear you out &#8212; to deadly serious concerns about skill atrophy, lack of accountability, sycophancy, and whether the ouroboros of training on generated data will lead to a corresponding decay in reference quality and the loss of truth itself.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>Most of these are not novel to AI, they were problems before AI came around, AI is just making them worse or more extreme. Which means that solutions will also not specific to AI.</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>I am troubled by the amount of motivated reasoning coming from the people I feel politically aligned with. It&#8217;s very easy to mock and write off people who vocally hate AI for a long list of things they never seemed to give a shit about before they realized they hated AI and went looking for reasons.</span><span class="footnote-anchor-email" data-component-name="FootnoteAnchorToDOMStatic" style="font-size: 20px;">&#8310;</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>I worry this works to delegitimize concerns over some of the very real, very specific, very very frightening harms that ARE specific to AI. Like delegating decisions about who to jail or who to kill on the battlefield, or what authoritarian governments can do with these tools &#8212; including our own.</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">The list is long, and the list is growing. What are we going to do?</p><div class="captioned-image-container-static" style="font-size: 16px;line-height: 26px;margin: 32px auto;"><figure style="width: 100%;margin: 0 auto;"><table class="image-wrapper" width="100%" border="0" cellspacing="0" cellpadding="0" data-component-name="Image2ToDOMStatic" style="mso-padding-alt: 1em 0 1.6em;"><tbody><tr><td style="text-align: center;"></td><td class="content" align="left" width="562" style="text-align: center;"><a class="image-link" target="_blank" href="https://substack.com/redirect/c25a4279-baf7-4515-b9fb-91d87a410458?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="position: relative;flex-direction: column;align-items: center;padding: 0;width: auto;height: auto;border: none;text-decoration: none;display: block;margin: 0;"><img class="wide-image" data-attrs="{&quot;src&quot;:&quot;https://substack-post-media.s3.amazonaws.com/public/images/e6c31024-54af-45d0-9f91-7ecd4ac8bc93_883x288.png&quot;,&quot;srcNoWatermark&quot;:null,&quot;fullscreen&quot;:null,&quot;imageSize&quot;:null,&quot;height&quot;:288,&quot;width&quot;:883,&quot;resizeWidth&quot;:562,&quot;bytes&quot;:456044,&quot;alt&quot;:null,&quot;title&quot;:null,&quot;type&quot;:&quot;image/png&quot;,&quot;href&quot;:null,&quot;belowTheFold&quot;:true,&quot;topImage&quot;:false,&quot;internalRedirect&quot;:&quot;https://charitydotwtf.substack.com/i/202052392?img=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe6c31024-54af-45d0-9f91-7ecd4ac8bc93_883x288.png&quot;,&quot;isProcessing&quot;:false,&quot;align&quot;:null,&quot;offset&quot;:false}" alt="" width="550" height="179.38844847112117" src="https://substackcdn.com/image/fetch/$s_!prpn!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe6c31024-54af-45d0-9f91-7ecd4ac8bc93_883x288.png" style="border: none !important;vertical-align: middle;display: block;-ms-interpolation-mode: bicubic;height: auto;margin-bottom: 0;width: auto !important;max-width: 100% !important;margin: 0 auto;"></a></td><td style="text-align: center;"></td></tr></tbody></table></figure></div><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">We had to learn how live in a world with guns, nuclear weapons, smallpox, alcohol, cigarettes, social media, fentanyl and bitcoin. Now we need to figure out how to live in a world with AI.</p><h2 class="header-anchor-post" style="position: relative;font-family: 'SF Pro Display',-apple-system-headline,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight: bold;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: antialiased;-webkit-appearance: optimizelegibility;-moz-appearance: optimizelegibility;appearance: optimizelegibility;margin: 1em 0 0.625em 0;color: rgb(54,55,55);line-height: 1.16em;font-size: calc(1.625em * 1);">My politics are not concerned with purity</h2><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">I was raised by a man who believed that purity was a real thing, and the highest good that we (women) should aspire to. I was raised to see the mainstream world as a place rotten with corruption and full of temptation. I was taught that the righteous path meant divesting ourselves from the fallen world and its schools, its insurance plans, its governing bodies, its popular culture. </p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">And while my parents are wonderful, loving people and I love them dearly, I have spent my own adult life fiercely devoted to the opposite.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">I believe in interdependence. I believe we are inescapably entwined and entangled with one another, whether or not we perceive the entanglements or trace the particulars. I believe it is neither possible nor desirable to remove ourselves from the web of dependencies we are born to.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>The way you show care is by showing up. The way you make the world a better place is by getting down in the muck and building it, using whatever skills and resources you have on hand. The way you drive change is </span><em>you engage</em><span>.</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>Yes, we are all complicit. Yes, we are all compromised. No argument. But what are you going to </span><em>do</em><span> with that feeling of conviction? Will you channel your discomfort into solidarity and action, or try to ease your conscience by removing yourself from the system? Which does more to help those being harmed?</span></p><h2 class="header-anchor-post" style="position: relative;font-family: 'SF Pro Display',-apple-system-headline,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight: bold;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: antialiased;-webkit-appearance: optimizelegibility;-moz-appearance: optimizelegibility;appearance: optimizelegibility;margin: 1em 0 0.625em 0;color: rgb(54,55,55);line-height: 1.16em;font-size: calc(1.625em * 1);">You can&#8217;t fight fundamentalism with fundamentalism</h2><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">I believe that the pursuit of purity slips easily into narcissism and performance art, centering ourselves and our quest instead of centering the problem or the ones who are harmed by it.</p><div class="captioned-image-container-static" style="font-size: 16px;line-height: 26px;margin: 32px auto;"><figure style="width: 100%;margin: 0 auto;"><table class="image-wrapper" width="100%" border="0" cellspacing="0" cellpadding="0" data-component-name="Image2ToDOMStatic" style="mso-padding-alt: 1em 0 1.6em;"><tbody><tr><td style="text-align: center;"></td><td class="content" align="left" width="560" style="text-align: center;"><a class="image-link" target="_blank" href="https://substack.com/redirect/0a5f7030-b5ce-4830-b54e-24019b889df3?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="position: relative;flex-direction: column;align-items: center;padding: 0;width: auto;height: auto;border: none;text-decoration: none;display: block;margin: 0;"><img class="wide-image" data-attrs="{&quot;src&quot;:&quot;https://substack-post-media.s3.amazonaws.com/public/images/e63cdc74-cb9d-4cab-ba4f-97f00de8b848_880x282.png&quot;,&quot;srcNoWatermark&quot;:null,&quot;fullscreen&quot;:null,&quot;imageSize&quot;:null,&quot;height&quot;:282,&quot;width&quot;:880,&quot;resizeWidth&quot;:560,&quot;bytes&quot;:474738,&quot;alt&quot;:null,&quot;title&quot;:null,&quot;type&quot;:&quot;image/png&quot;,&quot;href&quot;:null,&quot;belowTheFold&quot;:true,&quot;topImage&quot;:false,&quot;internalRedirect&quot;:&quot;https://charitydotwtf.substack.com/i/202052392?img=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe63cdc74-cb9d-4cab-ba4f-97f00de8b848_880x282.png&quot;,&quot;isProcessing&quot;:false,&quot;align&quot;:null,&quot;offset&quot;:false}" alt="" width="550" height="176.25" src="https://substackcdn.com/image/fetch/$s_!IF4i!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe63cdc74-cb9d-4cab-ba4f-97f00de8b848_880x282.png" style="border: none !important;vertical-align: middle;display: block;-ms-interpolation-mode: bicubic;height: auto;margin-bottom: 0;width: auto !important;max-width: 100% !important;margin: 0 auto;"></a></td><td style="text-align: center;"></td></tr></tbody></table></figure></div><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>The pursuit of purity is the animating force behind every fundamentalism, left or right. And while fundamentalism is an emotionally satisfying response, and one that looks increasingly tempting as Silicon Valley leans into its heel turn, I do not think it is an </span><em><span>effective</span></em><span> response. </span></p><blockquote style="border-left: 4px solid #ff6719;margin: 20px 0;padding: 0;"><p style="margin: 0 0 20px 0;color: rgb(54,55,55);margin-left: 20px;line-height: 26px;font-size: 16px;"><span>&#8220;I argue against purism because it is one bad but common approach to devastation in all its forms&#8230;It is a bad approach because it shuts down precisely the field of possibility that might allow us to take better collective action against the destruction of the world in all its strange, delightful, impure frolic.&#8221; &#8212; Alexis Shotwell, &#8220;</span><a href="https://substack.com/redirect/1ef6b11b-bdad-4af3-a268-4456a1ce4ad9?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">Against Purity: Living Ethically in Compromised Times</a><span>&#8221;</span></p></blockquote><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>I am especially dubious of the calories we spend performatively denouncing each other for being insufficiently pure.</span><span class="footnote-anchor-email" data-component-name="FootnoteAnchorToDOMStatic" style="font-size: 20px;">&#8311;</span><span> Who does this help? Artists? Families who can&#8217;t sleep next to data centers?</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>Whether we like it or not, AI is here to stay. If the future of tech is being written right now &#8212; and I believe it is &#8212; what&#8217;s the plan? Walk off the field and abandon it to whoever has fewest scruples? Come on.</span></p><h2 class="header-anchor-post" style="position: relative;font-family: 'SF Pro Display',-apple-system-headline,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight: bold;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: antialiased;-webkit-appearance: optimizelegibility;-moz-appearance: optimizelegibility;appearance: optimizelegibility;margin: 1em 0 0.625em 0;color: rgb(54,55,55);line-height: 1.16em;font-size: calc(1.625em * 1);">Okay, so what DO we do?</h2><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">Well, this is the right question, and one we should be asking of ourselves.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">I think that anyone who works in the tech industry should be actively learning everything they can about AI &#8212; how it works, how it fails, how to use it effectively and guard against harms. </p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>I still think the software industry will turn out to be </span><em>the</em><span> killer app for AI, since software is made up of language and logic, and </span><a href="https://substack.com/redirect/169cf25b-e5cc-4ad2-97ee-b2bf719bb2f3?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">software has built-in ways for validating outputs and mitigating drift</a><span> that other applications do not. But we will have to learn them, build them, teach them, and use them.</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">I think every workplace that uses AI should be actively, urgently talking about the ways AI is changing the way we work together, communicate and collaborate. And not just to collect and catalogue a list of harms, but to actively experiment with ways of pushing back on them, solving them, working around them, making these technologies work FOR us.</p><div class="captioned-image-container-static" style="font-size: 16px;line-height: 26px;margin: 32px auto;"><figure style="width: 100%;margin: 0 auto;"><table class="image-wrapper" width="100%" border="0" cellspacing="0" cellpadding="0" data-component-name="Image2ToDOMStatic" style="mso-padding-alt: 1em 0 1.6em;"><tbody><tr><td style="text-align: center;"></td><td class="content" align="left" width="562" style="text-align: center;"><a class="image-link" target="_blank" href="https://substack.com/redirect/98cc1092-170f-461c-8d72-ef45c8bf3ef1?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="position: relative;flex-direction: column;align-items: center;padding: 0;width: auto;height: auto;border: none;text-decoration: none;display: block;margin: 0;"><img class="wide-image" data-attrs="{&quot;src&quot;:&quot;https://substack-post-media.s3.amazonaws.com/public/images/acbc3a84-bee3-43a1-8cac-1cdd326b9af0_863x279.png&quot;,&quot;srcNoWatermark&quot;:null,&quot;fullscreen&quot;:null,&quot;imageSize&quot;:null,&quot;height&quot;:279,&quot;width&quot;:863,&quot;resizeWidth&quot;:562,&quot;bytes&quot;:456258,&quot;alt&quot;:null,&quot;title&quot;:null,&quot;type&quot;:&quot;image/png&quot;,&quot;href&quot;:null,&quot;belowTheFold&quot;:true,&quot;topImage&quot;:false,&quot;internalRedirect&quot;:&quot;https://charitydotwtf.substack.com/i/202052392?img=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Facbc3a84-bee3-43a1-8cac-1cdd326b9af0_863x279.png&quot;,&quot;isProcessing&quot;:false,&quot;align&quot;:null,&quot;offset&quot;:false}" alt="" width="550" height="177.80996523754345" src="https://substackcdn.com/image/fetch/$s_!nC0B!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Facbc3a84-bee3-43a1-8cac-1cdd326b9af0_863x279.png" style="border: none !important;vertical-align: middle;display: block;-ms-interpolation-mode: bicubic;height: auto;margin-bottom: 0;width: auto !important;max-width: 100% !important;margin: 0 auto;"></a></td><td style="text-align: center;"></td></tr></tbody></table></figure></div><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">How can we be more human together? How can we add boundaries around our use of AI? How can we ensure that it serves us? Can we build more ethical alternatives to harmful technologies? There&#8217;s a market for those, I&#8217;m betting.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>I also think we need more answers than the ones we currently have. Compensation funds or relocation support for people who live near datacenters. Publicize the billions of taxpayer dollars that subsidize these projects, which usually pay no taxes. </span><a href="https://substack.com/redirect/867c4d5b-4054-421b-9d92-ffcb8f5e9ca3?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">Vote out the motherfuckers who gave your money away</a><span>. Are there legal advocacy groups devoted to this topic? Lobbying groups? What else? Send me any answers you know of and vouch for, and I will post any answers I get.</span></p><h2 class="header-anchor-post" style="position: relative;font-family: 'SF Pro Display',-apple-system-headline,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight: bold;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: antialiased;-webkit-appearance: optimizelegibility;-moz-appearance: optimizelegibility;appearance: optimizelegibility;margin: 1em 0 0.625em 0;color: rgb(54,55,55);line-height: 1.16em;font-size: calc(1.625em * 1);">Start where you live. Start at work</h2><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">I recognize that answer is a little weak. I&#8217;m sorry, I don&#8217;t have all the answers either. I only know there ARE no easy answers, and anyone who says differently is selling something or grandstanding on social media.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>I do know that for me, and probably for many of you, the answer starts at work. The answer starts with admitting that we </span><em>don&#8217;t</em><span> know. And digging in, and getting started anyway.</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">I&#8217;d start here: Are you getting frustrated with AI slop and the undisciplined use of AI tooling, the unfair and un-acknowledged tax on each other&#8217;s time? </p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">We all are &#8212; trust me. These gripes are worth airing. Not for the sake of griping but as a way of figuring out better ways to interact, better patterns, better working agreements. Do you want to declare some days or types of interactions off-limits for AI? Do you want to try asking for consent before sharing an AI-generated doc? What kind of experiments would alleviate your biggest frustration? </p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">Pain is nature&#8217;s teacher. Follow it.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">If you&#8217;re a manager, have an open conversation with your team. (If you&#8217;re not a manager, bring it up with yours!) The good news is, literally everyone is angry and frustrated with the status quo. The time is ripe to propose new ways of being and working together.</p><div class="captioned-image-container-static" style="font-size: 16px;line-height: 26px;margin: 32px auto;"><figure style="width: 100%;margin: 0 auto;"><table class="image-wrapper" width="100%" border="0" cellspacing="0" cellpadding="0" data-component-name="Image2ToDOMStatic" style="mso-padding-alt: 1em 0 1.6em;"><tbody><tr><td style="text-align: center;"></td><td class="content" align="left" width="523" style="text-align: center;"><a class="image-link" target="_blank" href="https://substack.com/redirect/ac2cc63b-6081-43d2-817b-ae76297e38e5?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="position: relative;flex-direction: column;align-items: center;padding: 0;width: auto;height: auto;border: none;text-decoration: none;display: block;margin: 0;"><img data-attrs="{&quot;src&quot;:&quot;https://substack-post-media.s3.amazonaws.com/public/images/6dd13dac-9a86-4bae-96dd-e122fab2f48b_859x299.png&quot;,&quot;srcNoWatermark&quot;:null,&quot;fullscreen&quot;:null,&quot;imageSize&quot;:null,&quot;height&quot;:299,&quot;width&quot;:859,&quot;resizeWidth&quot;:523,&quot;bytes&quot;:477080,&quot;alt&quot;:null,&quot;title&quot;:null,&quot;type&quot;:&quot;image/png&quot;,&quot;href&quot;:null,&quot;belowTheFold&quot;:true,&quot;topImage&quot;:false,&quot;internalRedirect&quot;:&quot;https://charitydotwtf.substack.com/i/202052392?img=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6dd13dac-9a86-4bae-96dd-e122fab2f48b_859x299.png&quot;,&quot;isProcessing&quot;:false,&quot;align&quot;:null,&quot;offset&quot;:false}" alt="" width="523" height="182.0454016298021" src="https://substackcdn.com/image/fetch/$s_!RUdT!,w_523,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6dd13dac-9a86-4bae-96dd-e122fab2f48b_859x299.png" style="border: none !important;vertical-align: middle;display: block;-ms-interpolation-mode: bicubic;height: auto;margin-bottom: 0;width: auto !important;max-width: 100% !important;margin: 0 auto;"></a></td><td style="text-align: center;"></td></tr></tbody></table></figure></div><h2 class="header-anchor-post" style="position: relative;font-family: 'SF Pro Display',-apple-system-headline,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight: bold;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: antialiased;-webkit-appearance: optimizelegibility;-moz-appearance: optimizelegibility;appearance: optimizelegibility;margin: 1em 0 0.625em 0;color: rgb(54,55,55);line-height: 1.16em;font-size: calc(1.625em * 1);">Let&#8217;s make AI boring again</h2><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">There is unlikely to be a future without AI. Sorry. But that doesn&#8217;t mean we&#8217;re stuck with whatever OpenAI and Anthropic decide to give us.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">When I&#8217;m feeling hopeless, I tell myself this: I can have more influence over AI in the software industry than I can have over any of the other things I lay awake at night worrying about: the government, the Supreme Court, elections, climate change, desertification, the information ecosystem, Ukraine, or the Middle East. </p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">The same is probably true for you.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>We do not get to choose a pure world. But we get to choose whether we will help shape the compromised world we already live in.</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>The answer to fear-driven rage is boring, disciplined, collective work, the work of organizing and caring and building a better world. The answer to fundamentalism is not more fundamentalism. Our feelings of guilt and culpability should push us towards acts of solidarity and repair, not the pursuit of individual purity.</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">To my mind, the goal is not to make AI disappear. It&#8217;s too darn useful, and anyway, we can&#8217;t. The goal is to make its use disciplined, social and accountable. Let&#8217;s do the work it takes to live with powerful tools and govern them responsibly. </p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">Let&#8217;s make AI boring again.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">~charity</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">Thanks to everyone who contributed to my bluesky thread, sent messages, challenged my thinking, or reviewed early drafts of this piece. (Too many to name, and some have asked for privacy.) I appreciate you all very much.</p><div class="captioned-image-container-static" style="font-size: 16px;line-height: 26px;margin: 32px auto;"><figure style="width: 100%;margin: 0 auto;"><table class="image-wrapper" width="100%" border="0" cellspacing="0" cellpadding="0" data-component-name="Image2ToDOMStatic" style="mso-padding-alt: 1em 0 1.6em;"><tbody><tr><td style="text-align: center;"></td><td class="content" align="left" width="540" style="text-align: center;"><a class="image-link" target="_blank" href="https://substack.com/redirect/b45cafca-477c-4e7d-806d-96084b7ddd48?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="position: relative;flex-direction: column;align-items: center;padding: 0;width: auto;height: auto;border: none;text-decoration: none;display: block;margin: 0;"><img data-attrs="{&quot;src&quot;:&quot;https://substack-post-media.s3.amazonaws.com/public/images/c383c056-4f2a-4a26-8015-0c0eb30422df_2172x724.png&quot;,&quot;srcNoWatermark&quot;:null,&quot;fullscreen&quot;:null,&quot;imageSize&quot;:null,&quot;height&quot;:485,&quot;width&quot;:1456,&quot;resizeWidth&quot;:540,&quot;bytes&quot;:1765894,&quot;alt&quot;:null,&quot;title&quot;:null,&quot;type&quot;:&quot;image/png&quot;,&quot;href&quot;:null,&quot;belowTheFold&quot;:true,&quot;topImage&quot;:false,&quot;internalRedirect&quot;:&quot;https://charitydotwtf.substack.com/i/202052392?img=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc383c056-4f2a-4a26-8015-0c0eb30422df_2172x724.png&quot;,&quot;isProcessing&quot;:false,&quot;align&quot;:null,&quot;offset&quot;:false}" alt="" width="540" height="179.87637362637363" src="https://substackcdn.com/image/fetch/$s_!ZPQV!,w_540,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc383c056-4f2a-4a26-8015-0c0eb30422df_2172x724.png" style="border: none !important;vertical-align: middle;display: block;-ms-interpolation-mode: bicubic;height: auto;margin-bottom: 0;width: auto !important;max-width: 100% !important;margin: 0 auto;"></a></td><td style="text-align: center;"></td></tr></tbody></table></figure></div><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">For those interested in reading more:</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>There&#8217;s a book I&#8217;ve been recommending a lot recently called &#8220;</span><a href="https://substack.com/redirect/00c75041-427b-4d34-88da-79725d500f47?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">Catastrophe Ethics: How to Choose Well in a World of Tough Choices</a><span>&#8221;, by Travis Rieder.</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">It may be a bit too &#8220;pop&#8221; for philosophy nerds and too &#8220;philosophy&#8221; for popular audiences&#8230; but I loved it and refer back to it often. Rieder talks about the difficulty of living an ethical life when every choice we make is fraught with harms, yet individual actions seems meaningless against the scale of our problems. How do you chart a life of integrity without falling into puritanicalism or nihilism? </p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>&#8220;</span><a href="https://substack.com/redirect/b7a651c4-b514-4946-884a-91a1652e3128?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">More Everything Forever: AI Overlords, Space Empires, and Silicon Valley&#8217;s Crusade to Control the Fate of Humanity</a><span>&#8221;, by Adam Becker. &#8220;Catastrophe Ethics&#8221; can be a bit of a grim read at times, but this book is pure joy. Becker is a science journalist with a philosophy degree and a PhD in astrophysics, and he lives in San Francisco, ground zero for AI psychosis. There is no one better equipped to bust myths about AI, the Singularity, effective altruism, AGI, and so much more, with a zesty edge of dry humor.</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>Albert Hirschman&#8217;s &#8220;</span><a href="https://substack.com/redirect/cddfe220-3c51-4af0-b255-6a1a16a7472a?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">Exit, Voice and Loyalty: Responses to Decline in Firms, Organizations, and States</a><span>&#8221; (thanks Liz)</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>And finally, the utterly necessary &#8220;</span><a href="https://substack.com/redirect/ecf8c1ab-4555-4db9-9a00-b6ee418ef3ca?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">Hope in the Dark</a><span>&#8221;, by Rebecca Solnit. We tend to forget our wins as soon as we achieve them, so it&#8217;s easy to feel like everything is always getting worse, all the time. It is not. And </span><strong>struggle builds hope</strong><span>, all along the way.</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"></p><div class="footnote" data-component-name="FootnoteToDOMStatic" style="line-height: 26px;display: flex;border-top: solid 1px rgb(0,0,0,.1);padding-top: 1.5em;font-size: 90%;flex-direction: row;align-items: baseline;"><span class="footnote-number" style="display: block;margin-right: 6px;min-width: 24px;">1</span><div class="footnote-content" style="font-size: 16px;line-height: 26px;display: block;"><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;min-width: 10px;">I have never blocked someone for disagreeing with me, and I never will. Why would I, when disagreements are more interesting to me than agreements, and when I get so much generative energy from debate and being challenged?</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;min-width: 10px;">The people I block are the ones who showed up angry for reasons that have nothing to do with me. They&#8217;re usually lashing out at me because they think I personify some great evil (&#8220;Just one more rich CTO trying to automate good jobs away&#8221;). They&#8217;re not engaging with what I said, just using me as a punching bag. I don&#8217;t feel any need to stand here and take it.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;min-width: 10px;">I have not yet blocked anyone for being snide and performatively angry at me on social media, but I&#8217;m not ruling it out, and for the same reason. They aren&#8217;t actually talking to me, and they certainly aren&#8217;t listening. They're just holding my writing up and performing their moral superiority for an approving audience. </p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;min-width: 10px;">Of the many cancers of social media, I might despise this one the most.</p></div></div><div class="footnote" data-component-name="FootnoteToDOMStatic" style="line-height: 26px;display: flex;font-size: 90%;flex-direction: row;align-items: baseline;border-top: none;padding-top: 0;"><span class="footnote-number" style="display: block;margin-right: 6px;min-width: 24px;">2</span><div class="footnote-content" style="font-size: 16px;line-height: 26px;display: block;"><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;min-width: 10px;">As Jade Rubick said in the same thread, &#8220;For a lot of technologies, there is a fight between externalized effects that are harmful, and the coordination costs it takes to counter them.'&#8220;</p></div></div><div class="footnote" data-component-name="FootnoteToDOMStatic" style="line-height: 26px;display: flex;font-size: 90%;flex-direction: row;align-items: baseline;border-top: none;padding-top: 0;"><span class="footnote-number" style="display: block;margin-right: 6px;min-width: 24px;">3</span><div class="footnote-content" style="font-size: 16px;line-height: 26px;display: block;"><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;min-width: 10px;"><span>AI will absolutely be used by authoritarian governments everywhere &#8212; it already is. This genie is not going back in the bottle. I want every ethical person I know learning about AI, using AI, and thinking about how we are going to use AI to </span><em>fight back</em><span>.</span></p></div></div><div class="footnote" data-component-name="FootnoteToDOMStatic" style="line-height: 26px;display: flex;font-size: 90%;flex-direction: row;align-items: baseline;border-top: none;padding-top: 0;"><span class="footnote-number" style="display: block;margin-right: 6px;min-width: 24px;">4</span><div class="footnote-content" style="font-size: 16px;line-height: 26px;display: block;"><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;min-width: 10px;">I have to say how much whiplash it gives me, as a child of open source and copyleft, to find that copyright law and internet advertising are now&#8230; the good guys? this timeline is WEIRD you guys)</p></div></div><div class="footnote" data-component-name="FootnoteToDOMStatic" style="line-height: 26px;display: flex;font-size: 90%;flex-direction: row;align-items: baseline;border-top: none;padding-top: 0;"><span class="footnote-number" style="display: block;margin-right: 6px;min-width: 24px;">5</span><div class="footnote-content" style="font-size: 16px;line-height: 26px;display: block;"><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;min-width: 10px;"><span>My newest favorite artist is Kara Voorhees Reynolds, who wrote &#8220;</span><a href="https://substack.com/redirect/c4ba013b-e085-4e5c-96fb-2fd0d5b099e4?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">Priestess</a><span>&#8221;, &#8220;</span><a href="https://substack.com/redirect/391f6617-381b-42ff-be94-dda0f0d52272?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">Illuminator</a><span>&#8221;, and &#8220;</span><a href="https://substack.com/redirect/15273a4d-dce0-413e-bd78-d596239c0022?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">Pilgrimess</a><span>&#8221;, three </span><em>beautiful</em><span>, painful, loving, deeply fun fantasy novels with no Chosen Ones and lots of female rage. The middle book is my favorite. You should read them. &lt;3</span></p></div></div><div class="footnote" data-component-name="FootnoteToDOMStatic" style="line-height: 26px;display: flex;font-size: 90%;flex-direction: row;align-items: baseline;border-top: none;padding-top: 0;"><span class="footnote-number" style="display: block;margin-right: 6px;min-width: 24px;">6</span><div class="footnote-content" style="font-size: 16px;line-height: 26px;display: block;"><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;min-width: 10px;">The water argument is the one that&#8217;s really getting under my skin right now. Oh, you just realized that datacenters use clean water? I look forward to your lobbying against golf courses (which use 20x as much water as DCs) and sprinkler agriculture (70% of clean water globally just gets sprayed into the air). Data centers are moving towards closed loop models at a good clip, and are used by way more people.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;min-width: 10px;">&#8220;AI uses too much water&#8221; is not the argument of someone who cares about water, it&#8217;s the argument of someone who hates AI and is looking for reasons. Don&#8217;t be that guy. It makes us all look bad.</p></div></div><div class="footnote" data-component-name="FootnoteToDOMStatic" style="line-height: 26px;display: flex;font-size: 90%;flex-direction: row;align-items: baseline;margin-bottom: 0;border-top: none;padding-top: 0;"><span class="footnote-number" style="display: block;margin-right: 6px;min-width: 24px;">7</span><div class="footnote-content" style="font-size: 16px;line-height: 26px;display: block;"><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;min-width: 10px;"><span>I had a comparison to AI veganism in here at one point, but I took it out, because we really </span><em>should</em><span> eat less meat. That argument is more compelling than the one against AI, so I don&#8217;t want to present a false equivalence. (And no, I am not a vegan, though I don&#8217;t eat much meat at home.)</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;min-width: 10px;">If the history of veganism is any guide, AI veganism is not going to convince anyone to give up using AI. It's only going to annoy people.</p></div></div></div></div><table class="email-ufi-2-bottom" role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="border-top: 1px solid rgb(0,0,0,.1);border-bottom: 1px solid rgb(0,0,0,.1);min-width: 100%;"><tbody><tr height="16"><td height="16" style="font-size:0px;line-height:0;">&nbsp;</td></tr><tr><td><table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0" style="margin:0 auto;"><tbody><tr><td style="vertical-align:middle;"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="center"><a class="email-button-outline" href="https://substack.com/app-link/post?publication_id=2935724&post_id=202052392&utm_source=substack&isFreemail=true&submitLike=true&token=eyJ1c2VyX2lkIjoxMDUxODY0NywicG9zdF9pZCI6MjAyMDUyMzkyLCJyZWFjdGlvbiI6IuKdpCIsImlhdCI6MTc4MjMzMDc2OSwiZXhwIjoxNzg0OTIyNzY5LCJpc3MiOiJwdWItMjkzNTcyNCIsInN1YiI6InJlYWN0aW9uIn0.pNlJdY9ixejMV47DMhEaknFt8YaGtUJ00U_pI_ssOog&utm_medium=email&utm_campaign=email-reaction&r=69g8n" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;font-weight: 500;border: 1px solid rgb(0,0,0,.1);border-radius: 9999px;text-transform: uppercase;font-size: 12px;line-height: 12px;padding: 9px 14px;text-decoration: none;color: rgb(119,119,119);"><img class="icon" src="https://substackcdn.com/image/fetch/$s_!PeVs!,w_36,c_scale,f_png,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Ficon%2FLucideHeart%3Fv%3D4%26height%3D36%26fill%3Dnone%26stroke%3D%2523808080%26strokeWidth%3D2" width="18" height="18" style="margin-right: 8px;min-width: 18px;min-height: 18px;border: none;vertical-align: middle;max-width: 18px" alt=""><span class="email-button-text" style="vertical-align: middle;">Like</span></a></td></tr></tbody></table></td><td width="8" style="min-width:8px;"></td><td style="vertical-align:middle;"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="center"><a class="email-button-outline" href="https://substack.com/app-link/post?publication_id=2935724&post_id=202052392&utm_source=substack&utm_medium=email&isFreemail=true&comments=true&token=eyJ1c2VyX2lkIjoxMDUxODY0NywicG9zdF9pZCI6MjAyMDUyMzkyLCJpYXQiOjE3ODIzMzA3NjksImV4cCI6MTc4NDkyMjc2OSwiaXNzIjoicHViLTI5MzU3MjQiLCJzdWIiOiJwb3N0LXJlYWN0aW9uIn0.4sdns7NqxzV0V15WifgDMO7_QzIHJ-m9lksWXKdi58A&r=69g8n&utm_campaign=email-half-magic-comments&action=post-comment&utm_source=substack&utm_medium=email" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;font-weight: 500;border: 1px solid rgb(0,0,0,.1);border-radius: 9999px;text-transform: uppercase;font-size: 12px;line-height: 12px;padding: 9px 14px;text-decoration: none;color: rgb(119,119,119);"><img class="icon" src="https://substackcdn.com/image/fetch/$s_!x1tS!,w_36,c_scale,f_png,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Ficon%2FLucideComments%3Fv%3D4%26height%3D36%26fill%3Dnone%26stroke%3D%2523808080%26strokeWidth%3D2" width="18" height="18" style="margin-right: 8px;min-width: 18px;min-height: 18px;border: none;vertical-align: middle;max-width: 18px" alt=""><span class="email-button-text" style="vertical-align: middle;">Comment</span></a></td></tr></tbody></table></td><td width="8" style="min-width:8px;"></td><td style="vertical-align:middle;"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="center"><a class="email-button-outline" href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly9vcGVuLnN1YnN0YWNrLmNvbS9wdWIvY2hhcml0eWRvdHd0Zi9wL21ha2UtYWktYm9yaW5nLWFnYWluP3V0bV9zb3VyY2U9c3Vic3RhY2smdXRtX21lZGl1bT1lbWFpbCZ1dG1fY2FtcGFpZ249ZW1haWwtcmVzdGFjay1jb21tZW50JmFjdGlvbj1yZXN0YWNrLWNvbW1lbnQmcj02OWc4biZ0b2tlbj1leUoxYzJWeVgybGtJam94TURVeE9EWTBOeXdpY0c5emRGOXBaQ0k2TWpBeU1EVXlNemt5TENKcFlYUWlPakUzT0RJek16QTNOamtzSW1WNGNDSTZNVGM0TkRreU1qYzJPU3dpYVhOeklqb2ljSFZpTFRJNU16VTNNalFpTENKemRXSWlPaUp3YjNOMExYSmxZV04wYVc5dUluMC40c2RuczdOcXh6VjBWMTVXaWZnRE1PN19ReklISi1tOWxrc1dYS2RpNThBIiwicCI6MjAyMDUyMzkyLCJzIjoyOTM1NzI0LCJmIjp0cnVlLCJ1IjoxMDUxODY0NywiaWF0IjoxNzgyMzMwNzY5LCJleHAiOjIwOTc5MDY3NjksImlzcyI6InB1Yi0wIiwic3ViIjoibGluay1yZWRpcmVjdCJ9.ILqUlh1tfSmEq9C5LoqwFHjxzjN5qIfCxg5IC4OwK3o?&utm_source=substack&utm_medium=email" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;font-weight: 500;border: 1px solid rgb(0,0,0,.1);border-radius: 9999px;text-transform: uppercase;font-size: 12px;line-height: 12px;padding: 9px 14px;text-decoration: none;color: rgb(119,119,119);"><img class="icon" src="https://substackcdn.com/image/fetch/$s_!ubXF!,w_36,c_scale,f_png,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Ficon%2Fnotes__NoteRestackIcon%3Fv%3D4%26height%3D36%26fill%3Dnone%26stroke%3D%2523808080%26strokeWidth%3D2%26strokeLinecap%3Dround%26strokeLinejoin%3Dround" width="18" height="18" alt="" style="margin-right: 8px;min-width: 18px;min-height: 18px;max-width: 550px;border: none !important;vertical-align: middle;"><span class="email-button-text" style="vertical-align: middle;">Restack</span></a></td></tr></tbody></table></td></tr></tbody></table></td><td align="right"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr></tr></tbody></table></td></tr></tbody></table></td></tr><tr height="16"><td height="16" style="font-size:0px;line-height:0;">&nbsp;</td></tr></tbody></table><div class="footer footer-ZM59BM" style="color: rgb(119,119,119);text-align: center;font-size: 16px;line-height: 26px;padding: 24px0;"><div style="font-size: 16px;line-height: 26px;padding-bottom: 24px"><p class="pencraft pc-reset color-secondary-ls1g8s size-12-mmZ61m reset-IxiVJZ small meta-B2bqa5" style="list-style: none;font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';padding-bottom: 0;font-size: 12px;line-height: 16px;margin: 0;color: rgb(119,119,119);text-decoration: unset;">&#169; 2026 <span>Charity Majors</span><br>548 Market Street PMB 72296, San Francisco, CA 94104 <br><a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly9jaGFyaXR5ZG90d3RmLnN1YnN0YWNrLmNvbS9hY3Rpb24vZGlzYWJsZV9lbWFpbD90b2tlbj1leUoxYzJWeVgybGtJam94TURVeE9EWTBOeXdpY0c5emRGOXBaQ0k2TWpBeU1EVXlNemt5TENKcFlYUWlPakUzT0RJek16QTNOamtzSW1WNGNDSTZNVGd4TXpnMk5qYzJPU3dpYVhOeklqb2ljSFZpTFRJNU16VTNNalFpTENKemRXSWlPaUprYVhOaFlteGxYMlZ0WVdsc0luMC43bl9PWV9Lb1FrdDhZV0pMQmlaOUxOU01sTGtkTlhKenZVM1pXT0R0T1NBIiwicCI6MjAyMDUyMzkyLCJzIjoyOTM1NzI0LCJmIjp0cnVlLCJ1IjoxMDUxODY0NywiaWF0IjoxNzgyMzMwNzY5LCJleHAiOjIwOTc5MDY3NjksImlzcyI6InB1Yi0wIiwic3ViIjoibGluay1yZWRpcmVjdCJ9.dwyRMN9uK-KutegOz86iWnn_CuoUtr8S49zGp0PQXsw?" style="text-decoration: underline;color: rgb(119,119,119);"><span style="color: rgb(119,119,119);text-decoration: underline;">Unsubscribe</span></a></p></div><p class="footerSection-EHR0jG small powered-by-substack" style="padding: 0 24px;font-size: 12px;line-height: 20px;margin: 0;color: rgb(119,119,119);font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';padding-bottom: 0;margin-top: 0;"><a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly9zdWJzdGFjay5jb20vc2lnbnVwP3V0bV9zb3VyY2U9c3Vic3RhY2smdXRtX21lZGl1bT1lbWFpbCZ1dG1fY29udGVudD1mb290ZXImdXRtX2NhbXBhaWduPWF1dG9maWxsZWQtZm9vdGVyJmZyZWVTaWdudXBFbWFpbD1iZW5vaXRjQGdtYWlsLmNvbSZyPTY5ZzhuIiwicCI6MjAyMDUyMzkyLCJzIjoyOTM1NzI0LCJmIjp0cnVlLCJ1IjoxMDUxODY0NywiaWF0IjoxNzgyMzMwNzY5LCJleHAiOjIwOTc5MDY3NjksImlzcyI6InB1Yi0wIiwic3ViIjoibGluay1yZWRpcmVjdCJ9.1IV2i0OwgWlFEcWjp7FEMf0VklFLXJ7zGy2Xmcby_nM?" style="color: rgb(119,119,119);text-decoration: none;display: inline-block;margin: 0 4px;"><img src="https://substackcdn.com/image/fetch/$s_!LkrL!,w_270,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Fimg%2Femail%2Fpublish-button%402x.png" srcset="https://substackcdn.com/image/fetch/$s_!wgfj!,w_135,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Fimg%2Femail%2Fpublish-button.png, https://substackcdn.com/image/fetch/$s_!LkrL!,w_270,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Fimg%2Femail%2Fpublish-button%402x.png 2x, https://substackcdn.com/image/fetch/$s_!KjtY!,w_405,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Fimg%2Femail%2Fpublish-button%403x.png 3x" width="135" alt="Start writing" height="40" style="max-width: 550px;border: none !important;vertical-align: middle;"></a></p></div></div></td><td></td></tr></tbody></table><img src="https://eotrx.substackcdn.com/o/303c12a834e86f43/p.gif?token=eyJtIjoiPDIwMjYwNjI0MTk1MjM5LjMuYjA2MmYzMzIyZTkyNTVmYUBtZy1kMS5zdWJzdGFjay5jb20-IiwidSI6MTA1MTg2NDcsInIiOiJiZW5vaXRjQGdtYWlsLmNvbSIsImQiOiJtZy1kMS5zdWJzdGFjay5jb20iLCJwIjoyMDIwNTIzOTIsInQiOiJuZXdzbGV0dGVyIiwiYSI6ImV2ZXJ5b25lIiwicyI6MjkzNTcyNCwiYyI6InBvc3QiLCJmIjp0cnVlLCJwb3NpdGlvbiI6ImJvdHRvbSIsImlhdCI6MTc4MjMzMDc2OSwiZXhwIjoxNzg0OTIyNzY5LCJpc3MiOiJwdWItMCIsInN1YiI6ImVvIn0.WlWqmmxZzGdfozpJQ77jAQLJJETmOV8KwHoJZc4lePA" alt="" width="1" height="1" border="0" style="height:1px !important;width:1px !important;border-width:0 !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:0 !important;margin-left:0 !important;padding-top:0 !important;padding-bottom:0 !important;padding-right:0 !important;padding-left:0 !important;"/><img width="1" height="1" alt="" src="https://email.mg-d1.substack.com/o/eJw8kN2OgyAQRp-m3K0ZBgW94FkMP6Mlq9Dg0Ma339g2e_tNcs7JBMe0lnraRzlYRKsmD2PQgqw0IyoFxoCg3aVtXilTdUxxdvx_1dOIvbhbQEQJBswwjF4HH-SkpYIRFI3GxyiSRUANGns5DaimTnUeNC5KIdKEw7C4Ww_7-hNldzR_sAu_XSi7SMe8VHonWK6NxFU6uxYT5UCWnlTPkr9zipcGLgF-Fj4fZDO9jo2YqYpH83Mo-95y4nOm7PxG8QtufkvBcSr5DZrUYLAX1XrKJXG49bBeGe-so_lYdpeyDXdXE5-x8IsXwZ9PtoPqBZEwyFH3Rjwt_gUAAP__3Up3TQ"></body></html></body></html>
