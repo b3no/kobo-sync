@@ -1,0 +1,804 @@
+<html><head><meta name="robots" content="noindex"><title>A Chain of Fools</title></head><body><html lang="en" dir="ltr" style="scrollbar-width: thin;scrollbar-color: rgb(219,219,219)rgb(255,255,255);"><head><meta charset="utf-8"><title>A Chain of Fools</title><style>
+@media (max-width: 1024px) {
+  .typography .pullquote-align-left,
+  .typography.editor .pullquote-align-left,
+  .typography .pullquote-align-right,
+  .typography.editor .pullquote-align-right,
+  .typography .pullquote-align-wide,
+  .typography.editor .pullquote-align-wide,
+  .typography .pullquote-align-center,
+  .typography.editor .pullquote-align-center {
+    float: none;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .typography .markup table.image-wrapper img,
+  .typography.editor .markup table.image-wrapper img,
+  .typography .markup table.kindle-wrapper img,
+  .typography.editor .markup table.kindle-wrapper img {
+    max-width: 550px;
+  }
+}
+@media (min-width: 1024px) {
+  .typography:not(:has(#toc)) .captioned-image-container figure:has(> a.image2-offset-left),
+  .typography.editor:not(:has(#toc)) .captioned-image-container figure:has(> a.image2-offset-left) {
+    margin-left: var(--image-offset-margin);
+  }
+  .typography:not(:has(#toc)) .captioned-image-container figure:has(> a.image2-offset-right),
+  .typography.editor:not(:has(#toc)) .captioned-image-container figure:has(> a.image2-offset-right) {
+    margin-right: var(--image-offset-margin);
+  }
+}
+@media (min-width: 1300px) {
+  .typography .captioned-image-container figure:has(> a.image2-offset-left),
+  .typography.editor .captioned-image-container figure:has(> a.image2-offset-left) {
+    margin-left: var(--image-offset-margin);
+  }
+  .typography .captioned-image-container figure:has(> a.image2-offset-right),
+  .typography.editor .captioned-image-container figure:has(> a.image2-offset-right) {
+    margin-right: var(--image-offset-margin);
+  }
+}
+@media (max-width: 1024px) {
+  .typography,
+  .typography.editor {
+    /* Disable offset on mobile/tablet */
+  }
+  .typography .captioned-image-container figure:has(> a.image2-align-left),
+  .typography.editor .captioned-image-container figure:has(> a.image2-align-left),
+  .typography .captioned-image-container figure:has(> a.image2-align-right),
+  .typography.editor .captioned-image-container figure:has(> a.image2-align-right) {
+    float: none;
+    margin: 1em auto;
+    max-width: 100%;
+    width: auto;
+    padding: 0;
+  }
+  .typography .captioned-image-container figure:has(> a.image2-align-left.thefp),
+  .typography.editor .captioned-image-container figure:has(> a.image2-align-left.thefp),
+  .typography .captioned-image-container figure:has(> a.image2-align-right.thefp),
+  .typography.editor .captioned-image-container figure:has(> a.image2-align-right.thefp) {
+    margin: 1em auto;
+  }
+  .typography .captioned-image-container figure:has(> a.image2-offset-left),
+  .typography.editor .captioned-image-container figure:has(> a.image2-offset-left),
+  .typography .captioned-image-container figure:has(> a.image2-offset-right),
+  .typography.editor .captioned-image-container figure:has(> a.image2-offset-right) {
+    margin: 1em auto;
+  }
+  .typography .captioned-image-container figure:has(> a.image2-align-left) .image2-inset,
+  .typography.editor .captioned-image-container figure:has(> a.image2-align-left) .image2-inset,
+  .typography .captioned-image-container figure:has(> a.image2-align-right) .image2-inset,
+  .typography.editor .captioned-image-container figure:has(> a.image2-align-right) .image2-inset {
+    display: block;
+    justify-content: initial;
+  }
+}
+@media (max-width: 768px) {
+  .typography .markup div.sponsorship-campaign-embed,
+  .typography.editor .markup div.sponsorship-campaign-embed {
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+  .typography .markup div.sponsorship-campaign-embed:first-child,
+  .typography.editor .markup div.sponsorship-campaign-embed:first-child {
+    margin-top: 0px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .typography .markup div.youtube-overlay,
+  .typography.editor .markup div.youtube-overlay,
+  .typography .markup div.vimeo-overlay,
+  .typography.editor .markup div.vimeo-overlay {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 370px) {
+  .typography .markup div.tiktok-wrap,
+  .typography.editor .markup div.tiktok-wrap {
+    width: calc(95vw - 32px);
+    height: calc((95vw - 32px - 2px) / 0.485714);
+  }
+}
+@media screen and (max-width: 650px) {
+  .typography .markup div.embedded-publication-wrap .embedded-publication.show-subscribe,
+  .typography.editor .markup div.embedded-publication-wrap .embedded-publication.show-subscribe {
+    padding: 24px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .typography .markup div.subscription-widget-wrap .subscription-widget.show-subscribe,
+  .typography.editor .markup div.subscription-widget-wrap .subscription-widget.show-subscribe,
+  .typography .markup div.subscription-widget-wrap-editor .subscription-widget.show-subscribe,
+  .typography.editor .markup div.subscription-widget-wrap-editor .subscription-widget.show-subscribe,
+  .typography .markup div.captioned-button-wrap .subscription-widget.show-subscribe,
+  .typography.editor .markup div.captioned-button-wrap .subscription-widget.show-subscribe {
+    padding: 0px 24px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .typography .markup div.subscription-widget-wrap .subscription-widget.show-subscribe .subscription-widget-subscribe .button,
+  .typography.editor .markup div.subscription-widget-wrap .subscription-widget.show-subscribe .subscription-widget-subscribe .button,
+  .typography .markup div.subscription-widget-wrap-editor .subscription-widget.show-subscribe .subscription-widget-subscribe .button,
+  .typography.editor .markup div.subscription-widget-wrap-editor .subscription-widget.show-subscribe .subscription-widget-subscribe .button,
+  .typography .markup div.captioned-button-wrap .subscription-widget.show-subscribe .subscription-widget-subscribe .button,
+  .typography.editor .markup div.captioned-button-wrap .subscription-widget.show-subscribe .subscription-widget-subscribe .button {
+    padding: 10px 12px;
+    min-width: 110px;
+  }
+}
+@media (max-width: 650px) {
+  .typography .markup .twitter-embed,
+  .typography.editor .markup .twitter-embed,
+  .typography .markup .tweet,
+  .typography.editor .markup .tweet {
+    padding: 12px;
+  }
+}
+@media (max-width: 650px) {
+  .typography .markup .twitter-embed .tweet-text,
+  .typography.editor .markup .twitter-embed .tweet-text,
+  .typography .markup .tweet .tweet-text,
+  .typography.editor .markup .tweet .tweet-text {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+@media (max-width: 650px) {
+  .typography .markup .twitter-embed .tweet-photos-container.two,
+  .typography.editor .markup .twitter-embed .tweet-photos-container.two,
+  .typography .markup .tweet .tweet-photos-container.two,
+  .typography.editor .markup .tweet .tweet-photos-container.two,
+  .typography .markup .twitter-embed .tweet-photos-container.three,
+  .typography.editor .markup .twitter-embed .tweet-photos-container.three,
+  .typography .markup .tweet .tweet-photos-container.three,
+  .typography.editor .markup .tweet .tweet-photos-container.three,
+  .typography .markup .twitter-embed .tweet-photos-container.four,
+  .typography.editor .markup .twitter-embed .tweet-photos-container.four,
+  .typography .markup .tweet .tweet-photos-container.four,
+  .typography.editor .markup .tweet .tweet-photos-container.four {
+    height: 200px;
+  }
+}
+@media (max-width: 650px) {
+  .typography .markup .twitter-embed a.expanded-link .expanded-link-img,
+  .typography.editor .markup .twitter-embed a.expanded-link .expanded-link-img,
+  .typography .markup .tweet a.expanded-link .expanded-link-img,
+  .typography.editor .markup .tweet a.expanded-link .expanded-link-img {
+    max-height: 180px;
+  }
+}
+@media (max-width: 650px) {
+  .typography .markup .twitter-embed a.expanded-link .expanded-link-description,
+  .typography.editor .markup .twitter-embed a.expanded-link .expanded-link-description,
+  .typography .markup .tweet a.expanded-link .expanded-link-description,
+  .typography.editor .markup .tweet a.expanded-link .expanded-link-description {
+    display: none;
+  }
+}
+@media screen and (max-width: 650px) {
+  .typography .markup .apple-podcast-container,
+  .typography.editor .markup .apple-podcast-container {
+    width: unset;
+  }
+}
+@media (max-width: 420px) {
+  .typography .markup .install-substack-app-embed img.install-substack-app-embed-img,
+  .typography.editor .markup .install-substack-app-embed img.install-substack-app-embed-img {
+    margin: 0 auto 16px auto;
+  }
+}
+@media (max-width: 420px) {
+  .typography .markup .install-substack-app-embed .install-substack-app-embed-text,
+  .typography.editor .markup .install-substack-app-embed .install-substack-app-embed-text {
+    margin: 0 0 12px 0;
+    max-width: 100%;
+    width: auto;
+    text-align: center;
+  }
+}
+@media (max-width: 420px) {
+  .typography .markup .install-substack-app-embed .install-substack-app-embed-link,
+  .typography.editor .markup .install-substack-app-embed .install-substack-app-embed-link {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 481px) {
+  .share-button-container {
+    height: 38px;
+  }
+}
+@media screen and (min-width: 481px) {
+  .share-button-container a.comment {
+    height: 38px;
+    line-height: 38px;
+    padding-right: 10px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .share-button-container .separator {
+    display: block;
+    margin: 0;
+    height: 8px;
+    border-left: none;
+  }
+}
+@media screen and (max-width: 480px) {
+  .share-button-container a.share.first img {
+    padding-left: 0;
+  }
+}
+@media screen and (min-width: 481px) {
+  .share-button-container a.mobile {
+    display: none !important;
+  }
+}
+@media screen and (min-width: 541px) {
+  .settings-add-pub-modal-wrapper .container .add-recommending-pub-modal-container {
+    padding: 36px;
+    height: 680px;
+  }
+}
+@media screen and (min-width: 541px) {
+  .settings-add-pub-modal-wrapper .container .add-recommending-pub-modal-container .footer {
+    position: absolute;
+    bottom: 36px;
+    margin: 0px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .header-anchor-parent {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .post {
+    padding: 16px 0 0 0;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post .post-header .post-label {
+    margin-top: 8px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post .post-header .meta-author-wrap.alternative-meta .meta-right-column .post-meta {
+    margin-top: 6px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post .footer-facepile-container {
+    height: 64px;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post .post-footer.use-separators {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post .post-footer.next-prev {
+    height: 64px;
+    justify-content: space-between;
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post-contributor-footer .post-contributor-bio-table {
+    display: block;
+  }
+  .post-contributor-footer .post-contributor-bio-table-row {
+    display: flex;
+    flex-direction: row;
+  }
+  .post-contributor-footer .post-contributor-bio-userhead-cell,
+  .post-contributor-footer .post-contributor-bio-body-cell {
+    display: block;
+  }
+  .post-contributor-footer .post-contributor-bio-body-cell {
+    flex-grow: 1;
+  }
+  .post-contributor-footer .post-contributor-bio-body-table {
+    display: block;
+  }
+  .post-contributor-footer .post-contributor-bio-body-table-row {
+    display: block;
+  }
+  .post-contributor-footer .post-contributor-bio-copy-cell,
+  .post-contributor-footer .post-contributor-bio-controls-cell {
+    display: block;
+  }
+  .post-contributor-footer .post-contributor-bio-copy-cell {
+    margin: 0 0 16px 0;
+  }
+  .post-contributor-footer .post-contributor-bio-controls-cell {
+    width: auto;
+  }
+  .post-contributor-footer .post-contributor-bio-controls {
+    margin: auto;
+  }
+  .post-contributor-footer .post-contributor-bio-controls .button.primary {
+    width: 100%;
+  }
+  .post-contributor-footer .post-contributor-bio-text {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .post-silhouette {
+    padding: 32px 0;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post-silhouette .post-silhouette-title {
+    margin-top: 10.44225025px;
+    height: 120px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post-silhouette .post-silhouette-meta {
+    width: 75%;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post-silhouette .post-silhouette-meta.with-byline-image {
+    margin: 20px 0;
+  }
+}
+@media screen and (max-width: 650px) {
+  .use-theme-bg .post-meta.alternative-meta .post-meta-item,
+  .post-meta.alternative-meta .post-meta-item {
+    padding-right: 16px;
+  }
+}
+@media screen and (max-width: 370px) {
+  .use-theme-bg .post-meta.alternative-meta .post-meta-item,
+  .post-meta.alternative-meta .post-meta-item {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .use-theme-bg .post-meta.alternative-meta .post-meta-item.guest-author-publication,
+  .post-meta.alternative-meta .post-meta-item.guest-author-publication {
+    display: none;
+  }
+}
+@media screen and (max-width: 370px) {
+  .post-meta .post-meta-item .post-meta-button {
+    height: 36px !important;
+    /* important to override in-line height style on emails */
+  }
+  .post-meta .post-meta-item .post-meta-button .meta-button-label {
+    display: none;
+  }
+  .post-meta .post-meta-item .post-meta-button > svg {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 370px) {
+  .post-meta .post-meta-item {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post .floating-subscribe-button {
+    bottom: 20px;
+    right: 20px;
+  }
+}
+@media (max-width: 1024px) {
+  body .pullquote-align-left,
+  body .pullquote-align-right,
+  body .pullquote-align-wide,
+  body .pullquote-align-center {
+    float: none;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  body .markup table.image-wrapper img,
+  body .markup table.kindle-wrapper img {
+    max-width: 550px;
+  }
+}
+@media (min-width: 1024px) {
+  body:not(:has(#toc)) .captioned-image-container figure:has(> a.image2-offset-left) {
+    margin-left: var(--image-offset-margin);
+  }
+  body:not(:has(#toc)) .captioned-image-container figure:has(> a.image2-offset-right) {
+    margin-right: var(--image-offset-margin);
+  }
+}
+@media (min-width: 1300px) {
+  body .captioned-image-container figure:has(> a.image2-offset-left) {
+    margin-left: var(--image-offset-margin);
+  }
+  body .captioned-image-container figure:has(> a.image2-offset-right) {
+    margin-right: var(--image-offset-margin);
+  }
+}
+@media (max-width: 1024px) {
+  body {
+    /* Disable offset on mobile/tablet */
+  }
+  body .captioned-image-container figure:has(> a.image2-align-left),
+  body .captioned-image-container figure:has(> a.image2-align-right) {
+    float: none;
+    margin: 1em auto;
+    max-width: 100%;
+    width: auto;
+    padding: 0;
+  }
+  body .captioned-image-container figure:has(> a.image2-align-left.thefp),
+  body .captioned-image-container figure:has(> a.image2-align-right.thefp) {
+    margin: 1em auto;
+  }
+  body .captioned-image-container figure:has(> a.image2-offset-left),
+  body .captioned-image-container figure:has(> a.image2-offset-right) {
+    margin: 1em auto;
+  }
+  body .captioned-image-container figure:has(> a.image2-align-left) .image2-inset,
+  body .captioned-image-container figure:has(> a.image2-align-right) .image2-inset {
+    display: block;
+    justify-content: initial;
+  }
+}
+@media (max-width: 768px) {
+  body .markup div.sponsorship-campaign-embed {
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+  body .markup div.sponsorship-campaign-embed:first-child {
+    margin-top: 0px;
+  }
+}
+@media screen and (max-width: 650px) {
+  body .markup div.youtube-overlay,
+  body .markup div.vimeo-overlay {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 370px) {
+  body .markup div.tiktok-wrap {
+    width: calc(95vw - 32px);
+    height: calc((95vw - 32px - 2px) / 0.485714);
+  }
+}
+@media screen and (max-width: 650px) {
+  body .markup div.embedded-publication-wrap .embedded-publication.show-subscribe {
+    padding: 24px;
+  }
+}
+@media screen and (max-width: 650px) {
+  body .markup div.subscription-widget-wrap .subscription-widget.show-subscribe,
+  body .markup div.subscription-widget-wrap-editor .subscription-widget.show-subscribe,
+  body .markup div.captioned-button-wrap .subscription-widget.show-subscribe {
+    padding: 0px 24px;
+  }
+}
+@media screen and (max-width: 650px) {
+  body .markup div.subscription-widget-wrap .subscription-widget.show-subscribe .subscription-widget-subscribe .button,
+  body .markup div.subscription-widget-wrap-editor .subscription-widget.show-subscribe .subscription-widget-subscribe .button,
+  body .markup div.captioned-button-wrap .subscription-widget.show-subscribe .subscription-widget-subscribe .button {
+    padding: 10px 12px;
+    min-width: 110px;
+  }
+}
+@media (max-width: 650px) {
+  body .markup .twitter-embed,
+  body .markup .tweet {
+    padding: 12px;
+  }
+}
+@media (max-width: 650px) {
+  body .markup .twitter-embed .tweet-text,
+  body .markup .tweet .tweet-text {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+@media (max-width: 650px) {
+  body .markup .twitter-embed .tweet-photos-container.two,
+  body .markup .tweet .tweet-photos-container.two,
+  body .markup .twitter-embed .tweet-photos-container.three,
+  body .markup .tweet .tweet-photos-container.three,
+  body .markup .twitter-embed .tweet-photos-container.four,
+  body .markup .tweet .tweet-photos-container.four {
+    height: 200px;
+  }
+}
+@media (max-width: 650px) {
+  body .markup .twitter-embed a.expanded-link .expanded-link-img,
+  body .markup .tweet a.expanded-link .expanded-link-img {
+    max-height: 180px;
+  }
+}
+@media (max-width: 650px) {
+  body .markup .twitter-embed a.expanded-link .expanded-link-description,
+  body .markup .tweet a.expanded-link .expanded-link-description {
+    display: none;
+  }
+}
+@media screen and (max-width: 650px) {
+  body .markup .apple-podcast-container {
+    width: unset;
+  }
+}
+@media (max-width: 420px) {
+  body .markup .install-substack-app-embed img.install-substack-app-embed-img {
+    margin: 0 auto 16px auto;
+  }
+}
+@media (max-width: 420px) {
+  body .markup .install-substack-app-embed .install-substack-app-embed-text {
+    margin: 0 0 12px 0;
+    max-width: 100%;
+    width: auto;
+    text-align: center;
+  }
+}
+@media (max-width: 420px) {
+  body .markup .install-substack-app-embed .install-substack-app-embed-link {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 500px) {
+  body .header a.logo {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+  }
+}
+@media screen and (max-width: 420px) {
+  body .subscription-receipt table:first-of-type .subscription-amount .subscription-discount {
+    width: 72px !important;
+  }
+}
+@media screen and (min-width: 481px) {
+  body .share-button-container {
+    height: auto;
+  }
+}
+@media screen and (max-width: 480px) {
+  body .share-button-container .separator {
+    display: block !important;
+    margin: 0 !important;
+    height: 8px !important;
+    border-left: none !important;
+  }
+}
+@media screen and (max-width: 650px) {
+  .digest .item .post-meta-item.audience {
+    display: none;
+  }
+}
+@media screen and (min-width: 500px) {
+  .digest-publication .logo img {
+    width: 42px;
+    height: 42px;
+    border-radius: 8px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .comments-page .container .comment-list .collapsed-reply {
+    margin-left: calc(10 + 32px - 24px);
+  }
+}
+@media screen and (max-width: 650px) {
+  .comment > .comment-list {
+    padding-left: 24px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .finish-magic-login-modal .modal-content .container {
+    padding: 24px 0;
+  }
+}
+@media (max-width: 650px) {
+  .reader2-text-b3 {
+    line-height: 24px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .reader2-text-h4 {
+    line-height: 24px;
+  }
+}
+@media screen and (min-width: 541px) {
+  .user-profile-modal {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .subscribe-widget form.form .sideBySideWrap button.rightButton {
+    padding: 10px 12px;
+  }
+}
+@media screen and (min-width: 541px) {
+  .pub-icon:hover .logo-hover,
+  .feed-item-icon:hover .logo-hover {
+    display: block;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post-ufi.single-full-width-button .post-ufi-button-wrapper {
+    width: 100%;
+    padding: 16px;
+  }
+  .post-ufi.single-full-width-button .post-ufi-button-wrapper:empty {
+    display: none;
+  }
+  .post-ufi.single-full-width-button .post-ufi-button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  .file-embed-wrapper {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .file-embed-wrapper-editor {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .file-embed-wrapper-editor:active {
+    padding: 0;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .file-embed-button.wide,
+  .file-embed-error-button.wide {
+    display: none;
+  }
+}
+@media only screen and (min-width: 630px) {
+  .file-embed-button.narrow,
+  .file-embed-error-button.narrow {
+    display: none;
+  }
+}
+@media screen and (min-width: 541px) {
+  .audio-player-wrapper .audio-player {
+    min-width: 500px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .audio-player-wrapper .audio-player .audio-player-progress {
+    border-left-width: 16px;
+    border-right-width: 16px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .audio-player-wrapper .audio-player .audio-player-progress .audio-player-progress-bar .audio-player-progress-bar-popup {
+    top: -54px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .audio-player-wrapper-fancy .audio-player .audio-player-progress {
+    border-left-width: 16px;
+    border-right-width: 16px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .audio-player-wrapper-fancy .audio-player .audio-player-progress .audio-player-progress-bar .audio-player-progress-bar-popup {
+    top: -54px;
+  }
+}
+@media (min-width: 250px) {
+  .audio-player-wrapper-fancy .audio-player {
+    padding: 32px;
+  }
+  .audio-player-wrapper-fancy .audio-player .btn-group {
+    display: flex;
+  }
+  .audio-player-wrapper-fancy .audio-player .btn-group .button:last-of-type {
+    display: block;
+  }
+}
+@media (min-width: 300px) {
+  .audio-player-wrapper-fancy .audio-player .btn-group {
+    display: block;
+  }
+  .audio-player-wrapper-fancy .audio-player .btn-group .button:first-of-type {
+    display: block;
+  }
+}
+@media (min-width: 350px) {
+  .audio-player-wrapper-fancy .audio-player .audio-player-substack-logo {
+    display: block;
+  }
+  .audio-player-wrapper-fancy .audio-player .audio-player-title {
+    margin-top: 16px;
+  }
+  .audio-player-wrapper-fancy .audio-player .audio-player-hero-image-container {
+    padding-top: 15%;
+    width: 15%;
+    display: block;
+  }
+  .audio-player-wrapper-fancy .audio-player .btn-group .button:first-of-type {
+    display: block;
+  }
+  .audio-player-wrapper-fancy .audio-player .audio-player-substack-logo {
+    display: block;
+  }
+}
+@media (min-width: 350px) {
+  .audio-player-wrapper-fancy .audio-player .audio-player-hero-image-container {
+    padding-top: 25%;
+    width: 25%;
+    display: block;
+  }
+  .audio-player-wrapper-fancy .audio-player .btn-group {
+    display: flex;
+  }
+  .audio-player-wrapper-fancy .audio-player .btn-group .button:first-of-type {
+    display: block;
+  }
+}
+@media (min-width: 400px) {
+  .audio-player-wrapper-fancy .audio-player .audio-player-hero-image-container {
+    padding-top: 40%;
+    width: 40%;
+  }
+}
+@media (max-width: 400px) {
+  .audio-player-wrapper-fancy .audio-player .btn-group {
+    margin-top: 12px;
+  }
+  .audio-player-wrapper-fancy .audio-player .btn-group .button {
+    font-size: 13px;
+    padding: 6px 12px;
+    height: auto;
+    margin-top: 10px;
+  }
+}
+@media (min-width: 600px) {
+  .audio-player-wrapper-fancy .audio-player .audio-player-hero-image-container {
+    padding-top: 55%;
+    width: 55%;
+  }
+}
+@media (max-width: 650px) {
+  .poll-editor-modal {
+    min-width: calc(100% - 20px);
+  }
+}
+@media (max-width: 750px) {
+  .poll-embed .poll-anchor-target .poll-anchor-copy-button {
+    left: 8px;
+    top: 45px;
+  }
+}
+@media not all and (min-resolution: 0.001dpcm) {
+  @supports (-webkit-appearance: none) {
+    p a:not(.primary.button),
+    .post p:not(.button-wrapper) a:not(.primary.button),
+    .footnote a.footnote-anchor:not(.primary.button),
+    .thread-head .markup p:not(.button-wrapper) a:not(.primary.button) {
+      color: hsl(117.74436090225564, 100%, 40%);
+      text-decoration: none;
+    }
+    p a:not(.primary.button):hover,
+    .post p:not(.button-wrapper) a:not(.primary.button):hover,
+    .footnote a.footnote-anchor:not(.primary.button):hover,
+    .thread-head .markup p:not(.button-wrapper) a:not(.primary.button):hover {
+      text-decoration: underline;
+    }
+  }
+}</style></head><body class="email-body" style="font-kerning: auto;--image-offset-margin: -120px;"><img src="https://eotrx.substackcdn.com/o/6be7d64c6512779e/p.gif?token=eyJtIjoiPDIwMjYwNjI2MTgwNTAzLjMuMGJiOGNkNTc4Yzg1NWYxOUBtZy1kMC5zdWJzdGFjay5jb20-IiwidSI6MTA1MTg2NDcsInIiOiJiZW5vaXRjQGdtYWlsLmNvbSIsImQiOiJtZy1kMC5zdWJzdGFjay5jb20iLCJwIjoyMDM0MTEyOTYsInQiOiJuZXdzbGV0dGVyIiwiYSI6ImV2ZXJ5b25lIiwicyI6ODkxNjM4LCJjIjoicG9zdCIsImYiOnRydWUsInBvc2l0aW9uIjoidG9wIiwiaWF0IjoxNzgyNDk3NTU2LCJleHAiOjE3ODUwODk1NTYsImlzcyI6InB1Yi0wIiwic3ViIjoiZW8ifQ.qqNdazpNRnhcQgpcX4u55ME-qXbohXL4FHTNoOpufnw" alt="" width="1" height="1" border="0" style="height:1px !important;width:1px !important;border-width:0 !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:0 !important;margin-left:0 !important;padding-top:0 !important;padding-bottom:0 !important;padding-right:0 !important;padding-left:0 !important;"/><div class="preview" style="display:none;font-size:1px;color:#333333;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;">A conversation with Ibram X. Kendi</div><div class="preview" style="display:none;font-size:1px;color:#333333;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;">&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;</div><table class="email-body-container" role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td></td><td class="content" width="550"></td><td></td></tr><tr><td></td><td class="content" width="550" align="left"><div style="font-size: 16px;line-height: 26px;max-width: 550px;width: 100%;margin: 0 auto;overflow-wrap: break-word;"><table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="right" style="height:20px;"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="vertical-align:middle;"><span class="pencraft pc-reset reset-IxiVJZ tw-font-body tw-text-ssm tw-text-substack-secondary" style="font-family: SF Pro Text, -apple-system, system-ui, BlinkMacSystemFont, Inter, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;font-size: 13px;color: unset;list-style: none;text-decoration: unset;margin: 0;"><div class="pencraft pc-reset align-right-VJbKw5 size-12-mmZ61m reset-IxiVJZ" style="list-style: none;color: unset;text-align: right;font-size: 12px;line-height: 16px;text-decoration: unset;margin: 0;"><span class="pencraft pc-reset reset-IxiVJZ" translated="" style="list-style: none;color: unset;text-decoration: unset;margin: 0;">Forwarded this email? <a class="pencraft pc-reset decoration-underline-ClTkYc reset-IxiVJZ" href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly93d3cuYnVnZXllZGFuZHNoYW1lbGVzcy5jb20vc3Vic2NyaWJlP3V0bV9zb3VyY2U9ZW1haWwmdXRtX2NhbXBhaWduPWVtYWlsLXN1YnNjcmliZSZyPTY5ZzhuJm5leHQ9aHR0cHMlM0ElMkYlMkZ3d3cuYnVnZXllZGFuZHNoYW1lbGVzcy5jb20lMkZwJTJGYS1jaGFpbi1vZi1mb29scyIsInAiOjIwMzQxMTI5NiwicyI6ODkxNjM4LCJmIjp0cnVlLCJ1IjoxMDUxODY0NywiaWF0IjoxNzgyNDk3NTU1LCJleHAiOjIwOTgwNzM1NTUsImlzcyI6InB1Yi0wIiwic3ViIjoibGluay1yZWRpcmVjdCJ9.rhaZcgUWEc-tJmRA2V5uXzlp3R5jixNsu6yJek_t9f0?" style="list-style: none;color: unset;text-decoration: unset;margin: 0;-webkit-text-decoration-line: underline;text-decoration-line: underline;">Subscribe here</a> for more</span></div></span></td></tr></tbody></table></td></tr></tbody></table><div class="post typography" dir="auto" style="--image-offset-margin: -120px;padding: 32px 0 0 0;font-size: 16px;line-height: 26px;"><div class="post-header" role="region" aria-label="Post header" style="font-size: 16px;line-height: 26px;"><h1 class="post-title published title-X77sOw" dir="auto" style="direction: auto;text-align: start;unicode-bidi: isolate;color: rgb(54,55,55);font-family: 'Roboto Mono',monospace;font-weight: 700;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: antialiased;-webkit-appearance: optimizelegibility;-moz-appearance: optimizelegibility;appearance: optimizelegibility;margin: 0;line-height: 36px;font-size: 32px;"><a href="https://substack.com/app-link/post?publication_id=891638&post_id=203411296&utm_source=post-email-title&utm_campaign=email-post-title&isFreemail=true&r=69g8n&token=eyJ1c2VyX2lkIjoxMDUxODY0NywicG9zdF9pZCI6MjAzNDExMjk2LCJpYXQiOjE3ODI0OTc1NTUsImV4cCI6MTc4NTA4OTU1NSwiaXNzIjoicHViLTg5MTYzOCIsInN1YiI6InBvc3QtcmVhY3Rpb24ifQ.cxEwshboH3OVBtnUWBTRhUaReAZ7h_t2FCIV-g5AGCY" style="color: rgb(54,55,55);text-decoration: none;">A Chain of Fools</a></h1><h3 class="subtitle subtitle-HEEcLo" dir="auto" style="direction: auto;text-align: start;unicode-bidi: isolate;font-family: 'SF Pro Display',-apple-system-headline,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight: normal;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: antialiased;-webkit-appearance: optimizelegibility;-moz-appearance: optimizelegibility;appearance: optimizelegibility;margin: 4px 0 0;color: #777777;line-height: 24px;font-size: 18px;margin-top: 12px;">A conversation with Ibram X. Kendi</h3><table class="post-meta" role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="margin: 1em 0;height: 20px;align-items: center;"><tbody><tr><td><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="vertical-align:middle;"><div class="pencraft pc-reset color-primary-zABazT line-height-20-t4M0El font-meta-MWBumP size-11-NuY2Zx weight-medium-fw81nC transform-uppercase-yKDgcq reset-IxiVJZ meta-EgzBVA custom-css-email-post-author" style="list-style: none;font-size: 11px;line-height: 20px;text-decoration: unset;color: rgb(54,55,55);margin: 0;font-family: 'SF Compact',-apple-system,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight: 500;text-transform: uppercase;letter-spacing: .2px;"><a class="pencraft pc-reset color-primary-zABazT line-height-20-t4M0El font-meta-MWBumP size-11-NuY2Zx weight-medium-fw81nC transform-uppercase-yKDgcq reset-IxiVJZ meta-EgzBVA" style="list-style: none;color: rgb(54,55,55);margin: 0;font-size: 11px;line-height: 20px;font-family: 'SF Compact',-apple-system,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight: 500;text-transform: uppercase;letter-spacing: .2px;text-decoration: none" href="https://substack.com/@justinling">Justin Ling</a></div></td></tr></tbody></table></td></tr><tr><td><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="vertical-align:middle;"><div class="pencraft pc-reset color-secondary-ls1g8s line-height-20-t4M0El font-meta-MWBumP size-11-NuY2Zx weight-medium-fw81nC transform-uppercase-yKDgcq reset-IxiVJZ meta-EgzBVA" style="list-style: none;font-size: 11px;line-height: 20px;text-decoration: unset;color: rgb(119,119,119);margin: 0;font-family: 'SF Compact',-apple-system,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight: 500;text-transform: uppercase;letter-spacing: .2px;"><time datetime="2026-06-26T18:05:02.965Z">Jun 26</time></div></td></tr></tbody></table></td></tr></tbody></table></td><td align="right"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="vertical-align:middle;"><a href="https://substack.com/@justinling"><img class="custom-css-email-avatar avatar-QIQ5yR" src="https://substackcdn.com/image/fetch/$s_!s_f_!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fdc7a3d65-e9ee-4ce3-9c0d-3f00545d81d7_3646x3646.jpeg" style="box-sizing: border-box;max-width: 550px;border: none;vertical-align: middle;width: 40px;height: 40px;min-width: 40px;min-height: 40px;object-fit: cover;margin: 0px;display: inline;border-radius: 50%" width="40" height="40"></a></td></tr></tbody></table></td></tr></tbody></table><table class="email-ufi-2-top" role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="border-top: 1px solid rgb(0,0,0,.1);border-bottom: 1px solid rgb(0,0,0,.1);min-width: 100%;"><tbody><tr height="16"><td height="16" style="font-size:0px;line-height:0;">&nbsp;</td></tr><tr><td><table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="vertical-align:middle;"><table role="presentation" width="38" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="center"><a class="email-icon-button" href="https://substack.com/app-link/post?publication_id=891638&post_id=203411296&utm_source=substack&isFreemail=true&submitLike=true&token=eyJ1c2VyX2lkIjoxMDUxODY0NywicG9zdF9pZCI6MjAzNDExMjk2LCJyZWFjdGlvbiI6IuKdpCIsImlhdCI6MTc4MjQ5NzU1NSwiZXhwIjoxNzg1MDg5NTU1LCJpc3MiOiJwdWItODkxNjM4Iiwic3ViIjoicmVhY3Rpb24ifQ.P_OtZGR9BV9LmWrAFVBA7KOosJWdHDTG8lAaxWNcj9g&utm_medium=email&utm_campaign=email-reaction&r=69g8n" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;font-weight: 500;border: 1px solid rgb(0,0,0,.1);border-radius: 9999px;text-transform: uppercase;font-size: 12px;line-height: 1;padding: 9px 0;text-decoration: none;color: rgb(119,119,119);min-width: 38px;box-sizing: border-box;width: 38px"><img class="icon" src="https://substackcdn.com/image/fetch/$s_!PeVs!,w_36,c_scale,f_png,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Ficon%2FLucideHeart%3Fv%3D4%26height%3D36%26fill%3Dnone%26stroke%3D%2523808080%26strokeWidth%3D2" width="18" height="18" style="border: none;vertical-align: middle;max-width: 18px" alt=""></a></td></tr></tbody></table></td><td width="8" style="min-width:8px;"></td><td style="vertical-align:middle;"><table role="presentation" width="38" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="center"><a class="email-icon-button" href="https://substack.com/app-link/post?publication_id=891638&post_id=203411296&utm_source=substack&utm_medium=email&isFreemail=true&comments=true&token=eyJ1c2VyX2lkIjoxMDUxODY0NywicG9zdF9pZCI6MjAzNDExMjk2LCJpYXQiOjE3ODI0OTc1NTUsImV4cCI6MTc4NTA4OTU1NSwiaXNzIjoicHViLTg5MTYzOCIsInN1YiI6InBvc3QtcmVhY3Rpb24ifQ.cxEwshboH3OVBtnUWBTRhUaReAZ7h_t2FCIV-g5AGCY&r=69g8n&utm_campaign=email-half-magic-comments&action=post-comment&utm_source=substack&utm_medium=email" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;font-weight: 500;border: 1px solid rgb(0,0,0,.1);border-radius: 9999px;text-transform: uppercase;font-size: 12px;line-height: 1;padding: 9px 0;text-decoration: none;color: rgb(119,119,119);min-width: 38px;box-sizing: border-box;width: 38px"><img class="icon" src="https://substackcdn.com/image/fetch/$s_!x1tS!,w_36,c_scale,f_png,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Ficon%2FLucideComments%3Fv%3D4%26height%3D36%26fill%3Dnone%26stroke%3D%2523808080%26strokeWidth%3D2" width="18" height="18" style="border: none;vertical-align: middle;max-width: 18px" alt=""></a></td></tr></tbody></table></td><td width="8" style="min-width:8px;"></td><td style="vertical-align:middle;"><table role="presentation" width="38" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="center"><a class="email-icon-button" href="https://substack.com/app-link/post?publication_id=891638&post_id=203411296&utm_source=substack&utm_medium=email&utm_content=share&utm_campaign=email-share&action=share&triggerShare=true&isFreemail=true&r=69g8n&token=eyJ1c2VyX2lkIjoxMDUxODY0NywicG9zdF9pZCI6MjAzNDExMjk2LCJpYXQiOjE3ODI0OTc1NTUsImV4cCI6MTc4NTA4OTU1NSwiaXNzIjoicHViLTg5MTYzOCIsInN1YiI6InBvc3QtcmVhY3Rpb24ifQ.cxEwshboH3OVBtnUWBTRhUaReAZ7h_t2FCIV-g5AGCY" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;font-weight: 500;border: 1px solid rgb(0,0,0,.1);border-radius: 9999px;text-transform: uppercase;font-size: 12px;line-height: 1;padding: 9px 0;text-decoration: none;color: rgb(119,119,119);min-width: 38px;box-sizing: border-box;width: 38px"><img class="icon" src="https://substackcdn.com/image/fetch/$s_!_L14!,w_36,c_scale,f_png,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Ficon%2FLucideShare2%3Fv%3D4%26height%3D36%26fill%3Dnone%26stroke%3D%2523808080%26strokeWidth%3D2" width="18" height="18" style="border: none;vertical-align: middle;max-width: 18px" alt=""></a></td></tr></tbody></table></td><td width="8" style="min-width:8px;"></td><td style="vertical-align:middle;"><table role="presentation" width="38" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="center"><a class="email-icon-button" href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly9vcGVuLnN1YnN0YWNrLmNvbS9wdWIvanVzdGlubGluZy9wL2EtY2hhaW4tb2YtZm9vbHM_dXRtX3NvdXJjZT1zdWJzdGFjayZ1dG1fbWVkaXVtPWVtYWlsJnV0bV9jYW1wYWlnbj1lbWFpbC1yZXN0YWNrLWNvbW1lbnQmYWN0aW9uPXJlc3RhY2stY29tbWVudCZyPTY5ZzhuJnRva2VuPWV5SjFjMlZ5WDJsa0lqb3hNRFV4T0RZME55d2ljRzl6ZEY5cFpDSTZNakF6TkRFeE1qazJMQ0pwWVhRaU9qRTNPREkwT1RjMU5UVXNJbVY0Y0NJNk1UYzROVEE0T1RVMU5Td2lhWE56SWpvaWNIVmlMVGc1TVRZek9DSXNJbk4xWWlJNkluQnZjM1F0Y21WaFkzUnBiMjRpZlEuY3hFd3NoYm9IM09WQnRuVVdCVFJoVWFSZUFaN2hfdDJGQ0lWLWc1QUdDWSIsInAiOjIwMzQxMTI5NiwicyI6ODkxNjM4LCJmIjp0cnVlLCJ1IjoxMDUxODY0NywiaWF0IjoxNzgyNDk3NTU1LCJleHAiOjIwOTgwNzM1NTUsImlzcyI6InB1Yi0wIiwic3ViIjoibGluay1yZWRpcmVjdCJ9.3grJr20zkF9KMRg6Lx9BZOrPp9vY4t2XyJFkA_seRyA?&utm_source=substack&utm_medium=email" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;font-weight: 500;border: 1px solid rgb(0,0,0,.1);border-radius: 9999px;text-transform: uppercase;font-size: 12px;line-height: 1;padding: 9px 0;text-decoration: none;color: rgb(119,119,119);min-width: 38px;box-sizing: border-box;width: 38px"><img class="icon" src="https://substackcdn.com/image/fetch/$s_!ubXF!,w_36,c_scale,f_png,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Ficon%2Fnotes__NoteRestackIcon%3Fv%3D4%26height%3D36%26fill%3Dnone%26stroke%3D%2523808080%26strokeWidth%3D2%26strokeLinecap%3Dround%26strokeLinejoin%3Dround" width="18" height="18" alt="" style="max-width: 550px;border: none !important;vertical-align: middle;"></a></td></tr></tbody></table></td></tr></tbody></table></td><td align="right"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="vertical-align:middle;"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="center"><a class="email-button-outline" href="https://open.substack.com/pub/justinling/p/a-chain-of-fools?utm_source=email&redirect=app-store&utm_campaign=email-read-in-app" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;font-weight: 500;border: 1px solid rgb(0,0,0,.1);border-radius: 9999px;text-transform: uppercase;font-size: 12px;line-height: 12px;padding: 9px 14px;text-decoration: none;color: rgb(119,119,119);"><div class="email-button-spacer" style="font-size: 16px;line-height: 26px;display: inline-block;vertical-align: middle;max-width: 0;min-height: 18px;"></div><span class="email-button-text" style="vertical-align: middle;margin-right: 4px">READ IN APP</span><img class="icon text-icon" src="https://substackcdn.com/image/fetch/$s_!ET-_!,w_36,c_scale,f_png,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Ficon%2FLucideArrowUpRight%3Fv%3D4%26height%3D36%26fill%3Dnone%26stroke%3D%2523808080%26strokeWidth%3D2" width="18" height="18" style="min-width: 18px;min-height: 18px;border: none;vertical-align: middle;margin-right: 0;margin-left: 0;max-width: 18px" alt=""></a></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></td></tr><tr height="16"><td height="16" style="font-size:0px;line-height:0;">&nbsp;</td></tr></tbody></table></div></div><div class="post typography" dir="auto" style="--image-offset-margin: -120px;padding: 32px 0 0 0;font-size: 16px;line-height: 26px;"><div class="body markup" dir="auto" style="text-align: initial;font-size: 16px;line-height: 26px;width: 100%;word-break: break-word;margin-bottom: 16px;font-family: 'Roboto Slab',sans-serif;font-weight: 400;"><div class="captioned-image-container-static" style="font-size: 16px;line-height: 26px;margin: 32px auto;margin-top: 0;"><figure style="width: 100%;margin: 0 auto;"><table class="image-wrapper" width="100%" border="0" cellspacing="0" cellpadding="0" data-component-name="Image2ToDOMStatic" style="mso-padding-alt: 1em 0 1.6em;"><tbody><tr><td style="text-align: center;"></td><td class="content" align="left" width="1200" style="text-align: center;"><a class="image-link" target="_blank" href="https://substack.com/redirect/88c7bb69-d063-4fbd-a77e-d5cbd1e98448?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="position: relative;flex-direction: column;align-items: center;padding: 0;width: auto;height: auto;border: none;text-decoration: none;display: block;margin: 0;margin-top: 0;margin-bottom: 0;"><img class="wide-image" data-attrs="{&quot;src&quot;:&quot;https://substack-post-media.s3.amazonaws.com/public/images/850b4f72-04de-4fac-8dda-32b05e4b20e5_1280x640.png&quot;,&quot;srcNoWatermark&quot;:null,&quot;fullscreen&quot;:false,&quot;imageSize&quot;:&quot;large&quot;,&quot;height&quot;:640,&quot;width&quot;:1280,&quot;resizeWidth&quot;:1200,&quot;bytes&quot;:1619533,&quot;alt&quot;:null,&quot;title&quot;:null,&quot;type&quot;:&quot;image/png&quot;,&quot;href&quot;:null,&quot;belowTheFold&quot;:false,&quot;topImage&quot;:true,&quot;internalRedirect&quot;:&quot;https://www.bugeyedandshameless.com/i/203411296?img=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F850b4f72-04de-4fac-8dda-32b05e4b20e5_1280x640.png&quot;,&quot;isProcessing&quot;:false,&quot;align&quot;:&quot;center&quot;,&quot;offset&quot;:false}" alt="" width="550" height="275" src="https://substackcdn.com/image/fetch/$s_!ZRgY!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F850b4f72-04de-4fac-8dda-32b05e4b20e5_1280x640.png" style="border: none !important;vertical-align: middle;display: block;-ms-interpolation-mode: bicubic;height: auto;margin-bottom: 0;width: auto !important;max-width: 100% !important;margin: 0 auto;"></a></td><td style="text-align: center;"></td></tr></tbody></table><figcaption class="image-caption" style="box-sizing: content-box;color: rgb(119,119,119);font-size: 14px;line-height: 20px;font-weight: 400;letter-spacing: -.15px;margin-top: 8px;width: 70%;padding-left: 15%;padding-right: 15%;text-align: center;">Renaud Camus, surrounded by his disciples </figcaption></figure></div><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">It&#8217;s 1898 and Sergei Witte is trying to destroy the old Russia.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">As finance minister to Tsar Nicholas II, Witte modernized the state, got the railways in shape, pushed the empire onto the gold standard, signed advantageous trade deals with Russia&#8217;s neighbors, started the engine of industrialization &#8212; and he was just getting started. </p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">The dithering and indecisive tsar had to be led by the nose to do anything, and Witte was doing exactly that. Revolution was brewing in the empire, and Witte&#8217;s reforms gave the Romanov dynasty its best chance at clinging to power.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">In the royal court, though, there was scheming afoot. Pyotr Rachkovsky was a traditionalist and head of the Okhrana &#8212; the tsar&#8217;s feared secret police. They were the nucleus of a new plot: Not to assassinate or overthrow, but to forge a chain of ideas.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">First they needed an author. So Rachkovsky traveled to Paris to meet one of his agents: Matvei Golovinski, a minor aristocrat, fabulist, and propagandist. Golovinski had been producing anti-Jewish tracts until his office fell out of favor with the mercurial tsar and he was exiled to France.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">Rachkovsky wanted Golovinski back in the game. He wanted a document that exposed a secret plot, a subterranean conspiracy, to overthrow the Russian monarchy. This document, he hoped, would turn the tsar paranoid: Distrustful of those who would give too much to the reformers and democrats. If done right, it would sideline Witte and return the traditionalists to their spot atop the court hierarchy.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>Inventing a conspiracy whole-cloth, though, is hard work. And if you&#8217;re going to create a forgery, you may as well plagiarize. So Golovinski pulled an old work off the shelf: </span><em>The Dialogue in Hell Between Machiavelli and Montesquieu. </em><span>A satire published a few decades earlier as a critique of Napoleon III. In it, (a long-dead) Machiavelli describes the means through which he would pervert the institutions of France&#8217;s Second Republic to enable tyranny. &#8220;I do not need to create everything to organize everything,&#8221; he says in the pamphlet. &#8220;I find a large part of the instruments of my power in the already existing institutions.&#8221;</span><span class="footnote-anchor-email" data-component-name="FootnoteAnchorToDOMStatic" style="font-size: 20px;">&#185;</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>Golovinski delivered the book &#8212; an edited version of the </span><em>Dialogue</em><span> which was, supposedly, drafted at a meeting of the Zionist Congress the year prior. Whereas the source text had been a satire, a warning of creeping autocracy of a tyrant, this forgery created imagined tyrants everywhere. It claimed Jews were creating a tentacular global state, enabled by the international financial system and a network of masonic lodges. Rachkovsky, in turn, delivered it to the tsar. </span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><em>The Protocols of the Learned Elders of Zion </em><span>was a smashing success, in a sense. Witte was pushed from power and the tsar became paranoid, as planned. The </span><em>Protocols</em><span> were published in 1902, and anti-Jewish pogroms swept Russia in the following years, to the state&#8217;s satisfaction. But the state was wobbling. The public demanded change, and Nicholas brought Witte back. War, unrest, and brewing revolution took a front seat. In 1917, Tsar Nicholas was overthrown and promptly murdered.</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>The idea at the heart of the </span><em>Protocols</em><span> &#8212; that there was an international conspiracy, threatening the established power of the Romanovs &#8212; became irrelevant in Russia, at least temporarily. Golovinski even returned to Russia to work for the Bolsheviks, alongside many Jewish revolutionaries.</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>The </span><em>Protocols</em><span> certainly didn&#8217;t invent the idea of a global Jewish conspiracy. But it became a reference point, a tangible text one could reference. This wasn&#8217;t some polemic: It was, at least to the public&#8217;s knowledge, a primary document. It was published and republished in a raft of languages, particularly English and German &#8212; influencing, notably, industrialist Henry Ford and the young extremist politician Adolf Hitler.</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>The British press finally exposed the </span><em>Protocols</em><span> as a forgery in 1921. Trials, congressional studies, and historical investigations would later unravel how the forgery came to be: How this chain of ideas had been linked together. It didn&#8217;t matter, because links were still being added.</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>Palestinian terror group Hamas cited the </span><em>Protocols</em><span> as proof of this Jewish expansionist plot in 1988, British conspiracy theorist David Icke would adapt the forgery in his own bizarre tale of lizard-human hybrids (</span><a href="https://substack.com/redirect/f46da7c7-bb2d-4843-8616-375961d37ae2?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: hsl(117.74436090225564, 100%, 40%);text-decoration: none;">Dispatch #3</a><span>), American militia theologian William Cooper would print the whole document in his widely-read </span><em>Behold a Pale Horse </em><span>&#8212; claiming, erroneously, to have found references to the document dating back to the 18th century. (</span><a href="https://substack.com/redirect/df3de16a-9896-4e67-9453-6bce6f8dd249?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: hsl(117.74436090225564, 100%, 40%);text-decoration: none;">Dispatch #112</a><span>)</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>That the plot described by the </span><em>Protocols</em><span> was wholly invented didn&#8217;t seem to matter. The document had come to confirm a particular kind of hate politics the world over, and it had become too useful to be discounted. Even today, the text continues to pop up in odd places: In the online ramblings of domestic terrorists, in the coded missives of QAnon&#8217;s titular leader, and in any political movement &#8212; from India to Turkey, Iran, South Africa, Japan, and further afield &#8212; keen for a convenient </span><em>other</em><span> to demonize.</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>&#8220;The most extraordinary aspect of the </span><em>Protocols of the Elders of Zion</em><span> is not so much the history of its inception as that of its reception,&#8221; wrote Umberto Eco in the introduction to </span><em>The Plot</em><span>, Will Eisner&#8217;s graphic novel about the text&#8217;s history.</span><span class="footnote-anchor-email" data-component-name="FootnoteAnchorToDOMStatic" style="font-size: 20px;">&#178;</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>&#8220;How can one explain resilience against all evidence, and the perverse appeal that this book continues to exercise?&#8221; Eco asks. The answer is disquieting: &#8220;It is not the </span><em>Protocols</em><span> that produce antisemitism, it is people&#8217;s profound need to single out an Enemy that leads them to believe in the </span><em>Protocols.</em><span>&#8221;</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>The </span><em>Protocols</em><span> got old. Its 19th century concepts and verbiage have lost some of their ability to shock and intrigue. Those who need an enemy for their political projected needed new elders, new plots.</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>In his new book </span><em><a href="https://substack.com/redirect/3887d2ed-1816-4b00-a662-2fbfc630040d?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: hsl(117.74436090225564, 100%, 40%);text-decoration: none;">Chain of Ideas: The Origins of Our Authoritarian Age,</a></em><span> historian Ibram X. Kendi argues that the Great Replacement Theory has become that foundational text for our current moment.</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>In April, I got the chance to sit down with Kendi and chat about his new work. And so this week, on a very special </span><strong>Bug-eyed and Shameless</strong><span>, we break down a new conspiracy theory for the modern age.</span><span class="footnote-anchor-email" data-component-name="FootnoteAnchorToDOMStatic" style="font-size: 20px;">&#179;</span></p><div style="font-size: 16px;line-height: 26px;"><hr style="margin: 32px 0;padding: 0;height: 1px;background: rgb(0,0,0,.1);border: none;"></div><div class="subscription-widget-wrap" style="font-size: 16px;line-height: 26px;"><div class="subscription-widget show-subscribe" style="font-size: 16px;direction: ltr !important;font-weight: 400;text-decoration: none;font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';color: #363737;line-height: 1.5;max-width: 560px;margin: 24px auto;align-items: flex-start;display: block;text-align: center;padding: 0px 32px;"><div class="preamble" style="margin-top: 16px;font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-size: 18px;max-width: 384px;width: fit-content;line-height: 22px;display: flex;align-items: center;text-align: center;font-weight: 400;margin-left: auto;margin-right: auto;"><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><strong>Bug-eyed and Shameless</strong> says: Down with the tsar!</p></div><div class="subscribe-widget is-signed-up" data-component-name="SubscribeWidget" style="margin: 0 0 1em;direction: ltr;font-size: 16px;line-height: 26px;"><div class="pencraft pc-reset button-wrapper" style="text-decoration: unset;list-style: none;font-size: 16px;line-height: 26px;text-align: center;cursor: pointer;border-radius: 4px;"><a class="button subscribe-btn primary" href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly93d3cuYnVnZXllZGFuZHNoYW1lbGVzcy5jb20vc3Vic2NyaWJlP3V0bV9zb3VyY2U9cG9zdCZ1dG1fY2FtcGFpZ249ZW1haWwtY2hlY2tvdXQmbmV4dD1odHRwcyUzQSUyRiUyRnd3dy5idWdleWVkYW5kc2hhbWVsZXNzLmNvbSUyRnAlMkZhLWNoYWluLW9mLWZvb2xzJnI9NjlnOG4mdG9rZW49ZXlKMWMyVnlYMmxrSWpveE1EVXhPRFkwTnl3aWFXRjBJam94TnpneU5EazNOVFUxTENKbGVIQWlPakUzT0RVd09EazFOVFVzSW1semN5STZJbkIxWWkwNE9URTJNemdpTENKemRXSWlPaUpqYUdWamEyOTFkQ0o5Li14QVh0b2dSeTBkakRlNnVkYUJzUk1ucXJ2UzhPY0NmY21FZ3g4Y21SV1EiLCJwIjoyMDM0MTEyOTYsInMiOjg5MTYzOCwiZiI6dHJ1ZSwidSI6MTA1MTg2NDcsImlhdCI6MTc4MjQ5NzU1NSwiZXhwIjoyMDk4MDczNTU1LCJpc3MiOiJwdWItMCIsInN1YiI6ImxpbmstcmVkaXJlY3QifQ.p5Y7z0bvSE2KcTY-juS-QYFntnTByh5S63aXsBpxka8?&utm_medium=email&utm_source=subscribe-widget-preamble&utm_content=203411296" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;box-sizing: border-box;cursor: pointer;border: none;border-radius: 8px;font-size: 14px;line-height: 20px;font-weight: 600;text-align: center;opacity: 1;outline: none;white-space: nowrap;text-decoration: none !important;margin: 0 auto;background-color: #7FFF7A;color: #363737 !important;padding: 12px 20px;height: auto;"><span style="color: #363737;text-decoration: none;">Upgrade to paid</span></a></div></div></div></div><div style="font-size: 16px;line-height: 26px;"><hr style="margin: 32px 0;padding: 0;height: 1px;background: rgb(0,0,0,.1);border: none;"></div><a class="youtube-wrap" href="https://substack.com/redirect/343b863e-06f5-437e-98e9-e57e5ed9a16b?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" target="_blank" data-component-name="Youtube2ToDOMStatic" style="display: block;margin: 32px 0;"><img src="https://substackcdn.com/image/youtube/w_728,c_limit/l_youtube_play_qyqt8q,w_120/QYSizE_823A" style="border: none !important;vertical-align: middle;-ms-interpolation-mode: bicubic;max-width: 100%;height: auto;margin: 0 auto;display: block;width: 100%;"></a><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><strong><mark data-color="#66ff61" style="background-color: rgb(102, 255, 97); color: rgb(0, 0, 0);"><span data-color="#0a1612" style="color: rgb(10, 22, 18);">BE&amp;S: The sign of how much I love a book is how much I beat up its dust cover immediately. I&#8217;ve had this thing for two weeks, and it already looks like it&#8217;s been through the wash &#8212; so that tells you how much I absolutely found this book fascinating. I&#8217;m so excited to chat about it this evening. But let&#8217;s start kind of slowly. Let&#8217;s get into the shallow end first. Tell me, who is Renaud Camus?</span></mark></strong></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><strong>Kendi:</strong><span> So Renaud Camus wrote a book, that was published in 2011, that he entitled </span><em>The Great Replacement</em><span>. He was known in France as this pioneering queer novelist and poet. In this book, though, he imagined that France &#8212; particularly white France and white Europeans &#8211; were facing annihilation at the hands of African immigrants, who were mostly Muslim. He imagined that there needed to be a change very soon in order for white Europeans and white French people to maintain their livelihoods, their lives, their culture, and even their power. </span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>I&#8217;m sure many of you heard of the chant in Charlottesville, Virginia in 2017 when those white men with Tiki torches were marching and chanting: &#8220;You will not replace us.&#8221; Well, Renaud Camus heard that chant, too, from his castle in Southern France. He&#8217;s refurbishing this castle. He imagines himself as a king. And so he wrote another book, this was published in 2018, in English: It was called </span><em>You Will Not Replace Us.</em></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><strong><mark data-color="#66ff61" style="background-color: rgb(102, 255, 97); color: rgb(0, 0, 0);"><span data-color="#0a1612" style="color: rgb(10, 22, 18);">So who is he afraid of being replaced and by whom?</span></mark></strong></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">He is primarily afraid that white people &#8212; in Europe, in North America, even in Australia and New Zealand &#8212; are in the process of being replaced by Black and brown peoples. He imagines that there&#8217;s this powerful force that&#8217;s enabling the replacement: Progressive political parties, even the European Union and NATO. I just came from Alberta and I think those folks who want to separate believe it&#8217;s Canada. </p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>I ended up defining Great Replacement Theory in </span><em>Chain of Ideas</em><span> as a political theory that suggests powerful elites are enabling peoples of color to displace the lives and livelihoods, and even freedom, of white people &#8212; who, apparently, need authoritarian protection. Camus named this conspiracy theory, the Great Replacement Theory, but it&#8217;s a theory that actually existed prior to the publication of his book in 2011.</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">Ideas are different than people. Typically when people are born, they&#8217;re named. Ideas can live for decades, for centuries, before they&#8217;re named. And so he ended up naming it, but it has quite the history.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><strong><mark data-color="#7fff7a" style="background-color: rgb(127, 255, 122); color: rgb(0, 0, 0);"><span data-color="#0a1612" style="color: rgb(10, 22, 18);">And you turned to a different French philosopher to come up with this &#8216;chain of ideas.&#8217; Walk us through how you link Camus&#8217; book with its historical antecedents, with Donald Trump, with our current moment &#8212; our &#8216;authoritarian age,&#8217; as your book says.</span></mark></strong></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>Well, first the title comes from a French intellectual who, in the late 1700s, appeared before the French monarchy and said: </span><em>You know what? I actually think there&#8217;s a more effective way for you to control people.</em><span> Iron chains are the old way of controlling people. A more effective politician, he actually said, &#8220;</span><a href="https://substack.com/redirect/8a721aae-da24-48f2-9626-371282693df5?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: hsl(117.74436090225564, 100%, 40%);text-decoration: none;">binds them even more strongly by the chain of their own ideas</a><span>.&#8221; And so that&#8217;s how I came up with this title. Because, ultimately, what led me to ultimately write this book was a central question: </span><em>Why are more and more people consenting to their own domination? What is causing that? What is leading to that?</em><span> And I went on a search, as we do as researchers, and I discovered that if there was an essential theory that was facilitating people to clamor for &#8212; to support, to desire, to covet &#8212;authoritarian leaders, and even dictatorships, it was Great Replacement Theory.</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>So you have these theorists who are trying to convince everyday people, particularly everyday people in privileged groups &#8212; privileged as a result of their race, gender, sexuality, status as a citizen, religion &#8212; that they are losing their lives, that they&#8217;re losing their livelihoods, their culture, their power, their status, their housing, everything that they hold dear. And then that authoritarian is also stating: </span><em>Well, I will be your protector. I will be your savior.</em><span> Literally the President of the United States imagines that he </span><a href="https://substack.com/redirect/92f3cb38-2375-4439-bee4-e3ed2f1ec19c?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: hsl(117.74436090225564, 100%, 40%);text-decoration: none;">truly is the savior of Christians</a><span>. And then they go about </span><em>saving</em><span> and </span><em>protecting</em><span> through snatching rights, through snatching liberties, through building authoritarian states.</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><strong><mark data-color="#7fff7a" style="background-color: rgb(127, 255, 122); color: rgb(0, 0, 0);"><span data-color="#0a1612" style="color: rgb(10, 22, 18);">Before we dive even deeper into the book, tell me a little bit about your own experience coming face-to-face with this reactionary backlash, with this feeling of replacement. Because I&#8217;m sure a lot of people in the room are familiar with a bit of your scholarship and your work over the last number of years. So tell me a bit about some of your work and the backlash to it. I have to imagine it helped inform how this book came to be.</span></mark></strong></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>I write in the prologue that I didn&#8217;t find the subject of this book, the subject of this book found me. To give an example: In 2011, before I had ever published a single book &#8212; let alone published a history of racism or even a book about </span><a href="https://substack.com/redirect/2462038b-076f-42e8-9ac7-410ebce32750?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: hsl(117.74436090225564, 100%, 40%);text-decoration: none;">how to be an anti-racist</a><span> &#8212; Renaud Camus, in his book, argued that there was a particular ideological force that was enabling the great replacement: And that was anti-racism. </span><em>You Will Not Replace Us </em><span>was published a year before </span><em>How to Be an Antiracist</em><span> came out. He doubled down even more specifically and stated that the great replacement is bringing on a genocide of white people. What is truly genocidal, he argued, was anti-racism.</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>I published </span><em>How to Be an Antiracist</em><span> not knowing that there was literally this tidal wave that had already been building for years to position anti-racism as anti-white, as anti-Christian, as anti-human, as genocidal. I&#8217;m thinking I&#8217;m just writing a book encouraging people to recognize racial equality, encouraging people to recognize that we can&#8217;t dismantle racism unless we actively seek to be anti-racist. Trying to encourage people to respect cultural and religious difference, encouraging people to recognize that no one is inherently racist or anti-racist, that racist and anti-racist are not fixed categories. That these are terms that describe what a person is being in any given moment based on what they&#8217;re doing. I&#8217;m thinking that I&#8217;m just essentially seeking to allow people to understand how to be anti-racist &#8212; all the while Camus, and all these others, were arguing anti-racism harms white people.</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>So when I published that book, and particularly in 2020, I recognized this wave of propaganda positioning my work as harmful, particularly to white people. I was like: </span><em>Where the heck did this come from?</em><span> I recognized that there was this mass misrepresentation of the work, but what I didn&#8217;t realize was there was this global movement that had been building for years against the precise term that I was trying to introduce.</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><strong><mark data-color="#66ff61" style="background-color: rgb(102, 255, 97); color: rgb(0, 0, 0);"><span data-color="#0a1612" style="color: rgb(10, 22, 18);">We visit a lot of countries in this book. It&#8217;s a real tour around the reactionary backlash of the globe. One of the first places we go to is France, with Marine Le Pen. We recognize early on there&#8217;s a tension. It&#8217;s actually a trick of saying: </span></mark></strong><em><strong><mark data-color="#66ff61" style="background-color: rgb(102, 255, 97); color: rgb(0, 0, 0);"><span data-color="#0a1612" style="color: rgb(10, 22, 18);">This is not a racist idea. It&#8217;s not a racist movement. We actually welcome everybody. This is about stopping an invasion.</span></mark></strong></em><strong><mark data-color="#66ff61" style="background-color: rgb(102, 255, 97); color: rgb(0, 0, 0);"><span data-color="#0a1612" style="color: rgb(10, 22, 18);"> Talk to me a bit about this circus act, of trying to avoid the charge of racism. In fact, it is a very old idea that has been rehabbed, refashioned, and made quite modern.</span></mark></strong></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">Well, my suspicion &#8212; and as a scholar, I can&#8217;t say this definitively, but my suspicion is &#8212; that these ideologues know the history of Great Replacement Theory. They know that this is a theory that was first articulated by people who were trying to defend colonization in the late 19th century. They know that this is a theory that Nazis used when they positioned Jews as these internal enemies that were coming to annihilate Aryans &#8212; and so they had to annihilate them first. I suspect they know that apartheid South African officials used Great Replacement Theory to maintain power. I suspect they know that this whole cast of horrific figures who engaged in all sorts of genocides and exploitation and war have used this theory. And so they have simultaneously spread the theory and tried to cover up his history. But not only covered up its history, they&#8217;ve also tried to argue that the theory itself is not racist.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>And I write about two different ways in which these political parties have attempted to do so. One is what I call &#8216;orchestrated distancing.&#8217; And so to give an example, in the United States not too long ago, the president of the United States posted a video essentially </span><a href="https://substack.com/redirect/6caa3398-0908-4caa-8dfa-1e8194d6fce1?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: hsl(117.74436090225564, 100%, 40%);text-decoration: none;">presenting the Obamas as apes</a><span> &#8212; and then the president orchestrated distance by arguing that an intern posted it. Or, even more recently, the president posted an </span><a href="https://substack.com/redirect/92f3cb38-2375-4439-bee4-e3ed2f1ec19c?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: hsl(117.74436090225564, 100%, 40%);text-decoration: none;">AI photo likening himself to Jesus</a><span>. Then he orchestrated distance from his own photo by claiming: </span><em>No, actually I was just a doctor.</em><span> And so these are two examples, but what also happens is in many of these political parties like the Rassemblement National, Le Pen&#8217;s party in France; or the AfD in Germany; or the Reform Party in the UK; or the Freedom Party in Austria; or the Brothers of Italy.</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>Many of these parties are filled with people who heil Hitler. They&#8217;re filled with people who say the most horrific things about Black people, about Muslims, about women. And so when they say those things, it&#8217;s typical for the party leader to say: </span><em>They&#8217;re not representative of me and the party.</em><span> They orchestrate distance. So there&#8217;s a constant orchestrating distance from members of the own party, from people who engage in political violence incited by that very party and then even from their own words and posts.</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><strong><mark data-color="#66ff61" style="background-color: rgb(102, 255, 97); color: rgb(0, 0, 0);"><span data-color="#0a1612" style="color: rgb(10, 22, 18);">And in some cases from their own family. I mean, Marie Le Pen&#8217;s father, Jean-Marie Le Pen formed a version of that party (Front National) that was explicitly anti-Semitic, explicitly racist and then she had to go through the process of pretending to distance herself from her own father.</span></mark></strong></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>She did. And even French journalists call it </span><em>de-demonization </em><span>[chuckles] literally! Because they&#8217;ve witnessed, essentially, Marine Le Pen tried to distance herself from her own father &#8212; who founded her party with people who collaborated with Nazis when they occupied France. </span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">In the same vein, the current president of Chile, who used Great Replacement Theory across multiple years to claim power, was a huge supporter of Augusto Pinochet, one of the most murderous dictators in Latin American history. And his own father who was a lieutenant in the Nazi army, a card carrying member of the Nazi Party.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>Or even in the case of Giorgia Meloni, who&#8217;s the current prime minister of Italy, whose party was originally called the Italian Social Movement &#8212; it was named after the Italian Social Republic, Mussolini&#8217;s political entity in Northern Italy during the last two years of World War II.</span><span class="footnote-anchor-email" data-component-name="FootnoteAnchorToDOMStatic" style="font-size: 20px;">&#8308;</span><span> And now that&#8217;s called the Brothers of Italy and Meloni is distancing herself from her own party&#8217;s history.</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><strong><mark data-color="#66ff61" style="background-color: rgb(102, 255, 97); color: rgb(0, 0, 0);"><span data-color="#0a1612" style="color: rgb(10, 22, 18);">One of the most fascinating things about this is that you would not imagine that a racist conspiracy theory like the Great Replacement Theory could be globalized, yet globalization is a very weird thing. And this book brings us to a lot of strange places, including Canada &#8212; which we&#8217;re going to come back to in a little bit. But we wind up in India, watching Narendra Modi do a version of this, setting up Muslim immigration and the Muslim community in India as replacers of the Hindu majority. We see it in South America, in El Salvador, in Chile, like you mentioned. We see it straight across Europe. We see it in Russia.</span></mark></strong></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><strong><mark data-color="#66ff61" style="background-color: rgb(102, 255, 97); color: rgb(0, 0, 0);"><span data-color="#0a1612" style="color: rgb(10, 22, 18);">How is it that a theory that is so intrinsically colonialist, so inherently European, becomes so effectively globalized? Is this something inherent about who we are as people, that we&#8217;re inclined to fear </span></mark></strong><em><strong><mark data-color="#66ff61" style="background-color: rgb(102, 255, 97); color: rgb(0, 0, 0);"><span data-color="#0a1612" style="color: rgb(10, 22, 18);">the other</span></mark></strong></em><strong><mark data-color="#66ff61" style="background-color: rgb(102, 255, 97); color: rgb(0, 0, 0);"><span data-color="#0a1612" style="color: rgb(10, 22, 18);">? Or is there something about technology, about society, where we are right now, that makes it possible? Is it both?</span></mark></strong></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">I should also talk about how this theory has mutated. The racist Great Replacement Theory positions this war against white people, that people of color apparently are waging. But it&#8217;s mutated to say that there&#8217;s a war against men, there&#8217;s a war against Christians, there&#8217;s a war against citizens. So &#8212; name the majority or privileged group &#8212; these theorists and politicians are imagining that group is suffering at the hands of this political force. And so it had mutated to the point where I had to create a more general definition for Great Replacement Theory, which is this political theory that suggests that the powerful elites are enabling disadvantaged groups to displace the lives and livelihoods and freedom of privileged or majority groups, who apparently need authoritarian protection.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">So if we think of that definition, there are three major parts. First, that there are these powerful elites. Second, that there are these disadvantaged groups that are then replacing the privileged majority groups. Every nation in the world has disadvantaged groups, has privileged groups, has minority groups, has majority groups. And so that is how this theory can literally be applied to any demographic setting. And I think that&#8217;s one of the ways in which it&#8217;s spread.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">So you mentioned India as an example, with the Hindu majority as the privileged group that&#8217;s being displaced by the Muslim minority. Or even nearby in China, where the President Xi Jinping is imagining that the Han majority is being displaced and replaced by the tiny Muslim minority, and he&#8217;s literally been forming concentration camps to keep them from poisoning this majority. And so I think that&#8217;s one of the reasons why it&#8217;s spread. </p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">And then there&#8217;s, certainly, the globalizing effect of social media. I write about how you have these theorists in France, or Canada, or the United States, or India who are able to project their ideas to the world &#8212; then people are able to apply that to their own particular settings.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>I also document a series of historical events that have happened in the last 20 years that these politicians capitalized on. These were typically events that people cannot understand what was happening or why &#8212; whether that was the Great Recession, whether that was COVID-19, whether that was the inflation crisis after Russia&#8217;s invasion of Ukraine. So these politicians stepped in and said: </span><em>I can tell you what&#8217;s happening.</em><span> </span><em>The reason why you&#8217;re struggling and can&#8217;t get jobs in this recession is because the government is giving all the jobs to the Muslims, or to the black people, or to the immigrants.</em></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><strong><mark data-color="#66ff61" style="background-color: rgb(102, 255, 97); color: rgb(0, 0, 0);"><span data-color="#0a1612" style="color: rgb(10, 22, 18);">I was very happy to see the book deals with the most intense and horrifying use of this kind of conspiracy theory, which of course is Nazi Germany. I think there&#8217;s, especially in this day and age, a hesitancy to go there &#8212; a fear of being accused of going overboard, of invoking the darkest time in the 20th century in modern humanity. I&#8217;m very glad to see that this book goes there, because what initially begins as an attempt to stoke fear of </span></mark></strong><em><strong><mark data-color="#66ff61" style="background-color: rgb(102, 255, 97); color: rgb(0, 0, 0);"><span data-color="#0a1612" style="color: rgb(10, 22, 18);">the</span></mark></strong></em><strong><mark data-color="#66ff61" style="background-color: rgb(102, 255, 97); color: rgb(0, 0, 0);"><span data-color="#0a1612" style="color: rgb(10, 22, 18);"> </span></mark></strong><em><strong><mark data-color="#66ff61" style="background-color: rgb(102, 255, 97); color: rgb(0, 0, 0);"><span data-color="#0a1612" style="color: rgb(10, 22, 18);">other</span></mark></strong></em><strong><mark data-color="#66ff61" style="background-color: rgb(102, 255, 97); color: rgb(0, 0, 0);"><span data-color="#0a1612" style="color: rgb(10, 22, 18);"> can very, very quickly turn anyone in your society into </span></mark></strong><em><strong><mark data-color="#66ff61" style="background-color: rgb(102, 255, 97); color: rgb(0, 0, 0);"><span data-color="#0a1612" style="color: rgb(10, 22, 18);">the other.</span></mark></strong></em></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><strong><mark data-color="#66ff61" style="background-color: rgb(102, 255, 97); color: rgb(0, 0, 0);"><span data-color="#0a1612" style="color: rgb(10, 22, 18);">El Salvador is perhaps the most terrifying example of this, where President  Nayib Bukele has managed to turn anybody in his society who he dislikes, fears, or could scapegoat into a gang member, into a terrorist. He&#8217;s even importing gang members and terrorists &#8212; </span></mark></strong><em><strong><mark data-color="#66ff61" style="background-color: rgb(102, 255, 97); color: rgb(0, 0, 0);"><span data-color="#0a1612" style="color: rgb(10, 22, 18);">so-called gang members</span></mark></strong></em><strong><mark data-color="#66ff61" style="background-color: rgb(102, 255, 97); color: rgb(0, 0, 0);"><span data-color="#0a1612" style="color: rgb(10, 22, 18);"> </span></mark></strong><em><strong><mark data-color="#66ff61" style="background-color: rgb(102, 255, 97); color: rgb(0, 0, 0);"><span data-color="#0a1612" style="color: rgb(10, 22, 18);">and terrorists &#8212;</span></mark></strong></em><strong><mark data-color="#66ff61" style="background-color: rgb(102, 255, 97); color: rgb(0, 0, 0);"><span data-color="#0a1612" style="color: rgb(10, 22, 18);"> from the United States now. Talk to me a little bit about the terrifying endpoint of where the Great Replacement Theory gets you.</span></mark></strong></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>Well, it&#8217;s interesting you asked that question and contextualize it. I started out talking about Nazi Germany because I think, in many ways, that </span><em>is</em><span> the terrifying end where this could take us. I actually want to read a passage from the book. Am I okay to do that?</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><strong><mark data-color="#66ff61" style="background-color: rgb(102, 255, 97); color: rgb(0, 0, 0);"><span data-color="#0a1612" style="color: rgb(10, 22, 18);">Please, please do. While you look for it, can I read a bit? Because there&#8217;s a section here that I&#8217;ve highlighted that I thought was really very well phrased:</span></mark></strong></p><blockquote style="border-left: 4px solid #7FFF7A;margin: 20px 0;padding: 0;"><p style="margin: 0 0 20px 0;color: rgb(54,55,55);margin-left: 20px;line-height: 26px;font-size: 16px;"><strong><mark data-color="#66ff61" style="background-color: rgb(102, 255, 97); color: rgb(0, 0, 0);"><span data-color="#0a1612" style="color: rgb(10, 22, 18);">Great replacement politicians hide who they really are, so the people they manipulate won&#8217;t know who they are becoming &#8212; and what their nations are becoming. Misdefining racism &#8212; and hiding Great Replacement Theory&#8217;s genealogy tracing back to Nazism &#8212; could not be more vital to the electability of great replacement politicians. </span></mark></strong></p></blockquote><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><strong><mark data-color="#66ff61" style="background-color: rgb(102, 255, 97); color: rgb(0, 0, 0);"><span data-color="#0a1612" style="color: rgb(10, 22, 18);">I thought that was very, very well put.</span></mark></strong><mark data-color="#d9ead3" style="background-color: rgb(217, 234, 211); color: rgb(0, 0, 0);"><span data-color="#0a1612" style="color: rgb(10, 22, 18);"> </span></mark></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">So in the prologue I try to show precisely how Great Replacement Theory is a neo-Nazi theory. And so there&#8217;s a section in which I compare the rhetoric, for instance, of Nazi theorists to Great Replacement Theorists today. I write: </p><blockquote style="border-left: 4px solid #7FFF7A;margin: 20px 0;padding: 0;"><p style="margin: 0 0 20px 0;color: rgb(54,55,55);margin-left: 20px;line-height: 26px;font-size: 16px;">The success of neo-Nazi great replacement politicians in the twenty-first century often hinges on the success of their most basic renovations &#8212; how completely they strip the core ideas down to their structure, while superficially decorating their political theory with new embellishments. The more they remove the Nazi underpinnings from view, the more they entice electoral support for their neo-Nazi project.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);margin-left: 20px;line-height: 26px;font-size: 16px;">Neo-Nazi great replacement theorists do not need to admire Nazis to be neo-Nazis, just as children do not need to admire their parents to be their children. What matters is genealogy. A genealogy of theory and tactics.</p></blockquote><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">Even Renaud Camus &#8212; remember that guy? &#8212; indirectly acknowledged this ideological genealogy. He has written at length about what he&#8217;s called the &#8220;second career&#8221; of Adolf Hitler, how &#8220;all of the terms and ideas that were touched&#8221; &#8212; I&#8217;m quoting him &#8212; &#8220;slightly or intensely, by the phraseology of the Third Reich have become suspect; so too are those who use them.&#8221;</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">Camus argues that many of the terms and ideas Nazis used were indispensable to the protection of Europe. Deprived of them, he writes, &#8220;the continent is an open city.&#8221; Camus imagined that Hitler&#8217;s second career, the canceling of Nazi terms and ideas, will finish the job of white extinction. The Nazi leader&#8217;s first career, according to Camus, was needed to prevent white death and destruction in the 21st century. Hitler branded himself as the protector of Aryan Europeans from annihilation. That set in motion a world war that killed perhaps as many as 45 million white European civilians and soldiers. </p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">When people can be made to believe that their slayers are their protectors, an authoritarian age becomes politically possible.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><strong><mark data-color="#66ff61" style="background-color: rgb(102, 255, 97); color: rgb(0, 0, 0);"><span data-color="#0a1612" style="color: rgb(10, 22, 18);">That&#8217;s very striking. Let&#8217;s talk for a minute about why it works and where it comes from. We talked a little bit about this backstage. There are leaders in this book who you talk about: You talk about Meloni, you talk about Le Pen, you talk about Victor Orb&#225;n &#8212; goodbye, Victor Orb&#225;n! [applause] A little bit of good news in Hungary.</span></mark></strong></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><strong><mark data-color="#66ff61" style="background-color: rgb(102, 255, 97); color: rgb(0, 0, 0);"><span data-color="#0a1612" style="color: rgb(10, 22, 18);">But there are the class of these politicians who are pushing this theory, who are finding constituents and customers for it. And there&#8217;s a class of those politicians who are feeling the anxiety &#8212; who come up through Elon Musk&#8217;s Twitter, through authors like Renaud Camus &#8212; who are adopting it, who are putting it on as a costume. But what are the anxieties that lead to this? What is the (white) anxiety that leads to this? Is it a fear of globalization? Is it genuinely just a fear of other? Is it an innate racism? What is it that allows this theory to find such fertile soil?</span></mark></strong></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">How much time we have? [laughs] Well, first let me give the example of the United States. Y&#8217;all mind if I talk about this country that I have to go back to? </p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><strong><mark data-color="#66ff61" style="background-color: rgb(102, 255, 97); color: rgb(0, 0, 0);"><span data-color="#0a1612" style="color: rgb(10, 22, 18);">If you want to stay, I&#8217;m sure we have you.</span></mark></strong></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>In the last 50 years, there&#8217;s been a growing amount of inequality between super wealthy people, white middle income, and low income people. And that disparity, that inequality, has only been growing. And everyday white folks, low and middle income white folks, are feeling and witnessing and experiencing that growing inequality &#8212; through their children not being able to ascend past them, through losing their jobs, through not getting that promotion, through not getting that house that they wanted, through seeing that person who doesn&#8217;t look like them acquire that opportunity that they wanted. And so the more that people have experienced these actual losses, or perceived losses, the more the people who are actually behind those very losses have argued to those very people that </span><em>you</em><span> &#8212; and this is where the chain of ideas comes in &#8212; </span><em>you are losing because those other Black people are gaining. You are losing because those immigrants are taking. You are losing because those women are seizing.</em><span> </span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>And so it becomes a very simple explanation for a very complicated set of facts. But what it, most importantly, does is cause those very people to not blame those who are actually causing their losses. So it becomes a huge distraction. And so then the more people suffer, the more they&#8217;re being told they&#8217;re suffering at the hands of people of color, the more they organize against those folks. And the more they organize against those folks, who are they </span><em>not</em><span> organizing against?</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>Historians of Nazism similarly describe this as a theory that explains a complicated historical situation for Germans. I think that, simultaneously, we&#8217;re living in a media age where people&#8217;s biases can be micro-targeted. And so once you hold sexist or racist or Islamophobic ideas &#8212; and you can show your social media algorithms those biases, and you click on certain things &#8212; you&#8217;re only going to get more and more of that type of post. And according to studies, those posts that you&#8217;re going to be receiving are going to be increasingly extreme because that&#8217;s what&#8217;s going to cause you to continue to engage. And what&#8217;s striking about Great Replacement Theory is it goes directly in line with what these algorithms are mostly trying to get people to feel: And that is rage. (</span><a href="https://substack.com/redirect/27ef89b9-75d1-4a48-b832-31ee55f22e77?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: hsl(117.74436090225564, 100%, 40%);text-decoration: none;">Dispatch #64</a><span>)</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>So studies show Great Replacement Theory certainly causes people to fear the </span><em>other</em><span>, but what it really causes people to feel is rage and anger about what is being taken or stolen from them. And similarly, we&#8217;re living in a social media age where the algorithms are trying to make us enraged. So it&#8217;s this incredible confluence in which the theory matches the technology.</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><strong><mark data-color="#66ff61" style="background-color: rgb(102, 255, 97); color: rgb(0, 0, 0);"><span data-color="#0a1612" style="color: rgb(10, 22, 18);">I think that&#8217;s quite right. I want to ask you a little bit about countermeasures, tactics against this. As you noted in the book, you can&#8217;t get away from the fact that neo-conservatism of the 21st century gave us a lot of instability in countries and regions where people have left to find stability and opportunity. Neo-liberalism has underfunded our institutions, underfunded housing, underfunded social services and mental health services &#8212; that has made it hard for us to welcome those people like I think we&#8217;d like to. </span></mark></strong></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><strong><mark data-color="#66ff61" style="background-color: rgb(102, 255, 97); color: rgb(0, 0, 0);"><span data-color="#0a1612" style="color: rgb(10, 22, 18);">The Great Replacement Theory offers a really useful papering over of all of those problems in a very easy scapegoating. What does a chain of ideas look like that helps us counter that? What is a chain of ideas that says: </span></mark></strong><em><strong><mark data-color="#66ff61" style="background-color: rgb(102, 255, 97); color: rgb(0, 0, 0);"><span data-color="#0a1612" style="color: rgb(10, 22, 18);">Here&#8217;s how we welcome immigrants in a way that is supportive, collaborative, and fundamentally anti-racist?</span></mark></strong></em></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">Let&#8217;s take the case of housing. This is increasingly becoming an issue in this nation and around the world in which you have, I would argue, politicians who are using Great Replacement Theory to claim that there are housing shortages because of the increase in immigrants. There are politicians in this nation who are saying that. And so if you are a politician who continues to allow developers to get access to land that could be made into affordable housing but instead they make these luxury units, 4,000 square feet for one person &#8212; you&#8217;re supporting the type of policies that are allowing that to happen. That is fundamentally leading to what? A housing shortage. You&#8217;re not going to want people to see your policies as the very reason why they can&#8217;t get affordable housing. Instead, you&#8217;re going to blame the immigrants. And so I think we have to talk very specifically about what people are feeling and redirect the blame to where it should be, first and foremost. </p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>But in a larger sense: I organize </span><em>Chain of Ideas</em><span> into 10 sections, and each section is set in a different country, each around a different idea. And there are 10 ideas in the chain of ideas and these are really the building blocks of Great Replacement Theory. A theory is a set of ideas. And I wrote the book in that way because I thought it was important to not only break down and show the lie that is the Great Replacement Theory, but also show the lie of each and every element of the theory. </span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>So from the first link in the chain of ideas, which is the zero sum theory &#8212; which is the notion that as Black people gain, white people lose &#8212; it&#8217;s important for people to recognize that the data actually show it&#8217;s really a </span><em>positive sum</em><span> theory. Which is that, as Black people gain, we gain. Equitable policy allows for Black and brown people to gain, and for the white majority to gain, too.</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>The last link in the chain of ideas, the most critical, is the idea of trying to get people to fight for privileges provided by dictators instead of power provided by democracy. That is the goal of this theory: To get people to focus on having more than others, even if they end up having less than they had before. </span><em>All I want is a little bit more than those other folks. All I want is these specific privileges, and I&#8217;m willing to give away democracy, I&#8217;m willing to give away rights, I&#8217;m willing to give away freedoms, from the standpoint that I am my privilege.</em><span> </span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>So much of people&#8217;s identities &#8212; particularly if you&#8217;re a man, or if you&#8217;re white, or if you&#8217;re Christian &#8212; so much of people&#8217;s identities are wrapped up in their privilege. They won&#8217;t know even how to understand themselves if they did not have the ability to be privileged in relation to other people. And so that is exploited. People are chained by that. </span><em>You care more about your privilege than anything else. Okay, I&#8217;m going to let you keep your privilege but take everything else from you.</em><span> So I think it&#8217;s important for people to see that and start to distinguish privilege from power, as I tried to show in this text. </span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">And finally, I also introduced the concept of what I call the chain of humanity. If the chain of ideas of Great Replacement Theory causes us to imagine that different racialized, religious, cultural, or ethnic groups are fundamentally separate &#8212; are fundamentally at odds, are coming to destroy us and replace us &#8212; then the chain of humanity allows people to see that, even in all of our differences, we&#8217;re linked. That you can have people from different ethnic or racialized or cultural groups dance differently, but they&#8217;re all dancing. They could pray differently, but they&#8217;re all praying. They can all prepare rice differently, but it&#8217;s still rice. So people recognizing that they&#8217;re fundamentally linked because they&#8217;re human. </p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">As we recognize that we&#8217;re linked as human beings, despite our differences, then we can build political solidarity. And once we build political solidarity, then we have the capacity to take on the oligarchs. And once we take on the oligarchs through our political solidarity, we start to realize that the weakest link in the chain of humanity is those folks who don&#8217;t think they&#8217;re connected to the rest of us.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><strong><mark data-color="#66ff61" style="background-color: rgb(102, 255, 97); color: rgb(0, 0, 0);"><span data-color="#0a1612" style="color: rgb(10, 22, 18);">Let me just quickly ask you about Canada. We talked a little bit backstage about Pierre Poilievre, because you name him in the book amongst this milieu of leaders who use Great Replacement Theory. I put to you that he&#8217;s one who has not gone as far as others. I think you agree that he kind of winds up on the exact other end of Bukele. He&#8217;s on the end of politicians who are trying to use it, flick at it, borrow it in hopes of getting political power. It didn&#8217;t work out for him, obviously. But is there a way in which conservatism, mainstream conservatism, can sort of bring itself back from the brink? That can bring these disaffected people along? We just saw, in Hungary, a conservative leader who managed to oust the Great Replacement Theory from power. Where does conservatism go from here, having been infected by this theory?</span></mark></strong></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>So I probably shouldn&#8217;t be advising conservatives on where they should go. But what I will say is that it&#8217;s one thing for people to describe, let&#8217;s say, Black and brown people as ignorant, as lazy, as violent &#8212; it&#8217;s more extreme to argue that those people are coming to destroy us. So Great Replacement Theory has taken old racist ideas to their extremes. And so I wouldn&#8217;t say, well, </span><em>maybe they should just go back to saying Black people are lazy</em><span>, because I&#8217;m not going to endorse that. It&#8217;s not as if previous conservative movements were void of racist ideas. </span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>But, just to think about this more broadly, one of my main arguments in </span><em>Chain of Ideas</em><span> is that, even as this theory has largely been presented as a far-right theory, I show through a tremendous amount of survey data that people who identify as center right, center left, even far left, believe elements of Great Replacement Theory. And so that is precisely how someone like a Poilievre, who isn&#8217;t as extreme &#8212; well, maybe I would disagree with that &#8212; could still be using the theory and be specific to Canadian politics. And so when we&#8217;re reading and when we&#8217;re thinking about this theory, I hope we&#8217;re not thinking </span><em>that&#8217;s what those other people believe</em><span>. The reason why it&#8217;s become so dominant is because it&#8217;s actually been able to filter in through so-called mainstream political thought. </span></p><div style="font-size: 16px;line-height: 26px;"><hr style="margin: 32px 0;padding: 0;height: 1px;background: rgb(0,0,0,.1);border: none;"></div><div class="captioned-button-wrap" data-attrs="{&quot;url&quot;:&quot;https://substack.com/app-link/post?publication_id=891638&post_id=203411296&utm_source=substack&utm_medium=email&utm_content=share&utm_campaign=email-share&action=share&triggerShare=true&isFreemail=true&r=69g8n&token=eyJ1c2VyX2lkIjoxMDUxODY0NywicG9zdF9pZCI6MjAzNDExMjk2LCJpYXQiOjE3ODI0OTc1NTUsImV4cCI6MTc4NTA4OTU1NSwiaXNzIjoicHViLTg5MTYzOCIsInN1YiI6InBvc3QtcmVhY3Rpb24ifQ.cxEwshboH3OVBtnUWBTRhUaReAZ7h_t2FCIV-g5AGCY&quot;,&quot;text&quot;:&quot;Share&quot;}" data-component-name="CaptionedButtonToDOM" style="font-size: 16px;line-height: 26px;"><div class="preamble" style="margin-top: 16px;font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-size: 18px;max-width: 384px;width: fit-content;line-height: 22px;display: flex;align-items: center;text-align: center;font-weight: 400;margin-left: auto;margin-right: auto;"><p class="cta-caption" style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>Start your own chain of ideas. Tell your friends about </span><strong>Bug-eyed and Shameless</strong><span>:</span></p></div><p class="button-wrapper" data-attrs="{&quot;url&quot;:&quot;https://substack.com/app-link/post?publication_id=891638&post_id=203411296&utm_source=substack&utm_medium=email&utm_content=share&utm_campaign=email-share&action=share&triggerShare=true&isFreemail=true&r=69g8n&token=eyJ1c2VyX2lkIjoxMDUxODY0NywicG9zdF9pZCI6MjAzNDExMjk2LCJpYXQiOjE3ODI0OTc1NTUsImV4cCI6MTc4NTA4OTU1NSwiaXNzIjoicHViLTg5MTYzOCIsInN1YiI6InBvc3QtcmVhY3Rpb24ifQ.cxEwshboH3OVBtnUWBTRhUaReAZ7h_t2FCIV-g5AGCY&quot;,&quot;text&quot;:&quot;Share&quot;}" data-component-name="ButtonCreateButton" style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;text-align: center;cursor: pointer;border-radius: 4px;"><a class="button primary" href="https://substack.com/app-link/post?publication_id=891638&post_id=203411296&utm_source=substack&utm_medium=email&utm_content=share&utm_campaign=email-share&action=share&triggerShare=true&isFreemail=true&r=69g8n&token=eyJ1c2VyX2lkIjoxMDUxODY0NywicG9zdF9pZCI6MjAzNDExMjk2LCJpYXQiOjE3ODI0OTc1NTUsImV4cCI6MTc4NTA4OTU1NSwiaXNzIjoicHViLTg5MTYzOCIsInN1YiI6InBvc3QtcmVhY3Rpb24ifQ.cxEwshboH3OVBtnUWBTRhUaReAZ7h_t2FCIV-g5AGCY" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;box-sizing: border-box;cursor: pointer;border: none;border-radius: 8px;font-size: 14px;line-height: 20px;font-weight: 600;text-align: center;margin: 0;opacity: 1;outline: none;white-space: nowrap;color: #363737 !important;text-decoration: none !important;background-color: #7FFF7A;padding: 12px 20px;height: auto;"><span style="color: #363737;text-decoration: none;">Share</span></a></p></div><div style="font-size: 16px;line-height: 26px;"><hr style="margin: 32px 0;padding: 0;height: 1px;background: rgb(0,0,0,.1);border: none;"></div><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">That&#8217;s it for this week!</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>If you&#8217;re looking for some more things to read, I&#8217;ve got a breakdown of </span><a href="https://substack.com/redirect/c1f0fa0d-2bd6-4adc-800f-a64c4232b5d8?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: hsl(117.74436090225564, 100%, 40%);text-decoration: none;">the toxic Incel ideology</a><span> which underpinned Montreal&#8217;s recent terror attack; the </span><a href="https://substack.com/redirect/abe58a2a-f2d6-4b5a-a4fe-8fad4f3ffd50?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: hsl(117.74436090225564, 100%, 40%);text-decoration: none;">stunning failure of Donald Trump&#8217;s Iran deal</a><span>; why </span><a href="https://substack.com/redirect/936af0a2-8a01-4cb6-ab16-63e0f486c79e?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: hsl(117.74436090225564, 100%, 40%);text-decoration: none;">AI-generated attack ads</a><span> should make us furious; as well as a few heterodox ideas as for how Canada could get better at </span><a href="https://substack.com/redirect/b8e8666b-8543-4766-a0f5-202950d3357a?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: hsl(117.74436090225564, 100%, 40%);text-decoration: none;">building big things </a><span>and </span><a href="https://substack.com/redirect/cf45523b-cd02-4627-94d6-96c315de9e1b?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: hsl(117.74436090225564, 100%, 40%);text-decoration: none;">increasing the housing supply.</a><span> (Gift links, all.)</span></p><a class="youtube-wrap" href="https://substack.com/redirect/2012c3a8-ba69-4016-ab56-95f3373fe864?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" target="_blank" data-component-name="Youtube2ToDOMStatic" style="display: block;margin: 32px 0;"><img src="https://substackcdn.com/image/youtube/w_728,c_limit/l_youtube_play_qyqt8q,w_120/lepePDvpugE" style="border: none !important;vertical-align: middle;-ms-interpolation-mode: bicubic;max-width: 100%;height: auto;margin: 0 auto;display: block;width: 100%;"></a><div class="footnote" data-component-name="FootnoteToDOMStatic" style="line-height: 26px;display: flex;border-top: solid 1px rgb(0,0,0,.1);padding-top: 1.5em;font-size: 90%;flex-direction: row;align-items: baseline;"><span class="footnote-number" style="display: block;margin-right: 6px;min-width: 24px;">1</span><div class="footnote-content" style="font-size: 16px;line-height: 26px;display: block;"><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;min-width: 10px;"><em>The Dialogue in Hell Between Machiavelli and Montesquieu,</em><span> Maurice Joly (1864)</span></p></div></div><div class="footnote" data-component-name="FootnoteToDOMStatic" style="line-height: 26px;display: flex;font-size: 90%;flex-direction: row;align-items: baseline;border-top: none;padding-top: 0;"><span class="footnote-number" style="display: block;margin-right: 6px;min-width: 24px;">2</span><div class="footnote-content" style="font-size: 16px;line-height: 26px;display: block;"><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;min-width: 10px;"><em>The Plot: The Secret Story of The Protocols of the Elders of Zion,</em><span> Will Eisner (2005)</span></p></div></div><div class="footnote" data-component-name="FootnoteToDOMStatic" style="line-height: 26px;display: flex;font-size: 90%;flex-direction: row;align-items: baseline;border-top: none;padding-top: 0;"><span class="footnote-number" style="display: block;margin-right: 6px;min-width: 24px;">3</span><div class="footnote-content" style="font-size: 16px;line-height: 26px;display: block;"><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;min-width: 10px;">The transcript of our conversation is liberally edited for length, clarity, accuracy, and readability.  </p></div></div><div class="footnote" data-component-name="FootnoteToDOMStatic" style="line-height: 26px;display: flex;font-size: 90%;flex-direction: row;align-items: baseline;margin-bottom: 0;border-top: none;padding-top: 0;"><span class="footnote-number" style="display: block;margin-right: 6px;min-width: 24px;">4</span><div class="footnote-content" style="font-size: 16px;line-height: 26px;display: block;"><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;min-width: 10px;">&#8220;Mussolini was captured and jailed. Hitler sent in some Nazi troops to free him, then set up a puppet state in Northern Italy, empowered it with Nazi troops and called it the Italian Social Republic &#8212; which was then renamed the Italian Social Movement.&#8221;</p></div></div></div></div><div class="container-border" style="margin: 32px 0 0;width: 100%;box-sizing: border-box;border-top: 1px solid #222d2a;font-size: 16px;line-height: 26px;"></div><div class="typography" style="--image-offset-margin: -120px;font-size: 16px;line-height: 26px;"><div class="postscript" style="margin: 32px 0;font-size: 16px;line-height: 26px;"><div class="body markup" dir="auto" style="text-align: initial;font-size: 16px;line-height: 26px;width: 100%;word-break: break-word;margin-bottom: 16px;"><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;margin-top: 0;"><em>You&#8217;re a free subscriber to </em><a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly93d3cuYnVnZXllZGFuZHNoYW1lbGVzcy5jb20_dXRtX2NhbXBhaWduPWVtYWlsLWhvbWUmcj02OWc4biIsInAiOjIwMzQxMTI5NiwicyI6ODkxNjM4LCJmIjp0cnVlLCJ1IjoxMDUxODY0NywiaWF0IjoxNzgyNDk3NTU1LCJleHAiOjIwOTgwNzM1NTUsImlzcyI6InB1Yi0wIiwic3ViIjoibGluay1yZWRpcmVjdCJ9.2GbzAksz10TqYovUSTMCucdHGsIhN5ecBVQa3nwmfzs?" style="color: hsl(117.74436090225564, 100%, 40%);text-decoration: none;">Bug-eyed and Shameless</a><em><span>. For the whole enchilada,&nbsp;</span><a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly93d3cuYnVnZXllZGFuZHNoYW1lbGVzcy5jb20vc3Vic2NyaWJlP3V0bV9zb3VyY2U9cG9zdCZ1dG1fY2FtcGFpZ249ZW1haWwtY2hlY2tvdXQmbmV4dD1odHRwcyUzQSUyRiUyRnd3dy5idWdleWVkYW5kc2hhbWVsZXNzLmNvbSUyRnAlMkZhLWNoYWluLW9mLWZvb2xzJnI9NjlnOG4mdG9rZW49ZXlKMWMyVnlYMmxrSWpveE1EVXhPRFkwTnl3aWFXRjBJam94TnpneU5EazNOVFUxTENKbGVIQWlPakUzT0RVd09EazFOVFVzSW1semN5STZJbkIxWWkwNE9URTJNemdpTENKemRXSWlPaUpqYUdWamEyOTFkQ0o5Li14QVh0b2dSeTBkakRlNnVkYUJzUk1ucXJ2UzhPY0NmY21FZ3g4Y21SV1EiLCJwIjoyMDM0MTEyOTYsInMiOjg5MTYzOCwiZiI6dHJ1ZSwidSI6MTA1MTg2NDcsImlhdCI6MTc4MjQ5NzU1NSwiZXhwIjoyMDk4MDczNTU1LCJpc3MiOiJwdWItMCIsInN1YiI6ImxpbmstcmVkaXJlY3QifQ.p5Y7z0bvSE2KcTY-juS-QYFntnTByh5S63aXsBpxka8?" style="color: hsl(117.74436090225564, 100%, 40%);text-decoration: none;">become a paying subscriber</a><span>.</span></em></p><div class="subscribe-widget is-signed-up" data-component-name="SubscribeWidget" style="margin: 0 0 1em;direction: ltr;font-size: 16px;line-height: 26px;margin-bottom: 0;"><div class="pencraft pc-reset button-wrapper" style="text-decoration: unset;list-style: none;font-size: 16px;line-height: 26px;text-align: center;cursor: pointer;border-radius: 4px;"><a class="button subscribe-btn primary" href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly93d3cuYnVnZXllZGFuZHNoYW1lbGVzcy5jb20vc3Vic2NyaWJlP3V0bV9zb3VyY2U9cG9zdCZ1dG1fY2FtcGFpZ249ZW1haWwtY2hlY2tvdXQmbmV4dD1odHRwcyUzQSUyRiUyRnd3dy5idWdleWVkYW5kc2hhbWVsZXNzLmNvbSUyRnAlMkZhLWNoYWluLW9mLWZvb2xzJnI9NjlnOG4mdG9rZW49ZXlKMWMyVnlYMmxrSWpveE1EVXhPRFkwTnl3aWFXRjBJam94TnpneU5EazNOVFUxTENKbGVIQWlPakUzT0RVd09EazFOVFVzSW1semN5STZJbkIxWWkwNE9URTJNemdpTENKemRXSWlPaUpqYUdWamEyOTFkQ0o5Li14QVh0b2dSeTBkakRlNnVkYUJzUk1ucXJ2UzhPY0NmY21FZ3g4Y21SV1EiLCJwIjoyMDM0MTEyOTYsInMiOjg5MTYzOCwiZiI6dHJ1ZSwidSI6MTA1MTg2NDcsImlhdCI6MTc4MjQ5NzU1NSwiZXhwIjoyMDk4MDczNTU1LCJpc3MiOiJwdWItMCIsInN1YiI6ImxpbmstcmVkaXJlY3QifQ.p5Y7z0bvSE2KcTY-juS-QYFntnTByh5S63aXsBpxka8?&utm_medium=email&utm_source=subscribe-widget&utm_content=203411296" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;box-sizing: border-box;cursor: pointer;border: none;border-radius: 8px;font-size: 14px;line-height: 20px;font-weight: 600;text-align: center;opacity: 1;outline: none;white-space: nowrap;text-decoration: none !important;background-color: #7FFF7A;color: #363737 !important;margin: 0 auto;padding: 12px 20px;height: auto;"><span style="color: #363737;text-decoration: none;">Upgrade to paid</span></a></div></div></div></div></div><table class="email-ufi-2-bottom" role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="border-top: 1px solid rgb(0,0,0,.1);border-bottom: 1px solid rgb(0,0,0,.1);min-width: 100%;"><tbody><tr height="16"><td height="16" style="font-size:0px;line-height:0;">&nbsp;</td></tr><tr><td><table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0" style="margin:0 auto;"><tbody><tr><td style="vertical-align:middle;"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="center"><a class="email-button-outline" href="https://substack.com/app-link/post?publication_id=891638&post_id=203411296&utm_source=substack&isFreemail=true&submitLike=true&token=eyJ1c2VyX2lkIjoxMDUxODY0NywicG9zdF9pZCI6MjAzNDExMjk2LCJyZWFjdGlvbiI6IuKdpCIsImlhdCI6MTc4MjQ5NzU1NSwiZXhwIjoxNzg1MDg5NTU1LCJpc3MiOiJwdWItODkxNjM4Iiwic3ViIjoicmVhY3Rpb24ifQ.P_OtZGR9BV9LmWrAFVBA7KOosJWdHDTG8lAaxWNcj9g&utm_medium=email&utm_campaign=email-reaction&r=69g8n" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;font-weight: 500;border: 1px solid rgb(0,0,0,.1);border-radius: 9999px;text-transform: uppercase;font-size: 12px;line-height: 12px;padding: 9px 14px;text-decoration: none;color: rgb(119,119,119);"><img class="icon" src="https://substackcdn.com/image/fetch/$s_!PeVs!,w_36,c_scale,f_png,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Ficon%2FLucideHeart%3Fv%3D4%26height%3D36%26fill%3Dnone%26stroke%3D%2523808080%26strokeWidth%3D2" width="18" height="18" style="margin-right: 8px;min-width: 18px;min-height: 18px;border: none;vertical-align: middle;max-width: 18px" alt=""><span class="email-button-text" style="vertical-align: middle;">Like</span></a></td></tr></tbody></table></td><td width="8" style="min-width:8px;"></td><td style="vertical-align:middle;"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="center"><a class="email-button-outline" href="https://substack.com/app-link/post?publication_id=891638&post_id=203411296&utm_source=substack&utm_medium=email&isFreemail=true&comments=true&token=eyJ1c2VyX2lkIjoxMDUxODY0NywicG9zdF9pZCI6MjAzNDExMjk2LCJpYXQiOjE3ODI0OTc1NTUsImV4cCI6MTc4NTA4OTU1NSwiaXNzIjoicHViLTg5MTYzOCIsInN1YiI6InBvc3QtcmVhY3Rpb24ifQ.cxEwshboH3OVBtnUWBTRhUaReAZ7h_t2FCIV-g5AGCY&r=69g8n&utm_campaign=email-half-magic-comments&action=post-comment&utm_source=substack&utm_medium=email" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;font-weight: 500;border: 1px solid rgb(0,0,0,.1);border-radius: 9999px;text-transform: uppercase;font-size: 12px;line-height: 12px;padding: 9px 14px;text-decoration: none;color: rgb(119,119,119);"><img class="icon" src="https://substackcdn.com/image/fetch/$s_!x1tS!,w_36,c_scale,f_png,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Ficon%2FLucideComments%3Fv%3D4%26height%3D36%26fill%3Dnone%26stroke%3D%2523808080%26strokeWidth%3D2" width="18" height="18" style="margin-right: 8px;min-width: 18px;min-height: 18px;border: none;vertical-align: middle;max-width: 18px" alt=""><span class="email-button-text" style="vertical-align: middle;">Comment</span></a></td></tr></tbody></table></td><td width="8" style="min-width:8px;"></td><td style="vertical-align:middle;"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="center"><a class="email-button-outline" href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly9vcGVuLnN1YnN0YWNrLmNvbS9wdWIvanVzdGlubGluZy9wL2EtY2hhaW4tb2YtZm9vbHM_dXRtX3NvdXJjZT1zdWJzdGFjayZ1dG1fbWVkaXVtPWVtYWlsJnV0bV9jYW1wYWlnbj1lbWFpbC1yZXN0YWNrLWNvbW1lbnQmYWN0aW9uPXJlc3RhY2stY29tbWVudCZyPTY5ZzhuJnRva2VuPWV5SjFjMlZ5WDJsa0lqb3hNRFV4T0RZME55d2ljRzl6ZEY5cFpDSTZNakF6TkRFeE1qazJMQ0pwWVhRaU9qRTNPREkwT1RjMU5UVXNJbVY0Y0NJNk1UYzROVEE0T1RVMU5Td2lhWE56SWpvaWNIVmlMVGc1TVRZek9DSXNJbk4xWWlJNkluQnZjM1F0Y21WaFkzUnBiMjRpZlEuY3hFd3NoYm9IM09WQnRuVVdCVFJoVWFSZUFaN2hfdDJGQ0lWLWc1QUdDWSIsInAiOjIwMzQxMTI5NiwicyI6ODkxNjM4LCJmIjp0cnVlLCJ1IjoxMDUxODY0NywiaWF0IjoxNzgyNDk3NTU1LCJleHAiOjIwOTgwNzM1NTUsImlzcyI6InB1Yi0wIiwic3ViIjoibGluay1yZWRpcmVjdCJ9.3grJr20zkF9KMRg6Lx9BZOrPp9vY4t2XyJFkA_seRyA?&utm_source=substack&utm_medium=email" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;font-weight: 500;border: 1px solid rgb(0,0,0,.1);border-radius: 9999px;text-transform: uppercase;font-size: 12px;line-height: 12px;padding: 9px 14px;text-decoration: none;color: rgb(119,119,119);"><img class="icon" src="https://substackcdn.com/image/fetch/$s_!ubXF!,w_36,c_scale,f_png,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Ficon%2Fnotes__NoteRestackIcon%3Fv%3D4%26height%3D36%26fill%3Dnone%26stroke%3D%2523808080%26strokeWidth%3D2%26strokeLinecap%3Dround%26strokeLinejoin%3Dround" width="18" height="18" alt="" style="margin-right: 8px;min-width: 18px;min-height: 18px;max-width: 550px;border: none !important;vertical-align: middle;"><span class="email-button-text" style="vertical-align: middle;">Restack</span></a></td></tr></tbody></table></td></tr></tbody></table></td><td align="right"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr></tr></tbody></table></td></tr></tbody></table></td></tr><tr height="16"><td height="16" style="font-size:0px;line-height:0;">&nbsp;</td></tr></tbody></table><div class="footer footer-ZM59BM" style="color: rgb(119,119,119);text-align: center;font-size: 16px;line-height: 26px;padding: 24px0;"><div style="font-size: 16px;line-height: 26px;padding-bottom: 24px"><p class="pencraft pc-reset color-secondary-ls1g8s size-12-mmZ61m reset-IxiVJZ small meta-B2bqa5" style="list-style: none;font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';padding-bottom: 0;font-size: 12px;line-height: 16px;margin: 0;color: rgb(119,119,119);text-decoration: unset;">&#169; 2026 <span>Justin Ling</span><br>Montr&#233;al, Canada <br><a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly93d3cuYnVnZXllZGFuZHNoYW1lbGVzcy5jb20vYWN0aW9uL2Rpc2FibGVfZW1haWw_dG9rZW49ZXlKMWMyVnlYMmxrSWpveE1EVXhPRFkwTnl3aWNHOXpkRjlwWkNJNk1qQXpOREV4TWprMkxDSnBZWFFpT2pFM09ESTBPVGMxTlRVc0ltVjRjQ0k2TVRneE5EQXpNelUxTlN3aWFYTnpJam9pY0hWaUxUZzVNVFl6T0NJc0luTjFZaUk2SW1ScGMyRmliR1ZmWlcxaGFXd2lmUS5oNW1sc3dNYmpKajVsVWZrS1V3bGtJMkdDWlZzaDlvQmx6WS16WU5vQWhFIiwicCI6MjAzNDExMjk2LCJzIjo4OTE2MzgsImYiOnRydWUsInUiOjEwNTE4NjQ3LCJpYXQiOjE3ODI0OTc1NTUsImV4cCI6MjA5ODA3MzU1NSwiaXNzIjoicHViLTAiLCJzdWIiOiJsaW5rLXJlZGlyZWN0In0.BK-KunfVj5isXe4MnZD8XnSRa810S9B6SwSMd7v4DwM?" style="color: hsl(117.74436090225564, 100%, 40%);text-decoration: none;"><span style="color: rgb(119,119,119);text-decoration: underline;">Unsubscribe</span></a></p></div><p class="footerSection-EHR0jG small powered-by-substack" style="padding: 0 24px;font-size: 12px;line-height: 20px;margin: 0;color: rgb(119,119,119);font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';padding-bottom: 0;margin-top: 0;"><a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly9zdWJzdGFjay5jb20vc2lnbnVwP3V0bV9zb3VyY2U9c3Vic3RhY2smdXRtX21lZGl1bT1lbWFpbCZ1dG1fY29udGVudD1mb290ZXImdXRtX2NhbXBhaWduPWF1dG9maWxsZWQtZm9vdGVyJmZyZWVTaWdudXBFbWFpbD1iZW5vaXRjQGdtYWlsLmNvbSZyPTY5ZzhuIiwicCI6MjAzNDExMjk2LCJzIjo4OTE2MzgsImYiOnRydWUsInUiOjEwNTE4NjQ3LCJpYXQiOjE3ODI0OTc1NTUsImV4cCI6MjA5ODA3MzU1NSwiaXNzIjoicHViLTAiLCJzdWIiOiJsaW5rLXJlZGlyZWN0In0.DBy4GhpgDE6XNjtWEjVXRajL5zCqE8ETl8wIpaQk1Hg?" style="color: hsl(117.74436090225564, 100%, 40%);text-decoration: none;display: inline-block;margin: 0 4px;"><img src="https://substackcdn.com/image/fetch/$s_!LkrL!,w_270,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Fimg%2Femail%2Fpublish-button%402x.png" srcset="https://substackcdn.com/image/fetch/$s_!wgfj!,w_135,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Fimg%2Femail%2Fpublish-button.png, https://substackcdn.com/image/fetch/$s_!LkrL!,w_270,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Fimg%2Femail%2Fpublish-button%402x.png 2x, https://substackcdn.com/image/fetch/$s_!KjtY!,w_405,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Fimg%2Femail%2Fpublish-button%403x.png 3x" width="135" alt="Start writing" height="40" style="max-width: 550px;border: none !important;vertical-align: middle;"></a></p></div></div></td><td></td></tr></tbody></table><img src="https://eotrx.substackcdn.com/o/bda175551e796bb2/p.gif?token=eyJtIjoiPDIwMjYwNjI2MTgwNTAzLjMuMGJiOGNkNTc4Yzg1NWYxOUBtZy1kMC5zdWJzdGFjay5jb20-IiwidSI6MTA1MTg2NDcsInIiOiJiZW5vaXRjQGdtYWlsLmNvbSIsImQiOiJtZy1kMC5zdWJzdGFjay5jb20iLCJwIjoyMDM0MTEyOTYsInQiOiJuZXdzbGV0dGVyIiwiYSI6ImV2ZXJ5b25lIiwicyI6ODkxNjM4LCJjIjoicG9zdCIsImYiOnRydWUsInBvc2l0aW9uIjoiYm90dG9tIiwiaWF0IjoxNzgyNDk3NTU2LCJleHAiOjE3ODUwODk1NTYsImlzcyI6InB1Yi0wIiwic3ViIjoiZW8ifQ.I4xjn9qTMDJ9B9-W7E4WD7SUEfK-vgYgBDc1zidqSqs" alt="" width="1" height="1" border="0" style="height:1px !important;width:1px !important;border-width:0 !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:0 !important;margin-left:0 !important;padding-top:0 !important;padding-bottom:0 !important;padding-right:0 !important;padding-left:0 !important;"/><img width="1" height="1" alt="" src="https://email.mg-d0.substack.com/o/eJxE0FvO2yAQhuHVhLtanA0XrMXiMLi0NkQwpPLuKyeR_ttvpFePJnqEvfXLPdtAkpwWPqtEwLHVcGlXpVYCpy_HtkOF7hHS5vHnqoXl5LfjIiolGaQAwmRvY1Y2yhzWHKwXSpDiOOWaaq6ZoYqKRSw0BBOTWk00SmVmH5Ke-69ElzHDQB__LrGdpIwtd3gTHPYJ5IZufqYCNYKDF_Sr1e9ckuNUSMa41Z8Frye4Cv_GAYjQyXOGLbbznLXgtUH14YD0Dc9wlOixtHqHjGVaGNJdgNoKxoek-614q8YMqZ2-VPdnDiz1KHUn-HniHNDvAKOKGS1X8nL8fwAAAP__0aZ3jw"></body></html></body></html>
