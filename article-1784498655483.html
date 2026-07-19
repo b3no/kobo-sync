@@ -1,0 +1,787 @@
+<html><head><meta name="robots" content="noindex"><title>I Wouldn't Say Pangram is Broken, But I Would Say That It's Brittle</title></head><body><html lang="en" dir="ltr" style="scrollbar-width: thin;scrollbar-color: rgb(219,219,219)rgb(255,255,255);"><head><meta charset="utf-8"><title>I Wouldn't Say Pangram is Broken, But I Would Say That It's Brittle</title><style>
+@media (max-width: 1024px) {
+  .typography .pullquote-align-left,
+  .typography.editor .pullquote-align-left,
+  .typography .pullquote-align-right,
+  .typography.editor .pullquote-align-right,
+  .typography .pullquote-align-wide,
+  .typography.editor .pullquote-align-wide,
+  .typography .pullquote-align-center,
+  .typography.editor .pullquote-align-center {
+    float: none;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .typography .markup table.image-wrapper img,
+  .typography.editor .markup table.image-wrapper img,
+  .typography .markup table.kindle-wrapper img,
+  .typography.editor .markup table.kindle-wrapper img {
+    max-width: 550px;
+  }
+}
+@media (min-width: 1024px) {
+  .typography:not(:has(#toc)) .captioned-image-container figure:has(> a.image2-offset-left),
+  .typography.editor:not(:has(#toc)) .captioned-image-container figure:has(> a.image2-offset-left) {
+    margin-left: var(--image-offset-margin);
+  }
+  .typography:not(:has(#toc)) .captioned-image-container figure:has(> a.image2-offset-right),
+  .typography.editor:not(:has(#toc)) .captioned-image-container figure:has(> a.image2-offset-right) {
+    margin-right: var(--image-offset-margin);
+  }
+}
+@media (min-width: 1300px) {
+  .typography .captioned-image-container figure:has(> a.image2-offset-left),
+  .typography.editor .captioned-image-container figure:has(> a.image2-offset-left) {
+    margin-left: var(--image-offset-margin);
+  }
+  .typography .captioned-image-container figure:has(> a.image2-offset-right),
+  .typography.editor .captioned-image-container figure:has(> a.image2-offset-right) {
+    margin-right: var(--image-offset-margin);
+  }
+}
+@media (max-width: 1024px) {
+  .typography,
+  .typography.editor {
+    /* Disable offset on mobile/tablet */
+  }
+  .typography .captioned-image-container figure:has(> a.image2-align-left),
+  .typography.editor .captioned-image-container figure:has(> a.image2-align-left),
+  .typography .captioned-image-container figure:has(> a.image2-align-right),
+  .typography.editor .captioned-image-container figure:has(> a.image2-align-right) {
+    float: none;
+    margin: 1em auto;
+    max-width: 100%;
+    width: auto;
+    padding: 0;
+  }
+  .typography .captioned-image-container figure:has(> a.image2-align-left.thefp),
+  .typography.editor .captioned-image-container figure:has(> a.image2-align-left.thefp),
+  .typography .captioned-image-container figure:has(> a.image2-align-right.thefp),
+  .typography.editor .captioned-image-container figure:has(> a.image2-align-right.thefp) {
+    margin: 1em auto;
+  }
+  .typography .captioned-image-container figure:has(> a.image2-offset-left),
+  .typography.editor .captioned-image-container figure:has(> a.image2-offset-left),
+  .typography .captioned-image-container figure:has(> a.image2-offset-right),
+  .typography.editor .captioned-image-container figure:has(> a.image2-offset-right) {
+    margin: 1em auto;
+  }
+  .typography .captioned-image-container figure:has(> a.image2-align-left) .image2-inset,
+  .typography.editor .captioned-image-container figure:has(> a.image2-align-left) .image2-inset,
+  .typography .captioned-image-container figure:has(> a.image2-align-right) .image2-inset,
+  .typography.editor .captioned-image-container figure:has(> a.image2-align-right) .image2-inset {
+    display: block;
+    justify-content: initial;
+  }
+}
+@media (max-width: 768px) {
+  .typography .markup div.sponsorship-campaign-embed,
+  .typography.editor .markup div.sponsorship-campaign-embed {
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+  .typography .markup div.sponsorship-campaign-embed:first-child,
+  .typography.editor .markup div.sponsorship-campaign-embed:first-child {
+    margin-top: 0px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .typography .markup div.youtube-overlay,
+  .typography.editor .markup div.youtube-overlay,
+  .typography .markup div.vimeo-overlay,
+  .typography.editor .markup div.vimeo-overlay {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 370px) {
+  .typography .markup div.tiktok-wrap,
+  .typography.editor .markup div.tiktok-wrap {
+    width: calc(95vw - 32px);
+    height: calc((95vw - 32px - 2px) / 0.485714);
+  }
+}
+@media screen and (max-width: 650px) {
+  .typography .markup div.embedded-publication-wrap .embedded-publication.show-subscribe,
+  .typography.editor .markup div.embedded-publication-wrap .embedded-publication.show-subscribe {
+    padding: 24px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .typography .markup div.subscription-widget-wrap .subscription-widget.show-subscribe,
+  .typography.editor .markup div.subscription-widget-wrap .subscription-widget.show-subscribe,
+  .typography .markup div.subscription-widget-wrap-editor .subscription-widget.show-subscribe,
+  .typography.editor .markup div.subscription-widget-wrap-editor .subscription-widget.show-subscribe,
+  .typography .markup div.captioned-button-wrap .subscription-widget.show-subscribe,
+  .typography.editor .markup div.captioned-button-wrap .subscription-widget.show-subscribe {
+    padding: 0px 24px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .typography .markup div.subscription-widget-wrap .subscription-widget.show-subscribe .subscription-widget-subscribe .button,
+  .typography.editor .markup div.subscription-widget-wrap .subscription-widget.show-subscribe .subscription-widget-subscribe .button,
+  .typography .markup div.subscription-widget-wrap-editor .subscription-widget.show-subscribe .subscription-widget-subscribe .button,
+  .typography.editor .markup div.subscription-widget-wrap-editor .subscription-widget.show-subscribe .subscription-widget-subscribe .button,
+  .typography .markup div.captioned-button-wrap .subscription-widget.show-subscribe .subscription-widget-subscribe .button,
+  .typography.editor .markup div.captioned-button-wrap .subscription-widget.show-subscribe .subscription-widget-subscribe .button {
+    padding: 10px 12px;
+    min-width: 110px;
+  }
+}
+@media (max-width: 650px) {
+  .typography .markup .twitter-embed,
+  .typography.editor .markup .twitter-embed,
+  .typography .markup .tweet,
+  .typography.editor .markup .tweet {
+    padding: 12px;
+  }
+}
+@media (max-width: 650px) {
+  .typography .markup .twitter-embed .tweet-text,
+  .typography.editor .markup .twitter-embed .tweet-text,
+  .typography .markup .tweet .tweet-text,
+  .typography.editor .markup .tweet .tweet-text {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+@media (max-width: 650px) {
+  .typography .markup .twitter-embed .tweet-photos-container.two,
+  .typography.editor .markup .twitter-embed .tweet-photos-container.two,
+  .typography .markup .tweet .tweet-photos-container.two,
+  .typography.editor .markup .tweet .tweet-photos-container.two,
+  .typography .markup .twitter-embed .tweet-photos-container.three,
+  .typography.editor .markup .twitter-embed .tweet-photos-container.three,
+  .typography .markup .tweet .tweet-photos-container.three,
+  .typography.editor .markup .tweet .tweet-photos-container.three,
+  .typography .markup .twitter-embed .tweet-photos-container.four,
+  .typography.editor .markup .twitter-embed .tweet-photos-container.four,
+  .typography .markup .tweet .tweet-photos-container.four,
+  .typography.editor .markup .tweet .tweet-photos-container.four {
+    height: 200px;
+  }
+}
+@media (max-width: 650px) {
+  .typography .markup .twitter-embed a.expanded-link .expanded-link-img,
+  .typography.editor .markup .twitter-embed a.expanded-link .expanded-link-img,
+  .typography .markup .tweet a.expanded-link .expanded-link-img,
+  .typography.editor .markup .tweet a.expanded-link .expanded-link-img {
+    max-height: 180px;
+  }
+}
+@media (max-width: 650px) {
+  .typography .markup .twitter-embed a.expanded-link .expanded-link-description,
+  .typography.editor .markup .twitter-embed a.expanded-link .expanded-link-description,
+  .typography .markup .tweet a.expanded-link .expanded-link-description,
+  .typography.editor .markup .tweet a.expanded-link .expanded-link-description {
+    display: none;
+  }
+}
+@media screen and (max-width: 650px) {
+  .typography .markup .apple-podcast-container,
+  .typography.editor .markup .apple-podcast-container {
+    width: unset;
+  }
+}
+@media (max-width: 420px) {
+  .typography .markup .install-substack-app-embed img.install-substack-app-embed-img,
+  .typography.editor .markup .install-substack-app-embed img.install-substack-app-embed-img {
+    margin: 0 auto 16px auto;
+  }
+}
+@media (max-width: 420px) {
+  .typography .markup .install-substack-app-embed .install-substack-app-embed-text,
+  .typography.editor .markup .install-substack-app-embed .install-substack-app-embed-text {
+    margin: 0 0 12px 0;
+    max-width: 100%;
+    width: auto;
+    text-align: center;
+  }
+}
+@media (max-width: 420px) {
+  .typography .markup .install-substack-app-embed .install-substack-app-embed-link,
+  .typography.editor .markup .install-substack-app-embed .install-substack-app-embed-link {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 481px) {
+  .share-button-container {
+    height: 38px;
+  }
+}
+@media screen and (min-width: 481px) {
+  .share-button-container a.comment {
+    height: 38px;
+    line-height: 38px;
+    padding-right: 10px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .share-button-container .separator {
+    display: block;
+    margin: 0;
+    height: 8px;
+    border-left: none;
+  }
+}
+@media screen and (max-width: 480px) {
+  .share-button-container a.share.first img {
+    padding-left: 0;
+  }
+}
+@media screen and (min-width: 481px) {
+  .share-button-container a.mobile {
+    display: none !important;
+  }
+}
+@media screen and (min-width: 541px) {
+  .settings-add-pub-modal-wrapper .container .add-recommending-pub-modal-container {
+    padding: 36px;
+    height: 680px;
+  }
+}
+@media screen and (min-width: 541px) {
+  .settings-add-pub-modal-wrapper .container .add-recommending-pub-modal-container .footer {
+    position: absolute;
+    bottom: 36px;
+    margin: 0px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .header-anchor-parent {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .post {
+    padding: 16px 0 0 0;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post .post-header .post-label {
+    margin-top: 8px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post .post-header .meta-author-wrap.alternative-meta .meta-right-column .post-meta {
+    margin-top: 6px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post .footer-facepile-container {
+    height: 64px;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post .post-footer.use-separators {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post .post-footer.next-prev {
+    height: 64px;
+    justify-content: space-between;
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post-contributor-footer .post-contributor-bio-table {
+    display: block;
+  }
+  .post-contributor-footer .post-contributor-bio-table-row {
+    display: flex;
+    flex-direction: row;
+  }
+  .post-contributor-footer .post-contributor-bio-userhead-cell,
+  .post-contributor-footer .post-contributor-bio-body-cell {
+    display: block;
+  }
+  .post-contributor-footer .post-contributor-bio-body-cell {
+    flex-grow: 1;
+  }
+  .post-contributor-footer .post-contributor-bio-body-table {
+    display: block;
+  }
+  .post-contributor-footer .post-contributor-bio-body-table-row {
+    display: block;
+  }
+  .post-contributor-footer .post-contributor-bio-copy-cell,
+  .post-contributor-footer .post-contributor-bio-controls-cell {
+    display: block;
+  }
+  .post-contributor-footer .post-contributor-bio-copy-cell {
+    margin: 0 0 16px 0;
+  }
+  .post-contributor-footer .post-contributor-bio-controls-cell {
+    width: auto;
+  }
+  .post-contributor-footer .post-contributor-bio-controls {
+    margin: auto;
+  }
+  .post-contributor-footer .post-contributor-bio-controls .button.primary {
+    width: 100%;
+  }
+  .post-contributor-footer .post-contributor-bio-text {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .post-silhouette {
+    padding: 32px 0;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post-silhouette .post-silhouette-title {
+    margin-top: 10.44225025px;
+    height: 120px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post-silhouette .post-silhouette-meta {
+    width: 75%;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post-silhouette .post-silhouette-meta.with-byline-image {
+    margin: 20px 0;
+  }
+}
+@media screen and (max-width: 650px) {
+  .use-theme-bg .post-meta.alternative-meta .post-meta-item,
+  .post-meta.alternative-meta .post-meta-item {
+    padding-right: 16px;
+  }
+}
+@media screen and (max-width: 370px) {
+  .use-theme-bg .post-meta.alternative-meta .post-meta-item,
+  .post-meta.alternative-meta .post-meta-item {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .use-theme-bg .post-meta.alternative-meta .post-meta-item.guest-author-publication,
+  .post-meta.alternative-meta .post-meta-item.guest-author-publication {
+    display: none;
+  }
+}
+@media screen and (max-width: 370px) {
+  .post-meta .post-meta-item .post-meta-button {
+    height: 36px !important;
+    /* important to override in-line height style on emails */
+  }
+  .post-meta .post-meta-item .post-meta-button .meta-button-label {
+    display: none;
+  }
+  .post-meta .post-meta-item .post-meta-button > svg {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 370px) {
+  .post-meta .post-meta-item {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post .floating-subscribe-button {
+    bottom: 20px;
+    right: 20px;
+  }
+}
+@media (max-width: 1024px) {
+  body .pullquote-align-left,
+  body .pullquote-align-right,
+  body .pullquote-align-wide,
+  body .pullquote-align-center {
+    float: none;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  body .markup table.image-wrapper img,
+  body .markup table.kindle-wrapper img {
+    max-width: 550px;
+  }
+}
+@media (min-width: 1024px) {
+  body:not(:has(#toc)) .captioned-image-container figure:has(> a.image2-offset-left) {
+    margin-left: var(--image-offset-margin);
+  }
+  body:not(:has(#toc)) .captioned-image-container figure:has(> a.image2-offset-right) {
+    margin-right: var(--image-offset-margin);
+  }
+}
+@media (min-width: 1300px) {
+  body .captioned-image-container figure:has(> a.image2-offset-left) {
+    margin-left: var(--image-offset-margin);
+  }
+  body .captioned-image-container figure:has(> a.image2-offset-right) {
+    margin-right: var(--image-offset-margin);
+  }
+}
+@media (max-width: 1024px) {
+  body {
+    /* Disable offset on mobile/tablet */
+  }
+  body .captioned-image-container figure:has(> a.image2-align-left),
+  body .captioned-image-container figure:has(> a.image2-align-right) {
+    float: none;
+    margin: 1em auto;
+    max-width: 100%;
+    width: auto;
+    padding: 0;
+  }
+  body .captioned-image-container figure:has(> a.image2-align-left.thefp),
+  body .captioned-image-container figure:has(> a.image2-align-right.thefp) {
+    margin: 1em auto;
+  }
+  body .captioned-image-container figure:has(> a.image2-offset-left),
+  body .captioned-image-container figure:has(> a.image2-offset-right) {
+    margin: 1em auto;
+  }
+  body .captioned-image-container figure:has(> a.image2-align-left) .image2-inset,
+  body .captioned-image-container figure:has(> a.image2-align-right) .image2-inset {
+    display: block;
+    justify-content: initial;
+  }
+}
+@media (max-width: 768px) {
+  body .markup div.sponsorship-campaign-embed {
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+  body .markup div.sponsorship-campaign-embed:first-child {
+    margin-top: 0px;
+  }
+}
+@media screen and (max-width: 650px) {
+  body .markup div.youtube-overlay,
+  body .markup div.vimeo-overlay {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 370px) {
+  body .markup div.tiktok-wrap {
+    width: calc(95vw - 32px);
+    height: calc((95vw - 32px - 2px) / 0.485714);
+  }
+}
+@media screen and (max-width: 650px) {
+  body .markup div.embedded-publication-wrap .embedded-publication.show-subscribe {
+    padding: 24px;
+  }
+}
+@media screen and (max-width: 650px) {
+  body .markup div.subscription-widget-wrap .subscription-widget.show-subscribe,
+  body .markup div.subscription-widget-wrap-editor .subscription-widget.show-subscribe,
+  body .markup div.captioned-button-wrap .subscription-widget.show-subscribe {
+    padding: 0px 24px;
+  }
+}
+@media screen and (max-width: 650px) {
+  body .markup div.subscription-widget-wrap .subscription-widget.show-subscribe .subscription-widget-subscribe .button,
+  body .markup div.subscription-widget-wrap-editor .subscription-widget.show-subscribe .subscription-widget-subscribe .button,
+  body .markup div.captioned-button-wrap .subscription-widget.show-subscribe .subscription-widget-subscribe .button {
+    padding: 10px 12px;
+    min-width: 110px;
+  }
+}
+@media (max-width: 650px) {
+  body .markup .twitter-embed,
+  body .markup .tweet {
+    padding: 12px;
+  }
+}
+@media (max-width: 650px) {
+  body .markup .twitter-embed .tweet-text,
+  body .markup .tweet .tweet-text {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+@media (max-width: 650px) {
+  body .markup .twitter-embed .tweet-photos-container.two,
+  body .markup .tweet .tweet-photos-container.two,
+  body .markup .twitter-embed .tweet-photos-container.three,
+  body .markup .tweet .tweet-photos-container.three,
+  body .markup .twitter-embed .tweet-photos-container.four,
+  body .markup .tweet .tweet-photos-container.four {
+    height: 200px;
+  }
+}
+@media (max-width: 650px) {
+  body .markup .twitter-embed a.expanded-link .expanded-link-img,
+  body .markup .tweet a.expanded-link .expanded-link-img {
+    max-height: 180px;
+  }
+}
+@media (max-width: 650px) {
+  body .markup .twitter-embed a.expanded-link .expanded-link-description,
+  body .markup .tweet a.expanded-link .expanded-link-description {
+    display: none;
+  }
+}
+@media screen and (max-width: 650px) {
+  body .markup .apple-podcast-container {
+    width: unset;
+  }
+}
+@media (max-width: 420px) {
+  body .markup .install-substack-app-embed img.install-substack-app-embed-img {
+    margin: 0 auto 16px auto;
+  }
+}
+@media (max-width: 420px) {
+  body .markup .install-substack-app-embed .install-substack-app-embed-text {
+    margin: 0 0 12px 0;
+    max-width: 100%;
+    width: auto;
+    text-align: center;
+  }
+}
+@media (max-width: 420px) {
+  body .markup .install-substack-app-embed .install-substack-app-embed-link {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 500px) {
+  body .header a.logo {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+  }
+}
+@media screen and (max-width: 420px) {
+  body .subscription-receipt table:first-of-type .subscription-amount .subscription-discount {
+    width: 72px !important;
+  }
+}
+@media screen and (min-width: 481px) {
+  body .share-button-container {
+    height: auto;
+  }
+}
+@media screen and (max-width: 480px) {
+  body .share-button-container .separator {
+    display: block !important;
+    margin: 0 !important;
+    height: 8px !important;
+    border-left: none !important;
+  }
+}
+@media screen and (max-width: 650px) {
+  .digest .item .post-meta-item.audience {
+    display: none;
+  }
+}
+@media screen and (min-width: 500px) {
+  .digest-publication .logo img {
+    width: 42px;
+    height: 42px;
+    border-radius: 8px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .comments-page .container .comment-list .collapsed-reply {
+    margin-left: calc(10 + 32px - 24px);
+  }
+}
+@media screen and (max-width: 650px) {
+  .comment > .comment-list {
+    padding-left: 24px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .finish-magic-login-modal .modal-content .container {
+    padding: 24px 0;
+  }
+}
+@media (max-width: 650px) {
+  .reader2-text-b3 {
+    line-height: 24px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .reader2-text-h4 {
+    line-height: 24px;
+  }
+}
+@media screen and (min-width: 541px) {
+  .user-profile-modal {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .subscribe-widget form.form .sideBySideWrap button.rightButton {
+    padding: 10px 12px;
+  }
+}
+@media screen and (min-width: 541px) {
+  .pub-icon:hover .logo-hover,
+  .feed-item-icon:hover .logo-hover {
+    display: block;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post-ufi.single-full-width-button .post-ufi-button-wrapper {
+    width: 100%;
+    padding: 16px;
+  }
+  .post-ufi.single-full-width-button .post-ufi-button-wrapper:empty {
+    display: none;
+  }
+  .post-ufi.single-full-width-button .post-ufi-button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  .file-embed-wrapper {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .file-embed-wrapper-editor {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .file-embed-wrapper-editor:active {
+    padding: 0;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .file-embed-button.wide,
+  .file-embed-error-button.wide {
+    display: none;
+  }
+}
+@media only screen and (min-width: 630px) {
+  .file-embed-button.narrow,
+  .file-embed-error-button.narrow {
+    display: none;
+  }
+}
+@media screen and (min-width: 541px) {
+  .audio-player-wrapper .audio-player {
+    min-width: 500px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .audio-player-wrapper .audio-player .audio-player-progress {
+    border-left-width: 16px;
+    border-right-width: 16px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .audio-player-wrapper .audio-player .audio-player-progress .audio-player-progress-bar .audio-player-progress-bar-popup {
+    top: -54px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .audio-player-wrapper-fancy .audio-player .audio-player-progress {
+    border-left-width: 16px;
+    border-right-width: 16px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .audio-player-wrapper-fancy .audio-player .audio-player-progress .audio-player-progress-bar .audio-player-progress-bar-popup {
+    top: -54px;
+  }
+}
+@media (min-width: 250px) {
+  .audio-player-wrapper-fancy .audio-player {
+    padding: 32px;
+  }
+  .audio-player-wrapper-fancy .audio-player .btn-group {
+    display: flex;
+  }
+  .audio-player-wrapper-fancy .audio-player .btn-group .button:last-of-type {
+    display: block;
+  }
+}
+@media (min-width: 300px) {
+  .audio-player-wrapper-fancy .audio-player .btn-group {
+    display: block;
+  }
+  .audio-player-wrapper-fancy .audio-player .btn-group .button:first-of-type {
+    display: block;
+  }
+}
+@media (min-width: 350px) {
+  .audio-player-wrapper-fancy .audio-player .audio-player-substack-logo {
+    display: block;
+  }
+  .audio-player-wrapper-fancy .audio-player .audio-player-title {
+    margin-top: 16px;
+  }
+  .audio-player-wrapper-fancy .audio-player .audio-player-hero-image-container {
+    padding-top: 15%;
+    width: 15%;
+    display: block;
+  }
+  .audio-player-wrapper-fancy .audio-player .btn-group .button:first-of-type {
+    display: block;
+  }
+  .audio-player-wrapper-fancy .audio-player .audio-player-substack-logo {
+    display: block;
+  }
+}
+@media (min-width: 350px) {
+  .audio-player-wrapper-fancy .audio-player .audio-player-hero-image-container {
+    padding-top: 25%;
+    width: 25%;
+    display: block;
+  }
+  .audio-player-wrapper-fancy .audio-player .btn-group {
+    display: flex;
+  }
+  .audio-player-wrapper-fancy .audio-player .btn-group .button:first-of-type {
+    display: block;
+  }
+}
+@media (min-width: 400px) {
+  .audio-player-wrapper-fancy .audio-player .audio-player-hero-image-container {
+    padding-top: 40%;
+    width: 40%;
+  }
+}
+@media (max-width: 400px) {
+  .audio-player-wrapper-fancy .audio-player .btn-group {
+    margin-top: 12px;
+  }
+  .audio-player-wrapper-fancy .audio-player .btn-group .button {
+    font-size: 13px;
+    padding: 6px 12px;
+    height: auto;
+    margin-top: 10px;
+  }
+}
+@media (min-width: 600px) {
+  .audio-player-wrapper-fancy .audio-player .audio-player-hero-image-container {
+    padding-top: 55%;
+    width: 55%;
+  }
+}
+@media (max-width: 650px) {
+  .poll-editor-modal {
+    min-width: calc(100% - 20px);
+  }
+}
+@media (max-width: 750px) {
+  .poll-embed .poll-anchor-target .poll-anchor-copy-button {
+    left: 8px;
+    top: 45px;
+  }
+}</style></head><body class="email-body" style="font-kerning: auto;--image-offset-margin: -120px;"><img src="https://eotrx.substackcdn.com/o/99750f7658f5de89/p.gif?token=eyJtIjoiPDIwMjYwNzE5MjEyMTQ4LjMuZmJlMmNlMzA4OWE4NTkyN0BtZy1kMC5zdWJzdGFjay5jb20-IiwidSI6MTA1MTg2NDcsInIiOiJiZW5vaXRjQGdtYWlsLmNvbSIsImQiOiJtZy1kMC5zdWJzdGFjay5jb20iLCJwIjoyMDc2NjE1MTIsInQiOiJuZXdzbGV0dGVyIiwiYSI6ImV2ZXJ5b25lIiwicyI6Mjk1OTM3LCJjIjoicG9zdCIsImYiOnRydWUsInBvc2l0aW9uIjoidG9wIiwiaWF0IjoxNzg0NDk2MTU3LCJleHAiOjE3ODcwODgxNTcsImlzcyI6InB1Yi0wIiwic3ViIjoiZW8ifQ.bOb4iitMxjRl_m3dTYiU7MOCyXFzlWOuAOEx8GArzsw" alt="" width="1" height="1" border="0" style="height:1px !important;width:1px !important;border-width:0 !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:0 !important;margin-left:0 !important;padding-top:0 !important;padding-bottom:0 !important;padding-right:0 !important;padding-left:0 !important;"/><div class="preview" style="display:none;font-size:1px;color:#333333;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;">it seems way too easy to provoke Pangram into contradicting its own results</div><div class="preview" style="display:none;font-size:1px;color:#333333;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;">&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;</div><table class="email-body-container" role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td></td><td class="content" width="550"></td><td></td></tr><tr><td></td><td class="content" width="550" align="left"><div style="font-size: 16px;line-height: 26px;max-width: 550px;width: 100%;margin: 0 auto;overflow-wrap: break-word;"><table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="right" style="height:20px;"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="vertical-align:middle;"><span class="pencraft pc-reset reset-IxiVJZ tw-font-body tw-text-ssm tw-text-substack-secondary" style="font-family: SF Pro Text, -apple-system, system-ui, BlinkMacSystemFont, Inter, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;font-size: 13px;color: unset;list-style: none;text-decoration: unset;margin: 0;"><div class="pencraft pc-reset align-right-VJbKw5 size-12-mmZ61m reset-IxiVJZ" style="list-style: none;color: unset;text-align: right;font-size: 12px;line-height: 16px;text-decoration: unset;margin: 0;"><span class="pencraft pc-reset reset-IxiVJZ" translated="" style="list-style: none;color: unset;text-decoration: unset;margin: 0;">Forwarded this email? <a class="pencraft pc-reset decoration-underline-ClTkYc reset-IxiVJZ" href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly9mcmVkZGllZGVib2VyLnN1YnN0YWNrLmNvbS9zdWJzY3JpYmU_dXRtX3NvdXJjZT1lbWFpbCZ1dG1fY2FtcGFpZ249ZW1haWwtc3Vic2NyaWJlJnI9NjlnOG4mbmV4dD1odHRwcyUzQSUyRiUyRmZyZWRkaWVkZWJvZXIuc3Vic3RhY2suY29tJTJGcCUyRmktd291bGRudC1zYXktcGFuZ3JhbS1pcy1icm9rZW4tYnV0IiwicCI6MjA3NjYxNTEyLCJzIjoyOTU5MzcsImYiOnRydWUsInUiOjEwNTE4NjQ3LCJpYXQiOjE3ODQ0OTYxNTcsImV4cCI6MjEwMDA3MjE1NywiaXNzIjoicHViLTAiLCJzdWIiOiJsaW5rLXJlZGlyZWN0In0.y7oKwrog1YQs0D1okpc9MPLjZ3OE5mbl7A1khG8So3w?" style="list-style: none;color: unset;text-decoration: unset;margin: 0;-webkit-text-decoration-line: underline;text-decoration-line: underline;">Subscribe here</a> for more</span></div></span></td></tr></tbody></table></td></tr></tbody></table><div class="typography" style="--image-offset-margin: -120px;font-size: 16px;line-height: 26px;"><div class="preamble" style="font-size: 16px;line-height: 26px;margin-top: 16px;"><div class="body markup" dir="auto" style="text-align: initial;font-size: 16px;line-height: 26px;width: 100%;word-break: break-word;margin-bottom: 16px;"><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;margin-top: 0;"></p><div class="subscribe-widget is-signed-up" data-component-name="SubscribeWidget" style="margin: 0 0 1em;direction: ltr;font-size: 16px;line-height: 26px;margin-bottom: 0;"><div class="pencraft pc-reset button-wrapper" style="text-decoration: unset;list-style: none;font-size: 16px;line-height: 26px;text-align: center;cursor: pointer;border-radius: 4px;"><a class="button subscribe-btn primary" href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly9mcmVkZGllZGVib2VyLnN1YnN0YWNrLmNvbS9zdWJzY3JpYmU_dXRtX3NvdXJjZT1wb3N0JnV0bV9jYW1wYWlnbj1lbWFpbC1jaGVja291dCZuZXh0PWh0dHBzJTNBJTJGJTJGZnJlZGRpZWRlYm9lci5zdWJzdGFjay5jb20lMkZwJTJGaS13b3VsZG50LXNheS1wYW5ncmFtLWlzLWJyb2tlbi1idXQmcj02OWc4biZ0b2tlbj1leUoxYzJWeVgybGtJam94TURVeE9EWTBOeXdpYVdGMElqb3hOemcwTkRrMk1UVTNMQ0psZUhBaU9qRTNPRGN3T0RneE5UY3NJbWx6Y3lJNkluQjFZaTB5T1RVNU16Y2lMQ0p6ZFdJaU9pSmphR1ZqYTI5MWRDSjkuNTQ5VWFSYkpzUk45c1FUeXZBTzVqR3AtM1BIUlpHamRRZG9CelpWVzFRWSIsInAiOjIwNzY2MTUxMiwicyI6Mjk1OTM3LCJmIjp0cnVlLCJ1IjoxMDUxODY0NywiaWF0IjoxNzg0NDk2MTU3LCJleHAiOjIxMDAwNzIxNTcsImlzcyI6InB1Yi0wIiwic3ViIjoibGluay1yZWRpcmVjdCJ9.2H3J4xRBimEGuUU_oToy3O8zTB8EYWtGJ6ZicGwTwPk?&utm_medium=email&utm_source=subscribe-widget&utm_content=207661512" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;box-sizing: border-box;cursor: pointer;border: none;border-radius: 8px;font-size: 14px;line-height: 20px;font-weight: 600;text-align: center;opacity: 1;outline: none;white-space: nowrap;text-decoration: none !important;background-color: #0076ff;color: #ffffff !important;margin: 0 auto;padding: 12px 20px;height: auto;"><span style="color: #ffffff;text-decoration: none;">Upgrade to paid</span></a></div></div></div><hr style="padding: 0;height: 1px;background: rgb(0,0,0,.1);border: none;margin: 16px 0 0;"></div></div><div class="post typography" dir="auto" style="--image-offset-margin: -120px;padding: 32px 0 0 0;font-size: 16px;line-height: 26px;"><div class="post-header" role="region" aria-label="Post header" style="font-size: 16px;line-height: 26px;"><h1 class="post-title published title-X77sOw" dir="auto" style="direction: auto;text-align: start;unicode-bidi: isolate;color: rgb(54,55,55);font-family: Lora,sans-serif;font-weight: 600;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: antialiased;-webkit-appearance: optimizelegibility;-moz-appearance: optimizelegibility;appearance: optimizelegibility;margin: 0;line-height: 36px;font-size: 32px;"><a href="https://substack.com/app-link/post?publication_id=295937&post_id=207661512&utm_source=post-email-title&utm_campaign=email-post-title&isFreemail=true&r=69g8n&token=eyJ1c2VyX2lkIjoxMDUxODY0NywicG9zdF9pZCI6MjA3NjYxNTEyLCJpYXQiOjE3ODQ0OTYxNTcsImV4cCI6MTc4NzA4ODE1NywiaXNzIjoicHViLTI5NTkzNyIsInN1YiI6InBvc3QtcmVhY3Rpb24ifQ.l5rcEvNlnvayC_qWwGTMDnt5d6_Ns6R3P25fzfgq_n8" style="color: rgb(54,55,55);text-decoration: none;">I Wouldn't Say Pangram is Broken, But I Would Say That It's Brittle</a></h1><h3 class="subtitle subtitle-HEEcLo" dir="auto" style="direction: auto;text-align: start;unicode-bidi: isolate;font-family: 'SF Pro Display',-apple-system-headline,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight: normal;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: antialiased;-webkit-appearance: optimizelegibility;-moz-appearance: optimizelegibility;appearance: optimizelegibility;margin: 4px 0 0;color: #777777;line-height: 24px;font-size: 18px;margin-top: 12px;">it seems way too easy to provoke Pangram into contradicting its own results</h3><table class="post-meta" role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="margin: 1em 0;height: 20px;align-items: center;"><tbody><tr><td><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="vertical-align:middle;"><div class="pencraft pc-reset color-primary-zABazT line-height-20-t4M0El font-meta-MWBumP size-11-NuY2Zx weight-medium-fw81nC transform-uppercase-yKDgcq reset-IxiVJZ meta-EgzBVA custom-css-email-post-author" style="list-style: none;font-size: 11px;line-height: 20px;text-decoration: unset;color: rgb(54,55,55);margin: 0;font-family: 'SF Compact',-apple-system,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight: 500;text-transform: uppercase;letter-spacing: .2px;"><a class="pencraft pc-reset color-primary-zABazT line-height-20-t4M0El font-meta-MWBumP size-11-NuY2Zx weight-medium-fw81nC transform-uppercase-yKDgcq reset-IxiVJZ meta-EgzBVA" style="list-style: none;color: rgb(54,55,55);margin: 0;font-size: 11px;line-height: 20px;font-family: 'SF Compact',-apple-system,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight: 500;text-transform: uppercase;letter-spacing: .2px;text-decoration: none" href="https://substack.com/@freddiedeboer">Freddie deBoer</a></div></td></tr></tbody></table></td></tr><tr><td><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="vertical-align:middle;"><div class="pencraft pc-reset color-secondary-ls1g8s line-height-20-t4M0El font-meta-MWBumP size-11-NuY2Zx weight-medium-fw81nC transform-uppercase-yKDgcq reset-IxiVJZ meta-EgzBVA" style="list-style: none;font-size: 11px;line-height: 20px;text-decoration: unset;color: rgb(119,119,119);margin: 0;font-family: 'SF Compact',-apple-system,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight: 500;text-transform: uppercase;letter-spacing: .2px;"><time datetime="2026-07-19T21:21:48.764Z">Jul 19</time></div></td></tr></tbody></table></td></tr></tbody></table></td><td align="right"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="vertical-align:middle;"><a href="https://substack.com/@freddiedeboer"><img class="custom-css-email-avatar avatar-QIQ5yR" src="https://substackcdn.com/image/fetch/$s_!zHeX!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F1fc743b4-b5ed-4ad0-8bb4-c31f0077cd63_892x892.jpeg" style="box-sizing: border-box;max-width: 550px;border: none;vertical-align: middle;width: 40px;height: 40px;min-width: 40px;min-height: 40px;object-fit: cover;margin: 0px;display: inline;border-radius: 50%" width="40" height="40"></a></td></tr></tbody></table></td></tr></tbody></table><table class="email-ufi-2-top" role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="border-top: 1px solid rgb(0,0,0,.1);border-bottom: 1px solid rgb(0,0,0,.1);min-width: 100%;"><tbody><tr height="16"><td height="16" style="font-size:0px;line-height:0;">&nbsp;</td></tr><tr><td><table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="vertical-align:middle;"><table role="presentation" width="38" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="center"><a class="email-icon-button" href="https://substack.com/app-link/post?publication_id=295937&post_id=207661512&utm_source=substack&isFreemail=true&submitLike=true&token=eyJ1c2VyX2lkIjoxMDUxODY0NywicG9zdF9pZCI6MjA3NjYxNTEyLCJyZWFjdGlvbiI6IuKdpCIsImlhdCI6MTc4NDQ5NjE1NywiZXhwIjoxNzg3MDg4MTU3LCJpc3MiOiJwdWItMjk1OTM3Iiwic3ViIjoicmVhY3Rpb24ifQ.eFTuGEESmm42vUc9d_5VSm1If1avZkU3fUDCXDZ1oks&utm_medium=email&utm_campaign=email-reaction&r=69g8n" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;font-weight: 500;border: 1px solid rgb(0,0,0,.1);border-radius: 9999px;text-transform: uppercase;font-size: 12px;line-height: 1;padding: 9px 0;text-decoration: none;color: rgb(119,119,119);min-width: 38px;box-sizing: border-box;width: 38px"><img class="icon" src="https://substackcdn.com/image/fetch/$s_!PeVs!,w_36,c_scale,f_png,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Ficon%2FLucideHeart%3Fv%3D4%26height%3D36%26fill%3Dnone%26stroke%3D%2523808080%26strokeWidth%3D2" width="18" height="18" style="border: none;vertical-align: middle;max-width: 18px" alt=""></a></td></tr></tbody></table></td><td width="8" style="min-width:8px;"></td><td style="vertical-align:middle;"><table role="presentation" width="38" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="center"><a class="email-icon-button" href="https://substack.com/app-link/post?publication_id=295937&post_id=207661512&utm_source=substack&utm_medium=email&isFreemail=true&comments=true&token=eyJ1c2VyX2lkIjoxMDUxODY0NywicG9zdF9pZCI6MjA3NjYxNTEyLCJpYXQiOjE3ODQ0OTYxNTcsImV4cCI6MTc4NzA4ODE1NywiaXNzIjoicHViLTI5NTkzNyIsInN1YiI6InBvc3QtcmVhY3Rpb24ifQ.l5rcEvNlnvayC_qWwGTMDnt5d6_Ns6R3P25fzfgq_n8&r=69g8n&utm_campaign=email-half-magic-comments&action=post-comment&utm_source=substack&utm_medium=email" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;font-weight: 500;border: 1px solid rgb(0,0,0,.1);border-radius: 9999px;text-transform: uppercase;font-size: 12px;line-height: 1;padding: 9px 0;text-decoration: none;color: rgb(119,119,119);min-width: 38px;box-sizing: border-box;width: 38px"><img class="icon" src="https://substackcdn.com/image/fetch/$s_!x1tS!,w_36,c_scale,f_png,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Ficon%2FLucideComments%3Fv%3D4%26height%3D36%26fill%3Dnone%26stroke%3D%2523808080%26strokeWidth%3D2" width="18" height="18" style="border: none;vertical-align: middle;max-width: 18px" alt=""></a></td></tr></tbody></table></td><td width="8" style="min-width:8px;"></td><td style="vertical-align:middle;"><table role="presentation" width="38" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="center"><a class="email-icon-button" href="https://substack.com/app-link/post?publication_id=295937&post_id=207661512&utm_source=substack&utm_medium=email&utm_content=share&utm_campaign=email-share&action=share&triggerShare=true&isFreemail=true&r=69g8n&token=eyJ1c2VyX2lkIjoxMDUxODY0NywicG9zdF9pZCI6MjA3NjYxNTEyLCJpYXQiOjE3ODQ0OTYxNTcsImV4cCI6MTc4NzA4ODE1NywiaXNzIjoicHViLTI5NTkzNyIsInN1YiI6InBvc3QtcmVhY3Rpb24ifQ.l5rcEvNlnvayC_qWwGTMDnt5d6_Ns6R3P25fzfgq_n8" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;font-weight: 500;border: 1px solid rgb(0,0,0,.1);border-radius: 9999px;text-transform: uppercase;font-size: 12px;line-height: 1;padding: 9px 0;text-decoration: none;color: rgb(119,119,119);min-width: 38px;box-sizing: border-box;width: 38px"><img class="icon" src="https://substackcdn.com/image/fetch/$s_!_L14!,w_36,c_scale,f_png,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Ficon%2FLucideShare2%3Fv%3D4%26height%3D36%26fill%3Dnone%26stroke%3D%2523808080%26strokeWidth%3D2" width="18" height="18" style="border: none;vertical-align: middle;max-width: 18px" alt=""></a></td></tr></tbody></table></td><td width="8" style="min-width:8px;"></td><td style="vertical-align:middle;"><table role="presentation" width="38" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="center"><a class="email-icon-button" href="https://open.substack.com/pub/freddiedeboer/p/i-wouldnt-say-pangram-is-broken-but?utm_source=substack&utm_medium=email&utm_campaign=email-restack-comment&action=restack-comment&r=69g8n&token=eyJ1c2VyX2lkIjoxMDUxODY0NywicG9zdF9pZCI6MjA3NjYxNTEyLCJpYXQiOjE3ODQ0OTYxNTcsImV4cCI6MTc4NzA4ODE1NywiaXNzIjoicHViLTI5NTkzNyIsInN1YiI6InBvc3QtcmVhY3Rpb24ifQ.l5rcEvNlnvayC_qWwGTMDnt5d6_Ns6R3P25fzfgq_n8&utm_source=substack&utm_medium=email" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;font-weight: 500;border: 1px solid rgb(0,0,0,.1);border-radius: 9999px;text-transform: uppercase;font-size: 12px;line-height: 1;padding: 9px 0;text-decoration: none;color: rgb(119,119,119);min-width: 38px;box-sizing: border-box;width: 38px"><img class="icon" src="https://substackcdn.com/image/fetch/$s_!ubXF!,w_36,c_scale,f_png,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Ficon%2Fnotes__NoteRestackIcon%3Fv%3D4%26height%3D36%26fill%3Dnone%26stroke%3D%2523808080%26strokeWidth%3D2%26strokeLinecap%3Dround%26strokeLinejoin%3Dround" width="18" height="18" alt="" style="max-width: 550px;border: none !important;vertical-align: middle;"></a></td></tr></tbody></table></td></tr></tbody></table></td><td align="right"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="vertical-align:middle;"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="center"><a class="email-button-outline" href="https://open.substack.com/pub/freddiedeboer/p/i-wouldnt-say-pangram-is-broken-but?utm_source=email&redirect=app-store&utm_campaign=email-read-in-app" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;font-weight: 500;border: 1px solid rgb(0,0,0,.1);border-radius: 9999px;text-transform: uppercase;font-size: 12px;line-height: 12px;padding: 9px 14px;text-decoration: none;color: rgb(119,119,119);"><div class="email-button-spacer" style="font-size: 16px;line-height: 26px;display: inline-block;vertical-align: middle;max-width: 0;min-height: 18px;"></div><span class="email-button-text" style="vertical-align: middle;margin-right: 4px">READ IN APP</span><img class="icon text-icon" src="https://substackcdn.com/image/fetch/$s_!ET-_!,w_36,c_scale,f_png,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Ficon%2FLucideArrowUpRight%3Fv%3D4%26height%3D36%26fill%3Dnone%26stroke%3D%2523808080%26strokeWidth%3D2" width="18" height="18" style="min-width: 18px;min-height: 18px;border: none;vertical-align: middle;margin-right: 0;margin-left: 0;max-width: 18px" alt=""></a></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></td></tr><tr height="16"><td height="16" style="font-size:0px;line-height:0;">&nbsp;</td></tr></tbody></table></div></div><div class="post typography" dir="auto" style="--image-offset-margin: -120px;padding: 32px 0 0 0;font-size: 16px;line-height: 26px;"><div class="body markup" dir="auto" style="text-align: initial;font-size: 16px;line-height: 26px;width: 100%;word-break: break-word;margin-bottom: 16px;font-family: Spectral,sans-serif;font-weight: 400;"><div class="captioned-image-container-static" style="font-size: 16px;line-height: 26px;margin: 32px auto;margin-top: 0;"><figure style="width: 100%;margin: 0 auto;"><table class="image-wrapper" width="100%" border="0" cellspacing="0" cellpadding="0" data-component-name="Image2ToDOMStatic" style="mso-padding-alt: 1em 0 1.6em;"><tbody><tr><td style="text-align: center;"></td><td class="content" align="left" width="420" style="text-align: center;"><a class="image-link" target="_blank" href="https://substack.com/redirect/5f58f300-6929-4735-b364-20f8365c77ae?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="position: relative;flex-direction: column;align-items: center;padding: 0;width: auto;height: auto;border: none;text-decoration: none;display: block;margin: 0;margin-top: 0;margin-bottom: 0;"><img data-attrs="{&quot;src&quot;:&quot;https://substack-post-media.s3.amazonaws.com/public/images/beebeea2-ebfe-45fd-bbaf-13a1821d641f_500x757.jpeg&quot;,&quot;srcNoWatermark&quot;:null,&quot;fullscreen&quot;:null,&quot;imageSize&quot;:null,&quot;height&quot;:757,&quot;width&quot;:500,&quot;resizeWidth&quot;:420,&quot;bytes&quot;:null,&quot;alt&quot;:null,&quot;title&quot;:null,&quot;type&quot;:null,&quot;href&quot;:null,&quot;belowTheFold&quot;:false,&quot;topImage&quot;:true,&quot;internalRedirect&quot;:null,&quot;isProcessing&quot;:false,&quot;align&quot;:null,&quot;offset&quot;:false}" alt="" width="420" height="635.88" src="https://substackcdn.com/image/fetch/$s_!6g8P!,w_420,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fbeebeea2-ebfe-45fd-bbaf-13a1821d641f_500x757.jpeg" style="border: none !important;vertical-align: middle;display: block;-ms-interpolation-mode: bicubic;height: auto;margin-bottom: 0;width: auto !important;max-width: 100% !important;margin: 0 auto;"></a></td><td style="text-align: center;"></td></tr></tbody></table></figure></div><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>So let me get to the nut of this thing before I do my usual meandering. Recently, someone </span><a href="https://substack.com/@freddiedeboer/note/c-296724031" style="color: rgb(54,55,55);text-decoration: underline;">accused me</a><span> of using AI to write </span><a href="https://substack.com/redirect/4b4b7f47-3bca-4445-bd22-50bd153834f0?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">this old post</a><span> from about a year ago, specifically highlighting the section about Ta-Nehisi Coates. I replied by saying that the post contained no AI writing; nothing I publish has been written or edited by an LLM. My accuser proceeded to say that the AI detection tool Pangram flagged that portion as 100% AI written with high confidence, a result I replicated. (</span><a href="https://substack.com/redirect/4260648e-cb60-434c-9769-2bba35c9872d?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">Pangram report.</a><span>) As the man who wrote that piece, I knew that I wasn&#8217;t guilty, but I also knew that wasn&#8217;t going to fly with other people. I was sufficiently annoyed that I paid for a Pangram license and found that, when I entered the entire essay, Pangram cleared it as 100% human written with high confidence. (</span><a href="https://substack.com/redirect/dffce020-afbd-40a5-9c9d-3cb08395f588?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">Pangram report</a><span>.) That is to say, the essay of about 5,000 words was declared 100% human written with high confidence even though it </span><em>contains</em><span> the section of about 300 words which was declared 100% AI written with high confidence. Subsequently, I&#8217;ve found that I can produce the same sort of inconsistency in the opposite direction - I can break the section that was called 100% AI into pieces that are then called 100% human written. (</span><a href="https://substack.com/redirect/f36c9fc5-ddcb-4460-9127-5a9791063736?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">Pangram report of an example</a><span>.) So pieces that Pangram call 100% human written are part of a larger piece that Pangram calls 100% AI written which in turn is part of an essay that Pangram calls 100% human written, a Russian doll of contradictory results.</span></p><div class="captioned-image-container-static" style="font-size: 16px;line-height: 26px;margin: 32px auto;"><figure style="width: 100%;margin: 0 auto;"><table class="image-wrapper" width="100%" border="0" cellspacing="0" cellpadding="0" data-component-name="Image2ToDOMStatic" style="mso-padding-alt: 1em 0 1.6em;"><tbody><tr><td style="text-align: center;"></td><td class="content" align="left" width="1100" style="text-align: center;"><a class="image-link" target="_blank" href="https://substack.com/redirect/6d6fb7b4-86d2-41e1-a2d4-eaf317a6ec1e?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="position: relative;flex-direction: column;align-items: center;padding: 0;width: auto;height: auto;border: none;text-decoration: none;display: block;margin: 0;"><img class="wide-image" data-attrs="{&quot;src&quot;:&quot;https://substack-post-media.s3.amazonaws.com/public/images/ad03d419-92fd-49a4-be25-1705d764accd_1100x220.jpeg&quot;,&quot;srcNoWatermark&quot;:null,&quot;fullscreen&quot;:null,&quot;imageSize&quot;:null,&quot;height&quot;:220,&quot;width&quot;:1100,&quot;resizeWidth&quot;:null,&quot;bytes&quot;:42958,&quot;alt&quot;:null,&quot;title&quot;:null,&quot;type&quot;:&quot;image/jpeg&quot;,&quot;href&quot;:null,&quot;belowTheFold&quot;:false,&quot;topImage&quot;:false,&quot;internalRedirect&quot;:null,&quot;isProcessing&quot;:false,&quot;align&quot;:null,&quot;offset&quot;:false}" alt="" width="550" height="110" src="https://substackcdn.com/image/fetch/$s_!XO3i!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fad03d419-92fd-49a4-be25-1705d764accd_1100x220.jpeg" style="border: none !important;vertical-align: middle;display: block;-ms-interpolation-mode: bicubic;height: auto;margin-bottom: 0;width: auto !important;max-width: 100% !important;margin: 0 auto;"></a></td><td style="text-align: center;"></td></tr></tbody></table><figcaption class="image-caption" style="box-sizing: content-box;color: rgb(119,119,119);font-size: 14px;line-height: 20px;font-weight: 400;letter-spacing: -.15px;margin-top: 8px;width: 70%;padding-left: 15%;padding-right: 15%;text-align: center;"><a href="https://substack.com/redirect/6113a191-f820-4ba4-a2ae-e08358db6954?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="text-decoration: underline;">preorder All In Your Head now</a></figcaption></figure></div><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>If nothing else, there&#8217;s a fundamental inconsistency here: it doesn&#8217;t make sense for a system to say that it has high confidence that an essay is 100% human written but also that a piece of that essay is 100% AI-written, again with high confidence, and </span><em>also </em><span>to say that the piece itself has subsections that are 100% human written&#8230;. These claims are mutually exclusive and must necessarily erode our confidence in the instrument. Experimenting, I&#8217;ve also found that I can pretty reliably get Pangram to declare large sections of text to be AI-written or human-written depending on the larger textual context I place those sections in - that is, I can take AI-generated text and embed it in human-generated text and have Pangram declare it 100% human, and I can take human-generated text and embed it in AI-generated text and have Pangram declare it 100% AI. I&#8217;ve also found that it&#8217;s pretty easy to induce false positives, that is, to write texts myself that Pangram identifies as AI-written. All of this makes me hesitant about the Pangram tool, and in particular the way many people use it, as a one-shot gotcha machine.</span></p><div class="captioned-image-container-static" style="font-size: 16px;line-height: 26px;margin: 32px auto;"><figure style="width: 100%;margin: 0 auto;"><table class="image-wrapper" width="100%" border="0" cellspacing="0" cellpadding="0" data-component-name="Image2ToDOMStatic" style="mso-padding-alt: 1em 0 1.6em;"><tbody><tr><td style="text-align: center;"></td><td class="content" align="left" width="472" style="text-align: center;"><a class="image-link" target="_blank" href="https://substack.com/redirect/40291be7-a277-4193-859e-a12f0fda7667?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="position: relative;flex-direction: column;align-items: center;padding: 0;width: auto;height: auto;border: none;text-decoration: none;display: block;margin: 0;"><img data-attrs="{&quot;src&quot;:&quot;https://substack-post-media.s3.amazonaws.com/public/images/72e06df0-4e0f-4af7-a9e4-bf483a152269_926x486.png&quot;,&quot;srcNoWatermark&quot;:null,&quot;fullscreen&quot;:null,&quot;imageSize&quot;:null,&quot;height&quot;:486,&quot;width&quot;:926,&quot;resizeWidth&quot;:472,&quot;bytes&quot;:51067,&quot;alt&quot;:null,&quot;title&quot;:null,&quot;type&quot;:&quot;image/png&quot;,&quot;href&quot;:null,&quot;belowTheFold&quot;:false,&quot;topImage&quot;:false,&quot;internalRedirect&quot;:&quot;https://freddiedeboer.substack.com/i/207661512?img=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F72e06df0-4e0f-4af7-a9e4-bf483a152269_926x486.png&quot;,&quot;isProcessing&quot;:false,&quot;align&quot;:null,&quot;offset&quot;:false}" alt="" width="472" height="247.72354211663068" src="https://substackcdn.com/image/fetch/$s_!mqh4!,w_472,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F72e06df0-4e0f-4af7-a9e4-bf483a152269_926x486.png" style="border: none !important;vertical-align: middle;display: block;-ms-interpolation-mode: bicubic;height: auto;margin-bottom: 0;width: auto !important;max-width: 100% !important;margin: 0 auto;"></a></td><td style="text-align: center;"></td></tr></tbody></table></figure></div><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>In a purely self-interested sense, the most obvious thing for me to do would be to point to this </span><a href="https://substack.com/redirect/dffce020-afbd-40a5-9c9d-3cb08395f588?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">100% human written outcome</a><span> for the whole essay, say &#8220;See???,&#8221; and get indignant about having been accused. But I think there&#8217;s a lot to talk about here, and I think that people who write for a living have to have these conversations. These tools are being used right now, and with consequences, and we have to work this stuff out. So here goes.</span></p><div style="font-size: 16px;line-height: 26px;"><hr style="margin: 32px 0;padding: 0;height: 1px;background: rgb(0,0,0,.1);border: none;"></div><div class="captioned-image-container-static" style="font-size: 16px;line-height: 26px;margin: 32px auto;"><figure style="width: 100%;margin: 0 auto;"><table class="image-wrapper" width="100%" border="0" cellspacing="0" cellpadding="0" data-component-name="Image2ToDOMStatic" style="mso-padding-alt: 1em 0 1.6em;"><tbody><tr><td style="text-align: center;"></td><td class="content" align="left" width="299" style="text-align: center;"><a class="image-link" target="_blank" href="https://substack.com/redirect/1e28e261-a845-4690-94bc-400fb79f1627?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="position: relative;flex-direction: column;align-items: center;padding: 0;width: auto;height: auto;border: none;text-decoration: none;display: block;margin: 0;"><img data-attrs="{&quot;src&quot;:&quot;https://substack-post-media.s3.amazonaws.com/public/images/6bb4c406-a064-4948-81e0-df10f797a29f_617x922.png&quot;,&quot;srcNoWatermark&quot;:null,&quot;fullscreen&quot;:null,&quot;imageSize&quot;:null,&quot;height&quot;:922,&quot;width&quot;:617,&quot;resizeWidth&quot;:299,&quot;bytes&quot;:69605,&quot;alt&quot;:null,&quot;title&quot;:null,&quot;type&quot;:&quot;image/png&quot;,&quot;href&quot;:null,&quot;belowTheFold&quot;:false,&quot;topImage&quot;:false,&quot;internalRedirect&quot;:&quot;https://freddiedeboer.substack.com/i/207661512?img=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6bb4c406-a064-4948-81e0-df10f797a29f_617x922.png&quot;,&quot;isProcessing&quot;:false,&quot;align&quot;:null,&quot;offset&quot;:false}" alt="" width="299" height="446.80388978930307" src="https://substackcdn.com/image/fetch/$s_!heLP!,w_299,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6bb4c406-a064-4948-81e0-df10f797a29f_617x922.png" style="border: none !important;vertical-align: middle;display: block;-ms-interpolation-mode: bicubic;height: auto;margin-bottom: 0;width: auto !important;max-width: 100% !important;margin: 0 auto;"></a></td><td style="text-align: center;"></td></tr></tbody></table></figure></div><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><strong>The percentage meter seems clearly broken. </strong><span>One frustration of discussing Pangram results is that many people seem to think that the percentage that&#8217;s expressed is the confidence level - that is, that a 100% AI result is saying &#8220;we are 100% sure that this text is AI generated.&#8221; But that&#8217;s not what&#8217;s being measured there. The percentage is supposed to indicate what </span><em>portion </em><span>of the text is suspected to be LLM written. The degree of confidence is flagged there underneath &#8220;AI Generated,&#8221; although annoyingly the flag only appears when confidence is high, with no &#8220;Confidence Low&#8221; flag that ever appears, in my experience. This is all fine and good - the percentage AI generated and confidence numbers are different things that should be easy to interpret. The first problem is that many, many people are clearly interpreting &#8220;100% AI&#8221; to mean &#8220;100% confidence.&#8221; The second problem is that the percentage meter just does not appear to work! Anecdotally, a really suspiciously high portion of all Pangram outputs are 100%, whether 100% AI or 100% human. This is suspicious not only because a lot of LLM writing that gets published is likely hybrid, integrated with a writer&#8217;s own words, but also because the basic processes through which detectors like Pangram function seem likely to produce fewer polar outcomes. And a detector that spits out a lot of 100%s seems easier to break.</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>So let&#8217;s break the percentage meter. This is easy to do. Here&#8217;s a paragraph I&#8217;ve copy and pasted from </span><a href="https://substack.com/redirect/8180b2d1-9a5b-409d-b6ad-02d2c20331d3?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">a piece I wrote in 2017</a><span>, which I hope you will accept as given was not written with the help of an LLM. I have appended three sentences to the end of the paragraph that were written by ChatGPT, using the original paragraph as a prompt, highlighted in red. The human-written, pre-LLM section is 239 words, while ChatGPT&#8217;s portion is 71 words long.</span></p><blockquote style="border-left: 4px solid #0076ff;margin: 20px 0;padding: 0;"><p style="margin: 0 0 20px 0;color: rgb(54,55,55);margin-left: 20px;line-height: 26px;font-size: 16px;"><span>The gambler's fallacy is when you expect a certain periodicity in outcomes when you have no reason to expect it. That is, you look at events that happened in the recent past, and say "that is an unusually high/low number of times for that event to happen, so therefore what will follow is an unusually low/high number of times for it to happen." The classic case is roulette: you're walking along the casino floor, and you see the electronic sign showing that a roulette table has hit black 10 times in a row. You know the odds of this are very small, so you rush over to place a bet on red. But of course that's not justified: the table doesn't "know" it has come up black 10 times in a row. You've still got the same (bad) odds of hitting red, 47.4%. You're still playing with the same house edge. A coin that's just come up heads 50 times in a row has the same odds of being heads again as being tails again. The expectation that non-periodic random events are governed by some sort of god of reciprocal probabilities is the source of tons of bad human reasoning - and journalism is absolutely stuffed with it. You see it any time people point out that a particular event hasn't happened in a long time, so therefore we've got an increased chance of it happening in the future. </span><span data-color="#ff0000" style="color: rgb(255, 0, 0);">But unless the process has some actual mechanism of correction or reversion, the mere passage of time changes nothing. Droughts do not make rain &#8220;due,&#8221; losing streaks do not create future wins, and a long period without a crisis does not by itself make a crisis more likely tomorrow. The past can tell you something about the underlying probability of an event, but it cannot compel randomness to balance its books.</span></p></blockquote><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>So, ideally, Pangram would flag this as 23% AI generated; that is, indeed, what the exact percentages are by wordcount. Here&#8217;s what actually happens (</span><a href="https://substack.com/redirect/e13c9cf0-146d-4602-ba0c-d65d9e2b1e9c?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">report</a><span>):</span></p><div class="captioned-image-container-static" style="font-size: 16px;line-height: 26px;margin: 32px auto;"><figure style="width: 100%;margin: 0 auto;"><table class="image-wrapper" width="100%" border="0" cellspacing="0" cellpadding="0" data-component-name="Image2ToDOMStatic" style="mso-padding-alt: 1em 0 1.6em;"><tbody><tr><td style="text-align: center;"></td><td class="content" align="left" width="334" style="text-align: center;"><a class="image-link" target="_blank" href="https://substack.com/redirect/41c7b1fe-205b-4ed2-a825-60ae60e2197a?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="position: relative;flex-direction: column;align-items: center;padding: 0;width: auto;height: auto;border: none;text-decoration: none;display: block;margin: 0;"><img data-attrs="{&quot;src&quot;:&quot;https://substack-post-media.s3.amazonaws.com/public/images/d4174505-e979-41d6-91b2-90ee7a0398df_626x921.png&quot;,&quot;srcNoWatermark&quot;:null,&quot;fullscreen&quot;:null,&quot;imageSize&quot;:null,&quot;height&quot;:921,&quot;width&quot;:626,&quot;resizeWidth&quot;:334,&quot;bytes&quot;:69804,&quot;alt&quot;:null,&quot;title&quot;:null,&quot;type&quot;:&quot;image/png&quot;,&quot;href&quot;:null,&quot;belowTheFold&quot;:true,&quot;topImage&quot;:false,&quot;internalRedirect&quot;:&quot;https://freddiedeboer.substack.com/i/207661512?img=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd4174505-e979-41d6-91b2-90ee7a0398df_626x921.png&quot;,&quot;isProcessing&quot;:false,&quot;align&quot;:null,&quot;offset&quot;:false}" alt="" width="334" height="491.3961661341853" src="https://substackcdn.com/image/fetch/$s_!keaL!,w_334,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd4174505-e979-41d6-91b2-90ee7a0398df_626x921.png" style="border: none !important;vertical-align: middle;display: block;-ms-interpolation-mode: bicubic;height: auto;margin-bottom: 0;width: auto !important;max-width: 100% !important;margin: 0 auto;"></a></td><td style="text-align: center;"></td></tr></tbody></table></figure></div><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>So, yeah, not great. That passage is three-quarters human written, dominantly human written, and yet Pangram says with high confidence that it&#8217;s 100% AI. I know there are a lot of people who would endorse a &#8220;one drop&#8221; rule with LLM assistance, but Pangram itself is saying that its technology operates a certain way, and it doesn&#8217;t appear to operate that way; certainly you can break it quite consistently. Pangram&#8217;s </span><a href="https://substack.com/redirect/c2d4b627-6a0e-4454-8e4f-76ac00980c20?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">own examples</a><span> suggest that it can return mixed results with a specific percentage. Look, they even give you human vs robot %:</span></p><div class="captioned-image-container-static" style="font-size: 16px;line-height: 26px;margin: 32px auto;"><figure style="width: 100%;margin: 0 auto;"><table class="image-wrapper" width="100%" border="0" cellspacing="0" cellpadding="0" data-component-name="Image2ToDOMStatic" style="mso-padding-alt: 1em 0 1.6em;"><tbody><tr><td style="text-align: center;"></td><td class="content" align="left" width="314" style="text-align: center;"><a class="image-link" target="_blank" href="https://substack.com/redirect/8066210c-026b-4eee-b8b1-bb25328a1d0e?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="position: relative;flex-direction: column;align-items: center;padding: 0;width: auto;height: auto;border: none;text-decoration: none;display: block;margin: 0;"><img data-attrs="{&quot;src&quot;:&quot;https://substack-post-media.s3.amazonaws.com/public/images/91227eed-6de0-489c-9109-963fda1ad39c_632x812.png&quot;,&quot;srcNoWatermark&quot;:null,&quot;fullscreen&quot;:null,&quot;imageSize&quot;:null,&quot;height&quot;:812,&quot;width&quot;:632,&quot;resizeWidth&quot;:314,&quot;bytes&quot;:66116,&quot;alt&quot;:null,&quot;title&quot;:null,&quot;type&quot;:&quot;image/png&quot;,&quot;href&quot;:null,&quot;belowTheFold&quot;:true,&quot;topImage&quot;:false,&quot;internalRedirect&quot;:&quot;https://freddiedeboer.substack.com/i/207661512?img=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F91227eed-6de0-489c-9109-963fda1ad39c_632x812.png&quot;,&quot;isProcessing&quot;:false,&quot;align&quot;:null,&quot;offset&quot;:false}" alt="" width="314" height="403.43037974683546" src="https://substackcdn.com/image/fetch/$s_!0eJB!,w_314,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F91227eed-6de0-489c-9109-963fda1ad39c_632x812.png" style="border: none !important;vertical-align: middle;display: block;-ms-interpolation-mode: bicubic;height: auto;margin-bottom: 0;width: auto !important;max-width: 100% !important;margin: 0 auto;"></a></td><td style="text-align: center;"></td></tr></tbody></table></figure></div><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">And yet in dozens of trials I&#8217;ve never gotten a mixed report like this. They&#8217;ve all been either 100% human or 100% AI, even though I&#8217;ve been Frankensteining human and LLM writing together constantly for this exercise. For whatever reason, Pangram seems to want to find 100% results, even though users are clearly trusting it to detect what portion of a text is LLM generated. This all seems quite bad to me! This technology is being used in a way that has severe professional consequences for some people. It should work the way it&#8217;s supposed to work; it should offer a &#8220;percentage AI written&#8221; that&#8217;s actually a reflection of how much of the text was LLM generated, and if it can&#8217;t do that, they should drop the percentiles and just give a quantitative, numeral confidence figure.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">Here&#8217;s where we can do a &#8220;you try it at home&#8221; exercise, if you have a Pangram account. Take human written text, append LLM-generated text, and see if you get a 100% AI result. With enough naked ChatGPT text you&#8217;ll get there. And if you&#8217;d like, you can try and go the other direction - if you have a long enough human-written piece, you can stick LLM-generated text somewhere in it and see what you get back. I think you&#8217;ll find that it&#8217;s easy to pass such text through as 100% human. This additionally means that you can easily get specific passages into texts flagged as 100% human or 100% AI, again fairly consistently. I just don&#8217;t think that&#8217;s ideal, and it disturbs me how cavalier some people are about it.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><strong>I have no idea what you do with conflicting results like these. </strong><span>I suppose many would say that the much longer overall essay has many more datapoints and the whole-essay analysis should thus be considered more authoritative than the 300-word passage analysis. But I can assure you that this won&#8217;t stop people who don&#8217;t like me from declaring some sort of victory! This is what I worry about with this whole controversy - we&#8217;re very likely to end up with everybody confirming their priors. People who don&#8217;t like me will say that the short passage analysis proves that that portion was LLM written, while people who do like me (I assure you, a few such people exist) will say that the whole-essay analysis has more data and is obviously the right level of perspective. Nobody will be convinced of anything. The nightmarish possibility is that people will start cutting up essays that pass Pangram&#8217;s test into small pieces, looking to find parts that get flagged as AI, so that nobody ever feels confident about anything.</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><strong>If 50 words is not sufficient to have confidence in a result, you shouldn&#8217;t be able to put 50 words in the detector. </strong><span>Several people on Notes said some version of &#8220;Well of course nothing is 100%, but the more data that Pangram has, the more accurate it will be, and that 300 word chunk that got flagged just wasn&#8217;t long enough.&#8221; But the minimum amount of text Pangram will accept is 50 words, so it should work on 50 words. I&#8217;m obviously not equipped to discuss the technical specifics here, but since I heard some version of this many times, I want to say clearly: if a particular selection of text provides insufficient data to get accurate results, you shouldn&#8217;t be able to use the detector on that selection of text. At the very least, if the confidence in a conclusion is low, that low level of confidence should be prominently displayed in the results.</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><strong>Even a very small error rate will produce false outcomes regularly given enough repetitions. </strong><span>I&#8217;ve written more than 5000 blog posts, newsletter entries, and freelance essays in my career; I can&#8217;t be sure because my old fredrikdeboer.com blog was lost years ago, but it may be closer to 6000. But let&#8217;s narrow down: since ChatGPT was released to the public in 2022, I&#8217;ve published about 1200 posts here, and those are the ones that are relevant. Now, one frustration I have with this discussion is how often people quote error rates that come straight from Pangram, which doesn&#8217;t seem particularly rigorous to me. But let&#8217;s be generous and use the company&#8217;s own numbers. Pangram reports a false positive rate of 0.19%, and claims something closer to one in ten thousand on academic essays. (That is, the kind turned in by college students, presumably Pangram&#8217;s most common usage.) At those rates, 1,200 posts of mine yields an expected two or three spurious &#8220;AI written&#8221; verdicts - small, but not zero. But! Even that considerably understates the exposure to potential error, because &#8220;newsletter post&#8221; or &#8220;essay&#8221; or &#8220;document&#8221; isn&#8217;t the only unit these tools actually operate on. Pangram returns sentence-level &#8220;highlights&#8221; and a separate AI-assist judgment, so every paragraph becomes its own opportunity to be wrong. There&#8217;s thirty paragraphs in the post that got flagged. Let&#8217;s say my average is half that. At that rate, my post-ChatGPT archive represents something like 18,000 chances to get flagged, and at one in ten thousand you would expect a few passages in there to come back marked as machine-written no matter what I did or didn&#8217;t do. This is why a &#8220;one drop rule&#8221; doesn&#8217;t work. An accusation should come from a large-scale investigation of a writer&#8217;s corpus. But that&#8217;s hard and time intensive and, most importantly, doesn&#8217;t fit with the desire to own one&#8217;s enemies online, which drives a lot of this stuff.</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>And, of course, &#8220;Freddie deBoer&#8221; is not the right unit of analysis, but rather the whole community of people who write. That community produces a </span><em>lot </em><span>of text, and so even at 1 in 10,000, there will be an immense number of false positives being generated, if you&#8217;re testing everybody. And as I suggested above, some people&#8217;s natural writing style is more likely to be flagged than that of others, even with no LLM assistance. Whatever Pangram keys on is going to get keyed on over and over again; there&#8217;s inevitably a bias against whoever happens to write near the boundary. My own writing doesn&#8217;t appear to have that problem, but other people&#8217;s will. Can&#8217;t you imagine the outrage if it&#8217;s eventually found that, say, Chinese international students are more likely to produce false positives with their writing, thanks to underlying second language consistencies? Those consistencies exist; back when I taught Chinese undergrads at Purdue, they would very often write &#8220;now a day&#8221; instead of &#8220;nowadays,&#8221; including when they were writing live and unscripted in the computer lab. It all worries me.</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><strong>Despite Pangram&#8217;s reputation for avoiding false positives, it&#8217;s very easy to induce them. </strong><span>A lot of Pangram enthusiasts boast that the system is very unlikely to produce a false positive - that is, it&#8217;s unlikely to say that actually human-written writing was written by an LLM. Well, here&#8217;s a hundred words that I wrote myself that </span><a href="https://substack.com/redirect/21d50f1d-0012-4cc3-a0a5-69e21bceb7a0?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">Pangram flags as 100% AI written with high confidence</a><span>. </span></p><blockquote style="border-left: 4px solid #0076ff;margin: 20px 0;padding: 0;"><p style="margin: 0 0 20px 0;color: rgb(54,55,55);margin-left: 20px;line-height: 26px;font-size: 16px;">Free school lunch appears compassionate, yet its underlying logic is unmistakably collectivist. Once the state assumes responsibility for feeding children, it subtly redefines nourishment as a public entitlement rather than a private obligation. This normalization expands expectations: first lunch, then housing, healthcare, transportation, and ultimately the centralized distribution of all essential goods. Citizens become conditioned to view government provision as both natural and necessary. Individual responsibility erodes, markets lose legitimacy, and bureaucratic planning gains moral authority. Thus, the cafeteria tray becomes more than a meal; it becomes a symbolic gateway through which communism quietly enters democratic society, one sandwich daily.</p></blockquote><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">It took me maybe fifteen minutes to achieve this outcome. I could certainly do it again. For this exercise I deliberately attempted to avoid the most cliche signs of AI writing - &#8220;It&#8217;s not X, it&#8217;s Y,&#8221; the term &#8220;load bearing,&#8221; the word &#8220;delve,&#8221; etc. And yet getting this outcome was still quite easy. Again, if you have a Pangram license, I encourage you to give it a try yourself.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><strong>&#8230; and yes, the ability to come up with &#8220;inorganic&#8221; false positives does matter. </strong><span>Defenders of Pangram tend to dismiss these artificial exercises - &#8220;well, sure, you can make it give you a false positive if you </span><em>try</em><span>, but people don&#8217;t do that in the real world, so it doesn&#8217;t matter.&#8221; I find this wrongheaded. If I can reliably produce human text that trips the model, then I&#8217;ve learned what the model is actually keying on, and it isn&#8217;t human or AI authorship; it&#8217;s keying on a set of surface regularities that </span><em>correlate with human or AI authorship </em><span>in the Pangram training corpus. In other words, the ability to induce a false positive points to the fact that Pangram results depend on textual artifacts, and crucially</span><em> the textual artifacts I&#8217;m exploiting on purpose are ones that some people use accidentally, by disposition</em><span> - second-language writers and writers who write in a (shall we say) formulaic register are obvious potential victims here. When people talk about the tolerances of the Pangram system, in regards to deliberate false positives, they tend to say things like &#8220;You don&#8217;t expect a bridge to be able to hold a weight designed to overload it.&#8221; But that&#8217;s not equivalent. The right analogy isn&#8217;t a stress test that a bridge passes at loads no truck will ever carry; it&#8217;s discovering that </span><em>the bridge fails at a load some trucks routinely carry</em><span>, simply by virtue of being those trucks, and being told it doesn&#8217;t count because you drove the truck onto the bridge with the express purpose of overloading it. If you follow me.</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">Inevitably, a system like Pangram doesn&#8217;t really identify authorship directly, which would be impossible through only textual evidence; instead, such a system is always responding to surface features of prose that a human can intentionally or accidentally reproduce. Pangram and its defenders insist that it avoids Type I error. But the fact that I can induce Type I error, even if artificially, should undermine our confidence in that claim; surely there are some human beings out there who naturally write the way I write when I&#8217;m trying to intentionally trigger Pangram. I mean, as ugly as that paragraph is, does it really seem wildly out of the ordinary to you? It doesn&#8217;t, to me. I&#8217;ve taught writing to hundreds of students. Trust me when I say that some of them right in styles that are&#8230; unique. Is it possible for a human to accidentally write that paragraph? Sure. And again, with Pangram increasingly being used as a gotcha in internet warfare, the possibility of a false positive becomes more and more troubling.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><strong>The piece in question is an almost uniquely unlikely candidate to have been AI written. </strong><span>I didn&#8217;t use any AI assistance on that post and never do, on anything, and I could give you the whole story about how this is the only thing I enjoy doing, how I have dealt with graphomania for my entire adult life, etc etc. But of course this won&#8217;t mean much to you because I would have obvious professional and social incentives to lie about using AI if in fact I was guilty of doing so. Still, I think you&#8217;ll agree that this would be a weird piece for me to use AI on. For one, it&#8217;s about as pure an exercise in stylistics as I can imagine writing; I was inspired by my feeling that while there&#8217;s plenty of writing about writers out there, but very little of it talks about what we actually love in the writers we admire. And I was working in the tradition of </span><a href="https://substack.com/redirect/edf5f8b8-caf9-4f6d-b65a-c9187e5681de?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">this piece from 2013</a><span>, where I attempted a similar task. The thing is, the piece is weird even by my standards; it includes phrases like &#8220;a Lisa Frank sticker crying blood&#8221; and &#8220;Black gay Susan Sontag grandchild&#8221; and so on. And the flagged portion on Ta-Nehisi Coates includes the phrase &#8220;the universal rabbi of liberal virtue.&#8221; If LLMs tend to produce featureless, formulaic prose, then I don&#8217;t know how one would come up with this piece. I&#8217;ve been amused trying to think of what LLM prompt would result in this piece of writing.</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">My accuser, for the record, said that he doesn&#8217;t think the whole thing was LLM generated, just the passage about Coates. And it&#8217;s just like&#8230; why? Why would I do that, exactly? The piece was already considered way too long by the standards of many of my readers. I could have deleted the Coates section at my whim if I wanted to. The whole point of this exercise was to look deeply into the work of writers I like; if I didn&#8217;t have particular feelings about Coates&#8217;s corpus, I just would have left him off. And as that 2013 piece shows, I&#8217;ve been thinking about his particular strengths as a writer for a long time. Just doesn&#8217;t track.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">Another thing I think is relevant is that the piece had just about zero selfish reason to exist; I wrote it for no other reason than to write it. It&#8217;s the very definition of a &#8220;one for me&#8221; piece, a weird, distaff textual experiment that even many of my most devoted readers didn&#8217;t particularly like, an expression of an obsessive interest in prose style, conceived at an aperture that very few people care about. And my instinct that this was a purely &#8220;for me&#8221; post proved correct - I knew it wouldn&#8217;t result in many views or subscriptions and as predicted it did not. A year later it&#8217;s attracted fewer than 40,000 views; average posts do about double that number. According to Substack&#8217;s metrics, thirty-five of those readers chose to subscribe at the free tier after reading it; I&#8217;ve published nineteen posts for this newsletter that have attracted more than ten times as many free subscribers as that. Two readers chose to pay for a subscription thanks to this post, if Substack&#8217;s metrics are to be believed; the top ten revenue-generating posts in my history all brought in more than a hundred paid subscribers. I also can&#8217;t be said to have been motivated to just get something out there for my readers, as I published seventeen pieces that month and four that week. There was no reason for that piece to exist other than that I wanted to write it.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>It&#8217;s written in an unusual register, but that&#8217;s not unusual for me - </span><a href="https://substack.com/redirect/43da3f27-8cc3-4536-bd26-4e92e964b45a?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">here</a><span> and </span><a href="https://substack.com/redirect/cce15361-b127-464a-87f4-bc19096ae8c1?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">here</a><span> and </span><a href="https://substack.com/redirect/963335bc-95b1-495f-9085-0fd05c0f99b2?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">here</a><span> and </span><a href="https://substack.com/redirect/a536a0a3-0d5f-4269-b08c-ac80679d1fbf?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">here</a><span> are other pieces that are not in my usual voice. So, you know, man&#8230; I don&#8217;t know. Even if you want to come at me in this way, this particular essay seems like a weird choice on many levels. </span></p><div style="font-size: 16px;line-height: 26px;"><hr style="margin: 32px 0;padding: 0;height: 1px;background: rgb(0,0,0,.1);border: none;"></div><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">Here&#8217;s the most important thing, for me: most writers would not be able to respond as I have done here. I mean a few things by that. First, I ponied up for a paid Pangram account to investigate all of this, and many wouldn&#8217;t be able to justify the expense. (It&#8217;s really deeply unfortunate that people may feel the need to pay Pangram just to clear their names.) More importantly, I&#8217;m just not someone who&#8217;s particularly vulnerable to these accusations. I have twenty years of experience, and in those twenty years I&#8217;ve always had a reputation for being unusually prolific. I&#8217;m very confident in my abilities and very precious about my work. I have no publication or boss to worry about. I&#8217;m performatively indifferent to the opinions of my professional peers. And I&#8217;m also pathologically recalcitrant, antisocial and defiant in a manner that has hurt my life and my career in innumerable ways but which is occasionally useful, as it is here. I&#8217;m also very used to people taking swings at me. I didn&#8217;t panic about this accusation because I knew I didn&#8217;t use an LLM on that piece, but I also never panic when someone comes for me because, well&#8230; they&#8217;ve been coming for me for a long time.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>Most writers don&#8217;t have the luxury of any of that. And I really worry for the young, the inexperienced, and those who lack my psychotic disorder-enabled level of self-confidence and my life experience. Some 22 year old could catch an allegation like this and find themselves completely unequipped to respond, and that&#8217;s really depressing. And look, I fucking </span><em>hate </em><span>AI writing. I hate what it&#8217;s doing to the only thing I really care about. I hate writers for using LLMs to do their work for them. I hate Silicon Valley for doing this to my profession. I really, truly, deeply do. This piece is inevitably going to be represented as being soft on AI writing when it&#8217;s not. If I can use a deeply ill-advised analogy here, it&#8217;s like the unreliability of sexual assault accusations that stem from &#8220;recovered&#8221; memories, which </span><a href="https://substack.com/redirect/112f74cd-e5bb-4b5c-bfef-8460e04470b6?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">I&#8217;ve been writing about</a><span>. Several people accused me of indifference to child sexual abuse because I have pointed out that the research record is damning when it comes to the reliability of recovered memories. But that presumes the very idea that I&#8217;m disputing - if it&#8217;s the case that recovered memories are in fact not real memories at all, as the research record strongly concludes, then criticizing the idea of recovered memories can&#8217;t harm the effort against child sexual abuse. Right? Well, it&#8217;s the same thing here - pointing out the weaknesses in Pangram is only hurting the cause in fighting undisclosed AI writing if in fact Pangram never gets it wrong. But some degree of error is literally inevitable.</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>Look, I think Pangram can be a genuinely useful tool as part of a broader effort to figure out what&#8217;s being written by machines, which is unfortunately a thing we have to worry about now. And I think the company has made a number of smart decisions - the choice to abandon perplexity-based detection, which punishes anyone whose prose tends be predictable, seems like the right one, from my amateur perspective. They&#8217;ve also been unusually public about how their proprietary system is built and evaluated and stress tested. But I&#8217;m sorry to say that we are going to be living with this problem for the rest of our lives, and right now we&#8217;re trying to fight that problem using tools built in the last eighteen months against models that will be replaced within the eighteen after that. It&#8217;s just very early. And the mathematics of the situation guarantee that some quantity of false positives will always exist; you can drive the number down, and Pangram </span><em>appears </em><span>to has driven it pretty far down, but you can&#8217;t drive it to zero. And a rate low enough to be statistically negligible is not the same as a rate low enough to be morally meaningless, especially when a specific person&#8217;s reputation is what&#8217;s at stake. I&#8217;m not saying not to use Pangram. But you have to use it with the epistemological modesty appropriate to a technology this young, and it&#8217;s never going to be the last word on anyone.</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">Let&#8217;s face it: writer culture is, at bottom, a culture of resentment toward other writers. So much of what defines the professional and social cultures of writing lies in the petty grievances and jealousies that writers always harbor towards each other. (Aren&#8217;t you the guy who always says professional writers are too clubby, popularity-seeking, and obsessed with being liked? Yes I am! I&#8217;m afraid it&#8217;s both, at the same time.) Writers fixate on the columns they should have gotten, the woman whose novel sold for more than it should have, the kid on Substack with more subscribers and less talent&#8230;. Lord knows there&#8217;s a lot of that in me. A machine that promises to reveal which of your rivals are frauds is a tempting weapon to deploy. But we have to be careful and be fair.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">I started this piece out of annoyance and a desire to defend myself, but I found myself genuinely deeply interested in the linguistic and statistical and ethical puzzles that&#8217;s embedded in all of this. I tried my best to be fair and useful. And now, inevitably, some are going to say that the fact that I put so much effort in this must mean that I&#8217;m guilty and trying to save face. Don&#8217;t you just hate it here? Isn&#8217;t this all such a fucking drag?</p><div class="subscribe-widget is-signed-up" data-component-name="SubscribeWidget" style="margin: 0 0 1em;direction: ltr;font-size: 16px;line-height: 26px;"><div class="pencraft pc-reset button-wrapper" style="text-decoration: unset;list-style: none;font-size: 16px;line-height: 26px;text-align: center;cursor: pointer;border-radius: 4px;"><a class="button subscribe-btn primary" href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly9mcmVkZGllZGVib2VyLnN1YnN0YWNrLmNvbS9zdWJzY3JpYmU_dXRtX3NvdXJjZT1wb3N0JnV0bV9jYW1wYWlnbj1lbWFpbC1jaGVja291dCZuZXh0PWh0dHBzJTNBJTJGJTJGZnJlZGRpZWRlYm9lci5zdWJzdGFjay5jb20lMkZwJTJGaS13b3VsZG50LXNheS1wYW5ncmFtLWlzLWJyb2tlbi1idXQmcj02OWc4biZ0b2tlbj1leUoxYzJWeVgybGtJam94TURVeE9EWTBOeXdpYVdGMElqb3hOemcwTkRrMk1UVTNMQ0psZUhBaU9qRTNPRGN3T0RneE5UY3NJbWx6Y3lJNkluQjFZaTB5T1RVNU16Y2lMQ0p6ZFdJaU9pSmphR1ZqYTI5MWRDSjkuNTQ5VWFSYkpzUk45c1FUeXZBTzVqR3AtM1BIUlpHamRRZG9CelpWVzFRWSIsInAiOjIwNzY2MTUxMiwicyI6Mjk1OTM3LCJmIjp0cnVlLCJ1IjoxMDUxODY0NywiaWF0IjoxNzg0NDk2MTU3LCJleHAiOjIxMDAwNzIxNTcsImlzcyI6InB1Yi0wIiwic3ViIjoibGluay1yZWRpcmVjdCJ9.2H3J4xRBimEGuUU_oToy3O8zTB8EYWtGJ6ZicGwTwPk?&utm_medium=email&utm_source=subscribe-widget&utm_content=207661512" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;box-sizing: border-box;cursor: pointer;border: none;border-radius: 8px;font-size: 14px;line-height: 20px;font-weight: 600;text-align: center;opacity: 1;outline: none;white-space: nowrap;text-decoration: none !important;margin: 0 auto;background-color: #0076ff;color: #ffffff !important;padding: 12px 20px;height: auto;"><span style="color: #ffffff;text-decoration: none;">Upgrade to paid</span></a></div></div><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;margin-bottom: 0;"></p></div></div><div class="container-border" style="margin: 32px 0 0;width: 100%;box-sizing: border-box;border-top: 1px solid #e6e6e6;font-size: 16px;line-height: 26px;"></div><div class="post-cta typography markup" style="--image-offset-margin: -120px;font-family: Spectral,sans-serif;font-weight: 400;text-align: initial;word-break: break-word;margin-bottom: 32px;margin: 32px 0;font-size: 16px;line-height: 26px;"><p style="color: rgb(54,55,55);margin: 0 auto 20px;text-align: center;width: 90%;line-height: 26px;font-size: 16px;margin-top: 0;"><span class="pencraft pc-reset reset-IxiVJZ" translated="" style="list-style: none;color: unset;text-decoration: unset;margin: 0;">You're currently a free subscriber to <a href="https://substack.com/redirect/59e88f09-99e1-4f1f-a4f6-953c1f81fea7?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">Freddie deBoer</a>. For the full experience, <a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly9mcmVkZGllZGVib2VyLnN1YnN0YWNrLmNvbS9zdWJzY3JpYmU_dXRtX3NvdXJjZT1wb3N0JnV0bV9jYW1wYWlnbj1lbWFpbC1jaGVja291dCZuZXh0PWh0dHBzJTNBJTJGJTJGZnJlZGRpZWRlYm9lci5zdWJzdGFjay5jb20lMkZwJTJGaS13b3VsZG50LXNheS1wYW5ncmFtLWlzLWJyb2tlbi1idXQmcj02OWc4biZ0b2tlbj1leUoxYzJWeVgybGtJam94TURVeE9EWTBOeXdpYVdGMElqb3hOemcwTkRrMk1UVTNMQ0psZUhBaU9qRTNPRGN3T0RneE5UY3NJbWx6Y3lJNkluQjFZaTB5T1RVNU16Y2lMQ0p6ZFdJaU9pSmphR1ZqYTI5MWRDSjkuNTQ5VWFSYkpzUk45c1FUeXZBTzVqR3AtM1BIUlpHamRRZG9CelpWVzFRWSIsInAiOjIwNzY2MTUxMiwicyI6Mjk1OTM3LCJmIjp0cnVlLCJ1IjoxMDUxODY0NywiaWF0IjoxNzg0NDk2MTU3LCJleHAiOjIxMDAwNzIxNTcsImlzcyI6InB1Yi0wIiwic3ViIjoibGluay1yZWRpcmVjdCJ9.2H3J4xRBimEGuUU_oToy3O8zTB8EYWtGJ6ZicGwTwPk?&utm_source=substack&utm_medium=email&utm_content=postcta" style="color: rgb(54,55,55);text-decoration: underline;">upgrade your subscription.</a></span></p><p class="cta-box" style="color: rgb(54,55,55);margin: 0 auto 20px;width: 90%;line-height: 26px;font-size: 16px;margin-bottom: 0;text-align: center;margin-left: auto;margin-right: auto;"><a class="button primary" role="button" href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly9mcmVkZGllZGVib2VyLnN1YnN0YWNrLmNvbS9zdWJzY3JpYmU_dXRtX3NvdXJjZT1wb3N0JnV0bV9jYW1wYWlnbj1lbWFpbC1jaGVja291dCZuZXh0PWh0dHBzJTNBJTJGJTJGZnJlZGRpZWRlYm9lci5zdWJzdGFjay5jb20lMkZwJTJGaS13b3VsZG50LXNheS1wYW5ncmFtLWlzLWJyb2tlbi1idXQmcj02OWc4biZ0b2tlbj1leUoxYzJWeVgybGtJam94TURVeE9EWTBOeXdpYVdGMElqb3hOemcwTkRrMk1UVTNMQ0psZUhBaU9qRTNPRGN3T0RneE5UY3NJbWx6Y3lJNkluQjFZaTB5T1RVNU16Y2lMQ0p6ZFdJaU9pSmphR1ZqYTI5MWRDSjkuNTQ5VWFSYkpzUk45c1FUeXZBTzVqR3AtM1BIUlpHamRRZG9CelpWVzFRWSIsInAiOjIwNzY2MTUxMiwicyI6Mjk1OTM3LCJmIjp0cnVlLCJ1IjoxMDUxODY0NywiaWF0IjoxNzg0NDk2MTU3LCJleHAiOjIxMDAwNzIxNTcsImlzcyI6InB1Yi0wIiwic3ViIjoibGluay1yZWRpcmVjdCJ9.2H3J4xRBimEGuUU_oToy3O8zTB8EYWtGJ6ZicGwTwPk?&utm_source=substack&utm_medium=email&utm_content=postcta" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;box-sizing: border-box;cursor: pointer;border: none;height: 40px;border-radius: 8px;font-size: 14px;line-height: 20px;font-weight: 600;text-align: center;padding: 10px 20px;margin: 0;opacity: 1;outline: none;white-space: nowrap;color: #ffffff !important;text-decoration: none !important;background-color: #0076ff;">Upgrade to paid</a></p></div><table class="email-ufi-2-bottom" role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="border-top: 1px solid rgb(0,0,0,.1);border-bottom: 1px solid rgb(0,0,0,.1);min-width: 100%;"><tbody><tr height="16"><td height="16" style="font-size:0px;line-height:0;">&nbsp;</td></tr><tr><td><table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0" style="margin:0 auto;"><tbody><tr><td style="vertical-align:middle;"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="center"><a class="email-button-outline" href="https://substack.com/app-link/post?publication_id=295937&post_id=207661512&utm_source=substack&isFreemail=true&submitLike=true&token=eyJ1c2VyX2lkIjoxMDUxODY0NywicG9zdF9pZCI6MjA3NjYxNTEyLCJyZWFjdGlvbiI6IuKdpCIsImlhdCI6MTc4NDQ5NjE1NywiZXhwIjoxNzg3MDg4MTU3LCJpc3MiOiJwdWItMjk1OTM3Iiwic3ViIjoicmVhY3Rpb24ifQ.eFTuGEESmm42vUc9d_5VSm1If1avZkU3fUDCXDZ1oks&utm_medium=email&utm_campaign=email-reaction&r=69g8n" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;font-weight: 500;border: 1px solid rgb(0,0,0,.1);border-radius: 9999px;text-transform: uppercase;font-size: 12px;line-height: 12px;padding: 9px 14px;text-decoration: none;color: rgb(119,119,119);"><img class="icon" src="https://substackcdn.com/image/fetch/$s_!PeVs!,w_36,c_scale,f_png,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Ficon%2FLucideHeart%3Fv%3D4%26height%3D36%26fill%3Dnone%26stroke%3D%2523808080%26strokeWidth%3D2" width="18" height="18" style="margin-right: 8px;min-width: 18px;min-height: 18px;border: none;vertical-align: middle;max-width: 18px" alt=""><span class="email-button-text" style="vertical-align: middle;">Like</span></a></td></tr></tbody></table></td><td width="8" style="min-width:8px;"></td><td style="vertical-align:middle;"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="center"><a class="email-button-outline" href="https://substack.com/app-link/post?publication_id=295937&post_id=207661512&utm_source=substack&utm_medium=email&isFreemail=true&comments=true&token=eyJ1c2VyX2lkIjoxMDUxODY0NywicG9zdF9pZCI6MjA3NjYxNTEyLCJpYXQiOjE3ODQ0OTYxNTcsImV4cCI6MTc4NzA4ODE1NywiaXNzIjoicHViLTI5NTkzNyIsInN1YiI6InBvc3QtcmVhY3Rpb24ifQ.l5rcEvNlnvayC_qWwGTMDnt5d6_Ns6R3P25fzfgq_n8&r=69g8n&utm_campaign=email-half-magic-comments&action=post-comment&utm_source=substack&utm_medium=email" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;font-weight: 500;border: 1px solid rgb(0,0,0,.1);border-radius: 9999px;text-transform: uppercase;font-size: 12px;line-height: 12px;padding: 9px 14px;text-decoration: none;color: rgb(119,119,119);"><img class="icon" src="https://substackcdn.com/image/fetch/$s_!x1tS!,w_36,c_scale,f_png,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Ficon%2FLucideComments%3Fv%3D4%26height%3D36%26fill%3Dnone%26stroke%3D%2523808080%26strokeWidth%3D2" width="18" height="18" style="margin-right: 8px;min-width: 18px;min-height: 18px;border: none;vertical-align: middle;max-width: 18px" alt=""><span class="email-button-text" style="vertical-align: middle;">Comment</span></a></td></tr></tbody></table></td><td width="8" style="min-width:8px;"></td><td style="vertical-align:middle;"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="center"><a class="email-button-outline" href="https://open.substack.com/pub/freddiedeboer/p/i-wouldnt-say-pangram-is-broken-but?utm_source=substack&utm_medium=email&utm_campaign=email-restack-comment&action=restack-comment&r=69g8n&token=eyJ1c2VyX2lkIjoxMDUxODY0NywicG9zdF9pZCI6MjA3NjYxNTEyLCJpYXQiOjE3ODQ0OTYxNTcsImV4cCI6MTc4NzA4ODE1NywiaXNzIjoicHViLTI5NTkzNyIsInN1YiI6InBvc3QtcmVhY3Rpb24ifQ.l5rcEvNlnvayC_qWwGTMDnt5d6_Ns6R3P25fzfgq_n8&utm_source=substack&utm_medium=email" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;font-weight: 500;border: 1px solid rgb(0,0,0,.1);border-radius: 9999px;text-transform: uppercase;font-size: 12px;line-height: 12px;padding: 9px 14px;text-decoration: none;color: rgb(119,119,119);"><img class="icon" src="https://substackcdn.com/image/fetch/$s_!ubXF!,w_36,c_scale,f_png,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Ficon%2Fnotes__NoteRestackIcon%3Fv%3D4%26height%3D36%26fill%3Dnone%26stroke%3D%2523808080%26strokeWidth%3D2%26strokeLinecap%3Dround%26strokeLinejoin%3Dround" width="18" height="18" alt="" style="margin-right: 8px;min-width: 18px;min-height: 18px;max-width: 550px;border: none !important;vertical-align: middle;"><span class="email-button-text" style="vertical-align: middle;">Restack</span></a></td></tr></tbody></table></td></tr></tbody></table></td><td align="right"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr></tr></tbody></table></td></tr></tbody></table></td></tr><tr height="16"><td height="16" style="font-size:0px;line-height:0;">&nbsp;</td></tr></tbody></table><div class="footer footer-ZM59BM" style="color: rgb(119,119,119);text-align: center;font-size: 16px;line-height: 26px;padding: 24px0;"><div style="font-size: 16px;line-height: 26px;padding-bottom: 24px"><p class="pencraft pc-reset color-secondary-ls1g8s size-12-mmZ61m reset-IxiVJZ small meta-B2bqa5" style="list-style: none;font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';padding-bottom: 0;font-size: 12px;line-height: 16px;margin: 0;color: rgb(119,119,119);text-decoration: unset;">&#169; 2026 <span>Fredrik deBoer</span><br>548 Market Street PMB 72296, San Francisco, CA 94104 <br><a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly9mcmVkZGllZGVib2VyLnN1YnN0YWNrLmNvbS9hY3Rpb24vZGlzYWJsZV9lbWFpbD90b2tlbj1leUoxYzJWeVgybGtJam94TURVeE9EWTBOeXdpY0c5emRGOXBaQ0k2TWpBM05qWXhOVEV5TENKcFlYUWlPakUzT0RRME9UWXhOVGNzSW1WNGNDSTZNVGd4TmpBek1qRTFOeXdpYVhOeklqb2ljSFZpTFRJNU5Ua3pOeUlzSW5OMVlpSTZJbVJwYzJGaWJHVmZaVzFoYVd3aWZRLmphc2NBSFlFZ0htbHRnZXY1YmUzZ183OFV6ZGlDYlpfcm1ZZi0wbEVpem8iLCJwIjoyMDc2NjE1MTIsInMiOjI5NTkzNywiZiI6dHJ1ZSwidSI6MTA1MTg2NDcsImlhdCI6MTc4NDQ5NjE1NywiZXhwIjoyMTAwMDcyMTU3LCJpc3MiOiJwdWItMCIsInN1YiI6ImxpbmstcmVkaXJlY3QifQ.VyPutTEv5CK_g2MtpknXGBsIFxyNoh9cyAM9DyPSjm0?" style="text-decoration: underline;color: rgb(119,119,119);"><span style="color: rgb(119,119,119);text-decoration: underline;">Unsubscribe</span></a></p></div><p class="footerSection-EHR0jG small powered-by-substack" style="padding: 0 24px;font-size: 12px;line-height: 20px;margin: 0;color: rgb(119,119,119);font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';padding-bottom: 0;margin-top: 0;"><a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly9zdWJzdGFjay5jb20vc2lnbnVwP3V0bV9zb3VyY2U9c3Vic3RhY2smdXRtX21lZGl1bT1lbWFpbCZ1dG1fY29udGVudD1mb290ZXImdXRtX2NhbXBhaWduPWF1dG9maWxsZWQtZm9vdGVyJmZyZWVTaWdudXBFbWFpbD1iZW5vaXRjQGdtYWlsLmNvbSZyPTY5ZzhuIiwicCI6MjA3NjYxNTEyLCJzIjoyOTU5MzcsImYiOnRydWUsInUiOjEwNTE4NjQ3LCJpYXQiOjE3ODQ0OTYxNTcsImV4cCI6MjEwMDA3MjE1NywiaXNzIjoicHViLTAiLCJzdWIiOiJsaW5rLXJlZGlyZWN0In0.8HZ9dSCpcYD3aK8DhFciVtM8-D72dPRNhS1vmx65uWk?" style="color: rgb(119,119,119);text-decoration: none;display: inline-block;margin: 0 4px;"><img src="https://substackcdn.com/image/fetch/$s_!LkrL!,w_270,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Fimg%2Femail%2Fpublish-button%402x.png" srcset="https://substackcdn.com/image/fetch/$s_!wgfj!,w_135,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Fimg%2Femail%2Fpublish-button.png, https://substackcdn.com/image/fetch/$s_!LkrL!,w_270,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Fimg%2Femail%2Fpublish-button%402x.png 2x, https://substackcdn.com/image/fetch/$s_!KjtY!,w_405,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Fimg%2Femail%2Fpublish-button%403x.png 3x" width="135" alt="Start writing" height="40" style="max-width: 550px;border: none !important;vertical-align: middle;"></a></p></div></div></td><td></td></tr></tbody></table><img src="https://eotrx.substackcdn.com/o/6d73ca364bece8b7/p.gif?token=eyJtIjoiPDIwMjYwNzE5MjEyMTQ4LjMuZmJlMmNlMzA4OWE4NTkyN0BtZy1kMC5zdWJzdGFjay5jb20-IiwidSI6MTA1MTg2NDcsInIiOiJiZW5vaXRjQGdtYWlsLmNvbSIsImQiOiJtZy1kMC5zdWJzdGFjay5jb20iLCJwIjoyMDc2NjE1MTIsInQiOiJuZXdzbGV0dGVyIiwiYSI6ImV2ZXJ5b25lIiwicyI6Mjk1OTM3LCJjIjoicG9zdCIsImYiOnRydWUsInBvc2l0aW9uIjoiYm90dG9tIiwiaWF0IjoxNzg0NDk2MTU3LCJleHAiOjE3ODcwODgxNTcsImlzcyI6InB1Yi0wIiwic3ViIjoiZW8ifQ.iRSPE_HD4OL0_wm3C2DimE1Bse3TDKNqR2-Ow7V9rGc" alt="" width="1" height="1" border="0" style="height:1px !important;width:1px !important;border-width:0 !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:0 !important;margin-left:0 !important;padding-top:0 !important;padding-bottom:0 !important;padding-right:0 !important;padding-left:0 !important;"/><img width="1" height="1" alt="" src="https://email.mg-d0.substack.com/o/eJxE0NtqxCAUheGnGe8a1MRoLnyWsNWVVJro4GFK3r7MAXq7Nvx8bE8Ney6XvefaWLDzSJsKDFZoM03LLJRhOCke646EQg1hpfZ_1Uob9m1VkGqBH43wChrkDedekhGbpNFpYtFKLmeuxSKFFJMZxmFzkB4jNwsZtUh9m_i5fwU-1O5qI_8z-HyyWNet4EWwrXSwJ3SlHiKSh8UD5crpM8dgJdfzLJSQ76Vdd9iE33qgNRR27271-Tx7iu1akcgdCJ9wd0f01GJOr9CillGzYh1Sjs3fJr4_FS9V7S7kk2KyW0EIEQEuo7D2_mOvKM-G4EqYedLsYeVfAAAA___4NnhO"></body></html></body></html>
