@@ -1,0 +1,793 @@
+<html><head><meta name="robots" content="noindex"><title>The Project of Software is Complete</title></head><body><html lang="en" dir="ltr" style="scrollbar-width: thin;scrollbar-color: rgb(219,219,219)rgb(255,255,255);"><head><meta charset="utf-8"><title>The Project of Software is Complete</title><style>
+@media (max-width: 1024px) {
+  .typography .pullquote-align-left,
+  .typography.editor .pullquote-align-left,
+  .typography .pullquote-align-right,
+  .typography.editor .pullquote-align-right,
+  .typography .pullquote-align-wide,
+  .typography.editor .pullquote-align-wide,
+  .typography .pullquote-align-center,
+  .typography.editor .pullquote-align-center {
+    float: none;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .typography .markup table.image-wrapper img,
+  .typography.editor .markup table.image-wrapper img,
+  .typography .markup table.kindle-wrapper img,
+  .typography.editor .markup table.kindle-wrapper img {
+    max-width: 550px;
+  }
+}
+@media (min-width: 1024px) {
+  .typography:not(:has(#toc)) .captioned-image-container figure:has(> a.image2-offset-left),
+  .typography.editor:not(:has(#toc)) .captioned-image-container figure:has(> a.image2-offset-left) {
+    margin-left: var(--image-offset-margin);
+  }
+  .typography:not(:has(#toc)) .captioned-image-container figure:has(> a.image2-offset-right),
+  .typography.editor:not(:has(#toc)) .captioned-image-container figure:has(> a.image2-offset-right) {
+    margin-right: var(--image-offset-margin);
+  }
+}
+@media (min-width: 1300px) {
+  .typography .captioned-image-container figure:has(> a.image2-offset-left),
+  .typography.editor .captioned-image-container figure:has(> a.image2-offset-left) {
+    margin-left: var(--image-offset-margin);
+  }
+  .typography .captioned-image-container figure:has(> a.image2-offset-right),
+  .typography.editor .captioned-image-container figure:has(> a.image2-offset-right) {
+    margin-right: var(--image-offset-margin);
+  }
+}
+@media (max-width: 1024px) {
+  .typography,
+  .typography.editor {
+    /* Disable offset on mobile/tablet */
+  }
+  .typography .captioned-image-container figure:has(> a.image2-align-left),
+  .typography.editor .captioned-image-container figure:has(> a.image2-align-left),
+  .typography .captioned-image-container figure:has(> a.image2-align-right),
+  .typography.editor .captioned-image-container figure:has(> a.image2-align-right) {
+    float: none;
+    margin: 1em auto;
+    max-width: 100%;
+    width: auto;
+    padding: 0;
+  }
+  .typography .captioned-image-container figure:has(> a.image2-align-left.thefp),
+  .typography.editor .captioned-image-container figure:has(> a.image2-align-left.thefp),
+  .typography .captioned-image-container figure:has(> a.image2-align-right.thefp),
+  .typography.editor .captioned-image-container figure:has(> a.image2-align-right.thefp) {
+    margin: 1em auto;
+  }
+  .typography .captioned-image-container figure:has(> a.image2-offset-left),
+  .typography.editor .captioned-image-container figure:has(> a.image2-offset-left),
+  .typography .captioned-image-container figure:has(> a.image2-offset-right),
+  .typography.editor .captioned-image-container figure:has(> a.image2-offset-right) {
+    margin: 1em auto;
+  }
+  .typography .captioned-image-container figure:has(> a.image2-align-left) .image2-inset,
+  .typography.editor .captioned-image-container figure:has(> a.image2-align-left) .image2-inset,
+  .typography .captioned-image-container figure:has(> a.image2-align-right) .image2-inset,
+  .typography.editor .captioned-image-container figure:has(> a.image2-align-right) .image2-inset {
+    display: block;
+    justify-content: initial;
+  }
+}
+@media (max-width: 768px) {
+  .typography .markup div.sponsorship-campaign-embed,
+  .typography.editor .markup div.sponsorship-campaign-embed {
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+  .typography .markup div.sponsorship-campaign-embed:first-child,
+  .typography.editor .markup div.sponsorship-campaign-embed:first-child {
+    margin-top: 0px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .typography .markup div.youtube-overlay,
+  .typography.editor .markup div.youtube-overlay,
+  .typography .markup div.vimeo-overlay,
+  .typography.editor .markup div.vimeo-overlay {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 370px) {
+  .typography .markup div.tiktok-wrap,
+  .typography.editor .markup div.tiktok-wrap {
+    width: calc(95vw - 32px);
+    height: calc((95vw - 32px - 2px) / 0.485714);
+  }
+}
+@media screen and (max-width: 650px) {
+  .typography .markup div.embedded-publication-wrap .embedded-publication.show-subscribe,
+  .typography.editor .markup div.embedded-publication-wrap .embedded-publication.show-subscribe {
+    padding: 24px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .typography .markup div.subscription-widget-wrap .subscription-widget.show-subscribe,
+  .typography.editor .markup div.subscription-widget-wrap .subscription-widget.show-subscribe,
+  .typography .markup div.subscription-widget-wrap-editor .subscription-widget.show-subscribe,
+  .typography.editor .markup div.subscription-widget-wrap-editor .subscription-widget.show-subscribe,
+  .typography .markup div.captioned-button-wrap .subscription-widget.show-subscribe,
+  .typography.editor .markup div.captioned-button-wrap .subscription-widget.show-subscribe {
+    padding: 0px 24px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .typography .markup div.subscription-widget-wrap .subscription-widget.show-subscribe .subscription-widget-subscribe .button,
+  .typography.editor .markup div.subscription-widget-wrap .subscription-widget.show-subscribe .subscription-widget-subscribe .button,
+  .typography .markup div.subscription-widget-wrap-editor .subscription-widget.show-subscribe .subscription-widget-subscribe .button,
+  .typography.editor .markup div.subscription-widget-wrap-editor .subscription-widget.show-subscribe .subscription-widget-subscribe .button,
+  .typography .markup div.captioned-button-wrap .subscription-widget.show-subscribe .subscription-widget-subscribe .button,
+  .typography.editor .markup div.captioned-button-wrap .subscription-widget.show-subscribe .subscription-widget-subscribe .button {
+    padding: 10px 12px;
+    min-width: 110px;
+  }
+}
+@media (max-width: 650px) {
+  .typography .markup .twitter-embed,
+  .typography.editor .markup .twitter-embed,
+  .typography .markup .tweet,
+  .typography.editor .markup .tweet {
+    padding: 12px;
+  }
+}
+@media (max-width: 650px) {
+  .typography .markup .twitter-embed .tweet-text,
+  .typography.editor .markup .twitter-embed .tweet-text,
+  .typography .markup .tweet .tweet-text,
+  .typography.editor .markup .tweet .tweet-text {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+@media (max-width: 650px) {
+  .typography .markup .twitter-embed .tweet-photos-container.two,
+  .typography.editor .markup .twitter-embed .tweet-photos-container.two,
+  .typography .markup .tweet .tweet-photos-container.two,
+  .typography.editor .markup .tweet .tweet-photos-container.two,
+  .typography .markup .twitter-embed .tweet-photos-container.three,
+  .typography.editor .markup .twitter-embed .tweet-photos-container.three,
+  .typography .markup .tweet .tweet-photos-container.three,
+  .typography.editor .markup .tweet .tweet-photos-container.three,
+  .typography .markup .twitter-embed .tweet-photos-container.four,
+  .typography.editor .markup .twitter-embed .tweet-photos-container.four,
+  .typography .markup .tweet .tweet-photos-container.four,
+  .typography.editor .markup .tweet .tweet-photos-container.four {
+    height: 200px;
+  }
+}
+@media (max-width: 650px) {
+  .typography .markup .twitter-embed a.expanded-link .expanded-link-img,
+  .typography.editor .markup .twitter-embed a.expanded-link .expanded-link-img,
+  .typography .markup .tweet a.expanded-link .expanded-link-img,
+  .typography.editor .markup .tweet a.expanded-link .expanded-link-img {
+    max-height: 180px;
+  }
+}
+@media (max-width: 650px) {
+  .typography .markup .twitter-embed a.expanded-link .expanded-link-description,
+  .typography.editor .markup .twitter-embed a.expanded-link .expanded-link-description,
+  .typography .markup .tweet a.expanded-link .expanded-link-description,
+  .typography.editor .markup .tweet a.expanded-link .expanded-link-description {
+    display: none;
+  }
+}
+@media screen and (max-width: 650px) {
+  .typography .markup .apple-podcast-container,
+  .typography.editor .markup .apple-podcast-container {
+    width: unset;
+  }
+}
+@media (max-width: 420px) {
+  .typography .markup .install-substack-app-embed img.install-substack-app-embed-img,
+  .typography.editor .markup .install-substack-app-embed img.install-substack-app-embed-img {
+    margin: 0 auto 16px auto;
+  }
+}
+@media (max-width: 420px) {
+  .typography .markup .install-substack-app-embed .install-substack-app-embed-text,
+  .typography.editor .markup .install-substack-app-embed .install-substack-app-embed-text {
+    margin: 0 0 12px 0;
+    max-width: 100%;
+    width: auto;
+    text-align: center;
+  }
+}
+@media (max-width: 420px) {
+  .typography .markup .install-substack-app-embed .install-substack-app-embed-link,
+  .typography.editor .markup .install-substack-app-embed .install-substack-app-embed-link {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 481px) {
+  .share-button-container {
+    height: 38px;
+  }
+}
+@media screen and (min-width: 481px) {
+  .share-button-container a.comment {
+    height: 38px;
+    line-height: 38px;
+    padding-right: 10px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .share-button-container .separator {
+    display: block;
+    margin: 0;
+    height: 8px;
+    border-left: none;
+  }
+}
+@media screen and (max-width: 480px) {
+  .share-button-container a.share.first img {
+    padding-left: 0;
+  }
+}
+@media screen and (min-width: 481px) {
+  .share-button-container a.mobile {
+    display: none !important;
+  }
+}
+@media screen and (min-width: 541px) {
+  .settings-add-pub-modal-wrapper .container .add-recommending-pub-modal-container {
+    padding: 36px;
+    height: 680px;
+  }
+}
+@media screen and (min-width: 541px) {
+  .settings-add-pub-modal-wrapper .container .add-recommending-pub-modal-container .footer {
+    position: absolute;
+    bottom: 36px;
+    margin: 0px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .header-anchor-parent {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .post {
+    padding: 16px 0 0 0;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post .post-header .post-label {
+    margin-top: 8px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post .post-header .meta-author-wrap.alternative-meta .meta-right-column .post-meta {
+    margin-top: 6px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post .footer-facepile-container {
+    height: 64px;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post .post-footer.use-separators {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post .post-footer.next-prev {
+    height: 64px;
+    justify-content: space-between;
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post-contributor-footer .post-contributor-bio-table {
+    display: block;
+  }
+  .post-contributor-footer .post-contributor-bio-table-row {
+    display: flex;
+    flex-direction: row;
+  }
+  .post-contributor-footer .post-contributor-bio-userhead-cell,
+  .post-contributor-footer .post-contributor-bio-body-cell {
+    display: block;
+  }
+  .post-contributor-footer .post-contributor-bio-body-cell {
+    flex-grow: 1;
+  }
+  .post-contributor-footer .post-contributor-bio-body-table {
+    display: block;
+  }
+  .post-contributor-footer .post-contributor-bio-body-table-row {
+    display: block;
+  }
+  .post-contributor-footer .post-contributor-bio-copy-cell,
+  .post-contributor-footer .post-contributor-bio-controls-cell {
+    display: block;
+  }
+  .post-contributor-footer .post-contributor-bio-copy-cell {
+    margin: 0 0 16px 0;
+  }
+  .post-contributor-footer .post-contributor-bio-controls-cell {
+    width: auto;
+  }
+  .post-contributor-footer .post-contributor-bio-controls {
+    margin: auto;
+  }
+  .post-contributor-footer .post-contributor-bio-controls .button.primary {
+    width: 100%;
+  }
+  .post-contributor-footer .post-contributor-bio-text {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .post-silhouette {
+    padding: 32px 0;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post-silhouette .post-silhouette-title {
+    margin-top: 10.44225025px;
+    height: 120px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post-silhouette .post-silhouette-meta {
+    width: 75%;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post-silhouette .post-silhouette-meta.with-byline-image {
+    margin: 20px 0;
+  }
+}
+@media screen and (max-width: 650px) {
+  .use-theme-bg .post-meta.alternative-meta .post-meta-item,
+  .post-meta.alternative-meta .post-meta-item {
+    padding-right: 16px;
+  }
+}
+@media screen and (max-width: 370px) {
+  .use-theme-bg .post-meta.alternative-meta .post-meta-item,
+  .post-meta.alternative-meta .post-meta-item {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .use-theme-bg .post-meta.alternative-meta .post-meta-item.guest-author-publication,
+  .post-meta.alternative-meta .post-meta-item.guest-author-publication {
+    display: none;
+  }
+}
+@media screen and (max-width: 370px) {
+  .post-meta .post-meta-item .post-meta-button {
+    height: 36px !important;
+    /* important to override in-line height style on emails */
+  }
+  .post-meta .post-meta-item .post-meta-button .meta-button-label {
+    display: none;
+  }
+  .post-meta .post-meta-item .post-meta-button > svg {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 370px) {
+  .post-meta .post-meta-item {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post .floating-subscribe-button {
+    bottom: 20px;
+    right: 20px;
+  }
+}
+@media screen and (max-width: 480px) {
+  body.bulwark-email-thebulwark .bulwark-email-title {
+    font-size: 32px !important;
+    line-height: 36px !important;
+  }
+}
+@media (max-width: 1024px) {
+  body .pullquote-align-left,
+  body .pullquote-align-right,
+  body .pullquote-align-wide,
+  body .pullquote-align-center {
+    float: none;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  body .markup table.image-wrapper img,
+  body .markup table.kindle-wrapper img {
+    max-width: 550px;
+  }
+}
+@media (min-width: 1024px) {
+  body:not(:has(#toc)) .captioned-image-container figure:has(> a.image2-offset-left) {
+    margin-left: var(--image-offset-margin);
+  }
+  body:not(:has(#toc)) .captioned-image-container figure:has(> a.image2-offset-right) {
+    margin-right: var(--image-offset-margin);
+  }
+}
+@media (min-width: 1300px) {
+  body .captioned-image-container figure:has(> a.image2-offset-left) {
+    margin-left: var(--image-offset-margin);
+  }
+  body .captioned-image-container figure:has(> a.image2-offset-right) {
+    margin-right: var(--image-offset-margin);
+  }
+}
+@media (max-width: 1024px) {
+  body {
+    /* Disable offset on mobile/tablet */
+  }
+  body .captioned-image-container figure:has(> a.image2-align-left),
+  body .captioned-image-container figure:has(> a.image2-align-right) {
+    float: none;
+    margin: 1em auto;
+    max-width: 100%;
+    width: auto;
+    padding: 0;
+  }
+  body .captioned-image-container figure:has(> a.image2-align-left.thefp),
+  body .captioned-image-container figure:has(> a.image2-align-right.thefp) {
+    margin: 1em auto;
+  }
+  body .captioned-image-container figure:has(> a.image2-offset-left),
+  body .captioned-image-container figure:has(> a.image2-offset-right) {
+    margin: 1em auto;
+  }
+  body .captioned-image-container figure:has(> a.image2-align-left) .image2-inset,
+  body .captioned-image-container figure:has(> a.image2-align-right) .image2-inset {
+    display: block;
+    justify-content: initial;
+  }
+}
+@media (max-width: 768px) {
+  body .markup div.sponsorship-campaign-embed {
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+  body .markup div.sponsorship-campaign-embed:first-child {
+    margin-top: 0px;
+  }
+}
+@media screen and (max-width: 650px) {
+  body .markup div.youtube-overlay,
+  body .markup div.vimeo-overlay {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 370px) {
+  body .markup div.tiktok-wrap {
+    width: calc(95vw - 32px);
+    height: calc((95vw - 32px - 2px) / 0.485714);
+  }
+}
+@media screen and (max-width: 650px) {
+  body .markup div.embedded-publication-wrap .embedded-publication.show-subscribe {
+    padding: 24px;
+  }
+}
+@media screen and (max-width: 650px) {
+  body .markup div.subscription-widget-wrap .subscription-widget.show-subscribe,
+  body .markup div.subscription-widget-wrap-editor .subscription-widget.show-subscribe,
+  body .markup div.captioned-button-wrap .subscription-widget.show-subscribe {
+    padding: 0px 24px;
+  }
+}
+@media screen and (max-width: 650px) {
+  body .markup div.subscription-widget-wrap .subscription-widget.show-subscribe .subscription-widget-subscribe .button,
+  body .markup div.subscription-widget-wrap-editor .subscription-widget.show-subscribe .subscription-widget-subscribe .button,
+  body .markup div.captioned-button-wrap .subscription-widget.show-subscribe .subscription-widget-subscribe .button {
+    padding: 10px 12px;
+    min-width: 110px;
+  }
+}
+@media (max-width: 650px) {
+  body .markup .twitter-embed,
+  body .markup .tweet {
+    padding: 12px;
+  }
+}
+@media (max-width: 650px) {
+  body .markup .twitter-embed .tweet-text,
+  body .markup .tweet .tweet-text {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+@media (max-width: 650px) {
+  body .markup .twitter-embed .tweet-photos-container.two,
+  body .markup .tweet .tweet-photos-container.two,
+  body .markup .twitter-embed .tweet-photos-container.three,
+  body .markup .tweet .tweet-photos-container.three,
+  body .markup .twitter-embed .tweet-photos-container.four,
+  body .markup .tweet .tweet-photos-container.four {
+    height: 200px;
+  }
+}
+@media (max-width: 650px) {
+  body .markup .twitter-embed a.expanded-link .expanded-link-img,
+  body .markup .tweet a.expanded-link .expanded-link-img {
+    max-height: 180px;
+  }
+}
+@media (max-width: 650px) {
+  body .markup .twitter-embed a.expanded-link .expanded-link-description,
+  body .markup .tweet a.expanded-link .expanded-link-description {
+    display: none;
+  }
+}
+@media screen and (max-width: 650px) {
+  body .markup .apple-podcast-container {
+    width: unset;
+  }
+}
+@media (max-width: 420px) {
+  body .markup .install-substack-app-embed img.install-substack-app-embed-img {
+    margin: 0 auto 16px auto;
+  }
+}
+@media (max-width: 420px) {
+  body .markup .install-substack-app-embed .install-substack-app-embed-text {
+    margin: 0 0 12px 0;
+    max-width: 100%;
+    width: auto;
+    text-align: center;
+  }
+}
+@media (max-width: 420px) {
+  body .markup .install-substack-app-embed .install-substack-app-embed-link {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 500px) {
+  body .header a.logo {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+  }
+}
+@media screen and (max-width: 420px) {
+  body .subscription-receipt table:first-of-type .subscription-amount .subscription-discount {
+    width: 72px !important;
+  }
+}
+@media screen and (min-width: 481px) {
+  body .share-button-container {
+    height: auto;
+  }
+}
+@media screen and (max-width: 480px) {
+  body .share-button-container .separator {
+    display: block !important;
+    margin: 0 !important;
+    height: 8px !important;
+    border-left: none !important;
+  }
+}
+@media screen and (max-width: 650px) {
+  .digest .item .post-meta-item.audience {
+    display: none;
+  }
+}
+@media screen and (min-width: 500px) {
+  .digest-publication .logo img {
+    width: 42px;
+    height: 42px;
+    border-radius: 8px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .comments-page .container .comment-list .collapsed-reply {
+    margin-left: calc(10 + 32px - 24px);
+  }
+}
+@media screen and (max-width: 650px) {
+  .comment > .comment-list {
+    padding-left: 24px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .finish-magic-login-modal .modal-content .container {
+    padding: 24px 0;
+  }
+}
+@media (max-width: 650px) {
+  .reader2-text-b3 {
+    line-height: 24px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .reader2-text-h4 {
+    line-height: 24px;
+  }
+}
+@media screen and (min-width: 541px) {
+  .user-profile-modal {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .subscribe-widget form.form .sideBySideWrap button.rightButton {
+    padding: 10px 12px;
+  }
+}
+@media screen and (min-width: 541px) {
+  .pub-icon:hover .logo-hover,
+  .feed-item-icon:hover .logo-hover {
+    display: block;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post-ufi.single-full-width-button .post-ufi-button-wrapper {
+    width: 100%;
+    padding: 16px;
+  }
+  .post-ufi.single-full-width-button .post-ufi-button-wrapper:empty {
+    display: none;
+  }
+  .post-ufi.single-full-width-button .post-ufi-button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  .file-embed-wrapper {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .file-embed-wrapper-editor {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .file-embed-wrapper-editor:active {
+    padding: 0;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .file-embed-button.wide,
+  .file-embed-error-button.wide {
+    display: none;
+  }
+}
+@media only screen and (min-width: 630px) {
+  .file-embed-button.narrow,
+  .file-embed-error-button.narrow {
+    display: none;
+  }
+}
+@media screen and (min-width: 541px) {
+  .audio-player-wrapper .audio-player {
+    min-width: 500px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .audio-player-wrapper .audio-player .audio-player-progress {
+    border-left-width: 16px;
+    border-right-width: 16px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .audio-player-wrapper .audio-player .audio-player-progress .audio-player-progress-bar .audio-player-progress-bar-popup {
+    top: -54px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .audio-player-wrapper-fancy .audio-player .audio-player-progress {
+    border-left-width: 16px;
+    border-right-width: 16px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .audio-player-wrapper-fancy .audio-player .audio-player-progress .audio-player-progress-bar .audio-player-progress-bar-popup {
+    top: -54px;
+  }
+}
+@media (min-width: 250px) {
+  .audio-player-wrapper-fancy .audio-player {
+    padding: 32px;
+  }
+  .audio-player-wrapper-fancy .audio-player .btn-group {
+    display: flex;
+  }
+  .audio-player-wrapper-fancy .audio-player .btn-group .button:last-of-type {
+    display: block;
+  }
+}
+@media (min-width: 300px) {
+  .audio-player-wrapper-fancy .audio-player .btn-group {
+    display: block;
+  }
+  .audio-player-wrapper-fancy .audio-player .btn-group .button:first-of-type {
+    display: block;
+  }
+}
+@media (min-width: 350px) {
+  .audio-player-wrapper-fancy .audio-player .audio-player-substack-logo {
+    display: block;
+  }
+  .audio-player-wrapper-fancy .audio-player .audio-player-title {
+    margin-top: 16px;
+  }
+  .audio-player-wrapper-fancy .audio-player .audio-player-hero-image-container {
+    padding-top: 15%;
+    width: 15%;
+    display: block;
+  }
+  .audio-player-wrapper-fancy .audio-player .btn-group .button:first-of-type {
+    display: block;
+  }
+  .audio-player-wrapper-fancy .audio-player .audio-player-substack-logo {
+    display: block;
+  }
+}
+@media (min-width: 350px) {
+  .audio-player-wrapper-fancy .audio-player .audio-player-hero-image-container {
+    padding-top: 25%;
+    width: 25%;
+    display: block;
+  }
+  .audio-player-wrapper-fancy .audio-player .btn-group {
+    display: flex;
+  }
+  .audio-player-wrapper-fancy .audio-player .btn-group .button:first-of-type {
+    display: block;
+  }
+}
+@media (min-width: 400px) {
+  .audio-player-wrapper-fancy .audio-player .audio-player-hero-image-container {
+    padding-top: 40%;
+    width: 40%;
+  }
+}
+@media (max-width: 400px) {
+  .audio-player-wrapper-fancy .audio-player .btn-group {
+    margin-top: 12px;
+  }
+  .audio-player-wrapper-fancy .audio-player .btn-group .button {
+    font-size: 13px;
+    padding: 6px 12px;
+    height: auto;
+    margin-top: 10px;
+  }
+}
+@media (min-width: 600px) {
+  .audio-player-wrapper-fancy .audio-player .audio-player-hero-image-container {
+    padding-top: 55%;
+    width: 55%;
+  }
+}
+@media (max-width: 650px) {
+  .poll-editor-modal {
+    min-width: calc(100% - 20px);
+  }
+}
+@media (max-width: 750px) {
+  .poll-embed .poll-anchor-target .poll-anchor-copy-button {
+    left: 8px;
+    top: 45px;
+  }
+}</style></head><body class="email-body" style="font-kerning: auto;--image-offset-margin: -120px;"><img src="https://eotrx.substackcdn.com/o/6902d37577c3b0bc/p.gif?token=eyJtIjoiPDIwMjYwNzI5MTMyNzIzLjMuZWVjNzViZDkxZTAzNzNmNkBtZy1kMS5zdWJzdGFjay5jb20-IiwidSI6MTA1MTg2NDcsInIiOiJiZW5vaXRjQGdtYWlsLmNvbSIsImQiOiJtZy1kMS5zdWJzdGFjay5jb20iLCJwIjoyMDQ5MjI2NDUsInQiOiJuZXdzbGV0dGVyIiwiYSI6ImV2ZXJ5b25lIiwicyI6Mjk1OTM3LCJjIjoicG9zdCIsImYiOnRydWUsInBvc2l0aW9uIjoidG9wIiwiaWF0IjoxNzg1MzMxNzk3LCJleHAiOjE3ODc5MjM3OTcsImlzcyI6InB1Yi0wIiwic3ViIjoiZW8ifQ.3xkac6h4U5gOsB4Uyby9TcHjWYU7IASVqNY4qytdF40" alt="" width="1" height="1" border="0" style="height:1px !important;width:1px !important;border-width:0 !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:0 !important;margin-left:0 !important;padding-top:0 !important;padding-bottom:0 !important;padding-right:0 !important;padding-left:0 !important;"/><div class="preview" style="display:none;font-size:1px;color:#333333;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;">what is progress, when there are no more unique arrangements of 0s and 1s?</div><div class="preview" style="display:none;font-size:1px;color:#333333;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;">&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;</div><table class="email-body-container" role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td></td><td class="content" width="550"></td><td></td></tr><tr><td></td><td class="content" width="550" align="left"><div style="font-size: 16px;line-height: 26px;max-width: 550px;width: 100%;margin: 0 auto;overflow-wrap: break-word;"><table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="right" style="height:20px;"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="vertical-align:middle;"><span class="pencraft pc-reset reset-IxiVJZ tw-font-body tw-text-ssm tw-text-substack-secondary" style="font-family: SF Pro Text, -apple-system, system-ui, BlinkMacSystemFont, Inter, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;font-size: 13px;color: unset;list-style: none;text-decoration: unset;margin: 0;"><div class="pencraft pc-reset align-right-VJbKw5 size-12-mmZ61m reset-IxiVJZ" style="list-style: none;color: unset;text-align: right;font-size: 12px;line-height: 16px;text-decoration: unset;margin: 0;"><span class="pencraft pc-reset reset-IxiVJZ" translated="" style="list-style: none;color: unset;text-decoration: unset;margin: 0;">Forwarded this email? <a class="pencraft pc-reset decoration-underline-ClTkYc reset-IxiVJZ" href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly9mcmVkZGllZGVib2VyLnN1YnN0YWNrLmNvbS9zdWJzY3JpYmU_dXRtX3NvdXJjZT1lbWFpbCZ1dG1fY2FtcGFpZ249ZW1haWwtc3Vic2NyaWJlJnI9NjlnOG4mbmV4dD1odHRwcyUzQSUyRiUyRmZyZWRkaWVkZWJvZXIuc3Vic3RhY2suY29tJTJGcCUyRnRoZS1wcm9qZWN0LW9mLXNvZnR3YXJlLWlzLWNvbXBsZXRlIiwicCI6MjA0OTIyNjQ1LCJzIjoyOTU5MzcsImYiOnRydWUsInUiOjEwNTE4NjQ3LCJpYXQiOjE3ODUzMzE3OTcsImV4cCI6MjEwMDkwNzc5NywiaXNzIjoicHViLTAiLCJzdWIiOiJsaW5rLXJlZGlyZWN0In0.BV1IpHdvBKZT7gN4k9v0pr-B8enQGW1o-ECSBiSoHUQ?" style="list-style: none;color: unset;text-decoration: unset;margin: 0;-webkit-text-decoration-line: underline;text-decoration-line: underline;">Subscribe here</a> for more</span></div></span></td></tr></tbody></table></td></tr></tbody></table><div class="typography" style="--image-offset-margin: -120px;font-size: 16px;line-height: 26px;"><div class="preamble" style="font-size: 16px;line-height: 26px;margin-top: 16px;"><div class="body markup" dir="auto" style="text-align: initial;font-size: 16px;line-height: 26px;width: 100%;word-break: break-word;margin-bottom: 16px;"><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;margin-top: 0;"></p><div class="subscribe-widget is-signed-up" data-component-name="SubscribeWidget" style="margin: 0 0 1em;direction: ltr;font-size: 16px;line-height: 26px;margin-bottom: 0;"><div class="pencraft pc-reset button-wrapper" style="text-decoration: unset;list-style: none;font-size: 16px;line-height: 26px;text-align: center;cursor: pointer;border-radius: 4px;"><a class="button subscribe-btn primary" href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly9mcmVkZGllZGVib2VyLnN1YnN0YWNrLmNvbS9zdWJzY3JpYmU_dXRtX3NvdXJjZT1wb3N0JnV0bV9jYW1wYWlnbj1lbWFpbC1jaGVja291dCZuZXh0PWh0dHBzJTNBJTJGJTJGZnJlZGRpZWRlYm9lci5zdWJzdGFjay5jb20lMkZwJTJGdGhlLXByb2plY3Qtb2Ytc29mdHdhcmUtaXMtY29tcGxldGUmcj02OWc4biZ0b2tlbj1leUoxYzJWeVgybGtJam94TURVeE9EWTBOeXdpYVdGMElqb3hOemcxTXpNeE56azNMQ0psZUhBaU9qRTNPRGM1TWpNM09UY3NJbWx6Y3lJNkluQjFZaTB5T1RVNU16Y2lMQ0p6ZFdJaU9pSmphR1ZqYTI5MWRDSjkuTzg0aDlMci1KTXVERElweVBkSEVVUElCWE5rWUtISEs2bnhJdEJ0N2tEbyIsInAiOjIwNDkyMjY0NSwicyI6Mjk1OTM3LCJmIjp0cnVlLCJ1IjoxMDUxODY0NywiaWF0IjoxNzg1MzMxNzk3LCJleHAiOjIxMDA5MDc3OTcsImlzcyI6InB1Yi0wIiwic3ViIjoibGluay1yZWRpcmVjdCJ9.KF8q2fzw4zcWH9Zs2-vONIlJ4mMX7n0Fm7AfPQZM3us?&utm_medium=email&utm_source=subscribe-widget&utm_content=204922645" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;box-sizing: border-box;cursor: pointer;border: none;border-radius: 8px;font-size: 14px;line-height: 20px;font-weight: 600;text-align: center;opacity: 1;outline: none;white-space: nowrap;text-decoration: none !important;background-color: #0076ff;color: #ffffff !important;margin: 0 auto;padding: 12px 20px;height: auto;"><span style="color: #ffffff;text-decoration: none;">Upgrade to paid</span></a></div></div></div><hr style="padding: 0;height: 1px;background: rgb(0,0,0,.1);border: none;margin: 16px 0 0;"></div></div><div class="post typography" dir="auto" style="--image-offset-margin: -120px;padding: 32px 0 0 0;font-size: 16px;line-height: 26px;"><div class="post-header" role="region" aria-label="Post header" style="font-size: 16px;line-height: 26px;"><h1 class="post-title published title-X77sOw" dir="auto" style="direction: auto;text-align: start;unicode-bidi: isolate;color: rgb(54,55,55);font-family: Lora,sans-serif;font-weight: 600;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: antialiased;-webkit-appearance: optimizelegibility;-moz-appearance: optimizelegibility;appearance: optimizelegibility;margin: 0;line-height: 36px;font-size: 32px;"><a href="https://substack.com/app-link/post?publication_id=295937&post_id=204922645&utm_source=post-email-title&utm_campaign=email-post-title&isFreemail=true&r=69g8n&token=eyJ1c2VyX2lkIjoxMDUxODY0NywicG9zdF9pZCI6MjA0OTIyNjQ1LCJpYXQiOjE3ODUzMzE3OTcsImV4cCI6MTc4NzkyMzc5NywiaXNzIjoicHViLTI5NTkzNyIsInN1YiI6InBvc3QtcmVhY3Rpb24ifQ.WDKWC0H-TVmakEijDOReH1TCXHvIg1-VtvtH4_jdzKg" style="color: rgb(54,55,55);text-decoration: none;">The Project of Software is Complete</a></h1><h3 class="subtitle subtitle-HEEcLo" dir="auto" style="direction: auto;text-align: start;unicode-bidi: isolate;font-family: 'SF Pro Display',-apple-system-headline,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight: normal;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: antialiased;-webkit-appearance: optimizelegibility;-moz-appearance: optimizelegibility;appearance: optimizelegibility;margin: 4px 0 0;color: #777777;line-height: 24px;font-size: 18px;margin-top: 12px;">what is progress, when there are no more unique arrangements of 0s and 1s?</h3><table class="post-meta" role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="margin: 1em 0;height: 20px;align-items: center;"><tbody><tr><td><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="vertical-align:middle;"><div class="pencraft pc-reset color-primary-zABazT line-height-20-t4M0El font-meta-MWBumP size-11-NuY2Zx weight-medium-fw81nC transform-uppercase-yKDgcq reset-IxiVJZ meta-EgzBVA custom-css-email-post-author" style="list-style: none;font-size: 11px;line-height: 20px;text-decoration: unset;color: rgb(54,55,55);margin: 0;font-family: 'SF Compact',-apple-system,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight: 500;text-transform: uppercase;letter-spacing: .2px;"><a class="pencraft pc-reset color-primary-zABazT line-height-20-t4M0El font-meta-MWBumP size-11-NuY2Zx weight-medium-fw81nC transform-uppercase-yKDgcq reset-IxiVJZ meta-EgzBVA" style="list-style: none;color: rgb(54,55,55);margin: 0;font-size: 11px;line-height: 20px;font-family: 'SF Compact',-apple-system,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight: 500;text-transform: uppercase;letter-spacing: .2px;text-decoration: none" href="https://substack.com/@freddiedeboer">Freddie deBoer</a></div></td></tr></tbody></table></td></tr><tr><td><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="vertical-align:middle;"><div class="pencraft pc-reset color-secondary-ls1g8s line-height-20-t4M0El font-meta-MWBumP size-11-NuY2Zx weight-medium-fw81nC transform-uppercase-yKDgcq reset-IxiVJZ meta-EgzBVA" style="list-style: none;font-size: 11px;line-height: 20px;text-decoration: unset;color: rgb(119,119,119);margin: 0;font-family: 'SF Compact',-apple-system,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight: 500;text-transform: uppercase;letter-spacing: .2px;"><time datetime="2026-07-29T13:27:22.153Z">Jul 29</time></div></td></tr></tbody></table></td></tr></tbody></table></td><td align="right"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="vertical-align:middle;"><a href="https://substack.com/@freddiedeboer"><img class="custom-css-email-avatar avatar-QIQ5yR" src="https://substackcdn.com/image/fetch/$s_!zHeX!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F1fc743b4-b5ed-4ad0-8bb4-c31f0077cd63_892x892.jpeg" style="box-sizing: border-box;max-width: 550px;border: none;vertical-align: middle;width: 40px;height: 40px;min-width: 40px;min-height: 40px;object-fit: cover;margin: 0px;display: inline;border-radius: 50%" width="40" height="40"></a></td></tr></tbody></table></td></tr></tbody></table><table class="email-ufi-2-top" role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="border-top: 1px solid rgb(0,0,0,.1);border-bottom: 1px solid rgb(0,0,0,.1);min-width: 100%;"><tbody><tr height="16"><td height="16" style="font-size:0px;line-height:0;">&nbsp;</td></tr><tr><td><table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="vertical-align:middle;"><table role="presentation" width="38" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="center"><a class="email-icon-button" href="https://substack.com/app-link/post?publication_id=295937&post_id=204922645&utm_source=substack&isFreemail=true&submitLike=true&token=eyJ1c2VyX2lkIjoxMDUxODY0NywicG9zdF9pZCI6MjA0OTIyNjQ1LCJyZWFjdGlvbiI6IuKdpCIsImlhdCI6MTc4NTMzMTc5NywiZXhwIjoxNzg3OTIzNzk3LCJpc3MiOiJwdWItMjk1OTM3Iiwic3ViIjoicmVhY3Rpb24ifQ.QxZTV8rL5J1y7Ig25FA4vE1ezJI9Weke-nHf743HaT0&utm_medium=email&utm_campaign=email-reaction&r=69g8n" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;font-weight: 500;border: 1px solid rgb(0,0,0,.1);border-radius: 9999px;text-transform: uppercase;font-size: 12px;line-height: 1;padding: 9px 0;text-decoration: none;color: rgb(119,119,119);min-width: 38px;box-sizing: border-box;width: 38px"><img class="icon" src="https://substackcdn.com/image/fetch/$s_!PeVs!,w_36,c_scale,f_png,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Ficon%2FLucideHeart%3Fv%3D4%26height%3D36%26fill%3Dnone%26stroke%3D%2523808080%26strokeWidth%3D2" width="18" height="18" style="border: none;vertical-align: middle;max-width: 18px" alt=""></a></td></tr></tbody></table></td><td width="8" style="min-width:8px;"></td><td style="vertical-align:middle;"><table role="presentation" width="38" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="center"><a class="email-icon-button" href="https://substack.com/app-link/post?publication_id=295937&post_id=204922645&utm_source=substack&utm_medium=email&isFreemail=true&comments=true&token=eyJ1c2VyX2lkIjoxMDUxODY0NywicG9zdF9pZCI6MjA0OTIyNjQ1LCJpYXQiOjE3ODUzMzE3OTcsImV4cCI6MTc4NzkyMzc5NywiaXNzIjoicHViLTI5NTkzNyIsInN1YiI6InBvc3QtcmVhY3Rpb24ifQ.WDKWC0H-TVmakEijDOReH1TCXHvIg1-VtvtH4_jdzKg&r=69g8n&utm_campaign=email-half-magic-comments&action=post-comment&utm_source=substack&utm_medium=email" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;font-weight: 500;border: 1px solid rgb(0,0,0,.1);border-radius: 9999px;text-transform: uppercase;font-size: 12px;line-height: 1;padding: 9px 0;text-decoration: none;color: rgb(119,119,119);min-width: 38px;box-sizing: border-box;width: 38px"><img class="icon" src="https://substackcdn.com/image/fetch/$s_!x1tS!,w_36,c_scale,f_png,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Ficon%2FLucideComments%3Fv%3D4%26height%3D36%26fill%3Dnone%26stroke%3D%2523808080%26strokeWidth%3D2" width="18" height="18" style="border: none;vertical-align: middle;max-width: 18px" alt=""></a></td></tr></tbody></table></td><td width="8" style="min-width:8px;"></td><td style="vertical-align:middle;"><table role="presentation" width="38" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="center"><a class="email-icon-button" href="https://substack.com/app-link/post?publication_id=295937&post_id=204922645&utm_source=substack&utm_medium=email&utm_content=share&utm_campaign=email-share&action=share&triggerShare=true&isFreemail=true&r=69g8n&token=eyJ1c2VyX2lkIjoxMDUxODY0NywicG9zdF9pZCI6MjA0OTIyNjQ1LCJpYXQiOjE3ODUzMzE3OTcsImV4cCI6MTc4NzkyMzc5NywiaXNzIjoicHViLTI5NTkzNyIsInN1YiI6InBvc3QtcmVhY3Rpb24ifQ.WDKWC0H-TVmakEijDOReH1TCXHvIg1-VtvtH4_jdzKg" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;font-weight: 500;border: 1px solid rgb(0,0,0,.1);border-radius: 9999px;text-transform: uppercase;font-size: 12px;line-height: 1;padding: 9px 0;text-decoration: none;color: rgb(119,119,119);min-width: 38px;box-sizing: border-box;width: 38px"><img class="icon" src="https://substackcdn.com/image/fetch/$s_!_L14!,w_36,c_scale,f_png,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Ficon%2FLucideShare2%3Fv%3D4%26height%3D36%26fill%3Dnone%26stroke%3D%2523808080%26strokeWidth%3D2" width="18" height="18" style="border: none;vertical-align: middle;max-width: 18px" alt=""></a></td></tr></tbody></table></td><td width="8" style="min-width:8px;"></td><td style="vertical-align:middle;"><table role="presentation" width="38" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="center"><a class="email-icon-button" href="https://open.substack.com/pub/freddiedeboer/p/the-project-of-software-is-complete?utm_source=substack&utm_medium=email&utm_campaign=email-restack-comment&action=restack-comment&r=69g8n&token=eyJ1c2VyX2lkIjoxMDUxODY0NywicG9zdF9pZCI6MjA0OTIyNjQ1LCJpYXQiOjE3ODUzMzE3OTcsImV4cCI6MTc4NzkyMzc5NywiaXNzIjoicHViLTI5NTkzNyIsInN1YiI6InBvc3QtcmVhY3Rpb24ifQ.WDKWC0H-TVmakEijDOReH1TCXHvIg1-VtvtH4_jdzKg&utm_source=substack&utm_medium=email" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;font-weight: 500;border: 1px solid rgb(0,0,0,.1);border-radius: 9999px;text-transform: uppercase;font-size: 12px;line-height: 1;padding: 9px 0;text-decoration: none;color: rgb(119,119,119);min-width: 38px;box-sizing: border-box;width: 38px"><img class="icon" src="https://substackcdn.com/image/fetch/$s_!ubXF!,w_36,c_scale,f_png,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Ficon%2Fnotes__NoteRestackIcon%3Fv%3D4%26height%3D36%26fill%3Dnone%26stroke%3D%2523808080%26strokeWidth%3D2%26strokeLinecap%3Dround%26strokeLinejoin%3Dround" width="18" height="18" alt="" style="max-width: 550px;border: none !important;vertical-align: middle;"></a></td></tr></tbody></table></td></tr></tbody></table></td><td align="right"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="vertical-align:middle;"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="center"><a class="email-button-outline" href="https://open.substack.com/pub/freddiedeboer/p/the-project-of-software-is-complete?utm_source=email&redirect=app-store&utm_campaign=email-read-in-app" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;font-weight: 500;border: 1px solid rgb(0,0,0,.1);border-radius: 9999px;text-transform: uppercase;font-size: 12px;line-height: 12px;padding: 9px 14px;text-decoration: none;color: rgb(119,119,119);"><div class="email-button-spacer" style="font-size: 16px;line-height: 26px;display: inline-block;vertical-align: middle;max-width: 0;min-height: 18px;"></div><span class="email-button-text" style="vertical-align: middle;margin-right: 4px">READ IN APP</span><img class="icon text-icon" src="https://substackcdn.com/image/fetch/$s_!ET-_!,w_36,c_scale,f_png,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Ficon%2FLucideArrowUpRight%3Fv%3D4%26height%3D36%26fill%3Dnone%26stroke%3D%2523808080%26strokeWidth%3D2" width="18" height="18" style="min-width: 18px;min-height: 18px;border: none;vertical-align: middle;margin-right: 0;margin-left: 0;max-width: 18px" alt=""></a></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></td></tr><tr height="16"><td height="16" style="font-size:0px;line-height:0;">&nbsp;</td></tr></tbody></table></div></div><div class="post typography" dir="auto" style="--image-offset-margin: -120px;padding: 32px 0 0 0;font-size: 16px;line-height: 26px;"><div class="body markup" dir="auto" style="text-align: initial;font-size: 16px;line-height: 26px;width: 100%;word-break: break-word;margin-bottom: 16px;font-family: Spectral,sans-serif;font-weight: 400;"><div class="captioned-image-container-static" style="font-size: 16px;line-height: 26px;margin: 32px auto;margin-top: 0;"><figure style="width: 100%;margin: 0 auto;"><table class="image-wrapper" width="100%" border="0" cellspacing="0" cellpadding="0" data-component-name="Image2ToDOMStatic" style="mso-padding-alt: 1em 0 1.6em;"><tbody><tr><td style="text-align: center;"></td><td class="content" align="left" width="1456" style="text-align: center;"><a class="image-link" target="_blank" href="https://substack.com/redirect/a94f8054-505b-44c3-aab1-f58ea5d6950f?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="position: relative;flex-direction: column;align-items: center;padding: 0;width: auto;height: auto;border: none;text-decoration: none;display: block;margin: 0;margin-top: 0;margin-bottom: 0;"><img class="wide-image" data-attrs="{&quot;src&quot;:&quot;https://substack-post-media.s3.amazonaws.com/public/images/b389a0ca-dbca-4c47-8526-0748cf60b795_1476x1065.png&quot;,&quot;srcNoWatermark&quot;:null,&quot;fullscreen&quot;:null,&quot;imageSize&quot;:null,&quot;height&quot;:1051,&quot;width&quot;:1456,&quot;resizeWidth&quot;:null,&quot;bytes&quot;:1056139,&quot;alt&quot;:null,&quot;title&quot;:null,&quot;type&quot;:&quot;image/png&quot;,&quot;href&quot;:null,&quot;belowTheFold&quot;:false,&quot;topImage&quot;:true,&quot;internalRedirect&quot;:&quot;https://freddiedeboer.substack.com/i/204922645?img=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb389a0ca-dbca-4c47-8526-0748cf60b795_1476x1065.png&quot;,&quot;isProcessing&quot;:false,&quot;align&quot;:null,&quot;offset&quot;:false}" alt="" width="550" height="397.0123626373626" src="https://substackcdn.com/image/fetch/$s_!5AaD!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb389a0ca-dbca-4c47-8526-0748cf60b795_1476x1065.png" style="border: none !important;vertical-align: middle;display: block;-ms-interpolation-mode: bicubic;height: auto;margin-bottom: 0;width: auto !important;max-width: 100% !important;margin: 0 auto;"></a></td><td style="text-align: center;"></td></tr></tbody></table></figure></div><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>You are aware, I imagine, of &#8220;vibe coding.&#8221; The large language models that have received so much fanfare in the past four years have thus far not delivered on the outsized promises that have been made on their behalf; limitless free energy, an end to hunger, and immortality have all conspicuously eluded us. One thing that LLMs really appear able to do well, though, is to write code. And this proficiency has gotten sufficiently advanced that many people now write software solely through directing an LLM, without necessarily having any actual programming skills themselves. The overwhelming majority of the output of this effort is useless or redundant or barely functional, true, but the mere fact that people can do it is an interesting statement on what &#8220;AI&#8221; </span><a href="https://substack.com/redirect/98ee5d83-bf07-4136-8e28-264f78025977?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">is actually good at</a><span>. And for stupid meme reasons we call this practice vibe coding.</span></p><div class="captioned-image-container-static" style="font-size: 16px;line-height: 26px;margin: 32px auto;"><figure style="width: 100%;margin: 0 auto;"><table class="image-wrapper" width="100%" border="0" cellspacing="0" cellpadding="0" data-component-name="Image2ToDOMStatic" style="mso-padding-alt: 1em 0 1.6em;"><tbody><tr><td style="text-align: center;"></td><td class="content" align="left" width="1100" style="text-align: center;"><a class="image-link" target="_blank" href="https://substack.com/redirect/6ddc78d7-d7be-4553-b8bf-cc4cf911aca5?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="position: relative;flex-direction: column;align-items: center;padding: 0;width: auto;height: auto;border: none;text-decoration: none;display: block;margin: 0;"><img class="wide-image" data-attrs="{&quot;src&quot;:&quot;https://substack-post-media.s3.amazonaws.com/public/images/ad03d419-92fd-49a4-be25-1705d764accd_1100x220.jpeg&quot;,&quot;srcNoWatermark&quot;:null,&quot;fullscreen&quot;:null,&quot;imageSize&quot;:null,&quot;height&quot;:220,&quot;width&quot;:1100,&quot;resizeWidth&quot;:null,&quot;bytes&quot;:42958,&quot;alt&quot;:null,&quot;title&quot;:null,&quot;type&quot;:&quot;image/jpeg&quot;,&quot;href&quot;:null,&quot;belowTheFold&quot;:false,&quot;topImage&quot;:false,&quot;internalRedirect&quot;:null,&quot;isProcessing&quot;:false,&quot;align&quot;:null,&quot;offset&quot;:false}" alt="" width="550" height="110" src="https://substackcdn.com/image/fetch/$s_!XO3i!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fad03d419-92fd-49a4-be25-1705d764accd_1100x220.jpeg" style="border: none !important;vertical-align: middle;display: block;-ms-interpolation-mode: bicubic;height: auto;margin-bottom: 0;width: auto !important;max-width: 100% !important;margin: 0 auto;"></a></td><td style="text-align: center;"></td></tr></tbody></table><figcaption class="image-caption" style="box-sizing: content-box;color: rgb(119,119,119);font-size: 14px;line-height: 20px;font-weight: 400;letter-spacing: -.15px;margin-top: 8px;width: 70%;padding-left: 15%;padding-right: 15%;text-align: center;"><a href="https://substack.com/redirect/805f63ed-b443-44bf-a386-5337a1ae1029?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="text-decoration: underline;">preorder All In Your Head now</a></figcaption></figure></div><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>So, in the past two-ish years, several hundred million human beings acquired the ability to write software by speaking to a machine in ordinary language. This was heralded (correctly, in a narrow technical sense) as a great democratization: a notoriously Byzantine skillset had been suddenly made available to vastly more people. A capacity once reserved for a priesthood of specialists, a relatively small society of craftsmen, has been distributed suddenly and nearly for free to baristas, accountants, fourteen-year-olds, retirees, you, me&#8230;. We have been told that the instruments now available to the general public are staggeringly powerful. The era of citizen coding is upon us! A reasonable person, informed of this, would have braced for the consequences. Surely </span><em>something </em><span>would have to change, right? A wave of brilliant new apps? A flowering of new affordances granted by software? </span><em>Any</em><span> visible change to daily life commensurate with the scale of the gift of vibe coding? All of the above, no doubt. All of the above and more.</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>Well, take a look around and tell me&#8230; where is it? What are the fruits of all of this vibe coding? What difference has it made? What is the great application that has emerged from all this liberated capacity? What new thing does our species now do with its hours that it did not do three years ago? What old thing does our species not have to do that it had to do three years ago? What chores have been eliminated, what friction has been smoothed over, what corner of ordinary existence been reshaped by the sudden arrival of hundreds of millions of amateur programmers? There&#8217;s been a great deal of </span><em>activity</em><span>, some of it quite frantic. There&#8217;s been a steady churn of half-built to-do apps and Wordle clones and boutique email clients that do nothing the old standbys can&#8217;t, weekend RPG projects that flare and vanish, and at the end of it, there&#8217;s a world essentially unchanged. And to give the teams at Anthropic and OpenAI their flowers, this has not been a failure </span><em>of their tools</em><span>. The tools work, more or less. This is all about something stranger and more important than a failure of the LLMs: the necessary work of software has already been done. We haven&#8217;t seen a lot of new types of software because we already have what we need. You can&#8217;t flood a vessel that&#8217;s already full, and the amateurs, God bless them, have been pouring this new power into a jug that we&#8217;ve been frantically filling throughout the 21st century.</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>The project of software is complete. Not decelerating, not maturing, not entering some new and humbler phase, but complete. Complete in the way that the map of the Earth is complete, which is to say complete in the sense that the great blank spaces have been filled and what remains is the labeling of tributaries and the correcting of coastlines, mapping and remapping the parts of the globe that are in a state of permanent flux, responding to changing conditions without altering our conception of the Earth. I&#8217;m aware of how this all sounds. In particular, I&#8217;m not naive to the fact that for those who write code for a living (whose number is </span><a href="https://substack.com/redirect/7311645a-f10d-434e-8061-11ce36f161bd?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">growing, not shrinking</a><span>, despite doomsaying) it&#8217;s going to sound provoking rather than provocative. I&#8217;m also aware that some are going to mistake my saying that the project of software is complete for somehow belittling the achievements of software. This is not the case! I assure you that I&#8217;m aware that I&#8217;m typing my argument into a machine that would have been indistinguishable from sorcery to my grandparents and then transmitting it through a lattice of code so vast and so intricate that no living person could comprehend more than a sliver of it. I am aware that software enables my current economic existence, however ambivalent I have become about that relationship. No, I&#8217;m not claiming that the global project of satisfying humanity&#8217;s appetite for software is in any sense unimportant. I am however claiming that it&#8217;s</span><em> finished</em><span>. It has been accomplished.</span></p><div class="captioned-image-container-static" style="font-size: 16px;line-height: 26px;margin: 32px auto;"><figure style="width: 100%;margin: 0 auto;"><table class="image-wrapper" width="100%" border="0" cellspacing="0" cellpadding="0" data-component-name="Image2ToDOMStatic" style="mso-padding-alt: 1em 0 1.6em;"><tbody><tr><td style="text-align: center;"></td><td class="content" align="left" width="1456" style="text-align: center;"><a class="image-link" target="_blank" href="https://substack.com/redirect/44dca9f2-16ff-48dd-96d2-b7e8ee97ffd7?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="position: relative;flex-direction: column;align-items: center;padding: 0;width: auto;height: auto;border: none;text-decoration: none;display: block;margin: 0;"><img class="wide-image" data-attrs="{&quot;src&quot;:&quot;https://substack-post-media.s3.amazonaws.com/public/images/94cc1f7c-5476-443c-a066-6aaa98fb8817_1672x941.png&quot;,&quot;srcNoWatermark&quot;:null,&quot;fullscreen&quot;:null,&quot;imageSize&quot;:null,&quot;height&quot;:819,&quot;width&quot;:1456,&quot;resizeWidth&quot;:null,&quot;bytes&quot;:1417113,&quot;alt&quot;:null,&quot;title&quot;:null,&quot;type&quot;:&quot;image/png&quot;,&quot;href&quot;:null,&quot;belowTheFold&quot;:false,&quot;topImage&quot;:false,&quot;internalRedirect&quot;:&quot;https://freddiedeboer.substack.com/i/204922645?img=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F94cc1f7c-5476-443c-a066-6aaa98fb8817_1672x941.png&quot;,&quot;isProcessing&quot;:false,&quot;align&quot;:null,&quot;offset&quot;:false}" alt="" width="550" height="309.375" src="https://substackcdn.com/image/fetch/$s_!_Y_d!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F94cc1f7c-5476-443c-a066-6aaa98fb8817_1672x941.png" style="border: none !important;vertical-align: middle;display: block;-ms-interpolation-mode: bicubic;height: auto;margin-bottom: 0;width: auto !important;max-width: 100% !important;margin: 0 auto;"></a></td><td style="text-align: center;"></td></tr></tbody></table></figure></div><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>Perhaps better than the map analogy is a comparison to the periodic table. The seven rows are complete. Following the synthesis of element 118, the seventh row of the periodic table has been filled in, running from hydrogen to onagesson. It sure </span><em>looks </em><span>done. But technically, yes, there&#8217;s more elements to be discovered; there are, I&#8217;m sure, any number of teams out there trying to will the 119th into being as we speak. But those temporarily undiscovered elements are synthetic, the product of human will, and exist only to satisfy human curiosity. They disappear faster than you can possibly imagine. There&#8217;s no natural, meaningful hole in the periodic table, no organic need to satisfy; there&#8217;s just our insatiable desire to keep looking for more, for the next horizon. You don&#8217;t extend the periodic table through a more clever arrangement of the symbols you already have, you extend it by going into the substrate and slamming atoms together to coax other atoms out of the wreckage. In other words, it&#8217;s a </span><em>matter</em><span> problem, a problem at the ragged edge of physical possibility, and it&#8217;s brutally expensive and slow. The abstraction itself? The table, the pattern, the predicted groups? That&#8217;s been complete, in every way that matters, for decades. Or put it this way: the frontier of the periodic table is invented, not discovered. And this is what I mean by software being complete. We will keep building out of our desire to build, and we&#8217;ll have a lot of maintenance to do, but we won&#8217;t be building out of </span><em>need</em><span>. As I keep telling you, we live in an era of refinement we insist on calling an era of innovation.</span></p><div style="font-size: 16px;line-height: 26px;"><hr style="margin: 32px 0;padding: 0;height: 1px;background: rgb(0,0,0,.1);border: none;"></div><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>So, here&#8217;s the tedious &#8220;to be sure&#8221; part. I don&#8217;t mean that no new programs will be written; programs will be written until the Earth swallows the sun. There will be new video games, new and often worse versions of applications you already own, new interfaces bolted onto old functions, new skins on old bones, a permanent and profitable churn of updates that move the buttons around and call it progress, and most of it will come with a subscription fee. And, yes, professional human software engineers will be a thing tomorrow and next week and in five years and in ten. What I mean is narrower but far-reaching and profound: the era of new software </span><em>categories</em><span> is over. There is no more true need for new types of software than there is need for new lines on the periodic table. The taxonomy is now a closed system; the great kingdoms and phyla of what code can do for human beings - communication, calculation, storage, retrieval, simulation, coordination - were largely determined decades ago, those taxonomic ranks have been filled in the 21st century thanks to the investment of trillions of dollars and the effort of our whole civilization, and what&#8217;s left to do is to pencil in new populations of programs within genera within phyla within kingdoms that have already been named. This might not sound like a big deal. I think it&#8217;s a very big deal, personally, if you truly grasp it.</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>Consider the test I&#8217;ve offered up in this newsletter before: when was the last time you wanted your phone to do something that it might reasonably someday do and yet could not? Not something silly like &#8220;give me infinite money,&#8221; but something a phone could reasonably do with enough power and with good enough software within the boundaries of what&#8217;s sensible. Honestly, what? What do you want your phone to do that it can&#8217;t? I&#8217;m not talking about your phone getting better at something it currently does badly; I&#8217;m talking about something that you want it to do that it currently does not do </span><em>at all</em><span>, an unoccupied category, a genuine absence. I&#8217;ve asked plenty of people this question and watched them reach, and reach, and return with what amounts to putting fresh paint on the same house - a better keyboard, a settings menu that&#8217;s easier to navigate, an app that already exists but which they wish was free. You want Spotify to not have ads? That&#8217;s an economic constraint, not a software constraint. You want your robot vacuum to not suck? That&#8217;s a mechanical problem, a robotics problem, an atoms problem rather than a bits problem. You want Instagram to let you see pictures of your friends instead of all the shit the algorithm feeds you instead? Meta </span><em>could </em><span>do that tomorrow, of course. They just won&#8217;t. You want Tinder to give you more attractive matches and to lead to better dates? I&#8217;m afraid that&#8217;s up to the dictates of the heart. What&#8217;s an </span><em>app </em><span>you&#8217;re missing? What problem do you have that could actually be fixed with the production of new code in any plausible near future?</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>What do you want your car to do that it can&#8217;t now do? Drive itself, you say. Well, that&#8217;s coming, although it&#8217;s going to take longer and be more expensive than you&#8217;ve been told. Waymos drive themselves, but with a far larger amount of &#8220;calling home&#8221; for human guidance than the media wants to admit, and in tightly bound geofenced locales, and only in certain kinds of places in certain kinds of climates&#8230;. These are problems, some of them software-sensitive, but full self-driving is not ultimately a software problem; it&#8217;s the problem of a two-ton object moving through a physical world of infinite and lethal contingency, full of people who can and will sue, and no quantity of code will conjure the sensors, the redundancy, the regulations, the whole material and legal substrate that reality stubbornly withholds. More to the point, once full self-driving is everywhere, that will be one more solved software problem, and the result will be a moderately-meaningful change in corporeal reality but one that pales in comparison to the birth of the railroad or the transition from horses to cars, another example of the </span><a href="https://substack.com/redirect/76c5919b-048d-4afa-9df5-05aff94394ef?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">indoor plumbing test</a><span>. Self-driving cars will eventually provide ordinary people with digital chauffeurs. That&#8217;s cool. But it obviously fails the tests for genuinely revolutionary technology I keep posing.</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>Wanting more from software certainly has not stopped, and some wants will be filled by code. But the organic, natural demand for </span><em>new categories</em><span> of software has stopped. We&#8217;ve failed to notice, largely because Silicon Valley would very much like if everyone believed that we&#8217;re forever on the cusp of a new era of human experience. They keep the hype cycle going, they keep the churn of breathless media coverage and irresponsible speculation going, the kabuki of adding a little more CPU power and memory to phones that only need more because we keep making the software they run less efficient, then calling that innovation. It&#8217;s the work of trying to convince the world that laptop and smartphone development haven&#8217;t been stuck in the same place for a long, long time. All of that is loud and lucrative and it can sometimes look like progress. But ask yourself: what is the program that you can imagine that can do plausible things that you can&#8217;t do now? What is the new actual </span><em>frontier </em><span>of where software has to go? Remember when everyone was going to get rich making iPhone apps? Well, nobody really talks about that anymore. Because what apps do you not have that you need?</span></p><div class="pullquote" style="font-size: 16px;line-height: 26px;border-top: 1px solid rgb(0,0,0,.1);border-bottom: 1px solid rgb(0,0,0,.1);margin: 32px auto;text-align: center;"><p style="color: rgb(54,55,55);line-height: 26px;font-size: 16px;margin: 32px 0;text-align: center;font-weight: 500;font-style: italic;">L.L.M.s can do many things with astounding proficiency, but they can&#8217;t do the vast majority of human jobs without skidding into disaster here and there. No upgrades or new model rollouts are going to change that.</p><p style="color: rgb(54,55,55);line-height: 26px;font-size: 16px;margin: 32px 0;text-align: center;font-weight: 500;font-style: italic;"><span>The exceptions to that rule are jobs that occupy formal or verifiable domains. Coding is one such job. It relies on a structured, formal language that can be tested in real time. That&#8217;s why we&#8217;re seeing such impact in the coding jobs market. The same goes for any other kind of work in which output is either verifiably right or wrong, functional or not functional, and can be definitively checked through an automated process. An overwhelming number of jobs, however, don&#8217;t work like that - </span><a href="https://substack.com/redirect/98ee5d83-bf07-4136-8e28-264f78025977?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">Zeynep Tufecki</a></p></div><div class="captioned-image-container-static" style="font-size: 16px;line-height: 26px;margin: 32px auto;"><figure style="width: 100%;margin: 0 auto;"><table class="image-wrapper" width="100%" border="0" cellspacing="0" cellpadding="0" data-component-name="Image2ToDOMStatic" style="mso-padding-alt: 1em 0 1.6em;"><tbody><tr><td style="text-align: center;"></td><td class="content" align="left" width="1456" style="text-align: center;"><a class="image-link" target="_blank" href="https://substack.com/redirect/15f5a553-337b-424d-970d-049e5a2f209c?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="position: relative;flex-direction: column;align-items: center;padding: 0;width: auto;height: auto;border: none;text-decoration: none;display: block;margin: 0;"><img class="wide-image" data-attrs="{&quot;src&quot;:&quot;https://substack-post-media.s3.amazonaws.com/public/images/acf78c7c-d9a7-4aeb-a0e0-9f31dbf70657_1672x941.png&quot;,&quot;srcNoWatermark&quot;:null,&quot;fullscreen&quot;:null,&quot;imageSize&quot;:null,&quot;height&quot;:819,&quot;width&quot;:1456,&quot;resizeWidth&quot;:null,&quot;bytes&quot;:1292967,&quot;alt&quot;:null,&quot;title&quot;:null,&quot;type&quot;:&quot;image/png&quot;,&quot;href&quot;:null,&quot;belowTheFold&quot;:true,&quot;topImage&quot;:false,&quot;internalRedirect&quot;:&quot;https://freddiedeboer.substack.com/i/204922645?img=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Facf78c7c-d9a7-4aeb-a0e0-9f31dbf70657_1672x941.png&quot;,&quot;isProcessing&quot;:false,&quot;align&quot;:null,&quot;offset&quot;:false}" alt="" width="550" height="309.375" src="https://substackcdn.com/image/fetch/$s_!BmqH!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Facf78c7c-d9a7-4aeb-a0e0-9f31dbf70657_1672x941.png" style="border: none !important;vertical-align: middle;display: block;-ms-interpolation-mode: bicubic;height: auto;margin-bottom: 0;width: auto !important;max-width: 100% !important;margin: 0 auto;"></a></td><td style="text-align: center;"></td></tr></tbody></table></figure></div><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>Every technology travels a curve. The curve is, generally, not exponential in the way tech evangelists imagine. Instead it&#8217;s the logistic curve, the S-shaped curve. A logistic curve begins flat, in the long dark of the laboratory and the failed prototype, then it turns upward into the steep, delirious, world-remaking steep middle where it seems the growth will never end and the word &#8220;exponential&#8221; seems like an honest assessment and then - and this is the part the evangelists always forget, because they&#8217;re always standing in that delirious steep middle when they speak, whether in reality or in their imaginations - the curve bends over. This is usually imperceptible as it happens but is often very obvious in retrospect. The resources that were consumed in the heady steep part, whatever they were (engineer time, compute, electricity, bandwidth, take your pick) runs low, and the curve flattens into a new and permanent plateau. The bacterial colony fills the dish; the rumor reaches everyone who will ever want to hear it; he transistors stop shrinking; (I am aware that I am engaging in wild leaps of metaphor here, but let&#8217;s go with it.) What&#8217;s particularly risky about the S-curve is that </span><em>from any point along it, the recent past looks exactly like the near future</em><span>; we can&#8217;t shake the memory of the steep middle part, which persists long after the curve itself has gone flat. We are, I&#8217;m suggesting, standing on the (or a) plateau of software and convincing ourselves that we&#8217;re still climbing.</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>And, look, yes, when one S-curve saturates, another sometimes begins - progress continues, in other words, because one plateau becomes the start of a new climbing curve. Vacuum tubes gave way to transistors which gave way to integrated circuits, and each could be considered its own curve, and if you stack them together you get something like the smooth exponential we called Moore&#8217;s Law. (Which will be called dying or dead and then declared very much alive in competing essays until the end of time.) Well, yes, sometimes the plateau of one S curve is just the beginning of another, sure. This is true and kind of, sort of, precisely my worry: for the end of one S-curve to become the beginning of another requires that a </span><em>new reality</em><span> that&#8217;s waiting underneath the old one. My claim is that software, having reached the ceiling of natural human need in anything like the recognizable human world, has no new reality move into. There&#8217;s no more fundamental layer of computation to migrate to. The next curve, if it comes, won&#8217;t be built on top of more code. Instead we need a different kind of new development, one which will come in the world of atoms, not the world of bits, which means we&#8217;re stuck in the same problem. On the first quarter-decade of the 21st century, humanity invested everything it had in computing, what a professor of mine once called ubiquitous silicon-based algorithmic orchestration. We reached the limits of what it was possible in Java or C++. Now we need something to be developed </span><em>outside of computing</em><span> to have a new world to grow into, in order for a new S-curve to start. And, like&#8230; where is that thing? </span><em>What </em><span>is that thing? </span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>What the maximalists </span><a href="https://substack.com/redirect/12291969-5c97-41df-a9c5-8d93f3d085ff?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">keep insisting</a><span> is that it goes the other way, that new code will lead to new frontiers. But there&#8217;s just no reason at all to believe that they&#8217;re right, and every day of an LLM-saturated world that doesn&#8217;t much change is a piece of evidence against them. How many more years are we supposed to keep waiting? We&#8217;re already being told that </span><a href="https://substack.com/redirect/645d5f9b-7730-4b41-ac72-0820f4332ae4?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">AGI 2027</a><span> has been delayed. Maybe the new prediction is right. Or maybe we&#8217;re in an </span><em><a href="https://substack.com/redirect/aebaecf9-1d6f-469e-b0a7-a97282a69abf?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">Duke Nukem Forever</a><span> </span></em><span>situation here.</span></p><div class="pullquote" style="font-size: 16px;line-height: 26px;border-top: 1px solid rgb(0,0,0,.1);border-bottom: 1px solid rgb(0,0,0,.1);margin: 32px auto;text-align: center;"><p style="color: rgb(54,55,55);line-height: 26px;font-size: 16px;margin: 32px 0;text-align: center;font-weight: 500;font-style: italic;">This is the hot new thing, where you have the model make something, you see if it gets verified by a compiler or other software testing tool, and then it tries again. And you hear the senior AI people be like, &#8220;I write loops now. I didn&#8217;t even write prompts. I write loops. And off it goes and it does its own thing&#8230;.&#8221; And you just kind of look at this and you&#8217;re like, does this extend to anything else? If you want to build a bridge, do you know how you verify that a bridge won&#8217;t collapse? There&#8217;s many, many other domains in the world where the verifiability and the ability to make a loop against that verifier happens outside of a computer. I always use the legal system as an example. The verification in the legal system is a judge. Who are very unpredictable! And you can&#8217;t be like, &#8220;Well we&#8217;re gonna run that again, judge.&#8221; No, you&#8217;re going to jail. The judge says, &#8220;Off to jail with you.&#8221; There&#8217;s no loop that will occur here, my friend. </p><p style="color: rgb(54,55,55);line-height: 26px;font-size: 16px;margin: 32px 0;text-align: center;font-weight: 500;font-style: italic;"><span>And this is my worry with the AI industry: they try to generalize everything from the experience of software engineering over and over and over again. None of this is the thing that we were promised from AI. - </span><a href="https://substack.com/redirect/cb7c4771-5a9e-455e-bd9e-f0f3e527697d?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">Nilay Patel</a></p><h3 style="font-family: 'SF Pro Display',-apple-system-headline,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight: bold;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: antialiased;-webkit-appearance: optimizelegibility;-moz-appearance: optimizelegibility;appearance: optimizelegibility;margin: 1em 0 0.625em 0;color: rgb(54,55,55);line-height: 1.16em;font-size: calc(1.375em * 1);"></h3></div><div class="captioned-image-container-static" style="font-size: 16px;line-height: 26px;margin: 32px auto;"><figure style="width: 100%;margin: 0 auto;"><table class="image-wrapper" width="100%" border="0" cellspacing="0" cellpadding="0" data-component-name="Image2ToDOMStatic" style="mso-padding-alt: 1em 0 1.6em;"><tbody><tr><td style="text-align: center;"></td><td class="content" align="left" width="1456" style="text-align: center;"><a class="image-link" target="_blank" href="https://substack.com/redirect/9a30e66d-a728-4beb-bc40-583ff9cb1d21?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="position: relative;flex-direction: column;align-items: center;padding: 0;width: auto;height: auto;border: none;text-decoration: none;display: block;margin: 0;"><img class="wide-image" data-attrs="{&quot;src&quot;:&quot;https://substack-post-media.s3.amazonaws.com/public/images/9be2aab8-3ab9-43c8-bf6e-36bcf7cfe760_1653x952.png&quot;,&quot;srcNoWatermark&quot;:null,&quot;fullscreen&quot;:null,&quot;imageSize&quot;:null,&quot;height&quot;:839,&quot;width&quot;:1456,&quot;resizeWidth&quot;:null,&quot;bytes&quot;:1095473,&quot;alt&quot;:null,&quot;title&quot;:null,&quot;type&quot;:&quot;image/png&quot;,&quot;href&quot;:null,&quot;belowTheFold&quot;:true,&quot;topImage&quot;:false,&quot;internalRedirect&quot;:&quot;https://freddiedeboer.substack.com/i/204922645?img=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F9be2aab8-3ab9-43c8-bf6e-36bcf7cfe760_1653x952.png&quot;,&quot;isProcessing&quot;:false,&quot;align&quot;:null,&quot;offset&quot;:false}" alt="" width="550" height="316.92994505494505" src="https://substackcdn.com/image/fetch/$s_!S9_l!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F9be2aab8-3ab9-43c8-bf6e-36bcf7cfe760_1653x952.png" style="border: none !important;vertical-align: middle;display: block;-ms-interpolation-mode: bicubic;height: auto;margin-bottom: 0;width: auto !important;max-width: 100% !important;margin: 0 auto;"></a></td><td style="text-align: center;"></td></tr></tbody></table></figure></div><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>The biologist Stuart Kauffman coined a term that was intended for use in the science of evolution, but which is easily and usefully portable to technology: the adjacent possible. At any moment, a system (a chemical system, say, or an ecosystem, or an economy of ideas, push the boundaries into fuzzier spaces as you wish) is surrounded by a shell of conditions that do not yet exist but that </span><em>could</em><span> exist through some series of changes to the things already do exist. The adjacent possible is the set of all next steps. And it is, I would emphasize, not an abstraction but a physical reality. Evolution doesn&#8217;t leap, or at least not in the ordinary natural selection-driven way; evolution colonizes the adjacent possible one door at a time, and each door it opens reveals further doors that were not previously reachable. And here&#8217;s why I say this isn&#8217;t an abstraction: the adjacent possible is not a fixed perimeter waiting to be reached but a boundary that expands as you make contact with it. Each change itself becomes a new unit of raw material available for the next change, so that entering a door does not merely amount to investigating a possibility but creates the possibility of others rooms that could not have been imagined from the hallway. If you follow me. </span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>Sounds great, right? Sounds like how we get to the stars, right? No. Again, this metaphor comes from evolution. And while evolution has produced incredibly variety and some astonishing forms of life, it also has clear and insurmountable limits. We have bioluminescent algae and translucent deep sea creatures and carnivorous plants, but we don&#8217;t have birds that can fly to the moon or rabbits that can travel through time or frogs that shoot lava from their butts. Billions of years of evolution have led to some remarkable organisms, and we will see more, but evolution can only expand life into the </span><em>adjacent </em><span>possible, not the imaginable possible. There are limits. What I&#8217;m arguing is that the adjacent possible in software is remarkably constrained and largely similar to what we&#8217;ve already gotten. For most of the history of computing, the adjacent possible was enormous, the American frontier in 1800, the blank part of the map, Mendeleev&#8217;s periodic table. Every new category (the spreadsheet, the browser, the search engine, the social network, the smartphone) flung open a new wing of rooms that each had their own closets and each closet their own shelves&#8230;. But sooner or later you get to the point where you&#8217;re the explorer in an era of satellite photography, you know? You find that you&#8217;re a chemist trying to invent the 119th chemical because you want tenure or a grant or bragging rights - you&#8217;re looking to expand into the adjacent possible because you want to, not because you need to.</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">This is the sensation we&#8217;ve mistaken for the permanent nature of software, the sensation of a frontier. But a frontier is a permanently-contracting thing; they pretty much never grow. What made the early categories of software so fertile was precisely that each was a general instrument and not a finished use. The spreadsheet was not just an application but a surface upon which so many new possibilities could be imagined; the web browser was not an empty notebook but a bookshelf onto which you could place a new notebook into which you could then write your own story. Each opened wing of computing, for awhile, held up the wings above it - there&#8217;s no internet without the database and no YouTube without the internet and no Twitch without YouTube&#8230;. The categories we generate now are terminal. A habit tracker (which appears to be one of the most common vibe coding projects) might be very useful but they don&#8217;t open onto any other rooms; a habit tracker has no next frontier. A meal-planning app is a leaf, not a branch, a completed structure rather than raw material for other things. The adjacent possible of software is looking pretty damned saturated to me; the new things we make have ceased to be the building blocks of newer things. The doors we open now open onto rooms we&#8217;ve already stood in. </p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">This is why the vibe-coders, the newly minted programmers who can summon a working program by talking to a machine and have lofty ambitions about what they&#8217;ll accomplish, have with all their liberated capacity produced so stunningly little worth caring about: almost all of them are creating for its own sake. I appreciate the romance of that. But what does it tell you, that one of the most asked questions in vibe coding subreddits is &#8220;What should I vibe code?&#8221;</p><div class="pullquote" style="font-size: 16px;line-height: 26px;border-top: 1px solid rgb(0,0,0,.1);border-bottom: 1px solid rgb(0,0,0,.1);margin: 32px auto;text-align: center;"><p style="color: rgb(54,55,55);line-height: 26px;font-size: 16px;margin: 32px 0;text-align: center;font-weight: 500;font-style: italic;"><span>&#8220;The limits of my language mean the limits of my world.&#8221;</span><br><span>- Ludwig Wittgenstein</span></p></div><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>Software is an abstraction. It&#8217;s a layer of pure symbol laid over the physical world, and its power, its real and consequential power, is the ability to rearrange itself at no cost and at nearly the speed of light. </span><em>But software itself can only ever manipulate symbols.</em><span> Software can&#8217;t touch physical reality itself, only through intermediaries. And it happens that every one of the civilizational prizes we actually long for, the ones for which we seek to invent the future in the first place, lie in the real and not in the symbolic. We want the end of cancer; that&#8217;s a problem of proteins and cells and the maddening three-dimensional origami of wet matter, and you can&#8217;t refactor a tumor. (You definitely don&#8217;t get to try that loop again&#8230;.) We want limitless clean energy; that is (probably?) really a problem of confining a plasma hotter than the core of the sun inside a container literally made out of magnetism, and no elegant code can do that for you, no cool algorithm can change the bare physics. We want to defeat death; that&#8217;s the bits vs atom problem in its purest and most total form. The flesh is weak, or so I&#8217;m told. We want the flying car, the space elevator, the cure, the fountain of youth&#8230; and we&#8217;ve spent forty or fifty years pouring our collective genius into this one kind of abstract endeavor, which by its very nature can build none of these things. Because it&#8217;s </span><em>made</em><span> of nothing! Because it&#8217;s all symbols on top of symbols on top of symbols.</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>Software was never going to deliver the future. Software was the thing we did </span><em>instead of</em><span> the future, because it has orderly rules, because it&#8217;s cheap to make, because inside its narrow confines the returns come fast and the failures are easy to identify and contain. And we really did remake human interiority along the way; I once talked to a very smart person who told me that the fundamental problem of modernity is that we mistake everything for information, which sounded wise even though I didn&#8217;t really understand him. I think the idea is that the computing age has caused us to forget that reality comes before abstraction, that intelligence is a powerful tool for manipulating language and symbols but far far more limited when it comes to manipulating the stuff of the universe, matter, atoms, reality. Computer science is seductive because code is </span><em>easy to manipulate</em><span>. Code looks like it can be whatever we want it to be. It&#8217;s a </span><a href="https://substack.com/redirect/8e2a47b7-a012-47a2-a87e-6f70bc7f40e5?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">&#8220;streelight effect&#8221;</a><span> type thing. In a world of non-compliant atoms we put our faith in code, which was so obedient. We built an abstraction layer on top of our planet and optimized that layer to perfection precisely because we couldn&#8217;t crack the base reality - and then, having perfected the abstraction, we told ourselves the pleasant bedtime story that the abstraction was where the future had been hiding all along.</span></p><div class="pullquote" style="font-size: 16px;line-height: 26px;border-top: 1px solid rgb(0,0,0,.1);border-bottom: 1px solid rgb(0,0,0,.1);margin: 32px auto;text-align: center;"><p style="color: rgb(54,55,55);line-height: 26px;font-size: 16px;margin: 32px 0;text-align: center;font-weight: 500;font-style: italic;"><span>Digital stuff as we have known it has a brittle quality that forces people to conform to it, rather than assess it. We&#8217;ve all endured the agony of watching some poor soul at a doctor&#8217;s office struggle to do the expected thing on a front-desk screen. The face contorts; humanity is undermined. - </span><a href="https://substack.com/redirect/48566212-06b6-437b-a744-2f6ca404df64?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">Jaron Lanier</a></p></div><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">One more goofy analogy: the financial derivative and the actual asset. A derivative, broadly defined, is a symbol referencing a symbol referencing the asset - think of a mortgage bond, a CDO, a synthetic whatever made up of other whatevers, each layer pure abstraction stacked on the layer of pure abstraction below it&#8230;. The financial system can compound and elaborate the abstractions essentially without limit, at the speed of some coked-out finance guy&#8217;s keyboard&#8230; right up until someone has to cash out the abstraction and get to the thing itself. That&#8217;s what happened in the financial crisis - the actual houses, the actual borrowers who couldn&#8217;t make their payments, the actual real-world economy, it turned out that couldn&#8217;t be manipulated like the abstraction layer. The ruined homeowner tossing the keys into the foreclosed home and walking away? Yeah, turns out he was real. And somehow people were stupid enough, or greedy enough, to leave him out of their immensely complicated software models. My admittedly too-precious argument here is that, if you go up one level, you see that our entire relationship to computing functions the same way: we make the abstractions more and more complicated so that we can avoid seeing how far from the material world we really are.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>I&#8217;d like to suggest that the large language model is the most complete and most seductive expression of the software trap I&#8217;ve been talking about. At the heart of the large language model, you have a training corpus, software trained on the output of other software, symbols distilled from the accumulated symbols of our entire species, an abstraction whose raw material is </span><em>other abstractions</em><span>. When an LLM goes looking for something it inevitably finds itself, you might say. An LLM, can be a mirror that we mistake for the reality it reflects. And notice the direction that the hype points towards: not outwards, towards matter, towards things, towards our recalcitrant physical world, but inwards and downwards - into even more code!, more chips! more compute!, more layers of abstraction on abstraction on abstraction&#8230;. To repeat myself, LLMs produce </span><em>redundant abundance: </em><span>what they&#8217;re actually good at making is things that we already had an immense amount of, (digital) writing, (digital) artwork, (digital) music, (digital) video, and code, code, and more code. The LLM era is perverse because you have this whole cult of maximalists who truly believe they&#8217;re going to have their own asteroid farm someday but the technology they&#8217;ve nominated to get them there is just another abstraction generator. We&#8217;re pouring our money, our attention, and our most brilliant young minds into the most recursive, most inward-facing, most reality-indifferent technology ever constructed, and waiting for the Rapture.</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>I&#8217;m hardly the first to say this, but - the point is not that </span><em>artificial </em><span>intelligence has limits we won&#8217;t admit. The point is that </span><em>intelligence </em><span>has limits we won&#8217;t admit. I keep sharing </span><a href="https://substack.com/redirect/e7f31874-b458-4ca1-8094-3ae4038c9cdf?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">this brilliant Kim Stanley Robinson essay</a><span>, which systematically demolishes the idea that we will one day colonize other solar systems. I find it relevant and poignant because Robinson so artfully demonstrates that these dreams crash against the rocks of physics </span><em>no matter how smart we are. </em><span>Because yes, folks, there are problems so hard nobody can be smart enough to solve them. </span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>Look, nobody can stand inside a curve and measure its arc with certainty, and if I&#8217;m saying that about the AI charlatans I have to say it about myself too. It remains possible that some genuinely new undiscovered category of software waits out there for us in the unlit dark, and that I will appear foolish in a few years. Sure, maybe. But I&#8217;ll just say what I&#8217;ve been saying since the beginning: show me. Show me! Show me LLMs slipping the surly bonds of earth and doing something out here in meatspace, in the world of atoms, in the grubby land of iron and sand and bone that we actually live in, rather than in the magical land of Honalee that is the increasingly unhinged imagination of Silicon Valley. Prove it. </span><em>Show me something </em><span>instead of constantly telling me what you think is going to happen and then rolling your eyes at my skepticism. I need proof because I&#8217;ve become quite sure that the answer to our exhaustion isn&#8217;t more of the thing that&#8217;s exhausted us. The next phase - of our technology, of our prosperity, of our existence - is not going to be written by LLMs because it&#8217;s not going to be </span><em>written</em><span> at all. It&#8217;s going to be </span><em>built</em><span>, in atoms, in matter, in a grubby and unglamorous real world that doesn&#8217;t yield just because the code is elegant. People will be writing software as long as there are people, but in a very real way we&#8217;ve finished software, at least until we get to the </span><em>Jetsons </em><span>world of teleporters and warp drive, and we almost certainly can&#8217;t get there. </span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">The map of plausible short-term technological progress appears to be complete. And I get that that&#8217;s scary. I get that it&#8217;s inconvenient for the stock market. I get that it seems depressing. Personally, I&#8217;m content to live in this world, so long as we&#8217;re willing to make life better for everyone with the tedious work of politics and solidarity, but I get why you might long for the stars. But wishing doesn&#8217;t make it so, and as the AI titan Peter Norvig once said, pursuing artificial intelligence can be like trying to reach the moon by climbing a tree: for awhile, you can report steady progress. I&#8217;m here suggesting that we&#8217;re coming very close to grasping the highest branch.</p><div class="subscribe-widget is-signed-up" data-component-name="SubscribeWidget" style="margin: 0 0 1em;direction: ltr;font-size: 16px;line-height: 26px;"><div class="pencraft pc-reset button-wrapper" style="text-decoration: unset;list-style: none;font-size: 16px;line-height: 26px;text-align: center;cursor: pointer;border-radius: 4px;"><a class="button subscribe-btn primary" href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly9mcmVkZGllZGVib2VyLnN1YnN0YWNrLmNvbS9zdWJzY3JpYmU_dXRtX3NvdXJjZT1wb3N0JnV0bV9jYW1wYWlnbj1lbWFpbC1jaGVja291dCZuZXh0PWh0dHBzJTNBJTJGJTJGZnJlZGRpZWRlYm9lci5zdWJzdGFjay5jb20lMkZwJTJGdGhlLXByb2plY3Qtb2Ytc29mdHdhcmUtaXMtY29tcGxldGUmcj02OWc4biZ0b2tlbj1leUoxYzJWeVgybGtJam94TURVeE9EWTBOeXdpYVdGMElqb3hOemcxTXpNeE56azNMQ0psZUhBaU9qRTNPRGM1TWpNM09UY3NJbWx6Y3lJNkluQjFZaTB5T1RVNU16Y2lMQ0p6ZFdJaU9pSmphR1ZqYTI5MWRDSjkuTzg0aDlMci1KTXVERElweVBkSEVVUElCWE5rWUtISEs2bnhJdEJ0N2tEbyIsInAiOjIwNDkyMjY0NSwicyI6Mjk1OTM3LCJmIjp0cnVlLCJ1IjoxMDUxODY0NywiaWF0IjoxNzg1MzMxNzk3LCJleHAiOjIxMDA5MDc3OTcsImlzcyI6InB1Yi0wIiwic3ViIjoibGluay1yZWRpcmVjdCJ9.KF8q2fzw4zcWH9Zs2-vONIlJ4mMX7n0Fm7AfPQZM3us?&utm_medium=email&utm_source=subscribe-widget&utm_content=204922645" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;box-sizing: border-box;cursor: pointer;border: none;border-radius: 8px;font-size: 14px;line-height: 20px;font-weight: 600;text-align: center;opacity: 1;outline: none;white-space: nowrap;text-decoration: none !important;margin: 0 auto;background-color: #0076ff;color: #ffffff !important;padding: 12px 20px;height: auto;"><span style="color: #ffffff;text-decoration: none;">Upgrade to paid</span></a></div></div><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;margin-bottom: 0;"></p></div></div><div class="container-border" style="margin: 32px 0 0;width: 100%;box-sizing: border-box;border-top: 1px solid #e6e6e6;font-size: 16px;line-height: 26px;"></div><div class="post-cta typography markup" style="--image-offset-margin: -120px;font-family: Spectral,sans-serif;font-weight: 400;text-align: initial;word-break: break-word;margin-bottom: 32px;margin: 32px 0;font-size: 16px;line-height: 26px;"><p style="color: rgb(54,55,55);margin: 0 auto 20px;text-align: center;width: 90%;line-height: 26px;font-size: 16px;margin-top: 0;"><span class="pencraft pc-reset reset-IxiVJZ" translated="" style="list-style: none;color: unset;text-decoration: unset;margin: 0;">You're currently a free subscriber to <a href="https://substack.com/redirect/1cfb4dbd-1ed1-4c26-9c27-ad43d508375e?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">Freddie deBoer</a>. For the full experience, <a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly9mcmVkZGllZGVib2VyLnN1YnN0YWNrLmNvbS9zdWJzY3JpYmU_dXRtX3NvdXJjZT1wb3N0JnV0bV9jYW1wYWlnbj1lbWFpbC1jaGVja291dCZuZXh0PWh0dHBzJTNBJTJGJTJGZnJlZGRpZWRlYm9lci5zdWJzdGFjay5jb20lMkZwJTJGdGhlLXByb2plY3Qtb2Ytc29mdHdhcmUtaXMtY29tcGxldGUmcj02OWc4biZ0b2tlbj1leUoxYzJWeVgybGtJam94TURVeE9EWTBOeXdpYVdGMElqb3hOemcxTXpNeE56azNMQ0psZUhBaU9qRTNPRGM1TWpNM09UY3NJbWx6Y3lJNkluQjFZaTB5T1RVNU16Y2lMQ0p6ZFdJaU9pSmphR1ZqYTI5MWRDSjkuTzg0aDlMci1KTXVERElweVBkSEVVUElCWE5rWUtISEs2bnhJdEJ0N2tEbyIsInAiOjIwNDkyMjY0NSwicyI6Mjk1OTM3LCJmIjp0cnVlLCJ1IjoxMDUxODY0NywiaWF0IjoxNzg1MzMxNzk3LCJleHAiOjIxMDA5MDc3OTcsImlzcyI6InB1Yi0wIiwic3ViIjoibGluay1yZWRpcmVjdCJ9.KF8q2fzw4zcWH9Zs2-vONIlJ4mMX7n0Fm7AfPQZM3us?&utm_source=substack&utm_medium=email&utm_content=postcta" style="color: rgb(54,55,55);text-decoration: underline;">upgrade your subscription.</a></span></p><p class="cta-box" style="color: rgb(54,55,55);margin: 0 auto 20px;width: 90%;line-height: 26px;font-size: 16px;margin-bottom: 0;text-align: center;margin-left: auto;margin-right: auto;"><a class="button primary" role="button" href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly9mcmVkZGllZGVib2VyLnN1YnN0YWNrLmNvbS9zdWJzY3JpYmU_dXRtX3NvdXJjZT1wb3N0JnV0bV9jYW1wYWlnbj1lbWFpbC1jaGVja291dCZuZXh0PWh0dHBzJTNBJTJGJTJGZnJlZGRpZWRlYm9lci5zdWJzdGFjay5jb20lMkZwJTJGdGhlLXByb2plY3Qtb2Ytc29mdHdhcmUtaXMtY29tcGxldGUmcj02OWc4biZ0b2tlbj1leUoxYzJWeVgybGtJam94TURVeE9EWTBOeXdpYVdGMElqb3hOemcxTXpNeE56azNMQ0psZUhBaU9qRTNPRGM1TWpNM09UY3NJbWx6Y3lJNkluQjFZaTB5T1RVNU16Y2lMQ0p6ZFdJaU9pSmphR1ZqYTI5MWRDSjkuTzg0aDlMci1KTXVERElweVBkSEVVUElCWE5rWUtISEs2bnhJdEJ0N2tEbyIsInAiOjIwNDkyMjY0NSwicyI6Mjk1OTM3LCJmIjp0cnVlLCJ1IjoxMDUxODY0NywiaWF0IjoxNzg1MzMxNzk3LCJleHAiOjIxMDA5MDc3OTcsImlzcyI6InB1Yi0wIiwic3ViIjoibGluay1yZWRpcmVjdCJ9.KF8q2fzw4zcWH9Zs2-vONIlJ4mMX7n0Fm7AfPQZM3us?&utm_source=substack&utm_medium=email&utm_content=postcta" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;box-sizing: border-box;cursor: pointer;border: none;height: 40px;border-radius: 8px;font-size: 14px;line-height: 20px;font-weight: 600;text-align: center;padding: 10px 20px;margin: 0;opacity: 1;outline: none;white-space: nowrap;color: #ffffff !important;text-decoration: none !important;background-color: #0076ff;">Upgrade to paid</a></p></div><table class="email-ufi-2-bottom" role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="border-top: 1px solid rgb(0,0,0,.1);border-bottom: 1px solid rgb(0,0,0,.1);min-width: 100%;"><tbody><tr height="16"><td height="16" style="font-size:0px;line-height:0;">&nbsp;</td></tr><tr><td><table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0" style="margin:0 auto;"><tbody><tr><td style="vertical-align:middle;"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="center"><a class="email-button-outline" href="https://substack.com/app-link/post?publication_id=295937&post_id=204922645&utm_source=substack&isFreemail=true&submitLike=true&token=eyJ1c2VyX2lkIjoxMDUxODY0NywicG9zdF9pZCI6MjA0OTIyNjQ1LCJyZWFjdGlvbiI6IuKdpCIsImlhdCI6MTc4NTMzMTc5NywiZXhwIjoxNzg3OTIzNzk3LCJpc3MiOiJwdWItMjk1OTM3Iiwic3ViIjoicmVhY3Rpb24ifQ.QxZTV8rL5J1y7Ig25FA4vE1ezJI9Weke-nHf743HaT0&utm_medium=email&utm_campaign=email-reaction&r=69g8n" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;font-weight: 500;border: 1px solid rgb(0,0,0,.1);border-radius: 9999px;text-transform: uppercase;font-size: 12px;line-height: 12px;padding: 9px 14px;text-decoration: none;color: rgb(119,119,119);"><img class="icon" src="https://substackcdn.com/image/fetch/$s_!PeVs!,w_36,c_scale,f_png,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Ficon%2FLucideHeart%3Fv%3D4%26height%3D36%26fill%3Dnone%26stroke%3D%2523808080%26strokeWidth%3D2" width="18" height="18" style="margin-right: 8px;min-width: 18px;min-height: 18px;border: none;vertical-align: middle;max-width: 18px" alt=""><span class="email-button-text" style="vertical-align: middle;">Like</span></a></td></tr></tbody></table></td><td width="8" style="min-width:8px;"></td><td style="vertical-align:middle;"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="center"><a class="email-button-outline" href="https://substack.com/app-link/post?publication_id=295937&post_id=204922645&utm_source=substack&utm_medium=email&isFreemail=true&comments=true&token=eyJ1c2VyX2lkIjoxMDUxODY0NywicG9zdF9pZCI6MjA0OTIyNjQ1LCJpYXQiOjE3ODUzMzE3OTcsImV4cCI6MTc4NzkyMzc5NywiaXNzIjoicHViLTI5NTkzNyIsInN1YiI6InBvc3QtcmVhY3Rpb24ifQ.WDKWC0H-TVmakEijDOReH1TCXHvIg1-VtvtH4_jdzKg&r=69g8n&utm_campaign=email-half-magic-comments&action=post-comment&utm_source=substack&utm_medium=email" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;font-weight: 500;border: 1px solid rgb(0,0,0,.1);border-radius: 9999px;text-transform: uppercase;font-size: 12px;line-height: 12px;padding: 9px 14px;text-decoration: none;color: rgb(119,119,119);"><img class="icon" src="https://substackcdn.com/image/fetch/$s_!x1tS!,w_36,c_scale,f_png,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Ficon%2FLucideComments%3Fv%3D4%26height%3D36%26fill%3Dnone%26stroke%3D%2523808080%26strokeWidth%3D2" width="18" height="18" style="margin-right: 8px;min-width: 18px;min-height: 18px;border: none;vertical-align: middle;max-width: 18px" alt=""><span class="email-button-text" style="vertical-align: middle;">Comment</span></a></td></tr></tbody></table></td><td width="8" style="min-width:8px;"></td><td style="vertical-align:middle;"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="center"><a class="email-button-outline" href="https://open.substack.com/pub/freddiedeboer/p/the-project-of-software-is-complete?utm_source=substack&utm_medium=email&utm_campaign=email-restack-comment&action=restack-comment&r=69g8n&token=eyJ1c2VyX2lkIjoxMDUxODY0NywicG9zdF9pZCI6MjA0OTIyNjQ1LCJpYXQiOjE3ODUzMzE3OTcsImV4cCI6MTc4NzkyMzc5NywiaXNzIjoicHViLTI5NTkzNyIsInN1YiI6InBvc3QtcmVhY3Rpb24ifQ.WDKWC0H-TVmakEijDOReH1TCXHvIg1-VtvtH4_jdzKg&utm_source=substack&utm_medium=email" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;font-weight: 500;border: 1px solid rgb(0,0,0,.1);border-radius: 9999px;text-transform: uppercase;font-size: 12px;line-height: 12px;padding: 9px 14px;text-decoration: none;color: rgb(119,119,119);"><img class="icon" src="https://substackcdn.com/image/fetch/$s_!ubXF!,w_36,c_scale,f_png,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Ficon%2Fnotes__NoteRestackIcon%3Fv%3D4%26height%3D36%26fill%3Dnone%26stroke%3D%2523808080%26strokeWidth%3D2%26strokeLinecap%3Dround%26strokeLinejoin%3Dround" width="18" height="18" alt="" style="margin-right: 8px;min-width: 18px;min-height: 18px;max-width: 550px;border: none !important;vertical-align: middle;"><span class="email-button-text" style="vertical-align: middle;">Restack</span></a></td></tr></tbody></table></td></tr></tbody></table></td><td align="right"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr></tr></tbody></table></td></tr></tbody></table></td></tr><tr height="16"><td height="16" style="font-size:0px;line-height:0;">&nbsp;</td></tr></tbody></table><div class="footer footer-ZM59BM" style="color: rgb(119,119,119);text-align: center;font-size: 16px;line-height: 26px;padding: 24px0;"><div style="font-size: 16px;line-height: 26px;padding-bottom: 24px"><p class="pencraft pc-reset color-secondary-ls1g8s size-12-mmZ61m reset-IxiVJZ small meta-B2bqa5" style="list-style: none;font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';padding-bottom: 0;font-size: 12px;line-height: 16px;margin: 0;color: rgb(119,119,119);text-decoration: unset;">&#169; 2026 <span>Fredrik deBoer</span><br>548 Market Street PMB 72296, San Francisco, CA 94104 <br><a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly9mcmVkZGllZGVib2VyLnN1YnN0YWNrLmNvbS9hY3Rpb24vZGlzYWJsZV9lbWFpbD90b2tlbj1leUoxYzJWeVgybGtJam94TURVeE9EWTBOeXdpY0c5emRGOXBaQ0k2TWpBME9USXlOalExTENKcFlYUWlPakUzT0RVek16RTNPVGNzSW1WNGNDSTZNVGd4TmpnMk56YzVOeXdpYVhOeklqb2ljSFZpTFRJNU5Ua3pOeUlzSW5OMVlpSTZJbVJwYzJGaWJHVmZaVzFoYVd3aWZRLk5fRXc5M0QySk5VdUlKb1l6OUVnYVJwaFEwVWpFTEhOUGdmWnZLa19QYjgiLCJwIjoyMDQ5MjI2NDUsInMiOjI5NTkzNywiZiI6dHJ1ZSwidSI6MTA1MTg2NDcsImlhdCI6MTc4NTMzMTc5NywiZXhwIjoyMTAwOTA3Nzk3LCJpc3MiOiJwdWItMCIsInN1YiI6ImxpbmstcmVkaXJlY3QifQ.EpKOtfAoZjHtNVgpppwduuOP-Pmt_tlB9vDIZjCNB4U?" style="text-decoration: underline;color: rgb(119,119,119);"><span style="color: rgb(119,119,119);text-decoration: underline;">Unsubscribe</span></a></p></div><p class="footerSection-EHR0jG small powered-by-substack" style="padding: 0 24px;font-size: 12px;line-height: 20px;margin: 0;color: rgb(119,119,119);font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';padding-bottom: 0;margin-top: 0;"><a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly9zdWJzdGFjay5jb20vc2lnbnVwP3V0bV9zb3VyY2U9c3Vic3RhY2smdXRtX21lZGl1bT1lbWFpbCZ1dG1fY29udGVudD1mb290ZXImdXRtX2NhbXBhaWduPWF1dG9maWxsZWQtZm9vdGVyJmZyZWVTaWdudXBFbWFpbD1iZW5vaXRjQGdtYWlsLmNvbSZyPTY5ZzhuIiwicCI6MjA0OTIyNjQ1LCJzIjoyOTU5MzcsImYiOnRydWUsInUiOjEwNTE4NjQ3LCJpYXQiOjE3ODUzMzE3OTcsImV4cCI6MjEwMDkwNzc5NywiaXNzIjoicHViLTAiLCJzdWIiOiJsaW5rLXJlZGlyZWN0In0.eWG4bXyF1yYyKFWbw8L97IM2f8r1Bh-nnXIVL_6RfRs?" style="color: rgb(119,119,119);text-decoration: none;display: inline-block;margin: 0 4px;"><img src="https://substackcdn.com/image/fetch/$s_!LkrL!,w_270,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Fimg%2Femail%2Fpublish-button%402x.png" srcset="https://substackcdn.com/image/fetch/$s_!wgfj!,w_135,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Fimg%2Femail%2Fpublish-button.png, https://substackcdn.com/image/fetch/$s_!LkrL!,w_270,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Fimg%2Femail%2Fpublish-button%402x.png 2x, https://substackcdn.com/image/fetch/$s_!KjtY!,w_405,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Fimg%2Femail%2Fpublish-button%403x.png 3x" width="135" alt="Start writing" height="40" style="max-width: 550px;border: none !important;vertical-align: middle;"></a></p></div></div></td><td></td></tr></tbody></table><img src="https://eotrx.substackcdn.com/o/eed89bb44dc08bd3/p.gif?token=eyJtIjoiPDIwMjYwNzI5MTMyNzIzLjMuZWVjNzViZDkxZTAzNzNmNkBtZy1kMS5zdWJzdGFjay5jb20-IiwidSI6MTA1MTg2NDcsInIiOiJiZW5vaXRjQGdtYWlsLmNvbSIsImQiOiJtZy1kMS5zdWJzdGFjay5jb20iLCJwIjoyMDQ5MjI2NDUsInQiOiJuZXdzbGV0dGVyIiwiYSI6ImV2ZXJ5b25lIiwicyI6Mjk1OTM3LCJjIjoicG9zdCIsImYiOnRydWUsInBvc2l0aW9uIjoiYm90dG9tIiwiaWF0IjoxNzg1MzMxNzk3LCJleHAiOjE3ODc5MjM3OTcsImlzcyI6InB1Yi0wIiwic3ViIjoiZW8ifQ.aCwsD8Yuvi4xbpHj_MA7REe7SaRY2fDVrQlEldKLHlQ" alt="" width="1" height="1" border="0" style="height:1px !important;width:1px !important;border-width:0 !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:0 !important;margin-left:0 !important;padding-top:0 !important;padding-bottom:0 !important;padding-right:0 !important;padding-left:0 !important;"/><img width="1" height="1" alt="" src="https://email.mg-d1.substack.com/o/eJxE0FmKxCAUheHVlG8djMbpwbUEh5O0dKKFQzXZfVMD9Ou58PNxg-vYS73svbROouXGUx0kgZ2VFpzPymiC06Vj3ZFRXUdcXf-_Kq0Z-bbeMBGUNIoGQ5k3Qge9OC2lYhuU30iyjDJJFTMzZ4rxiU9AUMJHM4NyxTd5W-i5f8V5asO37sLPFMpJUlu3ihfB9jpAntLVjZiQAyweqFfJnzlFy-hiGJOLeC_9usNm_LYDvaOS-_BrKOc5curXiuz8gfgJD3-k4Hoq-RUywnBFqvXIJfVwW-j-VLxUbfhYTpey3SpiTIjwBZX09yNHQ302ZipmLRdFHpb9BQAA__-GqHfq"></body></html></body></html>
