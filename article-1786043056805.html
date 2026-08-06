@@ -1,0 +1,793 @@
+<html><head><meta name="robots" content="noindex"><title>The Odyssey as tech criticism</title></head><body><html lang="en" dir="ltr" style="scrollbar-width: thin;scrollbar-color: rgb(219,219,219)rgb(255,255,255);"><head><meta charset="utf-8"><title>The Odyssey as tech criticism</title><style>
+@media (max-width: 1024px) {
+  .typography .pullquote-align-left,
+  .typography.editor .pullquote-align-left,
+  .typography .pullquote-align-right,
+  .typography.editor .pullquote-align-right,
+  .typography .pullquote-align-wide,
+  .typography.editor .pullquote-align-wide,
+  .typography .pullquote-align-center,
+  .typography.editor .pullquote-align-center {
+    float: none;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .typography .markup table.image-wrapper img,
+  .typography.editor .markup table.image-wrapper img,
+  .typography .markup table.kindle-wrapper img,
+  .typography.editor .markup table.kindle-wrapper img {
+    max-width: 550px;
+  }
+}
+@media (min-width: 1024px) {
+  .typography:not(:has(#toc)) .captioned-image-container figure:has(> a.image2-offset-left),
+  .typography.editor:not(:has(#toc)) .captioned-image-container figure:has(> a.image2-offset-left) {
+    margin-left: var(--image-offset-margin);
+  }
+  .typography:not(:has(#toc)) .captioned-image-container figure:has(> a.image2-offset-right),
+  .typography.editor:not(:has(#toc)) .captioned-image-container figure:has(> a.image2-offset-right) {
+    margin-right: var(--image-offset-margin);
+  }
+}
+@media (min-width: 1300px) {
+  .typography .captioned-image-container figure:has(> a.image2-offset-left),
+  .typography.editor .captioned-image-container figure:has(> a.image2-offset-left) {
+    margin-left: var(--image-offset-margin);
+  }
+  .typography .captioned-image-container figure:has(> a.image2-offset-right),
+  .typography.editor .captioned-image-container figure:has(> a.image2-offset-right) {
+    margin-right: var(--image-offset-margin);
+  }
+}
+@media (max-width: 1024px) {
+  .typography,
+  .typography.editor {
+    /* Disable offset on mobile/tablet */
+  }
+  .typography .captioned-image-container figure:has(> a.image2-align-left),
+  .typography.editor .captioned-image-container figure:has(> a.image2-align-left),
+  .typography .captioned-image-container figure:has(> a.image2-align-right),
+  .typography.editor .captioned-image-container figure:has(> a.image2-align-right) {
+    float: none;
+    margin: 1em auto;
+    max-width: 100%;
+    width: auto;
+    padding: 0;
+  }
+  .typography .captioned-image-container figure:has(> a.image2-align-left.thefp),
+  .typography.editor .captioned-image-container figure:has(> a.image2-align-left.thefp),
+  .typography .captioned-image-container figure:has(> a.image2-align-right.thefp),
+  .typography.editor .captioned-image-container figure:has(> a.image2-align-right.thefp) {
+    margin: 1em auto;
+  }
+  .typography .captioned-image-container figure:has(> a.image2-offset-left),
+  .typography.editor .captioned-image-container figure:has(> a.image2-offset-left),
+  .typography .captioned-image-container figure:has(> a.image2-offset-right),
+  .typography.editor .captioned-image-container figure:has(> a.image2-offset-right) {
+    margin: 1em auto;
+  }
+  .typography .captioned-image-container figure:has(> a.image2-align-left) .image2-inset,
+  .typography.editor .captioned-image-container figure:has(> a.image2-align-left) .image2-inset,
+  .typography .captioned-image-container figure:has(> a.image2-align-right) .image2-inset,
+  .typography.editor .captioned-image-container figure:has(> a.image2-align-right) .image2-inset {
+    display: block;
+    justify-content: initial;
+  }
+}
+@media (max-width: 768px) {
+  .typography .markup div.sponsorship-campaign-embed,
+  .typography.editor .markup div.sponsorship-campaign-embed {
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+  .typography .markup div.sponsorship-campaign-embed:first-child,
+  .typography.editor .markup div.sponsorship-campaign-embed:first-child {
+    margin-top: 0px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .typography .markup div.youtube-overlay,
+  .typography.editor .markup div.youtube-overlay,
+  .typography .markup div.vimeo-overlay,
+  .typography.editor .markup div.vimeo-overlay {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 370px) {
+  .typography .markup div.tiktok-wrap,
+  .typography.editor .markup div.tiktok-wrap {
+    width: calc(95vw - 32px);
+    height: calc((95vw - 32px - 2px) / 0.485714);
+  }
+}
+@media screen and (max-width: 650px) {
+  .typography .markup div.embedded-publication-wrap .embedded-publication.show-subscribe,
+  .typography.editor .markup div.embedded-publication-wrap .embedded-publication.show-subscribe {
+    padding: 24px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .typography .markup div.subscription-widget-wrap .subscription-widget.show-subscribe,
+  .typography.editor .markup div.subscription-widget-wrap .subscription-widget.show-subscribe,
+  .typography .markup div.subscription-widget-wrap-editor .subscription-widget.show-subscribe,
+  .typography.editor .markup div.subscription-widget-wrap-editor .subscription-widget.show-subscribe,
+  .typography .markup div.captioned-button-wrap .subscription-widget.show-subscribe,
+  .typography.editor .markup div.captioned-button-wrap .subscription-widget.show-subscribe {
+    padding: 0px 24px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .typography .markup div.subscription-widget-wrap .subscription-widget.show-subscribe .subscription-widget-subscribe .button,
+  .typography.editor .markup div.subscription-widget-wrap .subscription-widget.show-subscribe .subscription-widget-subscribe .button,
+  .typography .markup div.subscription-widget-wrap-editor .subscription-widget.show-subscribe .subscription-widget-subscribe .button,
+  .typography.editor .markup div.subscription-widget-wrap-editor .subscription-widget.show-subscribe .subscription-widget-subscribe .button,
+  .typography .markup div.captioned-button-wrap .subscription-widget.show-subscribe .subscription-widget-subscribe .button,
+  .typography.editor .markup div.captioned-button-wrap .subscription-widget.show-subscribe .subscription-widget-subscribe .button {
+    padding: 10px 12px;
+    min-width: 110px;
+  }
+}
+@media (max-width: 650px) {
+  .typography .markup .twitter-embed,
+  .typography.editor .markup .twitter-embed,
+  .typography .markup .tweet,
+  .typography.editor .markup .tweet {
+    padding: 12px;
+  }
+}
+@media (max-width: 650px) {
+  .typography .markup .twitter-embed .tweet-text,
+  .typography.editor .markup .twitter-embed .tweet-text,
+  .typography .markup .tweet .tweet-text,
+  .typography.editor .markup .tweet .tweet-text {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+@media (max-width: 650px) {
+  .typography .markup .twitter-embed .tweet-photos-container.two,
+  .typography.editor .markup .twitter-embed .tweet-photos-container.two,
+  .typography .markup .tweet .tweet-photos-container.two,
+  .typography.editor .markup .tweet .tweet-photos-container.two,
+  .typography .markup .twitter-embed .tweet-photos-container.three,
+  .typography.editor .markup .twitter-embed .tweet-photos-container.three,
+  .typography .markup .tweet .tweet-photos-container.three,
+  .typography.editor .markup .tweet .tweet-photos-container.three,
+  .typography .markup .twitter-embed .tweet-photos-container.four,
+  .typography.editor .markup .twitter-embed .tweet-photos-container.four,
+  .typography .markup .tweet .tweet-photos-container.four,
+  .typography.editor .markup .tweet .tweet-photos-container.four {
+    height: 200px;
+  }
+}
+@media (max-width: 650px) {
+  .typography .markup .twitter-embed a.expanded-link .expanded-link-img,
+  .typography.editor .markup .twitter-embed a.expanded-link .expanded-link-img,
+  .typography .markup .tweet a.expanded-link .expanded-link-img,
+  .typography.editor .markup .tweet a.expanded-link .expanded-link-img {
+    max-height: 180px;
+  }
+}
+@media (max-width: 650px) {
+  .typography .markup .twitter-embed a.expanded-link .expanded-link-description,
+  .typography.editor .markup .twitter-embed a.expanded-link .expanded-link-description,
+  .typography .markup .tweet a.expanded-link .expanded-link-description,
+  .typography.editor .markup .tweet a.expanded-link .expanded-link-description {
+    display: none;
+  }
+}
+@media screen and (max-width: 650px) {
+  .typography .markup .apple-podcast-container,
+  .typography.editor .markup .apple-podcast-container {
+    width: unset;
+  }
+}
+@media (max-width: 420px) {
+  .typography .markup .install-substack-app-embed img.install-substack-app-embed-img,
+  .typography.editor .markup .install-substack-app-embed img.install-substack-app-embed-img {
+    margin: 0 auto 16px auto;
+  }
+}
+@media (max-width: 420px) {
+  .typography .markup .install-substack-app-embed .install-substack-app-embed-text,
+  .typography.editor .markup .install-substack-app-embed .install-substack-app-embed-text {
+    margin: 0 0 12px 0;
+    max-width: 100%;
+    width: auto;
+    text-align: center;
+  }
+}
+@media (max-width: 420px) {
+  .typography .markup .install-substack-app-embed .install-substack-app-embed-link,
+  .typography.editor .markup .install-substack-app-embed .install-substack-app-embed-link {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 481px) {
+  .share-button-container {
+    height: 38px;
+  }
+}
+@media screen and (min-width: 481px) {
+  .share-button-container a.comment {
+    height: 38px;
+    line-height: 38px;
+    padding-right: 10px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .share-button-container .separator {
+    display: block;
+    margin: 0;
+    height: 8px;
+    border-left: none;
+  }
+}
+@media screen and (max-width: 480px) {
+  .share-button-container a.share.first img {
+    padding-left: 0;
+  }
+}
+@media screen and (min-width: 481px) {
+  .share-button-container a.mobile {
+    display: none !important;
+  }
+}
+@media screen and (min-width: 541px) {
+  .settings-add-pub-modal-wrapper .container .add-recommending-pub-modal-container {
+    padding: 36px;
+    height: 680px;
+  }
+}
+@media screen and (min-width: 541px) {
+  .settings-add-pub-modal-wrapper .container .add-recommending-pub-modal-container .footer {
+    position: absolute;
+    bottom: 36px;
+    margin: 0px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .header-anchor-parent {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .post {
+    padding: 16px 0 0 0;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post .post-header .post-label {
+    margin-top: 8px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post .post-header .meta-author-wrap.alternative-meta .meta-right-column .post-meta {
+    margin-top: 6px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post .footer-facepile-container {
+    height: 64px;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post .post-footer.use-separators {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post .post-footer.next-prev {
+    height: 64px;
+    justify-content: space-between;
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post-contributor-footer .post-contributor-bio-table {
+    display: block;
+  }
+  .post-contributor-footer .post-contributor-bio-table-row {
+    display: flex;
+    flex-direction: row;
+  }
+  .post-contributor-footer .post-contributor-bio-userhead-cell,
+  .post-contributor-footer .post-contributor-bio-body-cell {
+    display: block;
+  }
+  .post-contributor-footer .post-contributor-bio-body-cell {
+    flex-grow: 1;
+  }
+  .post-contributor-footer .post-contributor-bio-body-table {
+    display: block;
+  }
+  .post-contributor-footer .post-contributor-bio-body-table-row {
+    display: block;
+  }
+  .post-contributor-footer .post-contributor-bio-copy-cell,
+  .post-contributor-footer .post-contributor-bio-controls-cell {
+    display: block;
+  }
+  .post-contributor-footer .post-contributor-bio-copy-cell {
+    margin: 0 0 16px 0;
+  }
+  .post-contributor-footer .post-contributor-bio-controls-cell {
+    width: auto;
+  }
+  .post-contributor-footer .post-contributor-bio-controls {
+    margin: auto;
+  }
+  .post-contributor-footer .post-contributor-bio-controls .button.primary {
+    width: 100%;
+  }
+  .post-contributor-footer .post-contributor-bio-text {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .post-silhouette {
+    padding: 32px 0;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post-silhouette .post-silhouette-title {
+    margin-top: 10.44225025px;
+    height: 120px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post-silhouette .post-silhouette-meta {
+    width: 75%;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post-silhouette .post-silhouette-meta.with-byline-image {
+    margin: 20px 0;
+  }
+}
+@media screen and (max-width: 650px) {
+  .use-theme-bg .post-meta.alternative-meta .post-meta-item,
+  .post-meta.alternative-meta .post-meta-item {
+    padding-right: 16px;
+  }
+}
+@media screen and (max-width: 370px) {
+  .use-theme-bg .post-meta.alternative-meta .post-meta-item,
+  .post-meta.alternative-meta .post-meta-item {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .use-theme-bg .post-meta.alternative-meta .post-meta-item.guest-author-publication,
+  .post-meta.alternative-meta .post-meta-item.guest-author-publication {
+    display: none;
+  }
+}
+@media screen and (max-width: 370px) {
+  .post-meta .post-meta-item .post-meta-button {
+    height: 36px !important;
+    /* important to override in-line height style on emails */
+  }
+  .post-meta .post-meta-item .post-meta-button .meta-button-label {
+    display: none;
+  }
+  .post-meta .post-meta-item .post-meta-button > svg {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 370px) {
+  .post-meta .post-meta-item {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post .floating-subscribe-button {
+    bottom: 20px;
+    right: 20px;
+  }
+}
+@media screen and (max-width: 480px) {
+  body.bulwark-email-thebulwark .bulwark-email-title {
+    font-size: 32px !important;
+    line-height: 36px !important;
+  }
+}
+@media (max-width: 1024px) {
+  body .pullquote-align-left,
+  body .pullquote-align-right,
+  body .pullquote-align-wide,
+  body .pullquote-align-center {
+    float: none;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  body .markup table.image-wrapper img,
+  body .markup table.kindle-wrapper img {
+    max-width: 550px;
+  }
+}
+@media (min-width: 1024px) {
+  body:not(:has(#toc)) .captioned-image-container figure:has(> a.image2-offset-left) {
+    margin-left: var(--image-offset-margin);
+  }
+  body:not(:has(#toc)) .captioned-image-container figure:has(> a.image2-offset-right) {
+    margin-right: var(--image-offset-margin);
+  }
+}
+@media (min-width: 1300px) {
+  body .captioned-image-container figure:has(> a.image2-offset-left) {
+    margin-left: var(--image-offset-margin);
+  }
+  body .captioned-image-container figure:has(> a.image2-offset-right) {
+    margin-right: var(--image-offset-margin);
+  }
+}
+@media (max-width: 1024px) {
+  body {
+    /* Disable offset on mobile/tablet */
+  }
+  body .captioned-image-container figure:has(> a.image2-align-left),
+  body .captioned-image-container figure:has(> a.image2-align-right) {
+    float: none;
+    margin: 1em auto;
+    max-width: 100%;
+    width: auto;
+    padding: 0;
+  }
+  body .captioned-image-container figure:has(> a.image2-align-left.thefp),
+  body .captioned-image-container figure:has(> a.image2-align-right.thefp) {
+    margin: 1em auto;
+  }
+  body .captioned-image-container figure:has(> a.image2-offset-left),
+  body .captioned-image-container figure:has(> a.image2-offset-right) {
+    margin: 1em auto;
+  }
+  body .captioned-image-container figure:has(> a.image2-align-left) .image2-inset,
+  body .captioned-image-container figure:has(> a.image2-align-right) .image2-inset {
+    display: block;
+    justify-content: initial;
+  }
+}
+@media (max-width: 768px) {
+  body .markup div.sponsorship-campaign-embed {
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+  body .markup div.sponsorship-campaign-embed:first-child {
+    margin-top: 0px;
+  }
+}
+@media screen and (max-width: 650px) {
+  body .markup div.youtube-overlay,
+  body .markup div.vimeo-overlay {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 370px) {
+  body .markup div.tiktok-wrap {
+    width: calc(95vw - 32px);
+    height: calc((95vw - 32px - 2px) / 0.485714);
+  }
+}
+@media screen and (max-width: 650px) {
+  body .markup div.embedded-publication-wrap .embedded-publication.show-subscribe {
+    padding: 24px;
+  }
+}
+@media screen and (max-width: 650px) {
+  body .markup div.subscription-widget-wrap .subscription-widget.show-subscribe,
+  body .markup div.subscription-widget-wrap-editor .subscription-widget.show-subscribe,
+  body .markup div.captioned-button-wrap .subscription-widget.show-subscribe {
+    padding: 0px 24px;
+  }
+}
+@media screen and (max-width: 650px) {
+  body .markup div.subscription-widget-wrap .subscription-widget.show-subscribe .subscription-widget-subscribe .button,
+  body .markup div.subscription-widget-wrap-editor .subscription-widget.show-subscribe .subscription-widget-subscribe .button,
+  body .markup div.captioned-button-wrap .subscription-widget.show-subscribe .subscription-widget-subscribe .button {
+    padding: 10px 12px;
+    min-width: 110px;
+  }
+}
+@media (max-width: 650px) {
+  body .markup .twitter-embed,
+  body .markup .tweet {
+    padding: 12px;
+  }
+}
+@media (max-width: 650px) {
+  body .markup .twitter-embed .tweet-text,
+  body .markup .tweet .tweet-text {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+@media (max-width: 650px) {
+  body .markup .twitter-embed .tweet-photos-container.two,
+  body .markup .tweet .tweet-photos-container.two,
+  body .markup .twitter-embed .tweet-photos-container.three,
+  body .markup .tweet .tweet-photos-container.three,
+  body .markup .twitter-embed .tweet-photos-container.four,
+  body .markup .tweet .tweet-photos-container.four {
+    height: 200px;
+  }
+}
+@media (max-width: 650px) {
+  body .markup .twitter-embed a.expanded-link .expanded-link-img,
+  body .markup .tweet a.expanded-link .expanded-link-img {
+    max-height: 180px;
+  }
+}
+@media (max-width: 650px) {
+  body .markup .twitter-embed a.expanded-link .expanded-link-description,
+  body .markup .tweet a.expanded-link .expanded-link-description {
+    display: none;
+  }
+}
+@media screen and (max-width: 650px) {
+  body .markup .apple-podcast-container {
+    width: unset;
+  }
+}
+@media (max-width: 420px) {
+  body .markup .install-substack-app-embed img.install-substack-app-embed-img {
+    margin: 0 auto 16px auto;
+  }
+}
+@media (max-width: 420px) {
+  body .markup .install-substack-app-embed .install-substack-app-embed-text {
+    margin: 0 0 12px 0;
+    max-width: 100%;
+    width: auto;
+    text-align: center;
+  }
+}
+@media (max-width: 420px) {
+  body .markup .install-substack-app-embed .install-substack-app-embed-link {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 500px) {
+  body .header a.logo {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+  }
+}
+@media screen and (max-width: 420px) {
+  body .subscription-receipt table:first-of-type .subscription-amount .subscription-discount {
+    width: 72px !important;
+  }
+}
+@media screen and (min-width: 481px) {
+  body .share-button-container {
+    height: auto;
+  }
+}
+@media screen and (max-width: 480px) {
+  body .share-button-container .separator {
+    display: block !important;
+    margin: 0 !important;
+    height: 8px !important;
+    border-left: none !important;
+  }
+}
+@media screen and (max-width: 650px) {
+  .digest .item .post-meta-item.audience {
+    display: none;
+  }
+}
+@media screen and (min-width: 500px) {
+  .digest-publication .logo img {
+    width: 42px;
+    height: 42px;
+    border-radius: 8px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .comments-page .container .comment-list .collapsed-reply {
+    margin-left: calc(10 + 32px - 24px);
+  }
+}
+@media screen and (max-width: 650px) {
+  .comment > .comment-list {
+    padding-left: 24px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .finish-magic-login-modal .modal-content .container {
+    padding: 24px 0;
+  }
+}
+@media (max-width: 650px) {
+  .reader2-text-b3 {
+    line-height: 24px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .reader2-text-h4 {
+    line-height: 24px;
+  }
+}
+@media screen and (min-width: 541px) {
+  .user-profile-modal {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .subscribe-widget form.form .sideBySideWrap button.rightButton {
+    padding: 10px 12px;
+  }
+}
+@media screen and (min-width: 541px) {
+  .pub-icon:hover .logo-hover,
+  .feed-item-icon:hover .logo-hover {
+    display: block;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post-ufi.single-full-width-button .post-ufi-button-wrapper {
+    width: 100%;
+    padding: 16px;
+  }
+  .post-ufi.single-full-width-button .post-ufi-button-wrapper:empty {
+    display: none;
+  }
+  .post-ufi.single-full-width-button .post-ufi-button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  .file-embed-wrapper {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .file-embed-wrapper-editor {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .file-embed-wrapper-editor:active {
+    padding: 0;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .file-embed-button.wide,
+  .file-embed-error-button.wide {
+    display: none;
+  }
+}
+@media only screen and (min-width: 630px) {
+  .file-embed-button.narrow,
+  .file-embed-error-button.narrow {
+    display: none;
+  }
+}
+@media screen and (min-width: 541px) {
+  .audio-player-wrapper .audio-player {
+    min-width: 500px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .audio-player-wrapper .audio-player .audio-player-progress {
+    border-left-width: 16px;
+    border-right-width: 16px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .audio-player-wrapper .audio-player .audio-player-progress .audio-player-progress-bar .audio-player-progress-bar-popup {
+    top: -54px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .audio-player-wrapper-fancy .audio-player .audio-player-progress {
+    border-left-width: 16px;
+    border-right-width: 16px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .audio-player-wrapper-fancy .audio-player .audio-player-progress .audio-player-progress-bar .audio-player-progress-bar-popup {
+    top: -54px;
+  }
+}
+@media (min-width: 250px) {
+  .audio-player-wrapper-fancy .audio-player {
+    padding: 32px;
+  }
+  .audio-player-wrapper-fancy .audio-player .btn-group {
+    display: flex;
+  }
+  .audio-player-wrapper-fancy .audio-player .btn-group .button:last-of-type {
+    display: block;
+  }
+}
+@media (min-width: 300px) {
+  .audio-player-wrapper-fancy .audio-player .btn-group {
+    display: block;
+  }
+  .audio-player-wrapper-fancy .audio-player .btn-group .button:first-of-type {
+    display: block;
+  }
+}
+@media (min-width: 350px) {
+  .audio-player-wrapper-fancy .audio-player .audio-player-substack-logo {
+    display: block;
+  }
+  .audio-player-wrapper-fancy .audio-player .audio-player-title {
+    margin-top: 16px;
+  }
+  .audio-player-wrapper-fancy .audio-player .audio-player-hero-image-container {
+    padding-top: 15%;
+    width: 15%;
+    display: block;
+  }
+  .audio-player-wrapper-fancy .audio-player .btn-group .button:first-of-type {
+    display: block;
+  }
+  .audio-player-wrapper-fancy .audio-player .audio-player-substack-logo {
+    display: block;
+  }
+}
+@media (min-width: 350px) {
+  .audio-player-wrapper-fancy .audio-player .audio-player-hero-image-container {
+    padding-top: 25%;
+    width: 25%;
+    display: block;
+  }
+  .audio-player-wrapper-fancy .audio-player .btn-group {
+    display: flex;
+  }
+  .audio-player-wrapper-fancy .audio-player .btn-group .button:first-of-type {
+    display: block;
+  }
+}
+@media (min-width: 400px) {
+  .audio-player-wrapper-fancy .audio-player .audio-player-hero-image-container {
+    padding-top: 40%;
+    width: 40%;
+  }
+}
+@media (max-width: 400px) {
+  .audio-player-wrapper-fancy .audio-player .btn-group {
+    margin-top: 12px;
+  }
+  .audio-player-wrapper-fancy .audio-player .btn-group .button {
+    font-size: 13px;
+    padding: 6px 12px;
+    height: auto;
+    margin-top: 10px;
+  }
+}
+@media (min-width: 600px) {
+  .audio-player-wrapper-fancy .audio-player .audio-player-hero-image-container {
+    padding-top: 55%;
+    width: 55%;
+  }
+}
+@media (max-width: 650px) {
+  .poll-editor-modal {
+    min-width: calc(100% - 20px);
+  }
+}
+@media (max-width: 750px) {
+  .poll-embed .poll-anchor-target .poll-anchor-copy-button {
+    left: 8px;
+    top: 45px;
+  }
+}</style></head><body class="email-body" style="font-kerning: auto;--image-offset-margin: -120px;"><img src="https://eotrx.substackcdn.com/o/4338d3c18094b440/p.gif?token=eyJtIjoiPDIwMjYwODA2MTgyMzI2LjMuNDA2ZGFmNzI1MjBmZGM1OUBtZzIuc3Vic3RhY2suY29tPiIsInUiOjEwNTE4NjQ3LCJyIjoiYmVub2l0Y0BnbWFpbC5jb20iLCJkIjoibWcyLnN1YnN0YWNrLmNvbSIsInAiOjIwOTcwNjE3NiwidCI6Im5ld3NsZXR0ZXIiLCJhIjoiZXZlcnlvbmUiLCJzIjoxNzQ0Mzk1LCJjIjoicG9zdCIsImYiOnRydWUsInBvc2l0aW9uIjoidG9wIiwiaWF0IjoxNzg2MDQwNjMyLCJleHAiOjE3ODg2MzI2MzIsImlzcyI6InB1Yi0wIiwic3ViIjoiZW8ifQ.__HuNBWmm8Lvl9VyoD4jMlPQhh3x2sjT_L5MIiJlrDA" alt="" width="1" height="1" border="0" style="height:1px !important;width:1px !important;border-width:0 !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:0 !important;margin-left:0 !important;padding-top:0 !important;padding-bottom:0 !important;padding-right:0 !important;padding-left:0 !important;"/><div class="preview" style="display:none;font-size:1px;color:#333333;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;">Christopher Nolan's Odysseus is an entrepreneur who unleashes an AI-caliber scourge on the world</div><div class="preview" style="display:none;font-size:1px;color:#333333;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;">&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;</div><table class="email-body-container" role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td></td><td class="content" width="550"></td><td></td></tr><tr><td></td><td class="content" width="550" align="left"><div style="font-size: 16px;line-height: 26px;max-width: 550px;width: 100%;margin: 0 auto;overflow-wrap: break-word;"><table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="right" style="height:20px;"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="vertical-align:middle;"><span class="pencraft pc-reset reset-IxiVJZ tw-font-body tw-text-ssm tw-text-substack-secondary" style="font-family: SF Pro Text, -apple-system, system-ui, BlinkMacSystemFont, Inter, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;font-size: 13px;color: unset;list-style: none;text-decoration: unset;margin: 0;"><div class="pencraft pc-reset align-right-VJbKw5 size-12-mmZ61m reset-IxiVJZ" style="list-style: none;color: unset;text-align: right;font-size: 12px;line-height: 16px;text-decoration: unset;margin: 0;"><span class="pencraft pc-reset reset-IxiVJZ" translated="" style="list-style: none;color: unset;text-decoration: unset;margin: 0;">Forwarded this email? <a class="pencraft pc-reset decoration-underline-ClTkYc reset-IxiVJZ" href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly9ibG9vZGludGhlbWFjaGluZS5zdWJzdGFjay5jb20vc3Vic2NyaWJlP3V0bV9zb3VyY2U9ZW1haWwmdXRtX2NhbXBhaWduPWVtYWlsLXN1YnNjcmliZSZyPTY5ZzhuJm5leHQ9aHR0cHMlM0ElMkYlMkZibG9vZGludGhlbWFjaGluZS5zdWJzdGFjay5jb20lMkZwJTJGdGhlLW9keXNzZXktYXMtdGVjaC1jcml0aWNpc20iLCJwIjoyMDk3MDYxNzYsInMiOjE3NDQzOTUsImYiOnRydWUsInUiOjEwNTE4NjQ3LCJpYXQiOjE3ODYwNDA2MzEsImV4cCI6MjEwMTYxNjYzMSwiaXNzIjoicHViLTAiLCJzdWIiOiJsaW5rLXJlZGlyZWN0In0.cq-Au0ulMrpC_tFLcaTl1FdRkxAjpvoi2lVQaJ7L_xs?" style="list-style: none;color: unset;text-decoration: unset;margin: 0;-webkit-text-decoration-line: underline;text-decoration-line: underline;">Subscribe here</a> for more</span></div></span></td></tr></tbody></table></td></tr></tbody></table><table class="header graphic-header" role="presentation" style="border-spacing: 0;padding: 16px 0 32px;"><tbody><tr><td align="center" style="text-align: center;padding: 0;"><a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly9ibG9vZGludGhlbWFjaGluZS5zdWJzdGFjay5jb20vcC90aGUtb2R5c3NleS1hcy10ZWNoLWNyaXRpY2lzbT91dG1fY2FtcGFpZ249ZW1haWwtaGFsZi1wb3N0JnI9NjlnOG4mdG9rZW49ZXlKMWMyVnlYMmxrSWpveE1EVXhPRFkwTnl3aWNHOXpkRjlwWkNJNk1qQTVOekEyTVRjMkxDSnBZWFFpT2pFM09EWXdOREEyTXpFc0ltVjRjQ0k2TVRjNE9EWXpNall6TVN3aWFYTnpJam9pY0hWaUxURTNORFF6T1RVaUxDSnpkV0lpT2lKd2IzTjBMWEpsWVdOMGFXOXVJbjAuSmxVX0JnN0hoUEFCSVUzYnZGWXhkallLT2F3ako0TllvSzgzOGdvYjhqMCIsInAiOjIwOTcwNjE3NiwicyI6MTc0NDM5NSwiZiI6dHJ1ZSwidSI6MTA1MTg2NDcsImlhdCI6MTc4NjA0MDYzMSwiZXhwIjoyMTAxNjE2NjMxLCJpc3MiOiJwdWItMCIsInN1YiI6ImxpbmstcmVkaXJlY3QifQ.O3YjWYVS1KzpVMQG2uA7vq4NlfKyGr5SeTkn7KfHbxI?"><img class="header-image" role="presentation" width="550" height="105" src="https://substackcdn.com/image/fetch/$s_!i9rb!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F70083eea-6d21-4949-9747-7e6e17199e2a_1344x256.png" style="border: none !important;vertical-align: middle;max-width: 550px;display: block;margin: 0 auto;height: auto;width: 100%;"></a></td></tr></tbody></table><div class="post typography" dir="auto" style="--image-offset-margin: -120px;padding: 32px 0 0 0;font-size: 16px;line-height: 26px;"><div class="post-header" role="region" aria-label="Post header" style="font-size: 16px;line-height: 26px;"><h1 class="post-title published title-X77sOw" dir="auto" style="direction: auto;text-align: start;unicode-bidi: isolate;color: rgb(54,55,55);overflow-wrap: break-word;word-break: keep-all;font-family: 'Roboto Mono',monospace;font-weight: 700;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: antialiased;-webkit-appearance: optimizelegibility;-moz-appearance: optimizelegibility;appearance: optimizelegibility;margin: 0;line-height: 36px;font-size: 32px;"><a href="https://substack.com/app-link/post?publication_id=1744395&post_id=209706176&utm_source=post-email-title&utm_campaign=email-post-title&isFreemail=true&r=69g8n&token=eyJ1c2VyX2lkIjoxMDUxODY0NywicG9zdF9pZCI6MjA5NzA2MTc2LCJpYXQiOjE3ODYwNDA2MzEsImV4cCI6MTc4ODYzMjYzMSwiaXNzIjoicHViLTE3NDQzOTUiLCJzdWIiOiJwb3N0LXJlYWN0aW9uIn0.JlU_Bg7HhPABIU3bvFYxdjYKOawjJ4NYoK838gob8j0" style="color: rgb(54,55,55);text-decoration: none;">The Odyssey as tech criticism</a></h1><h3 class="subtitle subtitle-HEEcLo" dir="auto" style="direction: auto;text-align: start;unicode-bidi: isolate;font-family: 'SF Pro Display',-apple-system-headline,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight: normal;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: antialiased;-webkit-appearance: optimizelegibility;-moz-appearance: optimizelegibility;appearance: optimizelegibility;margin: 4px 0 0;color: #777777;overflow-wrap: break-word;word-break: keep-all;line-height: 24px;font-size: 18px;margin-top: 12px;">Christopher Nolan's Odysseus is an entrepreneur who unleashes an AI-caliber scourge on the world</h3><table class="post-meta" role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="margin: 1em 0;height: 20px;align-items: center;"><tbody><tr><td><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="vertical-align:middle;"><div class="pencraft pc-reset color-primary-zABazT line-height-20-t4M0El font-meta-MWBumP size-11-NuY2Zx weight-medium-fw81nC transform-uppercase-yKDgcq reset-IxiVJZ meta-EgzBVA custom-css-email-post-author" style="list-style: none;font-size: 11px;line-height: 20px;text-decoration: unset;color: rgb(54,55,55);margin: 0;font-family: 'SF Compact',-apple-system,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight: 500;text-transform: uppercase;letter-spacing: .2px;"><a class="pencraft pc-reset color-primary-zABazT line-height-20-t4M0El font-meta-MWBumP size-11-NuY2Zx weight-medium-fw81nC transform-uppercase-yKDgcq reset-IxiVJZ meta-EgzBVA" style="list-style: none;color: rgb(54,55,55);margin: 0;font-size: 11px;line-height: 20px;font-family: 'SF Compact',-apple-system,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight: 500;text-transform: uppercase;letter-spacing: .2px;text-decoration: none" href="https://substack.com/@bloodinthemachine">Brian Merchant</a></div></td></tr></tbody></table></td></tr><tr><td><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="vertical-align:middle;"><div class="pencraft pc-reset color-secondary-ls1g8s line-height-20-t4M0El font-meta-MWBumP size-11-NuY2Zx weight-medium-fw81nC transform-uppercase-yKDgcq reset-IxiVJZ meta-EgzBVA" style="list-style: none;font-size: 11px;line-height: 20px;text-decoration: unset;color: rgb(119,119,119);margin: 0;font-family: 'SF Compact',-apple-system,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight: 500;text-transform: uppercase;letter-spacing: .2px;"><time datetime="2026-08-06T18:23:26.039Z">Aug 6</time></div></td></tr></tbody></table></td></tr></tbody></table></td><td align="right"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="vertical-align:middle;"><a href="https://substack.com/@bloodinthemachine"><img class="custom-css-email-avatar avatar-QIQ5yR" src="https://substackcdn.com/image/fetch/$s_!MfSW!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fcf40536c-5ef0-4d0a-b3a3-93c359d0742a_200x200.jpeg" style="box-sizing: border-box;max-width: 550px;border: none;vertical-align: middle;width: 40px;height: 40px;min-width: 40px;min-height: 40px;object-fit: cover;margin: 0px;display: inline;border-radius: 50%" width="40" height="40"></a></td></tr></tbody></table></td></tr></tbody></table><table class="email-ufi-2-top" role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="border-top: 1px solid rgb(0,0,0,.1);border-bottom: 1px solid rgb(0,0,0,.1);min-width: 100%;"><tbody><tr height="16"><td height="16" style="font-size:0px;line-height:0;">&nbsp;</td></tr><tr><td><table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="vertical-align:middle;"><table role="presentation" width="38" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="center"><a class="email-icon-button" href="https://substack.com/app-link/post?publication_id=1744395&post_id=209706176&utm_source=substack&isFreemail=true&submitLike=true&token=eyJ1c2VyX2lkIjoxMDUxODY0NywicG9zdF9pZCI6MjA5NzA2MTc2LCJyZWFjdGlvbiI6IuKdpCIsImlhdCI6MTc4NjA0MDYzMSwiZXhwIjoxNzg4NjMyNjMxLCJpc3MiOiJwdWItMTc0NDM5NSIsInN1YiI6InJlYWN0aW9uIn0.uoAN-3y2LMDKsirbYt0GWi6F4mlBXMr-rkzwBCkQVw0&utm_medium=email&utm_campaign=email-reaction&r=69g8n" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;font-weight: 500;border: 1px solid rgb(0,0,0,.1);border-radius: 9999px;text-transform: uppercase;font-size: 12px;line-height: 1;padding: 9px 0;text-decoration: none;color: rgb(119,119,119);min-width: 38px;box-sizing: border-box;width: 38px"><img class="icon" src="https://substackcdn.com/image/fetch/$s_!PeVs!,w_36,c_scale,f_png,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Ficon%2FLucideHeart%3Fv%3D4%26height%3D36%26fill%3Dnone%26stroke%3D%2523808080%26strokeWidth%3D2" width="18" height="18" style="border: none;vertical-align: middle;max-width: 18px" alt=""></a></td></tr></tbody></table></td><td width="8" style="min-width:8px;"></td><td style="vertical-align:middle;"><table role="presentation" width="38" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="center"><a class="email-icon-button" href="https://substack.com/app-link/post?publication_id=1744395&post_id=209706176&utm_source=substack&utm_medium=email&isFreemail=true&comments=true&token=eyJ1c2VyX2lkIjoxMDUxODY0NywicG9zdF9pZCI6MjA5NzA2MTc2LCJpYXQiOjE3ODYwNDA2MzEsImV4cCI6MTc4ODYzMjYzMSwiaXNzIjoicHViLTE3NDQzOTUiLCJzdWIiOiJwb3N0LXJlYWN0aW9uIn0.JlU_Bg7HhPABIU3bvFYxdjYKOawjJ4NYoK838gob8j0&r=69g8n&utm_campaign=email-half-magic-comments&action=post-comment&utm_source=substack&utm_medium=email" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;font-weight: 500;border: 1px solid rgb(0,0,0,.1);border-radius: 9999px;text-transform: uppercase;font-size: 12px;line-height: 1;padding: 9px 0;text-decoration: none;color: rgb(119,119,119);min-width: 38px;box-sizing: border-box;width: 38px"><img class="icon" src="https://substackcdn.com/image/fetch/$s_!x1tS!,w_36,c_scale,f_png,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Ficon%2FLucideComments%3Fv%3D4%26height%3D36%26fill%3Dnone%26stroke%3D%2523808080%26strokeWidth%3D2" width="18" height="18" style="border: none;vertical-align: middle;max-width: 18px" alt=""></a></td></tr></tbody></table></td><td width="8" style="min-width:8px;"></td><td style="vertical-align:middle;"><table role="presentation" width="38" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="center"><a class="email-icon-button" href="https://substack.com/app-link/post?publication_id=1744395&post_id=209706176&utm_source=substack&utm_medium=email&utm_content=share&utm_campaign=email-share&action=share&triggerShare=true&isFreemail=true&r=69g8n&token=eyJ1c2VyX2lkIjoxMDUxODY0NywicG9zdF9pZCI6MjA5NzA2MTc2LCJpYXQiOjE3ODYwNDA2MzEsImV4cCI6MTc4ODYzMjYzMSwiaXNzIjoicHViLTE3NDQzOTUiLCJzdWIiOiJwb3N0LXJlYWN0aW9uIn0.JlU_Bg7HhPABIU3bvFYxdjYKOawjJ4NYoK838gob8j0" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;font-weight: 500;border: 1px solid rgb(0,0,0,.1);border-radius: 9999px;text-transform: uppercase;font-size: 12px;line-height: 1;padding: 9px 0;text-decoration: none;color: rgb(119,119,119);min-width: 38px;box-sizing: border-box;width: 38px"><img class="icon" src="https://substackcdn.com/image/fetch/$s_!_L14!,w_36,c_scale,f_png,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Ficon%2FLucideShare2%3Fv%3D4%26height%3D36%26fill%3Dnone%26stroke%3D%2523808080%26strokeWidth%3D2" width="18" height="18" style="border: none;vertical-align: middle;max-width: 18px" alt=""></a></td></tr></tbody></table></td><td width="8" style="min-width:8px;"></td><td style="vertical-align:middle;"><table role="presentation" width="38" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="center"><a class="email-icon-button" href="https://open.substack.com/pub/bloodinthemachine/p/the-odyssey-as-tech-criticism?utm_source=substack&utm_medium=email&utm_campaign=email-restack-comment&action=restack-comment&r=69g8n&token=eyJ1c2VyX2lkIjoxMDUxODY0NywicG9zdF9pZCI6MjA5NzA2MTc2LCJpYXQiOjE3ODYwNDA2MzEsImV4cCI6MTc4ODYzMjYzMSwiaXNzIjoicHViLTE3NDQzOTUiLCJzdWIiOiJwb3N0LXJlYWN0aW9uIn0.JlU_Bg7HhPABIU3bvFYxdjYKOawjJ4NYoK838gob8j0&utm_source=substack&utm_medium=email" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;font-weight: 500;border: 1px solid rgb(0,0,0,.1);border-radius: 9999px;text-transform: uppercase;font-size: 12px;line-height: 1;padding: 9px 0;text-decoration: none;color: rgb(119,119,119);min-width: 38px;box-sizing: border-box;width: 38px"><img class="icon" src="https://substackcdn.com/image/fetch/$s_!ubXF!,w_36,c_scale,f_png,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Ficon%2Fnotes__NoteRestackIcon%3Fv%3D4%26height%3D36%26fill%3Dnone%26stroke%3D%2523808080%26strokeWidth%3D2%26strokeLinecap%3Dround%26strokeLinejoin%3Dround" width="18" height="18" alt="" style="max-width: 550px;border: none !important;vertical-align: middle;"></a></td></tr></tbody></table></td></tr></tbody></table></td><td align="right"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="vertical-align:middle;"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="center"><a class="email-button-outline" href="https://open.substack.com/pub/bloodinthemachine/p/the-odyssey-as-tech-criticism?utm_source=email&redirect=app-store&utm_campaign=email-read-in-app" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;font-weight: 500;border: 1px solid rgb(0,0,0,.1);border-radius: 9999px;text-transform: uppercase;font-size: 12px;line-height: 12px;padding: 9px 14px;text-decoration: none;color: rgb(119,119,119);"><div class="email-button-spacer" style="font-size: 16px;line-height: 26px;display: inline-block;vertical-align: middle;max-width: 0;min-height: 18px;"></div><span class="email-button-text" style="vertical-align: middle;margin-right: 4px">READ IN APP</span><img class="icon text-icon" src="https://substackcdn.com/image/fetch/$s_!ET-_!,w_36,c_scale,f_png,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Ficon%2FLucideArrowUpRight%3Fv%3D4%26height%3D36%26fill%3Dnone%26stroke%3D%2523808080%26strokeWidth%3D2" width="18" height="18" style="min-width: 18px;min-height: 18px;border: none;vertical-align: middle;margin-right: 0;margin-left: 0;max-width: 18px" alt=""></a></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></td></tr><tr height="16"><td height="16" style="font-size:0px;line-height:0;">&nbsp;</td></tr></tbody></table></div></div><div class="post typography" dir="auto" style="--image-offset-margin: -120px;padding: 32px 0 0 0;font-size: 16px;line-height: 26px;"><div class="body markup" dir="auto" style="text-align: initial;font-size: 16px;line-height: 26px;width: 100%;margin-bottom: 16px;overflow-wrap: anywhere;word-break: break-word;font-family: 'SF Pro Display', -apple-system, system-ui, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';font-weight: 400;"><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;margin-top: 0;">Greetings all, </p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>I&#8217;m back in the states and about ready to get back to my regularly scheduled newslettering and podcasting. But first, I regret to inform you that I have some thoughts on the Odyssey. Yes, all the Odyssey discourse got to me, and during my vacation last week and I picked up a copy of the book (the old EV Rieu Penguin Classics translation, the only one the bookstore had left in stock). Then I downloaded the audio book so I could </span><em>listen </em><span>to it, as Homer intended, ish, and before long I realized I was essentially all-in.</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>The New York Times ran an op-ed called something like </span><a href="https://substack.com/redirect/34fd382a-87a1-48ad-8234-0f1b6988959e?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">Why Can&#8217;t We Stop Talking About the Odyssey?</a><span> (They keep changing the headlines in A/B testing but that&#8217;s what it was when I first saw it.) And my immediate reaction was welllllllllll. Here is one of the two earliest canonical works of human literature, originally composed and retold orally as an epic poem, from person to persons, made into a $300 million Hollywood blockbuster by the industry&#8217;s biggest auteur (and tech critics), at a moment when proclamations boom out that AI threatens to consume and/or subsume culture, when our politics are a furious mess, in part because so many of us no longer share overlapping standards of truth or belief, and the fight to define either is a neverending livewire spat on platforms writing our own oral history in realtime. Of course there would be a fight over what the Odyssey can mean, and what it can&#8217;t, where it fails and where it succeeds.  </span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>I finally saw the thing this week, and I enjoyed it more than I thought I would. Granted, my expectations were low. I disliked Christopher Nolan&#8217;s </span><em>Oppenheimer</em><span>; it seemed to me to be too precisely the sum of its parts&#8212;the Batman director makes a dark superhero film about the atomic bomb&#8212;but Odysseus isn&#8217;t too too far off from a Batman, and this is more amenable to Nolan&#8217;s wheelhouse. (They both make up for their physical deficiencies with wealth, notoriety, and cunning, they are both riven with contradictions, and both have a penchant for grandiosity and violence etc etc etc.)</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>But of all </span><a href="https://substack.com/redirect/a43c9545-de3f-47bc-8f11-974219d00fed?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">the critiques</a><span> and </span><a href="https://substack.com/redirect/7288b730-b6f0-487d-ab11-140ef9c2ae65?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">counter-critiques</a><span> and </span><a href="https://substack.com/redirect/eb0123d8-6b5b-4bcc-a0da-cf729bbd2faa?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">counter-counter-critiques</a><span> I&#8217;ve seen the one I&#8217;ve somewhat surprisingly seen the least amount of ink spilled over is the Odyssey (2026)&#8217;s rather central and yawning critique of technology. </span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><strong>TO THE EXENT THAT YOU CAN SPOIL AN ADAPTATION OF A 3,000 YEAR-OLD EPIC POEM, SUCH SPOILERS FOLLOW</strong></p><div class="subscribe-widget is-signed-up" data-component-name="SubscribeWidget" style="margin: 0 0 1em;direction: ltr;font-size: 16px;line-height: 26px;"><div class="pencraft pc-reset button-wrapper" style="text-decoration: unset;list-style: none;font-size: 16px;line-height: 26px;text-align: center;cursor: pointer;border-radius: 4px;"><a class="button subscribe-btn primary" href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly9ibG9vZGludGhlbWFjaGluZS5zdWJzdGFjay5jb20vc3Vic2NyaWJlP3V0bV9zb3VyY2U9cG9zdCZ1dG1fY2FtcGFpZ249ZW1haWwtY2hlY2tvdXQmbmV4dD1odHRwcyUzQSUyRiUyRmJsb29kaW50aGVtYWNoaW5lLnN1YnN0YWNrLmNvbSUyRnAlMkZ0aGUtb2R5c3NleS1hcy10ZWNoLWNyaXRpY2lzbSZyPTY5ZzhuJnRva2VuPWV5SjFjMlZ5WDJsa0lqb3hNRFV4T0RZME55d2lhV0YwSWpveE56ZzJNRFF3TmpNeExDSmxlSEFpT2pFM09EZzJNekkyTXpFc0ltbHpjeUk2SW5CMVlpMHhOelEwTXprMUlpd2ljM1ZpSWpvaVkyaGxZMnR2ZFhRaWZRLmtEXzF6ZXBYSmFpa3pXcTZxSC14RGRDcy1fZVJPOUFxbHRrNDZyckM2N3ciLCJwIjoyMDk3MDYxNzYsInMiOjE3NDQzOTUsImYiOnRydWUsInUiOjEwNTE4NjQ3LCJpYXQiOjE3ODYwNDA2MzEsImV4cCI6MjEwMTYxNjYzMSwiaXNzIjoicHViLTAiLCJzdWIiOiJsaW5rLXJlZGlyZWN0In0.Tuy_c6Wh9OxRA_p4pLnDSxnqfgI5x93ljqxnttTbPaE?&utm_medium=email&utm_source=subscribe-widget&utm_content=209706176" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;box-sizing: border-box;cursor: pointer;border: none;border-radius: 8px;font-size: 14px;line-height: 20px;font-weight: 600;text-align: center;opacity: 1;outline: none;white-space: nowrap;text-decoration: none !important;margin: 0 auto;background-color: #000000;color: #ffffff !important;padding: 12px 20px;height: auto;"><span style="color: #ffffff;text-decoration: none;">Upgrade to paid</span></a></div></div><div class="captioned-image-container-static" style="font-size: 16px;line-height: 26px;margin: 32px auto;"><figure style="width: 100%;margin: 0 auto;"><table class="image-wrapper" width="100%" border="0" cellspacing="0" cellpadding="0" data-component-name="Image2ToDOMStatic" style="mso-padding-alt: 1em 0 1.6em;"><tbody><tr><td style="text-align: center;"></td><td class="content" align="left" width="1280" style="text-align: center;"><a class="image-link" target="_blank" href="https://substack.com/redirect/d2e2c8ca-dc02-4c71-82f0-9c595c72a786?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="position: relative;flex-direction: column;align-items: center;padding: 0;width: auto;height: auto;border: none;text-decoration: none;display: block;margin: 0;"><img class="wide-image" data-attrs="{&quot;src&quot;:&quot;https://substack-post-media.s3.amazonaws.com/public/images/e9027c42-236a-4702-8fcb-1f4be73920e8_1280x896.avif&quot;,&quot;srcNoWatermark&quot;:null,&quot;fullscreen&quot;:null,&quot;imageSize&quot;:null,&quot;height&quot;:896,&quot;width&quot;:1280,&quot;resizeWidth&quot;:null,&quot;bytes&quot;:52616,&quot;alt&quot;:null,&quot;title&quot;:null,&quot;type&quot;:&quot;image/avif&quot;,&quot;href&quot;:null,&quot;belowTheFold&quot;:false,&quot;topImage&quot;:true,&quot;internalRedirect&quot;:&quot;https://bloodinthemachine.substack.com/i/209706176?img=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe9027c42-236a-4702-8fcb-1f4be73920e8_1280x896.avif&quot;,&quot;isProcessing&quot;:false,&quot;align&quot;:null,&quot;offset&quot;:false}" alt="" width="550" height="385" src="https://substackcdn.com/image/fetch/$s_!J2Vo!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe9027c42-236a-4702-8fcb-1f4be73920e8_1280x896.avif" style="border: none !important;vertical-align: middle;display: block;-ms-interpolation-mode: bicubic;height: auto;margin-bottom: 0;width: auto !important;max-width: 100% !important;margin: 0 auto;"></a></td><td style="text-align: center;"></td></tr></tbody></table><figcaption class="image-caption" style="box-sizing: content-box;color: rgb(119,119,119);font-size: 14px;line-height: 20px;font-weight: 400;letter-spacing: -.15px;margin-top: 8px;width: 70%;padding-left: 15%;padding-right: 15%;text-align: center;">The Odyssey screen still.</figcaption></figure></div><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">There&#8217;s been lots of commentary about how Matt Damon&#8217;s Odysseus, who is wearied, laconic, and downtrodden throughout the movie&#8217;s 3-hour runtime, is a comment on the fallout of America&#8217;s war-making in the Middle East, and the decay in the liberal order it begot, or the crumbling of liberal values more generally. (Damon&#8217;s grim portrayal of Odysseus is also a source of criticism, since the epic&#8217;s Odysseus is cunning, talkative, and full of braggadocio in addition to being prone to bouts of hysterical weeping.) But less about the specific instigator for all that misery. </p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">Near the end of the film, Odysseus reveals what appears to be the source of these many character years/viewer hours of guilt-ridden sorrow: In devising and unleashing the Trojan Horse, an innovation that exploited Troy&#8217;s inclination towards trust and hospitality and the fact that they respected the same gods, in order to facilitate the demolishing of the entire city, he was "breaking Zeus&#8217;s law forever.&#8221;</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">&#8220;Zeus&#8217;s law&#8221; is a Nolanian contrivance that basically amounts to a Grecian golden rule; treat others, especially strangers and travelers, how you would like to be treated. It&#8217;s a take on xenia, an actual Mycenaean concept. </p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>The </span><a href="https://substack.com/redirect/79f22233-aef3-4471-9211-562d6cb44ce6?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">historian Spencer McDaniels explains</a><span>:</span></p><blockquote style="border-left: 4px solid #000000;margin: 20px 0;padding: 0;"><p style="margin: 0 0 20px 0;color: rgb(54,55,55);margin-left: 20px;line-height: 26px;font-size: 16px;"><em>Xen&#237;a</em><span> held that every person had a sacred and inviolable duty to provide safety, food, shelter, and comfort to any stranger or foreigner who sought hospitality. Guests, in turn, had an equally sacred obligation to honor and respect their hosts and to not take more than they needed.</span></p></blockquote><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">It&#8217;s a social contract, then; a shared set of values that Odysseus comes to believe he has destroyed utterly by inventing and successfully deploying the Trojan Horse. </p><blockquote style="border-left: 4px solid #000000;margin: 20px 0;padding: 0;"><p style="margin: 0 0 20px 0;color: rgb(54,55,55);margin-left: 20px;line-height: 26px;font-size: 16px;"><span>Nolan&#8217;s </span><em>Odyssey </em><span>astutely picks up on the importance of </span><em>xen&#237;a</em><span> in the epic and takes it in an interesting, contemporarily relevant direction. Translating </span><em>xen&#237;a</em><span> as &#8220;Zeus&#8217;s law,&#8221; the film portrays the breakdown of </span><em>xen&#237;a</em><span> as a cosmic consequence of the sack of Troy that will lead inevitably to the collapse of civilization itself.</span></p></blockquote><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">Not unlike, perhaps, building and dropping a nuclear bomb? </p><a class="youtube-wrap" href="https://substack.com/redirect/c0f72a62-4b43-4249-8d66-0516810e78c5?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" target="_blank" data-component-name="Youtube2ToDOMStatic" style="display: block;margin: 32px 0;"><img src="https://substackcdn.com/image/youtube/w_728,c_limit/l_youtube_play_qyqt8q,w_120/T-qRtnGiQY4" style="border: none !important;vertical-align: middle;-ms-interpolation-mode: bicubic;max-width: 100%;height: auto;margin: 0 auto;display: block;width: 100%;"></a><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>Ezra Klein produced </span><a href="https://substack.com/redirect/d5449d47-9c87-4ea7-a326-810583c0db4b?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">a long video essay</a><span> arguing that the Odyssey is the most important political film of the decade, that it&#8217;s an exploration of the collapse of the liberal order and how, in these days of politicians spurning their neighbors and conducting mean-spirited attacks, so many no longer feel the need to be good to each other. In this reading, the Trojan Horse, an innovation already legendary in Odysseus&#8217;s world, is then the key catalyst. </span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>Now, Nolan&#8217;s disdain for modern technology is well known. He doesn&#8217;t </span><a href="https://substack.com/redirect/abce09e0-1d1c-43f4-8a3f-88da3a59bdca?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">own a smartphone, or even use email</a><span>. And in a recent interview, Nolan shared </span><a href="https://substack.com/redirect/a77c2f59-7ec3-4d17-bfa7-0d1575860d74?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">his thoughts on AI</a><span>, too:</span></p><blockquote style="border-left: 4px solid #000000;margin: 20px 0;padding: 0;"><p style="margin: 0 0 20px 0;color: rgb(54,55,55);margin-left: 20px;line-height: 26px;font-size: 16px;">&#8220;I think AI is a Trojan horse that everybody knows the Greeks are inside&#8230; I&#8217;ve never seen a technology advancing so rapidly [that&#8217;s been] so completely rejected by the public,&#8221; he said. &#8220;Everybody&#8217;s suspicion of it is so extreme, particularly young people. The reaction to AI videos online and people my children&#8217;s age immediately calling it &#8216;AI slop&#8217; and coining that term and just putting it in a box.&#8221;</p></blockquote><a class="youtube-wrap" href="https://substack.com/redirect/45ad8ab9-2b8a-44e8-a5ec-bac9f55e6085?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" target="_blank" data-component-name="Youtube2ToDOMStatic" style="display: block;margin: 32px 0;"><img src="https://substackcdn.com/image/youtube/w_728,c_limit/l_youtube_play_qyqt8q,w_120/3jHpisxcmkc" style="border: none !important;vertical-align: middle;-ms-interpolation-mode: bicubic;max-width: 100%;height: auto;margin: 0 auto;display: block;width: 100%;"></a><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>I think it would be a stretch to argue that Nolan&#8217;s Odyssey contains any nuanced or meaningful critique of </span><em>AI</em><span> in particular. The tech criticism in the Odyssey, such as it is, is about as broad as it gets: When novel technology is used to destroy shared social values, it begets disaster for civilization. It&#8217;s the kind of sweeping criticism you might expect from a man who doesn&#8217;t have email, in other words, or who hopes his blockbuster will be seen by as many people as possible. </span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">That&#8217;s certainly not to say such a sweeping critique is without value; Nolan certainly wants us to consider that the building of Trojan Horses is a deliberate act with obvious moral parameters. And that applies to Greek weapons of war, nuclear bombs, and AI products alike. (The director has noted in interviews that he couldn&#8217;t help but draw parallels between Oppenheimer and Odysseus in filming his latest.) The issue is that this makes for a pretty vague critique, and one that doesn&#8217;t really need to meaningfully engage with particulars, theory, or root causes beyond &#8216;sometimes men go too far.&#8217;</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>Interestingly, another top-grossing movie of 2026, Toy Story 5, registers a not-dissimilar brand of tech criticism; screens are bad for kids, we see, but only, it turns out, when they are </span><em>too much</em><span>, and when they take over kids&#8217; imaginations and facilitate toxic behavior. </span><em>Older </em><span>tech toys for kids with less immersive screens are lovable and good, but somewhere a line was crossed from a healthy human coexistence with technology to a calamitous one, though </span><a href="https://substack.com/redirect/a883c739-3e57-49fe-b0da-f8f842ad1e3f?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">that movie chickens out</a><span> in identifying when or where that happened, exactly. </span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>In this case, then, we must consider that the line was crossed thousands of years ago. Why not? The Odyssey was recited orally for centuries before it was written down, which itself</span><em> was </em><span>a famous act of technological transgression. Plato, </span><a href="https://substack.com/redirect/3665d135-79a0-440d-b590-819c921a2202?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">writing centuries after Homer</a><span>, told the myth of the Theuth, the god who had invented writing, and the Egyptian king Thamus, who played the role of the critic.</span></p><blockquote style="border-left: 4px solid #000000;margin: 20px 0;padding: 0;"><p style="margin: 0 0 20px 0;color: rgb(54,55,55);margin-left: 20px;line-height: 26px;font-size: 16px;"><span>When it came to writing Theuth said, &#8216;Here, O king, is a branch of learning that will make the people of Egypt wiser and improve their memories; my discovery provides a recipe for memory and wisdom.&#8217; But the king answered and said&#8230; &#8216;If men learn this, it will implant forgetfulness in their souls; they will cease to exercise memory because they rely on that which is written, calling things to remembrance no longer from within themselves, but by means of external marks. What you have discovered is a recipe not for memory, but for reminder. And it is no true wisdom that you offer your disciples, but only its semblance, for by telling them of many things without teaching them you will make them seem to know much, while for the most part they know nothing, and as men filled, not with wisdom but with the conceit of wisdom, they will be a burden to their fellows.&#8217;</span><span class="footnote-anchor-email" data-component-name="FootnoteAnchorToDOMStatic" style="font-size: 20px;">&#185;</span></p></blockquote><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>It&#8217;s worth noting that the original Homeric Odyssey itself is generally </span><em>optimistic</em><span> towards technology, albeit in a somewhat misanthropic mode. (</span><span class="mention-pnpTE1 mentionStatic-liMklk" data-component-name="MentionStatic" style="white-space: nowrap;cursor: pointer;color: #000000;border-radius: 4px;transition: color .25scubic-bezier(.19,1,.22,1),background-color .25scubic-bezier(.19,1,.22,1),box-shadow .25scubic-bezier(.19,1,.22,1),border .25scubic-bezier(.19,1,.22,1),border-radius .25scubic-bezier(.19,1,.22,1),opacity .25scubic-bezier(.19,1,.22,1),filter .25scubic-bezier(.19,1,.22,1),stroke .25scubic-bezier(.19,1,.22,1),transform .25scubic-bezier(.19,1,.22,1),scale .25scubic-bezier(.19,1,.22,1),outline .25scubic-bezier(.19,1,.22,1);margin: 0 -.125em;padding: 0 .125em .0625em;text-decoration: none;"><a href="https://open.substack.com/users/14289667-sam-kriss?utm_source=mentions" style="color: #000000;text-decoration: none;-webkit-text-decoration: none;">Sam Kriss</a></span><span> </span><a href="https://substack.com/redirect/21ad408b-de61-41ec-a63a-a1a971be4e63?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">notes</a><span> that Theodor Adorno and Max Horkheimer argued Odysseus and his crew &#8216;embody the principle of the capitalist economy&#8217;; a band of men set against the world and other men. Entrepreneurs, even. If Nolan&#8217;s Odysseus is </span><a href="https://substack.com/redirect/29641ad8-2ca8-494d-9d56-ce0f0eb1fa2a?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">more like a Viktor Frankenstein</a><span>, plagued by what his inventions have unleashed on the world, then Homer&#8217;s is more the kind of entrepreneur we&#8217;re familiar with; headstrong, fast-talking, basking in the glory of his inventions one minute, complaining hysterically the next, with little time for reflections on the social impact of his devices.) </span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>Throughout the epic, Odysseus&#8217;s efforts to get home are of course routinely thwarted by very human failures: his own hubris (screaming taunts at Polyphemus), his men&#8217;s meddling (opening Aeolus&#8217;s ox-skin bag of wind in sight of Ithaca), and the violent opposition of his foes. The way back, finally, then? A self-driving ship that can sail </span><em>without</em><span> the interference of failure-prone human hands. Odysseus&#8217; last stop before finally making it home is at the palace of the Phaeacian king Alcinous, who promises him passage on such high-tech vessels:</span></p><blockquote style="border-left: 4px solid #000000;margin: 20px 0;padding: 0;"><p style="margin: 0 0 20px 0;color: rgb(54,55,55);margin-left: 20px;line-height: 26px;font-size: 16px;">For the Phaeacians have no pilots; their vessels have no rudders as those of other nations have, but the ships themselves understand what it is that we are thinking about and want; they know all the cities and countries in the whole world, and can traverse the sea just as well even when it is covered with mist and cloud, so that there is no danger of being wrecked or coming to any harm.</p></blockquote><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>*Bonus points for anyone who knows the ancient Greek word for </span><em>pilot</em><span> or </span><em>helmsman</em><span> of a ship. It&#8217;s Kybern&#275;t&#275;s, the word that the mathematician Norbert Wiener appropriated to describe cybernetics, how systems and machines could use feedback to regulate their behavior, to stay on course, and the reason that &#8216;cyber&#8217; is in the lexicon today.</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">Embedded in one of the ur-texts of literature, then, we have an articulation of desire for automation, for a mechanized system that might replace flawed human judgment and labor, and transmit the wishes of the helmsman, ie the entrepreneur, into action. It could carry this man, he of given to &#8220;scheming&#8221; and &#8220;nimble wits,&#8221; who years earlier used his ingenuity to raze another human city to the ground, home. So the Odyssey, which I should add has genuinely been a blast to read, essentially describes the 3,000 year-old ambitions, or at least their seeds, that Nolan uses his adaptation to critique.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">There is something to be said of the fact that our biggest entertainments have become so tech skeptical. Of course, for a wholly successful critique of technologies like AI you would have to name the forces inside the Trojan horse; the AI executives and Fortune 500 companies selling mass labor automation and promising to replace human art with cheap slop, the movie studios that have partnered with them, and so on. The technology is not spilling out into Troy on its own, unguided.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>Reading the original, I daydreamed a bit about someone performing the epic the way it was originally intended; orally, on stages, in theaters or at festivals, over long hours. I thought about a performance of </span><em><a href="https://substack.com/redirect/4294ca4d-40d2-4993-a7ec-618e9fbe0a8c?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">Gatz</a></em><span> I saw years ago, an 8-hour play put on by the New York theater ensemble the Elevator Repair Service, about an office worker discovering a copy of the Great Gatsby in a drawer and then proceeding to read, in real time, every line of the book. About halfway through the play, the actor reading the text looks up and continues reciting the story from memory. The audience gasped. He finishes the entire book, and the play, that way. A performance like that&#8212;recited aloud, performed by human voices, from memory&#8212;today feels almost like it would in and of itself constitute an act of resistance against the AI onslaught and the types of broad, immoral forces Nolan conjures in his epics. I&#8217;d be first in line. </span></p><div class="subscribe-widget is-signed-up" data-component-name="SubscribeWidget" style="margin: 0 0 1em;direction: ltr;font-size: 16px;line-height: 26px;"><div class="pencraft pc-reset button-wrapper" style="text-decoration: unset;list-style: none;font-size: 16px;line-height: 26px;text-align: center;cursor: pointer;border-radius: 4px;"><a class="button subscribe-btn primary" href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly9ibG9vZGludGhlbWFjaGluZS5zdWJzdGFjay5jb20vc3Vic2NyaWJlP3V0bV9zb3VyY2U9cG9zdCZ1dG1fY2FtcGFpZ249ZW1haWwtY2hlY2tvdXQmbmV4dD1odHRwcyUzQSUyRiUyRmJsb29kaW50aGVtYWNoaW5lLnN1YnN0YWNrLmNvbSUyRnAlMkZ0aGUtb2R5c3NleS1hcy10ZWNoLWNyaXRpY2lzbSZyPTY5ZzhuJnRva2VuPWV5SjFjMlZ5WDJsa0lqb3hNRFV4T0RZME55d2lhV0YwSWpveE56ZzJNRFF3TmpNeExDSmxlSEFpT2pFM09EZzJNekkyTXpFc0ltbHpjeUk2SW5CMVlpMHhOelEwTXprMUlpd2ljM1ZpSWpvaVkyaGxZMnR2ZFhRaWZRLmtEXzF6ZXBYSmFpa3pXcTZxSC14RGRDcy1fZVJPOUFxbHRrNDZyckM2N3ciLCJwIjoyMDk3MDYxNzYsInMiOjE3NDQzOTUsImYiOnRydWUsInUiOjEwNTE4NjQ3LCJpYXQiOjE3ODYwNDA2MzEsImV4cCI6MjEwMTYxNjYzMSwiaXNzIjoicHViLTAiLCJzdWIiOiJsaW5rLXJlZGlyZWN0In0.Tuy_c6Wh9OxRA_p4pLnDSxnqfgI5x93ljqxnttTbPaE?&utm_medium=email&utm_source=subscribe-widget&utm_content=209706176" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;box-sizing: border-box;cursor: pointer;border: none;border-radius: 8px;font-size: 14px;line-height: 20px;font-weight: 600;text-align: center;opacity: 1;outline: none;white-space: nowrap;text-decoration: none !important;margin: 0 auto;background-color: #000000;color: #ffffff !important;padding: 12px 20px;height: auto;"><span style="color: #ffffff;text-decoration: none;">Upgrade to paid</span></a></div></div><div style="font-size: 16px;line-height: 26px;"><hr style="margin: 32px 0;padding: 0;height: 1px;background: rgb(0,0,0,.1);border: none;"></div><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">Alright! That&#8217;s it for today; thanks for bearing with while a took a few days off, even if those days off wound up being less of a &#8220;relaxing during a short vacation&#8221; vibe than &#8220;the whole family got e. coli poisoning from swimming in a bacteria-infested bay&#8221; but hey, it takes all kinds. At least I had Odysseus to keep me company. See you all next week.</p><div class="footnote" data-component-name="FootnoteToDOMStatic" style="line-height: 26px;display: flex;border-top: solid 1px rgb(0,0,0,.1);padding-top: 1.5em;font-size: 90%;flex-direction: row;align-items: baseline;margin-bottom: 0;"><span class="footnote-number" style="display: block;margin-right: 6px;min-width: 24px;">1</span><div class="footnote-content" style="font-size: 16px;line-height: 26px;display: block;"><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;min-width: 10px;"><span>Our concern today is not that we won&#8217;t remember written texts, but that we&#8217;ll be wholly unfamiliar with them in general, as they come spilling out of generators at the press of a button. An </span><a href="https://substack.com/redirect/c601b04d-207a-44ab-895b-b3dda835fde7?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">MIT study</a><span> found that most writers who used AI to produce essays couldn&#8217;t identify a quote from their own papers.</span></p></div></div></div></div><div class="container-border" style="margin: 32px 0 0;width: 100%;box-sizing: border-box;border-top: 1px solid #e6e6e6;font-size: 16px;line-height: 26px;"></div><div class="post-cta typography markup" style="--image-offset-margin: -120px;font-family: 'SF Pro Display', -apple-system, system-ui, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';font-weight: 400;text-align: initial;margin-bottom: 32px;overflow-wrap: anywhere;word-break: break-word;margin: 32px 0;font-size: 16px;line-height: 26px;"><p style="color: rgb(54,55,55);margin: 0 auto 20px;text-align: center;width: 90%;line-height: 26px;font-size: 16px;margin-top: 0;"><span class="pencraft pc-reset reset-IxiVJZ" translated="" style="list-style: none;color: unset;text-decoration: unset;margin: 0;">You're currently a free subscriber to <a href="https://substack.com/redirect/d66c27d0-e67a-4620-89cd-81df8e2e116e?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">Blood in the Machine</a>. For the full experience, <a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly9ibG9vZGludGhlbWFjaGluZS5zdWJzdGFjay5jb20vc3Vic2NyaWJlP3V0bV9zb3VyY2U9cG9zdCZ1dG1fY2FtcGFpZ249ZW1haWwtY2hlY2tvdXQmbmV4dD1odHRwcyUzQSUyRiUyRmJsb29kaW50aGVtYWNoaW5lLnN1YnN0YWNrLmNvbSUyRnAlMkZ0aGUtb2R5c3NleS1hcy10ZWNoLWNyaXRpY2lzbSZyPTY5ZzhuJnRva2VuPWV5SjFjMlZ5WDJsa0lqb3hNRFV4T0RZME55d2lhV0YwSWpveE56ZzJNRFF3TmpNeExDSmxlSEFpT2pFM09EZzJNekkyTXpFc0ltbHpjeUk2SW5CMVlpMHhOelEwTXprMUlpd2ljM1ZpSWpvaVkyaGxZMnR2ZFhRaWZRLmtEXzF6ZXBYSmFpa3pXcTZxSC14RGRDcy1fZVJPOUFxbHRrNDZyckM2N3ciLCJwIjoyMDk3MDYxNzYsInMiOjE3NDQzOTUsImYiOnRydWUsInUiOjEwNTE4NjQ3LCJpYXQiOjE3ODYwNDA2MzEsImV4cCI6MjEwMTYxNjYzMSwiaXNzIjoicHViLTAiLCJzdWIiOiJsaW5rLXJlZGlyZWN0In0.Tuy_c6Wh9OxRA_p4pLnDSxnqfgI5x93ljqxnttTbPaE?&utm_source=substack&utm_medium=email&utm_content=postcta" style="color: rgb(54,55,55);text-decoration: underline;">upgrade your subscription.</a></span></p><p class="cta-box" style="color: rgb(54,55,55);margin: 0 auto 20px;width: 90%;line-height: 26px;font-size: 16px;margin-bottom: 0;text-align: center;margin-left: auto;margin-right: auto;"><a class="button primary" role="button" href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly9ibG9vZGludGhlbWFjaGluZS5zdWJzdGFjay5jb20vc3Vic2NyaWJlP3V0bV9zb3VyY2U9cG9zdCZ1dG1fY2FtcGFpZ249ZW1haWwtY2hlY2tvdXQmbmV4dD1odHRwcyUzQSUyRiUyRmJsb29kaW50aGVtYWNoaW5lLnN1YnN0YWNrLmNvbSUyRnAlMkZ0aGUtb2R5c3NleS1hcy10ZWNoLWNyaXRpY2lzbSZyPTY5ZzhuJnRva2VuPWV5SjFjMlZ5WDJsa0lqb3hNRFV4T0RZME55d2lhV0YwSWpveE56ZzJNRFF3TmpNeExDSmxlSEFpT2pFM09EZzJNekkyTXpFc0ltbHpjeUk2SW5CMVlpMHhOelEwTXprMUlpd2ljM1ZpSWpvaVkyaGxZMnR2ZFhRaWZRLmtEXzF6ZXBYSmFpa3pXcTZxSC14RGRDcy1fZVJPOUFxbHRrNDZyckM2N3ciLCJwIjoyMDk3MDYxNzYsInMiOjE3NDQzOTUsImYiOnRydWUsInUiOjEwNTE4NjQ3LCJpYXQiOjE3ODYwNDA2MzEsImV4cCI6MjEwMTYxNjYzMSwiaXNzIjoicHViLTAiLCJzdWIiOiJsaW5rLXJlZGlyZWN0In0.Tuy_c6Wh9OxRA_p4pLnDSxnqfgI5x93ljqxnttTbPaE?&utm_source=substack&utm_medium=email&utm_content=postcta" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;box-sizing: border-box;cursor: pointer;border: none;height: 40px;border-radius: 8px;font-size: 14px;line-height: 20px;font-weight: 600;text-align: center;padding: 10px 20px;margin: 0;opacity: 1;outline: none;white-space: nowrap;color: #ffffff !important;text-decoration: none !important;background-color: #000000;">Upgrade to paid</a></p></div><table class="email-ufi-2-bottom" role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="border-top: 1px solid rgb(0,0,0,.1);border-bottom: 1px solid rgb(0,0,0,.1);min-width: 100%;"><tbody><tr height="16"><td height="16" style="font-size:0px;line-height:0;">&nbsp;</td></tr><tr><td><table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0" style="margin:0 auto;"><tbody><tr><td style="vertical-align:middle;"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="center"><a class="email-button-outline" href="https://substack.com/app-link/post?publication_id=1744395&post_id=209706176&utm_source=substack&isFreemail=true&submitLike=true&token=eyJ1c2VyX2lkIjoxMDUxODY0NywicG9zdF9pZCI6MjA5NzA2MTc2LCJyZWFjdGlvbiI6IuKdpCIsImlhdCI6MTc4NjA0MDYzMSwiZXhwIjoxNzg4NjMyNjMxLCJpc3MiOiJwdWItMTc0NDM5NSIsInN1YiI6InJlYWN0aW9uIn0.uoAN-3y2LMDKsirbYt0GWi6F4mlBXMr-rkzwBCkQVw0&utm_medium=email&utm_campaign=email-reaction&r=69g8n" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;font-weight: 500;border: 1px solid rgb(0,0,0,.1);border-radius: 9999px;text-transform: uppercase;font-size: 12px;line-height: 12px;padding: 9px 14px;text-decoration: none;color: rgb(119,119,119);"><img class="icon" src="https://substackcdn.com/image/fetch/$s_!PeVs!,w_36,c_scale,f_png,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Ficon%2FLucideHeart%3Fv%3D4%26height%3D36%26fill%3Dnone%26stroke%3D%2523808080%26strokeWidth%3D2" width="18" height="18" style="margin-right: 8px;min-width: 18px;min-height: 18px;border: none;vertical-align: middle;max-width: 18px" alt=""><span class="email-button-text" style="vertical-align: middle;">Like</span></a></td></tr></tbody></table></td><td width="8" style="min-width:8px;"></td><td style="vertical-align:middle;"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="center"><a class="email-button-outline" href="https://substack.com/app-link/post?publication_id=1744395&post_id=209706176&utm_source=substack&utm_medium=email&isFreemail=true&comments=true&token=eyJ1c2VyX2lkIjoxMDUxODY0NywicG9zdF9pZCI6MjA5NzA2MTc2LCJpYXQiOjE3ODYwNDA2MzEsImV4cCI6MTc4ODYzMjYzMSwiaXNzIjoicHViLTE3NDQzOTUiLCJzdWIiOiJwb3N0LXJlYWN0aW9uIn0.JlU_Bg7HhPABIU3bvFYxdjYKOawjJ4NYoK838gob8j0&r=69g8n&utm_campaign=email-half-magic-comments&action=post-comment&utm_source=substack&utm_medium=email" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;font-weight: 500;border: 1px solid rgb(0,0,0,.1);border-radius: 9999px;text-transform: uppercase;font-size: 12px;line-height: 12px;padding: 9px 14px;text-decoration: none;color: rgb(119,119,119);"><img class="icon" src="https://substackcdn.com/image/fetch/$s_!x1tS!,w_36,c_scale,f_png,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Ficon%2FLucideComments%3Fv%3D4%26height%3D36%26fill%3Dnone%26stroke%3D%2523808080%26strokeWidth%3D2" width="18" height="18" style="margin-right: 8px;min-width: 18px;min-height: 18px;border: none;vertical-align: middle;max-width: 18px" alt=""><span class="email-button-text" style="vertical-align: middle;">Comment</span></a></td></tr></tbody></table></td><td width="8" style="min-width:8px;"></td><td style="vertical-align:middle;"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="center"><a class="email-button-outline" href="https://open.substack.com/pub/bloodinthemachine/p/the-odyssey-as-tech-criticism?utm_source=substack&utm_medium=email&utm_campaign=email-restack-comment&action=restack-comment&r=69g8n&token=eyJ1c2VyX2lkIjoxMDUxODY0NywicG9zdF9pZCI6MjA5NzA2MTc2LCJpYXQiOjE3ODYwNDA2MzEsImV4cCI6MTc4ODYzMjYzMSwiaXNzIjoicHViLTE3NDQzOTUiLCJzdWIiOiJwb3N0LXJlYWN0aW9uIn0.JlU_Bg7HhPABIU3bvFYxdjYKOawjJ4NYoK838gob8j0&utm_source=substack&utm_medium=email" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;font-weight: 500;border: 1px solid rgb(0,0,0,.1);border-radius: 9999px;text-transform: uppercase;font-size: 12px;line-height: 12px;padding: 9px 14px;text-decoration: none;color: rgb(119,119,119);"><img class="icon" src="https://substackcdn.com/image/fetch/$s_!ubXF!,w_36,c_scale,f_png,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Ficon%2Fnotes__NoteRestackIcon%3Fv%3D4%26height%3D36%26fill%3Dnone%26stroke%3D%2523808080%26strokeWidth%3D2%26strokeLinecap%3Dround%26strokeLinejoin%3Dround" width="18" height="18" alt="" style="margin-right: 8px;min-width: 18px;min-height: 18px;max-width: 550px;border: none !important;vertical-align: middle;"><span class="email-button-text" style="vertical-align: middle;">Restack</span></a></td></tr></tbody></table></td></tr></tbody></table></td><td align="right"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr></tr></tbody></table></td></tr></tbody></table></td></tr><tr height="16"><td height="16" style="font-size:0px;line-height:0;">&nbsp;</td></tr></tbody></table><div class="footer footer-ZM59BM" style="color: rgb(119,119,119);text-align: center;font-size: 16px;line-height: 26px;padding: 24px0;"><div style="font-size: 16px;line-height: 26px;padding-bottom: 24px"><p class="pencraft pc-reset color-secondary-ls1g8s size-12-mmZ61m reset-IxiVJZ small meta-B2bqa5" style="list-style: none;font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';padding-bottom: 0;font-size: 12px;line-height: 16px;margin: 0;color: rgb(119,119,119);text-decoration: unset;">&#169; 2026 <span>Brian Merchant</span><br>548 Market Street PMB 72296, San Francisco, CA 94104 <br><a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly9ibG9vZGludGhlbWFjaGluZS5zdWJzdGFjay5jb20vYWN0aW9uL2Rpc2FibGVfZW1haWw_dG9rZW49ZXlKMWMyVnlYMmxrSWpveE1EVXhPRFkwTnl3aWNHOXpkRjlwWkNJNk1qQTVOekEyTVRjMkxDSnBZWFFpT2pFM09EWXdOREEyTXpFc0ltVjRjQ0k2TVRneE56VTNOall6TVN3aWFYTnpJam9pY0hWaUxURTNORFF6T1RVaUxDSnpkV0lpT2lKa2FYTmhZbXhsWDJWdFlXbHNJbjAuUE9nQTlsMmhlSXpLY2ZiZC1yQm8zckVHMzRfV0ppdGxJeDduUElNLW9LOCIsInAiOjIwOTcwNjE3NiwicyI6MTc0NDM5NSwiZiI6dHJ1ZSwidSI6MTA1MTg2NDcsImlhdCI6MTc4NjA0MDYzMSwiZXhwIjoyMTAxNjE2NjMxLCJpc3MiOiJwdWItMCIsInN1YiI6ImxpbmstcmVkaXJlY3QifQ.7KZyiU18tUekR-2zsY7SJZG-ZH1gom_k38JqeQ2VM7k?" style="text-decoration: underline;color: rgb(119,119,119);"><span style="color: rgb(119,119,119);text-decoration: underline;">Unsubscribe</span></a></p></div><p class="footerSection-EHR0jG small powered-by-substack" style="padding: 0 24px;font-size: 12px;line-height: 20px;margin: 0;color: rgb(119,119,119);font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';padding-bottom: 0;margin-top: 0;"><a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly9zdWJzdGFjay5jb20vc2lnbnVwP3V0bV9zb3VyY2U9c3Vic3RhY2smdXRtX21lZGl1bT1lbWFpbCZ1dG1fY29udGVudD1mb290ZXImdXRtX2NhbXBhaWduPWF1dG9maWxsZWQtZm9vdGVyJmZyZWVTaWdudXBFbWFpbD1iZW5vaXRjQGdtYWlsLmNvbSZyPTY5ZzhuIiwicCI6MjA5NzA2MTc2LCJzIjoxNzQ0Mzk1LCJmIjp0cnVlLCJ1IjoxMDUxODY0NywiaWF0IjoxNzg2MDQwNjMxLCJleHAiOjIxMDE2MTY2MzEsImlzcyI6InB1Yi0wIiwic3ViIjoibGluay1yZWRpcmVjdCJ9.3ex-X0D7yt9an2LEf27WN0au0T-E53Fr7YgODHf2w3Y?" style="color: rgb(119,119,119);text-decoration: none;display: inline-block;margin: 0 4px;"><img src="https://substackcdn.com/image/fetch/$s_!LkrL!,w_270,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Fimg%2Femail%2Fpublish-button%402x.png" srcset="https://substackcdn.com/image/fetch/$s_!wgfj!,w_135,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Fimg%2Femail%2Fpublish-button.png, https://substackcdn.com/image/fetch/$s_!LkrL!,w_270,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Fimg%2Femail%2Fpublish-button%402x.png 2x, https://substackcdn.com/image/fetch/$s_!KjtY!,w_405,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Fimg%2Femail%2Fpublish-button%403x.png 3x" width="135" alt="Start writing" height="40" style="max-width: 550px;border: none !important;vertical-align: middle;"></a></p></div></div></td><td></td></tr></tbody></table><img src="https://eotrx.substackcdn.com/o/06b61ae650fc580d/p.gif?token=eyJtIjoiPDIwMjYwODA2MTgyMzI2LjMuNDA2ZGFmNzI1MjBmZGM1OUBtZzIuc3Vic3RhY2suY29tPiIsInUiOjEwNTE4NjQ3LCJyIjoiYmVub2l0Y0BnbWFpbC5jb20iLCJkIjoibWcyLnN1YnN0YWNrLmNvbSIsInAiOjIwOTcwNjE3NiwidCI6Im5ld3NsZXR0ZXIiLCJhIjoiZXZlcnlvbmUiLCJzIjoxNzQ0Mzk1LCJjIjoicG9zdCIsImYiOnRydWUsInBvc2l0aW9uIjoiYm90dG9tIiwiaWF0IjoxNzg2MDQwNjMyLCJleHAiOjE3ODg2MzI2MzIsImlzcyI6InB1Yi0wIiwic3ViIjoiZW8ifQ.lgpOfeHNtj_iHOmfZQm9qa2MQ-SUUDz4anyLQ7aREFw" alt="" width="1" height="1" border="0" style="height:1px !important;width:1px !important;border-width:0 !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:0 !important;margin-left:0 !important;padding-top:0 !important;padding-bottom:0 !important;padding-right:0 !important;padding-left:0 !important;"/><img width="1" height="1" alt="" src="https://email.mg2.substack.com/o/eJxM0E2KxCAQhuHTtMugxqhZeJagViUtE7XRsofcfuifxWy_gpeHip7wqO1yj9qJgVMg7GIZOmGs5orrWTLMPp3bgQWbJ4TN078rXxW7OwhR7YuVOIuglzmgFtoICGIHoSAgS05yqbnlWlg5Sz3Nk-Ia_G7kIvkOcVlviudDTn2ETj7-TLFmlvq2N3wDHLWB7MXc_ICEJaLDJ7arlu-cwEm-Gq6F0Z-Frge6gr_9RCJs7DHCFmvOoyS6Niw-nAjf8Ahnip5SLa-QMErN68KaC1hqonhT_Hgx3qw-AtTsU3HhrBVSoTtmH--pIKPPK0fH9g7xRVitDHs6-RcAAP__Dp15VA"></body></html></body></html>
