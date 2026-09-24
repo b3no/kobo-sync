@@ -1,0 +1,787 @@
+<html><head><meta name="robots" content="noindex"><title>You Should Be Typemaxxing</title></head><body><html lang="en" dir="ltr" style="scrollbar-width: thin;scrollbar-color: rgb(219,219,219)rgb(255,255,255);"><head><meta charset="utf-8"><title>You Should Be Typemaxxing</title><style>
+@media (max-width: 1024px) {
+  .typography .pullquote-align-left,
+  .typography.editor .pullquote-align-left,
+  .typography .pullquote-align-right,
+  .typography.editor .pullquote-align-right,
+  .typography .pullquote-align-wide,
+  .typography.editor .pullquote-align-wide,
+  .typography .pullquote-align-center,
+  .typography.editor .pullquote-align-center {
+    float: none;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .typography .markup table.image-wrapper img,
+  .typography.editor .markup table.image-wrapper img,
+  .typography .markup table.kindle-wrapper img,
+  .typography.editor .markup table.kindle-wrapper img {
+    max-width: 550px;
+  }
+}
+@media (min-width: 1024px) {
+  .typography:not(:has(#toc)) .captioned-image-container figure:has(> a.image2-offset-left),
+  .typography.editor:not(:has(#toc)) .captioned-image-container figure:has(> a.image2-offset-left) {
+    margin-left: var(--image-offset-margin);
+  }
+  .typography:not(:has(#toc)) .captioned-image-container figure:has(> a.image2-offset-right),
+  .typography.editor:not(:has(#toc)) .captioned-image-container figure:has(> a.image2-offset-right) {
+    margin-right: var(--image-offset-margin);
+  }
+}
+@media (min-width: 1300px) {
+  .typography .captioned-image-container figure:has(> a.image2-offset-left),
+  .typography.editor .captioned-image-container figure:has(> a.image2-offset-left) {
+    margin-left: var(--image-offset-margin);
+  }
+  .typography .captioned-image-container figure:has(> a.image2-offset-right),
+  .typography.editor .captioned-image-container figure:has(> a.image2-offset-right) {
+    margin-right: var(--image-offset-margin);
+  }
+}
+@media (max-width: 1024px) {
+  .typography,
+  .typography.editor {
+    /* Disable offset on mobile/tablet */
+  }
+  .typography .captioned-image-container figure:has(> a.image2-align-left),
+  .typography.editor .captioned-image-container figure:has(> a.image2-align-left),
+  .typography .captioned-image-container figure:has(> a.image2-align-right),
+  .typography.editor .captioned-image-container figure:has(> a.image2-align-right) {
+    float: none;
+    margin: 1em auto;
+    max-width: 100%;
+    width: auto;
+    padding: 0;
+  }
+  .typography .captioned-image-container figure:has(> a.image2-align-left.thefp),
+  .typography.editor .captioned-image-container figure:has(> a.image2-align-left.thefp),
+  .typography .captioned-image-container figure:has(> a.image2-align-right.thefp),
+  .typography.editor .captioned-image-container figure:has(> a.image2-align-right.thefp) {
+    margin: 1em auto;
+  }
+  .typography .captioned-image-container figure:has(> a.image2-offset-left),
+  .typography.editor .captioned-image-container figure:has(> a.image2-offset-left),
+  .typography .captioned-image-container figure:has(> a.image2-offset-right),
+  .typography.editor .captioned-image-container figure:has(> a.image2-offset-right) {
+    margin: 1em auto;
+  }
+  .typography .captioned-image-container figure:has(> a.image2-align-left) .image2-inset,
+  .typography.editor .captioned-image-container figure:has(> a.image2-align-left) .image2-inset,
+  .typography .captioned-image-container figure:has(> a.image2-align-right) .image2-inset,
+  .typography.editor .captioned-image-container figure:has(> a.image2-align-right) .image2-inset {
+    display: block;
+    justify-content: initial;
+  }
+}
+@media (max-width: 768px) {
+  .typography .markup div.sponsorship-campaign-embed,
+  .typography.editor .markup div.sponsorship-campaign-embed {
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+  .typography .markup div.sponsorship-campaign-embed:first-child,
+  .typography.editor .markup div.sponsorship-campaign-embed:first-child {
+    margin-top: 0px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .typography .markup div.youtube-overlay,
+  .typography.editor .markup div.youtube-overlay,
+  .typography .markup div.vimeo-overlay,
+  .typography.editor .markup div.vimeo-overlay {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 370px) {
+  .typography .markup div.tiktok-wrap,
+  .typography.editor .markup div.tiktok-wrap {
+    width: calc(95vw - 32px);
+    height: calc((95vw - 32px - 2px) / 0.485714);
+  }
+}
+@media screen and (max-width: 650px) {
+  .typography .markup div.embedded-publication-wrap .embedded-publication.show-subscribe,
+  .typography.editor .markup div.embedded-publication-wrap .embedded-publication.show-subscribe {
+    padding: 24px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .typography .markup div.subscription-widget-wrap .subscription-widget.show-subscribe,
+  .typography.editor .markup div.subscription-widget-wrap .subscription-widget.show-subscribe,
+  .typography .markup div.subscription-widget-wrap-editor .subscription-widget.show-subscribe,
+  .typography.editor .markup div.subscription-widget-wrap-editor .subscription-widget.show-subscribe,
+  .typography .markup div.captioned-button-wrap .subscription-widget.show-subscribe,
+  .typography.editor .markup div.captioned-button-wrap .subscription-widget.show-subscribe {
+    padding: 0px 24px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .typography .markup div.subscription-widget-wrap .subscription-widget.show-subscribe .subscription-widget-subscribe .button,
+  .typography.editor .markup div.subscription-widget-wrap .subscription-widget.show-subscribe .subscription-widget-subscribe .button,
+  .typography .markup div.subscription-widget-wrap-editor .subscription-widget.show-subscribe .subscription-widget-subscribe .button,
+  .typography.editor .markup div.subscription-widget-wrap-editor .subscription-widget.show-subscribe .subscription-widget-subscribe .button,
+  .typography .markup div.captioned-button-wrap .subscription-widget.show-subscribe .subscription-widget-subscribe .button,
+  .typography.editor .markup div.captioned-button-wrap .subscription-widget.show-subscribe .subscription-widget-subscribe .button {
+    padding: 10px 12px;
+    min-width: 110px;
+  }
+}
+@media (max-width: 650px) {
+  .typography .markup .twitter-embed,
+  .typography.editor .markup .twitter-embed,
+  .typography .markup .tweet,
+  .typography.editor .markup .tweet {
+    padding: 12px;
+  }
+}
+@media (max-width: 650px) {
+  .typography .markup .twitter-embed .tweet-text,
+  .typography.editor .markup .twitter-embed .tweet-text,
+  .typography .markup .tweet .tweet-text,
+  .typography.editor .markup .tweet .tweet-text {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+@media (max-width: 650px) {
+  .typography .markup .twitter-embed .tweet-photos-container.two,
+  .typography.editor .markup .twitter-embed .tweet-photos-container.two,
+  .typography .markup .tweet .tweet-photos-container.two,
+  .typography.editor .markup .tweet .tweet-photos-container.two,
+  .typography .markup .twitter-embed .tweet-photos-container.three,
+  .typography.editor .markup .twitter-embed .tweet-photos-container.three,
+  .typography .markup .tweet .tweet-photos-container.three,
+  .typography.editor .markup .tweet .tweet-photos-container.three,
+  .typography .markup .twitter-embed .tweet-photos-container.four,
+  .typography.editor .markup .twitter-embed .tweet-photos-container.four,
+  .typography .markup .tweet .tweet-photos-container.four,
+  .typography.editor .markup .tweet .tweet-photos-container.four {
+    height: 200px;
+  }
+}
+@media (max-width: 650px) {
+  .typography .markup .twitter-embed a.expanded-link .expanded-link-img,
+  .typography.editor .markup .twitter-embed a.expanded-link .expanded-link-img,
+  .typography .markup .tweet a.expanded-link .expanded-link-img,
+  .typography.editor .markup .tweet a.expanded-link .expanded-link-img {
+    max-height: 180px;
+  }
+}
+@media (max-width: 650px) {
+  .typography .markup .twitter-embed a.expanded-link .expanded-link-description,
+  .typography.editor .markup .twitter-embed a.expanded-link .expanded-link-description,
+  .typography .markup .tweet a.expanded-link .expanded-link-description,
+  .typography.editor .markup .tweet a.expanded-link .expanded-link-description {
+    display: none;
+  }
+}
+@media screen and (max-width: 650px) {
+  .typography .markup .apple-podcast-container,
+  .typography.editor .markup .apple-podcast-container {
+    width: unset;
+  }
+}
+@media (max-width: 420px) {
+  .typography .markup .install-substack-app-embed img.install-substack-app-embed-img,
+  .typography.editor .markup .install-substack-app-embed img.install-substack-app-embed-img {
+    margin: 0 auto 16px auto;
+  }
+}
+@media (max-width: 420px) {
+  .typography .markup .install-substack-app-embed .install-substack-app-embed-text,
+  .typography.editor .markup .install-substack-app-embed .install-substack-app-embed-text {
+    margin: 0 0 12px 0;
+    max-width: 100%;
+    width: auto;
+    text-align: center;
+  }
+}
+@media (max-width: 420px) {
+  .typography .markup .install-substack-app-embed .install-substack-app-embed-link,
+  .typography.editor .markup .install-substack-app-embed .install-substack-app-embed-link {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 481px) {
+  .share-button-container {
+    height: 38px;
+  }
+}
+@media screen and (min-width: 481px) {
+  .share-button-container a.comment {
+    height: 38px;
+    line-height: 38px;
+    padding-right: 10px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .share-button-container .separator {
+    display: block;
+    margin: 0;
+    height: 8px;
+    border-left: none;
+  }
+}
+@media screen and (max-width: 480px) {
+  .share-button-container a.share.first img {
+    padding-left: 0;
+  }
+}
+@media screen and (min-width: 481px) {
+  .share-button-container a.mobile {
+    display: none !important;
+  }
+}
+@media screen and (min-width: 541px) {
+  .settings-add-pub-modal-wrapper .container .add-recommending-pub-modal-container {
+    padding: 36px;
+    height: 680px;
+  }
+}
+@media screen and (min-width: 541px) {
+  .settings-add-pub-modal-wrapper .container .add-recommending-pub-modal-container .footer {
+    position: absolute;
+    bottom: 36px;
+    margin: 0px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .header-anchor-parent {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .post {
+    padding: 16px 0 0 0;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post .post-header .post-label {
+    margin-top: 8px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post .post-header .meta-author-wrap.alternative-meta .meta-right-column .post-meta {
+    margin-top: 6px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post .footer-facepile-container {
+    height: 64px;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post .post-footer.use-separators {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post .post-footer.next-prev {
+    height: 64px;
+    justify-content: space-between;
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post-contributor-footer .post-contributor-bio-table {
+    display: block;
+  }
+  .post-contributor-footer .post-contributor-bio-table-row {
+    display: flex;
+    flex-direction: row;
+  }
+  .post-contributor-footer .post-contributor-bio-userhead-cell,
+  .post-contributor-footer .post-contributor-bio-body-cell {
+    display: block;
+  }
+  .post-contributor-footer .post-contributor-bio-body-cell {
+    flex-grow: 1;
+  }
+  .post-contributor-footer .post-contributor-bio-body-table {
+    display: block;
+  }
+  .post-contributor-footer .post-contributor-bio-body-table-row {
+    display: block;
+  }
+  .post-contributor-footer .post-contributor-bio-copy-cell,
+  .post-contributor-footer .post-contributor-bio-controls-cell {
+    display: block;
+  }
+  .post-contributor-footer .post-contributor-bio-copy-cell {
+    margin: 0 0 16px 0;
+  }
+  .post-contributor-footer .post-contributor-bio-controls-cell {
+    width: auto;
+  }
+  .post-contributor-footer .post-contributor-bio-controls {
+    margin: auto;
+  }
+  .post-contributor-footer .post-contributor-bio-controls .button.primary {
+    width: 100%;
+  }
+  .post-contributor-footer .post-contributor-bio-text {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .post-silhouette {
+    padding: 32px 0;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post-silhouette .post-silhouette-title {
+    margin-top: 10.44225025px;
+    height: 120px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post-silhouette .post-silhouette-meta {
+    width: 75%;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post-silhouette .post-silhouette-meta.with-byline-image {
+    margin: 20px 0;
+  }
+}
+@media screen and (max-width: 650px) {
+  .use-theme-bg .post-meta.alternative-meta .post-meta-item,
+  .post-meta.alternative-meta .post-meta-item {
+    padding-right: 16px;
+  }
+}
+@media screen and (max-width: 370px) {
+  .use-theme-bg .post-meta.alternative-meta .post-meta-item,
+  .post-meta.alternative-meta .post-meta-item {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .use-theme-bg .post-meta.alternative-meta .post-meta-item.guest-author-publication,
+  .post-meta.alternative-meta .post-meta-item.guest-author-publication {
+    display: none;
+  }
+}
+@media screen and (max-width: 370px) {
+  .post-meta .post-meta-item .post-meta-button {
+    height: 36px !important;
+    /* important to override in-line height style on emails */
+  }
+  .post-meta .post-meta-item .post-meta-button .meta-button-label {
+    display: none;
+  }
+  .post-meta .post-meta-item .post-meta-button > svg {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 370px) {
+  .post-meta .post-meta-item {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post .floating-subscribe-button {
+    bottom: 20px;
+    right: 20px;
+  }
+}
+@media (max-width: 1024px) {
+  body .pullquote-align-left,
+  body .pullquote-align-right,
+  body .pullquote-align-wide,
+  body .pullquote-align-center {
+    float: none;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  body .markup table.image-wrapper img,
+  body .markup table.kindle-wrapper img {
+    max-width: 550px;
+  }
+}
+@media (min-width: 1024px) {
+  body:not(:has(#toc)) .captioned-image-container figure:has(> a.image2-offset-left) {
+    margin-left: var(--image-offset-margin);
+  }
+  body:not(:has(#toc)) .captioned-image-container figure:has(> a.image2-offset-right) {
+    margin-right: var(--image-offset-margin);
+  }
+}
+@media (min-width: 1300px) {
+  body .captioned-image-container figure:has(> a.image2-offset-left) {
+    margin-left: var(--image-offset-margin);
+  }
+  body .captioned-image-container figure:has(> a.image2-offset-right) {
+    margin-right: var(--image-offset-margin);
+  }
+}
+@media (max-width: 1024px) {
+  body {
+    /* Disable offset on mobile/tablet */
+  }
+  body .captioned-image-container figure:has(> a.image2-align-left),
+  body .captioned-image-container figure:has(> a.image2-align-right) {
+    float: none;
+    margin: 1em auto;
+    max-width: 100%;
+    width: auto;
+    padding: 0;
+  }
+  body .captioned-image-container figure:has(> a.image2-align-left.thefp),
+  body .captioned-image-container figure:has(> a.image2-align-right.thefp) {
+    margin: 1em auto;
+  }
+  body .captioned-image-container figure:has(> a.image2-offset-left),
+  body .captioned-image-container figure:has(> a.image2-offset-right) {
+    margin: 1em auto;
+  }
+  body .captioned-image-container figure:has(> a.image2-align-left) .image2-inset,
+  body .captioned-image-container figure:has(> a.image2-align-right) .image2-inset {
+    display: block;
+    justify-content: initial;
+  }
+}
+@media (max-width: 768px) {
+  body .markup div.sponsorship-campaign-embed {
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+  body .markup div.sponsorship-campaign-embed:first-child {
+    margin-top: 0px;
+  }
+}
+@media screen and (max-width: 650px) {
+  body .markup div.youtube-overlay,
+  body .markup div.vimeo-overlay {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 370px) {
+  body .markup div.tiktok-wrap {
+    width: calc(95vw - 32px);
+    height: calc((95vw - 32px - 2px) / 0.485714);
+  }
+}
+@media screen and (max-width: 650px) {
+  body .markup div.embedded-publication-wrap .embedded-publication.show-subscribe {
+    padding: 24px;
+  }
+}
+@media screen and (max-width: 650px) {
+  body .markup div.subscription-widget-wrap .subscription-widget.show-subscribe,
+  body .markup div.subscription-widget-wrap-editor .subscription-widget.show-subscribe,
+  body .markup div.captioned-button-wrap .subscription-widget.show-subscribe {
+    padding: 0px 24px;
+  }
+}
+@media screen and (max-width: 650px) {
+  body .markup div.subscription-widget-wrap .subscription-widget.show-subscribe .subscription-widget-subscribe .button,
+  body .markup div.subscription-widget-wrap-editor .subscription-widget.show-subscribe .subscription-widget-subscribe .button,
+  body .markup div.captioned-button-wrap .subscription-widget.show-subscribe .subscription-widget-subscribe .button {
+    padding: 10px 12px;
+    min-width: 110px;
+  }
+}
+@media (max-width: 650px) {
+  body .markup .twitter-embed,
+  body .markup .tweet {
+    padding: 12px;
+  }
+}
+@media (max-width: 650px) {
+  body .markup .twitter-embed .tweet-text,
+  body .markup .tweet .tweet-text {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+@media (max-width: 650px) {
+  body .markup .twitter-embed .tweet-photos-container.two,
+  body .markup .tweet .tweet-photos-container.two,
+  body .markup .twitter-embed .tweet-photos-container.three,
+  body .markup .tweet .tweet-photos-container.three,
+  body .markup .twitter-embed .tweet-photos-container.four,
+  body .markup .tweet .tweet-photos-container.four {
+    height: 200px;
+  }
+}
+@media (max-width: 650px) {
+  body .markup .twitter-embed a.expanded-link .expanded-link-img,
+  body .markup .tweet a.expanded-link .expanded-link-img {
+    max-height: 180px;
+  }
+}
+@media (max-width: 650px) {
+  body .markup .twitter-embed a.expanded-link .expanded-link-description,
+  body .markup .tweet a.expanded-link .expanded-link-description {
+    display: none;
+  }
+}
+@media screen and (max-width: 650px) {
+  body .markup .apple-podcast-container {
+    width: unset;
+  }
+}
+@media (max-width: 420px) {
+  body .markup .install-substack-app-embed img.install-substack-app-embed-img {
+    margin: 0 auto 16px auto;
+  }
+}
+@media (max-width: 420px) {
+  body .markup .install-substack-app-embed .install-substack-app-embed-text {
+    margin: 0 0 12px 0;
+    max-width: 100%;
+    width: auto;
+    text-align: center;
+  }
+}
+@media (max-width: 420px) {
+  body .markup .install-substack-app-embed .install-substack-app-embed-link {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 500px) {
+  body .header a.logo {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+  }
+}
+@media screen and (max-width: 420px) {
+  body .subscription-receipt table:first-of-type .subscription-amount .subscription-discount {
+    width: 72px !important;
+  }
+}
+@media screen and (min-width: 481px) {
+  body .share-button-container {
+    height: auto;
+  }
+}
+@media screen and (max-width: 480px) {
+  body .share-button-container .separator {
+    display: block !important;
+    margin: 0 !important;
+    height: 8px !important;
+    border-left: none !important;
+  }
+}
+@media screen and (max-width: 650px) {
+  .digest .item .post-meta-item.audience {
+    display: none;
+  }
+}
+@media screen and (min-width: 500px) {
+  .digest-publication .logo img {
+    width: 42px;
+    height: 42px;
+    border-radius: 8px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .comments-page .container .comment-list .collapsed-reply {
+    margin-left: calc(10 + 32px - 24px);
+  }
+}
+@media screen and (max-width: 650px) {
+  .comment > .comment-list {
+    padding-left: 24px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .finish-magic-login-modal .modal-content .container {
+    padding: 24px 0;
+  }
+}
+@media (max-width: 650px) {
+  .reader2-text-b3 {
+    line-height: 24px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .reader2-text-h4 {
+    line-height: 24px;
+  }
+}
+@media screen and (min-width: 541px) {
+  .user-profile-modal {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .subscribe-widget form.form .sideBySideWrap button.rightButton {
+    padding: 10px 12px;
+  }
+}
+@media screen and (min-width: 541px) {
+  .pub-icon:hover .logo-hover,
+  .feed-item-icon:hover .logo-hover {
+    display: block;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post-ufi.single-full-width-button .post-ufi-button-wrapper {
+    width: 100%;
+    padding: 16px;
+  }
+  .post-ufi.single-full-width-button .post-ufi-button-wrapper:empty {
+    display: none;
+  }
+  .post-ufi.single-full-width-button .post-ufi-button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  .file-embed-wrapper {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .file-embed-wrapper-editor {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .file-embed-wrapper-editor:active {
+    padding: 0;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .file-embed-button.wide,
+  .file-embed-error-button.wide {
+    display: none;
+  }
+}
+@media only screen and (min-width: 630px) {
+  .file-embed-button.narrow,
+  .file-embed-error-button.narrow {
+    display: none;
+  }
+}
+@media screen and (min-width: 541px) {
+  .audio-player-wrapper .audio-player {
+    min-width: 500px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .audio-player-wrapper .audio-player .audio-player-progress {
+    border-left-width: 16px;
+    border-right-width: 16px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .audio-player-wrapper .audio-player .audio-player-progress .audio-player-progress-bar .audio-player-progress-bar-popup {
+    top: -54px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .audio-player-wrapper-fancy .audio-player .audio-player-progress {
+    border-left-width: 16px;
+    border-right-width: 16px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .audio-player-wrapper-fancy .audio-player .audio-player-progress .audio-player-progress-bar .audio-player-progress-bar-popup {
+    top: -54px;
+  }
+}
+@media (min-width: 250px) {
+  .audio-player-wrapper-fancy .audio-player {
+    padding: 32px;
+  }
+  .audio-player-wrapper-fancy .audio-player .btn-group {
+    display: flex;
+  }
+  .audio-player-wrapper-fancy .audio-player .btn-group .button:last-of-type {
+    display: block;
+  }
+}
+@media (min-width: 300px) {
+  .audio-player-wrapper-fancy .audio-player .btn-group {
+    display: block;
+  }
+  .audio-player-wrapper-fancy .audio-player .btn-group .button:first-of-type {
+    display: block;
+  }
+}
+@media (min-width: 350px) {
+  .audio-player-wrapper-fancy .audio-player .audio-player-substack-logo {
+    display: block;
+  }
+  .audio-player-wrapper-fancy .audio-player .audio-player-title {
+    margin-top: 16px;
+  }
+  .audio-player-wrapper-fancy .audio-player .audio-player-hero-image-container {
+    padding-top: 15%;
+    width: 15%;
+    display: block;
+  }
+  .audio-player-wrapper-fancy .audio-player .btn-group .button:first-of-type {
+    display: block;
+  }
+  .audio-player-wrapper-fancy .audio-player .audio-player-substack-logo {
+    display: block;
+  }
+}
+@media (min-width: 350px) {
+  .audio-player-wrapper-fancy .audio-player .audio-player-hero-image-container {
+    padding-top: 25%;
+    width: 25%;
+    display: block;
+  }
+  .audio-player-wrapper-fancy .audio-player .btn-group {
+    display: flex;
+  }
+  .audio-player-wrapper-fancy .audio-player .btn-group .button:first-of-type {
+    display: block;
+  }
+}
+@media (min-width: 400px) {
+  .audio-player-wrapper-fancy .audio-player .audio-player-hero-image-container {
+    padding-top: 40%;
+    width: 40%;
+  }
+}
+@media (max-width: 400px) {
+  .audio-player-wrapper-fancy .audio-player .btn-group {
+    margin-top: 12px;
+  }
+  .audio-player-wrapper-fancy .audio-player .btn-group .button {
+    font-size: 13px;
+    padding: 6px 12px;
+    height: auto;
+    margin-top: 10px;
+  }
+}
+@media (min-width: 600px) {
+  .audio-player-wrapper-fancy .audio-player .audio-player-hero-image-container {
+    padding-top: 55%;
+    width: 55%;
+  }
+}
+@media (max-width: 650px) {
+  .poll-editor-modal {
+    min-width: calc(100% - 20px);
+  }
+}
+@media (max-width: 750px) {
+  .poll-embed .poll-anchor-target .poll-anchor-copy-button {
+    left: 8px;
+    top: 45px;
+  }
+}</style></head><body class="email-body" style="font-kerning: auto;--image-offset-margin: -120px;"><img src="https://eotrx.substackcdn.com/o/44a7837c3b658763/p.gif?token=eyJtIjoiPDIwMjYwOTI0MTEwNDE4LjMuMTdmZWZjZWNlOGUwNDJiOEBtZzEuc3Vic3RhY2suY29tPiIsInUiOjEwNTE4NjQ3LCJyIjoiYmVub2l0Y0BnbWFpbC5jb20iLCJkIjoibWcxLnN1YnN0YWNrLmNvbSIsInAiOjIxNjE3NDE2MCwidCI6Im5ld3NsZXR0ZXIiLCJhIjoib25seV9wYWlkIiwicyI6MjM1NTAyNSwiYyI6InBvc3QiLCJmIjpmYWxzZSwieiI6IiIsInBvc2l0aW9uIjoidG9wIiwiaWF0IjoxNzkwMjQ4Nzg5LCJleHAiOjE3OTI4NDA3ODksImlzcyI6InB1Yi0wIiwic3ViIjoiZW8ifQ._jok__kPI5YEyNqTaN9ixpgBl0WMNdU9INQeAP1f1mk" alt="" width="1" height="1" border="0" style="height:1px !important;width:1px !important;border-width:0 !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:0 !important;margin-left:0 !important;padding-top:0 !important;padding-bottom:0 !important;padding-right:0 !important;padding-left:0 !important;"/><div class="preview" style="display:none;font-size:1px;color:#333333;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;">The secret third thing between &#8220;being yourself&#8221; and &#8220;chasing a universal ideal of hotness&#8221;--identifying your &#8220;type&#8221; and working within it.</div><div class="preview" style="display:none;font-size:1px;color:#333333;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;">&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;</div><table class="email-body-container" role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td></td><td class="content" width="550"></td><td></td></tr><tr><td></td><td class="content" width="550" align="left"><div style="font-size: 16px;line-height: 26px;max-width: 550px;width: 100%;margin: 0 auto;overflow-wrap: break-word;"><table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="right" style="height:20px;"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="vertical-align:middle;"><span class="pencraft pc-reset reset-IxiVJZ pencraft color-secondary-ls1g8s font-text-qe4AeH size-13-hZTUKr" style="list-style: none;text-decoration: unset;color: rgb(119,119,119);margin: 0;font-size: 13px;line-height: 20px;font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';"><a class="pencraft color-secondary-ls1g8s decoration-underline-ClTkYc" href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly93d3cuY2FydG9vbnNoYXRlaGVyLmNvbS9wL2JlaW5nLXRoZS1ob3R0ZXN0LXZlcnNpb24tb2YteW91cj91dG1fY2FtcGFpZ249ZW1haWwtcG9zdCZyPTY5ZzhuJnRva2VuPWV5SjFjMlZ5WDJsa0lqb3hNRFV4T0RZME55d2ljRzl6ZEY5cFpDSTZNakUyTVRjME1UWXdMQ0pwWVhRaU9qRTNPVEF5TkRnM09EZ3NJbVY0Y0NJNk1UYzVNamcwTURjNE9Dd2lhWE56SWpvaWNIVmlMVEl6TlRVd01qVWlMQ0p6ZFdJaU9pSndiM04wTFhKbFlXTjBhVzl1SW4wLnNVdVRCVy1KLVVLWE4zY21IRkJmYmtYX2VTeHF5cFpKNjFnZUhNMnR1eGMiLCJwIjoyMTYxNzQxNjAsInMiOjIzNTUwMjUsImYiOmZhbHNlLCJ1IjoxMDUxODY0NywiaWF0IjoxNzkwMjQ4Nzg4LCJleHAiOjIxMDU4MjQ3ODgsImlzcyI6InB1Yi0wIiwic3ViIjoibGluay1yZWRpcmVjdCJ9.cbxFuJHaAVKUI4z-D_H8BL2Sy8oJcLkY7tyioj-8WN8?" style="color: rgb(119,119,119);-webkit-text-decoration-line: underline;text-decoration-line: underline;">View in browser</a></span></td></tr></tbody></table></td></tr></tbody></table><table class="header graphic-header" role="presentation" style="border-spacing: 0;padding: 16px 0 32px;"><tbody><tr><td align="center" style="text-align: center;padding: 0;"><a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly93d3cuY2FydG9vbnNoYXRlaGVyLmNvbS9wL2JlaW5nLXRoZS1ob3R0ZXN0LXZlcnNpb24tb2YteW91cj91dG1fY2FtcGFpZ249ZW1haWwtaGFsZi1wb3N0JnI9NjlnOG4mdG9rZW49ZXlKMWMyVnlYMmxrSWpveE1EVXhPRFkwTnl3aWNHOXpkRjlwWkNJNk1qRTJNVGMwTVRZd0xDSnBZWFFpT2pFM09UQXlORGczT0Rnc0ltVjRjQ0k2TVRjNU1qZzBNRGM0T0N3aWFYTnpJam9pY0hWaUxUSXpOVFV3TWpVaUxDSnpkV0lpT2lKd2IzTjBMWEpsWVdOMGFXOXVJbjAuc1V1VEJXLUotVUtYTjNjbUhGQmZia1hfZVN4cXlwWko2MWdlSE0ydHV4YyIsInAiOjIxNjE3NDE2MCwicyI6MjM1NTAyNSwiZiI6ZmFsc2UsInUiOjEwNTE4NjQ3LCJpYXQiOjE3OTAyNDg3ODgsImV4cCI6MjEwNTgyNDc4OCwiaXNzIjoicHViLTAiLCJzdWIiOiJsaW5rLXJlZGlyZWN0In0.SUixCgLnfXZThf-2qWkxknPgw2Rg7eEaKsqaynV0HQw?"><img class="header-image" role="presentation" width="550" height="110" src="https://substackcdn.com/image/fetch/$s_!DrZW!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F9d0e3a2c-4bc9-46d6-ac2f-0d3a74605874_1100x220.png" style="border: none !important;vertical-align: middle;max-width: 550px;display: block;margin: 0 auto;height: auto;width: 100%;"></a></td></tr></tbody></table><div class="post typography" dir="auto" style="--image-offset-margin: -120px;padding: 32px 0 0 0;font-size: 16px;line-height: 26px;"><div class="post-header" role="region" aria-label="Post header" style="font-size: 16px;line-height: 26px;"><h1 class="post-title published title-X77sOw" dir="auto" style="direction: auto;text-align: start;unicode-bidi: isolate;color: rgb(54,55,55);overflow-wrap: anywhere;word-break: normal;font-family: 'Instrument Serif',sans-serif;font-weight: 400;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: antialiased;-webkit-appearance: optimizelegibility;-moz-appearance: optimizelegibility;appearance: optimizelegibility;margin: 0;line-height: 36px;font-size: 32px;"><a href="https://substack.com/app-link/post?publication_id=2355025&post_id=216174160&utm_source=post-email-title&utm_campaign=email-post-title&isFreemail=false&r=69g8n&token=eyJ1c2VyX2lkIjoxMDUxODY0NywicG9zdF9pZCI6MjE2MTc0MTYwLCJpYXQiOjE3OTAyNDg3ODgsImV4cCI6MTc5Mjg0MDc4OCwiaXNzIjoicHViLTIzNTUwMjUiLCJzdWIiOiJwb3N0LXJlYWN0aW9uIn0.sUuTBW-J-UKXN3cmHFBfbkX_eSxqypZJ61geHM2tuxc" style="color: rgb(54,55,55);text-decoration: none;">You Should Be Typemaxxing</a></h1><h3 class="subtitle subtitle-HEEcLo" dir="auto" style="direction: auto;text-align: start;unicode-bidi: isolate;font-family: 'SF Pro Display',-apple-system-headline,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight: normal;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: antialiased;-webkit-appearance: optimizelegibility;-moz-appearance: optimizelegibility;appearance: optimizelegibility;margin: 4px 0 0;color: #777777;overflow-wrap: anywhere;word-break: normal;line-height: 24px;font-size: 18px;margin-top: 12px;">The secret third thing between &#8220;being yourself&#8221; and &#8220;chasing a universal ideal of hotness&#8221;--identifying your &#8220;type&#8221; and working within it. </h3><table class="post-meta" role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="margin: 1em 0;height: 20px;align-items: center;"><tbody><tr><td><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="vertical-align:middle;"><div class="pencraft pc-reset color-primary-zABazT line-height-20-t4M0El font-meta-MWBumP size-11-NuY2Zx weight-medium-fw81nC transform-uppercase-yKDgcq reset-IxiVJZ meta-EgzBVA custom-css-email-post-author" style="list-style: none;font-size: 11px;line-height: 20px;text-decoration: unset;color: rgb(54,55,55);margin: 0;font-family: 'SF Compact',-apple-system,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight: 500;text-transform: uppercase;letter-spacing: .2px;"><a class="pencraft pc-reset color-primary-zABazT line-height-20-t4M0El font-meta-MWBumP size-11-NuY2Zx weight-medium-fw81nC transform-uppercase-yKDgcq reset-IxiVJZ meta-EgzBVA" style="list-style: none;color: rgb(54,55,55);margin: 0;font-size: 11px;line-height: 20px;font-family: 'SF Compact',-apple-system,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight: 500;text-transform: uppercase;letter-spacing: .2px;text-decoration: none" href="https://substack.com/@cartoonshateher">Cartoons Hate Her</a></div></td></tr></tbody></table></td></tr><tr><td><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="vertical-align:middle;"><div class="pencraft pc-reset color-secondary-ls1g8s line-height-20-t4M0El font-meta-MWBumP size-11-NuY2Zx weight-medium-fw81nC transform-uppercase-yKDgcq reset-IxiVJZ meta-EgzBVA" style="list-style: none;font-size: 11px;line-height: 20px;text-decoration: unset;color: rgb(119,119,119);margin: 0;font-family: 'SF Compact',-apple-system,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight: 500;text-transform: uppercase;letter-spacing: .2px;"><time datetime="2026-09-24T11:04:17.211Z">Sep 24</time></div></td><td width="4" style="min-width:4px;"></td><td style="vertical-align:middle;"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="vertical-align:middle;"><div class="pencraft pc-reset color-secondary-ls1g8s line-height-20-t4M0El font-meta-MWBumP size-11-NuY2Zx weight-medium-fw81nC transform-uppercase-yKDgcq reset-IxiVJZ meta-EgzBVA" style="list-style: none;font-size: 11px;line-height: 20px;text-decoration: unset;color: rgb(119,119,119);margin: 0;font-family: 'SF Compact',-apple-system,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight: 500;text-transform: uppercase;letter-spacing: .2px;">&#8729;</div></td><td width="4" style="min-width:4px;"></td><td style="vertical-align:middle;"><div class="pencraft pc-reset color-paid-LmY0EP line-height-20-t4M0El font-meta-MWBumP size-11-NuY2Zx weight-medium-fw81nC transform-uppercase-yKDgcq reset-IxiVJZ meta-EgzBVA" translated="" style="list-style: none;font-size: 11px;line-height: 20px;text-decoration: unset;color: rgb(94,73,217);margin: 0;font-family: 'SF Compact',-apple-system,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight: 500;text-transform: uppercase;letter-spacing: .2px;">Paid</div></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></td><td align="right"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="vertical-align:middle;"><a href="https://substack.com/@cartoonshateher"><img class="custom-css-email-avatar avatar-QIQ5yR" src="https://substackcdn.com/image/fetch/$s_!vKby!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb82249be-bdc7-44cd-8d10-c283af9b96b5_400x400.jpeg" style="box-sizing: border-box;max-width: 550px;border: none;vertical-align: middle;width: 40px;height: 40px;min-width: 40px;min-height: 40px;object-fit: cover;margin: 0px;display: inline;border-radius: 50%" width="40" height="40"></a></td></tr></tbody></table></td></tr></tbody></table><table class="email-ufi-2-top" role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="border-top: 1px solid rgb(0,0,0,.1);border-bottom: 1px solid rgb(0,0,0,.1);min-width: 100%;"><tbody><tr height="16"><td height="16" style="font-size:0px;line-height:0;">&nbsp;</td></tr><tr><td><table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="vertical-align:middle;"><table role="presentation" width="38" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="center"><a class="email-icon-button" href="https://substack.com/app-link/post?publication_id=2355025&post_id=216174160&utm_source=substack&isFreemail=false&submitLike=true&token=eyJ1c2VyX2lkIjoxMDUxODY0NywicG9zdF9pZCI6MjE2MTc0MTYwLCJyZWFjdGlvbiI6IuKdpCIsImlhdCI6MTc5MDI0ODc4OCwiZXhwIjoxNzkyODQwNzg4LCJpc3MiOiJwdWItMjM1NTAyNSIsInN1YiI6InJlYWN0aW9uIn0.mlJO1llJFR1EZCNTnqN76xKSIf0Z-4fLPCqnKVahsWU&utm_medium=email&utm_campaign=email-reaction&r=69g8n" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;font-weight: 500;border: 1px solid rgb(0,0,0,.1);border-radius: 9999px;text-transform: uppercase;font-size: 12px;line-height: 1;padding: 9px 0;text-decoration: none;color: rgb(119,119,119);min-width: 38px;box-sizing: border-box;width: 38px"><img class="icon" src="https://substackcdn.com/image/fetch/$s_!PeVs!,w_36,c_scale,f_png,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Ficon%2FLucideHeart%3Fv%3D4%26height%3D36%26fill%3Dnone%26stroke%3D%2523808080%26strokeWidth%3D2" width="18" height="18" style="border: none;vertical-align: middle;max-width: 18px" alt=""></a></td></tr></tbody></table></td><td width="8" style="min-width:8px;"></td><td style="vertical-align:middle;"><table role="presentation" width="38" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="center"><a class="email-icon-button" href="https://substack.com/app-link/post?publication_id=2355025&post_id=216174160&utm_source=substack&utm_medium=email&isFreemail=false&comments=true&token=eyJ1c2VyX2lkIjoxMDUxODY0NywicG9zdF9pZCI6MjE2MTc0MTYwLCJpYXQiOjE3OTAyNDg3ODgsImV4cCI6MTc5Mjg0MDc4OCwiaXNzIjoicHViLTIzNTUwMjUiLCJzdWIiOiJwb3N0LXJlYWN0aW9uIn0.sUuTBW-J-UKXN3cmHFBfbkX_eSxqypZJ61geHM2tuxc&r=69g8n&utm_campaign=email-half-magic-comments&action=post-comment&utm_source=substack&utm_medium=email" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;font-weight: 500;border: 1px solid rgb(0,0,0,.1);border-radius: 9999px;text-transform: uppercase;font-size: 12px;line-height: 1;padding: 9px 0;text-decoration: none;color: rgb(119,119,119);min-width: 38px;box-sizing: border-box;width: 38px"><img class="icon" src="https://substackcdn.com/image/fetch/$s_!x1tS!,w_36,c_scale,f_png,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Ficon%2FLucideComments%3Fv%3D4%26height%3D36%26fill%3Dnone%26stroke%3D%2523808080%26strokeWidth%3D2" width="18" height="18" style="border: none;vertical-align: middle;max-width: 18px" alt=""></a></td></tr></tbody></table></td><td width="8" style="min-width:8px;"></td><td style="vertical-align:middle;"><table role="presentation" width="38" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="center"><a class="email-icon-button" href="https://substack.com/app-link/post?publication_id=2355025&post_id=216174160&utm_source=substack&utm_medium=email&utm_content=share&utm_campaign=email-share&action=share&triggerShare=true&isFreemail=false&r=69g8n&token=eyJ1c2VyX2lkIjoxMDUxODY0NywicG9zdF9pZCI6MjE2MTc0MTYwLCJpYXQiOjE3OTAyNDg3ODgsImV4cCI6MTc5Mjg0MDc4OCwiaXNzIjoicHViLTIzNTUwMjUiLCJzdWIiOiJwb3N0LXJlYWN0aW9uIn0.sUuTBW-J-UKXN3cmHFBfbkX_eSxqypZJ61geHM2tuxc" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;font-weight: 500;border: 1px solid rgb(0,0,0,.1);border-radius: 9999px;text-transform: uppercase;font-size: 12px;line-height: 1;padding: 9px 0;text-decoration: none;color: rgb(119,119,119);min-width: 38px;box-sizing: border-box;width: 38px"><img class="icon" src="https://substackcdn.com/image/fetch/$s_!_L14!,w_36,c_scale,f_png,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Ficon%2FLucideShare2%3Fv%3D4%26height%3D36%26fill%3Dnone%26stroke%3D%2523808080%26strokeWidth%3D2" width="18" height="18" style="border: none;vertical-align: middle;max-width: 18px" alt=""></a></td></tr></tbody></table></td><td width="8" style="min-width:8px;"></td><td style="vertical-align:middle;"><table role="presentation" width="38" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="center"><a class="email-icon-button" href="https://open.substack.com/pub/cartoonshateher/p/being-the-hottest-version-of-your?utm_source=substack&utm_medium=email&utm_campaign=email-restack-comment&action=restack-comment&r=69g8n&token=eyJ1c2VyX2lkIjoxMDUxODY0NywicG9zdF9pZCI6MjE2MTc0MTYwLCJpYXQiOjE3OTAyNDg3ODgsImV4cCI6MTc5Mjg0MDc4OCwiaXNzIjoicHViLTIzNTUwMjUiLCJzdWIiOiJwb3N0LXJlYWN0aW9uIn0.sUuTBW-J-UKXN3cmHFBfbkX_eSxqypZJ61geHM2tuxc&utm_source=substack&utm_medium=email" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;font-weight: 500;border: 1px solid rgb(0,0,0,.1);border-radius: 9999px;text-transform: uppercase;font-size: 12px;line-height: 1;padding: 9px 0;text-decoration: none;color: rgb(119,119,119);min-width: 38px;box-sizing: border-box;width: 38px"><img class="icon" src="https://substackcdn.com/image/fetch/$s_!ubXF!,w_36,c_scale,f_png,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Ficon%2Fnotes__NoteRestackIcon%3Fv%3D4%26height%3D36%26fill%3Dnone%26stroke%3D%2523808080%26strokeWidth%3D2%26strokeLinecap%3Dround%26strokeLinejoin%3Dround" width="18" height="18" alt="" style="max-width: 550px;border: none !important;vertical-align: middle;"></a></td></tr></tbody></table></td></tr></tbody></table></td><td align="right"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="vertical-align:middle;"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="center"><a class="email-button-outline" href="https://open.substack.com/pub/cartoonshateher/p/being-the-hottest-version-of-your?utm_source=email&redirect=app-store-no-desktop&inbox=true&utm_campaign=email-read-in-app" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;font-weight: 500;border: 1px solid rgb(0,0,0,.1);border-radius: 9999px;text-transform: uppercase;font-size: 12px;line-height: 12px;padding: 9px 14px;text-decoration: none;color: rgb(119,119,119);"><div class="email-button-spacer" style="font-size: 16px;line-height: 26px;display: inline-block;vertical-align: middle;max-width: 0;min-height: 18px;"></div><span class="email-button-text" style="vertical-align: middle;margin-right: 4px">READ IN APP</span><img class="icon text-icon" src="https://substackcdn.com/image/fetch/$s_!ET-_!,w_36,c_scale,f_png,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Ficon%2FLucideArrowUpRight%3Fv%3D4%26height%3D36%26fill%3Dnone%26stroke%3D%2523808080%26strokeWidth%3D2" width="18" height="18" style="min-width: 18px;min-height: 18px;border: none;vertical-align: middle;margin-right: 0;margin-left: 0;max-width: 18px" alt=""></a></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></td></tr><tr height="16"><td height="16" style="font-size:0px;line-height:0;">&nbsp;</td></tr></tbody></table></div></div><div class="post typography" dir="auto" style="--image-offset-margin: -120px;padding: 32px 0 0 0;font-size: 16px;line-height: 26px;"><div class="body markup" dir="auto" style="text-align: initial;font-size: 16px;line-height: 26px;width: 100%;margin-bottom: 16px;hanging-punctuation: allow-end;overflow-wrap: anywhere;word-break: break-word;"><div class="captioned-image-container-static" style="font-size: 16px;line-height: 26px;margin: 32px auto;margin-top: 0;"><figure style="width: 100%;margin: 0 auto;"><table class="image-wrapper" width="100%" border="0" cellspacing="0" cellpadding="0" data-component-name="Image2ToDOMStatic" style="mso-padding-alt: 1em 0 1.6em;"><tbody><tr><td style="text-align: center;"></td><td class="content" align="left" width="585" style="text-align: center;"><a class="image-link" target="_blank" href="https://substack.com/redirect/50a062ae-bf9a-449a-8e0f-bb7cc69c4091?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="position: relative;flex-direction: column;align-items: center;padding: 0;width: auto;height: auto;border: none;text-decoration: none;display: block;margin: 0;margin-top: 0;margin-bottom: 0;"><img class="wide-image" data-attrs="{&quot;src&quot;:&quot;https://substack-post-media.s3.amazonaws.com/public/images/b6cf4b5c-18dc-4744-beef-ad27923db617_1536x2048.jpeg&quot;,&quot;srcNoWatermark&quot;:null,&quot;fullscreen&quot;:null,&quot;imageSize&quot;:null,&quot;height&quot;:1941,&quot;width&quot;:1456,&quot;resizeWidth&quot;:585,&quot;bytes&quot;:691551,&quot;alt&quot;:null,&quot;title&quot;:null,&quot;type&quot;:&quot;image/jpeg&quot;,&quot;href&quot;:null,&quot;belowTheFold&quot;:false,&quot;topImage&quot;:true,&quot;internalRedirect&quot;:&quot;https://www.cartoonshateher.com/i/216174160?img=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb6cf4b5c-18dc-4744-beef-ad27923db617_1536x2048.jpeg&quot;,&quot;isProcessing&quot;:false,&quot;align&quot;:null,&quot;offset&quot;:false}" alt="" width="550" height="733.2074175824176" src="https://substackcdn.com/image/fetch/$s_!bkPI!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb6cf4b5c-18dc-4744-beef-ad27923db617_1536x2048.jpeg" style="border: none !important;vertical-align: middle;display: block;-ms-interpolation-mode: bicubic;height: auto;margin-bottom: 0;width: auto !important;max-width: 100% !important;margin: 0 auto;"></a></td><td style="text-align: center;"></td></tr></tbody></table><figcaption class="image-caption" style="box-sizing: content-box;color: rgb(119,119,119);font-size: 14px;line-height: 20px;font-weight: 400;letter-spacing: -.15px;margin-top: 8px;width: 70%;padding-left: 15%;padding-right: 15%;text-align: center;">I do not think people should do this.</figcaption></figure></div><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>Lately, there&#8217;s been a great deal of talk about objective feminine beauty (ie: what straight men find attractive). This is a topic that is often in the discourse, because men can&#8217;t seem to agree on which traits are best, endlessly quibbling over ass versus boobs, blondes versus brunettes, like a bunch of guys arguing over fantasy football picks. Yes, we can all agree on the </span><em>basics</em><span> of what men find attractive, but you&#8217;d be surprised at how much is seemingly up for debate&#8212;and how these differences in preferences are treated as topics for objective arguments where someone can be &#8220;wrong&#8221; (usually denoted as &#8220;you&#8217;re gay&#8221;) as opposed to subjective taste. </span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>While men bicker over their differences in taste, some women with special interests in being hot (many such cases) write guides, conduct studies, read studies, and try to boil men&#8217;s sexuality down to a science. I consider myself, to some extent, </span><a href="https://substack.com/redirect/5657d50e-17d3-48a4-9451-1b59c791c5c7?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">part of this</a><span>, so I&#8217;m not criticizing. For me, it&#8217;s just a weird obsession (I&#8217;m also interested in </span><a href="https://substack.com/redirect/ae64d583-781b-4b7f-a4a1-93f3e0a08a0a?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">what makes men attractive</a><span>) but it&#8217;s also a backlash to platitudinous advice I&#8217;ve heard throughout my life to &#8220;not give a fuck about what men think,&#8221; and &#8220;be yourself,&#8221; negating the fact that wanting to look attractive and find a partner is pretty normal, and yet somewhat taboo to admit </span><a href="https://substack.com/redirect/47eabd98-8c89-43f3-8ea7-a6183d6821ae?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">especially for straight women.</a></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>Now, I&#8217;ve written about the </span><a href="https://substack.com/redirect/98d5adeb-a801-455d-a228-f97471d96b63?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">perils</a><span> of &#8220;just be yourself,&#8221; as it relates to social skills (or lack thereof). I agree with beauty analyzers, such as Aria Schrecker or J. Sanilac, that &#8220;there&#8217;s someone for everyone&#8221; doesn&#8217;t take into account the </span><em>amount</em><span> of people into a certain thing, versus the amount of people who have it (for example, some people are into overweight people, but there are far more overweight people than </span><a href="https://substack.com/redirect/31f195b2-af7d-4e15-95e3-c9d75a84c5d8?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">people who find them attractive</a><span>.) And yes, if you want to maximize your odds of finding a partner, whether you&#8217;re male or female, it makes sense to want to look attractive, and it makes sense to want the unfiltered truth about that, even if you, like 99.9% of people, fall short of the ideal. </span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>But there is a secret third option which would benefit both men and women and does not require going under the knife, erasing your ethnicity, or sitting around hating yourself: to be the hottest version of your own &#8220;type,&#8221; as opposed to attempting to emulate a type that you believe is the scientific, objective, unanimous preference for an entire gender. Ultimately, if you are not naturally inclined to look a certain way, you will </span><em>never</em><span> look that way as well as the people who were born into it. </span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">Being the hottest version of your own type&#8212;no matter your gender&#8212;will likely work out better for you anyway, especially if your goal isn&#8217;t to be a world-famous sex icon, but to find a partner who thinks you&#8217;re hot. </p><div class="paywall-jump" data-component-name="PaywallToDOM" style="font-size: 16px;line-height: 26px;display: none;"></div><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">This is not trite advice meant to make everyone feel good. Becoming the hottest version of your type is still work. You don&#8217;t &#8220;lean into&#8221; terrible hygiene, being out-of-shape, eating horribly, or having bad skin. And, yes, even with your best work, you might still be part of a type that&#8217;s less popular than another type. But if you attempt to become another type under the guise that it&#8217;s what &#8220;all men&#8221; or &#8220;all women&#8221; are into, you will simply not do as good of a job as the people who were already born that type. </p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">(Of course, if you aren&#8217;t interested in looking good, or attracting a partner, or whatever, then none of this applies to you either way. Maybe you&#8217;ll keep reading it because it&#8217;s interesting, or because I&#8217;m the funniest wordsmith to have ever graced the pixels of Substack. I don&#8217;t know. Whatever, if you don&#8217;t like this, there&#8217;s always tomorrow&#8217;s article.)</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">I&#8217;m thinking a bit of actresses who get breast implants so they can get more acting roles. I&#8217;ve heard of many aspiring actresses doing this, and yet, many of the most famous and successful actresses don&#8217;t have big boobs at all. And the ones who are world-famous for their boobs (ie: Sydney Sweeney) have natural big ones. Do we really think that Natalie Portman&#8217;s acting career (nay, anything in her life) would have been significantly better if she had platinum blonde hair, blue contacts, and breast implants? Perhaps on a survey, men might rate that version of Natalie Portman higher, but there would be something very uncanny about Natalie Portman attempting to look like Sydney Sweeney when she obviously doesn&#8217;t. </p><div class="captioned-image-container-static" style="font-size: 16px;line-height: 26px;margin: 32px auto;"><figure style="width: 100%;margin: 0 auto;"><table class="image-wrapper" width="100%" border="0" cellspacing="0" cellpadding="0" data-component-name="Image2ToDOMStatic" style="mso-padding-alt: 1em 0 1.6em;"><tbody><tr><td style="text-align: center;"></td><td class="content" align="left" width="500" style="text-align: center;"><a class="image-link" target="_blank" href="https://substack.com/redirect/7f18f630-a38d-40de-92c5-4c15066d4494?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="position: relative;flex-direction: column;align-items: center;padding: 0;width: auto;height: auto;border: none;text-decoration: none;display: block;margin: 0;"><img data-attrs="{&quot;src&quot;:&quot;https://substack-post-media.s3.amazonaws.com/public/images/d13d7e54-0f46-4886-862d-bca5fc458bf6_500x740.avif&quot;,&quot;srcNoWatermark&quot;:null,&quot;fullscreen&quot;:null,&quot;imageSize&quot;:null,&quot;height&quot;:740,&quot;width&quot;:500,&quot;resizeWidth&quot;:null,&quot;bytes&quot;:27676,&quot;alt&quot;:null,&quot;title&quot;:null,&quot;type&quot;:&quot;image/avif&quot;,&quot;href&quot;:null,&quot;belowTheFold&quot;:true,&quot;topImage&quot;:false,&quot;internalRedirect&quot;:&quot;https://www.cartoonshateher.com/i/216174160?img=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd13d7e54-0f46-4886-862d-bca5fc458bf6_500x740.avif&quot;,&quot;isProcessing&quot;:false,&quot;align&quot;:null,&quot;offset&quot;:false}" alt="" width="500" height="740" src="https://substackcdn.com/image/fetch/$s_!oP7q!,w_500,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd13d7e54-0f46-4886-862d-bca5fc458bf6_500x740.avif" style="border: none !important;vertical-align: middle;display: block;-ms-interpolation-mode: bicubic;height: auto;margin-bottom: 0;width: auto !important;max-width: 100% !important;margin: 0 auto;"></a></td><td style="text-align: center;"></td></tr></tbody></table><figcaption class="image-caption" style="box-sizing: content-box;color: rgb(119,119,119);font-size: 14px;line-height: 20px;font-weight: 400;letter-spacing: -.15px;margin-top: 8px;width: 70%;padding-left: 15%;padding-right: 15%;text-align: center;"><a href="https://substack.com/redirect/39c31185-ec33-413a-8ffe-05f5f34ba3d3?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="text-decoration: underline;">Source</a></figcaption></figure></div><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">Another, more abstract analogy: food. Let&#8217;s say you&#8217;re chickpeas, and you read that people like steak. So naturally, you get pureed with some beet juice and try to turn yourself into vegan steak (yes, I&#8217;ve unfortuately attempted this recipe.) Quite literally anyone would agree that steak tastes better than chickpea-based vegan steakloaf! But&#8230;not everyone would pick steak over some really good hummus. And if your goal isn&#8217;t to be eaten by everyone, but to be eaten by at least one person you really want to eat you (I&#8217;m talking about food, remember) then being really good hummus is a lot more advantageous than trying your hardest to be steak.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>That doesn&#8217;t mean you should be </span><em>shitty</em><span> hummus either. But you&#8217;re never going to be steak. </span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">Now, I don&#8217;t deny that certain traits are unambiguously prioritized above others in modern-day Western society. These traits are mostly things that align with fertility, virility and good health, along with a few things that are likely cultural in nature. For women, this could include a low waist hip ratio, long hair (although the degree of length is probably less important once it&#8217;s past the shoulders) a slim but not underweight BMI, and clear skin. For men, many of things things would be the same, like the BMI, the healthy skin, and full head of hair, but a few other sexually dimorphic features would be taken into account: height, shoulder-to-waist ratio, and ample musculature. </p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>But other things are not so clear cut. Women permed their hair in the 1980s, but straightened it in the 2000s. In the 1800s, unmarried women kept their hair down and long, but in the 1950s, hair of the prototypical &#8220;sexy woman&#8221; was rarely longer than the shoulders. A blonde, tan lifeguard might have been the pinnacle of male attractiveness in the &#8216;70s or &#8216;80s, but the &#8216;90s also brought us the dark-haired and buttoned-up Mr. Big on </span><em>Sex in the City. </em><span>When I was growing up, I wanted nothing more than to look like Pamela Anderson from </span><em>Baywatch</em><span>, but now I can&#8217;t scroll Twitter without being gaslit about how actually, men have always loved pale skin and black hair. People of different races and cultures will find different ethnicities attractive, and even those preferences can be culturally influenced. In 2014, OKCupid revealed that Asian men got the fewest matches on their dating site, but by 2024, Asian men were performing </span><a href="https://substack.com/redirect/63e60637-e1d4-4705-b171-c13ba461843f?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">very well </a><span>on Coffee Meets Bagel, a newer dating app. In the 2010s, there were very few mainstream Asian male sex symbols in the US, and today there are plenty, plus the whole K-pop fandom!</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>A little while ago, I </span><a href="https://substack.com/redirect/4e643731-3161-4373-b14d-3c7eb1afdab0?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">covered</a><span> an article in </span><em>The Spectator</em><span> by writer Sean Thomas, where he insisted that the actress Sadie Sink&#8212;the newest face of CK Jeans&#8212;represents the ideal of feminine beauty which has been obfuscated by Woke, and finally we can all admit that </span><em>all men actually want this, </em><span>even though it&#8217;ll enrage the Wokies and the feminists. As my friend </span><span class="mention-pnpTE1 mentionStatic-liMklk" data-component-name="MentionStatic" style="white-space: nowrap;cursor: pointer;color: #FFE460;border-radius: 4px;transition: color .25scubic-bezier(.19,1,.22,1),background-color .25scubic-bezier(.19,1,.22,1),box-shadow .25scubic-bezier(.19,1,.22,1),border .25scubic-bezier(.19,1,.22,1),border-radius .25scubic-bezier(.19,1,.22,1),opacity .25scubic-bezier(.19,1,.22,1),filter .25scubic-bezier(.19,1,.22,1),stroke .25scubic-bezier(.19,1,.22,1),transform .25scubic-bezier(.19,1,.22,1),scale .25scubic-bezier(.19,1,.22,1),outline .25scubic-bezier(.19,1,.22,1);margin: 0 -.125em;padding: 0 .125em .0625em;text-decoration: none;"><a href="https://open.substack.com/users/6230636-phoebe-maltz-bovy?utm_source=mentions" style="color: #FFE460;text-decoration: none;-webkit-text-decoration: none;">Phoebe Maltz Bovy</a></span><span> </span><a href="https://substack.com/redirect/cfc2f0b0-08e0-4fd9-af15-6facc38a39e1?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">wrote</a><span>, Thomas seemed especially concerned with the belief that his preference was the same as </span><em>all men&#8217;s</em><span>, and that it wasn&#8217;t enough for him to simply say, &#8220;I think Sadie Sink is the hottest women alive,&#8221; but to make a proclamation that the vast majority of men would agree with him. And in doing so, he specifically cites her fair skin (she&#8217;s a redhead) as one of the things that men have been shamed into pretending not to like. This was the commercial that got him hot and bothered:</span></p><table class="twitter-embed tweet" role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" data-component-name="TweetToDOMStatic" style="background: rgb(255,255,255);color: rgb(54,55,55);display: flex;flex-direction: column;gap: 12px;max-width: 550px;margin: 32px auto;border: 1px solid rgb(0,0,0,.1);direction: ltr;border-radius: 12px;padding: 16px 16px 12px;font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-size: 14px;line-height: 20px;font-weight: 400;box-sizing: border-box;-webkit-font-smoothing: antialiased;text-rendering: optimizelegibility;transition: color .25scubic-bezier(.19,1,.22,1),background-color .25scubic-bezier(.19,1,.22,1),box-shadow .25scubic-bezier(.19,1,.22,1),border .25scubic-bezier(.19,1,.22,1),border-radius .25scubic-bezier(.19,1,.22,1),opacity .25scubic-bezier(.19,1,.22,1),filter .25scubic-bezier(.19,1,.22,1),stroke .25scubic-bezier(.19,1,.22,1),transform .25scubic-bezier(.19,1,.22,1),scale .25scubic-bezier(.19,1,.22,1),outline .25scubic-bezier(.19,1,.22,1);margin-bottom: 20px;margin-top: 20px"><tbody><tr><td style="padding:0px;"><a href="https://substack.com/redirect/d9773dbc-86f4-47f7-950b-e1c5c5716551?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="text-decoration:none;color:inherit;display:block;"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="vertical-align:middle;"><img class="custom-css-email-avatar avatar-QIQ5yR" src="https://substackcdn.com/image/fetch/$s_!uu0E!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fpbs.substack.com%2Fprofile_images%2F1268086791443230737%2FBRGz4AiW.jpg" alt="X avatar for @PopBase" style="box-sizing: border-box;border: none;vertical-align: middle;-ms-interpolation-mode: bicubic;max-width: 100%;width: 40px;height: 40px;min-width: 40px;min-height: 40px;object-fit: cover;margin: 0px;display: inline;border-radius: 50%" width="40" height="40"></td><td width="12" style="min-width:12px;"></td><td style="vertical-align:middle;"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><div class="pencraft pc-reset line-height-20-t4M0El font-text-qe4AeH size-13-hZTUKr weight-semibold-uqA4FV reset-IxiVJZ" style="list-style: none;color: unset;font-size: 13px;line-height: 20px;text-decoration: unset;margin: 0;font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight: 600;">Pop Base</div></td></tr><tr><td><div class="pencraft pc-reset color-secondary-ls1g8s line-height-20-t4M0El font-text-qe4AeH size-13-hZTUKr weight-regular-mUq6Gb reset-IxiVJZ" style="list-style: none;font-size: 13px;line-height: 20px;text-decoration: unset;color: rgb(119,119,119);margin: 0;font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight: 400;">@PopBase</div></td></tr></tbody></table></td></tr></tbody></table></td></tr><tr height="12"><td></td></tr><tr><td><div class="pencraft pc-reset line-height-20-t4M0El font-text-qe4AeH size-15-Psle70 weight-regular-mUq6Gb reset-IxiVJZ text-aFN1BV" style="list-style: none;color: unset;font-size: 15px;line-height: 20px;text-decoration: unset;margin: 0;font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight: 400;white-space: pre-wrap">Sadie Sink stars in a new Calvin Klein ad campaign.</div></td></tr><tr height="12"><td></td></tr><tr><td><img src="https://substackcdn.com/image/fetch/$s_!0LLo!,w_550,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F__ss-rehost__tw-video-preview-13_2094753271936143360.jpg" alt="Image" style="border: none;vertical-align: middle;-ms-interpolation-mode: bicubic;margin: 0 auto;display: inline;width: auto;height: auto;max-width: 100%;max-height: 420px;border-radius: 8px"></td></tr><tr height="12"><td></td></tr><tr><td><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0" style="width:100%;"><tbody><tr><td><div class="pencraft pc-reset color-secondary-ls1g8s line-height-20-t4M0El font-text-qe4AeH size-13-hZTUKr weight-regular-mUq6Gb reset-IxiVJZ" style="list-style: none;font-size: 13px;line-height: 20px;text-decoration: unset;color: rgb(119,119,119);margin: 0;font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight: 400;"><span class="pencraft pc-reset reset-IxiVJZ" style="list-style: none;color: unset;text-decoration: unset;margin: 0;">12:57 PM &#183; Sep 1, 2026</span><span class="pencraft pc-reset reset-IxiVJZ" style="list-style: none;color: unset;text-decoration: unset;margin: 0;"> &#183; </span><span class="pencraft pc-reset reset-IxiVJZ" style="list-style: none;color: unset;text-decoration: unset;margin: 0;">7M Views</span></div><div class="emailSeparator-mtbezJ" style="border-bottom: 1px solid rgb(0,0,0,.1);width: 100%;height: 0;font-size: 16px;line-height: 26px;"></div><div class="pencraft pc-reset color-secondary-ls1g8s line-height-20-t4M0El font-text-qe4AeH size-13-hZTUKr weight-regular-mUq6Gb reset-IxiVJZ" style="list-style: none;font-size: 13px;line-height: 20px;text-decoration: unset;color: rgb(119,119,119);margin: 0;font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight: 400;"><span class="pencraft pc-reset reset-IxiVJZ" style="list-style: none;color: unset;text-decoration: unset;margin: 0;">260 Replies</span><span class="pencraft pc-reset reset-IxiVJZ" style="list-style: none;color: unset;text-decoration: unset;margin: 0;"> &#183; </span><span class="pencraft pc-reset reset-IxiVJZ" style="list-style: none;color: unset;text-decoration: unset;margin: 0;">1.82K Reposts</span><span class="pencraft pc-reset reset-IxiVJZ" style="list-style: none;color: unset;text-decoration: unset;margin: 0;"> &#183; </span><span class="pencraft pc-reset reset-IxiVJZ" style="list-style: none;color: unset;text-decoration: unset;margin: 0;">36.3K Likes</span></div></td></tr></tbody></table></td></tr></tbody></table></a></td></tr></tbody></table><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>I don&#8217;t deny that Sadie is a beautiful young woman, and I think most men would agree that she fits into some definition of &#8220;hot.&#8221; But is a preference for </span><em>pale skinny redheads</em><span> really unanimous? Is pale skin an objectively beautiful thing that men have been forced to hide in the shadows of their shame? As Phoebe later said on a later episode of the </span><span class="mention-pnpTE1 mentionStatic-liMklk" data-component-name="MentionStatic" style="white-space: nowrap;cursor: pointer;color: #FFE460;border-radius: 4px;transition: color .25scubic-bezier(.19,1,.22,1),background-color .25scubic-bezier(.19,1,.22,1),box-shadow .25scubic-bezier(.19,1,.22,1),border .25scubic-bezier(.19,1,.22,1),border-radius .25scubic-bezier(.19,1,.22,1),opacity .25scubic-bezier(.19,1,.22,1),filter .25scubic-bezier(.19,1,.22,1),stroke .25scubic-bezier(.19,1,.22,1),transform .25scubic-bezier(.19,1,.22,1),scale .25scubic-bezier(.19,1,.22,1),outline .25scubic-bezier(.19,1,.22,1);margin: 0 -.125em;padding: 0 .125em .0625em;text-decoration: none;"><a href="https://open.substack.com/users/80842881-feminine-chaos?utm_source=mentions" style="color: #FFE460;text-decoration: none;-webkit-text-decoration: none;">Feminine Chaos</a></span><span> podcast, this is obviously not a unanimous preference. Men who prefer tanned white women, or women of color with darker skin, are likely not lying about it. If anything, mainstream sex icons have typically been tan, not pale, even before Woke 1 and the body positivity era. I grew up hating my pale skin for this reason! Boys made fun of me for </span><em>not</em><span> having a tan! I refuse to be gaslit about this by Sean Thomas!</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>There&#8217;s also the fact that Sadie Sink is skinny, and not particularly curvy. Don&#8217;t get me wrong&#8212;again, obviously she&#8217;s a gorgeous woman. And clearly, that&#8217;s Sean Thomas&#8217; type. But just as Sean Thomas claims that woke virtue-signaling has forced men to pretend they don&#8217;t find skinny women attractive, many other people insist that actually, upper middle class men in particular are </span><em><a href="https://substack.com/redirect/e91de4ae-19e7-44eb-b56d-788d30e2a98a?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">pretending to find skinny women (without big butts or boobs) attractive</a></em><span> because they&#8217;re afraid that prioritizing voluptuous women would be too unseemly at the country club. J. Sanilac says as much, and uses the below woman as a visual example of the type of </span><em>unconventional</em><span> women that only a &#8220;minority&#8221; of men are into because she isn&#8217;t curvy enough:</span></p><div class="captioned-image-container-static" style="font-size: 16px;line-height: 26px;margin: 32px auto;"><figure style="width: 100%;margin: 0 auto;"><table class="image-wrapper" width="100%" border="0" cellspacing="0" cellpadding="0" data-component-name="Image2ToDOMStatic" style="mso-padding-alt: 1em 0 1.6em;"><tbody><tr><td style="text-align: center;"></td><td class="content" align="left" width="581" style="text-align: center;"><a class="image-link" target="_blank" href="https://substack.com/redirect/5fbe9c5f-9792-4f2c-ae2a-770e2cd6ed66?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="position: relative;flex-direction: column;align-items: center;padding: 0;width: auto;height: auto;border: none;text-decoration: none;display: block;margin: 0;"><img class="wide-image" data-attrs="{&quot;src&quot;:&quot;https://substack-post-media.s3.amazonaws.com/public/images/5eb845fd-0737-450e-a70d-048ea28b40a0_1380x1356.webp&quot;,&quot;srcNoWatermark&quot;:null,&quot;fullscreen&quot;:null,&quot;imageSize&quot;:null,&quot;height&quot;:1356,&quot;width&quot;:1380,&quot;resizeWidth&quot;:581,&quot;bytes&quot;:68224,&quot;alt&quot;:null,&quot;title&quot;:null,&quot;type&quot;:&quot;image/webp&quot;,&quot;href&quot;:null,&quot;belowTheFold&quot;:true,&quot;topImage&quot;:false,&quot;internalRedirect&quot;:&quot;https://www.cartoonshateher.com/i/216174160?img=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5eb845fd-0737-450e-a70d-048ea28b40a0_1380x1356.webp&quot;,&quot;isProcessing&quot;:false,&quot;align&quot;:null,&quot;offset&quot;:false}" alt="" width="550" height="540.4347826086956" src="https://substackcdn.com/image/fetch/$s_!vhMG!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5eb845fd-0737-450e-a70d-048ea28b40a0_1380x1356.webp" style="border: none !important;vertical-align: middle;display: block;-ms-interpolation-mode: bicubic;height: auto;margin-bottom: 0;width: auto !important;max-width: 100% !important;margin: 0 auto;"></a></td><td style="text-align: center;"></td></tr></tbody></table></figure></div><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>It seems unfathomable to all these people that perhaps the specifics of sexual taste (skin color, body type, weight within the range of healthy BMI, hair color and style, etc.) might vary quite a bit. Perhaps they&#8217;re so invested in the idea that we&#8217;ve been </span><em>lied to</em><span> that to admit everyone has a different type would simply not be the discourse bombshell they want. But it&#8217;s true.</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">But anyway, onto type (and yes, I&#8217;m covering the men too.) </p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">Growing up, I had a very specific insecurity, which was that I had dark hair, dark eyes, thick eyebrows and features that read more &#8220;sophisticated&#8221; than &#8220;cute.&#8221; Adults hurled all sorts of backhanded compliments at me, because I complained endlessly about my looks and they couldn&#8217;t figure out how to reassure me. I made this comic about it to illustrate:</p><div class="captioned-image-container-static" style="font-size: 16px;line-height: 26px;margin: 32px auto;"><figure style="width: 100%;margin: 0 auto;"><table class="image-wrapper" width="100%" border="0" cellspacing="0" cellpadding="0" data-component-name="Image2ToDOMStatic" style="mso-padding-alt: 1em 0 1.6em;"><tbody><tr><td style="text-align: center;"></td><td class="content" align="left" width="991" style="text-align: center;"><a class="image-link" target="_blank" href="https://substack.com/redirect/4ee3f16d-44eb-4148-9e62-9f4cb3b070df?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="position: relative;flex-direction: column;align-items: center;padding: 0;width: auto;height: auto;border: none;text-decoration: none;display: block;margin: 0;"><img class="wide-image" data-attrs="{&quot;src&quot;:&quot;https://substack-post-media.s3.amazonaws.com/public/images/e21a61e4-f4b5-4ac4-b313-448bbd6b6d23_991x793.jpeg&quot;,&quot;srcNoWatermark&quot;:null,&quot;fullscreen&quot;:null,&quot;imageSize&quot;:null,&quot;height&quot;:793,&quot;width&quot;:991,&quot;resizeWidth&quot;:null,&quot;bytes&quot;:137428,&quot;alt&quot;:&quot;&quot;,&quot;title&quot;:&quot;&quot;,&quot;type&quot;:&quot;image/jpeg&quot;,&quot;href&quot;:null,&quot;belowTheFold&quot;:true,&quot;topImage&quot;:false,&quot;internalRedirect&quot;:null,&quot;isProcessing&quot;:false,&quot;align&quot;:null,&quot;offset&quot;:false}" alt="" title="" width="550" height="440.1109989909183" src="https://substackcdn.com/image/fetch/$s_!WE4Y!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe21a61e4-f4b5-4ac4-b313-448bbd6b6d23_991x793.jpeg" style="border: none !important;vertical-align: middle;display: block;-ms-interpolation-mode: bicubic;height: auto;margin-bottom: 0;width: auto !important;max-width: 100% !important;margin: 0 auto;"></a></td><td style="text-align: center;"></td></tr></tbody></table></figure></div><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>More than anything, I wanted to be naturally tan, blonde, round-faced, with big, blue eyes and a nose too small to be captured by the naked eye. Why did I want to look like that? Because it was the nineties, and most of the popular sex icons looked like that, and all my dolls looked like that. As a result, I was convinced that every red-blooded man wanted a woman who looked like that. When a man claimed he didn&#8217;t like women who looked like that, I assumed he was lying. As I got older and my boobs failed to grow to my desired size, I had yet </span><em>another</em><span> thing to worry about. I worried that even with my best efforts, my genetics would simply hold me back and I would always be someone&#8217;s second or third choice. </span></p><div class="captioned-image-container-static" style="font-size: 16px;line-height: 26px;margin: 32px auto;"><figure style="width: 100%;margin: 0 auto;"><table class="image-wrapper" width="100%" border="0" cellspacing="0" cellpadding="0" data-component-name="Image2ToDOMStatic" style="mso-padding-alt: 1em 0 1.6em;"><tbody><tr><td style="text-align: center;"></td><td class="content" align="left" width="846" style="text-align: center;"><a class="image-link" target="_blank" href="https://substack.com/redirect/0d709704-8959-4855-b276-202b73bdcec2?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="position: relative;flex-direction: column;align-items: center;padding: 0;width: auto;height: auto;border: none;text-decoration: none;display: block;margin: 0;"><img class="wide-image" data-attrs="{&quot;src&quot;:&quot;https://substack-post-media.s3.amazonaws.com/public/images/bbabd49b-862c-49a0-bf48-3bf6b15d9b66_846x434.webp&quot;,&quot;srcNoWatermark&quot;:null,&quot;fullscreen&quot;:null,&quot;imageSize&quot;:null,&quot;height&quot;:434,&quot;width&quot;:846,&quot;resizeWidth&quot;:null,&quot;bytes&quot;:52404,&quot;alt&quot;:null,&quot;title&quot;:null,&quot;type&quot;:&quot;image/webp&quot;,&quot;href&quot;:null,&quot;belowTheFold&quot;:true,&quot;topImage&quot;:false,&quot;internalRedirect&quot;:&quot;https://www.cartoonshateher.com/i/216174160?img=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fbbabd49b-862c-49a0-bf48-3bf6b15d9b66_846x434.webp&quot;,&quot;isProcessing&quot;:false,&quot;align&quot;:null,&quot;offset&quot;:false}" alt="" width="550" height="282.1513002364066" src="https://substackcdn.com/image/fetch/$s_!zqXM!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fbbabd49b-862c-49a0-bf48-3bf6b15d9b66_846x434.webp" style="border: none !important;vertical-align: middle;display: block;-ms-interpolation-mode: bicubic;height: auto;margin-bottom: 0;width: auto !important;max-width: 100% !important;margin: 0 auto;"></a></td><td style="text-align: center;"></td></tr></tbody></table><figcaption class="image-caption" style="box-sizing: content-box;color: rgb(119,119,119);font-size: 14px;line-height: 20px;font-weight: 400;letter-spacing: -.15px;margin-top: 8px;width: 70%;padding-left: 15%;padding-right: 15%;text-align: center;">Real illustration from my diary, circa 2002</figcaption></figure></div><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">As I got older, people started comparing me to Anne Hathaway, something that I should have taken as a massive compliment (I was nowhere near as beautiful) but I was so hung up on not looking like Pamela Anderson in her prime that I didn&#8217;t really care for the Hathaway comparison. I it to mean that I was pleasant-looking but lacked sex appeal (many of you forget that in the 2000s, people suffered from a rare form of mass psychosis that made them specifically loathe Anne Hathaway for no good reason.) </p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>What I did not realize was that Anne Hathaway does not look </span><em>nearly</em><span> as striking with tan skin and blonde hair. She&#8217;s still beautiful, because she&#8217;s Anne Hathaway, but she&#8217;s far more attractive when she&#8217;s playing to her type:</span></p><div class="captioned-image-container-static" style="font-size: 16px;line-height: 26px;margin: 32px auto;"><figure style="width: 100%;margin: 0 auto;"><table class="image-wrapper" width="100%" border="0" cellspacing="0" cellpadding="0" data-component-name="Image2ToDOMStatic" style="mso-padding-alt: 1em 0 1.6em;"><tbody><tr><td style="text-align: center;"></td><td class="content" align="left" width="1200" style="text-align: center;"><a class="image-link" target="_blank" href="https://substack.com/redirect/32cfd48e-ec1d-4628-92c1-b793eb271e20?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="position: relative;flex-direction: column;align-items: center;padding: 0;width: auto;height: auto;border: none;text-decoration: none;display: block;margin: 0;"><img class="wide-image" data-attrs="{&quot;src&quot;:&quot;https://substack-post-media.s3.amazonaws.com/public/images/8d5dd459-d39f-44bd-9082-d25bc3ac6ee4_1200x675.webp&quot;,&quot;srcNoWatermark&quot;:null,&quot;fullscreen&quot;:null,&quot;imageSize&quot;:null,&quot;height&quot;:675,&quot;width&quot;:1200,&quot;resizeWidth&quot;:null,&quot;bytes&quot;:66502,&quot;alt&quot;:null,&quot;title&quot;:null,&quot;type&quot;:&quot;image/webp&quot;,&quot;href&quot;:null,&quot;belowTheFold&quot;:true,&quot;topImage&quot;:false,&quot;internalRedirect&quot;:&quot;https://www.cartoonshateher.com/i/216174160?img=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8d5dd459-d39f-44bd-9082-d25bc3ac6ee4_1200x675.webp&quot;,&quot;isProcessing&quot;:false,&quot;align&quot;:null,&quot;offset&quot;:false}" alt="" width="550" height="309.375" src="https://substackcdn.com/image/fetch/$s_!ARqz!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8d5dd459-d39f-44bd-9082-d25bc3ac6ee4_1200x675.webp" style="border: none !important;vertical-align: middle;display: block;-ms-interpolation-mode: bicubic;height: auto;margin-bottom: 0;width: auto !important;max-width: 100% !important;margin: 0 auto;"></a></td><td style="text-align: center;"></td></tr></tbody></table></figure></div><div class="captioned-image-container-static" style="font-size: 16px;line-height: 26px;margin: 32px auto;"><figure style="width: 100%;margin: 0 auto;"><table class="image-wrapper" width="100%" border="0" cellspacing="0" cellpadding="0" data-component-name="Image2ToDOMStatic" style="mso-padding-alt: 1em 0 1.6em;"><tbody><tr><td style="text-align: center;"></td><td class="content" align="left" width="640" style="text-align: center;"><a class="image-link" target="_blank" href="https://substack.com/redirect/2ea507d3-3159-4e4d-8541-3bc6b25dc207?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="position: relative;flex-direction: column;align-items: center;padding: 0;width: auto;height: auto;border: none;text-decoration: none;display: block;margin: 0;"><img class="wide-image" data-attrs="{&quot;src&quot;:&quot;https://substack-post-media.s3.amazonaws.com/public/images/a2dd80de-c5ee-4e58-9ddd-308da7bc0227_640x640.avif&quot;,&quot;srcNoWatermark&quot;:null,&quot;fullscreen&quot;:null,&quot;imageSize&quot;:null,&quot;height&quot;:640,&quot;width&quot;:640,&quot;resizeWidth&quot;:null,&quot;bytes&quot;:20623,&quot;alt&quot;:null,&quot;title&quot;:null,&quot;type&quot;:&quot;image/avif&quot;,&quot;href&quot;:null,&quot;belowTheFold&quot;:true,&quot;topImage&quot;:false,&quot;internalRedirect&quot;:&quot;https://www.cartoonshateher.com/i/216174160?img=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa2dd80de-c5ee-4e58-9ddd-308da7bc0227_640x640.avif&quot;,&quot;isProcessing&quot;:false,&quot;align&quot;:null,&quot;offset&quot;:false}" alt="" width="550" height="550" src="https://substackcdn.com/image/fetch/$s_!06OQ!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa2dd80de-c5ee-4e58-9ddd-308da7bc0227_640x640.avif" style="border: none !important;vertical-align: middle;display: block;-ms-interpolation-mode: bicubic;height: auto;margin-bottom: 0;width: auto !important;max-width: 100% !important;margin: 0 auto;"></a></td><td style="text-align: center;"></td></tr></tbody></table></figure></div><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>Another great example is Jennifer Grey, whose career tanked after she got a nose job. Yes, her &#8220;before&#8221; nose was not the </span><em>conventional ideal</em><span>, but she attempted to emulate a different type and wound up looking unremarkable. </span></p><div class="captioned-image-container-static" style="font-size: 16px;line-height: 26px;margin: 32px auto;"><figure style="width: 100%;margin: 0 auto;"><table class="image-wrapper" width="100%" border="0" cellspacing="0" cellpadding="0" data-component-name="Image2ToDOMStatic" style="mso-padding-alt: 1em 0 1.6em;"><tbody><tr><td style="text-align: center;"></td><td class="content" align="left" width="500" style="text-align: center;"><a class="image-link" target="_blank" href="https://substack.com/redirect/0753e9cb-5aeb-43db-8213-c41b379ed25b?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="position: relative;flex-direction: column;align-items: center;padding: 0;width: auto;height: auto;border: none;text-decoration: none;display: block;margin: 0;"><img data-attrs="{&quot;src&quot;:&quot;https://substack-post-media.s3.amazonaws.com/public/images/4d545c8d-dd87-43eb-b386-a071c7d9abcf_500x394.webp&quot;,&quot;srcNoWatermark&quot;:null,&quot;fullscreen&quot;:null,&quot;imageSize&quot;:null,&quot;height&quot;:394,&quot;width&quot;:500,&quot;resizeWidth&quot;:null,&quot;bytes&quot;:34578,&quot;alt&quot;:null,&quot;title&quot;:null,&quot;type&quot;:&quot;image/webp&quot;,&quot;href&quot;:null,&quot;belowTheFold&quot;:true,&quot;topImage&quot;:false,&quot;internalRedirect&quot;:&quot;https://www.cartoonshateher.com/i/216174160?img=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F4d545c8d-dd87-43eb-b386-a071c7d9abcf_500x394.webp&quot;,&quot;isProcessing&quot;:false,&quot;align&quot;:null,&quot;offset&quot;:false}" alt="" width="500" height="394" src="https://substackcdn.com/image/fetch/$s_!jmmC!,w_500,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F4d545c8d-dd87-43eb-b386-a071c7d9abcf_500x394.webp" style="border: none !important;vertical-align: middle;display: block;-ms-interpolation-mode: bicubic;height: auto;margin-bottom: 0;width: auto !important;max-width: 100% !important;margin: 0 auto;"></a></td><td style="text-align: center;"></td></tr></tbody></table></figure></div><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">At the time, I was only focused on what I believed to be the conventional ideal. And maybe it was the conventional ideal, but it was never going to be me! But thinking that I was just a different &#8220;type&#8221; was horrifying to me. I didn&#8217;t even believe types existed. I was still convinced that any guy who wanted anything other than a blonde, buxom cheerleader was lying. </p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>I did a lot of things to try to approximate what I thought </span><em>all men</em><span> were into. When I was out of the house and old enough to dye my hair without my mother&#8217;s permission or judgment (okay, she still judged, but from miles away) I went blonde. I slathered on dark self tanner every single night before bed. I would look like an SEC sorority girl in no time! Realizing my dark eyebrows might be screwing things up, I bleached my eyebrows. I left the bleach on for too long and they turned orange, so I had to run to a beauty supply store to get light brown eyebrow dye. At times, I was like, </span><em>It would be a LOT easier to just be pale and brunette, wouldn&#8217;t it? </em><span>While I don&#8217;t really feel like posting these photos, you&#8217;re just going to have to trust me that this was probably the worst I&#8217;ve looked in my entire adult life, rivaled only by the time I got norovirus in my second trimester. I even had a male friend come up to me and say, &#8220;You dyed your hair! Wow! You look different! Notice I didn&#8217;t say </span><em>better</em><span>.&#8221;</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">Unless I was going to get copious plastic surgery, I would not look like the WASPy blonde of my dreams, and even if I went full Michael Jackson, I&#8217;d probably still look like a weird, uncanny version of that girl. Blue contact lenses would never look better on me than my natural almost-black eyes. I was in a country full of girls who were effortlessly born that way, and they were always going to do it better than I could. </p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>But in order to accept that perhaps that&#8217;s just </span><em>not who I was</em><span>, I would need to accept that plenty of men actually prefer women who don&#8217;t look like that. And no, they aren&#8217;t virtue signaling. There have been plenty of studies on male preference for blonde or brunette hair (many of which say different things) but those studies don&#8217;t take into account the fact that an individual woman can look far better with blonde </span><em>or</em><span> brunette hair, and a man might prefer one woman blonde and another woman brunette based on what suits her. If you look at the women who are actually partnered with the best-looking and most successful male celebrities&#8212;the exact men who have no reason to settle&#8212;they all look </span><a href="https://substack.com/redirect/e91de4ae-19e7-44eb-b56d-788d30e2a98a?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">different</a><span>! All unambiguously attractive, of course, but hardly carbon copies of each other. Different builds, different ethnicities, different hair colors, different styles. Yes, none of them look like Mama June, and none have a foot growing out of their chins, but they don&#8217;t all look like clones either. </span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">Sure enough, I married a guy who likes brunettes, and has a particular affinity for my exact body type (perhaps Sanilac would consider this an egregious outlier&#8212;after all, I don&#8217;t have enormous boobs!&#8212;but somehow, plenty of men have been interested.) I&#8217;ve shown my husband photos of myself during my blonde era and he has made me promised never to do that to myself again. Case closed.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>Although I&#8217;ve since gotten off the idea of blonde hair, I&#8217;ve always colored my hair a shade or two lighter than my natural color of almost-black. For some reason, I decided to go back to my natural color this year. I was a little afraid it would be too harsh and age me ten years overnight, but I was shocked to discover just how damn good it looked on me! It was so dramatic and shiny! Why was I afraid of this hair color my whole life? Madness! And&#8212;dare I say&#8212;it looked even more striking (on me) if I </span><em>didn&#8217;t</em><span> have a tan. </span></p><div class="captioned-image-container-static" style="font-size: 16px;line-height: 26px;margin: 32px auto;"><figure style="width: 100%;margin: 0 auto;"><table class="image-wrapper" width="100%" border="0" cellspacing="0" cellpadding="0" data-component-name="Image2ToDOMStatic" style="mso-padding-alt: 1em 0 1.6em;"><tbody><tr><td style="text-align: center;"></td><td class="content" align="left" width="296" style="text-align: center;"><a class="image-link" target="_blank" href="https://substack.com/redirect/c99c58cb-b391-4cf3-acfc-fefcb016ff2f?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="position: relative;flex-direction: column;align-items: center;padding: 0;width: auto;height: auto;border: none;text-decoration: none;display: block;margin: 0;"><img data-attrs="{&quot;src&quot;:&quot;https://substack-post-media.s3.amazonaws.com/public/images/6ac3cb4d-1374-41f9-bee4-9ec28e78cd23_296x584.jpeg&quot;,&quot;srcNoWatermark&quot;:null,&quot;fullscreen&quot;:null,&quot;imageSize&quot;:null,&quot;height&quot;:584,&quot;width&quot;:296,&quot;resizeWidth&quot;:null,&quot;bytes&quot;:69810,&quot;alt&quot;:null,&quot;title&quot;:null,&quot;type&quot;:&quot;image/jpeg&quot;,&quot;href&quot;:null,&quot;belowTheFold&quot;:true,&quot;topImage&quot;:false,&quot;internalRedirect&quot;:&quot;https://www.cartoonshateher.com/i/216174160?img=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F52b8a4cb-ebcf-414c-9a73-96f74f891aa9_314x584.jpeg&quot;,&quot;isProcessing&quot;:false,&quot;align&quot;:null,&quot;offset&quot;:false}" alt="" width="296" height="584" src="https://substackcdn.com/image/fetch/$s_!UI2W!,w_296,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6ac3cb4d-1374-41f9-bee4-9ec28e78cd23_296x584.jpeg" style="border: none !important;vertical-align: middle;display: block;-ms-interpolation-mode: bicubic;height: auto;margin-bottom: 0;width: auto !important;max-width: 100% !important;margin: 0 auto;"></a></td><td style="text-align: center;"></td></tr></tbody></table><figcaption class="image-caption" style="box-sizing: content-box;color: rgb(119,119,119);font-size: 14px;line-height: 20px;font-weight: 400;letter-spacing: -.15px;margin-top: 8px;width: 70%;padding-left: 15%;padding-right: 15%;text-align: center;">Yes, I finally got invited to a disco party and I could wear the jumpsuit.</figcaption></figure></div><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>Through my life, I&#8217;ve known plenty of women who looked nothing like Barbie dolls, who did not have exaggerated hourglass figures, who were not blonde, blue eyed, or white, but who were still very attractive, and who still had more male attention than they knew what to do with. This is not to say they were just &#8220;letting their freak flag fly&#8221; and proudly showcasing ugliness, just that they were a different </span><em>type</em><span> of hot. One of the most sought-after women I&#8217;ve ever met was an Indian doctor in her thirties with a tall, willowy build, long skinny legs, and shiny black hair. Literally everywhere she went, she was followed by a horde of single men, including one guy who threw his hands up one night at a bar and said, &#8220;I don&#8217;t know why I even try anymore.&#8221; Of course, she was very conventionally pretty, not some kind of underdog in the dating game. But she had several traits which, if you described them to an objective feminine beauty expert, you would be told men were &#8220;virtue signaling&#8221; about finding her attractive. I guarantee you, they were not. </span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>Playing devil&#8217;s advocate, perhaps her flock of suitors would have liked her even </span><em>more</em><span> if she magically grew another cup size overnight, or added an inch to her hips. But clearly, this was not the help she needed.</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">&#8220;Type theory&#8221; is also true for men. Take, for example, the Timothee Chalamet type. We were in Paris recently, and variations on Timothee Chalamet were everywhere&#8212;not the new Timothee Chalamet with the goatee and the short hair, but the brooding, moody, artsy-looking Timothee Chalamet who ruled the early 2020s:</p><div class="captioned-image-container-static" style="font-size: 16px;line-height: 26px;margin: 32px auto;"><figure style="width: 100%;margin: 0 auto;"><table class="image-wrapper" width="100%" border="0" cellspacing="0" cellpadding="0" data-component-name="Image2ToDOMStatic" style="mso-padding-alt: 1em 0 1.6em;"><tbody><tr><td style="text-align: center;"></td><td class="content" align="left" width="1000" style="text-align: center;"><a class="image-link" target="_blank" href="https://substack.com/redirect/9a9267f7-13d5-46d4-ac31-5844c5e51544?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="position: relative;flex-direction: column;align-items: center;padding: 0;width: auto;height: auto;border: none;text-decoration: none;display: block;margin: 0;"><img class="wide-image" data-attrs="{&quot;src&quot;:&quot;https://substack-post-media.s3.amazonaws.com/public/images/668f3414-efae-43af-890b-3d35ea525e1c_1000x667.webp&quot;,&quot;srcNoWatermark&quot;:null,&quot;fullscreen&quot;:null,&quot;imageSize&quot;:null,&quot;height&quot;:667,&quot;width&quot;:1000,&quot;resizeWidth&quot;:null,&quot;bytes&quot;:50682,&quot;alt&quot;:null,&quot;title&quot;:null,&quot;type&quot;:&quot;image/webp&quot;,&quot;href&quot;:null,&quot;belowTheFold&quot;:true,&quot;topImage&quot;:false,&quot;internalRedirect&quot;:&quot;https://www.cartoonshateher.com/i/216174160?img=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F668f3414-efae-43af-890b-3d35ea525e1c_1000x667.webp&quot;,&quot;isProcessing&quot;:false,&quot;align&quot;:null,&quot;offset&quot;:false}" alt="" width="550" height="366.85" src="https://substackcdn.com/image/fetch/$s_!JM9V!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F668f3414-efae-43af-890b-3d35ea525e1c_1000x667.webp" style="border: none !important;vertical-align: middle;display: block;-ms-interpolation-mode: bicubic;height: auto;margin-bottom: 0;width: auto !important;max-width: 100% !important;margin: 0 auto;"></a></td><td style="text-align: center;"></td></tr></tbody></table></figure></div><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">Now, if you&#8217;re a guy who is naturally Chalamet-ish, you can rest assured that legions of women will go nuts for your type, and you should lean into it. But most men do not look like Timothee Chalamet, and would look ridiculous if they attempted it. Does anyone really want to see a husky Viking try to starve himself, dye his hair black and shave his beard? He wouldn&#8217;t look anything like Timothee Chalamet, he would just look weird.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">Another example of a male beauty &#8220;type.&#8221; A few years ago, I rediscovered the Red Hot Chili Peppers and it dawned on me that Anthony Kiedis in his late twenties was a very attractive man, and his most attractive era was probably the time when he had extremely long hair and no facial hair. Of course, Anthony Kiedis and I are both far too old for each other, but I can appreciate that he was a very good-looking guy in his youth:</p><div class="captioned-image-container-static" style="font-size: 16px;line-height: 26px;margin: 32px auto;"><figure style="width: 100%;margin: 0 auto;"><table class="image-wrapper" width="100%" border="0" cellspacing="0" cellpadding="0" data-component-name="Image2ToDOMStatic" style="mso-padding-alt: 1em 0 1.6em;"><tbody><tr><td style="text-align: center;"></td><td class="content" align="left" width="1456" style="text-align: center;"><a class="image-link" target="_blank" href="https://substack.com/redirect/db08018a-abe5-41ab-b248-cbc8ced11a8f?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="position: relative;flex-direction: column;align-items: center;padding: 0;width: auto;height: auto;border: none;text-decoration: none;display: block;margin: 0;"><img class="wide-image" data-attrs="{&quot;src&quot;:&quot;https://substack-post-media.s3.amazonaws.com/public/images/f2252351-9aca-4caa-aa86-df2337f80282_3679x2442.jpeg&quot;,&quot;srcNoWatermark&quot;:null,&quot;fullscreen&quot;:null,&quot;imageSize&quot;:null,&quot;height&quot;:966,&quot;width&quot;:1456,&quot;resizeWidth&quot;:null,&quot;bytes&quot;:1235560,&quot;alt&quot;:null,&quot;title&quot;:null,&quot;type&quot;:&quot;image/jpeg&quot;,&quot;href&quot;:null,&quot;belowTheFold&quot;:true,&quot;topImage&quot;:false,&quot;internalRedirect&quot;:&quot;https://www.cartoonshateher.com/i/216174160?img=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff2252351-9aca-4caa-aa86-df2337f80282_3679x2442.jpeg&quot;,&quot;isProcessing&quot;:false,&quot;align&quot;:null,&quot;offset&quot;:false}" alt="" width="550" height="364.90384615384613" src="https://substackcdn.com/image/fetch/$s_!EnqX!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff2252351-9aca-4caa-aa86-df2337f80282_3679x2442.jpeg" style="border: none !important;vertical-align: middle;display: block;-ms-interpolation-mode: bicubic;height: auto;margin-bottom: 0;width: auto !important;max-width: 100% !important;margin: 0 auto;"></a></td><td style="text-align: center;"></td></tr></tbody></table><figcaption class="image-caption" style="box-sizing: content-box;color: rgb(119,119,119);font-size: 14px;line-height: 20px;font-weight: 400;letter-spacing: -.15px;margin-top: 8px;width: 70%;padding-left: 15%;padding-right: 15%;text-align: center;"><a href="https://substack.com/redirect/17d792b9-9227-44ab-af5f-7caa23e837ad?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="text-decoration: underline;">Source</a></figcaption></figure></div><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">That said, I do not think my husband&#8212;a man I find more attractive, even in a conventional, objective sense&#8212;should grow out his hair to that length. His hair looks best short, and I also prefer it when he has a beard. (Meanwhile, I do not think Anthony Kiedis looks good with short hair or a beard.) This is not me &#8220;virtue signaling&#8221; because my secret preference is for all men to have hair down to their butts and no facial hair. This is me noting that different &#8220;types&#8221; of men can be attractive in different ways, and that the best way to look your hottest is to play into your own type instead of trying to mold yourself into someone else&#8217;s. </p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>Another example for the fellas: once, my husband and I were on a date, and the people sitting at the table next to us were on a first date. The man was objectively a bit awkward-looking in a way that was purely genetic. He had a weak chin, a bigger hooked nose, narrow shoulders, and was not conventionally hot. But he was at a healthy, slim weight, and he had made great use of his &#8220;type.&#8221; In his case, he was alternative and a bit hipstery. He had a sleeve of tattoos, a few piercings, and clothes that screamed, &#8220;I knew about this band before it was cool.&#8221; Maybe he wasn&#8217;t </span><em>everyone&#8217;s</em><span> type, but his date seemed to be really into him. </span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>If this man had attempted a preppy, fratty look&#8212;shorter hair, dyed blonde, a pink polo shirt&#8212;to emulate a &#8220;Chad&#8221; it would not have worked. He just would have looked odd and perhaps a bit dorky, because he simply did not have the foundation to look that way. Could he have, possibly, gotten a bunch of plastic surgery and taken a bunch of steroids to look that way? I mean&#8230;I </span><em>guess</em><span>, but I have my doubts it would have looked natural given that it would have been more than just a tweak. </span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>Take the below example. This nose job turned this guy into an entirely different type, and a lot of women would probably prefer the &#8220;before&#8221; image! It&#8217;s true that big noses don&#8217;t seem to be quite as popular with men as they are with women, but if a woman gets such an extreme nose job that she becomes a different type or obfuscates her ethnicity, I&#8217;m not sure it&#8217;s effective as far as </span><em>finding a long-term partner, </em><span>who will eventually find out about your old nose anyway. </span></p><div class="captioned-image-container-static" style="font-size: 16px;line-height: 26px;margin: 32px auto;"><figure style="width: 100%;margin: 0 auto;"><table class="image-wrapper" width="100%" border="0" cellspacing="0" cellpadding="0" data-component-name="Image2ToDOMStatic" style="mso-padding-alt: 1em 0 1.6em;"><tbody><tr><td style="text-align: center;"></td><td class="content" align="left" width="1024" style="text-align: center;"><a class="image-link" target="_blank" href="https://substack.com/redirect/03706063-d8a8-4987-8390-fe7d27090007?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="position: relative;flex-direction: column;align-items: center;padding: 0;width: auto;height: auto;border: none;text-decoration: none;display: block;margin: 0;"><img class="wide-image" data-attrs="{&quot;src&quot;:&quot;https://substack-post-media.s3.amazonaws.com/public/images/53d98542-147b-4ea7-bb10-69989f336196_1024x512.jpeg&quot;,&quot;srcNoWatermark&quot;:null,&quot;fullscreen&quot;:null,&quot;imageSize&quot;:null,&quot;height&quot;:512,&quot;width&quot;:1024,&quot;resizeWidth&quot;:null,&quot;bytes&quot;:49979,&quot;alt&quot;:null,&quot;title&quot;:null,&quot;type&quot;:&quot;image/jpeg&quot;,&quot;href&quot;:null,&quot;belowTheFold&quot;:true,&quot;topImage&quot;:false,&quot;internalRedirect&quot;:&quot;https://www.cartoonshateher.com/i/216174160?img=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F53d98542-147b-4ea7-bb10-69989f336196_1024x512.jpeg&quot;,&quot;isProcessing&quot;:false,&quot;align&quot;:null,&quot;offset&quot;:false}" alt="" width="550" height="275" src="https://substackcdn.com/image/fetch/$s_!Dg7i!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F53d98542-147b-4ea7-bb10-69989f336196_1024x512.jpeg" style="border: none !important;vertical-align: middle;display: block;-ms-interpolation-mode: bicubic;height: auto;margin-bottom: 0;width: auto !important;max-width: 100% !important;margin: 0 auto;"></a></td><td style="text-align: center;"></td></tr></tbody></table><figcaption class="image-caption" style="box-sizing: content-box;color: rgb(119,119,119);font-size: 14px;line-height: 20px;font-weight: 400;letter-spacing: -.15px;margin-top: 8px;width: 70%;padding-left: 15%;padding-right: 15%;text-align: center;"><a href="https://substack.com/redirect/2f754635-0ff2-407b-9876-26ecbd53fe27?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="text-decoration: underline;">Source</a></figcaption></figure></div><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>Now, imagine a guy whose whole vibe is &#8220;lumberjack.&#8221; He&#8217;s burly, he&#8217;s big-boned, he&#8217;s got a naturally thick beard, he looks like he could strangle a bear with one hand. Now imagine Timothee Chalamet, for whatever reason, feels an overwhelming urge to also look this way. Let&#8217;s say Timothee read a bunch of surveys that indicated women are really into lumberjacks and men with narrow and delicate physiques are absolutely, irredeemably doomed. After all, when women design AI boyfriends, they seem to design men with ridiculously huge proportions not on par with humans, like plopping a GI Joe into a Polly Pocket dollhouse. Therefore, any narrow-framed man must get </span><em>shoulder implants</em><span>, right?</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>Just imagine Timothee Chalamet with shoulder implants. I dare you. Now, </span><em>does that make you randy??</em></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>As I covered earlier, quite a few women consider Timothee Chalamet (or other delicate, boyish-looking men, see K-Pop idols) to be the ideal. Those women might be different from the women who favor the lumberjack type. Some women might like </span><em>both</em><span>. Some women might think they like one, but fall in love with the other. And, of course, other types exist. Either way, these two types of men would not benefit from trying to emulate each other. </span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">This is not to say that beauty is completely subjective and everyone should just embrace their pimples, never work out, and wear clothes from 2012. Timothee Chalamet is a great example of someone who is the hottest version &#8220;of their type,&#8221; and of course, most people of that type stand no chance of looking like Chalamet. My point is that you can be conventionally attractive in different ways, and appealing to people who are naturally inclined to find your &#8220;type&#8221; attractive is a better use of your time than trying to be a different type, especially if your goal is not to be the highest-earning escort in your city, but to just&#8230;find a partner. And you can still put plenty of effort into your own looks without trying to become a different type. </p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>For example, red hair and fair/freckled complexion is not the modal preference for the </span><em>average</em><span> man. Red hair typically scores </span><a href="https://substack.com/redirect/c154e265-6fe6-45be-9746-b1131eeff7ff?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">lower</a><span> than other hair colors when this type of thing is studied. But anyone would probably agree that the below woman looks better, more remarkable, and more attractive with red hair than she would with blonde or brown hair:</span></p><div class="captioned-image-container-static" style="font-size: 16px;line-height: 26px;margin: 32px auto;"><figure style="width: 100%;margin: 0 auto;"><table class="image-wrapper" width="100%" border="0" cellspacing="0" cellpadding="0" data-component-name="Image2ToDOMStatic" style="mso-padding-alt: 1em 0 1.6em;"><tbody><tr><td style="text-align: center;"></td><td class="content" align="left" width="445" style="text-align: center;"><a class="image-link" target="_blank" href="https://substack.com/redirect/26f8ba2e-b064-4fc7-a296-6aae20773d95?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="position: relative;flex-direction: column;align-items: center;padding: 0;width: auto;height: auto;border: none;text-decoration: none;display: block;margin: 0;"><img data-attrs="{&quot;src&quot;:&quot;https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wzMDAzMzh8MHwxfHNlYXJjaHw2fHxiZWF1dGlmdWwlMjByZWRoZWFkfGVufDB8fHx8MTc5MDE5OTc2OHww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080&quot;,&quot;srcNoWatermark&quot;:null,&quot;fullscreen&quot;:null,&quot;imageSize&quot;:null,&quot;height&quot;:6048,&quot;width&quot;:4032,&quot;resizeWidth&quot;:445,&quot;bytes&quot;:null,&quot;alt&quot;:&quot;A smiling woman with red hair in a bun and visible freckles&quot;,&quot;title&quot;:null,&quot;type&quot;:&quot;image/jpg&quot;,&quot;href&quot;:null,&quot;belowTheFold&quot;:true,&quot;topImage&quot;:false,&quot;internalRedirect&quot;:null,&quot;isProcessing&quot;:false,&quot;align&quot;:null,&quot;offset&quot;:false}" alt="A smiling woman with red hair in a bun and visible freckles" title="A smiling woman with red hair in a bun and visible freckles" width="445" height="667.5" src="https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wzMDAzMzh8MHwxfHNlYXJjaHw2fHxiZWF1dGlmdWwlMjByZWRoZWFkfGVufDB8fHx8MTc5MDE5OTc2OHww&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" style="border: none !important;vertical-align: middle;display: block;-ms-interpolation-mode: bicubic;height: auto;margin-bottom: 0;width: auto !important;max-width: 100% !important;margin: 0 auto;"></a></td><td style="text-align: center;"></td></tr></tbody></table><figcaption class="image-caption" style="box-sizing: content-box;color: rgb(119,119,119);font-size: 14px;line-height: 20px;font-weight: 400;letter-spacing: -.15px;margin-top: 8px;width: 70%;padding-left: 15%;padding-right: 15%;text-align: center;"><span>Photo by </span><a href="https://substack.com/redirect/3c360a0a-e9d7-4e4f-9ecd-b6e047296fdb?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="text-decoration: underline;">Gabriel Silv&#233;rio</a><span> on </span><a href="https://substack.com/redirect/6c217d8d-891c-40c0-a8ea-c0ad8fc8a580?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="text-decoration: underline;">Unsplash</a></figcaption></figure></div><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>And it&#8217;s not just hair color and styling that&#8217;s subjective and varied: not too long ago, Aella managed to get people to send her a bunch of anonymized nudes so that people could rate them from 1-10. (Thank goodness Aella exists.) We got a </span><em>fairly</em><span> comprehensive idea of </span><a href="https://substack.com/redirect/81717f80-b188-43f1-9024-e6debd66128d?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">what was highest-rated</a><span>. Clearly older bodies and overweight bodies were rated lower, and slim, young people were rated higher&#8212;men with muscles and women with defined waists, mostly. But beyond that, there was quite a bit of variety. Skin color was all over the place&#8212;a universal preference for paleness or tan-ness was not obvious. Within the top three tiers of attractive women, breast size varied considerably, with some of the highest-rated women almost completely flat-chested and others quite well-endowed. In fact, there are two women with nearly </span><em>identical </em><span>high ratings&#8212;one with extremely small breasts, one with clearly-fake very large ones, on similar-sized bodies. All of the most attractive women were within a slim to normal BMI, but some were heavier or skinnier than others. All of the top-rated men were muscular, but some had chest hair or pubic hair and some didn&#8217;t (unfortunately, it was hard to read height into these photos, but that would have been an interesting twist.) In fact, I found several men and women rated a bit lower (6-7, compared with the ceiling of 8.5) who looked indistinguishable from the top-rated ones!</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>The findings of Aella&#8217;s study did not tell me that &#8220;be yourself&#8221; is the best path for everyone&#8212;some on-average preferences were clear&#8212;but rather that there is no universal ideal on which </span><em>every man</em><span> or </span><em>every woman </em><span>will agree. You couldn&#8217;t even generalize these things to the vast majority of men or women. Beyond general evidence of youth, health and virility, it all comes down to type. And yes, some types are more favored than others across the entire population, but if you fall into one type naturally, attempting to be another one is unlikely to go well. And if your goal is to find </span><em>one partner</em><span>, you do not need to appeal to a wide spectrum of people to do so, even if that would theoretically improve your options. </span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"><span>Type is important for another reason&#8212;one type may attract someone from that same type, or a similar one. Most couples are relatively similar in many ways, often within a few years of each other&#8217;s age, similar socioeconomic bracket and similar degrees of good looks. If you were to go to a fraternity and ask them what kind of women they liked, they&#8217;d probably all describe the girls they date on campus. If you went to a bunch of guys at Comicon and asked them who they found attractive, their answers would be different from that of the frat guys. The same would be true if you polled a bunch of tech workers, hipsters, finance guys, whatever. I don&#8217;t think this is because all of those men are lying about their preferences to fit in or to status-signal, or because they&#8217;re regrettably </span><em>limited</em><span> to the women around them, but rather that types go both ways. Your own type will likely attract </span><em>another</em><span> type. Even if your type is relatively niche (for example, lots of tattoos and piercings) that&#8217;s not going to be too much of a detriment if you&#8217;re mostly interested in the type of people who find that attractive&#8212;usually, other people with tattoos and piercings!</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">I will write on this topic against next week with actual tips for how to identify your type, dress to it, and maximize it without being inauthentic, along with some examples from readers who have pulled this off quite well. This will go for men and women alike! But before I write this, please leave a comment adding anything you hope to see in this guide that may help you or be extra interesting!</p><h2 class="header-anchor-post" style="position: relative;font-family: 'SF Pro Display',-apple-system-headline,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight: bold;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: antialiased;-webkit-appearance: optimizelegibility;-moz-appearance: optimizelegibility;appearance: optimizelegibility;margin: 1em 0 0.625em 0;color: rgb(54,55,55);line-height: 1.16em;font-size: calc(1.625em * 1);overflow-wrap: anywhere;word-break: normal;">You might also like&#8230;</h2><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"></p><div class="digestPostEmbed-flwiST custom-css-email-digest-post-embed" data-component-name="DigestPostEmbedStatic" style="margin-bottom: 20px;padding: 0;position: relative;font-size: 16px;line-height: 26px;"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><a href="https://substack.com/redirect/4e643731-3161-4373-b14d-3c7eb1afdab0?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="text-decoration: none;"><h2 class="pencraft pc-reset color-pub-primary-text-NyXPlw line-height-36-XIK16z font-display-nhmvtD size-30-tZAWf_ weight-bold-DmI9lw reset-IxiVJZ" style="list-style: none;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: antialiased;-webkit-appearance: optimizelegibility;-moz-appearance: optimizelegibility;appearance: optimizelegibility;overflow-wrap: anywhere;word-break: normal;font-family: 'SF Pro Display',-apple-system-headline,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight: 700;margin: 0;color: #363737;line-height: 36px;font-size: 30px;text-decoration: unset;">Women&#8217;s Attraction is &#8220;Hardwired&#8221; Too</h2></a></td></tr><tr><td><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="vertical-align:middle;"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="vertical-align:middle;"><div class="pencraft pc-reset color-pub-secondary-text-hGQ02T line-height-20-t4M0El font-meta-MWBumP size-11-NuY2Zx weight-medium-fw81nC transform-uppercase-yKDgcq reset-IxiVJZ meta-EgzBVA" style="list-style: none;font-size: 11px;line-height: 20px;text-decoration: unset;color: #777777;margin: 0;font-family: 'SF Compact',-apple-system,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight: 500;text-transform: uppercase;letter-spacing: .2px;"><a class="inheritColor-WetTGJ" href="https://substack.com/profile/208140520-cartoons-hate-her" style="color: inherit;text-decoration: none;">Cartoons Hate Her</a></div></td><td width="4" style="min-width:4px;"></td><td style="vertical-align:middle;"><div class="pencraft pc-reset color-pub-secondary-text-hGQ02T reset-IxiVJZ" style="list-style: none;font-size: 16px;line-height: 26px;text-decoration: unset;color: #777777;margin: 0;">&#183;</div></td></tr></tbody></table></td><td width="4" style="min-width:4px;"></td><td style="vertical-align:middle;"><div class="pencraft pc-reset color-pub-secondary-text-hGQ02T line-height-20-t4M0El font-meta-MWBumP size-11-NuY2Zx weight-medium-fw81nC transform-uppercase-yKDgcq reset-IxiVJZ meta-EgzBVA" style="list-style: none;font-size: 11px;line-height: 20px;text-decoration: unset;color: #777777;margin: 0;font-family: 'SF Compact',-apple-system,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight: 500;text-transform: uppercase;letter-spacing: .2px;">Sep 14</div></td></tr></tbody></table></td></tr><tr><td><div class="pencraft pc-paddingTop-24 pc-reset" style="text-decoration: unset;list-style: none;padding-top: 24px;font-size: 16px;line-height: 26px;"><a href="https://substack.com/redirect/4e643731-3161-4373-b14d-3c7eb1afdab0?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="text-decoration: none;"><picture><source type="image/webp" srcset="https://substackcdn.com/image/fetch/$s_!GtKQ!,w_424,h_212,c_fill,f_webp,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F71dc614e-9644-46e6-a4fc-8a02e64931bc_1080x1024.jpeg 424w, https://substackcdn.com/image/fetch/$s_!GtKQ!,w_848,h_424,c_fill,f_webp,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F71dc614e-9644-46e6-a4fc-8a02e64931bc_1080x1024.jpeg 848w, https://substackcdn.com/image/fetch/$s_!GtKQ!,w_1272,h_636,c_fill,f_webp,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F71dc614e-9644-46e6-a4fc-8a02e64931bc_1080x1024.jpeg 1272w, https://substackcdn.com/image/fetch/$s_!GtKQ!,w_1300,h_650,c_fill,f_webp,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F71dc614e-9644-46e6-a4fc-8a02e64931bc_1080x1024.jpeg 1300w" sizes="100vw"><img class="img-OACg1c fullWidth-Ta6aEE pencraft pc-reset" src="https://substackcdn.com/image/fetch/$s_!GtKQ!,w_1300,h_650,c_fill,f_auto,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F71dc614e-9644-46e6-a4fc-8a02e64931bc_1080x1024.jpeg" sizes="100vw" alt="Women&#8217;s Attraction is &#8220;Hardwired&#8221; Too" srcset="https://substackcdn.com/image/fetch/$s_!GtKQ!,w_424,h_212,c_fill,f_auto,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F71dc614e-9644-46e6-a4fc-8a02e64931bc_1080x1024.jpeg 424w, https://substackcdn.com/image/fetch/$s_!GtKQ!,w_848,h_424,c_fill,f_auto,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F71dc614e-9644-46e6-a4fc-8a02e64931bc_1080x1024.jpeg 848w, https://substackcdn.com/image/fetch/$s_!GtKQ!,w_1272,h_636,c_fill,f_auto,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F71dc614e-9644-46e6-a4fc-8a02e64931bc_1080x1024.jpeg 1272w, https://substackcdn.com/image/fetch/$s_!GtKQ!,w_1300,h_650,c_fill,f_auto,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F71dc614e-9644-46e6-a4fc-8a02e64931bc_1080x1024.jpeg 1300w" width="1300" height="650" style="text-decoration: unset;list-style: none;border: none !important;vertical-align: middle;display: block;-ms-interpolation-mode: bicubic;max-width: 100%;height: auto;margin: 0 auto;object-fit: cover;width: 100%;max-height: 325px!important;"></picture></a></div></td></tr><tr><td><a href="https://substack.com/redirect/4e643731-3161-4373-b14d-3c7eb1afdab0?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="text-decoration: none;"><p class="pencraft pc-reset" style="text-decoration: unset;list-style: none;margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"></p><p class="caption-QiPycG" style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">Last week, I (as well as all of Twitter) came across a Spectator article called Love Can&#8217;t Be Lectured, a manifesto defending the immutable nature of male physical sexual preferences, written by sixty-three-year-old writer Sean Thomas. Credit where it&#8217;s due, he opens with a pre-paywall statement guaranteed to rake in the rage-traffic: he will not date women his own age because he is physically incapable of being attracted to them. His type is, quite explicitly, twenty-four-year-old Sadie Sink, who he says looks like a &#8220;Pre-Raphaelite nymph at the end of a Narnian winter.&#8221;</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"></p></a></td></tr><tr><td><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0" style="padding-top:0px;padding-bottom:0px;"><tbody><tr><td style="vertical-align:middle;"><a class="pencraft pc-reset align-center-y7ZD4w line-height-20-t4M0El font-text-qe4AeH size-13-hZTUKr weight-medium-fw81nC reset-IxiVJZ" href="https://substack.com/redirect/4e643731-3161-4373-b14d-3c7eb1afdab0?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="list-style: none;color: unset;text-align: center;text-decoration: unset;margin: 0;font-size: 13px;line-height: 20px;font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight: 500;"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="vertical-align:middle;"><span class="pencraft pc-reset color-accent-BVX_7M line-height-20-t4M0El font-text-qe4AeH size-14-MLPa7j weight-regular-mUq6Gb reset-IxiVJZ link-HREYZo" style="list-style: none;text-decoration: unset;color: rgb(255,103,25);margin: 0;font-size: 14px;line-height: 20px;font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight: 400;">Read full story</span></td></tr></tbody></table></a></td></tr></tbody></table></td></tr></tbody></table></div><div class="digestPostEmbed-flwiST custom-css-email-digest-post-embed" data-component-name="DigestPostEmbedStatic" style="padding: 0;position: relative;font-size: 16px;line-height: 26px;margin-bottom: 0;"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><a href="https://substack.com/redirect/f6e2a135-4934-4d06-a1f4-ad7abc3725d8?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="text-decoration: none;"><h2 class="pencraft pc-reset color-pub-primary-text-NyXPlw line-height-36-XIK16z font-display-nhmvtD size-30-tZAWf_ weight-bold-DmI9lw reset-IxiVJZ" style="list-style: none;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: antialiased;-webkit-appearance: optimizelegibility;-moz-appearance: optimizelegibility;appearance: optimizelegibility;overflow-wrap: anywhere;word-break: normal;font-family: 'SF Pro Display',-apple-system-headline,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight: 700;margin: 0;color: #363737;line-height: 36px;font-size: 30px;text-decoration: unset;">You&#8217;ll Never Know Who The High Heels Are For</h2></a></td></tr><tr><td><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="vertical-align:middle;"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="vertical-align:middle;"><div class="pencraft pc-reset color-pub-secondary-text-hGQ02T line-height-20-t4M0El font-meta-MWBumP size-11-NuY2Zx weight-medium-fw81nC transform-uppercase-yKDgcq reset-IxiVJZ meta-EgzBVA" style="list-style: none;font-size: 11px;line-height: 20px;text-decoration: unset;color: #777777;margin: 0;font-family: 'SF Compact',-apple-system,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight: 500;text-transform: uppercase;letter-spacing: .2px;"><a class="inheritColor-WetTGJ" href="https://substack.com/profile/208140520-cartoons-hate-her" style="color: inherit;text-decoration: none;">Cartoons Hate Her</a></div></td><td width="4" style="min-width:4px;"></td><td style="vertical-align:middle;"><div class="pencraft pc-reset color-pub-secondary-text-hGQ02T reset-IxiVJZ" style="list-style: none;font-size: 16px;line-height: 26px;text-decoration: unset;color: #777777;margin: 0;">&#183;</div></td></tr></tbody></table></td><td width="4" style="min-width:4px;"></td><td style="vertical-align:middle;"><div class="pencraft pc-reset color-pub-secondary-text-hGQ02T line-height-20-t4M0El font-meta-MWBumP size-11-NuY2Zx weight-medium-fw81nC transform-uppercase-yKDgcq reset-IxiVJZ meta-EgzBVA" style="list-style: none;font-size: 11px;line-height: 20px;text-decoration: unset;color: #777777;margin: 0;font-family: 'SF Compact',-apple-system,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight: 500;text-transform: uppercase;letter-spacing: .2px;">Aug 31</div></td></tr></tbody></table></td></tr><tr><td><div class="pencraft pc-paddingTop-24 pc-reset" style="text-decoration: unset;list-style: none;padding-top: 24px;font-size: 16px;line-height: 26px;"><a href="https://substack.com/redirect/f6e2a135-4934-4d06-a1f4-ad7abc3725d8?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="text-decoration: none;"><picture><source type="image/webp" srcset="https://substackcdn.com/image/fetch/$s_!l9Pi!,w_424,h_212,c_fill,f_webp,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ffd35c644-b803-4474-a423-580d9acc03c0_1080x768.jpeg 424w, https://substackcdn.com/image/fetch/$s_!l9Pi!,w_848,h_424,c_fill,f_webp,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ffd35c644-b803-4474-a423-580d9acc03c0_1080x768.jpeg 848w, https://substackcdn.com/image/fetch/$s_!l9Pi!,w_1272,h_636,c_fill,f_webp,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ffd35c644-b803-4474-a423-580d9acc03c0_1080x768.jpeg 1272w, https://substackcdn.com/image/fetch/$s_!l9Pi!,w_1300,h_650,c_fill,f_webp,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ffd35c644-b803-4474-a423-580d9acc03c0_1080x768.jpeg 1300w" sizes="100vw"><img class="img-OACg1c fullWidth-Ta6aEE pencraft pc-reset" src="https://substackcdn.com/image/fetch/$s_!l9Pi!,w_1300,h_650,c_fill,f_auto,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ffd35c644-b803-4474-a423-580d9acc03c0_1080x768.jpeg" sizes="100vw" alt="You&#8217;ll Never Know Who The High Heels Are For" srcset="https://substackcdn.com/image/fetch/$s_!l9Pi!,w_424,h_212,c_fill,f_auto,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ffd35c644-b803-4474-a423-580d9acc03c0_1080x768.jpeg 424w, https://substackcdn.com/image/fetch/$s_!l9Pi!,w_848,h_424,c_fill,f_auto,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ffd35c644-b803-4474-a423-580d9acc03c0_1080x768.jpeg 848w, https://substackcdn.com/image/fetch/$s_!l9Pi!,w_1272,h_636,c_fill,f_auto,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ffd35c644-b803-4474-a423-580d9acc03c0_1080x768.jpeg 1272w, https://substackcdn.com/image/fetch/$s_!l9Pi!,w_1300,h_650,c_fill,f_auto,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ffd35c644-b803-4474-a423-580d9acc03c0_1080x768.jpeg 1300w" width="1300" height="650" style="text-decoration: unset;list-style: none;border: none !important;vertical-align: middle;display: block;-ms-interpolation-mode: bicubic;max-width: 100%;height: auto;margin: 0 auto;object-fit: cover;width: 100%;max-height: 325px!important;"></picture></a></div></td></tr><tr><td><a href="https://substack.com/redirect/f6e2a135-4934-4d06-a1f4-ad7abc3725d8?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="text-decoration: none;"><p class="pencraft pc-reset" style="text-decoration: unset;list-style: none;margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"></p><p class="caption-QiPycG" style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;">I&#8217;ve always been fascinated by beauty standards and how women execute on them, specifically the openness to which women admit they are grooming, primping or dressing a certain way &#8220;for men.&#8221; Or not for men.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;"></p></a></td></tr><tr><td><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0" style="padding-top:0px;padding-bottom:0px;"><tbody><tr><td style="vertical-align:middle;"><a class="pencraft pc-reset align-center-y7ZD4w line-height-20-t4M0El font-text-qe4AeH size-13-hZTUKr weight-medium-fw81nC reset-IxiVJZ" href="https://substack.com/redirect/f6e2a135-4934-4d06-a1f4-ad7abc3725d8?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="list-style: none;color: unset;text-align: center;text-decoration: unset;margin: 0;font-size: 13px;line-height: 20px;font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight: 500;"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="vertical-align:middle;"><span class="pencraft pc-reset color-accent-BVX_7M line-height-20-t4M0El font-text-qe4AeH size-14-MLPa7j weight-regular-mUq6Gb reset-IxiVJZ link-HREYZo" style="list-style: none;text-decoration: unset;color: rgb(255,103,25);margin: 0;font-size: 14px;line-height: 20px;font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight: 400;">Read full story</span></td></tr></tbody></table></a></td></tr></tbody></table></td></tr></tbody></table></div></div></div><div class="container-border" style="margin: 32px 0 0;width: 100%;box-sizing: border-box;border-top: 1px solid #e6e6e6;font-size: 16px;line-height: 26px;"></div><div class="post-cta typography markup" style="--image-offset-margin: -120px;text-align: initial;margin-bottom: 32px;hanging-punctuation: allow-end;overflow-wrap: anywhere;word-break: break-word;margin: 32px 0;font-size: 16px;line-height: 26px;"><p class="referrals-cta-text" style="color: rgb(54,55,55);text-align: center;width: 90%;line-height: 26px;font-size: 16px;margin-top: 0;max-width: 384px;margin: auto"></p><h4 style="font-family: 'SF Pro Display',-apple-system-headline,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight: bold;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: antialiased;-webkit-appearance: optimizelegibility;-moz-appearance: optimizelegibility;appearance: optimizelegibility;margin: 1em 0 0.625em 0;color: rgb(54,55,55);line-height: 1.16em;font-size: calc(1.125em * 1);overflow-wrap: anywhere;word-break: normal;text-align: center">Invite your friends and earn rewards</h4><div style="line-height: 26px;text-align: center;font-size: 14px">If you enjoy Cartoons Hate Her, share it with your friends and earn rewards when they subscribe.</div><p style="color: rgb(54,55,55);margin: 0 auto 20px;text-align: center;width: 90%;line-height: 26px;font-size: 16px;"></p><p class="cta-box" style="color: rgb(54,55,55);margin: 0 auto 20px;width: 90%;line-height: 26px;font-size: 16px;margin-bottom: 0;text-align: center;margin-left: auto;margin-right: auto;"><a class="button primary" role="button" href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly93d3cuY2FydG9vbnNoYXRlaGVyLmNvbS9sZWFkZXJib2FyZD9yZWZlcnJlcl90b2tlbj02OWc4biZyPTY5ZzhuJnV0bV9jYW1wYWlnbj1lbWFpbC1sZWFkZXJib2FyZCIsInAiOjIxNjE3NDE2MCwicyI6MjM1NTAyNSwiZiI6ZmFsc2UsInUiOjEwNTE4NjQ3LCJpYXQiOjE3OTAyNDg3ODgsImV4cCI6MjEwNTgyNDc4OCwiaXNzIjoicHViLTAiLCJzdWIiOiJsaW5rLXJlZGlyZWN0In0.FIIx4fy-Qpvwqx8YlB10f1pTJ9tg9P0wtOyNsvAFtL0?&utm_source=substack&utm_medium=email&utm_content=postcta" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;box-sizing: border-box;cursor: pointer;border: none;height: 40px;border-radius: 8px;font-size: 14px;line-height: 20px;font-weight: 600;text-align: center;padding: 10px 20px;margin: 0;opacity: 1;outline: none;white-space: nowrap;color: #363737 !important;text-decoration: none !important;background-color: #FFE460;">Invite Friends</a></p></div><table class="email-ufi-2-bottom" role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="border-top: 1px solid rgb(0,0,0,.1);border-bottom: 1px solid rgb(0,0,0,.1);min-width: 100%;"><tbody><tr height="16"><td height="16" style="font-size:0px;line-height:0;">&nbsp;</td></tr><tr><td><table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0" style="margin:0 auto;"><tbody><tr><td style="vertical-align:middle;"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="center"><a class="email-button-outline" href="https://substack.com/app-link/post?publication_id=2355025&post_id=216174160&utm_source=substack&isFreemail=false&submitLike=true&token=eyJ1c2VyX2lkIjoxMDUxODY0NywicG9zdF9pZCI6MjE2MTc0MTYwLCJyZWFjdGlvbiI6IuKdpCIsImlhdCI6MTc5MDI0ODc4OCwiZXhwIjoxNzkyODQwNzg4LCJpc3MiOiJwdWItMjM1NTAyNSIsInN1YiI6InJlYWN0aW9uIn0.mlJO1llJFR1EZCNTnqN76xKSIf0Z-4fLPCqnKVahsWU&utm_medium=email&utm_campaign=email-reaction&r=69g8n" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;font-weight: 500;border: 1px solid rgb(0,0,0,.1);border-radius: 9999px;text-transform: uppercase;font-size: 12px;line-height: 12px;padding: 9px 14px;text-decoration: none;color: rgb(119,119,119);"><img class="icon" src="https://substackcdn.com/image/fetch/$s_!PeVs!,w_36,c_scale,f_png,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Ficon%2FLucideHeart%3Fv%3D4%26height%3D36%26fill%3Dnone%26stroke%3D%2523808080%26strokeWidth%3D2" width="18" height="18" style="margin-right: 8px;min-width: 18px;min-height: 18px;border: none;vertical-align: middle;max-width: 18px" alt=""><span class="email-button-text" style="vertical-align: middle;">Like</span></a></td></tr></tbody></table></td><td width="8" style="min-width:8px;"></td><td style="vertical-align:middle;"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="center"><a class="email-button-outline" href="https://substack.com/app-link/post?publication_id=2355025&post_id=216174160&utm_source=substack&utm_medium=email&isFreemail=false&comments=true&token=eyJ1c2VyX2lkIjoxMDUxODY0NywicG9zdF9pZCI6MjE2MTc0MTYwLCJpYXQiOjE3OTAyNDg3ODgsImV4cCI6MTc5Mjg0MDc4OCwiaXNzIjoicHViLTIzNTUwMjUiLCJzdWIiOiJwb3N0LXJlYWN0aW9uIn0.sUuTBW-J-UKXN3cmHFBfbkX_eSxqypZJ61geHM2tuxc&r=69g8n&utm_campaign=email-half-magic-comments&action=post-comment&utm_source=substack&utm_medium=email" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;font-weight: 500;border: 1px solid rgb(0,0,0,.1);border-radius: 9999px;text-transform: uppercase;font-size: 12px;line-height: 12px;padding: 9px 14px;text-decoration: none;color: rgb(119,119,119);"><img class="icon" src="https://substackcdn.com/image/fetch/$s_!x1tS!,w_36,c_scale,f_png,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Ficon%2FLucideComments%3Fv%3D4%26height%3D36%26fill%3Dnone%26stroke%3D%2523808080%26strokeWidth%3D2" width="18" height="18" style="margin-right: 8px;min-width: 18px;min-height: 18px;border: none;vertical-align: middle;max-width: 18px" alt=""><span class="email-button-text" style="vertical-align: middle;">Comment</span></a></td></tr></tbody></table></td><td width="8" style="min-width:8px;"></td><td style="vertical-align:middle;"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="center"><a class="email-button-outline" href="https://open.substack.com/pub/cartoonshateher/p/being-the-hottest-version-of-your?utm_source=substack&utm_medium=email&utm_campaign=email-restack-comment&action=restack-comment&r=69g8n&token=eyJ1c2VyX2lkIjoxMDUxODY0NywicG9zdF9pZCI6MjE2MTc0MTYwLCJpYXQiOjE3OTAyNDg3ODgsImV4cCI6MTc5Mjg0MDc4OCwiaXNzIjoicHViLTIzNTUwMjUiLCJzdWIiOiJwb3N0LXJlYWN0aW9uIn0.sUuTBW-J-UKXN3cmHFBfbkX_eSxqypZJ61geHM2tuxc&utm_source=substack&utm_medium=email" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;font-weight: 500;border: 1px solid rgb(0,0,0,.1);border-radius: 9999px;text-transform: uppercase;font-size: 12px;line-height: 12px;padding: 9px 14px;text-decoration: none;color: rgb(119,119,119);"><img class="icon" src="https://substackcdn.com/image/fetch/$s_!ubXF!,w_36,c_scale,f_png,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Ficon%2Fnotes__NoteRestackIcon%3Fv%3D4%26height%3D36%26fill%3Dnone%26stroke%3D%2523808080%26strokeWidth%3D2%26strokeLinecap%3Dround%26strokeLinejoin%3Dround" width="18" height="18" alt="" style="margin-right: 8px;min-width: 18px;min-height: 18px;max-width: 550px;border: none !important;vertical-align: middle;"><span class="email-button-text" style="vertical-align: middle;">Restack</span></a></td></tr></tbody></table></td></tr></tbody></table></td><td align="right"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr></tr></tbody></table></td></tr></tbody></table></td></tr><tr height="16"><td height="16" style="font-size:0px;line-height:0;">&nbsp;</td></tr></tbody></table><div class="footer footer-ZM59BM" style="color: rgb(119,119,119);text-align: center;font-size: 16px;line-height: 26px;padding: 24px 0;"><div style="font-size: 16px;line-height: 26px;padding-bottom: 24px"><p class="pencraft pc-reset color-secondary-ls1g8s size-12-mmZ61m reset-IxiVJZ small meta-B2bqa5" style="list-style: none;font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';padding-bottom: 0;font-size: 12px;line-height: 16px;margin: 0;color: rgb(119,119,119);text-decoration: unset;">&#169; 2026 <span>Cartoons Hate Her</span> <br><a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly93d3cuY2FydG9vbnNoYXRlaGVyLmNvbS9hY3Rpb24vZGlzYWJsZV9lbWFpbD90b2tlbj1leUoxYzJWeVgybGtJam94TURVeE9EWTBOeXdpY0c5emRGOXBaQ0k2TWpFMk1UYzBNVFl3TENKcFlYUWlPakUzT1RBeU5EZzNPRGdzSW1WNGNDSTZNVGd5TVRjNE5EYzRPQ3dpYVhOeklqb2ljSFZpTFRJek5UVXdNalVpTENKemRXSWlPaUprYVhOaFlteGxYMlZ0WVdsc0luMC56cDdHYmR1c3kwbHVjRmlTTTBCT3pzS0VMQzVLcG8ydDJMUzZVYy1rbC1RIiwicCI6MjE2MTc0MTYwLCJzIjoyMzU1MDI1LCJmIjpmYWxzZSwidSI6MTA1MTg2NDcsImlhdCI6MTc5MDI0ODc4OCwiZXhwIjoyMTA1ODI0Nzg4LCJpc3MiOiJwdWItMCIsInN1YiI6ImxpbmstcmVkaXJlY3QifQ.o_wGryWzD3XW1Tih31ayajKOTvqcgSVAsrtpwJuOAbo?" style="text-decoration: underline;color: rgb(119,119,119);"><span style="color: rgb(119,119,119);text-decoration: underline;">Unsubscribe</span></a></p></div><p class="footerSection-EHR0jG small powered-by-substack" style="padding: 0 24px;font-size: 12px;line-height: 20px;margin: 0;color: rgb(119,119,119);font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';padding-bottom: 0;margin-top: 0;"><a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly9zdWJzdGFjay5jb20vc2lnbnVwP3V0bV9zb3VyY2U9c3Vic3RhY2smdXRtX21lZGl1bT1lbWFpbCZ1dG1fY29udGVudD1mb290ZXImdXRtX2NhbXBhaWduPWF1dG9maWxsZWQtZm9vdGVyJmZyZWVTaWdudXBFbWFpbD1iZW5vaXRjQGdtYWlsLmNvbSZyPTY5ZzhuIiwicCI6MjE2MTc0MTYwLCJzIjoyMzU1MDI1LCJmIjpmYWxzZSwidSI6MTA1MTg2NDcsImlhdCI6MTc5MDI0ODc4OCwiZXhwIjoyMTA1ODI0Nzg4LCJpc3MiOiJwdWItMCIsInN1YiI6ImxpbmstcmVkaXJlY3QifQ.ihyOTlonfBdgdxr9UpMDvEXhZLXprHFPIvhRlSZ2VOE?" style="color: rgb(119,119,119);text-decoration: none;display: inline-block;margin: 0 4px;"><img src="https://substackcdn.com/image/fetch/$s_!LkrL!,w_270,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Fimg%2Femail%2Fpublish-button%402x.png" srcset="https://substackcdn.com/image/fetch/$s_!wgfj!,w_135,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Fimg%2Femail%2Fpublish-button.png, https://substackcdn.com/image/fetch/$s_!LkrL!,w_270,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Fimg%2Femail%2Fpublish-button%402x.png 2x, https://substackcdn.com/image/fetch/$s_!KjtY!,w_405,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Fimg%2Femail%2Fpublish-button%403x.png 3x" width="135" alt="Start writing" height="40" style="max-width: 550px;border: none !important;vertical-align: middle;"></a></p></div></div></td><td></td></tr></tbody></table><img src="https://eotrx.substackcdn.com/o/f0b73638bbfb8f72/p.gif?token=eyJtIjoiPDIwMjYwOTI0MTEwNDE4LjMuMTdmZWZjZWNlOGUwNDJiOEBtZzEuc3Vic3RhY2suY29tPiIsInUiOjEwNTE4NjQ3LCJyIjoiYmVub2l0Y0BnbWFpbC5jb20iLCJkIjoibWcxLnN1YnN0YWNrLmNvbSIsInAiOjIxNjE3NDE2MCwidCI6Im5ld3NsZXR0ZXIiLCJhIjoib25seV9wYWlkIiwicyI6MjM1NTAyNSwiYyI6InBvc3QiLCJmIjpmYWxzZSwieiI6IiIsInBvc2l0aW9uIjoiYm90dG9tIiwiaWF0IjoxNzkwMjQ4Nzg5LCJleHAiOjE3OTI4NDA3ODksImlzcyI6InB1Yi0wIiwic3ViIjoiZW8ifQ.avEL31js3_ngl2AE5oCqbG2fjNlbbWXzj2SYqjce6ns" alt="" width="1" height="1" border="0" style="height:1px !important;width:1px !important;border-width:0 !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:0 !important;margin-left:0 !important;padding-top:0 !important;padding-bottom:0 !important;padding-right:0 !important;padding-left:0 !important;"/><img width="1" height="1" alt="" src="https://email.mg1.substack.com/o/eJxMkEEO4yAQBF8TjhZgMOTAW9AAEwfFBgTDrvz7lZPLXrulUqkiEO61X67VQSw5bmQ0gaET5smlssY-GZ6QD79jwQ6EyQP993K5srdLxqrAtdYI0VoIyWqIat10kAFAS5ad5HLjT6mE4ErYZV2EeeErYkSLXMlgH4qfu1jGDIMgfpZYT1YbFk8d4ieX3Y_ZWscxMDl2-3qYKWOJ6Go5Lt8gp9-ek5NiE0aJjf8Wuhq6gn_HgUTYWZvBx3qes2S6PBYIByZHfeJ9HTkC5Vq-oFVrLjXrLmCpmeJD8f0u8hUcM6R6Qi4uQqday3gD4Rs7o1_SObDfGMG1sJsy7I-T_wIAAP__9EJ9Uw"></body></html></body></html>
