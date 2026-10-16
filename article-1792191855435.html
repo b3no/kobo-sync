@@ -1,0 +1,804 @@
+<html><head><meta name="robots" content="noindex"><title>The Participatory Panopticon</title></head><body><html lang="en" dir="ltr" style="scrollbar-width: thin;scrollbar-color: rgb(219,219,219)rgb(255,255,255);"><head><meta charset="utf-8"><title>The Participatory Panopticon</title><style>
+@media (max-width: 1024px) {
+  .typography .pullquote-align-left,
+  .typography.editor .pullquote-align-left,
+  .typography .pullquote-align-right,
+  .typography.editor .pullquote-align-right,
+  .typography .pullquote-align-wide,
+  .typography.editor .pullquote-align-wide,
+  .typography .pullquote-align-center,
+  .typography.editor .pullquote-align-center {
+    float: none;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .typography .markup table.image-wrapper img,
+  .typography.editor .markup table.image-wrapper img,
+  .typography .markup table.kindle-wrapper img,
+  .typography.editor .markup table.kindle-wrapper img {
+    max-width: 550px;
+  }
+}
+@media (min-width: 1024px) {
+  .typography:not(:has(#toc)) .captioned-image-container figure:has( > :is(a, div).image2-offset-left),
+  .typography.editor:not(:has(#toc)) .captioned-image-container figure:has( > :is(a, div).image2-offset-left) {
+    margin-left: var(--image-offset-margin);
+  }
+  .typography:not(:has(#toc)) .captioned-image-container figure:has( > :is(a, div).image2-offset-right),
+  .typography.editor:not(:has(#toc)) .captioned-image-container figure:has( > :is(a, div).image2-offset-right) {
+    margin-right: var(--image-offset-margin);
+  }
+}
+@media (min-width: 1300px) {
+  .typography .captioned-image-container figure:has( > :is(a, div).image2-offset-left),
+  .typography.editor .captioned-image-container figure:has( > :is(a, div).image2-offset-left) {
+    margin-left: var(--image-offset-margin);
+  }
+  .typography .captioned-image-container figure:has( > :is(a, div).image2-offset-right),
+  .typography.editor .captioned-image-container figure:has( > :is(a, div).image2-offset-right) {
+    margin-right: var(--image-offset-margin);
+  }
+}
+@media (max-width: 1024px) {
+  .typography,
+  .typography.editor {
+    /* Disable offset on mobile/tablet */
+  }
+  .typography .captioned-image-container figure:has( > :is(a, div).image2-align-left),
+  .typography.editor .captioned-image-container figure:has( > :is(a, div).image2-align-left),
+  .typography .captioned-image-container figure:has( > :is(a, div).image2-align-right),
+  .typography.editor .captioned-image-container figure:has( > :is(a, div).image2-align-right) {
+    float: none;
+    margin: 1em auto;
+    max-width: 100%;
+    width: auto;
+    padding: 0;
+  }
+  .typography .captioned-image-container figure:has( > :is(a, div).image2-align-left.thefp),
+  .typography.editor .captioned-image-container figure:has( > :is(a, div).image2-align-left.thefp),
+  .typography .captioned-image-container figure:has( > :is(a, div).image2-align-right.thefp),
+  .typography.editor .captioned-image-container figure:has( > :is(a, div).image2-align-right.thefp) {
+    margin: 1em auto;
+  }
+  .typography .captioned-image-container figure:has( > :is(a, div).image2-offset-left),
+  .typography.editor .captioned-image-container figure:has( > :is(a, div).image2-offset-left),
+  .typography .captioned-image-container figure:has( > :is(a, div).image2-offset-right),
+  .typography.editor .captioned-image-container figure:has( > :is(a, div).image2-offset-right) {
+    margin: 1em auto;
+  }
+  .typography .captioned-image-container figure:has( > :is(a, div).image2-align-left) .image2-inset,
+  .typography.editor .captioned-image-container figure:has( > :is(a, div).image2-align-left) .image2-inset,
+  .typography .captioned-image-container figure:has( > :is(a, div).image2-align-right) .image2-inset,
+  .typography.editor .captioned-image-container figure:has( > :is(a, div).image2-align-right) .image2-inset {
+    display: block;
+    justify-content: initial;
+  }
+}
+@media (max-width: 768px) {
+  .typography .markup div.sponsorship-campaign-embed,
+  .typography.editor .markup div.sponsorship-campaign-embed {
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+  .typography .markup div.sponsorship-campaign-embed:first-child,
+  .typography.editor .markup div.sponsorship-campaign-embed:first-child {
+    margin-top: 0px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .typography .markup div.youtube-overlay,
+  .typography.editor .markup div.youtube-overlay,
+  .typography .markup div.vimeo-overlay,
+  .typography.editor .markup div.vimeo-overlay {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 370px) {
+  .typography .markup div.tiktok-wrap,
+  .typography.editor .markup div.tiktok-wrap {
+    width: calc(95vw - 32px);
+    height: calc((95vw - 32px - 2px) / 0.485714);
+  }
+}
+@media screen and (max-width: 650px) {
+  .typography .markup div.embedded-publication-wrap .embedded-publication.show-subscribe,
+  .typography.editor .markup div.embedded-publication-wrap .embedded-publication.show-subscribe {
+    padding: 24px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .typography .markup div.subscription-widget-wrap .subscription-widget.show-subscribe,
+  .typography.editor .markup div.subscription-widget-wrap .subscription-widget.show-subscribe,
+  .typography .markup div.subscription-widget-wrap-editor .subscription-widget.show-subscribe,
+  .typography.editor .markup div.subscription-widget-wrap-editor .subscription-widget.show-subscribe,
+  .typography .markup div.captioned-button-wrap .subscription-widget.show-subscribe,
+  .typography.editor .markup div.captioned-button-wrap .subscription-widget.show-subscribe {
+    padding: 0px 24px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .typography .markup div.subscription-widget-wrap .subscription-widget.show-subscribe .subscription-widget-subscribe .button,
+  .typography.editor .markup div.subscription-widget-wrap .subscription-widget.show-subscribe .subscription-widget-subscribe .button,
+  .typography .markup div.subscription-widget-wrap-editor .subscription-widget.show-subscribe .subscription-widget-subscribe .button,
+  .typography.editor .markup div.subscription-widget-wrap-editor .subscription-widget.show-subscribe .subscription-widget-subscribe .button,
+  .typography .markup div.captioned-button-wrap .subscription-widget.show-subscribe .subscription-widget-subscribe .button,
+  .typography.editor .markup div.captioned-button-wrap .subscription-widget.show-subscribe .subscription-widget-subscribe .button {
+    padding: 10px 12px;
+    min-width: 110px;
+  }
+}
+@media (max-width: 650px) {
+  .typography .markup .twitter-embed,
+  .typography.editor .markup .twitter-embed,
+  .typography .markup .tweet,
+  .typography.editor .markup .tweet {
+    padding: 12px;
+  }
+}
+@media (max-width: 650px) {
+  .typography .markup .twitter-embed .tweet-text,
+  .typography.editor .markup .twitter-embed .tweet-text,
+  .typography .markup .tweet .tweet-text,
+  .typography.editor .markup .tweet .tweet-text {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+@media (max-width: 650px) {
+  .typography .markup .twitter-embed .tweet-photos-container.two,
+  .typography.editor .markup .twitter-embed .tweet-photos-container.two,
+  .typography .markup .tweet .tweet-photos-container.two,
+  .typography.editor .markup .tweet .tweet-photos-container.two,
+  .typography .markup .twitter-embed .tweet-photos-container.three,
+  .typography.editor .markup .twitter-embed .tweet-photos-container.three,
+  .typography .markup .tweet .tweet-photos-container.three,
+  .typography.editor .markup .tweet .tweet-photos-container.three,
+  .typography .markup .twitter-embed .tweet-photos-container.four,
+  .typography.editor .markup .twitter-embed .tweet-photos-container.four,
+  .typography .markup .tweet .tweet-photos-container.four,
+  .typography.editor .markup .tweet .tweet-photos-container.four {
+    height: 200px;
+  }
+}
+@media (max-width: 650px) {
+  .typography .markup .twitter-embed a.expanded-link .expanded-link-img,
+  .typography.editor .markup .twitter-embed a.expanded-link .expanded-link-img,
+  .typography .markup .tweet a.expanded-link .expanded-link-img,
+  .typography.editor .markup .tweet a.expanded-link .expanded-link-img {
+    max-height: 180px;
+  }
+}
+@media (max-width: 650px) {
+  .typography .markup .twitter-embed a.expanded-link .expanded-link-description,
+  .typography.editor .markup .twitter-embed a.expanded-link .expanded-link-description,
+  .typography .markup .tweet a.expanded-link .expanded-link-description,
+  .typography.editor .markup .tweet a.expanded-link .expanded-link-description {
+    display: none;
+  }
+}
+@media screen and (max-width: 650px) {
+  .typography .markup .apple-podcast-container,
+  .typography.editor .markup .apple-podcast-container {
+    width: unset;
+  }
+}
+@media (max-width: 420px) {
+  .typography .markup .install-substack-app-embed img.install-substack-app-embed-img,
+  .typography.editor .markup .install-substack-app-embed img.install-substack-app-embed-img {
+    margin: 0 auto 16px auto;
+  }
+}
+@media (max-width: 420px) {
+  .typography .markup .install-substack-app-embed .install-substack-app-embed-text,
+  .typography.editor .markup .install-substack-app-embed .install-substack-app-embed-text {
+    margin: 0 0 12px 0;
+    max-width: 100%;
+    width: auto;
+    text-align: center;
+  }
+}
+@media (max-width: 420px) {
+  .typography .markup .install-substack-app-embed .install-substack-app-embed-link,
+  .typography.editor .markup .install-substack-app-embed .install-substack-app-embed-link {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 481px) {
+  .share-button-container {
+    height: 38px;
+  }
+}
+@media screen and (min-width: 481px) {
+  .share-button-container a.comment {
+    height: 38px;
+    line-height: 38px;
+    padding-right: 10px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .share-button-container .separator {
+    display: block;
+    margin: 0;
+    height: 8px;
+    border-left: none;
+  }
+}
+@media screen and (max-width: 480px) {
+  .share-button-container a.share.first img {
+    padding-left: 0;
+  }
+}
+@media screen and (min-width: 481px) {
+  .share-button-container a.mobile {
+    display: none !important;
+  }
+}
+@media screen and (min-width: 541px) {
+  .settings-add-pub-modal-wrapper .container .add-recommending-pub-modal-container {
+    padding: 36px;
+    height: 680px;
+  }
+}
+@media screen and (min-width: 541px) {
+  .settings-add-pub-modal-wrapper .container .add-recommending-pub-modal-container .footer {
+    position: absolute;
+    bottom: 36px;
+    margin: 0px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .header-anchor-parent {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .post {
+    padding: 16px 0 0 0;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post .post-header .post-label {
+    margin-top: 8px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post .post-header .meta-author-wrap.alternative-meta .meta-right-column .post-meta {
+    margin-top: 6px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post .footer-facepile-container {
+    height: 64px;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post .post-footer.use-separators {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post .post-footer.next-prev {
+    height: 64px;
+    justify-content: space-between;
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post-contributor-footer .post-contributor-bio-table {
+    display: block;
+  }
+  .post-contributor-footer .post-contributor-bio-table-row {
+    display: flex;
+    flex-direction: row;
+  }
+  .post-contributor-footer .post-contributor-bio-userhead-cell,
+  .post-contributor-footer .post-contributor-bio-body-cell {
+    display: block;
+  }
+  .post-contributor-footer .post-contributor-bio-body-cell {
+    flex-grow: 1;
+  }
+  .post-contributor-footer .post-contributor-bio-body-table {
+    display: block;
+  }
+  .post-contributor-footer .post-contributor-bio-body-table-row {
+    display: block;
+  }
+  .post-contributor-footer .post-contributor-bio-copy-cell,
+  .post-contributor-footer .post-contributor-bio-controls-cell {
+    display: block;
+  }
+  .post-contributor-footer .post-contributor-bio-copy-cell {
+    margin: 0 0 16px 0;
+  }
+  .post-contributor-footer .post-contributor-bio-controls-cell {
+    width: auto;
+  }
+  .post-contributor-footer .post-contributor-bio-controls {
+    margin: auto;
+  }
+  .post-contributor-footer .post-contributor-bio-controls .button.primary {
+    width: 100%;
+  }
+  .post-contributor-footer .post-contributor-bio-text {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .post-silhouette {
+    padding: 32px 0;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post-silhouette .post-silhouette-title {
+    margin-top: 10.44225025px;
+    height: 120px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post-silhouette .post-silhouette-meta {
+    width: 75%;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post-silhouette .post-silhouette-meta.with-byline-image {
+    margin: 20px 0;
+  }
+}
+@media screen and (max-width: 650px) {
+  .use-theme-bg .post-meta.alternative-meta .post-meta-item,
+  .post-meta.alternative-meta .post-meta-item {
+    padding-right: 16px;
+  }
+}
+@media screen and (max-width: 370px) {
+  .use-theme-bg .post-meta.alternative-meta .post-meta-item,
+  .post-meta.alternative-meta .post-meta-item {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .use-theme-bg .post-meta.alternative-meta .post-meta-item.guest-author-publication,
+  .post-meta.alternative-meta .post-meta-item.guest-author-publication {
+    display: none;
+  }
+}
+@media screen and (max-width: 370px) {
+  .post-meta .post-meta-item .post-meta-button {
+    height: 36px !important;
+    /* important to override in-line height style on emails */
+  }
+  .post-meta .post-meta-item .post-meta-button .meta-button-label {
+    display: none;
+  }
+  .post-meta .post-meta-item .post-meta-button > svg {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 370px) {
+  .post-meta .post-meta-item {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post .floating-subscribe-button {
+    bottom: 20px;
+    right: 20px;
+  }
+}
+@media (max-width: 1024px) {
+  body .pullquote-align-left,
+  body .pullquote-align-right,
+  body .pullquote-align-wide,
+  body .pullquote-align-center {
+    float: none;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  body .markup table.image-wrapper img,
+  body .markup table.kindle-wrapper img {
+    max-width: 550px;
+  }
+}
+@media (min-width: 1024px) {
+  body:not(:has(#toc)) .captioned-image-container figure:has( > :is(a, div).image2-offset-left) {
+    margin-left: var(--image-offset-margin);
+  }
+  body:not(:has(#toc)) .captioned-image-container figure:has( > :is(a, div).image2-offset-right) {
+    margin-right: var(--image-offset-margin);
+  }
+}
+@media (min-width: 1300px) {
+  body .captioned-image-container figure:has( > :is(a, div).image2-offset-left) {
+    margin-left: var(--image-offset-margin);
+  }
+  body .captioned-image-container figure:has( > :is(a, div).image2-offset-right) {
+    margin-right: var(--image-offset-margin);
+  }
+}
+@media (max-width: 1024px) {
+  body {
+    /* Disable offset on mobile/tablet */
+  }
+  body .captioned-image-container figure:has( > :is(a, div).image2-align-left),
+  body .captioned-image-container figure:has( > :is(a, div).image2-align-right) {
+    float: none;
+    margin: 1em auto;
+    max-width: 100%;
+    width: auto;
+    padding: 0;
+  }
+  body .captioned-image-container figure:has( > :is(a, div).image2-align-left.thefp),
+  body .captioned-image-container figure:has( > :is(a, div).image2-align-right.thefp) {
+    margin: 1em auto;
+  }
+  body .captioned-image-container figure:has( > :is(a, div).image2-offset-left),
+  body .captioned-image-container figure:has( > :is(a, div).image2-offset-right) {
+    margin: 1em auto;
+  }
+  body .captioned-image-container figure:has( > :is(a, div).image2-align-left) .image2-inset,
+  body .captioned-image-container figure:has( > :is(a, div).image2-align-right) .image2-inset {
+    display: block;
+    justify-content: initial;
+  }
+}
+@media (max-width: 768px) {
+  body .markup div.sponsorship-campaign-embed {
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+  body .markup div.sponsorship-campaign-embed:first-child {
+    margin-top: 0px;
+  }
+}
+@media screen and (max-width: 650px) {
+  body .markup div.youtube-overlay,
+  body .markup div.vimeo-overlay {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 370px) {
+  body .markup div.tiktok-wrap {
+    width: calc(95vw - 32px);
+    height: calc((95vw - 32px - 2px) / 0.485714);
+  }
+}
+@media screen and (max-width: 650px) {
+  body .markup div.embedded-publication-wrap .embedded-publication.show-subscribe {
+    padding: 24px;
+  }
+}
+@media screen and (max-width: 650px) {
+  body .markup div.subscription-widget-wrap .subscription-widget.show-subscribe,
+  body .markup div.subscription-widget-wrap-editor .subscription-widget.show-subscribe,
+  body .markup div.captioned-button-wrap .subscription-widget.show-subscribe {
+    padding: 0px 24px;
+  }
+}
+@media screen and (max-width: 650px) {
+  body .markup div.subscription-widget-wrap .subscription-widget.show-subscribe .subscription-widget-subscribe .button,
+  body .markup div.subscription-widget-wrap-editor .subscription-widget.show-subscribe .subscription-widget-subscribe .button,
+  body .markup div.captioned-button-wrap .subscription-widget.show-subscribe .subscription-widget-subscribe .button {
+    padding: 10px 12px;
+    min-width: 110px;
+  }
+}
+@media (max-width: 650px) {
+  body .markup .twitter-embed,
+  body .markup .tweet {
+    padding: 12px;
+  }
+}
+@media (max-width: 650px) {
+  body .markup .twitter-embed .tweet-text,
+  body .markup .tweet .tweet-text {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+@media (max-width: 650px) {
+  body .markup .twitter-embed .tweet-photos-container.two,
+  body .markup .tweet .tweet-photos-container.two,
+  body .markup .twitter-embed .tweet-photos-container.three,
+  body .markup .tweet .tweet-photos-container.three,
+  body .markup .twitter-embed .tweet-photos-container.four,
+  body .markup .tweet .tweet-photos-container.four {
+    height: 200px;
+  }
+}
+@media (max-width: 650px) {
+  body .markup .twitter-embed a.expanded-link .expanded-link-img,
+  body .markup .tweet a.expanded-link .expanded-link-img {
+    max-height: 180px;
+  }
+}
+@media (max-width: 650px) {
+  body .markup .twitter-embed a.expanded-link .expanded-link-description,
+  body .markup .tweet a.expanded-link .expanded-link-description {
+    display: none;
+  }
+}
+@media screen and (max-width: 650px) {
+  body .markup .apple-podcast-container {
+    width: unset;
+  }
+}
+@media (max-width: 420px) {
+  body .markup .install-substack-app-embed img.install-substack-app-embed-img {
+    margin: 0 auto 16px auto;
+  }
+}
+@media (max-width: 420px) {
+  body .markup .install-substack-app-embed .install-substack-app-embed-text {
+    margin: 0 0 12px 0;
+    max-width: 100%;
+    width: auto;
+    text-align: center;
+  }
+}
+@media (max-width: 420px) {
+  body .markup .install-substack-app-embed .install-substack-app-embed-link {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 500px) {
+  body .header a.logo {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+  }
+}
+@media screen and (max-width: 420px) {
+  body .subscription-receipt table:first-of-type .subscription-amount .subscription-discount {
+    width: 72px !important;
+  }
+}
+@media screen and (min-width: 481px) {
+  body .share-button-container {
+    height: auto;
+  }
+}
+@media screen and (max-width: 480px) {
+  body .share-button-container .separator {
+    display: block !important;
+    margin: 0 !important;
+    height: 8px !important;
+    border-left: none !important;
+  }
+}
+@media screen and (max-width: 650px) {
+  .digest .item .post-meta-item.audience {
+    display: none;
+  }
+}
+@media screen and (min-width: 500px) {
+  .digest-publication .logo img {
+    width: 42px;
+    height: 42px;
+    border-radius: 8px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .comments-page .container .comment-list .collapsed-reply {
+    margin-left: calc(10 + 32px - 24px);
+  }
+}
+@media screen and (max-width: 650px) {
+  .comment > .comment-list {
+    padding-left: 24px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .finish-magic-login-modal .modal-content .container {
+    padding: 24px 0;
+  }
+}
+@media (max-width: 650px) {
+  .reader2-text-b3 {
+    line-height: 24px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .reader2-text-h4 {
+    line-height: 24px;
+  }
+}
+@media screen and (min-width: 541px) {
+  .user-profile-modal {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .subscribe-widget form.form .sideBySideWrap button.rightButton {
+    padding: 10px 12px;
+  }
+}
+@media screen and (min-width: 541px) {
+  .pub-icon:hover .logo-hover,
+  .feed-item-icon:hover .logo-hover {
+    display: block;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post-ufi.single-full-width-button .post-ufi-button-wrapper {
+    width: 100%;
+    padding: 16px;
+  }
+  .post-ufi.single-full-width-button .post-ufi-button-wrapper:empty {
+    display: none;
+  }
+  .post-ufi.single-full-width-button .post-ufi-button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  .file-embed-wrapper {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .file-embed-wrapper-editor {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .file-embed-wrapper-editor:active {
+    padding: 0;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .file-embed-button.wide,
+  .file-embed-error-button.wide {
+    display: none;
+  }
+}
+@media only screen and (min-width: 630px) {
+  .file-embed-button.narrow,
+  .file-embed-error-button.narrow {
+    display: none;
+  }
+}
+@media screen and (min-width: 541px) {
+  .audio-player-wrapper .audio-player {
+    min-width: 500px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .audio-player-wrapper .audio-player .audio-player-progress {
+    border-left-width: 16px;
+    border-right-width: 16px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .audio-player-wrapper .audio-player .audio-player-progress .audio-player-progress-bar .audio-player-progress-bar-popup {
+    top: -54px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .audio-player-wrapper-fancy .audio-player .audio-player-progress {
+    border-left-width: 16px;
+    border-right-width: 16px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .audio-player-wrapper-fancy .audio-player .audio-player-progress .audio-player-progress-bar .audio-player-progress-bar-popup {
+    top: -54px;
+  }
+}
+@media (min-width: 250px) {
+  .audio-player-wrapper-fancy .audio-player {
+    padding: 32px;
+  }
+  .audio-player-wrapper-fancy .audio-player .btn-group {
+    display: flex;
+  }
+  .audio-player-wrapper-fancy .audio-player .btn-group .button:last-of-type {
+    display: block;
+  }
+}
+@media (min-width: 300px) {
+  .audio-player-wrapper-fancy .audio-player .btn-group {
+    display: block;
+  }
+  .audio-player-wrapper-fancy .audio-player .btn-group .button:first-of-type {
+    display: block;
+  }
+}
+@media (min-width: 350px) {
+  .audio-player-wrapper-fancy .audio-player .audio-player-substack-logo {
+    display: block;
+  }
+  .audio-player-wrapper-fancy .audio-player .audio-player-title {
+    margin-top: 16px;
+  }
+  .audio-player-wrapper-fancy .audio-player .audio-player-hero-image-container {
+    padding-top: 15%;
+    width: 15%;
+    display: block;
+  }
+  .audio-player-wrapper-fancy .audio-player .btn-group .button:first-of-type {
+    display: block;
+  }
+  .audio-player-wrapper-fancy .audio-player .audio-player-substack-logo {
+    display: block;
+  }
+}
+@media (min-width: 350px) {
+  .audio-player-wrapper-fancy .audio-player .audio-player-hero-image-container {
+    padding-top: 25%;
+    width: 25%;
+    display: block;
+  }
+  .audio-player-wrapper-fancy .audio-player .btn-group {
+    display: flex;
+  }
+  .audio-player-wrapper-fancy .audio-player .btn-group .button:first-of-type {
+    display: block;
+  }
+}
+@media (min-width: 400px) {
+  .audio-player-wrapper-fancy .audio-player .audio-player-hero-image-container {
+    padding-top: 40%;
+    width: 40%;
+  }
+}
+@media (max-width: 400px) {
+  .audio-player-wrapper-fancy .audio-player .btn-group {
+    margin-top: 12px;
+  }
+  .audio-player-wrapper-fancy .audio-player .btn-group .button {
+    font-size: 13px;
+    padding: 6px 12px;
+    height: auto;
+    margin-top: 10px;
+  }
+}
+@media (min-width: 600px) {
+  .audio-player-wrapper-fancy .audio-player .audio-player-hero-image-container {
+    padding-top: 55%;
+    width: 55%;
+  }
+}
+@media (max-width: 650px) {
+  .poll-editor-modal {
+    min-width: calc(100% - 20px);
+  }
+}
+@media (max-width: 750px) {
+  .poll-embed .poll-anchor-target .poll-anchor-copy-button {
+    left: 8px;
+    top: 45px;
+  }
+}
+@media not all and (min-resolution: 0.001dpcm) {
+  @supports (-webkit-appearance: none) {
+    p a:not(.primary.button),
+    .post p:not(.button-wrapper) a:not(.primary.button),
+    .footnote a.footnote-anchor:not(.primary.button),
+    .thread-head .markup p:not(.button-wrapper) a:not(.primary.button) {
+      color: hsl(117.74436090225564, 100%, 40%);
+      text-decoration: none;
+    }
+    p a:not(.primary.button):hover,
+    .post p:not(.button-wrapper) a:not(.primary.button):hover,
+    .footnote a.footnote-anchor:not(.primary.button):hover,
+    .thread-head .markup p:not(.button-wrapper) a:not(.primary.button):hover {
+      text-decoration: underline;
+    }
+  }
+}</style></head><body class="email-body" style="font-kerning: auto;--image-offset-margin: -120px;"><img src="https://eotrx.substackcdn.com/o/3ccc2fe50de07ad5/p.gif?token=eyJtIjoiPDIwMjYxMDE2MjIxODA4LjMuMGViNmJlMGZmZjk0NGM2MkBtZy1kMC5zdWJzdGFjay5jb20-IiwidSI6MTA1MTg2NDcsInIiOiJiZW5vaXRjQGdtYWlsLmNvbSIsImQiOiJtZy1kMC5zdWJzdGFjay5jb20iLCJwIjoyMTg1MTg4NDMsInQiOiJuZXdzbGV0dGVyIiwiYSI6ImV2ZXJ5b25lIiwicyI6ODkxNjM4LCJjIjoicG9zdCIsImYiOnRydWUsInoiOiIiLCJwb3NpdGlvbiI6InRvcCIsImlhdCI6MTc5MjE4OTEwMSwiZXhwIjoxNzk0NzgxMTAxLCJpc3MiOiJwdWItMCIsInN1YiI6ImVvIn0.xvVH85wyHCVHmNmKmEZvl038-dS853bcUI2RqLC-kns" alt="" width="1" height="1" border="0" style="height:1px !important;width:1px !important;border-width:0 !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:0 !important;margin-left:0 !important;padding-top:0 !important;padding-bottom:0 !important;padding-right:0 !important;padding-left:0 !important;"/><div class="preview" style="display:none;font-size:1px;color:#333333;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;">Stop filming each other.</div><div class="preview" style="display:none;font-size:1px;color:#333333;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;">&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;</div><table class="email-body-container" role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td></td><td class="content" width="550"></td><td></td></tr><tr><td></td><td class="content" width="550" align="left"><div style="font-size: 16px;line-height: 26px;max-width: 550px;width: 100%;margin: 0 auto;overflow-wrap: break-word;"><table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="right" style="height:20px;"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="vertical-align:middle;"><span class="pencraft pc-reset reset-PDs18X pencraft color-secondary-B3TpYa font-text-a4IB2X size-13-yQMlsX" style="list-style: none;text-decoration: unset;color: rgb(119,119,119);margin: 0;font-size: 13px;line-height: 20px;font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';"><div class="pencraft pc-reset align-right-t4bsLb size-12-qKBnAQ reset-PDs18X" style="list-style: none;color: unset;text-align: right;font-size: 12px;line-height: 16px;text-decoration: unset;margin: 0;"><span class="pencraft pc-reset reset-PDs18X" translated="" style="list-style: none;color: unset;text-decoration: unset;margin: 0;">Forwarded this email? <a class="pencraft pc-reset decoration-underline-JhbQFe reset-PDs18X" href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly93d3cuYnVnZXllZGFuZHNoYW1lbGVzcy5jb20vc3Vic2NyaWJlP3V0bV9zb3VyY2U9ZW1haWwmdXRtX2NhbXBhaWduPWVtYWlsLXN1YnNjcmliZSZyPTY5ZzhuJm5leHQ9aHR0cHMlM0ElMkYlMkZ3d3cuYnVnZXllZGFuZHNoYW1lbGVzcy5jb20lMkZwJTJGdGhlLXBhcnRpY2lwYXRvcnktcGFub3B0aWNvbiIsInAiOjIxODUxODg0MywicyI6ODkxNjM4LCJmIjp0cnVlLCJ1IjoxMDUxODY0NywiaWF0IjoxNzkyMTg5MTAxLCJleHAiOjIxMDc3NjUxMDEsImlzcyI6InB1Yi0wIiwic3ViIjoibGluay1yZWRpcmVjdCJ9.pzPfZbx7RX71kNdDyqBiDoh2ROQcv6_6emyBt2QAlkM?" style="list-style: none;color: unset;text-decoration: unset;margin: 0;-webkit-text-decoration-line: underline;text-decoration-line: underline;">Subscribe here</a> for more</span></div></span></td></tr></tbody></table></td></tr></tbody></table><div class="post typography" dir="auto" style="--image-offset-margin: -120px;padding: 32px 0 0 0;font-size: 16px;line-height: 26px;"><div class="post-header" role="region" aria-label="Post header" style="font-size: 16px;line-height: 26px;"><h1 class="post-title published title-X77sOw" dir="auto" style="direction: auto;text-align: start;unicode-bidi: isolate;color: rgb(54,55,55);overflow-wrap: anywhere;word-break: normal;font-family: 'Roboto Mono',monospace;font-weight: 700;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: antialiased;-webkit-appearance: optimizelegibility;-moz-appearance: optimizelegibility;appearance: optimizelegibility;margin: 0;line-height: 36px;font-size: 32px;"><a href="https://substack.com/app-link/post?publication_id=891638&post_id=218518843&utm_source=post-email-title&utm_campaign=email-post-title&isFreemail=true&r=69g8n&token=eyJ1c2VyX2lkIjoxMDUxODY0NywicG9zdF9pZCI6MjE4NTE4ODQzLCJpYXQiOjE3OTIxODkxMDEsImV4cCI6MTc5NDc4MTEwMSwiaXNzIjoicHViLTg5MTYzOCIsInN1YiI6InBvc3QtcmVhY3Rpb24ifQ.EsctpipErj-G6sqPHsx1MctxTsnivx1YxMq4vNUcP1s" style="color: rgb(54,55,55);text-decoration: none;">The Participatory Panopticon</a></h1><h3 class="subtitle subtitle-HEEcLo" dir="auto" style="direction: auto;text-align: start;unicode-bidi: isolate;font-family: 'SF Pro Display',-apple-system-headline,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight: normal;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: antialiased;-webkit-appearance: optimizelegibility;-moz-appearance: optimizelegibility;appearance: optimizelegibility;margin: 4px 0 0;color: #777777;overflow-wrap: anywhere;word-break: normal;line-height: 24px;font-size: 18px;margin-top: 12px;">Stop filming each other. </h3><table class="post-meta" role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="margin: 1em 0;height: 20px;align-items: center;"><tbody><tr><td><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="vertical-align:middle;"><div class="pencraft pc-reset color-primary-ECDxTd line-height-20-_MEacI font-meta-Wq5ZQP size-11-gJkq5q weight-medium-Hv9lSX transform-uppercase-LYgH6s reset-PDs18X meta-SjvJkP custom-css-email-post-author" style="list-style: none;font-size: 11px;line-height: 20px;text-decoration: unset;color: rgb(54,55,55);margin: 0;font-family: 'SF Compact',-apple-system,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight: 500;text-transform: uppercase;letter-spacing: .2px;"><a class="pencraft pc-reset color-primary-ECDxTd line-height-20-_MEacI font-meta-Wq5ZQP size-11-gJkq5q weight-medium-Hv9lSX transform-uppercase-LYgH6s reset-PDs18X meta-SjvJkP" style="list-style: none;color: rgb(54,55,55);margin: 0;font-size: 11px;line-height: 20px;font-family: 'SF Compact',-apple-system,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight: 500;text-transform: uppercase;letter-spacing: .2px;text-decoration: none" href="https://substack.com/@justinling">Justin Ling</a></div></td></tr></tbody></table></td></tr><tr><td><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="vertical-align:middle;"><div class="pencraft pc-reset color-secondary-B3TpYa line-height-20-_MEacI font-meta-Wq5ZQP size-11-gJkq5q weight-medium-Hv9lSX transform-uppercase-LYgH6s reset-PDs18X meta-SjvJkP" style="list-style: none;font-size: 11px;line-height: 20px;text-decoration: unset;color: rgb(119,119,119);margin: 0;font-family: 'SF Compact',-apple-system,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight: 500;text-transform: uppercase;letter-spacing: .2px;"><time datetime="2026-10-16T22:18:08.310Z">Oct 16</time></div></td></tr></tbody></table></td></tr></tbody></table></td><td align="right"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="vertical-align:middle;"><a href="https://substack.com/@justinling"><img class="custom-css-email-avatar avatar-QIQ5yR" src="https://substackcdn.com/image/fetch/$s_!s_f_!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fdc7a3d65-e9ee-4ce3-9c0d-3f00545d81d7_3646x3646.jpeg" style="box-sizing: border-box;max-width: 550px;border: none;vertical-align: middle;width: 40px;height: 40px;min-width: 40px;min-height: 40px;object-fit: cover;margin: 0px;display: inline;border-radius: 50%" width="40" height="40"></a></td></tr></tbody></table></td></tr></tbody></table><table class="email-ufi-2-top" role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="border-top: 1px solid rgb(0,0,0,.1);border-bottom: 1px solid rgb(0,0,0,.1);min-width: 100%;"><tbody><tr height="16"><td height="16" style="font-size:0px;line-height:0;">&nbsp;</td></tr><tr><td><table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="vertical-align:middle;"><table role="presentation" width="38" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="center"><a class="email-icon-button" href="https://substack.com/app-link/post?publication_id=891638&post_id=218518843&utm_source=substack&isFreemail=true&submitLike=true&token=eyJ1c2VyX2lkIjoxMDUxODY0NywicG9zdF9pZCI6MjE4NTE4ODQzLCJyZWFjdGlvbiI6IuKdpCIsImlhdCI6MTc5MjE4OTEwMSwiZXhwIjoxNzk0NzgxMTAxLCJpc3MiOiJwdWItODkxNjM4Iiwic3ViIjoicmVhY3Rpb24ifQ.N9y-bhZy2jb2yMb3FNPFDzfrqw_q9b8bGfCqKHsTWag&utm_medium=email&utm_campaign=email-reaction&r=69g8n" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;font-weight: 500;border: 1px solid rgb(0,0,0,.1);border-radius: 9999px;text-transform: uppercase;font-size: 12px;line-height: 1;padding: 9px 0;text-decoration: none;color: rgb(119,119,119);min-width: 38px;box-sizing: border-box;width: 38px"><img class="icon" src="https://substackcdn.com/image/fetch/$s_!PeVs!,w_36,c_scale,f_png,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Ficon%2FLucideHeart%3Fv%3D4%26height%3D36%26fill%3Dnone%26stroke%3D%2523808080%26strokeWidth%3D2" width="18" height="18" style="border: none;vertical-align: middle;max-width: 18px" alt=""></a></td></tr></tbody></table></td><td width="8" style="min-width:8px;"></td><td style="vertical-align:middle;"><table role="presentation" width="38" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="center"><a class="email-icon-button" href="https://substack.com/app-link/post?publication_id=891638&post_id=218518843&utm_source=substack&utm_medium=email&isFreemail=true&comments=true&token=eyJ1c2VyX2lkIjoxMDUxODY0NywicG9zdF9pZCI6MjE4NTE4ODQzLCJpYXQiOjE3OTIxODkxMDEsImV4cCI6MTc5NDc4MTEwMSwiaXNzIjoicHViLTg5MTYzOCIsInN1YiI6InBvc3QtcmVhY3Rpb24ifQ.EsctpipErj-G6sqPHsx1MctxTsnivx1YxMq4vNUcP1s&r=69g8n&utm_campaign=email-half-magic-comments&action=post-comment&utm_source=substack&utm_medium=email" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;font-weight: 500;border: 1px solid rgb(0,0,0,.1);border-radius: 9999px;text-transform: uppercase;font-size: 12px;line-height: 1;padding: 9px 0;text-decoration: none;color: rgb(119,119,119);min-width: 38px;box-sizing: border-box;width: 38px"><img class="icon" src="https://substackcdn.com/image/fetch/$s_!x1tS!,w_36,c_scale,f_png,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Ficon%2FLucideComments%3Fv%3D4%26height%3D36%26fill%3Dnone%26stroke%3D%2523808080%26strokeWidth%3D2" width="18" height="18" style="border: none;vertical-align: middle;max-width: 18px" alt=""></a></td></tr></tbody></table></td><td width="8" style="min-width:8px;"></td><td style="vertical-align:middle;"><table role="presentation" width="38" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="center"><a class="email-icon-button" href="https://substack.com/app-link/post?publication_id=891638&post_id=218518843&utm_source=substack&utm_medium=email&utm_content=share&utm_campaign=email-share&action=share&triggerShare=true&isFreemail=true&r=69g8n&token=eyJ1c2VyX2lkIjoxMDUxODY0NywicG9zdF9pZCI6MjE4NTE4ODQzLCJpYXQiOjE3OTIxODkxMDEsImV4cCI6MTc5NDc4MTEwMSwiaXNzIjoicHViLTg5MTYzOCIsInN1YiI6InBvc3QtcmVhY3Rpb24ifQ.EsctpipErj-G6sqPHsx1MctxTsnivx1YxMq4vNUcP1s" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;font-weight: 500;border: 1px solid rgb(0,0,0,.1);border-radius: 9999px;text-transform: uppercase;font-size: 12px;line-height: 1;padding: 9px 0;text-decoration: none;color: rgb(119,119,119);min-width: 38px;box-sizing: border-box;width: 38px"><img class="icon" src="https://substackcdn.com/image/fetch/$s_!_L14!,w_36,c_scale,f_png,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Ficon%2FLucideShare2%3Fv%3D4%26height%3D36%26fill%3Dnone%26stroke%3D%2523808080%26strokeWidth%3D2" width="18" height="18" style="border: none;vertical-align: middle;max-width: 18px" alt=""></a></td></tr></tbody></table></td><td width="8" style="min-width:8px;"></td><td style="vertical-align:middle;"><table role="presentation" width="38" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="center"><a class="email-icon-button" href="https://open.substack.com/pub/justinling/p/the-participatory-panopticon?utm_source=substack&utm_medium=email&utm_campaign=email-restack-comment&action=restack-comment&r=69g8n&token=eyJ1c2VyX2lkIjoxMDUxODY0NywicG9zdF9pZCI6MjE4NTE4ODQzLCJpYXQiOjE3OTIxODkxMDEsImV4cCI6MTc5NDc4MTEwMSwiaXNzIjoicHViLTg5MTYzOCIsInN1YiI6InBvc3QtcmVhY3Rpb24ifQ.EsctpipErj-G6sqPHsx1MctxTsnivx1YxMq4vNUcP1s&utm_source=substack&utm_medium=email" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;font-weight: 500;border: 1px solid rgb(0,0,0,.1);border-radius: 9999px;text-transform: uppercase;font-size: 12px;line-height: 1;padding: 9px 0;text-decoration: none;color: rgb(119,119,119);min-width: 38px;box-sizing: border-box;width: 38px"><img class="icon" src="https://substackcdn.com/image/fetch/$s_!ubXF!,w_36,c_scale,f_png,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Ficon%2Fnotes__NoteRestackIcon%3Fv%3D4%26height%3D36%26fill%3Dnone%26stroke%3D%2523808080%26strokeWidth%3D2%26strokeLinecap%3Dround%26strokeLinejoin%3Dround" width="18" height="18" alt="" style="max-width: 550px;border: none !important;vertical-align: middle;"></a></td></tr></tbody></table></td></tr></tbody></table></td><td align="right"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="vertical-align:middle;"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="center"><a class="email-button-outline" href="https://open.substack.com/pub/justinling/p/the-participatory-panopticon?utm_source=email&redirect=app-store-no-desktop&inbox=true&utm_campaign=email-read-in-app" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;font-weight: 500;border: 1px solid rgb(0,0,0,.1);border-radius: 9999px;text-transform: uppercase;font-size: 12px;line-height: 12px;padding: 9px 14px;text-decoration: none;color: rgb(119,119,119);"><div class="email-button-spacer" style="font-size: 16px;line-height: 26px;display: inline-block;vertical-align: middle;max-width: 0;min-height: 18px;"></div><span class="email-button-text" style="vertical-align: middle;margin-right: 4px">READ IN APP</span><img class="icon text-icon" src="https://substackcdn.com/image/fetch/$s_!ET-_!,w_36,c_scale,f_png,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Ficon%2FLucideArrowUpRight%3Fv%3D4%26height%3D36%26fill%3Dnone%26stroke%3D%2523808080%26strokeWidth%3D2" width="18" height="18" style="min-width: 18px;min-height: 18px;border: none;vertical-align: middle;margin-right: 0;margin-left: 0;max-width: 18px" alt=""></a></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></td></tr><tr height="16"><td height="16" style="font-size:0px;line-height:0;">&nbsp;</td></tr></tbody></table></div></div><div class="post typography" dir="auto" style="--image-offset-margin: -120px;padding: 32px 0 0 0;font-size: 16px;line-height: 26px;"><div class="body markup" dir="auto" style="text-align: initial;font-size: 16px;line-height: 26px;width: 100%;margin-bottom: 16px;hanging-punctuation: allow-end;overflow-wrap: anywhere;word-break: break-word;font-family: 'Roboto Slab',sans-serif;font-weight: 400;"><div class="captioned-image-container-static" style="font-size: 16px;line-height: 26px;margin: 32px auto;margin-top: 0;"><figure style="width: 100%;margin: 0 auto;"><table class="image-wrapper" width="100%" border="0" cellspacing="0" cellpadding="0" data-component-name="Image2ToDOMStatic" style="mso-padding-alt: 1em 0 1.6em;"><tbody><tr><td style="text-align: center;"></td><td class="content" align="left" width="1456" style="text-align: center;"><a class="image-link" target="_blank" href="https://substack.com/redirect/fc96a60d-e996-475b-a1c3-c180c3bad346?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="position: relative;text-decoration: underline;display: block;"><img class="wide-image" data-attrs="{&quot;src&quot;:&quot;https://substack-post-media.s3.amazonaws.com/public/images/8b9ac6ee-22f4-4ef3-bd56-8ac0de7dc68c_2368x3200.jpeg&quot;,&quot;srcNoWatermark&quot;:null,&quot;fullscreen&quot;:null,&quot;imageSize&quot;:null,&quot;height&quot;:1968,&quot;width&quot;:1456,&quot;resizeWidth&quot;:null,&quot;bytes&quot;:889022,&quot;alt&quot;:null,&quot;title&quot;:null,&quot;type&quot;:&quot;image/jpeg&quot;,&quot;href&quot;:null,&quot;belowTheFold&quot;:false,&quot;topImage&quot;:true,&quot;internalRedirect&quot;:&quot;https://www.bugeyedandshameless.com/i/218518843?img=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8b9ac6ee-22f4-4ef3-bd56-8ac0de7dc68c_2368x3200.jpeg&quot;,&quot;isProcessing&quot;:false,&quot;align&quot;:null,&quot;offset&quot;:false}" alt="" width="550" height="743.4065934065934" src="https://substackcdn.com/image/fetch/$s_!BLB6!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8b9ac6ee-22f4-4ef3-bd56-8ac0de7dc68c_2368x3200.jpeg" style="border: none !important;vertical-align: middle;display: block;-ms-interpolation-mode: bicubic;height: auto;margin-bottom: 0;width: auto !important;max-width: 100% !important;margin: 0 auto;"></a></td><td style="text-align: center;"></td></tr></tbody></table></figure></div><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;">At the turn of the 19th century, Russia was a bit of a mess. Its laws were outdated, its legal system was an omnishambles, and it had no central system of prisons.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;"><span>It was this Russia that Jeremy Bentham first visited, when he spent more than a year visiting his brother in White Russia (what is now Belarus). His brother was running a work camp, an enormous estate on the Dnieper River, staffed with a massive force of laborers, local and imported &#8212; and they were an annoying bunch to manage.</span><span class="footnote-anchor-email" data-component-name="FootnoteAnchorToDOMStatic" style="font-size: 20px;">&#185;</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;"><span>Samuel Bentham had come up with an infrastructural solution. He would rebuild this work camp, building a huge inspection tower in the middle, giving the </span><em>boyars</em><span> power to surveil all the serfs. The managers could see the laborers, but the laborers would not be able to see the managers. It would multiply the efficacy of its inspectors by obscuring where they were, and what they were observing.</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;">The camp was never built. The owner of the estate, Prince Grigory Pot&#235;mkin, sold off the land. Samuel was dispatched to a naval base in Crimea. But Jeremy Bentham became obsessed with this idea: The &#8220;inspection house,&#8221; he called it.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;"><span>In Russia, Bentham saw a legal laboratory. It was on this blank slate he could design new ways of state control. He would turn this </span><em>tabula rasa</em><span> into a utopia, a model for the rest of the world to follow. He would prove what worked, and governments would, from here on out, simply do what worked. He would alleviate the need to ship inmates to Botany Bay, fix the bureaucratic rot back in England, and even overcome the revolutionary madness in France.</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;"><span>The main value of any institution or initiative, he believed, ought to be &#8220;to promote the happiness of society.&#8221; We could score the value of any such effort on that metric alone, peering at it &#8220;as an oracle which if properly consulted would afford the only true solution that could be given to every question of right and wrong.&#8221; It would come to be known as utilitarianism.</span><span class="footnote-anchor-email" data-component-name="FootnoteAnchorToDOMStatic" style="font-size: 20px;">&#178;</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;">But the real use of the inspection house wasn&#8217;t to manage free laborers, Bentham thought. It was as a prison. It would be a circular building, empty in the middle, with cells on each floor, facing the courtyard in the center. There would be a tall inspection tower, as high as the building itself: This is where the guards would peer out, into the grounds and cells.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;">&#8220;The more constantly the persons to be inspected are under the eyes of the persons who should inspect them,&#8221; he wrote, &#8220;the more perfectly will the purpose of the establishment have been attained.&#8221;</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;">If he could just prove the utility of such a prison, who knows what other uses it could have &#8212;  schools, hospitals, asylums, workhouses, and so on.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;">He writes in the preface: &#8220;Morals reformed &#8212; health preserved &#8212; industry invigorated &#8212; instruction diffused &#8212; public burdens lightened &#8212; economy seated, as it were, upon a rock &#8212; the gordian knot of the Poor-Laws not cut, but untied &#8212; all by a simple idea in Architecture!&#8221;</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;">He devised a new name for this inspection house: The Panopticon.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;">Bentham would die never having seen his concept fully realized. The idea would live on, and some Panopticon prisons would eventually be built &#8212; though they did not possess some magical ability to reform. </p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;">But the significance of the Panopticon is not in its use as a prison, but in its employment as a metaphor.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;"><span>&#8220;The major effect of the Panopticon,&#8221; writes philosopher Michel Foucault, was &#8220;to induce in the inmate a state of conscious and permanent visibility that assures the automatic functioning of power.&#8221;</span><span class="footnote-anchor-email" data-component-name="FootnoteAnchorToDOMStatic" style="font-size: 20px;">&#179;</span><span> </span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;"><span>Bentham had been obsessed with utility &#8212; if a Panopticon could stop prison breaks and fighting between inmates, what reason could we have </span><em>not</em><span> to do it? But Foucault wanted to understand the very nature of power and social control. He wanted to know why, not how, such a prison would work.</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;">If surveillance is the norm, Foucault reasoned, then the power it represents should never have to be wielded. Fear of this giant eye should be so powerful that the inmates themselves become effective instruments of the power behind it. Knowing that all rule-breaking will be seen, and will be met with force, the inmates will not only abide by the rules but police each other, not wanting to face collective punishment. &#8220;It automatizes and disindividualizes power.&#8221;</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;">Drifting even further from its actual utility, Foucault realized the true potential of such a building. &#8220;It could be used as a machine to carry out experiments, to alter behaviour, to train or correct individuals.&#8221; It wasn&#8217;t just the inmates who were being tested. How the guards and administrators chose to wield this power would make them part of the experiment, too.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;">&#8220;The Panopticon functions as a kind of laboratory of power,&#8221; Foucault writes.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;">This was a revolutionary amount of insight into the behavior of a statistically significant number of people, who had an element of freedom &#8212; or the illusion of it &#8212; but would chose to limit it proactively, for fear of exercising it too readily. This was &#8220;coercive individualization,&#8221; the forced &#8220;termination of any relation that is not supervised by authority.&#8221;</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;">Those experiments were all supported and tolerated, because the lab mice were prisoners. But a fact that Bentham had stumbled upon, what fascinated Foucault so much, was that the act of surveilling someone was not a passive action. It was active. And the act of constant surveillance would have consequences far beyond what either man could understand. </p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;"><span>&#8220;We are being watched as well,&#8221; wrote Tim Maly and Emily Horne in their 2014 book revisiting the inspection house. &#8220;This is a side effect of the proper functioning of our phones.&#8221;</span><span class="footnote-anchor-email" data-component-name="FootnoteAnchorToDOMStatic" style="font-size: 20px;">&#8308;</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;">They dubbed the book an &#8220;impertinent field guide to modern surveillance.&#8221; Bentham had developed the idea at the onset of the industrial revolution, Foucault updated it at the birth of the age of information, now Maly and Horne wanted us to understand how the Panopticon had become digital.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;">&#8220;It&#8217;s an industrial institution, created for factories, redesigned for incarceration and then adapted for everything,&#8221; they wrote. &#8220;We watch, we are watched and we watch each other.&#8221; If the pair sounded slightly paranoid then, they have only been vindicated since.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;">Bentham couldn&#8217;t have predicted this shift, but he did make sure to stick around to participate in its effects.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;">Across the internet, there are plenty of photos &#8212; shot on cellphones &#8212; of his body, sat in a wicker chair, his cane leaning on his leg, as though he is about to get up and greet you. At 278 years old, Bentham&#8217;s body remains in pretty good shape.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;">In Bentham&#8217;s will, he provided detailed instructions on what his friends ought to do with his body. &#8220;The skeleton he will cause to be put together in such a manner that the whole figure may be seated in a chair usually occupied by me when living, in the attitude in which I am sitting while engaged in thought in the course of time occupied in writing.&#8221;</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;"><span>It would be the opposite of his Panopticon. He called it an &#8220;</span><a href="https://substack.com/redirect/1c806596-b7f7-463d-91af-f69f864bc91b?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: hsl(117.74436090225564, 100%, 40%);text-decoration: none;">Auto-Icon.</a><span>&#8221;</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;">Bentham&#8217;s skeleton would be clad in one of his suits and placed in a large wooden box with a window on one side: Like a macabre phone booth. &#8220;From time to time,&#8221; he instructed, the box should be wheeled out to greet company who have gathered &#8220;on some day or days of the year for the purpose of commemorating the founder of the greatest happiness system of morals.&#8221; (He&#8217;s referring to himself, there.)</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;"><span>Bentham&#8217;s head was, eventually, replaced with a wax replica &#8212; </span><a href="https://substack.com/redirect/0116e075-f169-4304-801f-a5160da23092?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: hsl(117.74436090225564, 100%, 40%);text-decoration: none;">his real head is still preserved</a><span>, albeit elsewhere, its eerie eyeballs still capable of following you around the room. To the end, Bentham wanted to see and be seen. Surveil and be surveilled.</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;"><span>This week, on a very special </span><strong>Bug-eyed and Shameless</strong><span>: A polemic on why it&#8217;s time to exit the Panopticon.</span></p><div style="font-size: 16px;line-height: 26px;"><hr style="margin: 32px 0;padding: 0;height: 1px;background: rgb(0,0,0,.1);border: none;"></div><div class="subscription-widget-wrap" style="font-size: 16px;line-height: 26px;"><div class="subscription-widget show-subscribe" style="font-size: 16px;direction: ltr !important;font-weight: 400;text-decoration: none;font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';color: #363737;line-height: 1.5;max-width: 560px;margin: 24px auto;align-items: flex-start;display: block;text-align: center;padding: 0px 32px;"><div class="preamble" style="margin-top: 16px;font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-size: 18px;max-width: 384px;width: fit-content;line-height: 22px;display: flex;align-items: center;text-align: center;font-weight: 400;margin-left: auto;margin-right: auto;"><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;">Subscribe now to get a bi-monthly TikTok dance trend</p></div><div class="subscribe-widget is-signed-up" data-component-name="SubscribeWidget" style="margin: 0 0 1em;direction: ltr;font-size: 16px;line-height: 26px;"><div class="pencraft pc-reset button-wrapper" style="text-decoration: unset;list-style: none;font-size: 16px;line-height: 26px;text-align: center;cursor: pointer;border-radius: 4px;"><a class="button subscribe-btn primary" href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly93d3cuYnVnZXllZGFuZHNoYW1lbGVzcy5jb20vc3Vic2NyaWJlP3V0bV9zb3VyY2U9cG9zdCZ1dG1fY2FtcGFpZ249ZW1haWwtY2hlY2tvdXQmbmV4dD1odHRwcyUzQSUyRiUyRnd3dy5idWdleWVkYW5kc2hhbWVsZXNzLmNvbSUyRnAlMkZ0aGUtcGFydGljaXBhdG9yeS1wYW5vcHRpY29uJnI9NjlnOG4mdG9rZW49ZXlKMWMyVnlYMmxrSWpveE1EVXhPRFkwTnl3aWFXRjBJam94TnpreU1UZzVNVEF4TENKbGVIQWlPakUzT1RRM09ERXhNREVzSW1semN5STZJbkIxWWkwNE9URTJNemdpTENKemRXSWlPaUpqYUdWamEyOTFkQ0o5Lk9CdFhHLTVKTlJIMEZpU1QtcFdCSXI2R04tVWVVUmlHNmJvbUZhLXZxUWciLCJwIjoyMTg1MTg4NDMsInMiOjg5MTYzOCwiZiI6dHJ1ZSwidSI6MTA1MTg2NDcsImlhdCI6MTc5MjE4OTEwMSwiZXhwIjoyMTA3NzY1MTAxLCJpc3MiOiJwdWItMCIsInN1YiI6ImxpbmstcmVkaXJlY3QifQ.jTNQ3KMFb0PFm42Yk2TjQoPAWbVH95Cecrhsn773JQo?&utm_medium=email&utm_source=subscribe-widget-preamble&utm_content=218518843" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;box-sizing: border-box;cursor: pointer;border: none;border-radius: 8px;font-size: 14px;line-height: 20px;font-weight: 600;text-align: center;opacity: 1;outline: none;white-space: nowrap;text-decoration: none !important;margin: 0 auto;background-color: #7FFF7A;color: #363737 !important;padding: 12px 20px;height: auto;"><span style="color: #363737;text-decoration: none;">Upgrade to paid</span></a></div></div></div></div><div style="font-size: 16px;line-height: 26px;"><hr style="margin: 32px 0;padding: 0;height: 1px;background: rgb(0,0,0,.1);border: none;"></div><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;">&#8220;Can you repeat that, ma&#8217;am?&#8221; the voice behind the camera says, panning up from the woman&#8217;s sandals to her face.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;">&#8220;I&#8217;m sorry, I didn&#8217;t say anything,&#8221; she says.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;"><span>The voice, whose POV we&#8217;ve stepped into, is incredulous. &#8220;</span><em>Now</em><span> you didn&#8217;t say anything,&#8221; she asserts, &#8220;because you know you&#8217;re being recorded.&#8221;</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;"><span>The woman we&#8217;re staring at, clearly putting on a bit of an </span><em>aw, shucks</em><span> routine asks a question I think about a lot: &#8220;Why do you feel you have to record everyone?&#8221;</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;"><span>The voice provides an unsatisfying answer: &#8220;Why do </span><em>you</em><span> feel like you had to tell me to go home?&#8221; the voice says. &#8220;You racist piece of shit.&#8221;</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;">&#8220;Excuse me?&#8221; the woman asks, her husband&#8217;s arm now draped around her neck, leading her through the doors of the diner. Through our vantage point, we push through the doors after the woman. &#8220;There is no excuse for you &#8212; you are a racist&#8221; our narrator declares.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;"><span>The confrontation continues outside, through increasingly-messy insults. &#8220;You have no right to be in this country,&#8221; the woman tells the voice behind the camera. The voice calls her sick. The woman says &#8220;October 7 occurred because of </span><em>you.</em><span>&#8221; The camera continues following her, as things get less and less scrutable. &#8220;October 7! 9/11!&#8221; The husband tries, in vain, to get the voice holding the camera to leave. She refuses.</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;">The interaction finally ends, after nearly two minutes, with the woman being stuffed into the passenger seat of her car by her husband.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;">Watching this video elicits a certain sense of satisfaction, a dopamine rush of karmic justice. &#8220;What a fucking awful human,&#8221; one Reddit user wrote. &#8220;She wouldn&#8217;t repeat it at first but then couldn&#8217;t help but show her true colors. Just gross!&#8221; Another chimed in. &#8220;Go off girl, this is how bigots need to be dealt with,&#8221; another replied. It was a hit on r/PublicFreakout and r/IAmTheMainCharacter, subreddits devoted to social video of people behaving badly &#8212; of which there is plenty.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;">The video was ripped and reposted on platform after platform. On Instagram, it was shared by thekaren215: &#8220;Your daily dose of entitled outbursts and public freakouts!&#8221; They affixed their watermark: A cartoon of a sour-looking woman with a blond bob, partly covered by a speech bubble screaming: &#8220;SHUT UP, KAREN.&#8221; It was uploaded to YouTube, by Public Freakouts Unleashed. (Not to be confused with Public Freakout Videos, the more popular channel.) There is no shortage of freakouts to disassociate to. &#8220;PREPARE TO GET ASSAULTED | Top 15 NEW Freakouts,&#8221; boasts one video.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;">Here on Substack, the video has been shared &#8212; with the watermark AMERICANS AGAINST ICE &#8212; with a comment extolling fellow activists: &#8220;Watch and share so this doesn&#8217;t get buried!&#8221;</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;">The original video was posted by Sumer Mobarak, a content creator, entrepreneur, and pro-Palestinian activist. She was, at least according to her initial post, the victim of a racist remark. But it fits well into the kind of videos that Mobarak trades in every day. Scroll through her social media feeds and it is a dizzying carousel of short-form video: Images of protesters interrupting events to get themselves arrested; clips of activists conducting aggressive walk-and-talk interviews with politicians; images of dead civilians in Gaza. </p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;">One video on Mobarak&#8217;s Instagram account is a video of Dublin&#8217;s bustling airport. The camera turns to a crowd of travelers whose flight to Tel Aviv had just been delayed. The voice behind the camera, whose perspective we have been thrust into, suddenly, loudly, apologizes for the delay. &#8220;But it is nothing in comparison to what is happening in Palestine. The genocide that you guys are causing.&#8221; After trading some screamed insults with the passengers &#8212; regular people, at whom she screams &#8220;zionism is racism&#8221; &#8212; the instigator explains to the camera that &#8220;the majority of these people are not just people, they&#8217;re actually IDF soldiers.&#8221;</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;"><span>The video is posted with a bright red banner: &#8220;MUST WATCH.&#8221; The description of the video celebrates the freakout: &#8220;A true legend for confronting all those sad!sts!!&#8221; (They censored the word </span><em>sadist</em><span> for fear of algorithmic punishment.)</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;">That video is evidence that the pipeline of public freakouts clearly can&#8217;t sustain demand. People have to generate their own freakouts. And production is ramping up.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;"><span>So popular is the genre of airport freakouts that influencers have begun staging them in a replica airplane, with a cabin full of actors. (Comedian Chris Grace got so irked at this deluge of fake airplane freakouts that </span><a href="https://substack.com/redirect/8b87fc9b-6de5-4c35-9e23-2dd2279976b4?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: hsl(117.74436090225564, 100%, 40%);text-decoration: none;">he put together a supercut of the fake ones.</a><span>)</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;">Or take Jason Gutterman &#8212; a.k.a. Amagansett Press (please!) </p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;">Gutterman is a self-styled &#8220;free-speech auditor.&#8221; That title, at one time, described citizen journalists who took it upon themselves to film police and law enforcement in the course of their duty, for no reason in particular &#8212; in large part because American law enforcement had a nasty habit of attacking and arresting those who filmed their work. In that sense, these auditors were literally testing their ability to exercise their First Amendment rights. Where police did infringe their right to film in public, the auditors would take them to court. Gutterman used to do that, until he discovered where the real money is.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;">Gutterman is a content creator who films individuals going about their business &#8212; shopping, on the sidewalk, going to a yoga class, and so on. When they object, Gutterman gets confrontational. When they, in turn, get upset, it becomes fodder for Gutterman&#8217;s YouTube channel. (If they get physical, Gutterman pepper-sprays them and calls the police.)</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;">&#8220;Do you understand how like weird this might be for people?&#8221; A woman tells Gutterman, stepping out of her yoga studio at which he&#8217;s trained his camera.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;">Gutterman, standing a few feet outside the door, filming everyone who walks in, doesn&#8217;t. &#8220;Like, not at all.&#8221; It&#8217;s public property, he keeps telling her. </p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;">&#8220;You&#8217;re making us feel uncomfortable,&#8221; she tells him. </p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;">&#8220;I would suggest that you&#8217;re making yourself feel uncomfortable,&#8221; he says.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;">The outcome? &#8220;AGGRESSIVE &#8216;HOT YOGA&#8217; MOMS GET WRECKED !!&#8221; The video has more than 500,000 views &#8212; though it has been cut up and reshared so many times, it has certainly been seen multiples of that.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;"><span>But renting a fake airplane is expensive and filming outside a yoga studio is time-consuming. AI is much cheaper, faster, and more productive. Clips of fistfights, verbal altercations, and people acting strangely are edited and narrated by AI-generated voices, reposted with </span><a href="https://substack.com/redirect/2fed5a91-d19b-4561-b8a2-2170b1b2faca?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: hsl(117.74436090225564, 100%, 40%);text-decoration: none;">an AI-generated humanoid in the corner</a><span> providing live reactions, and sometimes whole-cloth invented. Videos of rainbow-haired trans people demanding access to the woman&#8217;s washroom as burly men in MAKE AMERICA GREAT AGAIN hats stand guard went viral a few months back &#8212; video after video of the same scene even gives the impression that this is a mass epidemic &#8212; despite the fact that they are </span><a href="https://substack.com/redirect/2c0c69ae-d278-4fb1-b8b4-329327ab818b?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: hsl(117.74436090225564, 100%, 40%);text-decoration: none;">entirely AI-generated.</a><span> Facebook, in particular, trades in huge volumes of AI slop, purporting to show real people coming into conflict for various reasons.</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;">Videos tagged #publicfreakout on TikTok have amassed more than 200 million views. Some 5 million people subscribe to r/PublicFreakout. The largest public freakout YouTube channel boasts one million subscribers. </p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;">To some degree, all of this content scratches an emotional itch. The videos show entitled white ladies being racist in public and getting called out. Karma. They show our political opposites behaving badly. Vindication. They show our ideological kin putting the bad people in their place. Justice. They show bad actors antagonizing regular people. Rage.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;">This emotional appetite for freakouts has helped to create a freakout economy.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;"><span>Revenue generation on social media is a tricky business. Real creators &#8212; the kind who film funny sketches, make original music, explore the history of religion, </span><a href="https://substack.com/redirect/fef1c312-7d95-431b-97e6-10a50cb9cb4e?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: hsl(117.74436090225564, 100%, 40%);text-decoration: none;">break down geopolitics</a><span> &#8212; might succeed in recruiting hundreds of thousands of subscribers and earning millions of views. But, the public freakout genre allows for consistency in a way that few other formats do. And its emotionally engaging content encourages viewers to bingewatch. The algorithms, in turn, offer more and more freakouts, creating a positive feedback loop of engagement. </span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;">This is all bully for the freakout peddlers. Because there is a limitless supply of freakouts (real and not) and a seemingly-endless demand for them, creators can absolutely expect to earn thousands of dollars per month from the major social video platforms in advertising revenue alone.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;">And so they do. And so they help popularize the idea that our cameras should always be on, that we should audit each other&#8217;s behavior by pointing our phones at them. Posting videos of other humans &#8212; fellow citizens, our neighbors &#8212;&nbsp;at their very worst has become normalized. </p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;">The mob mentality is only intensifying. It is becoming increasingly common to investigate the true identity of these otherwise-anonymous characters and contact their friends, family, and employers.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;">&#8220;Can&#8217;t wait for names and firings. Absolute garbage human beings,&#8221; a Reddit user posted about that evil Karen from the diner. Another surfaced some clues about her likely employer. Another demanded updates: &#8220;Found anything yet? Plsss.&#8221;</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;">This trend epitomizes a dark turn for humanity. This is the digital Panopticon. Major corporations and political influencers are sending demand signals for more freakout content. Individuals are opting to film their fellow citizens, both as a means of self-enrichment and as an act of political warfare, sometimes both. And we have only just begun to understand what that does to the social fabric of our societies.</p><div style="font-size: 16px;line-height: 26px;"><hr style="margin: 32px 0;padding: 0;height: 1px;background: rgb(0,0,0,.1);border: none;"></div><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;"><span>Same as it ever was, to some degree. Jerry Springer, Maury Povich, Judge Judy, and countless other titans of daytime TV existed to platform and ridicule the strange, the deranged, and the outright odious. Daytime television, by the mid-1990s, was a fishbowl of humanity. Flying chairs and hurled slurs made us happy that our lives were sane and boring by comparison. &#8220;We were told they were bringing Western civilization to its knees,&#8221; </span><a href="https://substack.com/redirect/9b6b5bd8-04b7-485b-ba9b-40520e048ad7?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: hsl(117.74436090225564, 100%, 40%);text-decoration: none;">writer Bryan Curtis wrote of mid-day TV filth a decade ago.</a><span> &#8220;We wanted tickets to the apocalypse.&#8221;</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;"><span>For all their many, many sins, the dregs of daytime TV played by the rules. Men who arrive onstage to learn if they </span><em>are</em><span> or </span><em>are not the father</em><span> are there to be entertainment. &#8220;When you get all classic, Shakespearean themes &#8212; love, hate, betrayal, lust &#8212; you have a chance of capturing an audience,&#8221; Povich told Curtis. The host insisted &#8220;we&#8217;ve made a difference in people&#8217;s lives some of the time.&#8221; (Not </span><em>all</em><span>, or even the majority, he admitted, but </span><em>some</em><span>.) Whether the guests are actually paid for their time on the show is something of a mystery but, at the very least, guests of the show got an all-expense-paid trip to New York City. Springer, his competition, once remarked: &#8220;I used to exploit people, but that&#8217;s when I was doing the news.&#8221;</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;"><em>The</em><span> </span><em>Maury Povich</em><span> </span><em>Show</em><span> was a three-act play: I, the tension. II, the conflict. III, the reveal, the truth, the denouement. When the play ends, the cast take their bows and go home.</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;"><span>There&#8217;s lots to be said about how </span><em>Maury</em><span> and the gang really introduced low-rent trash to broadcast television. But, for all their faults, daytime TV was perfectly fake. Everything was filmed in a studio, after all.</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;"><span>Things shifted slowly, then all at once. Reality TV became ubiquitous, and existed as a cautionary tale of what too much attention does to the human brain. MTV&#8217;s The Real World specifically cast participants who were at risk of an </span><a href="https://substack.com/redirect/0d2b50e2-0b32-4232-a7ea-ae930db407af?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: hsl(117.74436090225564, 100%, 40%);text-decoration: none;">emotional breakdown</a><span> &#8212; and </span><a href="https://substack.com/redirect/8a5be9e4-4c4f-4568-a719-031ad6b8c0cb?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: hsl(117.74436090225564, 100%, 40%);text-decoration: none;">they very much had them</a><span> &#8212; while Survivor pushed people to their limits, then delighted in their reactions to it. The arrival of the 24-hour news network meant a higher volume of shlock to fill the hours while the paparazzi developed a gnat-like quality: Thrust into everyone&#8217;s minds by the death of Princess Diana. COPS, and its millennial successor Live PD, gave us a distorted vantage point into brief tableaus of humans at their worst. (And cops, as it happens, at their best.)</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;">All of this previewed where we were heading. But there remained major limitations on how much video anyone could shoot filming strangers, and a limited number of places one could screen it.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;"><span>Fast forward to present, and the act of filming strangers has become a societal norm and annoyance. People film themselves and their surroundings constantly, and sometimes they broadcast that to the world. Mass-shootings are now painfully well-documented, coups can be </span><a href="https://substack.com/redirect/ff3bdbe7-bd49-4c3d-a1ed-2cea9b500d6a?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: hsl(117.74436090225564, 100%, 40%);text-decoration: none;">captured by online aerobics instructors</a><span>, public spaces are crammed with people turning the world into their content studio. It&#8217;s commonplace, but not quite ubiquitous.</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;">Generally speaking, to wind up the target of someone&#8217;s camera, you either need to be at the wrong place at the wrong time or be in the midst of a confrontation. Someone has to make the conscious decision to start recording.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;"><span>Privacy mega-villain Meta finally crossed that Rubicon recently, in releasing their new line of smart glasses. The glasses, which look nearly identical to a normal pair of glasses, are capable of photographing and filming constantly, and they come with an onboard AI agent to manage this digital surveillance. Those who wear those Ray-Bans could be surreptitiously recording anyone around them, while those glasses themselves surreptitiously scan the faces of every passer-by. Stories are mounting of people being </span><a href="https://substack.com/redirect/f3dddd47-0338-41a9-9350-4f4920f039d6?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: hsl(117.74436090225564, 100%, 40%);text-decoration: none;">unpleasantly surprised</a><span> to have been recorded by these glasses.</span></p><div class="captioned-image-container-static" style="font-size: 16px;line-height: 26px;margin: 32px auto;"><figure style="width: 100%;margin: 0 auto;"><table class="image-wrapper" width="100%" border="0" cellspacing="0" cellpadding="0" data-component-name="Image2ToDOMStatic" style="mso-padding-alt: 1em 0 1.6em;"><tbody><tr><td style="text-align: center;"></td><td class="content" align="left" width="382" style="text-align: center;"><a class="image-link" target="_blank" href="https://substack.com/redirect/627b30f4-d49d-4f2c-86ad-483cd7c2330a?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="position: relative;text-decoration: underline;display: block;"><img data-attrs="{&quot;src&quot;:&quot;https://substack-post-media.s3.amazonaws.com/public/images/14ff7503-1f57-476c-b54d-6f1e8d8e595f_640x1160.png&quot;,&quot;srcNoWatermark&quot;:null,&quot;fullscreen&quot;:null,&quot;imageSize&quot;:null,&quot;height&quot;:1160,&quot;width&quot;:640,&quot;resizeWidth&quot;:382,&quot;bytes&quot;:null,&quot;alt&quot;:&quot;r/london - Carnegie Street JCDecaux Glasses for people who don't do consent Al glasses 1 OMeta&quot;,&quot;title&quot;:null,&quot;type&quot;:null,&quot;href&quot;:null,&quot;belowTheFold&quot;:true,&quot;topImage&quot;:false,&quot;internalRedirect&quot;:null,&quot;isProcessing&quot;:false,&quot;align&quot;:null,&quot;offset&quot;:false}" alt="r/london - Carnegie Street JCDecaux Glasses for people who don't do consent Al glasses 1 OMeta" title="r/london - Carnegie Street JCDecaux Glasses for people who don't do consent Al glasses 1 OMeta" width="382" height="692.375" src="https://substackcdn.com/image/fetch/$s_!V9Aj!,w_382,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F14ff7503-1f57-476c-b54d-6f1e8d8e595f_640x1160.png" style="border: none !important;vertical-align: middle;display: block;-ms-interpolation-mode: bicubic;height: auto;margin-bottom: 0;width: auto !important;max-width: 100% !important;margin: 0 auto;"></a></td><td style="text-align: center;"></td></tr></tbody></table><figcaption class="image-caption" style="box-sizing: content-box;color: rgb(119,119,119);font-size: 14px;line-height: 20px;font-weight: 400;letter-spacing: -.15px;margin-top: 8px;width: 70%;padding-left: 15%;padding-right: 15%;text-align: center;"><a href="https://substack.com/redirect/4477b8ee-e87c-41b9-b333-7bcc8b6d24de?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="text-decoration: underline;">via Reddit</a></figcaption></figure></div><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;"><span>Not content with letting people </span><em>just</em><span> clandestinely record each other, Meta pushed some after-market code to the companion app for these glasses, which would scan the faces of passersby and run their visages through a facial recognition database. While the tool hadn&#8217;t been fully activated yet, and </span><a href="https://substack.com/redirect/75064d26-924a-4a9f-80d1-6c6741d3b724?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: hsl(117.74436090225564, 100%, 40%);text-decoration: none;">Meta has claimed to have deleted the code</a><span>, it feels like a matter of time before this technology is deployed.</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;"><span>&#8220;Despite the billions of reasons not to, Meta seems to have created the capacity to turn their customers into a distributed surveillance machine,&#8221; researcher Cooper Quintin, of the Electronic Frontier Foundation, </span><a href="https://substack.com/redirect/ecb210e3-703e-4aa6-bf9d-b3399c9b04e3?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: hsl(117.74436090225564, 100%, 40%);text-decoration: none;">told WIRED in June.</a></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;">Meta isn&#8217;t the only one. The wearables industry is hell-bent on kitting out their customers in all the tools of a surveillance tower. Regular people will go through the world, recording, filming, scanning, downloading, uploading, collecting, distributing, and monitoring those around them. As it becomes more ubiquitous, we will all become more aware. As we become more aware, we will change. We will become subject to, as Foucault described it, &#8220;the automatic functioning of power.&#8221;</p><div style="font-size: 16px;line-height: 26px;"><hr style="margin: 32px 0;padding: 0;height: 1px;background: rgb(0,0,0,.1);border: none;"></div><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;">Some years ago, I was riding the subway in Toronto. It was, as per usual, packed shoulder-to-shoulder. A middle-aged white woman stood, looming over a young Asian man who was sitting on one of the seats. She cleared her throat: &#8220;Can I sit down?&#8221; The guy, headphones over his ears and staring at his phone, didn&#8217;t notice. She grew increasingly annoyed, though did little to actually get his attention.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;"><span>&#8220;Hello?&#8221; She asked. &#8220;Do you speak </span><em>Eng-lish?</em><span>&#8221; Politeness may have suggested that he give up his seat, but &#8212; given there were no elderly folks, people with disabilities, pregnant women, or young kids around &#8212; it certainly wasn&#8217;t an obligation. The woman grew more annoyed, ranting to herself about people who come to Canada but &#8220;who don&#8217;t speak English.&#8221; Other passengers (myself included) told this woman to shut up, knock it off, and keep her views to herself. The poor kid was still unaware.</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;">The confrontation grew, as the woman started screaming. The kid eventually noticed the fracas and took his headphones off, looking up, confused as this woman began hurling thinly-veiled racist barbs at him. Eventually, a chorus of annoyed commuters against her, she stopped. Then she started crying.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;">An older man next to her asked if she was alright. &#8220;My dad died today,&#8221; she said. The older man opened his arms into a hug as she sobbed into his chest.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;">I think about this woman sometimes. Had her dad really died that day? Even if so, does that excuse her badgering racism? Who knows. But I do suspect that, if it happened today, at least one person would have pulled out their phone to record. </p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;">The impulse is understandable. That video could be evidence, if the confrontation gets physical. It could be accountability &#8212; perhaps this woman is in a position of power, and shouldn&#8217;t be. It could be viral content. But one impetus for recording strangers acting badly is one said often in these videos, by the ones wielding the camera: Self-defense. Perhaps the person freaking out will behave better if they know they are being recorded. The act of recording could bring security, the thinking goes. It is exactly how Jeremy Bentham believed his Panopticon would work.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;">But with the benefit of a century of sociological and psychological research, we know this is a very bad idea. We know, from the origin of the surveillance state, that the feeling of being constantly inspected and monitored creates paranoid, dysfunctional, distrustful, anxious populations. It is that &#8220;coercive individualization&#8221; that Foucault described.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;"><span>For more than a decade after 9/11, the NYPD put New York&#8217;s Muslim communities under dragnet surveillance. &#8220;Everyone in the community knows that our mosque is being surveilled,&#8221; a 22-year-old Sunday school teacher told a </span><a href="https://substack.com/redirect/e4d0b87a-2c43-4f6d-b55b-b82f9392f3c4?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: hsl(117.74436090225564, 100%, 40%);text-decoration: none;">study by a coalition of civil liberties groups</a><span>. &#8220;There are always parked, unmarked cars outside of mosques,&#8221; one man said. &#8220;People tell me &#8216;I&#8217;ll make my salaah [prayer] at home,&#8217;&#8221; a Brooklyn imam said. &#8220;They mention the [NYPD] camera right outside the mosque as the reason.&#8221; Muslims in the city changed to meet the surveillance: Men spoke of trimming their beard, dressing more Western, policing their speech. &#8220;It&#8217;s stressful,&#8221; a 24-year-old New Jersey man said. They began distrusting their fellow worshipers, wondering if they could be an undercover cop &#8212; indeed, some were. &#8220;You look at your closest friends and ask: are they informants?&#8221; a 20-year-old teacher said.</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;"><span>A similar surveillance campaign targeted Queer people in Canada. The security state, obsessed with the idea that homosexuals presented a national security threat &#8212; offering an oft-changing series of explanations to justify that view &#8212; ordered pervasive surveillance of the underground Queer community. One gay man told sociologist Gary Kinsman and historian Patrizia Gentile of the common occurrence of seeing a man reading a newspaper at a well-known gay haunt in a downtown Ottawa hotel. &#8220;[If you] looked real closely you could find him holding behind the newspaper a camera, and these people were photographing everyone in the bar.&#8221;</span><span class="footnote-anchor-email" data-component-name="FootnoteAnchorToDOMStatic" style="font-size: 20px;">&#8309;</span><span> This surveillance had the power to expose their deepest secret, one that (at the time) could have meant losing one&#8217;s job, eviction, social ostracization, even prison. That carried a constant emotional toll. </span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;"><span>The feeling of constant surveillance, of being perpetually scrutinized and followed, is potent. We even have a word for this experience: Stalking. And as researchers have found, the psychological impacts of stalking map well onto PTSD. &#8220;The experience of being followed appeared to be the most significant predictor of an increased likelihood of showing symptoms of PTSD and anxiety,&#8221; Danish researchers found in 2023. &#8220;This suggest[s] that the chronic fear and hyperarousal which following generates can have a deteriorating effect on victims&#8217; both psychological and social functioning.&#8221;</span><span class="footnote-anchor-email" data-component-name="FootnoteAnchorToDOMStatic" style="font-size: 20px;">&#8310;</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;"><span>We&#8217;re starting to see the effects of ubiquitous connectivity. We know the terminally online, particularly those who were born into the internet age, are burdened with anxiety. The constant pressure to be online, to never step out of line, to express the right opinions, to be up-to-date: It is </span><em>exhausting</em><span>. </span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;"><span>&#8220;There&#8217;s a feeling that, if you do something stupid, there&#8217;s a chance that you&#8217;re going to become a big joke or the next meme,&#8221; a 21-year-old </span><a href="https://substack.com/redirect/06377434-72bd-44a4-801b-b3782adbaeac?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: hsl(117.74436090225564, 100%, 40%);text-decoration: none;">wrote on TikTok last year.</a><span> Rapper Tyler, the Creator &#8212; who makes highly danceable music &#8212; started asking friends why nobody seems to be dancing anymore. &#8220;The fear of being filmed,&#8221; they told him. It&#8217;s a sentiment that has become increasingly commonplace amongst Gen Z.</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;">With all this in mind, we&#8217;ve got a choice to make, as a society.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;">Either we participate in this digital Panopticon &#8212; one where the power to surveil is made available to our fellow citizens, our governments, police, private companies, and bad actors alike &#8212; or we find a way to put a stop to it.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;">The right to film others in public is sacrosanct, and should remain so. But that doesn&#8217;t mean we can or should tolerate the 24/7 filming of each other, nor the development of the cellphone camera into a weapon of control. </p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;">Society is polarized and anxious, and the internet has helped to make it so. The idea that we can untangle confrontations with each other by uploading those conflicts to the internet is a dangerously backwards remedy. </p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;">Consuming videos of other people at their worst isn&#8217;t an act of accountability and it shouldn&#8217;t be entertainment. It is engendering suspicion and paranoia of others, and in such a way that can only benefit the worst kind of reactionary leaders.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;">So the next time you find yourself arguing with a neighbor, or come face-to-face with an unpleasant person on the train, ignore the impulse to turn on your camera. </p><div style="font-size: 16px;line-height: 26px;"><hr style="margin: 32px 0;padding: 0;height: 1px;background: rgb(0,0,0,.1);border: none;"></div><div class="captioned-button-wrap" data-attrs="{&quot;url&quot;:&quot;https://substack.com/app-link/post?publication_id=891638&post_id=218518843&utm_source=substack&utm_medium=email&utm_content=share&utm_campaign=email-share&action=share&triggerShare=true&isFreemail=true&r=69g8n&token=eyJ1c2VyX2lkIjoxMDUxODY0NywicG9zdF9pZCI6MjE4NTE4ODQzLCJpYXQiOjE3OTIxODkxMDEsImV4cCI6MTc5NDc4MTEwMSwiaXNzIjoicHViLTg5MTYzOCIsInN1YiI6InBvc3QtcmVhY3Rpb24ifQ.EsctpipErj-G6sqPHsx1MctxTsnivx1YxMq4vNUcP1s&quot;,&quot;text&quot;:&quot;Share&quot;}" data-component-name="CaptionedButtonToDOM" style="font-size: 16px;line-height: 26px;"><div class="preamble" style="margin-top: 16px;font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-size: 18px;max-width: 384px;width: fit-content;line-height: 22px;display: flex;align-items: center;text-align: center;font-weight: 400;margin-left: auto;margin-right: auto;"><p class="cta-caption" style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;">It&#8217;s still ok to film cute dogs, though.</p></div><p class="button-wrapper" data-attrs="{&quot;url&quot;:&quot;https://substack.com/app-link/post?publication_id=891638&post_id=218518843&utm_source=substack&utm_medium=email&utm_content=share&utm_campaign=email-share&action=share&triggerShare=true&isFreemail=true&r=69g8n&token=eyJ1c2VyX2lkIjoxMDUxODY0NywicG9zdF9pZCI6MjE4NTE4ODQzLCJpYXQiOjE3OTIxODkxMDEsImV4cCI6MTc5NDc4MTEwMSwiaXNzIjoicHViLTg5MTYzOCIsInN1YiI6InBvc3QtcmVhY3Rpb24ifQ.EsctpipErj-G6sqPHsx1MctxTsnivx1YxMq4vNUcP1s&quot;,&quot;text&quot;:&quot;Share&quot;}" data-component-name="ButtonCreateButton" style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;text-align: center;cursor: pointer;border-radius: 4px;"><a class="button primary" href="https://substack.com/app-link/post?publication_id=891638&post_id=218518843&utm_source=substack&utm_medium=email&utm_content=share&utm_campaign=email-share&action=share&triggerShare=true&isFreemail=true&r=69g8n&token=eyJ1c2VyX2lkIjoxMDUxODY0NywicG9zdF9pZCI6MjE4NTE4ODQzLCJpYXQiOjE3OTIxODkxMDEsImV4cCI6MTc5NDc4MTEwMSwiaXNzIjoicHViLTg5MTYzOCIsInN1YiI6InBvc3QtcmVhY3Rpb24ifQ.EsctpipErj-G6sqPHsx1MctxTsnivx1YxMq4vNUcP1s" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;box-sizing: border-box;cursor: pointer;border: none;border-radius: 8px;font-size: 14px;line-height: 20px;font-weight: 600;text-align: center;margin: 0;opacity: 1;outline: none;white-space: nowrap;color: #363737 !important;text-decoration: none !important;background-color: #7FFF7A;padding: 12px 20px;height: auto;"><span style="color: #363737;text-decoration: none;">Share</span></a></p></div><div style="font-size: 16px;line-height: 26px;"><hr style="margin: 32px 0;padding: 0;height: 1px;background: rgb(0,0,0,.1);border: none;"></div><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;">That&#8217;s it for this dispatch!</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;"><span>Over at the </span><em>Star</em><span>, I published a (very long) </span><a href="https://substack.com/redirect/847142b1-afa8-4e2f-aba1-31fcf51ca023?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: hsl(117.74436090225564, 100%, 40%);text-decoration: none;">deep dive into Mark Carney&#8217;s government, and how it really works</a><span>; I proposed </span><a href="https://substack.com/redirect/7b6b6edd-d798-4771-9037-89c4fcf94419?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: hsl(117.74436090225564, 100%, 40%);text-decoration: none;">a tax on AI companies as a proactive step to prepare for the coming labor disruption</a><span>; and I prepared a primer on </span><a href="https://substack.com/redirect/934af601-ef3a-4823-bed8-f6da27594f5d?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: hsl(117.74436090225564, 100%, 40%);text-decoration: none;">a new middle power plan to get the UN working again.</a></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;"><span>I&#8217;m furiously working on the manuscript for my next book, prepping scripts for the upcoming run of Soft Power episodes, and am thinking through the next </span><strong>Bug-eyed and Shameless</strong><span> dispatch &#8212; which will, I think, be unusually personal!</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;">So until then.</p><a class="youtube-wrap" href="https://substack.com/redirect/fa47ca16-66b0-49a1-9a1c-00759139b41d?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" target="_blank" data-component-name="Youtube2ToDOMStatic" style="display: block;margin: 32px 0;"><img src="https://substackcdn.com/image/youtube/w_728,c_limit/l_youtube_play_qyqt8q,w_120/EpNSk8qu_Vo" style="border: none !important;vertical-align: middle;-ms-interpolation-mode: bicubic;max-width: 100%;height: auto;margin: 0 auto;display: block;width: 100%;"></a><div class="footnote" data-component-name="FootnoteToDOMStatic" style="line-height: 26px;display: flex;border-top: solid 1px rgb(0,0,0,.1);padding-top: 1.5em;font-size: 90%;flex-direction: row;align-items: baseline;"><span class="footnote-number" style="display: block;margin-right: 6px;min-width: 24px;">1</span><div class="footnote-content" style="font-size: 16px;line-height: 26px;display: block;"><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;min-width: 10px;"><em>The Bentham Brothers and Russia: The Imperial Russian Constitution and the St Petersburg Panopticon,</em><span> Roger Bartlett (2022)</span></p></div></div><div class="footnote" data-component-name="FootnoteToDOMStatic" style="line-height: 26px;display: flex;font-size: 90%;flex-direction: row;align-items: baseline;border-top: none;padding-top: 0;"><span class="footnote-number" style="display: block;margin-right: 6px;min-width: 24px;">2</span><div class="footnote-content" style="font-size: 16px;line-height: 26px;display: block;"><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;min-width: 10px;"><em><a href="https://substack.com/redirect/e574b48c-9038-467a-a58f-da22c217883b?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: hsl(117.74436090225564, 100%, 40%);text-decoration: none;">Panopticon; or, the Inspection-House</a><span>, </span></em><span>Jeremy Bentham (1791)</span></p></div></div><div class="footnote" data-component-name="FootnoteToDOMStatic" style="line-height: 26px;display: flex;font-size: 90%;flex-direction: row;align-items: baseline;border-top: none;padding-top: 0;"><span class="footnote-number" style="display: block;margin-right: 6px;min-width: 24px;">3</span><div class="footnote-content" style="font-size: 16px;line-height: 26px;display: block;"><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;min-width: 10px;"><em><a href="https://substack.com/redirect/eb776b52-1e7d-4926-af63-cc517627b241?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: hsl(117.74436090225564, 100%, 40%);text-decoration: none;">Discipline and Punish: The Birth of the Prison</a><span>, </span></em><span>Michel Foucault (1977)</span></p></div></div><div class="footnote" data-component-name="FootnoteToDOMStatic" style="line-height: 26px;display: flex;font-size: 90%;flex-direction: row;align-items: baseline;border-top: none;padding-top: 0;"><span class="footnote-number" style="display: block;margin-right: 6px;min-width: 24px;">4</span><div class="footnote-content" style="font-size: 16px;line-height: 26px;display: block;"><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;min-width: 10px;"><em>The Inspection House: An Impertinent Field Guide to Modern Surveillance</em><span>, Emily Horne and Tim Maly. (2014)</span></p></div></div><div class="footnote" data-component-name="FootnoteToDOMStatic" style="line-height: 26px;display: flex;font-size: 90%;flex-direction: row;align-items: baseline;border-top: none;padding-top: 0;"><span class="footnote-number" style="display: block;margin-right: 6px;min-width: 24px;">5</span><div class="footnote-content" style="font-size: 16px;line-height: 26px;display: block;"><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;min-width: 10px;"><em>The Canadian War on Queers: National Security as Sexual Regulation</em><span>, Gary Kinsman and Patrizia Gentile (2010)</span></p></div></div><div class="footnote" data-component-name="FootnoteToDOMStatic" style="line-height: 26px;display: flex;font-size: 90%;flex-direction: row;align-items: baseline;margin-bottom: 0;border-top: none;padding-top: 0;"><span class="footnote-number" style="display: block;margin-right: 6px;min-width: 24px;">6</span><div class="footnote-content" style="font-size: 16px;line-height: 26px;display: block;"><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;min-width: 10px;"><em>The psychological consequences of stalking: Cross-sectional findings in a sample of Danish help-seeking stalking victims, </em><span>Didde Hauch and Ask Elklit (</span><em>European Journal of Psychotraumatology,</em><span> 2023)</span></p></div></div></div></div><div class="container-border" style="margin: 32px 0 0;width: 100%;box-sizing: border-box;border-top: 1px solid #222d2a;font-size: 16px;line-height: 26px;"></div><div class="typography" style="--image-offset-margin: -120px;font-size: 16px;line-height: 26px;"><div class="postscript" style="margin: 32px 0;font-size: 16px;line-height: 26px;"><div class="body markup" dir="auto" style="text-align: initial;font-size: 16px;line-height: 26px;width: 100%;margin-bottom: 16px;hanging-punctuation: allow-end;overflow-wrap: anywhere;word-break: break-word;"><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;margin-top: 0;"><em>You&#8217;re a free subscriber to </em><a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly93d3cuYnVnZXllZGFuZHNoYW1lbGVzcy5jb20_dXRtX2NhbXBhaWduPWVtYWlsLWhvbWUmcj02OWc4biIsInAiOjIxODUxODg0MywicyI6ODkxNjM4LCJmIjp0cnVlLCJ1IjoxMDUxODY0NywiaWF0IjoxNzkyMTg5MTAxLCJleHAiOjIxMDc3NjUxMDEsImlzcyI6InB1Yi0wIiwic3ViIjoibGluay1yZWRpcmVjdCJ9.sb1JzDsHQyS_BDhwIzMa7IZQZp9XcUuOOD6gGvegkmc?" style="color: hsl(117.74436090225564, 100%, 40%);text-decoration: none;">Bug-eyed and Shameless</a><em><span>. For the whole enchilada,&nbsp;</span><a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly93d3cuYnVnZXllZGFuZHNoYW1lbGVzcy5jb20vc3Vic2NyaWJlP3V0bV9zb3VyY2U9cG9zdCZ1dG1fY2FtcGFpZ249ZW1haWwtY2hlY2tvdXQmbmV4dD1odHRwcyUzQSUyRiUyRnd3dy5idWdleWVkYW5kc2hhbWVsZXNzLmNvbSUyRnAlMkZ0aGUtcGFydGljaXBhdG9yeS1wYW5vcHRpY29uJnI9NjlnOG4mdG9rZW49ZXlKMWMyVnlYMmxrSWpveE1EVXhPRFkwTnl3aWFXRjBJam94TnpreU1UZzVNVEF4TENKbGVIQWlPakUzT1RRM09ERXhNREVzSW1semN5STZJbkIxWWkwNE9URTJNemdpTENKemRXSWlPaUpqYUdWamEyOTFkQ0o5Lk9CdFhHLTVKTlJIMEZpU1QtcFdCSXI2R04tVWVVUmlHNmJvbUZhLXZxUWciLCJwIjoyMTg1MTg4NDMsInMiOjg5MTYzOCwiZiI6dHJ1ZSwidSI6MTA1MTg2NDcsImlhdCI6MTc5MjE4OTEwMSwiZXhwIjoyMTA3NzY1MTAxLCJpc3MiOiJwdWItMCIsInN1YiI6ImxpbmstcmVkaXJlY3QifQ.jTNQ3KMFb0PFm42Yk2TjQoPAWbVH95Cecrhsn773JQo?" style="color: hsl(117.74436090225564, 100%, 40%);text-decoration: none;">become a paying subscriber</a><span>.</span></em></p><div class="subscribe-widget is-signed-up" data-component-name="SubscribeWidget" style="margin: 0 0 1em;direction: ltr;font-size: 16px;line-height: 26px;margin-bottom: 0;"><div class="pencraft pc-reset button-wrapper" style="text-decoration: unset;list-style: none;font-size: 16px;line-height: 26px;text-align: center;cursor: pointer;border-radius: 4px;"><a class="button subscribe-btn primary" href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly93d3cuYnVnZXllZGFuZHNoYW1lbGVzcy5jb20vc3Vic2NyaWJlP3V0bV9zb3VyY2U9cG9zdCZ1dG1fY2FtcGFpZ249ZW1haWwtY2hlY2tvdXQmbmV4dD1odHRwcyUzQSUyRiUyRnd3dy5idWdleWVkYW5kc2hhbWVsZXNzLmNvbSUyRnAlMkZ0aGUtcGFydGljaXBhdG9yeS1wYW5vcHRpY29uJnI9NjlnOG4mdG9rZW49ZXlKMWMyVnlYMmxrSWpveE1EVXhPRFkwTnl3aWFXRjBJam94TnpreU1UZzVNVEF4TENKbGVIQWlPakUzT1RRM09ERXhNREVzSW1semN5STZJbkIxWWkwNE9URTJNemdpTENKemRXSWlPaUpqYUdWamEyOTFkQ0o5Lk9CdFhHLTVKTlJIMEZpU1QtcFdCSXI2R04tVWVVUmlHNmJvbUZhLXZxUWciLCJwIjoyMTg1MTg4NDMsInMiOjg5MTYzOCwiZiI6dHJ1ZSwidSI6MTA1MTg2NDcsImlhdCI6MTc5MjE4OTEwMSwiZXhwIjoyMTA3NzY1MTAxLCJpc3MiOiJwdWItMCIsInN1YiI6ImxpbmstcmVkaXJlY3QifQ.jTNQ3KMFb0PFm42Yk2TjQoPAWbVH95Cecrhsn773JQo?&utm_medium=email&utm_source=subscribe-widget&utm_content=218518843" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;box-sizing: border-box;cursor: pointer;border: none;border-radius: 8px;font-size: 14px;line-height: 20px;font-weight: 600;text-align: center;opacity: 1;outline: none;white-space: nowrap;text-decoration: none !important;background-color: #7FFF7A;color: #363737 !important;margin: 0 auto;padding: 12px 20px;height: auto;"><span style="color: #363737;text-decoration: none;">Upgrade to paid</span></a></div></div></div></div></div><table class="email-ufi-2-bottom" role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="border-top: 1px solid rgb(0,0,0,.1);border-bottom: 1px solid rgb(0,0,0,.1);min-width: 100%;"><tbody><tr height="16"><td height="16" style="font-size:0px;line-height:0;">&nbsp;</td></tr><tr><td><table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0" style="margin:0 auto;"><tbody><tr><td style="vertical-align:middle;"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="center"><a class="email-button-outline" href="https://substack.com/app-link/post?publication_id=891638&post_id=218518843&utm_source=substack&isFreemail=true&submitLike=true&token=eyJ1c2VyX2lkIjoxMDUxODY0NywicG9zdF9pZCI6MjE4NTE4ODQzLCJyZWFjdGlvbiI6IuKdpCIsImlhdCI6MTc5MjE4OTEwMSwiZXhwIjoxNzk0NzgxMTAxLCJpc3MiOiJwdWItODkxNjM4Iiwic3ViIjoicmVhY3Rpb24ifQ.N9y-bhZy2jb2yMb3FNPFDzfrqw_q9b8bGfCqKHsTWag&utm_medium=email&utm_campaign=email-reaction&r=69g8n" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;font-weight: 500;border: 1px solid rgb(0,0,0,.1);border-radius: 9999px;text-transform: uppercase;font-size: 12px;line-height: 12px;padding: 9px 14px;text-decoration: none;color: rgb(119,119,119);"><img class="icon" src="https://substackcdn.com/image/fetch/$s_!PeVs!,w_36,c_scale,f_png,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Ficon%2FLucideHeart%3Fv%3D4%26height%3D36%26fill%3Dnone%26stroke%3D%2523808080%26strokeWidth%3D2" width="18" height="18" style="margin-right: 8px;min-width: 18px;min-height: 18px;border: none;vertical-align: middle;max-width: 18px" alt=""><span class="email-button-text" style="vertical-align: middle;">Like</span></a></td></tr></tbody></table></td><td width="8" style="min-width:8px;"></td><td style="vertical-align:middle;"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="center"><a class="email-button-outline" href="https://substack.com/app-link/post?publication_id=891638&post_id=218518843&utm_source=substack&utm_medium=email&isFreemail=true&comments=true&token=eyJ1c2VyX2lkIjoxMDUxODY0NywicG9zdF9pZCI6MjE4NTE4ODQzLCJpYXQiOjE3OTIxODkxMDEsImV4cCI6MTc5NDc4MTEwMSwiaXNzIjoicHViLTg5MTYzOCIsInN1YiI6InBvc3QtcmVhY3Rpb24ifQ.EsctpipErj-G6sqPHsx1MctxTsnivx1YxMq4vNUcP1s&r=69g8n&utm_campaign=email-half-magic-comments&action=post-comment&utm_source=substack&utm_medium=email" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;font-weight: 500;border: 1px solid rgb(0,0,0,.1);border-radius: 9999px;text-transform: uppercase;font-size: 12px;line-height: 12px;padding: 9px 14px;text-decoration: none;color: rgb(119,119,119);"><img class="icon" src="https://substackcdn.com/image/fetch/$s_!x1tS!,w_36,c_scale,f_png,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Ficon%2FLucideComments%3Fv%3D4%26height%3D36%26fill%3Dnone%26stroke%3D%2523808080%26strokeWidth%3D2" width="18" height="18" style="margin-right: 8px;min-width: 18px;min-height: 18px;border: none;vertical-align: middle;max-width: 18px" alt=""><span class="email-button-text" style="vertical-align: middle;">Comment</span></a></td></tr></tbody></table></td><td width="8" style="min-width:8px;"></td><td style="vertical-align:middle;"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="center"><a class="email-button-outline" href="https://open.substack.com/pub/justinling/p/the-participatory-panopticon?utm_source=substack&utm_medium=email&utm_campaign=email-restack-comment&action=restack-comment&r=69g8n&token=eyJ1c2VyX2lkIjoxMDUxODY0NywicG9zdF9pZCI6MjE4NTE4ODQzLCJpYXQiOjE3OTIxODkxMDEsImV4cCI6MTc5NDc4MTEwMSwiaXNzIjoicHViLTg5MTYzOCIsInN1YiI6InBvc3QtcmVhY3Rpb24ifQ.EsctpipErj-G6sqPHsx1MctxTsnivx1YxMq4vNUcP1s&utm_source=substack&utm_medium=email" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;font-weight: 500;border: 1px solid rgb(0,0,0,.1);border-radius: 9999px;text-transform: uppercase;font-size: 12px;line-height: 12px;padding: 9px 14px;text-decoration: none;color: rgb(119,119,119);"><img class="icon" src="https://substackcdn.com/image/fetch/$s_!ubXF!,w_36,c_scale,f_png,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Ficon%2Fnotes__NoteRestackIcon%3Fv%3D4%26height%3D36%26fill%3Dnone%26stroke%3D%2523808080%26strokeWidth%3D2%26strokeLinecap%3Dround%26strokeLinejoin%3Dround" width="18" height="18" alt="" style="margin-right: 8px;min-width: 18px;min-height: 18px;max-width: 550px;border: none !important;vertical-align: middle;"><span class="email-button-text" style="vertical-align: middle;">Restack</span></a></td></tr></tbody></table></td></tr></tbody></table></td><td align="right"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr></tr></tbody></table></td></tr></tbody></table></td></tr><tr height="16"><td height="16" style="font-size:0px;line-height:0;">&nbsp;</td></tr></tbody></table><div class="footer footer-lyzfzm" style="color: rgb(119,119,119);text-align: center;font-size: 16px;line-height: 26px;padding: 24px 0;"><div style="font-size: 16px;line-height: 26px;padding-bottom: 24px"><p class="pencraft pc-reset color-secondary-B3TpYa size-12-qKBnAQ reset-PDs18X small meta-QuZQ_E" style="list-style: none;font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';padding-bottom: 0;font-size: 12px;line-height: 16px;margin: 0;color: rgb(119,119,119);text-decoration: unset;">&#169; 2026 <span>Justin Ling</span><br>Montr&#233;al, Canada <br><a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly93d3cuYnVnZXllZGFuZHNoYW1lbGVzcy5jb20vYWN0aW9uL2Rpc2FibGVfZW1haWw_dG9rZW49ZXlKMWMyVnlYMmxrSWpveE1EVXhPRFkwTnl3aWNHOXpkRjlwWkNJNk1qRTROVEU0T0RRekxDSnBZWFFpT2pFM09USXhPRGt4TURFc0ltVjRjQ0k2TVRneU16Y3lOVEV3TVN3aWFYTnpJam9pY0hWaUxUZzVNVFl6T0NJc0luTjFZaUk2SW1ScGMyRmliR1ZmWlcxaGFXd2lmUS5LdTQtTXAxQ253Z3BrZGJYTE1JbWc5ZHV5VHg5RUk1VnV4b1RCTlBMUjhvIiwicCI6MjE4NTE4ODQzLCJzIjo4OTE2MzgsImYiOnRydWUsInUiOjEwNTE4NjQ3LCJpYXQiOjE3OTIxODkxMDEsImV4cCI6MjEwNzc2NTEwMSwiaXNzIjoicHViLTAiLCJzdWIiOiJsaW5rLXJlZGlyZWN0In0.UfAP8sqC4aOozKQeAMzCIWOvpNja9Dk38bLPUk-MB6Q?" style="color: hsl(117.74436090225564, 100%, 40%);text-decoration: none;"><span style="color: rgb(119,119,119);text-decoration: underline;">Unsubscribe</span></a></p></div><p class="footerSection-uQEPXS small powered-by-substack" style="padding: 0 24px;font-size: 12px;line-height: 20px;margin: 0;color: rgb(119,119,119);font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';padding-bottom: 0;margin-top: 0;"><a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly9zdWJzdGFjay5jb20vc2lnbnVwP3V0bV9zb3VyY2U9c3Vic3RhY2smdXRtX21lZGl1bT1lbWFpbCZ1dG1fY29udGVudD1mb290ZXImdXRtX2NhbXBhaWduPWF1dG9maWxsZWQtZm9vdGVyJmZyZWVTaWdudXBFbWFpbD1iZW5vaXRjQGdtYWlsLmNvbSZyPTY5ZzhuIiwicCI6MjE4NTE4ODQzLCJzIjo4OTE2MzgsImYiOnRydWUsInUiOjEwNTE4NjQ3LCJpYXQiOjE3OTIxODkxMDEsImV4cCI6MjEwNzc2NTEwMSwiaXNzIjoicHViLTAiLCJzdWIiOiJsaW5rLXJlZGlyZWN0In0.mhDkUQ8N4nBApvdrg6Tsus7wBhL9MOxoLcU7lOO8oBg?" style="color: hsl(117.74436090225564, 100%, 40%);text-decoration: none;display: inline-block;margin: 0 4px;"><img src="https://substackcdn.com/image/fetch/$s_!FMON!,w_366,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Fimg%2Femail%2Fstart-your-substack-button%402x.png" srcset="https://substackcdn.com/image/fetch/$s_!PPEm!,w_183,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Fimg%2Femail%2Fstart-your-substack-button.png, https://substackcdn.com/image/fetch/$s_!FMON!,w_366,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Fimg%2Femail%2Fstart-your-substack-button%402x.png 2x, https://substackcdn.com/image/fetch/$s_!s5wz!,w_549,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Fimg%2Femail%2Fstart-your-substack-button%403x.png 3x" width="183" alt="Start your Substack" height="40" style="max-width: 550px;border: none !important;vertical-align: middle;"></a></p></div></div></td><td></td></tr></tbody></table><img src="https://eotrx.substackcdn.com/o/6179b2a665e509da/p.gif?token=eyJtIjoiPDIwMjYxMDE2MjIxODA4LjMuMGViNmJlMGZmZjk0NGM2MkBtZy1kMC5zdWJzdGFjay5jb20-IiwidSI6MTA1MTg2NDcsInIiOiJiZW5vaXRjQGdtYWlsLmNvbSIsImQiOiJtZy1kMC5zdWJzdGFjay5jb20iLCJwIjoyMTg1MTg4NDMsInQiOiJuZXdzbGV0dGVyIiwiYSI6ImV2ZXJ5b25lIiwicyI6ODkxNjM4LCJjIjoicG9zdCIsImYiOnRydWUsInoiOiIiLCJwb3NpdGlvbiI6ImJvdHRvbSIsImlhdCI6MTc5MjE4OTEwMSwiZXhwIjoxNzk0NzgxMTAxLCJpc3MiOiJwdWItMCIsInN1YiI6ImVvIn0.6zoceyb68Tc7HisSW9JEBCCQbQbI86P23mSqvtOV2n0" alt="" width="1" height="1" border="0" style="height:1px !important;width:1px !important;border-width:0 !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:0 !important;margin-left:0 !important;padding-top:0 !important;padding-bottom:0 !important;padding-right:0 !important;padding-left:0 !important;"/><img width="1" height="1" alt="" src="https://email.mg-d0.substack.com/o/eJxEkEtuxCAMQE8z7BoBIQwsOAvi46R0EkBgpsrtq0wW3T5Lz88ODmEr7TS1dCTRyNmtSyRg2FNzpjSjnMDh0m43yNAcQrQO_6dsoZJ8Gwh-diJwpsXCwyJmqb3U3geuNKhVkmQ45ZJRJjlniqppnih46YGu66qFCJI_BD22r0inPnxHF15TKAdJ3a4NPgkG2wBSKmSLzYVXypvto9YGvUM05DrBuhET5AAG3tDOkuHGKRrO1MKUEvNN8KxgMvz2HRChkTq8DeU4Rk54WsjO7xDvlXX4PQWHqeRLpDSTsyLNeMglYXgIul19n94-fCyHS9n8jI4p7ylvBO_3jg7tEjC6MCXFk7wN_wsAAP__y--BtA"></body></html></body></html>
