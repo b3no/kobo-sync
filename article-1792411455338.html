@@ -1,0 +1,788 @@
+<html><head><meta name="robots" content="noindex"><title>Is It Toxic, or Is This What They Both Want?</title></head><body><html lang="en" dir="ltr" style="scrollbar-width: thin;scrollbar-color: rgb(219,219,219)rgb(255,255,255);"><head><meta charset="utf-8"><title>Is It Toxic, or Is This What They Both Want?</title><style>
+@media (max-width: 1024px) {
+  .typography .pullquote-align-left,
+  .typography.editor .pullquote-align-left,
+  .typography .pullquote-align-right,
+  .typography.editor .pullquote-align-right,
+  .typography .pullquote-align-wide,
+  .typography.editor .pullquote-align-wide,
+  .typography .pullquote-align-center,
+  .typography.editor .pullquote-align-center {
+    float: none;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .typography .markup table.image-wrapper img,
+  .typography.editor .markup table.image-wrapper img,
+  .typography .markup table.kindle-wrapper img,
+  .typography.editor .markup table.kindle-wrapper img {
+    max-width: 550px;
+  }
+}
+@media (min-width: 1024px) {
+  .typography:not(:has(#toc)) .captioned-image-container figure:has( > :is(a, div).image2-offset-left),
+  .typography.editor:not(:has(#toc)) .captioned-image-container figure:has( > :is(a, div).image2-offset-left) {
+    margin-left: var(--image-offset-margin);
+  }
+  .typography:not(:has(#toc)) .captioned-image-container figure:has( > :is(a, div).image2-offset-right),
+  .typography.editor:not(:has(#toc)) .captioned-image-container figure:has( > :is(a, div).image2-offset-right) {
+    margin-right: var(--image-offset-margin);
+  }
+}
+@media (min-width: 1300px) {
+  .typography .captioned-image-container figure:has( > :is(a, div).image2-offset-left),
+  .typography.editor .captioned-image-container figure:has( > :is(a, div).image2-offset-left) {
+    margin-left: var(--image-offset-margin);
+  }
+  .typography .captioned-image-container figure:has( > :is(a, div).image2-offset-right),
+  .typography.editor .captioned-image-container figure:has( > :is(a, div).image2-offset-right) {
+    margin-right: var(--image-offset-margin);
+  }
+}
+@media (max-width: 1024px) {
+  .typography,
+  .typography.editor {
+    /* Disable offset on mobile/tablet */
+  }
+  .typography .captioned-image-container figure:has( > :is(a, div).image2-align-left),
+  .typography.editor .captioned-image-container figure:has( > :is(a, div).image2-align-left),
+  .typography .captioned-image-container figure:has( > :is(a, div).image2-align-right),
+  .typography.editor .captioned-image-container figure:has( > :is(a, div).image2-align-right) {
+    float: none;
+    margin: 1em auto;
+    max-width: 100%;
+    width: auto;
+    padding: 0;
+  }
+  .typography .captioned-image-container figure:has( > :is(a, div).image2-align-left.thefp),
+  .typography.editor .captioned-image-container figure:has( > :is(a, div).image2-align-left.thefp),
+  .typography .captioned-image-container figure:has( > :is(a, div).image2-align-right.thefp),
+  .typography.editor .captioned-image-container figure:has( > :is(a, div).image2-align-right.thefp) {
+    margin: 1em auto;
+  }
+  .typography .captioned-image-container figure:has( > :is(a, div).image2-offset-left),
+  .typography.editor .captioned-image-container figure:has( > :is(a, div).image2-offset-left),
+  .typography .captioned-image-container figure:has( > :is(a, div).image2-offset-right),
+  .typography.editor .captioned-image-container figure:has( > :is(a, div).image2-offset-right) {
+    margin: 1em auto;
+  }
+  .typography .captioned-image-container figure:has( > :is(a, div).image2-align-left) .image2-inset,
+  .typography.editor .captioned-image-container figure:has( > :is(a, div).image2-align-left) .image2-inset,
+  .typography .captioned-image-container figure:has( > :is(a, div).image2-align-right) .image2-inset,
+  .typography.editor .captioned-image-container figure:has( > :is(a, div).image2-align-right) .image2-inset {
+    display: block;
+    justify-content: initial;
+  }
+}
+@media (max-width: 768px) {
+  .typography .markup div.sponsorship-campaign-embed,
+  .typography.editor .markup div.sponsorship-campaign-embed {
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+  .typography .markup div.sponsorship-campaign-embed:first-child,
+  .typography.editor .markup div.sponsorship-campaign-embed:first-child {
+    margin-top: 0px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .typography .markup div.youtube-overlay,
+  .typography.editor .markup div.youtube-overlay,
+  .typography .markup div.vimeo-overlay,
+  .typography.editor .markup div.vimeo-overlay {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 370px) {
+  .typography .markup div.tiktok-wrap,
+  .typography.editor .markup div.tiktok-wrap {
+    width: calc(95vw - 32px);
+    height: calc((95vw - 32px - 2px) / 0.485714);
+  }
+}
+@media screen and (max-width: 650px) {
+  .typography .markup div.embedded-publication-wrap .embedded-publication.show-subscribe,
+  .typography.editor .markup div.embedded-publication-wrap .embedded-publication.show-subscribe {
+    padding: 24px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .typography .markup div.subscription-widget-wrap .subscription-widget.show-subscribe,
+  .typography.editor .markup div.subscription-widget-wrap .subscription-widget.show-subscribe,
+  .typography .markup div.subscription-widget-wrap-editor .subscription-widget.show-subscribe,
+  .typography.editor .markup div.subscription-widget-wrap-editor .subscription-widget.show-subscribe,
+  .typography .markup div.captioned-button-wrap .subscription-widget.show-subscribe,
+  .typography.editor .markup div.captioned-button-wrap .subscription-widget.show-subscribe {
+    padding: 0px 24px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .typography .markup div.subscription-widget-wrap .subscription-widget.show-subscribe .subscription-widget-subscribe .button,
+  .typography.editor .markup div.subscription-widget-wrap .subscription-widget.show-subscribe .subscription-widget-subscribe .button,
+  .typography .markup div.subscription-widget-wrap-editor .subscription-widget.show-subscribe .subscription-widget-subscribe .button,
+  .typography.editor .markup div.subscription-widget-wrap-editor .subscription-widget.show-subscribe .subscription-widget-subscribe .button,
+  .typography .markup div.captioned-button-wrap .subscription-widget.show-subscribe .subscription-widget-subscribe .button,
+  .typography.editor .markup div.captioned-button-wrap .subscription-widget.show-subscribe .subscription-widget-subscribe .button {
+    padding: 10px 12px;
+    min-width: 110px;
+  }
+}
+@media (max-width: 650px) {
+  .typography .markup .twitter-embed,
+  .typography.editor .markup .twitter-embed,
+  .typography .markup .tweet,
+  .typography.editor .markup .tweet {
+    padding: 12px;
+  }
+}
+@media (max-width: 650px) {
+  .typography .markup .twitter-embed .tweet-text,
+  .typography.editor .markup .twitter-embed .tweet-text,
+  .typography .markup .tweet .tweet-text,
+  .typography.editor .markup .tweet .tweet-text {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+@media (max-width: 650px) {
+  .typography .markup .twitter-embed .tweet-photos-container.two,
+  .typography.editor .markup .twitter-embed .tweet-photos-container.two,
+  .typography .markup .tweet .tweet-photos-container.two,
+  .typography.editor .markup .tweet .tweet-photos-container.two,
+  .typography .markup .twitter-embed .tweet-photos-container.three,
+  .typography.editor .markup .twitter-embed .tweet-photos-container.three,
+  .typography .markup .tweet .tweet-photos-container.three,
+  .typography.editor .markup .tweet .tweet-photos-container.three,
+  .typography .markup .twitter-embed .tweet-photos-container.four,
+  .typography.editor .markup .twitter-embed .tweet-photos-container.four,
+  .typography .markup .tweet .tweet-photos-container.four,
+  .typography.editor .markup .tweet .tweet-photos-container.four {
+    height: 200px;
+  }
+}
+@media (max-width: 650px) {
+  .typography .markup .twitter-embed a.expanded-link .expanded-link-img,
+  .typography.editor .markup .twitter-embed a.expanded-link .expanded-link-img,
+  .typography .markup .tweet a.expanded-link .expanded-link-img,
+  .typography.editor .markup .tweet a.expanded-link .expanded-link-img {
+    max-height: 180px;
+  }
+}
+@media (max-width: 650px) {
+  .typography .markup .twitter-embed a.expanded-link .expanded-link-description,
+  .typography.editor .markup .twitter-embed a.expanded-link .expanded-link-description,
+  .typography .markup .tweet a.expanded-link .expanded-link-description,
+  .typography.editor .markup .tweet a.expanded-link .expanded-link-description {
+    display: none;
+  }
+}
+@media screen and (max-width: 650px) {
+  .typography .markup .apple-podcast-container,
+  .typography.editor .markup .apple-podcast-container {
+    width: unset;
+  }
+}
+@media (max-width: 420px) {
+  .typography .markup .install-substack-app-embed img.install-substack-app-embed-img,
+  .typography.editor .markup .install-substack-app-embed img.install-substack-app-embed-img {
+    margin: 0 auto 16px auto;
+  }
+}
+@media (max-width: 420px) {
+  .typography .markup .install-substack-app-embed .install-substack-app-embed-text,
+  .typography.editor .markup .install-substack-app-embed .install-substack-app-embed-text {
+    margin: 0 0 12px 0;
+    max-width: 100%;
+    width: auto;
+    text-align: center;
+  }
+}
+@media (max-width: 420px) {
+  .typography .markup .install-substack-app-embed .install-substack-app-embed-link,
+  .typography.editor .markup .install-substack-app-embed .install-substack-app-embed-link {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 481px) {
+  .share-button-container {
+    height: 38px;
+  }
+}
+@media screen and (min-width: 481px) {
+  .share-button-container a.comment {
+    height: 38px;
+    line-height: 38px;
+    padding-right: 10px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .share-button-container .separator {
+    display: block;
+    margin: 0;
+    height: 8px;
+    border-left: none;
+  }
+}
+@media screen and (max-width: 480px) {
+  .share-button-container a.share.first img {
+    padding-left: 0;
+  }
+}
+@media screen and (min-width: 481px) {
+  .share-button-container a.mobile {
+    display: none !important;
+  }
+}
+@media screen and (min-width: 541px) {
+  .settings-add-pub-modal-wrapper .container .add-recommending-pub-modal-container {
+    padding: 36px;
+    height: 680px;
+  }
+}
+@media screen and (min-width: 541px) {
+  .settings-add-pub-modal-wrapper .container .add-recommending-pub-modal-container .footer {
+    position: absolute;
+    bottom: 36px;
+    margin: 0px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .header-anchor-parent {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .post {
+    padding: 16px 0 0 0;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post .post-header .post-label {
+    margin-top: 8px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post .post-header .meta-author-wrap.alternative-meta .meta-right-column .post-meta {
+    margin-top: 6px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post .footer-facepile-container {
+    height: 64px;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post .post-footer.use-separators {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post .post-footer.next-prev {
+    height: 64px;
+    justify-content: space-between;
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post-contributor-footer .post-contributor-bio-table {
+    display: block;
+  }
+  .post-contributor-footer .post-contributor-bio-table-row {
+    display: flex;
+    flex-direction: row;
+  }
+  .post-contributor-footer .post-contributor-bio-userhead-cell,
+  .post-contributor-footer .post-contributor-bio-body-cell {
+    display: block;
+  }
+  .post-contributor-footer .post-contributor-bio-body-cell {
+    flex-grow: 1;
+  }
+  .post-contributor-footer .post-contributor-bio-body-table {
+    display: block;
+  }
+  .post-contributor-footer .post-contributor-bio-body-table-row {
+    display: block;
+  }
+  .post-contributor-footer .post-contributor-bio-copy-cell,
+  .post-contributor-footer .post-contributor-bio-controls-cell {
+    display: block;
+  }
+  .post-contributor-footer .post-contributor-bio-copy-cell {
+    margin: 0 0 16px 0;
+  }
+  .post-contributor-footer .post-contributor-bio-controls-cell {
+    width: auto;
+  }
+  .post-contributor-footer .post-contributor-bio-controls {
+    margin: auto;
+  }
+  .post-contributor-footer .post-contributor-bio-controls .button.primary {
+    width: 100%;
+  }
+  .post-contributor-footer .post-contributor-bio-text {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .post-silhouette {
+    padding: 32px 0;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post-silhouette .post-silhouette-title {
+    margin-top: 10.44225025px;
+    height: 120px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post-silhouette .post-silhouette-meta {
+    width: 75%;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post-silhouette .post-silhouette-meta.with-byline-image {
+    margin: 20px 0;
+  }
+}
+@media screen and (max-width: 650px) {
+  .use-theme-bg .post-meta.alternative-meta .post-meta-item,
+  .post-meta.alternative-meta .post-meta-item {
+    padding-right: 16px;
+  }
+}
+@media screen and (max-width: 370px) {
+  .use-theme-bg .post-meta.alternative-meta .post-meta-item,
+  .post-meta.alternative-meta .post-meta-item {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .use-theme-bg .post-meta.alternative-meta .post-meta-item.guest-author-publication,
+  .post-meta.alternative-meta .post-meta-item.guest-author-publication {
+    display: none;
+  }
+}
+@media screen and (max-width: 370px) {
+  .post-meta .post-meta-item .post-meta-button {
+    height: 36px !important;
+    /* important to override in-line height style on emails */
+  }
+  .post-meta .post-meta-item .post-meta-button .meta-button-label {
+    display: none;
+  }
+  .post-meta .post-meta-item .post-meta-button > svg {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 370px) {
+  .post-meta .post-meta-item {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post .floating-subscribe-button {
+    bottom: 20px;
+    right: 20px;
+  }
+}
+@media (max-width: 1024px) {
+  body .pullquote-align-left,
+  body .pullquote-align-right,
+  body .pullquote-align-wide,
+  body .pullquote-align-center {
+    float: none;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  body .markup table.image-wrapper img,
+  body .markup table.kindle-wrapper img {
+    max-width: 550px;
+  }
+}
+@media (min-width: 1024px) {
+  body:not(:has(#toc)) .captioned-image-container figure:has( > :is(a, div).image2-offset-left) {
+    margin-left: var(--image-offset-margin);
+  }
+  body:not(:has(#toc)) .captioned-image-container figure:has( > :is(a, div).image2-offset-right) {
+    margin-right: var(--image-offset-margin);
+  }
+}
+@media (min-width: 1300px) {
+  body .captioned-image-container figure:has( > :is(a, div).image2-offset-left) {
+    margin-left: var(--image-offset-margin);
+  }
+  body .captioned-image-container figure:has( > :is(a, div).image2-offset-right) {
+    margin-right: var(--image-offset-margin);
+  }
+}
+@media (max-width: 1024px) {
+  body {
+    /* Disable offset on mobile/tablet */
+  }
+  body .captioned-image-container figure:has( > :is(a, div).image2-align-left),
+  body .captioned-image-container figure:has( > :is(a, div).image2-align-right) {
+    float: none;
+    margin: 1em auto;
+    max-width: 100%;
+    width: auto;
+    padding: 0;
+  }
+  body .captioned-image-container figure:has( > :is(a, div).image2-align-left.thefp),
+  body .captioned-image-container figure:has( > :is(a, div).image2-align-right.thefp) {
+    margin: 1em auto;
+  }
+  body .captioned-image-container figure:has( > :is(a, div).image2-offset-left),
+  body .captioned-image-container figure:has( > :is(a, div).image2-offset-right) {
+    margin: 1em auto;
+  }
+  body .captioned-image-container figure:has( > :is(a, div).image2-align-left) .image2-inset,
+  body .captioned-image-container figure:has( > :is(a, div).image2-align-right) .image2-inset {
+    display: block;
+    justify-content: initial;
+  }
+}
+@media (max-width: 768px) {
+  body .markup div.sponsorship-campaign-embed {
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+  body .markup div.sponsorship-campaign-embed:first-child {
+    margin-top: 0px;
+  }
+}
+@media screen and (max-width: 650px) {
+  body .markup div.youtube-overlay,
+  body .markup div.vimeo-overlay {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 370px) {
+  body .markup div.tiktok-wrap {
+    width: calc(95vw - 32px);
+    height: calc((95vw - 32px - 2px) / 0.485714);
+  }
+}
+@media screen and (max-width: 650px) {
+  body .markup div.embedded-publication-wrap .embedded-publication.show-subscribe {
+    padding: 24px;
+  }
+}
+@media screen and (max-width: 650px) {
+  body .markup div.subscription-widget-wrap .subscription-widget.show-subscribe,
+  body .markup div.subscription-widget-wrap-editor .subscription-widget.show-subscribe,
+  body .markup div.captioned-button-wrap .subscription-widget.show-subscribe {
+    padding: 0px 24px;
+  }
+}
+@media screen and (max-width: 650px) {
+  body .markup div.subscription-widget-wrap .subscription-widget.show-subscribe .subscription-widget-subscribe .button,
+  body .markup div.subscription-widget-wrap-editor .subscription-widget.show-subscribe .subscription-widget-subscribe .button,
+  body .markup div.captioned-button-wrap .subscription-widget.show-subscribe .subscription-widget-subscribe .button {
+    padding: 10px 12px;
+    min-width: 110px;
+  }
+}
+@media (max-width: 650px) {
+  body .markup .twitter-embed,
+  body .markup .tweet {
+    padding: 12px;
+  }
+}
+@media (max-width: 650px) {
+  body .markup .twitter-embed .tweet-text,
+  body .markup .tweet .tweet-text {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+@media (max-width: 650px) {
+  body .markup .twitter-embed .tweet-photos-container.two,
+  body .markup .tweet .tweet-photos-container.two,
+  body .markup .twitter-embed .tweet-photos-container.three,
+  body .markup .tweet .tweet-photos-container.three,
+  body .markup .twitter-embed .tweet-photos-container.four,
+  body .markup .tweet .tweet-photos-container.four {
+    height: 200px;
+  }
+}
+@media (max-width: 650px) {
+  body .markup .twitter-embed a.expanded-link .expanded-link-img,
+  body .markup .tweet a.expanded-link .expanded-link-img {
+    max-height: 180px;
+  }
+}
+@media (max-width: 650px) {
+  body .markup .twitter-embed a.expanded-link .expanded-link-description,
+  body .markup .tweet a.expanded-link .expanded-link-description {
+    display: none;
+  }
+}
+@media screen and (max-width: 650px) {
+  body .markup .apple-podcast-container {
+    width: unset;
+  }
+}
+@media (max-width: 420px) {
+  body .markup .install-substack-app-embed img.install-substack-app-embed-img {
+    margin: 0 auto 16px auto;
+  }
+}
+@media (max-width: 420px) {
+  body .markup .install-substack-app-embed .install-substack-app-embed-text {
+    margin: 0 0 12px 0;
+    max-width: 100%;
+    width: auto;
+    text-align: center;
+  }
+}
+@media (max-width: 420px) {
+  body .markup .install-substack-app-embed .install-substack-app-embed-link {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 500px) {
+  body .header a.logo {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+  }
+}
+@media screen and (max-width: 420px) {
+  body .subscription-receipt table:first-of-type .subscription-amount .subscription-discount {
+    width: 72px !important;
+  }
+}
+@media screen and (min-width: 481px) {
+  body .share-button-container {
+    height: auto;
+  }
+}
+@media screen and (max-width: 480px) {
+  body .share-button-container .separator {
+    display: block !important;
+    margin: 0 !important;
+    height: 8px !important;
+    border-left: none !important;
+  }
+}
+@media screen and (max-width: 650px) {
+  .digest .item .post-meta-item.audience {
+    display: none;
+  }
+}
+@media screen and (min-width: 500px) {
+  .digest-publication .logo img {
+    width: 42px;
+    height: 42px;
+    border-radius: 8px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .comments-page .container .comment-list .collapsed-reply {
+    margin-left: calc(10 + 32px - 24px);
+  }
+}
+@media screen and (max-width: 650px) {
+  .comment > .comment-list {
+    padding-left: 24px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .finish-magic-login-modal .modal-content .container {
+    padding: 24px 0;
+  }
+}
+@media (max-width: 650px) {
+  .reader2-text-b3 {
+    line-height: 24px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .reader2-text-h4 {
+    line-height: 24px;
+  }
+}
+@media screen and (min-width: 541px) {
+  .user-profile-modal {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .subscribe-widget form.form .sideBySideWrap button.rightButton {
+    padding: 10px 12px;
+  }
+}
+@media screen and (min-width: 541px) {
+  .pub-icon:hover .logo-hover,
+  .feed-item-icon:hover .logo-hover {
+    display: block;
+  }
+}
+@media screen and (max-width: 650px) {
+  .post-ufi.single-full-width-button .post-ufi-button-wrapper {
+    width: 100%;
+    padding: 16px;
+  }
+  .post-ufi.single-full-width-button .post-ufi-button-wrapper:empty {
+    display: none;
+  }
+  .post-ufi.single-full-width-button .post-ufi-button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  .file-embed-wrapper {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .file-embed-wrapper-editor {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .file-embed-wrapper-editor:active {
+    padding: 0;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .file-embed-button.wide,
+  .file-embed-error-button.wide {
+    display: none;
+  }
+}
+@media only screen and (min-width: 630px) {
+  .file-embed-button.narrow,
+  .file-embed-error-button.narrow {
+    display: none;
+  }
+}
+@media screen and (min-width: 541px) {
+  .audio-player-wrapper .audio-player {
+    min-width: 500px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .audio-player-wrapper .audio-player .audio-player-progress {
+    border-left-width: 16px;
+    border-right-width: 16px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .audio-player-wrapper .audio-player .audio-player-progress .audio-player-progress-bar .audio-player-progress-bar-popup {
+    top: -54px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .audio-player-wrapper-fancy .audio-player .audio-player-progress {
+    border-left-width: 16px;
+    border-right-width: 16px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .audio-player-wrapper-fancy .audio-player .audio-player-progress .audio-player-progress-bar .audio-player-progress-bar-popup {
+    top: -54px;
+  }
+}
+@media (min-width: 250px) {
+  .audio-player-wrapper-fancy .audio-player {
+    padding: 32px;
+  }
+  .audio-player-wrapper-fancy .audio-player .btn-group {
+    display: flex;
+  }
+  .audio-player-wrapper-fancy .audio-player .btn-group .button:last-of-type {
+    display: block;
+  }
+}
+@media (min-width: 300px) {
+  .audio-player-wrapper-fancy .audio-player .btn-group {
+    display: block;
+  }
+  .audio-player-wrapper-fancy .audio-player .btn-group .button:first-of-type {
+    display: block;
+  }
+}
+@media (min-width: 350px) {
+  .audio-player-wrapper-fancy .audio-player .audio-player-substack-logo {
+    display: block;
+  }
+  .audio-player-wrapper-fancy .audio-player .audio-player-title {
+    margin-top: 16px;
+  }
+  .audio-player-wrapper-fancy .audio-player .audio-player-hero-image-container {
+    padding-top: 15%;
+    width: 15%;
+    display: block;
+  }
+  .audio-player-wrapper-fancy .audio-player .btn-group .button:first-of-type {
+    display: block;
+  }
+  .audio-player-wrapper-fancy .audio-player .audio-player-substack-logo {
+    display: block;
+  }
+}
+@media (min-width: 350px) {
+  .audio-player-wrapper-fancy .audio-player .audio-player-hero-image-container {
+    padding-top: 25%;
+    width: 25%;
+    display: block;
+  }
+  .audio-player-wrapper-fancy .audio-player .btn-group {
+    display: flex;
+  }
+  .audio-player-wrapper-fancy .audio-player .btn-group .button:first-of-type {
+    display: block;
+  }
+}
+@media (min-width: 400px) {
+  .audio-player-wrapper-fancy .audio-player .audio-player-hero-image-container {
+    padding-top: 40%;
+    width: 40%;
+  }
+}
+@media (max-width: 400px) {
+  .audio-player-wrapper-fancy .audio-player .btn-group {
+    margin-top: 12px;
+  }
+  .audio-player-wrapper-fancy .audio-player .btn-group .button {
+    font-size: 13px;
+    padding: 6px 12px;
+    height: auto;
+    margin-top: 10px;
+  }
+}
+@media (min-width: 600px) {
+  .audio-player-wrapper-fancy .audio-player .audio-player-hero-image-container {
+    padding-top: 55%;
+    width: 55%;
+  }
+}
+@media (max-width: 650px) {
+  .poll-editor-modal {
+    min-width: calc(100% - 20px);
+  }
+}
+@media (max-width: 750px) {
+  .poll-embed .poll-anchor-target .poll-anchor-copy-button {
+    left: 8px;
+    top: 45px;
+  }
+}</style></head><body class="email-body" style="font-kerning: auto;--image-offset-margin: -120px;"><img src="https://eotrx.substackcdn.com/o/89a878108523d0b9/p.gif?token=eyJtIjoiPDIwMjYxMDE5MTEwMzQ1LjMuMzJjMjkwNGZiNjVhMjkzN0BtZzEuc3Vic3RhY2suY29tPiIsInUiOjEwNTE4NjQ3LCJyIjoiYmVub2l0Y0BnbWFpbC5jb20iLCJkIjoibWcxLnN1YnN0YWNrLmNvbSIsInAiOjIyMDkyODc3NCwidCI6Im5ld3NsZXR0ZXIiLCJhIjoib25seV9wYWlkIiwicyI6MjM1NTAyNSwiYyI6InBvc3QiLCJmIjpmYWxzZSwieiI6IiIsInBvc2l0aW9uIjoidG9wIiwiaWF0IjoxNzkyNDA4MjUyLCJleHAiOjE3OTUwMDAyNTIsImlzcyI6InB1Yi0wIiwic3ViIjoiZW8ifQ.Lb2xmOVC88DSPeB-AXQSlAUjYp3hSWRQWFQrxAxy18Y" alt="" width="1" height="1" border="0" style="height:1px !important;width:1px !important;border-width:0 !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:0 !important;margin-left:0 !important;padding-top:0 !important;padding-bottom:0 !important;padding-right:0 !important;padding-left:0 !important;"/><div class="preview" style="display:none;font-size:1px;color:#333333;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;">How &#8220;You Can See Everything&#8221; frames seemingly unhealthy relationships that people nevertheless choose for themselves.</div><div class="preview" style="display:none;font-size:1px;color:#333333;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;">&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;&#847; &nbsp; &#8199; &#173;</div><table class="email-body-container" role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td></td><td class="content" width="550"></td><td></td></tr><tr><td></td><td class="content" width="550" align="left"><div style="font-size: 16px;line-height: 26px;max-width: 550px;width: 100%;margin: 0 auto;overflow-wrap: break-word;"><table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="right" style="height:20px;"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="vertical-align:middle;"><span class="pencraft pc-reset reset-PDs18X pencraft color-secondary-B3TpYa font-text-a4IB2X size-13-yQMlsX" style="list-style: none;text-decoration: unset;color: rgb(119,119,119);margin: 0;font-size: 13px;line-height: 20px;font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';"><a class="pencraft color-secondary-B3TpYa decoration-underline-JhbQFe" href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly93d3cuY2FydG9vbnNoYXRlaGVyLmNvbS9wL2lzLWl0LXRveGljLW9yLWlzLXRoaXMtd2hhdC10aGV5P3V0bV9jYW1wYWlnbj1lbWFpbC1wb3N0JnI9NjlnOG4mdG9rZW49ZXlKMWMyVnlYMmxrSWpveE1EVXhPRFkwTnl3aWNHOXpkRjlwWkNJNk1qSXdPVEk0TnpjMExDSnBZWFFpT2pFM09USTBNRGd5TlRJc0ltVjRjQ0k2TVRjNU5UQXdNREkxTWl3aWFYTnpJam9pY0hWaUxUSXpOVFV3TWpVaUxDSnpkV0lpT2lKd2IzTjBMWEpsWVdOMGFXOXVJbjAudDFpWlQwMG05RWNkbF93WXM4eTFOYW1Uelp2czdTOWRmX2pqRWN0YmZvdyIsInAiOjIyMDkyODc3NCwicyI6MjM1NTAyNSwiZiI6ZmFsc2UsInUiOjEwNTE4NjQ3LCJpYXQiOjE3OTI0MDgyNTIsImV4cCI6MjEwNzk4NDI1MiwiaXNzIjoicHViLTAiLCJzdWIiOiJsaW5rLXJlZGlyZWN0In0.bNy2MhwO3x34qZogzruu9VCYA_jRq9uLJWia117kPo0?" style="color: rgb(119,119,119);-webkit-text-decoration-line: underline;text-decoration-line: underline;">View in browser</a></span></td></tr></tbody></table></td></tr></tbody></table><table class="header graphic-header" role="presentation" style="border-spacing: 0;padding: 16px 0 32px;"><tbody><tr><td align="center" style="text-align: center;padding: 0;"><a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly93d3cuY2FydG9vbnNoYXRlaGVyLmNvbS9wL2lzLWl0LXRveGljLW9yLWlzLXRoaXMtd2hhdC10aGV5P3V0bV9jYW1wYWlnbj1lbWFpbC1oYWxmLXBvc3Qmcj02OWc4biZ0b2tlbj1leUoxYzJWeVgybGtJam94TURVeE9EWTBOeXdpY0c5emRGOXBaQ0k2TWpJd09USTROemMwTENKcFlYUWlPakUzT1RJME1EZ3lOVElzSW1WNGNDSTZNVGM1TlRBd01ESTFNaXdpYVhOeklqb2ljSFZpTFRJek5UVXdNalVpTENKemRXSWlPaUp3YjNOMExYSmxZV04wYVc5dUluMC50MWlaVDAwbTlFY2RsX3dZczh5MU5hbVR6WnZzN1M5ZGZfampFY3RiZm93IiwicCI6MjIwOTI4Nzc0LCJzIjoyMzU1MDI1LCJmIjpmYWxzZSwidSI6MTA1MTg2NDcsImlhdCI6MTc5MjQwODI1MiwiZXhwIjoyMTA3OTg0MjUyLCJpc3MiOiJwdWItMCIsInN1YiI6ImxpbmstcmVkaXJlY3QifQ.OJtOyiol4WPtCHe7b-LkfMdFq9Vqv8m-X9joec1m6h0?"><img class="header-image" role="presentation" width="550" height="110" src="https://substackcdn.com/image/fetch/$s_!DrZW!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F9d0e3a2c-4bc9-46d6-ac2f-0d3a74605874_1100x220.png" style="border: none !important;vertical-align: middle;max-width: 550px;display: block;margin: 0 auto;height: auto;width: 100%;"></a></td></tr></tbody></table><div class="post typography" dir="auto" style="--image-offset-margin: -120px;padding: 32px 0 0 0;font-size: 16px;line-height: 26px;"><div class="post-header" role="region" aria-label="Post header" style="font-size: 16px;line-height: 26px;"><h1 class="post-title published title-X77sOw" dir="auto" style="direction: auto;text-align: start;unicode-bidi: isolate;color: rgb(54,55,55);overflow-wrap: anywhere;word-break: normal;font-family: 'Instrument Serif',sans-serif;font-weight: 400;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: antialiased;-webkit-appearance: optimizelegibility;-moz-appearance: optimizelegibility;appearance: optimizelegibility;margin: 0;line-height: 36px;font-size: 32px;"><a href="https://substack.com/app-link/post?publication_id=2355025&post_id=220928774&utm_source=post-email-title&utm_campaign=email-post-title&isFreemail=false&r=69g8n&token=eyJ1c2VyX2lkIjoxMDUxODY0NywicG9zdF9pZCI6MjIwOTI4Nzc0LCJpYXQiOjE3OTI0MDgyNTIsImV4cCI6MTc5NTAwMDI1MiwiaXNzIjoicHViLTIzNTUwMjUiLCJzdWIiOiJwb3N0LXJlYWN0aW9uIn0.t1iZT00m9Ecdl_wYs8y1NamTzZvs7S9df_jjEctbfow" style="color: rgb(54,55,55);text-decoration: none;">Is It Toxic, or Is This What They Both Want?</a></h1><h3 class="subtitle subtitle-HEEcLo" dir="auto" style="direction: auto;text-align: start;unicode-bidi: isolate;font-family: 'SF Pro Display',-apple-system-headline,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight: normal;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: antialiased;-webkit-appearance: optimizelegibility;-moz-appearance: optimizelegibility;appearance: optimizelegibility;margin: 4px 0 0;color: #777777;overflow-wrap: anywhere;word-break: normal;line-height: 24px;font-size: 18px;margin-top: 12px;">How &#8220;You Can See Everything&#8221; frames seemingly unhealthy relationships that people nevertheless choose for themselves.</h3><table class="post-meta" role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="margin: 1em 0;height: 20px;align-items: center;"><tbody><tr><td><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="vertical-align:middle;"><div class="pencraft pc-reset color-primary-ECDxTd line-height-20-_MEacI font-meta-Wq5ZQP size-11-gJkq5q weight-medium-Hv9lSX transform-uppercase-LYgH6s reset-PDs18X meta-SjvJkP custom-css-email-post-author" style="list-style: none;font-size: 11px;line-height: 20px;text-decoration: unset;color: rgb(54,55,55);margin: 0;font-family: 'SF Compact',-apple-system,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight: 500;text-transform: uppercase;letter-spacing: .2px;"><a class="pencraft pc-reset color-primary-ECDxTd line-height-20-_MEacI font-meta-Wq5ZQP size-11-gJkq5q weight-medium-Hv9lSX transform-uppercase-LYgH6s reset-PDs18X meta-SjvJkP" style="list-style: none;color: rgb(54,55,55);margin: 0;font-size: 11px;line-height: 20px;font-family: 'SF Compact',-apple-system,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight: 500;text-transform: uppercase;letter-spacing: .2px;text-decoration: none" href="https://substack.com/@cartoonshateher">Cartoons Hate Her</a></div></td></tr></tbody></table></td></tr><tr><td><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="vertical-align:middle;"><div class="pencraft pc-reset color-secondary-B3TpYa line-height-20-_MEacI font-meta-Wq5ZQP size-11-gJkq5q weight-medium-Hv9lSX transform-uppercase-LYgH6s reset-PDs18X meta-SjvJkP" style="list-style: none;font-size: 11px;line-height: 20px;text-decoration: unset;color: rgb(119,119,119);margin: 0;font-family: 'SF Compact',-apple-system,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight: 500;text-transform: uppercase;letter-spacing: .2px;"><time datetime="2026-10-19T11:03:44.693Z">Oct 19</time></div></td><td width="4" style="min-width:4px;"></td><td style="vertical-align:middle;"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="vertical-align:middle;"><div class="pencraft pc-reset color-secondary-B3TpYa line-height-20-_MEacI font-meta-Wq5ZQP size-11-gJkq5q weight-medium-Hv9lSX transform-uppercase-LYgH6s reset-PDs18X meta-SjvJkP" style="list-style: none;font-size: 11px;line-height: 20px;text-decoration: unset;color: rgb(119,119,119);margin: 0;font-family: 'SF Compact',-apple-system,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight: 500;text-transform: uppercase;letter-spacing: .2px;">&#8729;</div></td><td width="4" style="min-width:4px;"></td><td style="vertical-align:middle;"><div class="pencraft pc-reset color-paid-k5VoWQ line-height-20-_MEacI font-meta-Wq5ZQP size-11-gJkq5q weight-medium-Hv9lSX transform-uppercase-LYgH6s reset-PDs18X meta-SjvJkP" translated="" style="list-style: none;font-size: 11px;line-height: 20px;text-decoration: unset;color: rgb(94,73,217);margin: 0;font-family: 'SF Compact',-apple-system,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight: 500;text-transform: uppercase;letter-spacing: .2px;">Paid</div></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></td><td align="right"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="vertical-align:middle;"><a href="https://substack.com/@cartoonshateher"><img class="custom-css-email-avatar avatar-QIQ5yR" src="https://substackcdn.com/image/fetch/$s_!vKby!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb82249be-bdc7-44cd-8d10-c283af9b96b5_400x400.jpeg" style="box-sizing: border-box;max-width: 550px;border: none;vertical-align: middle;width: 40px;height: 40px;min-width: 40px;min-height: 40px;object-fit: cover;margin: 0px;display: inline;border-radius: 50%" width="40" height="40"></a></td></tr></tbody></table></td></tr></tbody></table><table class="email-ufi-2-top" role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="border-top: 1px solid rgb(0,0,0,.1);border-bottom: 1px solid rgb(0,0,0,.1);min-width: 100%;"><tbody><tr height="16"><td height="16" style="font-size:0px;line-height:0;">&nbsp;</td></tr><tr><td><table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="vertical-align:middle;"><table role="presentation" width="38" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="center"><a class="email-icon-button" href="https://substack.com/app-link/post?publication_id=2355025&post_id=220928774&utm_source=substack&isFreemail=false&submitLike=true&token=eyJ1c2VyX2lkIjoxMDUxODY0NywicG9zdF9pZCI6MjIwOTI4Nzc0LCJyZWFjdGlvbiI6IuKdpCIsImlhdCI6MTc5MjQwODI1MiwiZXhwIjoxNzk1MDAwMjUyLCJpc3MiOiJwdWItMjM1NTAyNSIsInN1YiI6InJlYWN0aW9uIn0.eMMkZJFP2QF1KqxqZCOLiYfYNgWdkONkysOcyRVakxk&utm_medium=email&utm_campaign=email-reaction&r=69g8n" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;font-weight: 500;border: 1px solid rgb(0,0,0,.1);border-radius: 9999px;text-transform: uppercase;font-size: 12px;line-height: 1;padding: 9px 0;text-decoration: none;color: rgb(119,119,119);min-width: 38px;box-sizing: border-box;width: 38px"><img class="icon" src="https://substackcdn.com/image/fetch/$s_!PeVs!,w_36,c_scale,f_png,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Ficon%2FLucideHeart%3Fv%3D4%26height%3D36%26fill%3Dnone%26stroke%3D%2523808080%26strokeWidth%3D2" width="18" height="18" style="border: none;vertical-align: middle;max-width: 18px" alt=""></a></td></tr></tbody></table></td><td width="8" style="min-width:8px;"></td><td style="vertical-align:middle;"><table role="presentation" width="38" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="center"><a class="email-icon-button" href="https://substack.com/app-link/post?publication_id=2355025&post_id=220928774&utm_source=substack&utm_medium=email&isFreemail=false&comments=true&token=eyJ1c2VyX2lkIjoxMDUxODY0NywicG9zdF9pZCI6MjIwOTI4Nzc0LCJpYXQiOjE3OTI0MDgyNTIsImV4cCI6MTc5NTAwMDI1MiwiaXNzIjoicHViLTIzNTUwMjUiLCJzdWIiOiJwb3N0LXJlYWN0aW9uIn0.t1iZT00m9Ecdl_wYs8y1NamTzZvs7S9df_jjEctbfow&r=69g8n&utm_campaign=email-half-magic-comments&action=post-comment&utm_source=substack&utm_medium=email" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;font-weight: 500;border: 1px solid rgb(0,0,0,.1);border-radius: 9999px;text-transform: uppercase;font-size: 12px;line-height: 1;padding: 9px 0;text-decoration: none;color: rgb(119,119,119);min-width: 38px;box-sizing: border-box;width: 38px"><img class="icon" src="https://substackcdn.com/image/fetch/$s_!x1tS!,w_36,c_scale,f_png,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Ficon%2FLucideComments%3Fv%3D4%26height%3D36%26fill%3Dnone%26stroke%3D%2523808080%26strokeWidth%3D2" width="18" height="18" style="border: none;vertical-align: middle;max-width: 18px" alt=""></a></td></tr></tbody></table></td><td width="8" style="min-width:8px;"></td><td style="vertical-align:middle;"><table role="presentation" width="38" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="center"><a class="email-icon-button" href="https://substack.com/app-link/post?publication_id=2355025&post_id=220928774&utm_source=substack&utm_medium=email&utm_content=share&utm_campaign=email-share&action=share&triggerShare=true&isFreemail=false&r=69g8n&token=eyJ1c2VyX2lkIjoxMDUxODY0NywicG9zdF9pZCI6MjIwOTI4Nzc0LCJpYXQiOjE3OTI0MDgyNTIsImV4cCI6MTc5NTAwMDI1MiwiaXNzIjoicHViLTIzNTUwMjUiLCJzdWIiOiJwb3N0LXJlYWN0aW9uIn0.t1iZT00m9Ecdl_wYs8y1NamTzZvs7S9df_jjEctbfow" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;font-weight: 500;border: 1px solid rgb(0,0,0,.1);border-radius: 9999px;text-transform: uppercase;font-size: 12px;line-height: 1;padding: 9px 0;text-decoration: none;color: rgb(119,119,119);min-width: 38px;box-sizing: border-box;width: 38px"><img class="icon" src="https://substackcdn.com/image/fetch/$s_!_L14!,w_36,c_scale,f_png,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Ficon%2FLucideShare2%3Fv%3D4%26height%3D36%26fill%3Dnone%26stroke%3D%2523808080%26strokeWidth%3D2" width="18" height="18" style="border: none;vertical-align: middle;max-width: 18px" alt=""></a></td></tr></tbody></table></td><td width="8" style="min-width:8px;"></td><td style="vertical-align:middle;"><table role="presentation" width="38" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="center"><a class="email-icon-button" href="https://open.substack.com/pub/cartoonshateher/p/is-it-toxic-or-is-this-what-they?utm_source=substack&utm_medium=email&utm_campaign=email-restack-comment&action=restack-comment&r=69g8n&token=eyJ1c2VyX2lkIjoxMDUxODY0NywicG9zdF9pZCI6MjIwOTI4Nzc0LCJpYXQiOjE3OTI0MDgyNTIsImV4cCI6MTc5NTAwMDI1MiwiaXNzIjoicHViLTIzNTUwMjUiLCJzdWIiOiJwb3N0LXJlYWN0aW9uIn0.t1iZT00m9Ecdl_wYs8y1NamTzZvs7S9df_jjEctbfow&utm_source=substack&utm_medium=email" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;font-weight: 500;border: 1px solid rgb(0,0,0,.1);border-radius: 9999px;text-transform: uppercase;font-size: 12px;line-height: 1;padding: 9px 0;text-decoration: none;color: rgb(119,119,119);min-width: 38px;box-sizing: border-box;width: 38px"><img class="icon" src="https://substackcdn.com/image/fetch/$s_!ubXF!,w_36,c_scale,f_png,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Ficon%2Fnotes__NoteRestackIcon%3Fv%3D4%26height%3D36%26fill%3Dnone%26stroke%3D%2523808080%26strokeWidth%3D2%26strokeLinecap%3Dround%26strokeLinejoin%3Dround" width="18" height="18" alt="" style="max-width: 550px;border: none !important;vertical-align: middle;"></a></td></tr></tbody></table></td></tr></tbody></table></td><td align="right"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="vertical-align:middle;"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="center"><a class="email-button-outline" href="https://open.substack.com/pub/cartoonshateher/p/is-it-toxic-or-is-this-what-they?utm_source=email&redirect=app-store-no-desktop&inbox=true&utm_campaign=email-read-in-app" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;font-weight: 500;border: 1px solid rgb(0,0,0,.1);border-radius: 9999px;text-transform: uppercase;font-size: 12px;line-height: 12px;padding: 9px 14px;text-decoration: none;color: rgb(119,119,119);"><div class="email-button-spacer" style="font-size: 16px;line-height: 26px;display: inline-block;vertical-align: middle;max-width: 0;min-height: 18px;"></div><span class="email-button-text" style="vertical-align: middle;margin-right: 4px">READ IN APP</span><img class="icon text-icon" src="https://substackcdn.com/image/fetch/$s_!ET-_!,w_36,c_scale,f_png,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Ficon%2FLucideArrowUpRight%3Fv%3D4%26height%3D36%26fill%3Dnone%26stroke%3D%2523808080%26strokeWidth%3D2" width="18" height="18" style="min-width: 18px;min-height: 18px;border: none;vertical-align: middle;margin-right: 0;margin-left: 0;max-width: 18px" alt=""></a></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></td></tr><tr height="16"><td height="16" style="font-size:0px;line-height:0;">&nbsp;</td></tr></tbody></table></div></div><div class="post typography" dir="auto" style="--image-offset-margin: -120px;padding: 32px 0 0 0;font-size: 16px;line-height: 26px;"><div class="body markup" dir="auto" style="text-align: initial;font-size: 16px;line-height: 26px;width: 100%;margin-bottom: 16px;hanging-punctuation: allow-end;overflow-wrap: anywhere;word-break: break-word;"><div class="captioned-image-container-static" style="font-size: 16px;line-height: 26px;margin: 32px auto;margin-top: 0;"><figure style="width: 100%;margin: 0 auto;"><table class="image-wrapper" width="100%" border="0" cellspacing="0" cellpadding="0" data-component-name="Image2ToDOMStatic" style="mso-padding-alt: 1em 0 1.6em;"><tbody><tr><td style="text-align: center;"></td><td class="content" align="left" width="1080" style="text-align: center;"><a class="image-link" target="_blank" href="https://substack.com/redirect/cd563de8-f071-466d-9ee5-aa123f70a6f7?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="position: relative;text-decoration: underline;display: block;"><img class="wide-image" data-attrs="{&quot;src&quot;:&quot;https://substack-post-media.s3.amazonaws.com/public/images/655a9b58-5b48-4a1e-b4ba-ec0eef961064_1080x810.webp&quot;,&quot;srcNoWatermark&quot;:null,&quot;fullscreen&quot;:null,&quot;imageSize&quot;:null,&quot;height&quot;:810,&quot;width&quot;:1080,&quot;resizeWidth&quot;:null,&quot;bytes&quot;:86326,&quot;alt&quot;:null,&quot;title&quot;:null,&quot;type&quot;:&quot;image/webp&quot;,&quot;href&quot;:null,&quot;belowTheFold&quot;:false,&quot;topImage&quot;:true,&quot;internalRedirect&quot;:&quot;https://www.cartoonshateher.com/i/220928774?img=https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F655a9b58-5b48-4a1e-b4ba-ec0eef961064_1080x810.webp&quot;,&quot;isProcessing&quot;:false,&quot;align&quot;:null,&quot;offset&quot;:false}" alt="" width="550" height="412.5" src="https://substackcdn.com/image/fetch/$s_!8ryj!,w_1100,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F655a9b58-5b48-4a1e-b4ba-ec0eef961064_1080x810.webp" style="border: none !important;vertical-align: middle;display: block;-ms-interpolation-mode: bicubic;height: auto;margin-bottom: 0;width: auto !important;max-width: 100% !important;margin: 0 auto;"></a></td><td style="text-align: center;"></td></tr></tbody></table></figure></div><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;"><span>This weekend, like </span><em>any</em><span> good terminally online people, my husband and I rushed to the theater to see Nathan Fielder&#8217;s A24 documentary, </span><em>You Can See Everything</em><span>. The film actually did not make me think much about Theranos, Elizabeth Holmes&#8217; degree of guilt, or anything else in that milieu. But it did make me think about romantic relationships in general. More specifically: to what degree are people in &#8220;toxic&#8221; relationships&#8212;the kinds where all their friends think they need to be saved&#8212;actually </span><em>exactly</em><span> where they want to be? </span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;"><span>I recently </span><a href="https://substack.com/redirect/b9ed5a24-94b7-44c9-8de6-51aae4ae9d8a?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">wrote about</a><span> sex and relationships that can be consensual but still harmful if they involve manipulation or deceit. But what if someone has, for lack of a better term, consented to being manipulated? What if what looks toxic and controlling, or disrespectful and degrading to one person is another person&#8217;s bizarre ideal? And if someone&#8217;s ideal is deeply unhealthy, but they&#8217;ve chosen it with full knowledge of what it entails, how unhealthy is it really? </span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;"><span>Anyone who has seen the previews or advertisements for </span><em>You Can See Everything </em><span>knows that the film follows the month-long period before Elizabeth Holmes goes to prison, but it wasn&#8217;t until I actually saw the film that I realized the most interesting content actually occurs more than halfway through the film, </span><em>after</em><span> Holmes is in prison, courtesy of the primary antagonist of the movie: Elizabeth&#8217;s fiance and business partner Billy Evans.</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;"><strong>At this point, I should warn you that major spoilers abound, so be aware!</strong></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;"><span>Billy Evans follows what I would call the </span><em>Lifetime </em><span>movie husband plot arc (perhaps </span><em><a href="https://substack.com/redirect/d83235cc-b156-4ce3-a35b-d1449da26b86?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">The Housemaid</a></em><span> is a better comp, actually.) Initially, Billy seems too good to be true for someone with as much baggage as Elizabeth Holmes. He&#8217;s impossibly tall, handsome and Chadly, with an absolutely massive hog, which we&#8217;re all shown in what can only be described as the first Nathan Fielder jump scare. Nathan even questions him about why </span><em>he</em><span> would hitch his wagon to Elizabeth (who is almost ten years his senior, and who he met </span><em>after</em><span> all the bad press with Theranos had come out.) And I&#8217;ll admit, I was confused too! My first thought was, &#8220;Well, maybe she&#8217;s such a master manipulator that she&#8217;s scammed this poor guy too.&#8221;</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;"><span>But then we&#8217;re shown a bunch of cracks in his foundation which have us nodding and saying, &#8220;Oh, </span><em>okay</em><span>.&#8221;</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;">The first sign that something is up with Billy is when he snatches a bowl of scrambled eggs from Elizabeth&#8217;s hands and quietly admonishes her for not whisking &#8220;vigorously&#8221; enough. While he showers her with love and attention throughout the movie, things increasingly seem off. He takes a paternalistic attitude toward her, speaking for her, explaining her own comments and thoughts, and declaring that she &#8220;just thinks differently&#8221; and isn&#8217;t physically capable of understanding sarcasm or lying. He frequently talks about her like a developmentally disabled child. He abruptly shuts down interviews, often reminding Elizabeth that there&#8217;s something else she needs to be doing. At one point, he even pulls this trick with Elizabeth&#8217;s dad, who immediately capitulates to him and stops speaking. Billy&#8217;s behavior screams, at best, &#8220;has something to hide,&#8221; and at worst, &#8220;first wife&#8217;s body is in the freezer.&#8221;</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;">And yet, all we see and hear from Elizabeth herself is how happy she is with him, how special their love is, and how crazy about each other they are. </p><div class="paywall-jump" data-component-name="PaywallToDOM" style="font-size: 16px;line-height: 26px;display: none;"></div><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;">There&#8217;s no evidence that Billy is physically abusive, but at least the way the facts are presented, the audience (and Fielder, alongside his unexpected sidekick, actress Amanda Seyfried) is made to believe Elizabeth must be rescued. We find out that Billy somehow finagled power of attorney (he says Elizabeth gladly signed it over) meaning that he can tweet as her (all those wacky tweets coming from her account have been from him) often without asking her, and sometimes just making stuff up. He is making business decisions on her behalf without consulting her. He even, shockingly, creates an AI version of Elizabeth with zero guardrails, fully aware people will use it to make porn, justifying it by saying if he doesn&#8217;t control it, someone else will. He supposedly negotiates to profit off the documentary without consulting Elizabeth. And every time Nathan asks him if Elizabeth knows about these things, his response is something along the lines of, &#8220;No, but we trust each other so deeply that I don&#8217;t have to ask her.&#8221; </p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;"><span>Amanda Seyfried, who played Elizabeth in </span><em>The Dropout</em><span> and is working with Nathan Fielder to reenact the scenes that can&#8217;t be filmed, takes on a bit of a &#8220;Free Melania&#8221; stance. She explicitly says she wants to break up the marriage because she can&#8217;t stand seeing another woman be so controlled and manipulated. Nathan, who appears to care somewhat for Elizabeth, doesn&#8217;t say as much, but clearly believes Elizabeth must be informed about what her husband has done without her consent. Nathan and Amanda confront Billy in a particularly memorable dinner exchange that rapidly transitions between Billy bragging about being great at fucking to extolling the virtues of the late, great Charlie Kirk. A few minutes later in a different scene, Billy claims to have a gun on him and threatens to kill anyone who wrongs him. We are led to believe that the only reason Elizabeth is so crazy about this guy is because he&#8217;s deceived and manipulated her, and that if only she </span><em>knew</em><span> what he was really doing, she would come to her senses.</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;">After a long period of Billy attempting to block communication between Nathan and Elizabeth, Nathan finally visits her in jail. (We are only shown this part in a reenactment with Amanda Seyfried playing Elizabeth.) Nathan tells her everything he believes will shock her about Billy&#8217;s behavior, but Elizabeth doesn&#8217;t seem to care at all. When it comes to profiting off the documentary, she shrugs it off and tells him to talk to Billy about it because that&#8217;s not her area. After hearing that Billy is tweeting his own thoughts under her name and using her image for potentially-unsavory purposes, she still doesn&#8217;t seem to care. Nothing, it seems, would change her mind about Billy, and while she did not know the details of what he was doing, she appears to have consented him doing whatever he wanted, and doesn&#8217;t really care about what that might be. His statement that they just have &#8220;such a great degree of trust&#8221; that he doesn&#8217;t have to ask her is&#8230;actually true. As Nathan later discusses the interaction with Amanda Seyfried, she asks him if Elizabeth is suffering from Stockholm Syndrome. But Nathan says that all he saw was complete, undying love for Billy.</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;"><span>And as delusional as Billy sounds when he claims that Elizabeth says her legacy will be remembered as the &#8220;monument of love&#8221; she built for him (this line earned actual laughter throughout the theater) Elizabeth later echoes this sentiment </span><em>herself</em><span>. You go from saying, &#8220;Poor guy, he&#8217;s obviously being scammed&#8221; to &#8220;Poor woman, she&#8217;s obviously being controlled&#8221; to &#8220;Wow, maybe both of these people are just insane and are exactly where they want to be.&#8221;</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;">As my friend said after the movie, &#8220;This is what happens when a manipulative sub meets a stupid dom.&#8221; </p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;"><span>Maybe Billy sought out Elizabeth because he wanted someone who was half girlboss (power couple!) half submissive (he can do anything) and yet deliberately clueless&#8212;someone who he could control and who genuinely wouldn&#8217;t mind. And maybe Elizabeth sought him out because she wanted to be taken care of, to sign everything over to another person so she could dodge accountability and the burden of decision-making. Many such cases. Or maybe, given her documented accusations of abuse against her former partner, Sunny Balwani, maybe she </span><em>is</em><span> an easy target for manipulation. There&#8217;s just no way to know. Most people would say her dynamic with Billy was unhealthy, if not toxic. But if they both chose it&#8212;seemingly totally aware of everything it entailed&#8212;where can we really draw the line? How many &#8220;toxic&#8221; relationships are actually just like this, where nobody else finds the arrangement appealing except for the people in it? Where nobody actually needs to be saved or helped, no matter how weird it may look from the outside?</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;">I once knew a guy (an older friend of a friend) who was afflicted with a bizarre fetish of sorts where he loved the chase, but lost interest in a woman as soon as she returned his affections. He wanted to fall in love and get married, but doing this would require the woman actually like him back, which would have ruined the whole thing for him. Eventually, he got married to a woman who, at least from an outsider perspective, barely seemed to like him. She criticized him, was cold to him, and frequently went on vacation without him, but he enjoyed the thrill of the moments when he could, for a fleeting moment, win her over and impress her. They remained married for many years (and they are still married today.) To someone who did not know about his peculiar proclivity, they would wonder why the hell this poor guy was tolerating this kind of treatment, and when he would wake up to the fact that his wife didn&#8217;t really like him that much. But his wife not liking him was, in fact, by design. </p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;">A similar story: a woman I know has complained to me about her husband being forgetful and shitting the bed on domestic tasks. (Truly a great example for a &#8220;mental load&#8221; type article.) Every time they embark on a home improvement project together, he claims he&#8217;s going to take part, and then leaves everything up to her. Despite being the main breadwinner, he hands off all the finances to her too. I&#8217;m friends with both of them, so I&#8217;ve heard this story from two perspectives: he admits to being forgetful and out-to-lunch, but also says that every time he tries to take charge of these projects, she disagrees with his choices so he figures it&#8217;s easier not to engage. Meanwhile, she does find his behavior irritating, but once told me that she has an unusually strong preference for men who are &#8220;too chill&#8221; to make decisions. She doesn&#8217;t like men who are dominant or opinionated, and she&#8217;s always had a thing for, in her words, &#8220;the laid-back stoner type.&#8221; She even, to some extent, enjoys admonishing him, while he admits he likes having a slightly domineering wife and will endearingly call her &#8220;the boss.&#8221; I&#8217;m sure they have their problems like anyone else, but I think they chose each other for a reason and love each other very much. </p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;"><span>Plenty of people will misjudge perfectly happy (if unusual) relationships, assuming that even if the seemingly-wronged party isn&#8217;t leaving, they&#8217;ve just been manipulated into staying and can&#8217;t think straight. Yes, sometimes emotional or financial abuse can present this way, but sometimes there&#8217;s a lot more gray area where our only choice is to believe (or not believe) someone claiming to be happy. Arguably, I made this assumption with </span><a href="https://substack.com/redirect/a3350b5f-3b40-40a1-9fe3-1f3d0e74a1f2?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">Lindy West</a><span> (as did everyone else on the Internet) because her marriage (and later polycule) genuinely seemed like something she didn&#8217;t want. Eventually, she claimed she did want it, and was the happiest she&#8217;s ever been, writing about how she loved to go to sleep alone surrounded by stuffed animals while her spouses slept together in a big bed and had sex without her. This mental image still makes my skin crawl, and perhaps we were all right about Lindy West (who knows!?) but it&#8217;s </span><em>also</em><span> possible that something about this dynamic appeals to her. Low sex drive? Desire to be infantilized? Something else? If it </span><em>does</em><span> truly make her happy, West did not portray it very well in her book, because nobody inferred that. But perhaps it&#8217;s really hard to get such a point across if very few people would ever believe you, and if there is absolutely nothing you could ever say to convince people that you&#8217;re into this.</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;"><span>From the other side of the political spectrum, take </span><a href="https://substack.com/redirect/848d8be4-d274-41ad-9402-394a728a1b34?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">Ballerina Farm</a><span>, who was framed in </span><em><a href="https://substack.com/redirect/35c9ef8e-10ac-49b7-a20d-2fe987e20129?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">The Times</a></em><span> as living under the thumb of her controlling, evil husband, forced to give up her dream to be a ballerina to toil away on her farm and be, checks notes, an influencer. The supposed &#8220;facts&#8221; of her existence don&#8217;t add up (she says sometimes she passes out from exhaustion and can&#8217;t leave her bed all day, but also somehow doesn&#8217;t hire anyone to watch her nine kids!) but even then, there is no real evidence that she is being imprisoned, or that she did not make a pragmatic decision about ballet being an untenable long-term career choice. We&#8217;re supposed to assume she did not really want to have nine kids, and that her husband forced her to date him (she had previously rejected him, so he says) by trapping her on a JetBlue flight next to him (he did, in fact, pull the strings to make this happen.) But was she &#8220;trapped&#8221; or does she see this story as a romantic meet-cute? Was her initial disinterest in him (if real) </span><em>part of the whole thing</em><span>? Being played up for a reason?</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;"><span>Possibly. Ballerina Farm&#8217;s scenario reminds me of another dynamic that seems unhealthy for both people involved (but which </span><em>many</em><span> people consciously choose and play up) is the oft-repeated belief that </span><a href="https://substack.com/redirect/8476c4fa-3166-4e42-af5f-046de0688dea?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">every man is punching above his weight</a><span> and is married to a woman who barely tolerates him. This is basically what Ballerina Farm and her husband are doing, assuming she isn&#8217;t actually &#8220;trapped.&#8221; As </span><span class="mention-pnpTE1 mentionStatic-liMklk" data-component-name="MentionStatic" style="white-space: nowrap;cursor: pointer;color: #FFE460;border-radius: 4px;transition: color .25scubic-bezier(.19,1,.22,1),background-color .25scubic-bezier(.19,1,.22,1),box-shadow .25scubic-bezier(.19,1,.22,1),border .25scubic-bezier(.19,1,.22,1),border-radius .25scubic-bezier(.19,1,.22,1),opacity .25scubic-bezier(.19,1,.22,1),filter .25scubic-bezier(.19,1,.22,1),stroke .25scubic-bezier(.19,1,.22,1),transform .25scubic-bezier(.19,1,.22,1),scale .25scubic-bezier(.19,1,.22,1),outline .25scubic-bezier(.19,1,.22,1);margin: 0 -.125em;padding: 0 .125em .0625em;text-decoration: none;"><a href="https://open.substack.com/users/6230636-phoebe-maltz-bovy?utm_source=mentions" style="color: #FFE460;text-decoration: none;-webkit-text-decoration: none;">Phoebe Maltz Bovy</a></span><span> noted in her book, </span><em>The Last Straight Woman</em><span>, almost every marriage announcement in the papers involves an origin story wherein the woman is not interested in the man, is way out of the man&#8217;s league, and eventually she comes around, or in some cases is tricked into a relationship before finally breaking down and begrudgingly putting up with him while he moons over her. This is not how these couples&#8217; enemies are describing them&#8212;they are gleefully re-telling their own love stories in this horribly unflattering way! The woman being borderline-disgusted by the man appears to be a necessary facet of this narrative, which is suspiciously repeated over and over again. Perhaps the kicker, as Phoebe has pointed out, is that many of these couples are just two regular-looking people.</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;"><span>From my vantage point, this dynamic sounds annoying if not toxic. I would be aghast if my husband joked about finally tolerating me after putting up with my dorky, frumpy ass for months on end. I know it&#8217;s different for women, but I&#8217;m also pretty sure my husband would be offended if I characterized him that way. It seems downright mean-spirited! And yet, plenty of couples do it. As unappealing as it sounds to me, they are both getting something out of this ridiculous story. The woman gets to feel like the prize and gets to reassure herself that she has not done the forbidden thing of </span><a href="https://substack.com/redirect/4b24536b-98a3-42f6-9b5c-300440d59a11?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">experiencing active desire </a><span>and the man gets to feel like he accomplished something by bagging a hottie, even if he and his wife just look like a normal couple walking the aisles of Costco. </span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;"><span>Any married person reading this likely has one small detail, or even one big detail about their marriage which, if taken out of context, would cause people to declare that one or both people involved was toxic or that the entire dynamic was unhealthy. Small details can easily be interpreted in bad faith (or even just in ignorance) to make you or your spouse look completely deranged. I have, of course, run into this as a writer who is not shy about describing the dynamics in my own marriage. First of all, I think I have a pretty conventional marriage! There are no other people involved, no CNC orgies, no giant cubes where one of us gets vacuum sealed in a gimp suit and rolled around (if you know, you know.) The most out-there stuff between us is probably still far more vanilla than what you&#8217;d find in a dark romantasy TikTok goon book. I can&#8217;t even call him Daddy! Ew! He&#8217;s </span><em>someone else&#8217;s</em><span> daddy!</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;">And yet!</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;"><span>People have held up all sorts of details in my marriage as signs that something is </span><em>objectively</em><span> unhealthy. This spans the entire political and genderslop spectrum, by the way. Because I sometimes sew clothes for my husband (and because the clothes he likes are pretty colorful), I&#8217;ve been accused of deliberately making him look ridiculous as a form of mate-guarding. (The accusation that I &#8220;dress him against his will&#8221; has come up many times.) A bunch of people cooked up the idea that I enjoy </span><a href="https://substack.com/redirect/63dee506-12a2-4389-919c-62aefe286b42?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">cucking him</a><span> by posting things I&#8217;ve sewn for myself which don&#8217;t obscure my figure. When I joked that he doesn&#8217;t care if other people see me looking good while fully clothed, and in fact is flattered by the idea that people think he has an attractive wife, a new accusation came up that actually, </span><em>he</em><span> has a cuck fetish himself. Then, from what little I&#8217;ve written about being </span><a href="https://substack.com/redirect/4b24536b-98a3-42f6-9b5c-300440d59a11?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">kinda subby</a><span>, I had sex-negatives radfems on my ass for being some kind of depraved pervert whose husband &#8220;groomed&#8221; me into &#8220;extreme BDSM.&#8221; (After all, we do have a </span><a href="https://substack.com/redirect/99ce1171-b37b-4bd6-a8e1-62744b56dd47?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">two year age gap</a><span>!) And when my husband jokingly </span><a href="https://substack.com/redirect/fb40565d-599f-45dd-9a85-300d287810c1?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="color: rgb(54,55,55);text-decoration: underline;">ribs me on Substack</a><span> (something I have to approve, given that I literally own my Substack and he guest posts for me) people show up in the comments to tell me that I&#8217;m being mistreated and emotionally abused because my husband made a joke about me. </span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;"><span>Perhaps I identify with Elizabeth Holmes&#8217; side of the story here, because while my husband is nowhere near as deranged as Billy Evans, I&#8217;ve been pretty open about the fact that I gladly hand off all decisions which do not involve our children or my writing to him. When she said &#8220;Just talk to Billy about it,&#8221; I was basically doing that meme of Leonardo DiCaprio pointing at the TV. I do that all the time! This means my husband decides every vacation, every home renovation detail, and I can&#8217;t remember the last time I ordered for myself at a restaurant. Yes, really. My in-laws took me out for Chinese food when my husband was working and I just stared at the menu cluelessly like a glitching out NPC for five straight minutes before remembering I was supposed to pick something. I&#8217;m sure that this seems odd to some people, and I&#8217;m sure some might assume I&#8217;m only handing over all this decision-making power because I&#8217;ve been </span><em>intimidated</em><span> into it. (In fact, I once received a message from a female subscriber who expressed &#8220;concern&#8221; that I was referring to myself as submissive, apparently something we are not allowed to be!) But, nah, this is exactly where I want to be, and my husband is pretty happy with this setup too, even if others wouldn&#8217;t be.</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;"><span>I&#8217;ve gone far afield from Elizabeth Holmes, but without actually </span><em>being </em><span>Elizabeth or Billy, it&#8217;s impossible to really know who is being manipulated, or if anyone is being manipulated at all. Perhaps their marriage is miserable and one day Elizabeth will come out and say as much. Perhaps they&#8217;re deeply in love even if nobody else finds their marriage appealing. But the world is full of people in seemingly awful (or just weird) relationships who have nevertheless chosen these dynamics with full, informed consent, and continue to choose it every day.</span></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;"></p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;"></p><div class="digestPostEmbed-flwiST custom-css-email-digest-post-embed" data-component-name="DigestPostEmbedStatic" style="margin-bottom: 20px;padding: 0;position: relative;font-size: 16px;line-height: 26px;"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><a href="https://substack.com/redirect/8476c4fa-3166-4e42-af5f-046de0688dea?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="text-decoration: none;"><h2 class="pencraft pc-reset color-pub-primary-text-tsxVWu line-height-36-XWjwZY font-display-JL8OCo size-30-GcF1QW weight-bold-Bp7iNJ reset-PDs18X" style="list-style: none;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: antialiased;-webkit-appearance: optimizelegibility;-moz-appearance: optimizelegibility;appearance: optimizelegibility;overflow-wrap: anywhere;word-break: normal;unicode-bidi: plaintext;font-family: 'SF Pro Display',-apple-system-headline,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight: 700;margin: 0;color: #363737;line-height: 36px;font-size: 30px;text-decoration: unset;">Does Every Man Really Think His Wife is Out of His League?</h2></a></td></tr><tr><td><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="vertical-align:middle;"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="vertical-align:middle;"><div class="pencraft pc-reset color-pub-secondary-text-X0WYlZ line-height-20-_MEacI font-meta-Wq5ZQP size-11-gJkq5q weight-medium-Hv9lSX transform-uppercase-LYgH6s reset-PDs18X meta-SjvJkP" style="list-style: none;font-size: 11px;line-height: 20px;text-decoration: unset;color: #777777;margin: 0;font-family: 'SF Compact',-apple-system,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight: 500;text-transform: uppercase;letter-spacing: .2px;"><a class="inheritColor-WetTGJ" href="https://substack.com/profile/208140520-cartoons-hate-her" style="color: inherit;text-decoration: none;">Cartoons Hate Her</a></div></td><td width="4" style="min-width:4px;"></td><td style="vertical-align:middle;"><div class="pencraft pc-reset color-pub-secondary-text-X0WYlZ reset-PDs18X" style="list-style: none;font-size: 16px;line-height: 26px;text-decoration: unset;color: #777777;margin: 0;">&#183;</div></td></tr></tbody></table></td><td width="4" style="min-width:4px;"></td><td style="vertical-align:middle;"><div class="pencraft pc-reset color-pub-secondary-text-X0WYlZ line-height-20-_MEacI font-meta-Wq5ZQP size-11-gJkq5q weight-medium-Hv9lSX transform-uppercase-LYgH6s reset-PDs18X meta-SjvJkP" style="list-style: none;font-size: 11px;line-height: 20px;text-decoration: unset;color: #777777;margin: 0;font-family: 'SF Compact',-apple-system,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight: 500;text-transform: uppercase;letter-spacing: .2px;">Jun 19</div></td></tr></tbody></table></td></tr><tr><td><div class="pencraft pc-paddingTop-24 pc-reset" style="text-decoration: unset;list-style: none;padding-top: 24px;font-size: 16px;line-height: 26px;"><a href="https://substack.com/redirect/8476c4fa-3166-4e42-af5f-046de0688dea?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="text-decoration: none;"><picture><source type="image/webp" srcset="https://images.unsplash.com/photo-1580824456266-c578703e13da?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wzMDAzMzh8MHwxfHNlYXJjaHwyOHx8Y291cGxlJTIwd2VkZGluZ3xlbnwwfHx8fDE3ODEwNzMyNDB8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080 424w, https://images.unsplash.com/photo-1580824456266-c578703e13da?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wzMDAzMzh8MHwxfHNlYXJjaHwyOHx8Y291cGxlJTIwd2VkZGluZ3xlbnwwfHx8fDE3ODEwNzMyNDB8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080 848w, https://images.unsplash.com/photo-1580824456266-c578703e13da?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wzMDAzMzh8MHwxfHNlYXJjaHwyOHx8Y291cGxlJTIwd2VkZGluZ3xlbnwwfHx8fDE3ODEwNzMyNDB8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080 1272w, https://images.unsplash.com/photo-1580824456266-c578703e13da?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wzMDAzMzh8MHwxfHNlYXJjaHwyOHx8Y291cGxlJTIwd2VkZGluZ3xlbnwwfHx8fDE3ODEwNzMyNDB8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080 1300w" sizes="100vw"><img class="img-OACg1c fullWidth-Ta6aEE pencraft pc-reset" src="https://images.unsplash.com/photo-1580824456266-c578703e13da?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wzMDAzMzh8MHwxfHNlYXJjaHwyOHx8Y291cGxlJTIwd2VkZGluZ3xlbnwwfHx8fDE3ODEwNzMyNDB8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" sizes="100vw" alt="Does Every Man Really Think His Wife is Out of His League?" srcset="https://images.unsplash.com/photo-1580824456266-c578703e13da?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wzMDAzMzh8MHwxfHNlYXJjaHwyOHx8Y291cGxlJTIwd2VkZGluZ3xlbnwwfHx8fDE3ODEwNzMyNDB8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080 424w, https://images.unsplash.com/photo-1580824456266-c578703e13da?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wzMDAzMzh8MHwxfHNlYXJjaHwyOHx8Y291cGxlJTIwd2VkZGluZ3xlbnwwfHx8fDE3ODEwNzMyNDB8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080 848w, https://images.unsplash.com/photo-1580824456266-c578703e13da?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wzMDAzMzh8MHwxfHNlYXJjaHwyOHx8Y291cGxlJTIwd2VkZGluZ3xlbnwwfHx8fDE3ODEwNzMyNDB8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080 1272w, https://images.unsplash.com/photo-1580824456266-c578703e13da?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wzMDAzMzh8MHwxfHNlYXJjaHwyOHx8Y291cGxlJTIwd2VkZGluZ3xlbnwwfHx8fDE3ODEwNzMyNDB8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080 1300w" width="1300" height="650" style="text-decoration: unset;list-style: none;border: none !important;vertical-align: middle;display: block;-ms-interpolation-mode: bicubic;max-width: 100%;height: auto;margin: 0 auto;object-fit: cover;width: 100%;max-height: 325px!important;"></picture></a></div></td></tr><tr><td><a href="https://substack.com/redirect/8476c4fa-3166-4e42-af5f-046de0688dea?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="text-decoration: none;"><p class="pencraft pc-reset" style="text-decoration: unset;list-style: none;margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;"></p><p class="caption-QiPycG" style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;">Earlier, I reviewed Phoebe Maltz Bovy&#8217;s amazing book, The Last Straight Woman. While there are several really interesting themes in Phoebe&#8217;s book&#8212;primarily the shocking fact that straight women are A.) exclusively attracted to men, B.) cannot easily rid their lives of men without being very lonely (and perhaps a bit horny), there was another theme I did not cover in my review: pushing back against a culture that insists that men are ga-ga for women&#8212;especially their bodies&#8212;while women just sort of&#8230;</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;"></p></a></td></tr><tr><td><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0" style="padding-top:0px;padding-bottom:0px;"><tbody><tr><td style="vertical-align:middle;"><a class="pencraft pc-reset align-center-OkiSzE line-height-20-_MEacI font-text-a4IB2X size-13-yQMlsX weight-medium-Hv9lSX reset-PDs18X" href="https://substack.com/redirect/8476c4fa-3166-4e42-af5f-046de0688dea?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="list-style: none;color: unset;text-align: center;text-decoration: unset;margin: 0;font-size: 13px;line-height: 20px;font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight: 500;"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="vertical-align:middle;"><span class="pencraft pc-reset color-accent-ycT0qD line-height-20-_MEacI font-text-a4IB2X size-14-XNg_Ct weight-regular-CQHCni reset-PDs18X link-HREYZo" style="list-style: none;text-decoration: unset;color: rgb(255,103,25);margin: 0;font-size: 14px;line-height: 20px;font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight: 400;">Read full story</span></td></tr></tbody></table></a></td></tr></tbody></table></td></tr></tbody></table></div><div class="digestPostEmbed-flwiST custom-css-email-digest-post-embed" data-component-name="DigestPostEmbedStatic" style="padding: 0;position: relative;font-size: 16px;line-height: 26px;margin-bottom: 0;"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><a href="https://substack.com/redirect/1deb5696-ce24-4472-888f-77e31c384b92?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="text-decoration: none;"><h2 class="pencraft pc-reset color-pub-primary-text-tsxVWu line-height-36-XWjwZY font-display-JL8OCo size-30-GcF1QW weight-bold-Bp7iNJ reset-PDs18X" style="list-style: none;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: antialiased;-webkit-appearance: optimizelegibility;-moz-appearance: optimizelegibility;appearance: optimizelegibility;overflow-wrap: anywhere;word-break: normal;unicode-bidi: plaintext;font-family: 'SF Pro Display',-apple-system-headline,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight: 700;margin: 0;color: #363737;line-height: 36px;font-size: 30px;text-decoration: unset;">Women&#8217;s Attraction is &#8220;Hardwired&#8221; Too</h2></a></td></tr><tr><td><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="vertical-align:middle;"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="vertical-align:middle;"><div class="pencraft pc-reset color-pub-secondary-text-X0WYlZ line-height-20-_MEacI font-meta-Wq5ZQP size-11-gJkq5q weight-medium-Hv9lSX transform-uppercase-LYgH6s reset-PDs18X meta-SjvJkP" style="list-style: none;font-size: 11px;line-height: 20px;text-decoration: unset;color: #777777;margin: 0;font-family: 'SF Compact',-apple-system,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight: 500;text-transform: uppercase;letter-spacing: .2px;"><a class="inheritColor-WetTGJ" href="https://substack.com/profile/208140520-cartoons-hate-her" style="color: inherit;text-decoration: none;">Cartoons Hate Her</a></div></td><td width="4" style="min-width:4px;"></td><td style="vertical-align:middle;"><div class="pencraft pc-reset color-pub-secondary-text-X0WYlZ reset-PDs18X" style="list-style: none;font-size: 16px;line-height: 26px;text-decoration: unset;color: #777777;margin: 0;">&#183;</div></td></tr></tbody></table></td><td width="4" style="min-width:4px;"></td><td style="vertical-align:middle;"><div class="pencraft pc-reset color-pub-secondary-text-X0WYlZ line-height-20-_MEacI font-meta-Wq5ZQP size-11-gJkq5q weight-medium-Hv9lSX transform-uppercase-LYgH6s reset-PDs18X meta-SjvJkP" style="list-style: none;font-size: 11px;line-height: 20px;text-decoration: unset;color: #777777;margin: 0;font-family: 'SF Compact',-apple-system,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight: 500;text-transform: uppercase;letter-spacing: .2px;">Sep 14</div></td></tr></tbody></table></td></tr><tr><td><div class="pencraft pc-paddingTop-24 pc-reset" style="text-decoration: unset;list-style: none;padding-top: 24px;font-size: 16px;line-height: 26px;"><a href="https://substack.com/redirect/1deb5696-ce24-4472-888f-77e31c384b92?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="text-decoration: none;"><picture><source type="image/webp" srcset="https://substackcdn.com/image/fetch/$s_!GtKQ!,w_424,h_212,c_fill,f_webp,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F71dc614e-9644-46e6-a4fc-8a02e64931bc_1080x1024.jpeg 424w, https://substackcdn.com/image/fetch/$s_!GtKQ!,w_848,h_424,c_fill,f_webp,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F71dc614e-9644-46e6-a4fc-8a02e64931bc_1080x1024.jpeg 848w, https://substackcdn.com/image/fetch/$s_!GtKQ!,w_1272,h_636,c_fill,f_webp,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F71dc614e-9644-46e6-a4fc-8a02e64931bc_1080x1024.jpeg 1272w, https://substackcdn.com/image/fetch/$s_!GtKQ!,w_1300,h_650,c_fill,f_webp,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F71dc614e-9644-46e6-a4fc-8a02e64931bc_1080x1024.jpeg 1300w" sizes="100vw"><img class="img-OACg1c fullWidth-Ta6aEE pencraft pc-reset" src="https://substackcdn.com/image/fetch/$s_!GtKQ!,w_1300,h_650,c_fill,f_auto,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F71dc614e-9644-46e6-a4fc-8a02e64931bc_1080x1024.jpeg" sizes="100vw" alt="Women&#8217;s Attraction is &#8220;Hardwired&#8221; Too" srcset="https://substackcdn.com/image/fetch/$s_!GtKQ!,w_424,h_212,c_fill,f_auto,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F71dc614e-9644-46e6-a4fc-8a02e64931bc_1080x1024.jpeg 424w, https://substackcdn.com/image/fetch/$s_!GtKQ!,w_848,h_424,c_fill,f_auto,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F71dc614e-9644-46e6-a4fc-8a02e64931bc_1080x1024.jpeg 848w, https://substackcdn.com/image/fetch/$s_!GtKQ!,w_1272,h_636,c_fill,f_auto,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F71dc614e-9644-46e6-a4fc-8a02e64931bc_1080x1024.jpeg 1272w, https://substackcdn.com/image/fetch/$s_!GtKQ!,w_1300,h_650,c_fill,f_auto,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F71dc614e-9644-46e6-a4fc-8a02e64931bc_1080x1024.jpeg 1300w" width="1300" height="650" style="text-decoration: unset;list-style: none;border: none !important;vertical-align: middle;display: block;-ms-interpolation-mode: bicubic;max-width: 100%;height: auto;margin: 0 auto;object-fit: cover;width: 100%;max-height: 325px!important;"></picture></a></div></td></tr><tr><td><a href="https://substack.com/redirect/1deb5696-ce24-4472-888f-77e31c384b92?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="text-decoration: none;"><p class="pencraft pc-reset" style="text-decoration: unset;list-style: none;margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;"></p><p class="caption-QiPycG" style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;">Last week, I (as well as all of Twitter) came across a Spectator article called Love Can&#8217;t Be Lectured, a manifesto defending the immutable nature of male physical sexual preferences, written by sixty-three-year-old writer Sean Thomas. Credit where it&#8217;s due, he opens with a pre-paywall statement guaranteed to rake in the rage-traffic: he will not date women his own age because he is physically incapable of being attracted to them. His type is, quite explicitly, twenty-four-year-old Sadie Sink, who he says looks like a &#8220;Pre-Raphaelite nymph at the end of a Narnian winter.&#8221;</p><p style="margin: 0 0 20px 0;color: rgb(54,55,55);line-height: 26px;font-size: 16px;unicode-bidi: plaintext;"></p></a></td></tr><tr><td><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0" style="padding-top:0px;padding-bottom:0px;"><tbody><tr><td style="vertical-align:middle;"><a class="pencraft pc-reset align-center-OkiSzE line-height-20-_MEacI font-text-a4IB2X size-13-yQMlsX weight-medium-Hv9lSX reset-PDs18X" href="https://substack.com/redirect/1deb5696-ce24-4472-888f-77e31c384b92?j=eyJ1IjoiNjlnOG4ifQ.7BHWOqkKx8o939mWvvcYgQUdsE8Rtbzx8HVdMcn6CRY" style="list-style: none;color: unset;text-align: center;text-decoration: unset;margin: 0;font-size: 13px;line-height: 20px;font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight: 500;"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="vertical-align:middle;"><span class="pencraft pc-reset color-accent-ycT0qD line-height-20-_MEacI font-text-a4IB2X size-14-XNg_Ct weight-regular-CQHCni reset-PDs18X link-HREYZo" style="list-style: none;text-decoration: unset;color: rgb(255,103,25);margin: 0;font-size: 14px;line-height: 20px;font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight: 400;">Read full story</span></td></tr></tbody></table></a></td></tr></tbody></table></td></tr></tbody></table></div></div></div><div class="container-border" style="margin: 32px 0 0;width: 100%;box-sizing: border-box;border-top: 1px solid #e6e6e6;font-size: 16px;line-height: 26px;"></div><div class="post-cta typography markup" style="--image-offset-margin: -120px;text-align: initial;margin-bottom: 32px;hanging-punctuation: allow-end;overflow-wrap: anywhere;word-break: break-word;margin: 32px 0;font-size: 16px;line-height: 26px;"><p class="referrals-cta-text" style="color: rgb(54,55,55);unicode-bidi: plaintext;text-align: center;width: 90%;line-height: 26px;font-size: 16px;margin-top: 0;max-width: 384px;margin: auto"></p><h4 style="font-family: 'SF Pro Display',-apple-system-headline,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight: bold;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: antialiased;-webkit-appearance: optimizelegibility;-moz-appearance: optimizelegibility;appearance: optimizelegibility;margin: 1em 0 0.625em 0;color: rgb(54,55,55);line-height: 1.16em;font-size: calc(1.125em * 1);overflow-wrap: anywhere;word-break: normal;unicode-bidi: plaintext;text-align: center">Invite your friends and earn rewards</h4><div style="line-height: 26px;text-align: center;font-size: 14px">If you enjoy Cartoons Hate Her, share it with your friends and earn rewards when they subscribe.</div><p style="color: rgb(54,55,55);margin: 0 auto 20px;unicode-bidi: plaintext;text-align: center;width: 90%;line-height: 26px;font-size: 16px;"></p><p class="cta-box" style="color: rgb(54,55,55);margin: 0 auto 20px;unicode-bidi: plaintext;width: 90%;line-height: 26px;font-size: 16px;margin-bottom: 0;text-align: center;margin-left: auto;margin-right: auto;"><a class="button primary" role="button" href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly93d3cuY2FydG9vbnNoYXRlaGVyLmNvbS9sZWFkZXJib2FyZD9yZWZlcnJlcl90b2tlbj02OWc4biZyPTY5ZzhuJnV0bV9jYW1wYWlnbj1lbWFpbC1sZWFkZXJib2FyZCIsInAiOjIyMDkyODc3NCwicyI6MjM1NTAyNSwiZiI6ZmFsc2UsInUiOjEwNTE4NjQ3LCJpYXQiOjE3OTI0MDgyNTIsImV4cCI6MjEwNzk4NDI1MiwiaXNzIjoicHViLTAiLCJzdWIiOiJsaW5rLXJlZGlyZWN0In0.ohF8xVwb65LFSfSo0zowJadEYhmeK3dBiAbSjTUeI6o?&utm_source=substack&utm_medium=email&utm_content=postcta" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;box-sizing: border-box;cursor: pointer;border: none;height: 40px;border-radius: 8px;font-size: 14px;line-height: 20px;font-weight: 600;text-align: center;padding: 10px 20px;margin: 0;opacity: 1;outline: none;white-space: nowrap;color: #363737 !important;text-decoration: none !important;background-color: #FFE460;">Invite Friends</a></p></div><table class="email-ufi-2-bottom" role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="border-top: 1px solid rgb(0,0,0,.1);border-bottom: 1px solid rgb(0,0,0,.1);min-width: 100%;"><tbody><tr height="16"><td height="16" style="font-size:0px;line-height:0;">&nbsp;</td></tr><tr><td><table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0" style="margin:0 auto;"><tbody><tr><td style="vertical-align:middle;"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="center"><a class="email-button-outline" href="https://substack.com/app-link/post?publication_id=2355025&post_id=220928774&utm_source=substack&isFreemail=false&submitLike=true&token=eyJ1c2VyX2lkIjoxMDUxODY0NywicG9zdF9pZCI6MjIwOTI4Nzc0LCJyZWFjdGlvbiI6IuKdpCIsImlhdCI6MTc5MjQwODI1MiwiZXhwIjoxNzk1MDAwMjUyLCJpc3MiOiJwdWItMjM1NTAyNSIsInN1YiI6InJlYWN0aW9uIn0.eMMkZJFP2QF1KqxqZCOLiYfYNgWdkONkysOcyRVakxk&utm_medium=email&utm_campaign=email-reaction&r=69g8n" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;font-weight: 500;border: 1px solid rgb(0,0,0,.1);border-radius: 9999px;text-transform: uppercase;font-size: 12px;line-height: 12px;padding: 9px 14px;text-decoration: none;color: rgb(119,119,119);"><img class="icon" src="https://substackcdn.com/image/fetch/$s_!PeVs!,w_36,c_scale,f_png,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Ficon%2FLucideHeart%3Fv%3D4%26height%3D36%26fill%3Dnone%26stroke%3D%2523808080%26strokeWidth%3D2" width="18" height="18" style="margin-right: 8px;min-width: 18px;min-height: 18px;border: none;vertical-align: middle;max-width: 18px" alt=""><span class="email-button-text" style="vertical-align: middle;">Like</span></a></td></tr></tbody></table></td><td width="8" style="min-width:8px;"></td><td style="vertical-align:middle;"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="center"><a class="email-button-outline" href="https://substack.com/app-link/post?publication_id=2355025&post_id=220928774&utm_source=substack&utm_medium=email&isFreemail=false&comments=true&token=eyJ1c2VyX2lkIjoxMDUxODY0NywicG9zdF9pZCI6MjIwOTI4Nzc0LCJpYXQiOjE3OTI0MDgyNTIsImV4cCI6MTc5NTAwMDI1MiwiaXNzIjoicHViLTIzNTUwMjUiLCJzdWIiOiJwb3N0LXJlYWN0aW9uIn0.t1iZT00m9Ecdl_wYs8y1NamTzZvs7S9df_jjEctbfow&r=69g8n&utm_campaign=email-half-magic-comments&action=post-comment&utm_source=substack&utm_medium=email" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;font-weight: 500;border: 1px solid rgb(0,0,0,.1);border-radius: 9999px;text-transform: uppercase;font-size: 12px;line-height: 12px;padding: 9px 14px;text-decoration: none;color: rgb(119,119,119);"><img class="icon" src="https://substackcdn.com/image/fetch/$s_!x1tS!,w_36,c_scale,f_png,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Ficon%2FLucideComments%3Fv%3D4%26height%3D36%26fill%3Dnone%26stroke%3D%2523808080%26strokeWidth%3D2" width="18" height="18" style="margin-right: 8px;min-width: 18px;min-height: 18px;border: none;vertical-align: middle;max-width: 18px" alt=""><span class="email-button-text" style="vertical-align: middle;">Comment</span></a></td></tr></tbody></table></td><td width="8" style="min-width:8px;"></td><td style="vertical-align:middle;"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="center"><a class="email-button-outline" href="https://open.substack.com/pub/cartoonshateher/p/is-it-toxic-or-is-this-what-they?utm_source=substack&utm_medium=email&utm_campaign=email-restack-comment&action=restack-comment&r=69g8n&token=eyJ1c2VyX2lkIjoxMDUxODY0NywicG9zdF9pZCI6MjIwOTI4Nzc0LCJpYXQiOjE3OTI0MDgyNTIsImV4cCI6MTc5NTAwMDI1MiwiaXNzIjoicHViLTIzNTUwMjUiLCJzdWIiOiJwb3N0LXJlYWN0aW9uIn0.t1iZT00m9Ecdl_wYs8y1NamTzZvs7S9df_jjEctbfow&utm_source=substack&utm_medium=email" style="font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';display: inline-block;font-weight: 500;border: 1px solid rgb(0,0,0,.1);border-radius: 9999px;text-transform: uppercase;font-size: 12px;line-height: 12px;padding: 9px 14px;text-decoration: none;color: rgb(119,119,119);"><img class="icon" src="https://substackcdn.com/image/fetch/$s_!ubXF!,w_36,c_scale,f_png,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Ficon%2Fnotes__NoteRestackIcon%3Fv%3D4%26height%3D36%26fill%3Dnone%26stroke%3D%2523808080%26strokeWidth%3D2%26strokeLinecap%3Dround%26strokeLinejoin%3Dround" width="18" height="18" alt="" style="margin-right: 8px;min-width: 18px;min-height: 18px;max-width: 550px;border: none !important;vertical-align: middle;"><span class="email-button-text" style="vertical-align: middle;">Restack</span></a></td></tr></tbody></table></td></tr></tbody></table></td><td align="right"><table role="presentation" width="auto" border="0" cellspacing="0" cellpadding="0"><tbody><tr></tr></tbody></table></td></tr></tbody></table></td></tr><tr height="16"><td height="16" style="font-size:0px;line-height:0;">&nbsp;</td></tr></tbody></table><div class="footer footer-lyzfzm" style="color: rgb(119,119,119);text-align: center;font-size: 16px;line-height: 26px;padding: 24px 0;"><div style="font-size: 16px;line-height: 26px;padding-bottom: 24px"><p class="pencraft pc-reset color-secondary-B3TpYa size-12-qKBnAQ reset-PDs18X small meta-QuZQ_E" style="list-style: none;font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';padding-bottom: 0;font-size: 12px;line-height: 16px;margin: 0;color: rgb(119,119,119);text-decoration: unset;">&#169; 2026 <span>Cartoons Hate Her</span> <br><a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly93d3cuY2FydG9vbnNoYXRlaGVyLmNvbS9hY3Rpb24vZGlzYWJsZV9lbWFpbD90b2tlbj1leUoxYzJWeVgybGtJam94TURVeE9EWTBOeXdpY0c5emRGOXBaQ0k2TWpJd09USTROemMwTENKcFlYUWlPakUzT1RJME1EZ3lOVElzSW1WNGNDSTZNVGd5TXprME5ESTFNaXdpYVhOeklqb2ljSFZpTFRJek5UVXdNalVpTENKemRXSWlPaUprYVhOaFlteGxYMlZ0WVdsc0luMC5rQjEyX2FFYTFONnVrTkdPQUEtY3FuM2RfQTFHSkNJNWxoYmJIZ0RyYnZjIiwicCI6MjIwOTI4Nzc0LCJzIjoyMzU1MDI1LCJmIjpmYWxzZSwidSI6MTA1MTg2NDcsImlhdCI6MTc5MjQwODI1MiwiZXhwIjoyMTA3OTg0MjUyLCJpc3MiOiJwdWItMCIsInN1YiI6ImxpbmstcmVkaXJlY3QifQ.kWGoEvlsrgzqkoaB-ThN-apCoAIulcc0wvSpzB7rIhc?" style="text-decoration: underline;color: rgb(119,119,119);"><span style="color: rgb(119,119,119);text-decoration: underline;">Unsubscribe</span></a></p></div><p class="footerSection-uQEPXS small powered-by-substack" style="padding: 0 24px;font-size: 12px;line-height: 20px;margin: 0;color: rgb(119,119,119);font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';padding-bottom: 0;margin-top: 0;"><a href="https://substack.com/redirect/2/eyJlIjoiaHR0cHM6Ly9zdWJzdGFjay5jb20vc2lnbnVwP3V0bV9zb3VyY2U9c3Vic3RhY2smdXRtX21lZGl1bT1lbWFpbCZ1dG1fY29udGVudD1mb290ZXImdXRtX2NhbXBhaWduPWF1dG9maWxsZWQtZm9vdGVyJmZyZWVTaWdudXBFbWFpbD1iZW5vaXRjQGdtYWlsLmNvbSZyPTY5ZzhuIiwicCI6MjIwOTI4Nzc0LCJzIjoyMzU1MDI1LCJmIjpmYWxzZSwidSI6MTA1MTg2NDcsImlhdCI6MTc5MjQwODI1MiwiZXhwIjoyMTA3OTg0MjUyLCJpc3MiOiJwdWItMCIsInN1YiI6ImxpbmstcmVkaXJlY3QifQ.8yNWi54zB8_Om88XpuWL0idRdzsZTYizeF2rCze0xLE?" style="color: rgb(119,119,119);text-decoration: none;display: inline-block;margin: 0 4px;"><img src="https://substackcdn.com/image/fetch/$s_!FMON!,w_366,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Fimg%2Femail%2Fstart-your-substack-button%402x.png" srcset="https://substackcdn.com/image/fetch/$s_!PPEm!,w_183,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Fimg%2Femail%2Fstart-your-substack-button.png, https://substackcdn.com/image/fetch/$s_!FMON!,w_366,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Fimg%2Femail%2Fstart-your-substack-button%402x.png 2x, https://substackcdn.com/image/fetch/$s_!s5wz!,w_549,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack.com%2Fimg%2Femail%2Fstart-your-substack-button%403x.png 3x" width="183" alt="Start your Substack" height="40" style="max-width: 550px;border: none !important;vertical-align: middle;"></a></p></div></div></td><td></td></tr></tbody></table><img src="https://eotrx.substackcdn.com/o/7247296f046f7722/p.gif?token=eyJtIjoiPDIwMjYxMDE5MTEwMzQ1LjMuMzJjMjkwNGZiNjVhMjkzN0BtZzEuc3Vic3RhY2suY29tPiIsInUiOjEwNTE4NjQ3LCJyIjoiYmVub2l0Y0BnbWFpbC5jb20iLCJkIjoibWcxLnN1YnN0YWNrLmNvbSIsInAiOjIyMDkyODc3NCwidCI6Im5ld3NsZXR0ZXIiLCJhIjoib25seV9wYWlkIiwicyI6MjM1NTAyNSwiYyI6InBvc3QiLCJmIjpmYWxzZSwieiI6IiIsInBvc2l0aW9uIjoiYm90dG9tIiwiaWF0IjoxNzkyNDA4MjUyLCJleHAiOjE3OTUwMDAyNTIsImlzcyI6InB1Yi0wIiwic3ViIjoiZW8ifQ.BupSyYo7xgYWjP-vnb2mjkgyLyBt9IZayemLn_BnwYY" alt="" width="1" height="1" border="0" style="height:1px !important;width:1px !important;border-width:0 !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:0 !important;margin-left:0 !important;padding-top:0 !important;padding-bottom:0 !important;padding-right:0 !important;padding-left:0 !important;"/><img width="1" height="1" alt="" src="https://email.mg1.substack.com/o/eJxMkE0OpCAQRk_TLA2_ggvOQkoobdIKBoqZePuJ3ZvZfl_y8vIiEO613f6qnVjy3MpoV4Ze2EVq7qSRDE_IR9ixYAPCFID-ewVf2NtvAlTctFOLM_PmnBCOA7eWz8bMs9pY9pLLWXCxCMGVNpOalIxy4XpbZwNyUfal-bmLqY-1E8TPFOvJ6oUlUIP4yWUPfVxXw94xefb4BhgpY4noaznucEFOvz0nLyVfpLNW_xa6L_QF__YDibCxa6wh1vMcJdMdsMB6YPLUBj7XkSNQruULUsZwaVjzK5aaKb40358iX8E-1lRPyMVHaFRr6W8gfGNj9Es6OrYHI7gRbtaW_fHyXwAAAP__lzt7FQ"></body></html>
+</body></html>
